@@ -1,0 +1,53 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+#root {
+  max-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #292929;
+  color: #666666;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #292929;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.injected-svg {
+  width: 20px;
+  height: 20px;
+}

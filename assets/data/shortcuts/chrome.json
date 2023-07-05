@@ -1,0 +1,35 @@
+{
+  "software": { "key": "chrome", "customIcon": "" },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "t"]],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["shift", "cmd", "t"]],
+      "description": "Reopen previous tab",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["cmd", "w"]],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["shift", "cmd", "w"]],
+      "description": "Close all tabs",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["cmd", "l"]],
+      "description": "Place the focus on the Address Bar",
+      "isFavorite": false
+    }
+  ]
+}

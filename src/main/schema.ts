@@ -1,0 +1,76 @@
+import Ajv, { type JSONSchemaType } from 'ajv';
+import type { SoftwareShortcut } from '../../@types/shortcuts';
+
+const ajv = new Ajv();
+ajv.addFormat('software-key', /^[a-zA-Z0-9_]+$/);
+
+const schema: JSONSchemaType<{
+  [key: string]: SoftwareShortcut;
+}> = {
+  propertyNames: {
+    format: 'software-key',
+  },
+  required: [],
+  type: 'object',
+  additionalProperties: {
+    type: 'object',
+    properties: {
+      software: {
+        type: 'object',
+        properties: {
+          key: { type: 'string' },
+          customIcon: { type: 'string', default: '' },
+        },
+        required: ['key', 'customIcon'],
+        additionalProperties: false,
+      },
+      shortcuts: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            id: { type: 'string' },
+            description: { type: 'string' },
+            isFavorite: { type: 'boolean' },
+            hotkeys: {
+              type: 'array',
+              items: {
+                type: 'array',
+                items: { type: 'string' },
+              },
+            },
+          },
+          required: ['id', 'description', 'hotkeys', 'isFavorite'],
+          additionalProperties: false,
+        },
+      },
+    },
+    required: ['software', 'shortcuts'],
+    additionalProperties: false,
+  },
+};
+
+const validate = ajv.compile(schema);
+
+const shortcutValidation = (softwareShortcut: SoftwareShortcut) => {
+  return new Promise<void>((resolve, reject) => {
+    const parentSchema = {
+      [softwareShortcut.software.key]: softwareShortcut,
+    };
+    const result = validate(parentSchema);
+    if (result) {
+      resolve();
+    } else {
+      reject(validate.errors);
+    }
+  });
+};
+
+export { validate, shortcutValidation };
+
+export default schema;
+
+// @ts-ignore
+// const store = new Store<SoftwareShortcut[]>({ schema });
+
+// export default store;
