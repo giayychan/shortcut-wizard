@@ -1,5 +1,11 @@
 {
-  "software": { "key": "chrome", "customIcon": "" },
+  "software": {
+    "key": "chrome",
+    "icon": {
+      "filename": "chrome.svg",
+      "isCustom": false
+    }
+  },
   "shortcuts": [
     {
       "id": "1",

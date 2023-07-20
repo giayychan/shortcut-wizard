@@ -1,5 +1,5 @@
 import Ajv, { type JSONSchemaType } from 'ajv';
-import type { SoftwareShortcut } from '../../@types/shortcuts';
+import type { SoftwareShortcut } from '../../@types';
 
 const ajv = new Ajv();
 ajv.addFormat('software-key', /^[a-zA-Z0-9_]+$/);
@@ -19,9 +19,18 @@ const schema: JSONSchemaType<{
         type: 'object',
         properties: {
           key: { type: 'string' },
-          customIcon: { type: 'string', default: '' },
+          icon: {
+            type: 'object',
+            properties: {
+              filename: { type: 'string' },
+              isCustom: { type: 'boolean' },
+              dataUri: { type: 'string', nullable: true },
+            },
+            required: ['filename', 'isCustom'],
+            additionalProperties: false,
+          },
         },
-        required: ['key', 'customIcon'],
+        required: ['key', 'icon'],
         additionalProperties: false,
       },
       shortcuts: {

@@ -1,15 +1,18 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import { useEffect } from 'react';
+import { Flex, MantineProvider, Paper } from '@mantine/core';
+import { Notifications } from '@mantine/notifications';
+import { useResizeObserver } from '@mantine/hooks';
 
 import BrandLogo from './components/common/BrandLogo';
 import SearchBar from './components/SearchBar/Container';
+import SoftwareList from './components/SoftwareList/Container';
 import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 
-import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import useAppHeightStore from './stores/useAppHeightStore';
 
-function SoftwareShortcuts() {
+function Main() {
   const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.fetchSoftwareShortcuts
   );
@@ -18,31 +21,25 @@ function SoftwareShortcuts() {
     fetchSoftwareShortcuts();
   }, [fetchSoftwareShortcuts]);
 
-  return (
-    <>
-      <SearchBar />
-    </>
-  );
-}
+  const [ref, rect] = useResizeObserver();
 
-function Main() {
+  const setHeight = useAppHeightStore((state) => state.setHeight);
+
+  useEffect(() => {
+    setHeight(rect.height);
+  }, [rect.height, setHeight]);
+
   return (
-    <>
-      <BrandLogo />
-      <SoftwareShortcuts />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-    </>
+    <MantineProvider theme={{ colorScheme: 'dark' }}>
+      <Notifications />
+      <Paper radius="md" ref={ref}>
+        <Flex p="lg" direction="column">
+          {/* <BrandLogo /> */}
+          {/* <SearchBar /> */}
+          <SoftwareList />
+        </Flex>
+      </Paper>
+    </MantineProvider>
   );
 }
 

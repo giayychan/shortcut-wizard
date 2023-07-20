@@ -1,5 +1,11 @@
 {
-  "software": { "key": "mac", "customIcon": "" },
+  "software": {
+    "key": "mac",
+    "icon": {
+      "filename": "mac.svg",
+      "isCustom": false
+    }
+  },
   "shortcuts": [
     {
       "id": "1",

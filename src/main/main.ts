@@ -17,7 +17,7 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { getAssetPath, resolveHtmlPath } from './utils';
-import { BASE_HEIGHT, APP_HOTKEYS, WIDTH } from './constants';
+import { APP_HOTKEYS, WIDTH } from './constants';
 import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
@@ -65,7 +65,6 @@ const createWindow = async () => {
       // type: 'panel',
       show: false,
       width: WIDTH,
-      height: BASE_HEIGHT,
       resizable: process.env.NODE_ENV !== 'production',
       hasShadow: false,
       transparent: true,

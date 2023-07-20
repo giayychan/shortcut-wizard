@@ -2,6 +2,7 @@
 import { URL } from 'url';
 import path from 'path';
 import { app } from 'electron';
+import chalk from 'chalk';
 
 export function resolveHtmlPath(htmlFileName: string) {
   if (process.env.NODE_ENV === 'development') {
@@ -25,4 +26,24 @@ export const getAssetPath = (...paths: string[]): string => {
 
 export const getUserDataPath = (...paths: string[]): string => {
   return path.join(USER_PATH, ...paths);
+};
+
+export const { log } = console;
+export const logError = (...text: unknown[]) =>
+  log(chalk.bold.bgRedBright(text));
+export const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
+export const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
+
+export const createDataUri = (svg: string) =>
+  `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
+
+export const mapKeyToReadable = (key: string) => {
+  switch (key) {
+    case 'Meta':
+      return 'cmd';
+    case ' ':
+      return 'Space';
+    default:
+      return key;
+  }
 };

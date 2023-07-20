@@ -5,10 +5,11 @@ import type {
   Shortcut,
   SoftwareShortcut,
   SoftwareShortcuts,
-} from '../../@types/shortcuts';
+  AddSoftwareAutocompleteOption,
+} from '../../@types';
 
 export type OnArgumentTypes = {
-  setWindowHeight: [height: number];
+  updateMainWindowHeight: [height: number];
 };
 
 export type OnChannels = keyof OnArgumentTypes;
@@ -16,21 +17,20 @@ export type OnChannels = keyof OnArgumentTypes;
 export type InvokeReturnTypes = {
   fetchSoftwareShortcuts: SoftwareShortcuts;
   fetchSoftwareShortcut: SoftwareShortcut;
+  fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
   addShortcutsBySoftwareKey: void;
   removeShortcutsBySoftwareKey: void;
-  addSoftwareShortcut: void;
+  addSoftwareShortcut: SoftwareShortcut;
   removeSoftwareShortcut: void;
 };
 
 export type InvokeArgumentTypes = {
   fetchSoftwareShortcuts: undefined;
+  fetchSoftwareAutoCompleteOptions: undefined;
   fetchSoftwareShortcut: [softwareKey: string];
   addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
   removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-  addSoftwareShortcut: [
-    data: SoftwareShortcut,
-    uploadedCustomIconPath?: string
-  ];
+  addSoftwareShortcut: [data: SoftwareShortcut];
   removeSoftwareShortcut: [softwareList: string[]];
 };
 

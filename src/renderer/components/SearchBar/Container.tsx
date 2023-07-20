@@ -11,7 +11,7 @@ function SearchBarContainer() {
         front={<BsFillKeyboardFill fill="#dddddd" size={24} />}
         back={<BsFillKeyboardFill fill="#dddddd" size={24} />}
       />
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-full">
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}

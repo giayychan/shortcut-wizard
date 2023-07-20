@@ -1,5 +1,5 @@
 import { ipcMain } from 'electron';
-import { BASE_HEIGHT, WIDTH } from './constants';
+import { WIDTH } from './constants';
 import appWindow from './mainWindow';
 import {
   fetchSoftwareShortcut,
@@ -8,15 +8,19 @@ import {
   addSoftwareShortcut,
   removeShortcutsBySoftwareKey,
   removeSoftwareShortcut,
+  fetchSoftwareAutoCompleteOptions,
 } from './io';
 
 export default function dbCalls() {
-  ipcMain.on('setWindowHeight', (_, [height = BASE_HEIGHT]) => {
+  ipcMain.on('updateMainWindowHeight', (_, [height]) => {
     const mainWindow = appWindow.getWindow();
     if (mainWindow) mainWindow.setSize(WIDTH, height);
   });
 
   ipcMain.handle('fetchSoftwareShortcuts', () => fetchSoftwareShortcuts());
+  ipcMain.handle('fetchSoftwareAutoCompleteOptions', () =>
+    fetchSoftwareAutoCompleteOptions()
+  );
 
   ipcMain.handle('fetchSoftwareShortcut', (_, [softwareKey]) =>
     fetchSoftwareShortcut(softwareKey)
@@ -32,8 +36,8 @@ export default function dbCalls() {
       removeShortcutsBySoftwareKey(softwareKey, shortcuts)
   );
 
-  ipcMain.handle('addSoftwareShortcut', (_, [data, uploadedCustomIconPath]) =>
-    addSoftwareShortcut(data, uploadedCustomIconPath)
+  ipcMain.handle('addSoftwareShortcut', (_, [data]) =>
+    addSoftwareShortcut(data)
   );
 
   ipcMain.handle('removeSoftwareShortcut', (_, [softwareList]) =>

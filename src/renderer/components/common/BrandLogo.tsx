@@ -1,10 +1,18 @@
+import { Anchor } from '@mantine/core';
+
+// className="absolute top-0 right-0 p-4 tracking-widest"
 function BrandLogo() {
   return (
-    <a href="https://shortcutwizard.io/" target="_blank" rel="noreferrer">
-      <span className="absolute top-0 right-0 p-4 tracking-widest">
-        Shortcut Wizard
-      </span>
-    </a>
+    <Anchor
+      href="https://shortcutwizard.io/"
+      target="_blank"
+      pos="absolute"
+      top={0}
+      right={0}
+      m="1rem"
+    >
+      Shortcut Wizard
+    </Anchor>
   );
 }
 
