@@ -26,14 +26,6 @@ const FORM_DEFAULT_VALUES = {
 };
 
 function AddSoftwareForm({ close }: { close: () => void }) {
-  const addSoftware = useSoftwareShortcutsStore((state) => state.addSoftware);
-  const form = useForm<AddSoftwareFormValues>(FORM_DEFAULT_VALUES);
-
-  const [visible, { close: closeLoading, open: openLoading }] =
-    useDisclosure(false);
-
-  const [active, { toggle: showNextInput }] = useDisclosure(false);
-
   const [setHeight] = useAppHeightStore((state) => [state.setHeight]);
   useEffect(() => {
     setHeight(MAX_HEIGHT);
@@ -41,6 +33,14 @@ function AddSoftwareForm({ close }: { close: () => void }) {
       setHeight();
     };
   }, [setHeight]);
+
+  const addSoftware = useSoftwareShortcutsStore((state) => state.addSoftware);
+  const form = useForm<AddSoftwareFormValues>(FORM_DEFAULT_VALUES);
+
+  const [visible, { close: closeLoading, open: openLoading }] =
+    useDisclosure(false);
+
+  const [active, { toggle: showNextInput }] = useDisclosure(false);
 
   const {
     file,

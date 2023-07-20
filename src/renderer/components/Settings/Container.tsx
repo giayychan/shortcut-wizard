@@ -4,6 +4,7 @@ import { useToggle } from '@mantine/hooks';
 
 import AddSoftwareContainer from '../AddSoftware/Container';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
+import RemoveSoftwareContainer from '../RemoveSoftware/Container';
 
 function SettingContainer() {
   const [selectedSoftwareShortcut] = useSelectedShortcutsStore((state) => [
@@ -33,7 +34,12 @@ function SettingContainer() {
       h="2.25rem"
       align="center"
     >
-      {selectedSoftwareShortcut ? null : <AddSoftwareContainer />}
+      {selectedSoftwareShortcut ? null : (
+        <>
+          <AddSoftwareContainer />
+          <RemoveSoftwareContainer />
+        </>
+      )}
       <CloseButton
         title="Close settings menu"
         onClick={() => toggle()}

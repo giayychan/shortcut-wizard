@@ -11,11 +11,9 @@ function SoftwareListContainer() {
 
   const softwareList = Object.keys(softwareShortcuts);
 
-  if (!softwareList.length) return null;
-
   return (
     <Flex bg="blue" align="center" pos="relative" h="2.25rem">
-      {softwareList.map((softwareKey) => {
+      {softwareList?.map((softwareKey) => {
         const {
           software: { key, icon },
         } = softwareShortcuts[softwareKey];

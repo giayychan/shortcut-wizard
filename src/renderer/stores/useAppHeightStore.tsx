@@ -1,11 +1,6 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
-
-export type AppHeightState = {
-  previousHeight: number;
-  height: number;
-  setHeight: (height?: number) => void;
-};
+import { AppHeightState } from '../../../@types';
 
 const { ipcRenderer } = window.electron;
 

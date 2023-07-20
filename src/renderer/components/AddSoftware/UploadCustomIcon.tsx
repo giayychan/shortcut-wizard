@@ -1,14 +1,8 @@
 import { FocusTrap, FileInput, rem } from '@mantine/core';
-import { UseFormReturnType } from '@mantine/form';
 import { IconUpload } from '@tabler/icons-react';
-import { AddSoftwareFormValues } from '../../../../@types';
+import { UploadCustomIconProps } from '../../../../@types';
 
-type Props = {
-  active: boolean;
-  form: UseFormReturnType<AddSoftwareFormValues>;
-};
-
-function UploadCustomIcon({ active, form }: Props) {
+function UploadCustomIcon({ active, form }: UploadCustomIconProps) {
   return (
     <FocusTrap active={active}>
       <FileInput

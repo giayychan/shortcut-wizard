@@ -1,15 +1,7 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { toast } from 'react-toastify';
-
-import type { SoftwareShortcuts, SoftwareShortcut } from '../../../@types';
-
-export type SoftwareShortcutsState = {
-  softwareShortcuts: SoftwareShortcuts;
-  fetchSoftwareShortcuts: () => Promise<void>;
-
-  addSoftware: (newSoftware: SoftwareShortcut) => Promise<void>;
-};
+import { SoftwareShortcutsState } from '../../../@types';
 
 const defaultState = {
   softwareShortcuts: {},
@@ -48,6 +40,22 @@ const useSoftwareShortcutsStore = create(
             [newSoftware.software.key]: res,
           },
         });
+      } catch (error: any) {
+        toast.error('Error fetchSoftwareShortcuts', error);
+      }
+    },
+
+    removeSoftwares: async (removedSoftwares) => {
+      const { softwareShortcuts } = get();
+
+      removedSoftwares.forEach((software) => {
+        delete softwareShortcuts[software];
+      });
+
+      try {
+        await ipcRenderer.invoke('removeSoftwareShortcut', [removedSoftwares]);
+
+        set({ softwareShortcuts: { ...softwareShortcuts } });
       } catch (error: any) {
         toast.error('Error fetchSoftwareShortcuts', error);
       }

@@ -1,15 +1,9 @@
 import { create } from 'zustand';
-import { SoftwareShortcut } from '../../../@types';
-import useSoftwareShortcutsStore, {
+import {
+  SelectedShortcutsState,
   SoftwareShortcutsState,
-} from './useSoftwareShortcutsStore';
-
-export type SelectedShortcutsState = {
-  selectedSoftwareShortcut: SoftwareShortcut | null;
-  setSelectedSoftwareShortcut: (
-    softwareShortcut: SoftwareShortcut | null
-  ) => void;
-};
+} from '../../../@types';
+import useSoftwareShortcutsStore from './useSoftwareShortcutsStore';
 
 const defaultSelectedShortcutsState = {
   selectedSoftwareShortcut: null,

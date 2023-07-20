@@ -46,3 +46,70 @@ export type AutoCompleteProps = {
 export interface AddSoftwareAutocompleteItemProps
   extends SoftwareShortcut,
     SelectItemProps {}
+
+export type RemoveSoftwareFormValues = {
+  removedSoftwares: string[];
+};
+
+export type UploadCustomIconProps = {
+  active: boolean;
+  form: UseFormReturnType<AddSoftwareFormValues>;
+};
+
+export type StyledSvgProps = {
+  className?: string;
+  src: string;
+};
+
+export type RemoveSoftwareFormProps = {
+  close: () => void;
+};
+
+export type SoftwareShortcutsState = {
+  softwareShortcuts: SoftwareShortcuts;
+  fetchSoftwareShortcuts: () => Promise<void>;
+
+  addSoftware: (newSoftware: SoftwareShortcut) => Promise<void>;
+  removeSoftwares: (removedSoftwares: string[]) => Promise<void>;
+};
+
+export type OnArgumentTypes = {
+  updateMainWindowHeight: [height: number];
+};
+
+export type OnChannels = keyof OnArgumentTypes;
+
+export type InvokeReturnTypes = {
+  fetchSoftwareShortcuts: SoftwareShortcuts;
+  fetchSoftwareShortcut: SoftwareShortcut;
+  fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
+  addShortcutsBySoftwareKey: void;
+  removeShortcutsBySoftwareKey: void;
+  addSoftwareShortcut: SoftwareShortcut;
+  removeSoftwareShortcut: void;
+};
+
+export type InvokeArgumentTypes = {
+  fetchSoftwareShortcuts: undefined;
+  fetchSoftwareAutoCompleteOptions: undefined;
+  fetchSoftwareShortcut: [softwareKey: string];
+  addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
+  removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
+  addSoftwareShortcut: [data: SoftwareShortcut];
+  removeSoftwareShortcut: [softwareList: string[]];
+};
+
+export type InvokeChannels = keyof InvokeReturnTypes;
+
+export type AppHeightState = {
+  previousHeight: number;
+  height: number;
+  setHeight: (height?: number) => void;
+};
+
+export type SelectedShortcutsState = {
+  selectedSoftwareShortcut: SoftwareShortcut | null;
+  setSelectedSoftwareShortcut: (
+    softwareShortcut: SoftwareShortcut | null
+  ) => void;
+};

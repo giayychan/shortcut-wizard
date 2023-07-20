@@ -4,8 +4,8 @@ import { Flex, MantineProvider, Paper } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { useResizeObserver } from '@mantine/hooks';
 
-import BrandLogo from './components/common/BrandLogo';
-import SearchBar from './components/SearchBar/Container';
+// import BrandLogo from './components/common/BrandLogo';
+// import SearchBar from './components/SearchBar/Container';
 import SoftwareList from './components/SoftwareList/Container';
 import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 

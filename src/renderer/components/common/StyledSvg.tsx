@@ -1,12 +1,8 @@
 /* eslint-disable react/require-default-props */
 import { ReactSVG } from 'react-svg';
+import { StyledSvgProps } from '../../../../@types';
 
-type Props = {
-  className?: string;
-  src: string;
-};
-
-function StyledSvg({ src, className }: Props) {
+function StyledSvg({ src, className }: StyledSvgProps) {
   return (
     <ReactSVG
       src={src}

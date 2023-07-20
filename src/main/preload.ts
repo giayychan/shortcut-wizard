@@ -2,39 +2,12 @@
 /* eslint no-unused-vars: off */
 import { contextBridge, ipcRenderer, IpcRendererEvent } from 'electron';
 import type {
-  Shortcut,
-  SoftwareShortcut,
-  SoftwareShortcuts,
-  AddSoftwareAutocompleteOption,
+  InvokeArgumentTypes,
+  InvokeChannels,
+  InvokeReturnTypes,
+  OnArgumentTypes,
+  OnChannels,
 } from '../../@types';
-
-export type OnArgumentTypes = {
-  updateMainWindowHeight: [height: number];
-};
-
-export type OnChannels = keyof OnArgumentTypes;
-
-export type InvokeReturnTypes = {
-  fetchSoftwareShortcuts: SoftwareShortcuts;
-  fetchSoftwareShortcut: SoftwareShortcut;
-  fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
-  addShortcutsBySoftwareKey: void;
-  removeShortcutsBySoftwareKey: void;
-  addSoftwareShortcut: SoftwareShortcut;
-  removeSoftwareShortcut: void;
-};
-
-export type InvokeArgumentTypes = {
-  fetchSoftwareShortcuts: undefined;
-  fetchSoftwareAutoCompleteOptions: undefined;
-  fetchSoftwareShortcut: [softwareKey: string];
-  addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-  removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-  addSoftwareShortcut: [data: SoftwareShortcut];
-  removeSoftwareShortcut: [softwareList: string[]];
-};
-
-export type InvokeChannels = keyof InvokeReturnTypes;
 
 const electronHandler = {
   ipcRenderer: {
