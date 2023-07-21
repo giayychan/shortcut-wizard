@@ -1,6 +1,11 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import { Flex, MantineProvider, Paper } from '@mantine/core';
+import {
+  Flex,
+  MantineProvider,
+  createEmotionCache,
+  Paper,
+} from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { useResizeObserver } from '@mantine/hooks';
 
@@ -11,6 +16,9 @@ import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 
 import './App.css';
 import useAppHeightStore from './stores/useAppHeightStore';
+import ShortcutList from './components/ShortcutList/Container';
+
+const myCache = createEmotionCache({ key: 'mantine' });
 
 function Main() {
   const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
@@ -30,13 +38,19 @@ function Main() {
   }, [rect.height, setHeight]);
 
   return (
-    <MantineProvider theme={{ colorScheme: 'dark' }}>
+    <MantineProvider
+      emotionCache={myCache}
+      withGlobalStyles
+      withNormalizeCSS
+      theme={{ colorScheme: 'dark' }}
+    >
       <Notifications />
       <Paper radius="md" ref={ref}>
         <Flex p="lg" direction="column">
           {/* <BrandLogo /> */}
           {/* <SearchBar /> */}
           <SoftwareList />
+          <ShortcutList />
         </Flex>
       </Paper>
     </MantineProvider>
