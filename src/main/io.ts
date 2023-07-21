@@ -32,6 +32,8 @@ export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
 export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath('data', 'shortcuts');
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
+// todo: reset data
+
 export const initializeUserData = async () => {
   try {
     await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);

@@ -1,20 +1,9 @@
 import { create } from 'zustand';
-import {
-  SelectedShortcutsState,
-  SoftwareShortcutsState,
-} from '../../../@types';
-import useSoftwareShortcutsStore from './useSoftwareShortcutsStore';
+import { SelectedShortcutsState } from '../../../@types';
 
 const defaultSelectedShortcutsState = {
   selectedSoftwareShortcut: null,
 };
-
-useSoftwareShortcutsStore.subscribe(
-  (
-    selectedState: SoftwareShortcutsState,
-    previousSelectedState: SoftwareShortcutsState
-  ) => console.log(selectedState, previousSelectedState)
-);
 
 const useSelectedShortcutsStore = create<SelectedShortcutsState, []>((set) => ({
   ...defaultSelectedShortcutsState,

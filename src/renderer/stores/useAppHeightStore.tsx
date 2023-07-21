@@ -14,8 +14,13 @@ const useAppHeightStore = create(
       const { height } = get();
 
       set({ height: updatedHeight || previousHeight, previousHeight: height });
+
+      // todo: devs log only
+      console.log('sendMessage - updateMainWindowHeight', [
+        Math.round(updatedHeight || previousHeight),
+      ]);
       ipcRenderer.sendMessage('updateMainWindowHeight', [
-        updatedHeight || previousHeight,
+        Math.round(updatedHeight || previousHeight),
       ]);
     },
   }))

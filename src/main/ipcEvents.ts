@@ -14,7 +14,7 @@ import {
 export default function dbCalls() {
   ipcMain.on('updateMainWindowHeight', (_, [height]) => {
     const mainWindow = appWindow.getWindow();
-    if (mainWindow) mainWindow.setSize(WIDTH, height);
+    if (mainWindow) mainWindow.setSize(WIDTH, height, true);
   });
 
   ipcMain.handle('fetchSoftwareShortcuts', () => fetchSoftwareShortcuts());

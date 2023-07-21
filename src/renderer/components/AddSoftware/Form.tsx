@@ -1,15 +1,17 @@
 import { useForm } from '@mantine/form';
 import { ReactSVG } from 'react-svg';
 import { Group, Box, Button, LoadingOverlay } from '@mantine/core';
-import { useEffect } from 'react';
 import { useDisclosure } from '@mantine/hooks';
-import useAppHeightStore from 'renderer/stores/useAppHeightStore';
-import { MAX_HEIGHT } from 'main/constants';
+
 import StyledSvg from '../common/StyledSvg';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import AutoCompleteInput from './AutoCompleteInput';
-import { AddSoftwareFormValues } from '../../../../@types';
+import {
+  AddSoftwareFormValues,
+  AddSoftwareFormProps,
+} from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
+import useModalFormHeight from '../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -25,14 +27,8 @@ const FORM_DEFAULT_VALUES = {
   },
 };
 
-function AddSoftwareForm({ close }: { close: () => void }) {
-  const [setHeight] = useAppHeightStore((state) => [state.setHeight]);
-  useEffect(() => {
-    setHeight(MAX_HEIGHT);
-    return () => {
-      setHeight();
-    };
-  }, [setHeight]);
+function AddSoftwareForm({ close }: AddSoftwareFormProps) {
+  useModalFormHeight();
 
   const addSoftware = useSoftwareShortcutsStore((state) => state.addSoftware);
   const form = useForm<AddSoftwareFormValues>(FORM_DEFAULT_VALUES);
@@ -53,7 +49,7 @@ function AddSoftwareForm({ close }: { close: () => void }) {
 
   const handleCancel = () => {
     handleClear();
-    close();
+    if (close) close();
   };
 
   const handleSubmit = async (values: AddSoftwareFormValues) => {

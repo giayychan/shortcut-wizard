@@ -33,7 +33,10 @@
     },
     {
       "id": "5",
-      "hotkeys": [["cmd", "l"]],
+      "hotkeys": [
+        ["cmd", "l"],
+        ["x", "y"]
+      ],
       "description": "Place the focus on the Address Bar",
       "isFavorite": false
     }

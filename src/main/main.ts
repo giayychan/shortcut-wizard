@@ -65,6 +65,7 @@ const createWindow = async () => {
       // type: 'panel',
       show: false,
       width: WIDTH,
+      height: 0,
       resizable: process.env.NODE_ENV !== 'production',
       hasShadow: false,
       transparent: true,

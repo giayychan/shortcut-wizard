@@ -32,7 +32,11 @@ export interface SoftwareShortcuts {
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 
 export type AddSoftwareFormValues = SoftwareShortcut & { file: File | null };
-
+export type AddShortcutFormValues = { abc: string };
+export type RemoveShortcutFormValues = { abc: string };
+export type RemoveSoftwareFormValues = {
+  removedSoftwares: string[];
+};
 export interface AddSoftwareAutocompleteOption extends SoftwareShortcut {
   value: string;
 }
@@ -47,10 +51,6 @@ export interface AddSoftwareAutocompleteItemProps
   extends SoftwareShortcut,
     SelectItemProps {}
 
-export type RemoveSoftwareFormValues = {
-  removedSoftwares: string[];
-};
-
 export type UploadCustomIconProps = {
   active: boolean;
   form: UseFormReturnType<AddSoftwareFormValues>;
@@ -61,9 +61,13 @@ export type StyledSvgProps = {
   src: string;
 };
 
-export type RemoveSoftwareFormProps = {
-  close: () => void;
-};
+export interface RemoveSoftwareFormProps {
+  close?: () => void;
+}
+
+export interface AddSoftwareFormProps extends RemoveSoftwareFormProps {}
+export interface AddShortcutFormProps extends RemoveSoftwareFormProps {}
+export interface RemoveShortcutFormProps extends RemoveSoftwareFormProps {}
 
 export type SoftwareShortcutsState = {
   softwareShortcuts: SoftwareShortcuts;

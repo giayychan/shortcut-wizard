@@ -8,10 +8,7 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
-import { useEffect } from 'react';
 
-import { MAX_HEIGHT } from 'main/constants';
-import useAppHeightStore from '../../stores/useAppHeightStore';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import StyledSvg from '../common/StyledSvg';
 import {
@@ -19,6 +16,7 @@ import {
   RemoveSoftwareFormValues,
   SoftwareShortcut,
 } from '../../../../@types';
+import useModalFormHeight from '../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -27,13 +25,7 @@ const FORM_DEFAULT_VALUES = {
 };
 
 function RemoveSoftwareForm({ close }: RemoveSoftwareFormProps) {
-  const [setHeight] = useAppHeightStore((state) => [state.setHeight]);
-  useEffect(() => {
-    setHeight(MAX_HEIGHT);
-    return () => {
-      setHeight();
-    };
-  }, [setHeight]);
+  useModalFormHeight();
 
   const [removeSoftwares, softwareShortcuts] = useSoftwareShortcutsStore(
     (state) => [state.removeSoftwares, state.softwareShortcuts]
@@ -52,7 +44,7 @@ function RemoveSoftwareForm({ close }: RemoveSoftwareFormProps) {
 
   const handleCancel = () => {
     handleClear();
-    close();
+    if (close) close();
   };
 
   const handleSubmit = async (values: RemoveSoftwareFormValues) => {

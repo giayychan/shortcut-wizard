@@ -1,18 +1,11 @@
-import { Button, Modal } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import SettingsModal from '../Settings/Modal';
 import AddSoftwareForm from './Form';
 
 function AddSoftwareContainer() {
-  const [opened, { open, close }] = useDisclosure(false);
-
   return (
-    <>
-      <Modal opened={opened} onClose={close} title="Add Software" fullScreen>
-        <AddSoftwareForm close={close} />
-      </Modal>
-
-      <Button onClick={open}>Add Software</Button>
-    </>
+    <SettingsModal title="Add Software">
+      <AddSoftwareForm />
+    </SettingsModal>
   );
 }
 
