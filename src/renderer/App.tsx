@@ -8,6 +8,7 @@ import {
 } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { useResizeObserver } from '@mantine/hooks';
+import { ModalsProvider } from '@mantine/modals';
 
 // import BrandLogo from './components/common/BrandLogo';
 // import SearchBar from './components/SearchBar/Container';
@@ -17,6 +18,7 @@ import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 import './App.css';
 import useAppHeightStore from './stores/useAppHeightStore';
 import ShortcutList from './components/ShortcutList/Container';
+import modals from './components/common/modals';
 
 const myCache = createEmotionCache({ key: 'mantine' });
 
@@ -44,15 +46,17 @@ function Main() {
       withNormalizeCSS
       theme={{ colorScheme: 'dark' }}
     >
-      <Notifications />
-      <Paper radius="md" ref={ref}>
-        <Flex p="lg" direction="column">
-          {/* <BrandLogo /> */}
-          {/* <SearchBar /> */}
-          <SoftwareList />
-          <ShortcutList />
-        </Flex>
-      </Paper>
+      <ModalsProvider modals={modals} modalProps={{ fullScreen: true }}>
+        <Notifications />
+        <Paper radius="md" ref={ref}>
+          <Flex p="lg" direction="column">
+            {/* <BrandLogo /> */}
+            {/* <SearchBar /> */}
+            <SoftwareList />
+            <ShortcutList />
+          </Flex>
+        </Paper>
+      </ModalsProvider>
     </MantineProvider>
   );
 }

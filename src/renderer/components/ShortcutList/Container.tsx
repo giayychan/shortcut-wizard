@@ -1,5 +1,7 @@
 import { Button, List, Text, ActionIcon, ScrollArea } from '@mantine/core';
 import { IconStar } from '@tabler/icons-react';
+import { openContextModal } from '@mantine/modals';
+
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 
@@ -13,7 +15,20 @@ function ShortcutListContainer() {
   }
 
   if (selectedSoftwareShortcut.shortcuts.length === 0) {
-    return <Button className="mt-4">Add shortcut</Button>;
+    return (
+      <Button
+        className="mt-4"
+        onClick={() => {
+          openContextModal({
+            title: 'Add Shortcut',
+            modal: 'addShortcut',
+            innerProps: {},
+          });
+        }}
+      >
+        Add Shortcut
+      </Button>
+    );
   }
 
   return (

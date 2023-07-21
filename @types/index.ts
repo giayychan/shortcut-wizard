@@ -1,5 +1,12 @@
 import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
+import { modals } from '@mantine/modals';
+
+declare module '@mantine/modals' {
+  export interface MantineModalsOverride {
+    modals: typeof modals;
+  }
+}
 
 export type Hotkey = string[];
 export type Hotkeys = Hotkey[];
@@ -60,14 +67,6 @@ export type StyledSvgProps = {
   className?: string;
   src: string;
 };
-
-export interface RemoveSoftwareFormProps {
-  close?: () => void;
-}
-
-export interface AddSoftwareFormProps extends RemoveSoftwareFormProps {}
-export interface AddShortcutFormProps extends RemoveSoftwareFormProps {}
-export interface RemoveShortcutFormProps extends RemoveSoftwareFormProps {}
 
 export type SoftwareShortcutsState = {
   softwareShortcuts: SoftwareShortcuts;

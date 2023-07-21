@@ -8,13 +8,13 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import { IconSettings } from '@tabler/icons-react';
-import { useClickOutside, useToggle } from '@mantine/hooks';
+import { useToggle, useClickOutside } from '@mantine/hooks';
 
-import AddSoftwareContainer from '../AddSoftware/Container';
+import AddSoftwareButton from '../AddSoftware/Button';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
-import RemoveSoftwareContainer from '../RemoveSoftware/Container';
-import AddShortcutContainer from '../AddShortcut/Container';
-import RemoveShortcutContainer from '../RemoveShortcut/Container';
+import RemoveSoftwareButton from '../RemoveSoftware/Button';
+import AddShortcutButton from '../AddShortcut/Button';
+import RemoveShortcutButton from '../RemoveShortcut/Button';
 
 const scaleY = {
   in: { opacity: 1, transform: 'translateX(0%)' },
@@ -65,13 +65,13 @@ function SettingContainer() {
           >
             {selectedSoftwareShortcut ? (
               <Group spacing="xs">
-                <AddShortcutContainer />
-                <RemoveShortcutContainer />
+                <AddShortcutButton />
+                <RemoveShortcutButton />
               </Group>
             ) : (
               <Group spacing="xs">
-                <AddSoftwareContainer />
-                <RemoveSoftwareContainer />
+                <AddSoftwareButton />
+                <RemoveSoftwareButton />
               </Group>
             )}
             <CloseButton

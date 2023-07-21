@@ -2,14 +2,12 @@ import { useForm } from '@mantine/form';
 import { ReactSVG } from 'react-svg';
 import { Group, Box, Button, LoadingOverlay } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { ContextModalProps } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import AutoCompleteInput from './AutoCompleteInput';
-import {
-  AddSoftwareFormValues,
-  AddSoftwareFormProps,
-} from '../../../../@types';
+import { AddSoftwareFormValues } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import useModalFormHeight from '../hooks/useSetModalFormHeight';
 
@@ -27,7 +25,7 @@ const FORM_DEFAULT_VALUES = {
   },
 };
 
-function AddSoftwareForm({ close }: AddSoftwareFormProps) {
+function AddSoftwareModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
 
   const addSoftware = useSoftwareShortcutsStore((state) => state.addSoftware);
@@ -49,7 +47,7 @@ function AddSoftwareForm({ close }: AddSoftwareFormProps) {
 
   const handleCancel = () => {
     handleClear();
-    if (close) close();
+    context.closeModal(id);
   };
 
   const handleSubmit = async (values: AddSoftwareFormValues) => {
@@ -126,4 +124,4 @@ function AddSoftwareForm({ close }: AddSoftwareFormProps) {
   );
 }
 
-export default AddSoftwareForm;
+export default AddSoftwareModal;

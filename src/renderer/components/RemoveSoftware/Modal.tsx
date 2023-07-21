@@ -8,14 +8,11 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
+import { ContextModalProps } from '@mantine/modals';
 
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import StyledSvg from '../common/StyledSvg';
-import {
-  RemoveSoftwareFormProps,
-  RemoveSoftwareFormValues,
-  SoftwareShortcut,
-} from '../../../../@types';
+import { RemoveSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import useModalFormHeight from '../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
@@ -24,7 +21,7 @@ const FORM_DEFAULT_VALUES = {
   },
 };
 
-function RemoveSoftwareForm({ close }: RemoveSoftwareFormProps) {
+function RemoveSoftwareModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
 
   const [removeSoftwares, softwareShortcuts] = useSoftwareShortcutsStore(
@@ -44,7 +41,7 @@ function RemoveSoftwareForm({ close }: RemoveSoftwareFormProps) {
 
   const handleCancel = () => {
     handleClear();
-    if (close) close();
+    context.closeModal(id);
   };
 
   const handleSubmit = async (values: RemoveSoftwareFormValues) => {
@@ -113,4 +110,4 @@ function RemoveSoftwareForm({ close }: RemoveSoftwareFormProps) {
   );
 }
 
-export default RemoveSoftwareForm;
+export default RemoveSoftwareModal;
