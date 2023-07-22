@@ -201,6 +201,8 @@ export const addShortcutsBySoftwareKey = async (
 
     await writeJson(writeDse, softwareShortcut);
     logSuccess(`Added user shortcuts - ${softwareKey}.json`);
+
+    return softwareShortcut;
   } catch (error) {
     logError(`Couldn't add user shortcuts - ${softwareKey}.json`, error);
     throw error;
@@ -227,6 +229,8 @@ export const removeShortcutsBySoftwareKey = async (
 
     await writeJson(writeDse, softwareShortcut);
     logSuccess(`Removed user shortcuts - ${softwareKey}.json`);
+
+    return softwareShortcut;
   } catch (error) {
     logError(`Couldn't remove user shortcuts - ${softwareKey}.json`, error);
     throw error;

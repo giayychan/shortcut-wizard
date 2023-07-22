@@ -36,7 +36,7 @@ function Main() {
   const setHeight = useAppHeightStore((state) => state.setHeight);
 
   useEffect(() => {
-    setHeight(rect.height);
+    setHeight(rect.height, "App's height");
   }, [rect.height, setHeight]);
 
   return (

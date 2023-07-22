@@ -1,6 +1,8 @@
 import { Text, Kbd, Flex, rem } from '@mantine/core';
 
 function Hotkey({ hotkey }: { hotkey: { id: number; value: string }[] }) {
+  if (!hotkey?.length) return null;
+
   return (
     <Flex>
       {hotkey?.map(({ id, value: key }, index) => {

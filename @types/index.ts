@@ -39,7 +39,8 @@ export interface SoftwareShortcuts {
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 
 export type AddSoftwareFormValues = SoftwareShortcut & { file: File | null };
-export type AddShortcutFormValues = { abc: string };
+export type AddShortcutFormValues = Shortcut;
+
 export type RemoveShortcutFormValues = { abc: string };
 export type RemoveSoftwareFormValues = {
   removedSoftwares: string[];
@@ -74,6 +75,11 @@ export type SoftwareShortcutsState = {
 
   addSoftware: (newSoftware: SoftwareShortcut) => Promise<void>;
   removeSoftwares: (removedSoftwares: string[]) => Promise<void>;
+
+  addShortcutBySelectedSoftware: (newShortcut: Shortcut) => Promise<void>;
+  removeShortcutsBySelectedSoftware: (
+    removedShortcuts: Shortcut[]
+  ) => Promise<void>;
 };
 
 export type OnArgumentTypes = {
@@ -86,8 +92,8 @@ export type InvokeReturnTypes = {
   fetchSoftwareShortcuts: SoftwareShortcuts;
   fetchSoftwareShortcut: SoftwareShortcut;
   fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
-  addShortcutsBySoftwareKey: void;
-  removeShortcutsBySoftwareKey: void;
+  addShortcutsBySoftwareKey: SoftwareShortcut;
+  removeShortcutsBySoftwareKey: SoftwareShortcut;
   addSoftwareShortcut: SoftwareShortcut;
   removeSoftwareShortcut: void;
 };
@@ -107,7 +113,7 @@ export type InvokeChannels = keyof InvokeReturnTypes;
 export type AppHeightState = {
   previousHeight: number;
   height: number;
-  setHeight: (height?: number) => void;
+  setHeight: (height?: number, triggeredBy?: string) => void;
 };
 
 export type SelectedShortcutsState = {

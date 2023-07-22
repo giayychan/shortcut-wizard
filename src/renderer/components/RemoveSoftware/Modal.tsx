@@ -97,8 +97,10 @@ function RemoveSoftwareModal({ context, id }: ContextModalProps) {
       </Checkbox.Group>
 
       <Group position="right" mt="xl">
-        <Button onClick={handleClear}>Clear</Button>
-        <Button variant="outline" type="submit">
+        <Button variant="subtle" onClick={handleClear}>
+          Clear
+        </Button>
+        <Button variant="filled" type="submit">
           Remove
         </Button>
 

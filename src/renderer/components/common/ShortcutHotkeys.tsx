@@ -1,17 +1,10 @@
 import { Group } from '@mantine/core';
+import mapArrayWithId from 'renderer/utils';
 import Hotkey from './ShortcutHotkey';
 
-export const mapArrayWithId = (source: any[]): any[] => {
-  if (!source) return source;
-  if (!Array.isArray(source)) return source;
-
-  return source.map((value, index) => ({
-    id: index,
-    value: mapArrayWithId(value),
-  }));
-};
-
 function Hotkeys({ hotkeys }: { hotkeys: string[][] }) {
+  if (!hotkeys?.length) return null;
+
   const indexedHotkeys = mapArrayWithId(hotkeys);
 
   return (

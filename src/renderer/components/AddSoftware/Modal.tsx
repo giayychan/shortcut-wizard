@@ -111,8 +111,10 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
       ) : null}
 
       <Group position="right" mt="xl">
-        <Button onClick={handleClear}>Clear</Button>
-        <Button variant="outline" type="submit">
+        <Button onClick={handleClear} variant="subtle">
+          Clear
+        </Button>
+        <Button variant="filled" type="submit">
           Add
         </Button>
 

@@ -8,7 +8,7 @@ const useAppHeightStore = create(
   subscribeWithSelector<AppHeightState>((set, get) => ({
     previousHeight: 0,
     height: 0,
-    setHeight: (updatedHeight) => {
+    setHeight: (updatedHeight, triggeredBy) => {
       const { previousHeight } = get();
       if (updatedHeight === 0) return;
       const { height } = get();
@@ -16,9 +16,11 @@ const useAppHeightStore = create(
       set({ height: updatedHeight || previousHeight, previousHeight: height });
 
       // todo: devs log only
-      console.log('sendMessage - updateMainWindowHeight', [
+      console.log(
+        'sendMessage - updateMainWindowHeight',
         Math.round(updatedHeight || previousHeight),
-      ]);
+        triggeredBy
+      );
       ipcRenderer.sendMessage('updateMainWindowHeight', [
         Math.round(updatedHeight || previousHeight),
       ]);

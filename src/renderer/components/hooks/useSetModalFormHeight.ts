@@ -7,8 +7,10 @@ function useModalFormHeight() {
 
   useEffect(() => {
     setHeight(MAX_HEIGHT);
+    console.log('useModalFormHeight: ', MAX_HEIGHT);
     return () => {
       setHeight();
+      console.log('useModalFormHeight: ', 'return');
     };
   }, [setHeight]);
 
