@@ -11,7 +11,7 @@ import { useResizeObserver } from '@mantine/hooks';
 import { ModalsProvider } from '@mantine/modals';
 
 // import BrandLogo from './components/common/BrandLogo';
-// import SearchBar from './components/SearchBar/Container';
+import SearchShortcut from './components/SearchShortcut/Container';
 import SoftwareList from './components/SoftwareList/Container';
 import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 
@@ -58,7 +58,7 @@ function Main() {
         <Paper radius="md" ref={ref}>
           <Flex p="lg" direction="column">
             {/* <BrandLogo /> */}
-            {/* <SearchBar /> */}
+            <SearchShortcut />
             <SoftwareList />
             <ShortcutList />
           </Flex>

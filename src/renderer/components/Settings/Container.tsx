@@ -8,8 +8,8 @@ import RemoveShortcutButton from '../RemoveShortcut/Button';
 import SettingsMenu from './Menu';
 
 function SettingContainer() {
-  const { selectedSoftwareShortcut } = useSelectedShortcutsStore(
-    (state) => state
+  const selectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.selectedSoftwareShortcut
   );
 
   return (

@@ -4,11 +4,68 @@ import { openContextModal } from '@mantine/modals';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 import FavoriteShortcut from '../FavoriteShortcut/Container';
+import useFuseSearchStore from '../../stores/useFuseSearch';
+import StyledSvg from '../common/StyledSvg';
 
 function ShortcutListContainer() {
-  const [selectedSoftwareShortcut] = useSelectedShortcutsStore((state) => [
-    state.selectedSoftwareShortcut,
+  const selectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.selectedSoftwareShortcut
+  );
+
+  const [isSearchResultsShow, searchResults] = useFuseSearchStore((state) => [
+    state.isSearchResultsShow,
+    state.results,
   ]);
+
+  if (isSearchResultsShow) {
+    return (
+      <ScrollArea.Autosize mah={300} scrollHideDelay={1500}>
+        <List
+          mx={6}
+          spacing="lg"
+          size="sm"
+          center
+          className="first:mt-4"
+          styles={{
+            itemWrapper: {
+              width: '100%',
+              '& > span:nth-of-type(2)': {
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              },
+            },
+          }}
+        >
+          {searchResults.length ? (
+            searchResults.map(({ item }) => {
+              const { hotkeys, description, id, software } = item;
+
+              return (
+                <List.Item
+                  key={id}
+                  icon={
+                    software.icon.dataUri && (
+                      <StyledSvg src={software.icon.dataUri} />
+                    )
+                  }
+                >
+                  <Text>
+                    {software.key}: {description}
+                  </Text>
+
+                  <Hotkeys hotkeys={hotkeys} />
+                </List.Item>
+              );
+            })
+          ) : (
+            <Text>No results found</Text>
+          )}
+        </List>
+      </ScrollArea.Autosize>
+    );
+  }
 
   if (!selectedSoftwareShortcut) {
     return null;

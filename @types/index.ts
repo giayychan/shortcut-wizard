@@ -45,6 +45,9 @@ export type RemoveShortcutFormValues = { shortcuts: string[] };
 export type RemoveSoftwareFormValues = {
   removedSoftwares: string[];
 };
+export type SearchShortcutFormValues = {
+  searchTerm: string;
+};
 export interface AddSoftwareAutocompleteOption extends SoftwareShortcut {
   value: string;
 }
