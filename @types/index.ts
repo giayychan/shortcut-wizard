@@ -77,6 +77,7 @@ export type SoftwareShortcutsState = {
   removeSoftwares: (removedSoftwares: string[]) => Promise<void>;
 
   addShortcutBySelectedSoftware: (newShortcut: Shortcut) => Promise<void>;
+  updateShortcutBySoftwareKey: (updatedShortcut: Shortcut) => Promise<void>;
   removeShortcutsBySelectedSoftware: (
     removedShortcuts: Shortcut[]
   ) => Promise<void>;
@@ -93,6 +94,7 @@ export type InvokeReturnTypes = {
   fetchSoftwareShortcut: SoftwareShortcut;
   fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
   addShortcutsBySoftwareKey: SoftwareShortcut;
+  updateShortcutsBySoftwareKey: SoftwareShortcut;
   removeShortcutsBySoftwareKey: SoftwareShortcut;
   addSoftwareShortcut: SoftwareShortcut;
   removeSoftwareShortcut: void;
@@ -103,6 +105,10 @@ export type InvokeArgumentTypes = {
   fetchSoftwareAutoCompleteOptions: undefined;
   fetchSoftwareShortcut: [softwareKey: string];
   addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
+  updateShortcutsBySoftwareKey: [
+    softwareKey: string,
+    updatedShortcuts: Shortcut[]
+  ];
   removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
   addSoftwareShortcut: [data: SoftwareShortcut];
   removeSoftwareShortcut: [softwareList: string[]];

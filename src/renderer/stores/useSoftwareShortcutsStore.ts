@@ -48,13 +48,43 @@ const useSoftwareShortcutsStore = create(
     removeSoftwares: async (removedSoftwares) => {
       const { softwareShortcuts } = get();
 
+      const updated = { ...softwareShortcuts };
+
       removedSoftwares.forEach((software) => {
-        delete softwareShortcuts[software];
+        delete updated[software];
       });
 
       await ipcRenderer.invoke('removeSoftwareShortcut', [removedSoftwares]);
 
-      set({ softwareShortcuts: { ...softwareShortcuts } });
+      set({ softwareShortcuts: updated });
+    },
+
+    updateShortcutBySoftwareKey: async (updatedShortcut) => {
+      const { softwareShortcuts } = get();
+      const { selectedSoftwareShortcut, setSelectedSoftwareShortcut } =
+        useSelectedShortcutsStore.getState();
+
+      if (!selectedSoftwareShortcut) throw new Error('No softwareKey selected');
+
+      const softwareKey = selectedSoftwareShortcut.software.key;
+      const updatedShortcuts = softwareShortcuts[softwareKey].shortcuts.map(
+        (shortcut) => {
+          if (shortcut.id === updatedShortcut.id) return updatedShortcut;
+          return shortcut;
+        }
+      );
+
+      const softwareShortcut = await ipcRenderer.invoke(
+        'updateShortcutsBySoftwareKey',
+        [softwareKey, updatedShortcuts]
+      );
+
+      const updated = { ...softwareShortcuts };
+
+      updated[softwareKey].shortcuts = updatedShortcuts;
+
+      setSelectedSoftwareShortcut(softwareShortcut);
+      set({ softwareShortcuts: updated });
     },
 
     addShortcutBySelectedSoftware: async (newShortcut) => {
@@ -71,9 +101,11 @@ const useSoftwareShortcutsStore = create(
         [softwareKey, [newShortcut]]
       );
 
-      softwareShortcuts[softwareKey] = softwareShortcut;
+      const updated = { ...softwareShortcuts };
+
+      updated[softwareKey] = softwareShortcut;
       setSelectedSoftwareShortcut(softwareShortcut);
-      set({ softwareShortcuts: { ...softwareShortcuts } });
+      set({ softwareShortcuts: updated });
     },
 
     removeShortcutsBySelectedSoftware: async (removedShortcuts) => {
@@ -90,9 +122,11 @@ const useSoftwareShortcutsStore = create(
         [softwareKey, removedShortcuts]
       );
 
-      softwareShortcuts[softwareKey] = softwareShortcut;
+      const updated = { ...softwareShortcuts };
+
+      updated[softwareKey] = softwareShortcut;
       setSelectedSoftwareShortcut(softwareShortcut);
-      set({ softwareShortcuts: { ...softwareShortcuts } });
+      set({ softwareShortcuts: updated });
     },
   }))
 );

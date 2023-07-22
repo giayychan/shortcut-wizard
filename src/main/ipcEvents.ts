@@ -9,6 +9,7 @@ import {
   removeShortcutsBySoftwareKey,
   removeSoftwareShortcut,
   fetchSoftwareAutoCompleteOptions,
+  updateShortcutsBySoftwareKey,
 } from './io';
 
 export default function dbCalls() {
@@ -28,6 +29,12 @@ export default function dbCalls() {
 
   ipcMain.handle('addShortcutsBySoftwareKey', (_, [softwareKey, shortcuts]) =>
     addShortcutsBySoftwareKey(softwareKey, shortcuts)
+  );
+
+  ipcMain.handle(
+    'updateShortcutsBySoftwareKey',
+    (_, [softwareKey, updatedShortcuts]) =>
+      updateShortcutsBySoftwareKey(softwareKey, updatedShortcuts)
   );
 
   ipcMain.handle(

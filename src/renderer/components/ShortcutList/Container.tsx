@@ -1,9 +1,9 @@
-import { Button, List, Text, ActionIcon, ScrollArea } from '@mantine/core';
-import { IconStar } from '@tabler/icons-react';
+import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
+import FavoriteShortcut from '../FavoriteShortcut/Container';
 
 function ShortcutListContainer() {
   const [selectedSoftwareShortcut] = useSelectedShortcutsStore((state) => [
@@ -31,6 +31,14 @@ function ShortcutListContainer() {
     );
   }
 
+  const sortedByFavorite = [...selectedSoftwareShortcut.shortcuts].sort(
+    (a, b) => {
+      if (a.isFavorite && !b.isFavorite) return -1;
+      if (!a.isFavorite && b.isFavorite) return 1;
+      return 0;
+    }
+  );
+
   return (
     <ScrollArea.Autosize mah={300} scrollHideDelay={1500}>
       <List
@@ -51,18 +59,11 @@ function ShortcutListContainer() {
           },
         }}
       >
-        {selectedSoftwareShortcut.shortcuts.map((shortcut) => {
-          const { hotkeys, description, isFavorite, id } = shortcut;
+        {sortedByFavorite.map((shortcut) => {
+          const { hotkeys, description, id } = shortcut;
 
           return (
-            <List.Item
-              key={id}
-              icon={
-                <ActionIcon size="xs">
-                  <IconStar fill={isFavorite ? 'white' : 'transparent'} />
-                </ActionIcon>
-              }
-            >
+            <List.Item key={id} icon={<FavoriteShortcut shortcut={shortcut} />}>
               <Text>{description}</Text>
 
               <Hotkeys hotkeys={hotkeys} />

@@ -209,6 +209,31 @@ export const addShortcutsBySoftwareKey = async (
   }
 };
 
+export const updateShortcutsBySoftwareKey = async (
+  softwareKey: string,
+  updatedShortcut: Shortcut[]
+) => {
+  if (!softwareKey) throw Error('softwareKey is required');
+  if (!updatedShortcut.length) throw Error('shortcuts is required');
+
+  try {
+    const softwareShortcut = await fetchSoftwareShortcut(softwareKey);
+    softwareShortcut.shortcuts = updatedShortcut;
+
+    const writeDse = getUserDataPath('shortcuts', `${softwareKey}.json`);
+
+    await shortcutValidation(softwareShortcut);
+
+    await writeJson(writeDse, softwareShortcut);
+    logSuccess(`Update user shortcuts - ${softwareKey}.json`);
+
+    return softwareShortcut;
+  } catch (error) {
+    logError(`Couldn't update user shortcuts - ${softwareKey}.json`, error);
+    throw error;
+  }
+};
+
 export const removeShortcutsBySoftwareKey = async (
   softwareKey: string,
   shortcuts: Shortcut[]
