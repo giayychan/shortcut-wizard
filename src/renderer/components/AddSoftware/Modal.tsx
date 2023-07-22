@@ -9,7 +9,7 @@ import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
-import useModalFormHeight from '../hooks/useSetModalFormHeight';
+import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {

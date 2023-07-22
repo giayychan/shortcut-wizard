@@ -73,10 +73,27 @@ const useSoftwareShortcutsStore = create(
 
       softwareShortcuts[softwareKey] = softwareShortcut;
       setSelectedSoftwareShortcut(softwareShortcut);
-      set({ softwareShortcuts });
+      set({ softwareShortcuts: { ...softwareShortcuts } });
     },
 
-    removeShortcutsBySelectedSoftware: async (removedShortcuts) => {},
+    removeShortcutsBySelectedSoftware: async (removedShortcuts) => {
+      const { softwareShortcuts } = get();
+      const { selectedSoftwareShortcut, setSelectedSoftwareShortcut } =
+        useSelectedShortcutsStore.getState();
+
+      if (!selectedSoftwareShortcut) throw new Error('No softwareKey selected');
+
+      const softwareKey = selectedSoftwareShortcut.software.key;
+
+      const softwareShortcut = await ipcRenderer.invoke(
+        'removeShortcutsBySoftwareKey',
+        [softwareKey, removedShortcuts]
+      );
+
+      softwareShortcuts[softwareKey] = softwareShortcut;
+      setSelectedSoftwareShortcut(softwareShortcut);
+      set({ softwareShortcuts: { ...softwareShortcuts } });
+    },
   }))
 );
 

@@ -13,7 +13,7 @@ import { ContextModalProps } from '@mantine/modals';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import StyledSvg from '../common/StyledSvg';
 import { RemoveSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
-import useModalFormHeight from '../hooks/useSetModalFormHeight';
+import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -83,6 +83,7 @@ function RemoveSoftwareModal({ context, id }: ContextModalProps) {
 
           return (
             <Checkbox
+              key={key}
               my="xs"
               value={key}
               label={

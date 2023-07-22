@@ -17,11 +17,11 @@ import { IconPlayerRecordFilled } from '@tabler/icons-react';
 import { useCallback, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
-import useModalFormHeight from '../hooks/useSetModalFormHeight';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { AddShortcutFormValues } from '../../../../@types';
 import mapArrayWithId from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
+import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -34,7 +34,6 @@ const FORM_DEFAULT_VALUES = {
 
 function AddShortcutModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
-
   const [keys, { start, stop, isRecording }] = useRecordHotkeys();
 
   const [currentSet, toggle] = useToggle(['first', 'second']);

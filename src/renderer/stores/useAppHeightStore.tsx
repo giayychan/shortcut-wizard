@@ -6,24 +6,19 @@ const { ipcRenderer } = window.electron;
 
 const useAppHeightStore = create(
   subscribeWithSelector<AppHeightState>((set, get) => ({
-    previousHeight: 0,
     height: 0,
-    setHeight: (updatedHeight, triggeredBy) => {
-      const { previousHeight } = get();
+    setHeight: (updatedHeight, { update }) => {
       if (updatedHeight === 0) return;
       const { height } = get();
 
-      set({ height: updatedHeight || previousHeight, previousHeight: height });
+      const roundedHeight = Math.round(updatedHeight || height);
+
+      if (update) set({ height: roundedHeight });
 
       // todo: devs log only
-      console.log(
-        'sendMessage - updateMainWindowHeight',
-        Math.round(updatedHeight || previousHeight),
-        triggeredBy
-      );
-      ipcRenderer.sendMessage('updateMainWindowHeight', [
-        Math.round(updatedHeight || previousHeight),
-      ]);
+      console.log('sendMessage - updateMainWindowHeight: ', roundedHeight);
+
+      ipcRenderer.sendMessage('updateMainWindowHeight', [roundedHeight]);
     },
   }))
 );

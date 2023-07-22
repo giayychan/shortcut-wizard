@@ -41,7 +41,7 @@ export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 export type AddSoftwareFormValues = SoftwareShortcut & { file: File | null };
 export type AddShortcutFormValues = Shortcut;
 
-export type RemoveShortcutFormValues = { abc: string };
+export type RemoveShortcutFormValues = { shortcuts: string[] };
 export type RemoveSoftwareFormValues = {
   removedSoftwares: string[];
 };
@@ -111,9 +111,11 @@ export type InvokeArgumentTypes = {
 export type InvokeChannels = keyof InvokeReturnTypes;
 
 export type AppHeightState = {
-  previousHeight: number;
   height: number;
-  setHeight: (height?: number, triggeredBy?: string) => void;
+  setHeight: (
+    height: number | undefined,
+    { update }: { update: boolean }
+  ) => void;
 };
 
 export type SelectedShortcutsState = {

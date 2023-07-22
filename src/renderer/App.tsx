@@ -36,7 +36,7 @@ function Main() {
   const setHeight = useAppHeightStore((state) => state.setHeight);
 
   useEffect(() => {
-    setHeight(rect.height, "App's height");
+    setHeight(rect.height, { update: true });
   }, [rect.height, setHeight]);
 
   return (
@@ -46,7 +46,14 @@ function Main() {
       withNormalizeCSS
       theme={{ colorScheme: 'dark' }}
     >
-      <ModalsProvider modals={modals} modalProps={{ fullScreen: true }}>
+      <ModalsProvider
+        modals={modals}
+        modalProps={{
+          fullScreen: true,
+          keepMounted: false,
+          centered: true,
+        }}
+      >
         <Notifications />
         <Paper radius="md" ref={ref}>
           <Flex p="lg" direction="column">

@@ -7,5 +7,4 @@ const mapArrayWithId = (source: any[]): any[] => {
     value: mapArrayWithId(value),
   }));
 };
-
 export default mapArrayWithId;
