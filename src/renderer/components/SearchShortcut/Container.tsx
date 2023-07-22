@@ -26,6 +26,28 @@ function SearchShortcutContainer() {
     (state) => state.softwareShortcuts
   );
 
+  const flattenShortcutWithSoftwareDataArray = Object.keys(
+    softwareShortcuts
+  ).reduce((prev: FlattenShortcut[], curr: string) => {
+    const { software, shortcuts } = softwareShortcuts[curr];
+
+    const shortcutsArray = shortcuts.map((shortcut) => ({
+      ...shortcut,
+      id: `${software.key}-${shortcut.id}`,
+      software,
+    }));
+
+    return [...prev, ...shortcutsArray];
+  }, []);
+
+  const options: Fuse.IFuseOptions<FlattenShortcut> = {
+    keys: ['description', 'software.key'],
+    // looks like still only match if search term is 2 characters or more, weird!
+    minMatchCharLength: 1,
+  };
+
+  const fuse = new Fuse(flattenShortcutWithSoftwareDataArray, options);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const searchValue = e.target.value;
     setSearchTerm(searchValue);
@@ -36,26 +58,7 @@ function SearchShortcutContainer() {
       return;
     }
 
-    const flattenShortcutWithSoftwareDataArray = Object.keys(
-      softwareShortcuts
-    ).reduce((prev: FlattenShortcut[], curr: string) => {
-      const { software, shortcuts } = softwareShortcuts[curr];
-
-      const shortcutsArray = shortcuts.map((shortcut) => ({
-        ...shortcut,
-        id: `${software.key}-${shortcut.id}`,
-        software,
-      }));
-
-      return [...prev, ...shortcutsArray];
-    }, []);
-
-    const options: Fuse.IFuseOptions<FlattenShortcut> = {
-      keys: ['description', 'software.key'],
-    };
-    const fuse = new Fuse(flattenShortcutWithSoftwareDataArray, options);
     const result = fuse.search(searchTerm);
-
     setResults(result);
   };
 
