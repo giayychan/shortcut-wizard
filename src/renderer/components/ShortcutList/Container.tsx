@@ -3,9 +3,9 @@ import { openContextModal } from '@mantine/modals';
 
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
-import FavoriteShortcut from '../FavoriteShortcut/Container';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
+import ShortcutListItem from './Item';
 
 function ShortcutListContainer() {
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
@@ -117,15 +117,8 @@ function ShortcutListContainer() {
         }}
       >
         {sortedByFavorite.map((shortcut) => {
-          const { hotkeys, description, id } = shortcut;
-
-          return (
-            <List.Item key={id} icon={<FavoriteShortcut shortcut={shortcut} />}>
-              <Text>{description}</Text>
-
-              <Hotkeys hotkeys={hotkeys} />
-            </List.Item>
-          );
+          const { id } = shortcut;
+          return <ShortcutListItem shortcut={shortcut} key={id} />;
         })}
       </List>
     </ScrollArea.Autosize>

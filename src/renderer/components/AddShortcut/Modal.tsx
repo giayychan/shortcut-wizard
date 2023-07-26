@@ -10,7 +10,12 @@ import {
   Checkbox,
   Flex,
 } from '@mantine/core';
-import { useDisclosure, useTimeout, useToggle } from '@mantine/hooks';
+import {
+  useClickOutside,
+  useDisclosure,
+  useTimeout,
+  useToggle,
+} from '@mantine/hooks';
 import { ContextModalProps } from '@mantine/modals';
 import { useRecordHotkeys } from 'react-hotkeys-hook';
 import { IconPlayerRecordFilled } from '@tabler/icons-react';
@@ -18,7 +23,7 @@ import { useCallback, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
-import { AddShortcutFormValues } from '../../../../@types';
+import { EditShortcutFormValues, Shortcut } from '../../../../@types';
 import mapArrayWithId from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
@@ -32,16 +37,34 @@ const FORM_DEFAULT_VALUES = {
   },
 };
 
-function AddShortcutModal({ context, id }: ContextModalProps) {
+function AddShortcutModal({
+  context,
+  id,
+  innerProps: { shortcut },
+}: ContextModalProps<{ shortcut?: Shortcut }>) {
   useModalFormHeight();
+
+  const isUpdateShortcut = Boolean(shortcut);
   const [keys, { start, stop, isRecording }] = useRecordHotkeys();
+  const clickOutsideRef = useClickOutside(() => stop());
 
   const [currentSet, toggle] = useToggle(['first', 'second']);
 
-  const addShortcutBySelectedSoftware = useSoftwareShortcutsStore(
-    (state) => state.addShortcutBySelectedSoftware
+  const [addShortcut, updateShortcut] = useSoftwareShortcutsStore((state) => [
+    state.addShortcutBySelectedSoftware,
+    state.updateShortcutBySoftwareKey,
+  ]);
+  const form = useForm<EditShortcutFormValues>(
+    isUpdateShortcut
+      ? {
+          initialValues: shortcut,
+        }
+      : FORM_DEFAULT_VALUES
   );
-  const form = useForm<AddShortcutFormValues>(FORM_DEFAULT_VALUES);
+
+  const [firstSetHotkey, secondSetHotkey] = mapArrayWithId(
+    form.values.hotkeys || []
+  );
 
   const { start: clearHotkeysFieldError } = useTimeout(
     () => form.clearFieldError('hotkeys'),
@@ -106,9 +129,7 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
     context.closeModal(id);
   };
 
-  const handleSubmit = async (values: AddShortcutFormValues) => {
-    stop();
-
+  const handleSubmit = async (values: EditShortcutFormValues) => {
     const { description, hotkeys } = values;
 
     if (!description) {
@@ -116,7 +137,7 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
       return;
     }
 
-    if (!hotkeys[0]?.length) {
+    if (!hotkeys || !hotkeys[0]?.length) {
       form.setFieldError('hotkeys', 'Please record hotkeys');
       clearHotkeysFieldError();
       return;
@@ -124,15 +145,17 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
 
     openLoading();
 
-    const newShortcut = {
+    const updatedShortcut = {
       ...values,
-      id: nanoid(),
+      id: shortcut?.id || nanoid(),
       hotkeys,
       description,
+      isFavorite: values.isFavorite || shortcut?.isFavorite || false,
     };
 
     try {
-      await addShortcutBySelectedSoftware(newShortcut);
+      if (isUpdateShortcut) await updateShortcut(updatedShortcut);
+      else await addShortcut(updatedShortcut);
     } catch (error: any) {
       form.setFieldError('hotkeys', error.message);
     } finally {
@@ -140,8 +163,6 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
       handleCancel();
     }
   };
-
-  const [firstSetHotkey, secondSetHotkey] = mapArrayWithId(form.values.hotkeys);
 
   return (
     <Box<'form'>
@@ -171,6 +192,7 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
         <Flex gap="md" my="md">
           <Stack>
             <Button
+              ref={clickOutsideRef}
               variant="outline"
               size="xs"
               onClick={() => handleRecordButtonClick('first')}
@@ -194,6 +216,7 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
           </Stack>
           <Stack>
             <Button
+              ref={clickOutsideRef}
               disabled={!firstSetHotkey?.value?.length}
               variant="outline"
               size="xs"
@@ -219,13 +242,11 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
         </Flex>
       </Input.Wrapper>
 
-      {/* <Hotkeys hotkeys={form.values.hotkeys} /> */}
-
       <Checkbox
         my="xl"
         label="Favorite shortcut"
         // eslint-disable-next-line react/jsx-props-no-spreading
-        {...form.getInputProps('isFavorite')}
+        {...form.getInputProps('isFavorite', { type: 'checkbox' })}
       />
 
       <Group position="right" mt="xl">
@@ -233,7 +254,7 @@ function AddShortcutModal({ context, id }: ContextModalProps) {
           Clear
         </Button>
         <Button variant="filled" type="submit">
-          Add
+          {isUpdateShortcut ? 'Edit' : 'Add'}
         </Button>
 
         <Button variant="light" onClick={handleCancel}>

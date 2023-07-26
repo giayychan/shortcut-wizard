@@ -39,7 +39,7 @@ export interface SoftwareShortcuts {
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 
 export type AddSoftwareFormValues = SoftwareShortcut & { file: File | null };
-export type AddShortcutFormValues = Shortcut;
+export type EditShortcutFormValues = Partial<Shortcut>;
 
 export type RemoveShortcutFormValues = { shortcuts: string[] };
 export type RemoveSoftwareFormValues = {

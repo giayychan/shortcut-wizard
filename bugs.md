@@ -6,7 +6,6 @@ Bug:
 * app icon
 * Brand logo
 * finish software icon system selection
-* Edit shortcut
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 

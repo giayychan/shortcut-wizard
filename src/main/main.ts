@@ -67,7 +67,7 @@ const createWindow = async () => {
       width: WIDTH,
       height: 0,
       resizable: process.env.NODE_ENV !== 'production',
-      hasShadow: false,
+      hasShadow: true,
       transparent: true,
       frame: false,
       icon: getAssetPath('icon.png'),
