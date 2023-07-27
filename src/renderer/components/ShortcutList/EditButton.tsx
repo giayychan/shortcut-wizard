@@ -1,12 +1,11 @@
-import { CSSProperties } from 'react';
 import { ActionIcon } from '@mantine/core';
 import { IconEdit } from '@tabler/icons-react';
 import { openContextModal } from '@mantine/modals';
 import { Shortcut } from '../../../../@types';
 
-type Props = { styles: CSSProperties; shortcut: Shortcut };
+type Props = { shortcut: Shortcut };
 
-function EditButton({ styles, shortcut }: Props) {
+function EditButton({ shortcut }: Props) {
   const handleClick = () => {
     openContextModal({
       title: 'Edit shortcut',
@@ -18,7 +17,7 @@ function EditButton({ styles, shortcut }: Props) {
   };
 
   return (
-    <ActionIcon size="xs" onClick={handleClick} style={styles}>
+    <ActionIcon size="xs" onClick={handleClick} color="gray.6">
       <IconEdit />
     </ActionIcon>
   );

@@ -6,7 +6,7 @@ function RemoveSoftwareButton() {
 
   return (
     <Button
-      variant="subtle"
+      color="white"
       onClick={() => {
         openContextModal({
           title,

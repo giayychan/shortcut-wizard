@@ -150,7 +150,7 @@ function AddShortcutModal({
       id: shortcut?.id || nanoid(),
       hotkeys,
       description,
-      isFavorite: values.isFavorite || shortcut?.isFavorite || false,
+      isFavorite: values.isFavorite === undefined ? false : values.isFavorite,
     };
 
     try {

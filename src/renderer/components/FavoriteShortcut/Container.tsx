@@ -26,8 +26,8 @@ function Container({ shortcut }: Props) {
   };
 
   return (
-    <ActionIcon size="xs" onClick={handleClick}>
-      <IconStar fill={isFavorite ? 'white' : 'transparent'} />
+    <ActionIcon size="xs" onClick={handleClick} color="gray.6">
+      <IconStar fill={isFavorite ? 'gray' : 'transparent'} />
     </ActionIcon>
   );
 }

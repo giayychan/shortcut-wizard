@@ -1,11 +1,4 @@
-import {
-  ActionIcon,
-  CloseButton,
-  Flex,
-  Transition,
-  rem,
-  useMantineTheme,
-} from '@mantine/core';
+import { ActionIcon, CloseButton, Flex, Transition } from '@mantine/core';
 import { useClickOutside } from '@mantine/hooks';
 import { IconSettings } from '@tabler/icons-react';
 import { ReactNode, SetStateAction } from 'react';
@@ -27,11 +20,15 @@ function SettingsMenu({
   opened: boolean;
 }) {
   const clickOutsideRef = useClickOutside(() => toggle(false));
-  const theme = useMantineTheme();
 
   return (
     <Flex ml="auto" align="center" justify="flex-end">
-      <ActionIcon size="lg" title="Settings" onClick={() => toggle()}>
+      <ActionIcon
+        size="lg"
+        title="Settings"
+        onClick={() => toggle()}
+        color="gray.6"
+      >
         <IconSettings />
       </ActionIcon>
       <Transition mounted={opened} transition={transitionProps}>
@@ -47,18 +44,12 @@ function SettingsMenu({
             right={0}
             style={{
               ...styles,
-              borderRadius: rem(5),
-              background: theme.fn.linearGradient(
-                45,
-                theme.colors.blue[9],
-                theme.colors.indigo[9]
-              ),
             }}
           >
             {children}
             <CloseButton
-              size="sm"
-              variant="light"
+              size="md"
+              variant="filled"
               title="Close settings menu"
               onClick={() => toggle()}
               ml="auto"

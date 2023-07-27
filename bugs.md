@@ -1,8 +1,9 @@
-Bug:
+Bugs:
 
 * UI fixes (scroll, infinite scroll, mass data)
 * app icon
 * finish software icon system selection
+* finish initial shortcut data
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 
