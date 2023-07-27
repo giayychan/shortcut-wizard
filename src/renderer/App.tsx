@@ -19,6 +19,7 @@ import './App.css';
 import useAppHeightStore from './stores/useAppHeightStore';
 import ShortcutList from './components/ShortcutList/Container';
 import modals from './components/common/modals';
+import BrandLogo from './components/common/BrandLogo';
 
 const myCache = createEmotionCache({ key: 'mantine' });
 
@@ -57,10 +58,10 @@ function Main() {
         <Notifications />
         <Paper radius="md" ref={ref}>
           <Flex p="lg" direction="column">
-            {/* <BrandLogo /> */}
             <SearchShortcut />
             <SoftwareList />
             <ShortcutList />
+            <BrandLogo />
           </Flex>
         </Paper>
       </ModalsProvider>

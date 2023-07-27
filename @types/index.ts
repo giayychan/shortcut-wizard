@@ -93,6 +93,7 @@ export type OnArgumentTypes = {
 export type OnChannels = keyof OnArgumentTypes;
 
 export type InvokeReturnTypes = {
+  factoryReset: undefined;
   fetchSoftwareShortcuts: SoftwareShortcuts;
   fetchSoftwareShortcut: SoftwareShortcut;
   fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
@@ -104,6 +105,7 @@ export type InvokeReturnTypes = {
 };
 
 export type InvokeArgumentTypes = {
+  factoryReset: undefined;
   fetchSoftwareShortcuts: undefined;
   fetchSoftwareAutoCompleteOptions: undefined;
   fetchSoftwareShortcut: [softwareKey: string];

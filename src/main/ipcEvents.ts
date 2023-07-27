@@ -10,6 +10,7 @@ import {
   removeSoftwareShortcut,
   fetchSoftwareAutoCompleteOptions,
   updateShortcutsBySoftwareKey,
+  factoryReset,
 } from './io';
 
 export default function dbCalls() {
@@ -18,9 +19,10 @@ export default function dbCalls() {
     if (mainWindow) mainWindow.setSize(WIDTH, height, true);
   });
 
-  ipcMain.handle('fetchSoftwareShortcuts', () => fetchSoftwareShortcuts());
-  ipcMain.handle('fetchSoftwareAutoCompleteOptions', () =>
-    fetchSoftwareAutoCompleteOptions()
+  ipcMain.handle('fetchSoftwareShortcuts', fetchSoftwareShortcuts);
+  ipcMain.handle(
+    'fetchSoftwareAutoCompleteOptions',
+    fetchSoftwareAutoCompleteOptions
   );
 
   ipcMain.handle('fetchSoftwareShortcut', (_, [softwareKey]) =>
@@ -50,4 +52,6 @@ export default function dbCalls() {
   ipcMain.handle('removeSoftwareShortcut', (_, [softwareList]) =>
     removeSoftwareShortcut(softwareList)
   );
+
+  ipcMain.handle('factoryReset', factoryReset);
 }

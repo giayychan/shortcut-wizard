@@ -14,6 +14,7 @@ import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { RemoveShortcutFormValues } from '../../../../@types';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
+import Hotkeys from '../common/ShortcutHotkeys';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: { shortcuts: [] },
@@ -72,7 +73,7 @@ function RemoveShortcutModal({ context, id }: ContextModalProps) {
     selectedSoftwareShortcut.shortcuts?.length ? (
     <Box<'form'>
       component="form"
-      maw={320}
+      maw="90%"
       mx="auto"
       onSubmit={form.onSubmit(handleSubmit)}
     >
@@ -81,14 +82,19 @@ function RemoveShortcutModal({ context, id }: ContextModalProps) {
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Checkbox.Group {...form.getInputProps('shortcuts')}>
         {selectedSoftwareShortcut.shortcuts?.map((shortcut) => {
-          const { description, id: shortcutId } = shortcut;
+          const { description, id: shortcutId, hotkeys } = shortcut;
 
           return (
             <Checkbox
               my="xs"
               key={shortcutId}
               value={shortcutId}
-              label={description}
+              label={
+                <Group>
+                  <Hotkeys hotkeys={hotkeys} />
+                  <Text>{description}</Text>
+                </Group>
+              }
             />
           );
         })}

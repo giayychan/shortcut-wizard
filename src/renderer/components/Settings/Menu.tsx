@@ -6,9 +6,9 @@ import {
   rem,
   useMantineTheme,
 } from '@mantine/core';
-import { useClickOutside, useToggle } from '@mantine/hooks';
+import { useClickOutside } from '@mantine/hooks';
 import { IconSettings } from '@tabler/icons-react';
-import { ReactNode } from 'react';
+import { ReactNode, SetStateAction } from 'react';
 
 const transitionProps = {
   in: { opacity: 1, transform: 'translateX(0%)' },
@@ -17,9 +17,15 @@ const transitionProps = {
   transitionProperty: 'transform, opacity',
 };
 
-function SettingsMenu({ children }: { children: ReactNode }) {
-  const [opened, toggle] = useToggle();
-
+function SettingsMenu({
+  children,
+  toggle,
+  opened,
+}: {
+  children: ReactNode;
+  toggle: (value?: SetStateAction<boolean> | undefined) => void;
+  opened: boolean;
+}) {
   const clickOutsideRef = useClickOutside(() => toggle(false));
   const theme = useMantineTheme();
 

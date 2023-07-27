@@ -1,10 +1,7 @@
 Bug:
 
-* factory reset function
-* show shortcuts in remove shortcut modal
-* UI fixes
+* UI fixes (scroll, infinite scroll, mass data)
 * app icon
-* Brand logo
 * finish software icon system selection
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download

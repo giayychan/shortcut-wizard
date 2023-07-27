@@ -32,8 +32,6 @@ export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
 export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath('data', 'shortcuts');
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
-// todo: reset data
-
 export const initializeUserData = async () => {
   try {
     await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
@@ -52,6 +50,17 @@ export const initializeUserData = async () => {
     logError("Couldn't copy system shortcuts directory to user");
     throw error;
   }
+};
+
+export const factoryReset = async () => {
+  try {
+    await remove(USER_SOFTWARE_SHORTCUTS_DIR);
+  } catch (error) {
+    logError("Couldn't remove user shortcuts directory");
+    throw error;
+  }
+
+  await initializeUserData();
 };
 
 export const writeCustomIconToDisk = async (

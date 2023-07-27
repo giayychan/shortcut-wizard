@@ -36,7 +36,6 @@ const useSoftwareShortcutsStore = create(
         newSoftware,
       ]);
 
-      // todo: update state without flickering
       set({
         softwareShortcuts: {
           ...softwareShortcuts,

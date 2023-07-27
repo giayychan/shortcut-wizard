@@ -15,9 +15,6 @@ const useAppHeightStore = create(
 
       if (update) set({ height: roundedHeight });
 
-      // todo: devs log only
-      console.log('sendMessage - updateMainWindowHeight: ', roundedHeight);
-
       ipcRenderer.sendMessage('updateMainWindowHeight', [roundedHeight]);
     },
   }))
