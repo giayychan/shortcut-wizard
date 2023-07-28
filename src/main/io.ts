@@ -14,7 +14,6 @@ import {
   getAssetPath,
   getUserDataPath,
   logError,
-  // logInfo,
   logSuccess,
 } from './utils';
 import { shortcutValidation } from './schema';
@@ -142,8 +141,23 @@ export const fetchSoftwareAutoCompleteOptions = async () => {
 
   try {
     const result = await readJson(filePath);
+    const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+
+    const parsedResult = JSON.parse(result);
+
+    const filteredExistingSoftwaresAutoCompleteOptions = parsedResult.filter(
+      (option: AddSoftwareAutocompleteOption) => {
+        const found = existingSoftwares.some((software) => {
+          const [key] = software.split('.');
+          return key === option.software.key;
+        });
+
+        return !found;
+      }
+    );
+
     logSuccess(`fetched software shortcut - ${filePath} successfully`);
-    return JSON.parse(result);
+    return filteredExistingSoftwaresAutoCompleteOptions;
   } catch (error: any) {
     logError(`Couldn't read user shortcuts - ${filePath}: ${error}`);
     throw error;
@@ -275,6 +289,7 @@ export const addSoftwareShortcut = async (data: SoftwareShortcut) => {
   const { key, icon } = data.software;
 
   if (!key) throw Error('softwareKey is required');
+
   if (!data.shortcuts) throw Error('shortcuts is required');
 
   const writeDse = getUserDataPath('shortcuts', `${key}.json`);
@@ -284,6 +299,17 @@ export const addSoftwareShortcut = async (data: SoftwareShortcut) => {
   icon.filename = path.basename(icon.filename);
 
   try {
+    const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+
+    const found = existingSoftwares.some((software) => {
+      const [softwareKey] = software.split('.');
+      return softwareKey === key;
+    });
+
+    // todo: sanitize software key
+
+    if (found) throw Error('software already exists');
+
     await outputJson(writeDse, data);
     if (icon.isCustom) {
       const desc = getUserDataPath('icons', icon.filename);

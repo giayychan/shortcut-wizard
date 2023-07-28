@@ -65,6 +65,14 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
       return;
     }
 
+    if (softwareKey.toLowerCase() === 'search') {
+      form.setFieldError(
+        'software.key',
+        'Cannot set software name to "search"'
+      );
+      return;
+    }
+
     openLoading();
 
     const newSoftware = {
@@ -74,11 +82,11 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
 
     try {
       await addSoftware(newSoftware);
+      handleCancel();
     } catch (error: any) {
       form.setFieldError('software.key', error.message);
     } finally {
       closeLoading();
-      handleCancel();
     }
   };
 

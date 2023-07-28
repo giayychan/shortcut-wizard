@@ -1,4 +1,5 @@
 import Fuse from 'fuse.js';
+import { IconSearch } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { TextInput } from '@mantine/core';
 import { ChangeEvent } from 'react';
@@ -73,6 +74,7 @@ function SearchShortcutContainer() {
       <TextInput
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
+        icon={<IconSearch />}
         value={searchTerm}
         onChange={handleChange}
         placeholder="Search shortcut description or software name"

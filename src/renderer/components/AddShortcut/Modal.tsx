@@ -156,11 +156,11 @@ function AddShortcutModal({
     try {
       if (isUpdateShortcut) await updateShortcut(updatedShortcut);
       else await addShortcut(updatedShortcut);
+      handleCancel();
     } catch (error: any) {
       form.setFieldError('hotkeys', error.message);
     } finally {
       closeLoading();
-      handleCancel();
     }
   };
 

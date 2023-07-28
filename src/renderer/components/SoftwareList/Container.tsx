@@ -1,5 +1,6 @@
-import { ActionIcon, Group } from '@mantine/core';
+import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
+import { useEffect, useRef } from 'react';
 
 import StyledSvg from '../common/StyledSvg';
 import Settings from '../Settings/Container';
@@ -38,43 +39,95 @@ function SoftwareListContainer() {
     }
   };
 
-  return (
-    <Group pos="relative" h="2.25rem">
-      {(isSearchResultsShow || searchTerm) && (
-        <ActionIcon
-          variant={isSearchResultsShow ? 'filled' : 'subtle'}
-          size="lg"
-          onClick={() => setShowSearchResults(!isSearchResultsShow)}
-        >
-          <IconInputSearch />
-        </ActionIcon>
-      )}
-      {softwareList?.map((softwareKey) => {
+  const searchItem =
+    isSearchResultsShow || searchTerm
+      ? [
+          {
+            value: 'search',
+            label: <IconInputSearch />,
+          },
+        ]
+      : [];
+
+  const softwares = softwareList.length
+    ? softwareList.map((softwareKey) => {
         const { software } = softwareShortcuts[softwareKey];
         const { key, icon } = software;
         const { dataUri } = icon;
 
-        const isSelected = selected?.software.key === key;
+        return {
+          value: key,
+          label: dataUri && <StyledSvg src={dataUri} />,
+        };
+      })
+    : [];
 
-        return (
-          <ActionIcon
-            variant={isSelected && !isSearchResultsShow ? 'filled' : 'subtle'}
-            key={key}
-            title={key}
-            size="lg"
-            onClick={() => {
-              handleSelect(isSelected, softwareShortcuts[softwareKey]);
-              setShowSearchResults(
-                isSearchResultsShow ? false : isSearchResultsShow
-              );
-            }}
-          >
-            {dataUri && <StyledSvg src={dataUri} />}
-          </ActionIcon>
-        );
-      })}
+  const data = [...searchItem, ...softwares];
+
+  const handleClick = (e: any) => {
+    const { value } = e.target;
+    if (value) {
+      const isSearch = value === 'search';
+      if (isSearch) setShowSearchResults(!isSearchResultsShow);
+
+      const isSelected = selected?.software.key === value;
+      handleSelect(isSelected, softwareShortcuts[value]);
+      setShowSearchResults(isSearchResultsShow ? false : isSearchResultsShow);
+    }
+  };
+
+  const viewport = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (viewport.current?.clientWidth)
+      console.log(viewport.current?.clientWidth);
+  }, [viewport.current?.clientWidth]);
+
+  if (!data.length) return null;
+
+  return (
+    <Flex pos="relative" direction="row" gap="lg" align="start">
+      <ScrollArea
+        type="never"
+        viewportRef={viewport}
+        styles={(theme) => ({
+          root: {
+            '&:before': {
+              content: '""',
+              height: '100%',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: 20,
+              zIndex: 3,
+              boxShadow: `inset ${theme.colors.dark[9]} 52px 3px 14px -42px`,
+            },
+            '&:after': {
+              right: 0,
+              content: '""',
+              height: '100%',
+              position: 'absolute',
+              top: 0,
+              width: 35,
+              zIndex: 3,
+              boxShadow: `inset ${theme.colors.dark[9]} -52px 4px 14px -42px`,
+            },
+          },
+        })}
+      >
+        <SegmentedControl
+          fullWidth
+          onClick={handleClick}
+          data={data}
+          styles={{
+            control: {
+              borderColor: 'transparent !important',
+            },
+          }}
+        />
+      </ScrollArea>
       {!isSearchResultsShow && <Settings />}
-    </Group>
+    </Flex>
   );
 }
 

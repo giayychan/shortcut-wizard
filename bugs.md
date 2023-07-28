@@ -4,8 +4,15 @@ Bugs:
 * app icon
 * finish software icon system selection
 * finish initial shortcut data
+<!-- * infinity scroll -->
+* settings menu padding y
+* add id in software
+* sort software list
+* sanitize data
+* auth
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
+* Add dictionary?
 
 Plan:
 

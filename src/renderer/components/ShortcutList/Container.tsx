@@ -97,7 +97,7 @@ function ShortcutListContainer() {
   );
 
   return (
-    <ScrollArea.Autosize mah={300} scrollHideDelay={1500}>
+    <ScrollArea.Autosize mah={300} scrollHideDelay={1500} offsetScrollbars>
       <List
         mx={6}
         spacing="lg"

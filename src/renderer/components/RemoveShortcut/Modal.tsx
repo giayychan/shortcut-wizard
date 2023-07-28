@@ -61,11 +61,11 @@ function RemoveShortcutModal({ context, id }: ContextModalProps) {
       );
 
       await removeShortcutsBySelectedSoftware(removedShortcuts);
+      handleCancel();
     } catch (error: any) {
       form.setFieldError('shortcuts', error.message);
     } finally {
       closeLoading();
-      handleCancel();
     }
   };
 

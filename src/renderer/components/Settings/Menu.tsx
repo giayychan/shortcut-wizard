@@ -22,7 +22,7 @@ function SettingsMenu({
   const clickOutsideRef = useClickOutside(() => toggle(false));
 
   return (
-    <Flex ml="auto" align="center" justify="flex-end">
+    <Flex ml="auto" align="center" justify="flex-end" mt={4}>
       <ActionIcon
         size="lg"
         title="Settings"
@@ -42,8 +42,10 @@ function SettingsMenu({
             align="center"
             top={0}
             right={0}
+            bg="dark.7"
             style={{
               ...styles,
+              zIndex: 99,
             }}
           >
             {children}
