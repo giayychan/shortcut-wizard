@@ -73,7 +73,7 @@ export type UploadCustomIconProps = {
 
 export type StyledSvgProps = {
   className?: string;
-  src: string;
+  src?: string;
 };
 
 export type SoftwareShortcutsState = {

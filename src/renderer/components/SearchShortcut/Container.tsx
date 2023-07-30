@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState, memo } from 'react';
+import { useCallback, useEffect, useMemo, memo } from 'react';
 import Fuse from 'fuse.js';
 import { useDebouncedValue } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
@@ -29,8 +29,7 @@ function SearchShortcutContainer() {
       state.setSearchTerm,
     ]);
 
-  const [value, setValue] = useState('');
-  const [debounced] = useDebouncedValue(value, 500);
+  const [debounced] = useDebouncedValue(searchTerm, 500);
 
   const softwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.softwareShortcuts
@@ -61,7 +60,6 @@ function SearchShortcutContainer() {
 
   const handleChange = useCallback(
     (debouncedSearchTerm: string) => {
-      setSearchTerm(debouncedSearchTerm);
       setShowSearchResults(!!debouncedSearchTerm);
 
       if (debouncedSearchTerm === '') {
@@ -72,7 +70,7 @@ function SearchShortcutContainer() {
       const result = fuse.search(debouncedSearchTerm);
       setResults(result);
     },
-    [setSearchTerm, setShowSearchResults, setResults, fuse]
+    [setShowSearchResults, setResults, fuse]
   );
 
   useEffect(() => {
@@ -80,8 +78,8 @@ function SearchShortcutContainer() {
   }, [debounced, handleChange]);
 
   const handleSubmit = useCallback(async () => {
-    handleChange(value);
-  }, [value, handleChange]);
+    handleChange(searchTerm);
+  }, [searchTerm, handleChange]);
 
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
@@ -89,8 +87,8 @@ function SearchShortcutContainer() {
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
         icon={<IconSearch size="1.25rem" />}
-        value={value}
-        onChange={(event) => setValue(event.currentTarget.value)}
+        value={searchTerm}
+        onChange={(event) => setSearchTerm(event.currentTarget.value)}
         placeholder="Search shortcut description or software name"
         mb="md"
       />

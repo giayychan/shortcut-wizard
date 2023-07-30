@@ -82,7 +82,7 @@ function ShortcutListContainer() {
           });
         }}
       >
-        Add Shortcut
+        Add {selectedSoftwareShortcut.software.key} Shortcut
       </Button>
     );
   }
@@ -97,6 +97,9 @@ function ShortcutListContainer() {
 
   return (
     <ScrollArea.Autosize mah={300} scrollHideDelay={1500} offsetScrollbars>
+      <Text pl={8} pb={8} weight={700}>
+        {selectedSoftwareShortcut.software.key}
+      </Text>
       <List
         mx={6}
         spacing="lg"

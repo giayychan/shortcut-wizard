@@ -2,6 +2,8 @@ import { SetStateAction, useState } from 'react';
 import { Button } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
+import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
+import useFuseSearchStore from '../../stores/useFuseSearch';
 
 function FactoryResetButton({
   toggle,
@@ -12,6 +14,11 @@ function FactoryResetButton({
   const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.fetchSoftwareShortcuts
   );
+
+  const setSelectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.setSelectedSoftwareShortcut
+  );
+  const resetFuseSearch = useFuseSearchStore((state) => state.reset);
 
   const handleClick = async () => {
     if (!confirmed) {
@@ -24,6 +31,8 @@ function FactoryResetButton({
       await ipcRenderer.invoke('factoryReset', undefined);
 
       fetchSoftwareShortcuts();
+      setSelectedSoftwareShortcut(null);
+      resetFuseSearch();
       toggle(false);
       setConfirmed(false);
     } catch (error: any) {

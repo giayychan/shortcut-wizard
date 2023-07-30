@@ -1,5 +1,4 @@
 import { useForm } from '@mantine/form';
-import { ReactSVG } from 'react-svg';
 import { Group, Box, Button, LoadingOverlay } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ContextModalProps } from '@mantine/modals';
@@ -93,10 +92,8 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
     }
   };
 
-  const customIcon = file ? (
-    <ReactSVG src={URL.createObjectURL(file)} />
-  ) : (
-    icon.dataUri && <StyledSvg src={icon.dataUri} />
+  const customIcon = (
+    <StyledSvg src={file ? URL.createObjectURL(file) : icon.dataUri} />
   );
 
   return (

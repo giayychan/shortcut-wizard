@@ -13,6 +13,7 @@ export type FuseSearchState = {
   setSearchTerm: (searchTerm: string) => void;
 
   toggleSearchResults: () => void;
+  reset: () => void;
 };
 
 const useFuseSearchStore = create<FuseSearchState, []>((set, get) => ({
@@ -34,6 +35,10 @@ const useFuseSearchStore = create<FuseSearchState, []>((set, get) => ({
   results: [],
   setResults: (results) => {
     set({ results });
+  },
+
+  reset: () => {
+    set({ results: [], searchTerm: '', isSearchResultsShow: false });
   },
 }));
 
