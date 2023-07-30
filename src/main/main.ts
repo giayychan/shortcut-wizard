@@ -70,7 +70,7 @@ const createWindow = async () => {
       hasShadow: true,
       transparent: true,
       frame: false,
-      icon: getAssetPath('icon.png'),
+      icon: getAssetPath('assets/icons/png/64x64.png'),
       webPreferences: {
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
@@ -78,6 +78,7 @@ const createWindow = async () => {
       },
     })
   );
+
   const window = mainWindow.getWindow();
 
   window!.loadURL(resolveHtmlPath('index.html'));
