@@ -133,6 +133,11 @@ export type AppHeightState = {
   ) => void;
 };
 
+export type AuthState = {
+  user: User | null;
+  setUser: (user?: User | null) => void;
+};
+
 export type SelectedShortcutsState = {
   selectedSoftwareShortcut: SoftwareShortcut | null;
   setSelectedSoftwareShortcut: (

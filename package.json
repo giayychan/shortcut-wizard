@@ -81,6 +81,7 @@
     }
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.23.1",
     "@emotion/react": "^11.11.1",
     "@mantine/carousel": "^6.0.17",
     "@mantine/core": "^6.0.17",

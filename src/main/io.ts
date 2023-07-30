@@ -42,9 +42,15 @@ export const initializeUserData = async () => {
   }
 
   try {
-    await copy(SYS_SOFTWARE_SHORTCUTS_DIR, USER_SOFTWARE_SHORTCUTS_DIR, {
+    const systemShortcutsDir = path.join(
+      SYS_SOFTWARE_SHORTCUTS_DIR,
+      process.platform
+    );
+
+    await copy(systemShortcutsDir, USER_SOFTWARE_SHORTCUTS_DIR, {
       overwrite: false,
     });
+
     logSuccess('User data initialized');
   } catch (error) {
     logError("Couldn't copy system shortcuts directory to user");
@@ -184,10 +190,11 @@ export const fetchSoftwareShortcuts = async () => {
         }
       })
     );
+
     logSuccess('fetched software shortcuts successfully');
     return softwareShortcuts;
   } catch (error) {
-    logError("Couldn't read user shortcuts directory", error);
+    logError("Couldn't fetchSoftwareShortcuts:", error);
     throw error;
   }
 };
@@ -204,7 +211,7 @@ export const fetchSoftwareShortcut = async (softwareKey: string) => {
 
     return result;
   } catch (error: any) {
-    logError(`Couldn't read user shortcuts - ${softwareKey}.json: ${error}`);
+    logError(`Couldn't fetchSoftwareShortcut - ${softwareKey}.json: ${error}`);
     throw error;
   }
 };
