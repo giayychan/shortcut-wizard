@@ -1,6 +1,7 @@
 {
+  "createdDate": "2023-07-28T10:26:00.996Z",
   "software": {
-    "key": "Microsoft Excel",
+    "key": "excel",
     "icon": {
       "filename": "excel.svg",
       "isCustom": false

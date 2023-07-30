@@ -29,7 +29,12 @@ import { AUTO_COMPLETE_CUSTOM_OPTION } from './constants';
 
 export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
 export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
-export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath('data', 'shortcuts');
+export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
+  'data',
+  'shortcuts',
+  process.platform
+);
+
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
 export const initializeUserData = async () => {
@@ -42,14 +47,7 @@ export const initializeUserData = async () => {
   }
 
   try {
-    const systemShortcutsDir = path.join(
-      SYS_SOFTWARE_SHORTCUTS_DIR,
-      process.platform
-    );
-
-    console.log('USER_SOFTWARE_SHORTCUTS_DIR', USER_SOFTWARE_SHORTCUTS_DIR);
-
-    await copy(systemShortcutsDir, USER_SOFTWARE_SHORTCUTS_DIR, {
+    await copy(SYS_SOFTWARE_SHORTCUTS_DIR, USER_SOFTWARE_SHORTCUTS_DIR, {
       overwrite: false,
     });
 
@@ -116,14 +114,16 @@ export const createAutoCompleteOptions = async (desc: string) => {
         filenames.map(async (filename) => {
           const [key] = filename.split('.');
 
+          const json = await readJson(path.join(desc, filename));
+
           const icon = await getIconFile({
             isCustom: false,
-            filename,
+            filename: json.software.icon.filename,
           });
 
           return {
             software: {
-              key,
+              ...json.software,
               icon,
             },
             shortcuts: [],
@@ -134,11 +134,7 @@ export const createAutoCompleteOptions = async (desc: string) => {
 
     autoCompleteOptions.push(AUTO_COMPLETE_CUSTOM_OPTION);
 
-    const json = JSON.stringify(autoCompleteOptions);
-    const writeDse = getAssetPath('data', 'autocomplete-options.json');
-
-    await writeJson(writeDse, json);
-    logSuccess(`Created autocomplete options`);
+    return autoCompleteOptions;
   } catch (error) {
     logError(`Couldn't create autocomplete options`, error);
     throw error;
@@ -146,29 +142,26 @@ export const createAutoCompleteOptions = async (desc: string) => {
 };
 
 export const fetchSoftwareAutoCompleteOptions = async () => {
-  const filePath = getAssetPath('data', 'autocomplete-options.json');
-
   try {
-    const result = await readJson(filePath);
+    const autoCompleteOptions = await createAutoCompleteOptions(
+      SYS_SOFTWARE_SHORTCUTS_DIR
+    );
     const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
 
-    const parsedResult = JSON.parse(result);
-
-    const filteredExistingSoftwaresAutoCompleteOptions = parsedResult.filter(
-      (option: AddSoftwareAutocompleteOption) => {
+    const filteredExistingSoftwaresAutoCompleteOptions =
+      autoCompleteOptions.filter((option: AddSoftwareAutocompleteOption) => {
         const found = existingSoftwares.some((software) => {
           const [key] = software.split('.');
           return key === option.software.key;
         });
 
         return !found;
-      }
-    );
+      });
 
-    logSuccess(`fetched software shortcut - ${filePath} successfully`);
+    logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
     return filteredExistingSoftwaresAutoCompleteOptions;
   } catch (error: any) {
-    logError(`Couldn't read user shortcuts - ${filePath}: ${error}`);
+    logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
     throw error;
   }
 };

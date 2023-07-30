@@ -1,6 +1,7 @@
 {
+  "createdDate": "2023-07-28T10:26:00.996Z",
   "software": {
-    "key": "Brave Browser",
+    "key": "brave",
     "icon": {
       "filename": "brave.svg",
       "isCustom": false

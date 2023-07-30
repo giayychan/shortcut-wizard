@@ -49,7 +49,7 @@ function SoftwareListContainer() {
         ]
       : [];
 
-  const softwares = softwareList.length
+  const softwares = softwareList?.length
     ? softwareList
         .sort((a, b) => {
           const createdDateA = Date.parse(softwareShortcuts[a].createdDate);

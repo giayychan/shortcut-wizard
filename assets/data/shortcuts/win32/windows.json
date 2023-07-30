@@ -1,6 +1,7 @@
 {
+  "createdDate": "2023-07-28T10:26:00.996Z",
   "software": {
-    "key": "Windows",
+    "key": "windows",
     "icon": {
       "filename": "windows.svg",
       "isCustom": false

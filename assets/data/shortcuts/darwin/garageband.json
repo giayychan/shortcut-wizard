@@ -1,6 +1,7 @@
 {
+  "createdDate": "2023-07-28T10:26:00.996Z",
   "software": {
-    "key": "Garage Band",
+    "key": "garageband",
     "icon": {
       "filename": "garageband.svg",
       "isCustom": false

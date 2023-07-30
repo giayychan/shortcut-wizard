@@ -133,6 +133,10 @@ export type AppHeightState = {
   ) => void;
 };
 
+export type User = {
+  email: string;
+};
+
 export type AuthState = {
   user: User | null;
   setUser: (user?: User | null) => void;
