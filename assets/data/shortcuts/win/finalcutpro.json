@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Final Cut Pro",
+    "icon": {
+      "filename": "finalcutpro.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "C"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "X"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "V"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Shift", "Z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "R"]],
+      "description": "Render",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "B"]],
+      "description": "Blade tool",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "T"]],
+      "description": "Trim tool",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "K"]],
+      "description": "Add edit",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "A"]],
+      "description": "Select all",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "F"]],
+      "description": "Find",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "H"]],
+      "description": "Replace",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "L"]],
+      "description": "Insert overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "L"]],
+      "description": "Toggle waveform overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "E"]],
+      "description": "Perform edit",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "P"]],
+      "description": "Play project",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Space"]],
+      "description": "Play/Stop",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "J"]],
+      "description": "Fast forward",
+      "isFavorite": false
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Ableton Live",
+    "icon": {
+      "filename": "ableton.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "New Live Set",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "O"]],
+      "description": "Open Live Set",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save Set",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Save Set As",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Q"]],
+      "description": "Exit Live Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Shift", "R"]],
+      "description": "Export Audio or Video",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Shift", "E"]],
+      "description": "Export MIDI File",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "Y"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "K"]],
+      "description": "Create Custom Shortcut",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "Shift", "C"]],
+      "description": "Recall Last Played",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "M"]],
+      "description": "Map Parameter to MIDI Controller",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["M"]],
+      "description": "Enable/Disable MIDI Computer Keyboard",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "L"]],
+      "description": "Loop Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "L"]],
+      "description": "Loop On/Off",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "M"]],
+      "description": "Mute/Unmute Track",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Shift", "T"]],
+      "description": "Insert Time Signature Change",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Shift", "P"]],
+      "description": "Insert MIDI Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Shift", "A"]],
+      "description": "Insert Audio Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "I"]],
+      "description": "Insert Instrument",
+      "isFavorite": false
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Notion",
+    "icon": {
+      "filename": "notion.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "/"]],
+      "description": "Open the slash command menu",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "Create new page",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "P"]],
+      "description": "Search pages",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "B"]],
+      "description": "Bold selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "I"]],
+      "description": "Italicize selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "U"]],
+      "description": "Underline selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "K"]],
+      "description": "Insert hyperlink",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "Shift", "C"]],
+      "description": "Copy page link",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "Shift", "V"]],
+      "description": "Paste with formatting",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "]"]],
+      "description": "Indent block or text",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "["]],
+      "description": "Outdent block or text",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "Alt", "Up Arrow"]],
+      "description": "Move block or text up",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "Alt", "Down Arrow"]],
+      "description": "Move block or text down",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "D"]],
+      "description": "Duplicate block or page",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "M"]],
+      "description": "Toggle checklist",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "L"]],
+      "description": "Toggle bullet list",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "Toggle numbered list",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Shift", "Q"]],
+      "description": "Quote block",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "H"]],
+      "description": "Insert horizontal rule",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Strikethrough selected text",
+      "isFavorite": false
+    }
+  ]
+}

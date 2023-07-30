@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe After Effects",
+    "icon": {
+      "filename": "aftereffects.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["+", "or", "-"]],
+      "description": "Timeline Zoom",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Cmd", "N"]],
+      "description": "New Composition",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Cmd", "O"]],
+      "description": "Open Project",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Cmd", "S"]],
+      "description": "Save Project",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Cmd", "Shift", "S"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Cmd", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Cmd", "Shift", "Z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Cmd", "C"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "X"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", "V"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "T"]],
+      "description": "Opacity",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "D"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "A"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "Shift", "C"]],
+      "description": "Pre-compose",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "Shift", "D"]],
+      "description": "Split Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "Shift", "L"]],
+      "description": "Create Solid",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "Shift", "Y"]],
+      "description": "New Adjustment Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "Shift", "K"]],
+      "description": "Composition Settings",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "Shift", "H"]],
+      "description": "Hide Properties",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "Shift", "U"]],
+      "description": "Reveal Keyframes",
+      "isFavorite": false
+    }
+  ]
+}

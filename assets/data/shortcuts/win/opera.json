@@ -1,0 +1,134 @@
+{
+  "software": {
+    "key": "Opera",
+    "icon": {
+      "filename": "opera.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "T"]],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "Shift", "T"]],
+      "description": "Reopen the last closed tab",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [
+        ["Ctrl", "Tab"],
+        ["Ctrl", "Shift", "Tab"]
+      ],
+      "description": "Switch between tabs (forward/backward)",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "W"]],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "Open a new window",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "Open a new private window",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Shift", "B"]],
+      "description": "Open the bookmark manager",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "H"]],
+      "description": "Open the history page",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "D"]],
+      "description": "Bookmark the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "Shift", "P"]],
+      "description": "Open a new private window",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Open Opera's settings page",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "R"]],
+      "description": "Reload the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "F"]],
+      "description": "Find text on the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "Shift", "Del"]],
+      "description": "Open the clear browsing data dialog",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "J"]],
+      "description": "Open the downloads page",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "M"]],
+      "description": "Toggle mute for the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Shift", "P"]],
+      "description": "Print the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Shift", "U"]],
+      "description": "Open the view page source",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Shift", "V"]],
+      "description": "Toggle picture-in-picture mode",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "X"]],
+      "description": "Open the collections pane",
+      "isFavorite": false
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe XD",
+    "icon": {
+      "filename": "adobexd.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["v"]],
+      "description": "Selection Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["a"]],
+      "description": "Artboard Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["r"]],
+      "description": "Rectangle Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["p"]],
+      "description": "Pen Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["t"]],
+      "description": "Text Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["cmd", "g"]],
+      "description": "Group Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["cmd", "shift", "g"]],
+      "description": "Ungroup Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["cmd", "d"]],
+      "description": "Duplicate Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["cmd", "shift", "m"]],
+      "description": "Mask with Shape",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "shift", "v"]],
+      "description": "Paste in Place",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "shift", "o"]],
+      "description": "Open Symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "shift", "e"]],
+      "description": "Export Selected",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "shift", "r"]],
+      "description": "Preview Prototype",
+      "isFavorite": false
+    }
+  ]
+}

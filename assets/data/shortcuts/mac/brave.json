@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Brave Browser",
+    "icon": {
+      "filename": "brave.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Cmd", "T"]],
+      "description": "Open a New Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Cmd", "W"]],
+      "description": "Close the Current Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Cmd", "Shift", "T"]],
+      "description": "Reopen the Last Closed Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Cmd", "L"]],
+      "description": "Highlight the URL/Search Bar",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Cmd", "["]],
+      "description": "Go Back in History",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Cmd", "]"]],
+      "description": "Go Forward in History",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Cmd", "Shift", "N"]],
+      "description": "Open a New Window",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Cmd", "Shift", "P"]],
+      "description": "Open a New Private Window",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "R"]],
+      "description": "Reload the Current Page",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", ","]],
+      "description": "Open the Settings",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "Shift", "D"]],
+      "description": "Bookmark the Current Page",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "Shift", "B"]],
+      "description": "Toggle the Bookmarks Bar",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "Shift", "Del"]],
+      "description": "Clear Browsing Data",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "H"]],
+      "description": "View Browsing History",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "Option", "Left Arrow"]],
+      "description": "Go to the Previous Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "Option", "Right Arrow"]],
+      "description": "Go to the Next Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "Shift", "Left Square Bracket"]],
+      "description": "Move to the Previous Tab Group",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "Shift", "Right Square Bracket"]],
+      "description": "Move to the Next Tab Group",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "Option", "Up Arrow"]],
+      "description": "Scroll Up",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "Option", "Down Arrow"]],
+      "description": "Scroll Down",
+      "isFavorite": false
+    }
+  ]
+}

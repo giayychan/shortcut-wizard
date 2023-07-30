@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Microsoft Excel",
+    "icon": {
+      "filename": "excel.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "Create a new workbook",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "O"]],
+      "description": "Open an existing workbook",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save the current workbook",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "W"]],
+      "description": "Close the current workbook",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo the last action",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Y"]],
+      "description": "Redo the last action",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "X"]],
+      "description": "Cut selected cells",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "C"]],
+      "description": "Copy selected cells",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "V"]],
+      "description": "Paste copied or cut cells",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "B"]],
+      "description": "Bold selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "I"]],
+      "description": "Italicize selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "U"]],
+      "description": "Underline selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "A"]],
+      "description": "Select the entire worksheet",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", ";"]],
+      "description": "Insert current date",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", ";"]],
+      "description": "Insert current time",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "K"]],
+      "description": "Insert a hyperlink",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Shift", "F11"]],
+      "description": "Insert a new worksheet",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Page Down"]],
+      "description": "Move to the next worksheet",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Page Up"]],
+      "description": "Move to the previous worksheet",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "U"]],
+      "description": "Activate the formula bar",
+      "isFavorite": false
+    }
+  ]
+}

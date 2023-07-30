@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Figma",
+    "icon": {
+      "filename": "figma.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["v"]],
+      "description": "Selection Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["a"]],
+      "description": "Frame Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["d"]],
+      "description": "Shape Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["t"]],
+      "description": "Text Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["cmd", "g"]],
+      "description": "Group Selected Objects",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["cmd", "d"]],
+      "description": "Duplicate Object",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["cmd", "y"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "f"]],
+      "description": "Find",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "r"]],
+      "description": "Rename",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["shift", "move"]],
+      "description": "Move with horizontal or vertical alignment",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "shift", "m"]],
+      "description": "Mirror Object",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "shift", "?"]],
+      "description": "View Keyboard Shortcuts",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "="]],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "-"]],
+      "description": "Zoom Out",
+      "isFavorite": false
+    }
+  ]
+}

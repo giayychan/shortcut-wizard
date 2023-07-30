@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe Photoshop",
+    "icon": {
+      "filename": "photoshop.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["cmd", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["cmd", "t"]],
+      "description": "Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["cmd", "j"]],
+      "description": "Duplicate Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["cmd", "e"]],
+      "description": "Merge Layers",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["cmd", "i"]],
+      "description": "Invert Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "shift", "i"]],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "shift", "["]],
+      "description": "Move Layer Down",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "shift", "]"]],
+      "description": "Move Layer Up",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "0"]],
+      "description": "Fit to Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "space"]],
+      "description": "Hand Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "+"]],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "-"]],
+      "description": "Zoom Out",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["cmd", "alt", "z"]],
+      "description": "Step Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "alt", "shift", "z"]],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "d"]],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "alt", "shift", "s"]],
+      "description": "Save for Web",
+      "isFavorite": false
+    }
+  ]
+}

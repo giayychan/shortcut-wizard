@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Blender",
+    "icon": {
+      "filename": "blender.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["g"]],
+      "description": "Grab/Move",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["s"]],
+      "description": "Scale",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["r"]],
+      "description": "Rotate",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["e"]],
+      "description": "Extrude",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["a"]],
+      "description": "Select/Deselect All",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["shift", "a"]],
+      "description": "Add Object",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["tab"]],
+      "description": "Toggle Edit Mode/Object Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["ctrl", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["ctrl", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["ctrl", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["ctrl", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["ctrl", "shift", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Edge Menu",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Face Menu",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["ctrl", "b"]],
+      "description": "Bevel",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["ctrl", "p"]],
+      "description": "Parent",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["ctrl", "alt", "q"]],
+      "description": "Quad View",
+      "isFavorite": false
+    }
+  ]
+}

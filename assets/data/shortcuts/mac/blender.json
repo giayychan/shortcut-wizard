@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Blender",
+    "icon": {
+      "filename": "blender.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["LMB"]],
+      "description": "Select",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "LMB"]],
+      "description": "Context Menu",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Option", "LMB"]],
+      "description": "Pan View",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Scroll Wheel"]],
+      "description": "Zoom In/Out",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Shift", "Option", "LMB"]],
+      "description": "Orbit View",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["G"]],
+      "description": "Grab/Move",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["R"]],
+      "description": "Rotate",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["S"]],
+      "description": "Scale",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["X"]],
+      "description": "Restrict Transformation to X Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Y"]],
+      "description": "Restrict Transformation to Y Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Z"]],
+      "description": "Restrict Transformation to Z Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Shift", "X"]],
+      "description": "Restrict Transformation to XY Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Shift", "Y"]],
+      "description": "Restrict Transformation to XZ Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Shift", "Z"]],
+      "description": "Restrict Transformation to YZ Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["1"]],
+      "description": "Change Viewport Angle to Front",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["2"]],
+      "description": "Change Viewport Angle to Right",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["3"]],
+      "description": "Change Viewport Angle to Top",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["4"]],
+      "description": "Change Viewport Angle to Camera",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["."]],
+      "description": "Frame Selected",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Shift", "C"]],
+      "description": "Center View to Cursor",
+      "isFavorite": false
+    }
+  ]
+}

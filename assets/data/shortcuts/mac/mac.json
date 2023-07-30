@@ -1,0 +1,155 @@
+{
+  "software": {
+    "key": "macOS",
+    "icon": {
+      "filename": "macos.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["cmd", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["cmd", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["cmd", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["cmd", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["cmd", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "tab"]],
+      "description": "Switch Between Applications",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "space"]],
+      "description": "Spotlight Search",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "q"]],
+      "description": "Quit Application",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "shift", "3"]],
+      "description": "Take a Screenshot of the Entire Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "shift", "4"]],
+      "description": "Take a Screenshot of a Selected Area",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "shift", "5"]],
+      "description": "Open Screenshot Toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "space"]],
+      "description": "Open Spotlight Search",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["cmd", "left arrow"]],
+      "description": "Go Back in Finder",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "right arrow"]],
+      "description": "Go Forward in Finder",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "up arrow"]],
+      "description": "Go to Parent Folder in Finder",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "down arrow"]],
+      "description": "Open Selected Item in Finder",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "space"]],
+      "description": "Open Spotlight Search",
+      "isFavorite": false
+    },
+    {
+      "id": "21",
+      "isFavorite": false,
+      "hotkeys": [["cmd", "t"]],
+      "description": "Open a new tab"
+    },
+    {
+      "id": "22",
+      "isFavorite": false,
+      "hotkeys": [["cmd", "w"]],
+      "description": "Close the front window"
+    },
+    {
+      "id": "23",
+      "isFavorite": false,
+      "hotkeys": [["opt", "cmd", "w"]],
+      "description": "Close all windows of the app"
+    },
+    {
+      "id": "24",
+      "isFavorite": false,
+      "hotkeys": [["shift", "cmd", "g"]],
+      "description": "Open a Go to Folder window"
+    }
+  ]
+}

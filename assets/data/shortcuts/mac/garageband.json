@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Garage Band",
+    "icon": {
+      "filename": "garageband.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["cmd", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["option", "cmd", "n"]],
+      "description": "Create a new track",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["option", "cmd", "a"]],
+      "description": "Create a new audio track",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["option", "cmd", "s"]],
+      "description": "Create a new software instrument track",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["up arrow"]],
+      "description": "Show tablature and standard notation (guitar) / Show both hands (piano)",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "k"]],
+      "description": "Show or Hide the Musical Typing window",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "b"]],
+      "description": "Split at Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "o"]],
+      "description": "Open",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "n"]],
+      "description": "New",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["cmd", "w"]],
+      "description": "Close",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "q"]],
+      "description": "Quit",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "f"]],
+      "description": "Find",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "g"]],
+      "description": "Find Next",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "shift", "g"]],
+      "description": "Find Previous",
+      "isFavorite": false
+    }
+  ]
+}

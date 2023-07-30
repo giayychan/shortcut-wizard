@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Google Chrome",
+    "icon": {
+      "filename": "chrome.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "T"]],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "W"]],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "Shift", "T"]],
+      "description": "Reopen the last closed tab",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "Open a new window",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Shift", "B"]],
+      "description": "Toggle the bookmarks bar",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Shift", "Delete"]],
+      "description": "Open the Clear browsing data dialog",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Shift", "J"]],
+      "description": "Open the Downloads page",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "Shift", "D"]],
+      "description": "Save all open tabs as bookmarks in a new folder",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "Tab"]],
+      "description": "Switch to the next tab",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "Shift", "Tab"]],
+      "description": "Switch to the previous tab",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "1"]],
+      "description": "Switch to the first tab",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "9"]],
+      "description": "Switch to the last tab",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "L"]],
+      "description": "Highlight the URL in the address bar",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "Enter"]],
+      "description": "Add 'www.' and '.com' to the text in the address bar",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "B"]],
+      "description": "Open the Bookmarks Manager",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "H"]],
+      "description": "Open the History page",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Shift", "I"]],
+      "description": "Open the Developer Tools",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Shift", "R"]],
+      "description": "Reload the current page, ignoring cached content",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Shift", "Delete"]],
+      "description": "Open the Clear browsing data dialog",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "P"]],
+      "description": "Print the current page",
+      "isFavorite": false
+    }
+  ]
+}

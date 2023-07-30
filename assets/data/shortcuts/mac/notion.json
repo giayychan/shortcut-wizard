@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Notion",
+    "icon": {
+      "filename": "notion.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Cmd", "N"]],
+      "description": "Create a new page",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Cmd", "Shift", "N"]],
+      "description": "Create a new sub-page",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Cmd", "F"]],
+      "description": "Search within Notion",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Cmd", "E"]],
+      "description": "Toggle edit mode",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Cmd", "B"]],
+      "description": "Bold text",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Cmd", "I"]],
+      "description": "Italicize text",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Cmd", "Shift", "M"]],
+      "description": "Create a new comment",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Cmd", "Shift", "P"]],
+      "description": "Toggle dark mode",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "Shift", "L"]],
+      "description": "Toggle light mode",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", "Shift", "T"]],
+      "description": "Create a new to-do",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "Shift", "D"]],
+      "description": "Duplicate the selected block",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "Shift", "K"]],
+      "description": "Insert a link",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "Shift", "H"]],
+      "description": "Create a new heading",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "Shift", "S"]],
+      "description": "Save the page",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "Shift", "F"]],
+      "description": "Toggle full-screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "["]],
+      "description": "Move block up",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "]"]],
+      "description": "Move block down",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "Shift", "U"]],
+      "description": "Toggle bullet list",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "Shift", "O"]],
+      "description": "Toggle numbered list",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "Shift", "C"]],
+      "description": "Copy the selected block",
+      "isFavorite": false
+    }
+  ]
+}

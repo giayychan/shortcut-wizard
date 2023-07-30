@@ -1,0 +1,111 @@
+{
+  "software": {
+    "key": "Windows",
+    "icon": {
+      "filename": "windows.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Win"]],
+      "description": "Open or close the Start menu"
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Win", "D"]],
+      "description": "Show or hide the desktop"
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Win", "E"]],
+      "description": "Open File Explorer"
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Win", "L"]],
+      "description": "Lock your computer or switch accounts"
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Win", "R"]],
+      "description": "Open the Run dialog box"
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Win", "I"]],
+      "description": "Open Settings"
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Win", "Tab"]],
+      "description": "Open Task View"
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "Shift", "Esc"]],
+      "description": "Open Task Manager directly"
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Alt", "Tab"]],
+      "description": "Switch between open windows"
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "C"]],
+      "description": "Copy selected item(s) to the clipboard"
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "V"]],
+      "description": "Paste the contents of the clipboard"
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo the previous action"
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "X"]],
+      "description": "Cut selected item(s)"
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "A"]],
+      "description": "Select all items"
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save the current document or file"
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "P"]],
+      "description": "Print the current document or file"
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "F"]],
+      "description": "Find text or content within a document or webpage"
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Alt", "F4"]],
+      "description": "Close the active window or program"
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Win", "PrtScn"]],
+      "description": "Take a screenshot and save it to the Screenshots folder"
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Win", "Shift", "S"]],
+      "description": "Take a screenshot of a specific area and copy it to the clipboard"
+    }
+  ]
+}

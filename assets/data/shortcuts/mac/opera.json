@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Opera",
+    "icon": {
+      "filename": "opera.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Alt", "P"]],
+      "description": "Open Opera's settings page",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "Tab"]],
+      "description": "Switch tabs (cycle through open tabs)",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "Shift", "E"]],
+      "description": "Open extensions page for easy management",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Shift", "X"]],
+      "description": "Quit Opera",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Shift", "5"]],
+      "description": "Activate Snapshot",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Shift", "Esc"]],
+      "description": "Open Opera Task Manager",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Space"]],
+      "description": "Open/Close Instant Search",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "Shift", "M"]],
+      "description": "Open most recently used messenger in sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "["]],
+      "description": "Go back in history",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", "]"]],
+      "description": "Go forward in history",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "R"]],
+      "description": "Reload the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "L"]],
+      "description": "Focus the address bar",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "D"]],
+      "description": "Bookmark the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "Shift", "B"]],
+      "description": "Manage bookmarks",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "Shift", "H"]],
+      "description": "Show browsing history",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "Shift", "N"]],
+      "description": "Open a new private window",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "Shift", "V"]],
+      "description": "Open a new tab in the foreground",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "Shift", "T"]],
+      "description": "Reopen the last closed tab",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "Shift", "P"]],
+      "description": "Print the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "Shift", "W"]],
+      "description": "Close the current window",
+      "isFavorite": false
+    }
+  ]
+}

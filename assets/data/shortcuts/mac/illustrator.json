@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe Illustrator",
+    "icon": {
+      "filename": "illustrator.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Cmd", "N"]],
+      "description": "Create a new document",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Cmd", "O"]],
+      "description": "Open an existing document",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Cmd", "S"]],
+      "description": "Save the document",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Cmd", "Z"]],
+      "description": "Undo the last action",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Cmd", "Shift", "Z"]],
+      "description": "Redo the last action",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Cmd", "C"]],
+      "description": "Copy selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Cmd", "V"]],
+      "description": "Paste copied objects",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Cmd", "X"]],
+      "description": "Cut selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "D"]],
+      "description": "Duplicate selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", "G"]],
+      "description": "Group selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "Shift", "G"]],
+      "description": "Ungroup selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "T"]],
+      "description": "Transform selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "Shift", "L"]],
+      "description": "Lock selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "Shift", "H"]],
+      "description": "Hide selected objects",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "Shift", "A"]],
+      "description": "Select all objects",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "+"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "-"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "0"]],
+      "description": "Fit artboard to screen",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "Shift", "O"]],
+      "description": "Toggle between Artboard and Preview mode",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "Shift", "S"]],
+      "description": "Save As",
+      "isFavorite": false
+    }
+  ]
+}

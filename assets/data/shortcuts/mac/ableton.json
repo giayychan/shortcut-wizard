@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Ableton Live",
+    "icon": {
+      "filename": "ableton.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "t"]],
+      "description": "New Audio Track",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["cmd", "shift", "t"]],
+      "description": "New MIDI Track",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["cmd", "shift", "x"]],
+      "description": "Cut Time",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["shift", "v"]],
+      "description": "Paste Time",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["shift", "d"]],
+      "description": "Duplicate Time",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["cmd", "s"]],
+      "description": "Save Live Set",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["cmd", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["cmd", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["cmd", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["cmd", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["cmd", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["cmd", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["cmd", "r"]],
+      "description": "Rename",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["cmd", "e"]],
+      "description": "Simplify Envelope",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["cmd", "p"]],
+      "description": "Create MIDI Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["cmd", "shift", "m"]],
+      "description": "Insert MIDI Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["cmd", "shift", "o"]],
+      "description": "Insert Audio Track",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["cmd", "shift", "i"]],
+      "description": "Insert Return Track",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["cmd", "shift", "i"]],
+      "description": "Insert Return Track",
+      "isFavorite": false
+    }
+  ]
+}

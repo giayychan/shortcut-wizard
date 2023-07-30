@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Final Cut Pro",
+    "icon": {
+      "filename": "finalcutpro.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Cmd", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Cmd", "S"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Cmd", "C"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Cmd", "X"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Cmd", "V"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Cmd", "A"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Cmd", "B"]],
+      "description": "Blade Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Cmd", "T"]],
+      "description": "Trim Start",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Cmd", "Shift", "T"]],
+      "description": "Trim End",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Cmd", "R"]],
+      "description": "Replace Edit",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Cmd", "D"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Cmd", "E"]],
+      "description": "Append to Storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Cmd", "K"]],
+      "description": "Add Marker",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Cmd", "J"]],
+      "description": "Join Clips",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Cmd", "G"]],
+      "description": "Group Clips",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Cmd", "Shift", "G"]],
+      "description": "Ungroup Clips",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Cmd", "M"]],
+      "description": "Export Media",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Cmd", "/"]],
+      "description": "Toggle Snapping",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Cmd", "P"]],
+      "description": "Toggle Precision Editor",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Cmd", "."]],
+      "description": "Play/Pause",
+      "isFavorite": false
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe Photoshop 2023",
+    "icon": {
+      "filename": "photoshop.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "New Document",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "O"]],
+      "description": "Open Document",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save Document",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Shift", "Z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "C"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "X"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "V"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "T"]],
+      "description": "Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "D"]],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "A"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "E"]],
+      "description": "Merge Layers",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "J"]],
+      "description": "Duplicate Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "New Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "Alt", "E"]],
+      "description": "Merge Visible Layers",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Alt", "Z"]],
+      "description": "Step Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Alt", "Shift", "Z"]],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Shift", "U"]],
+      "description": "Desaturate",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Alt", "Shift", "S"]],
+      "description": "Save for Web",
+      "isFavorite": false
+    }
+  ]
+}

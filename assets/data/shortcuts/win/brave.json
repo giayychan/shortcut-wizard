@@ -1,0 +1,140 @@
+{
+  "software": {
+    "key": "Brave Browser",
+    "icon": {
+      "filename": "brave.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "T"]],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "Shift", "T"]],
+      "description": "Reopen the last closed tab",
+      "isFavorite": true
+    },
+    {
+      "id": "3",
+      "hotkeys": [
+        ["Ctrl", "Tab"],
+        ["Ctrl", "Shift", "Tab"]
+      ],
+      "description": "Switch between tabs (forward/backward)",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "W"]],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "Restore closed tab",
+      "isFavorite": true
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "Open a new window",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "Shift", "N"]],
+      "description": "Open a new private window",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [
+        ["Ctrl", "+"],
+        ["Ctrl", "Scroll Up"]
+      ],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [
+        ["Ctrl", "-"],
+        ["Ctrl", "Scroll Down"]
+      ],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "0"]],
+      "description": "Reset zoom level",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "F"]],
+      "description": "Find text on the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "L"]],
+      "description": "Open the address bar",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Alt", "Left"]],
+      "description": "Go back",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Alt", "Right"]],
+      "description": "Go forward",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "R"]],
+      "description": "Reload current page",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "I"]],
+      "description": "Open Developer Tools",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "J"]],
+      "description": "Open Downloads",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "D"]],
+      "description": "Bookmark the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "H"]],
+      "description": "Open History",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Open Settings",
+      "isFavorite": false
+    }
+  ]
+}

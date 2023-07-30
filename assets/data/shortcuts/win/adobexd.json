@@ -1,0 +1,131 @@
+{
+  "software": {
+    "key": "Adobe XD",
+    "icon": {
+      "filename": "adobexd.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["Ctrl", "N"]],
+      "description": "New Document",
+      "isFavorite": false
+    },
+    {
+      "id": "2",
+      "hotkeys": [["Ctrl", "O"]],
+      "description": "Open Document",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "hotkeys": [["Ctrl", "S"]],
+      "description": "Save Document",
+      "isFavorite": false
+    },
+    {
+      "id": "4",
+      "hotkeys": [["Ctrl", "Shift", "S"]],
+      "description": "Save Document As",
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "hotkeys": [["Ctrl", "Z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "hotkeys": [["Ctrl", "Y"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "hotkeys": [["Ctrl", "D"]],
+      "description": "Duplicate Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "hotkeys": [["Ctrl", "G"]],
+      "description": "Group Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "hotkeys": [["Ctrl", "Shift", "G"]],
+      "description": "Ungroup Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "hotkeys": [["Ctrl", "R"]],
+      "description": "Toggle Rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "hotkeys": [["Ctrl", "Shift", "R"]],
+      "description": "Toggle Grid",
+      "isFavorite": false
+    },
+    {
+      "id": "12",
+      "hotkeys": [["Ctrl", "Shift", "P"]],
+      "description": "Toggle Pixel Preview",
+      "isFavorite": false
+    },
+    {
+      "id": "13",
+      "hotkeys": [["Ctrl", "1"]],
+      "description": "Zoom to 100%",
+      "isFavorite": false
+    },
+    {
+      "id": "14",
+      "hotkeys": [["Ctrl", "0"]],
+      "description": "Fit Artboard in Window",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "hotkeys": [["Ctrl", "Shift", "C"]],
+      "description": "Copy CSS",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "hotkeys": [["Ctrl", "Shift", "X"]],
+      "description": "Copy SVG",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "hotkeys": [["Ctrl", "Shift", "V"]],
+      "description": "Paste in Place",
+      "isFavorite": false
+    },
+    {
+      "id": "18",
+      "hotkeys": [["Ctrl", "Shift", "H"]],
+      "description": "Toggle Hide/Show UI",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "hotkeys": [["Ctrl", "Shift", "L"]],
+      "description": "Toggle Lock/Unlock Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "hotkeys": [["Ctrl", "Shift", "G"]],
+      "description": "Toggle Grid",
+      "isFavorite": false
+    }
+  ]
+}
