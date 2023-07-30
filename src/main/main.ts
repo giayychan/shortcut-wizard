@@ -12,7 +12,7 @@
  */
 import path from 'path';
 
-import { app, BrowserWindow, shell, globalShortcut } from 'electron';
+import { app, BrowserWindow, shell, globalShortcut, dialog } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -37,6 +37,16 @@ if (process.env.NODE_ENV === 'production') {
 
 const isDebug =
   process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true';
+
+if (process.defaultApp) {
+  if (process.argv.length >= 2) {
+    app.setAsDefaultProtocolClient('shortcut-wizard', process.execPath, [
+      path.resolve(process.argv[1]),
+    ]);
+  }
+} else {
+  app.setAsDefaultProtocolClient('shortcut-wizard');
+}
 
 // if (isDebug) {
 //   require('electron-debug')();
@@ -113,6 +123,11 @@ const createWindow = async () => {
   new AppUpdater();
 };
 
+// Handle the protocol. In this case, we choose to show an Error Box.
+app.on('open-url', (event, url) => {
+  dialog.showErrorBox('Welcome Back', `You arrived from: ${url}`);
+});
+
 /**
  * Add event listeners...
  */
@@ -135,38 +150,60 @@ app.on('window-all-closed', () => {
   }
 });
 
-app
-  .whenReady()
-  .then(async () => {
-    await initializeUserData();
+const gotTheLock = app.requestSingleInstanceLock();
 
-    globalShortcut.register(APP_HOTKEYS.join('+'), () => {
+if (process.platform === 'win32' || process.platform === 'linux') {
+  if (!gotTheLock) {
+    app.quit();
+  } else {
+    app.on('second-instance', (event, commandLine) => {
+      // Someone tried to run a second instance, we should focus our window.
       const window = mainWindow.getWindow();
       if (window) {
-        if (mainWindow.getIsHidden()) {
-          window.show();
-          mainWindow.setIsHidden(false);
-        } else {
-          window.hide();
-          mainWindow.setIsHidden(true);
+        if (window.isMinimized()) window.restore();
+        window.focus();
+      }
+      // the commandLine is array of strings in which last element is deep link url
+      dialog.showErrorBox(
+        'Welcome Back',
+        `You arrived from: ${commandLine.pop()}`
+      );
+    });
+  }
+} else {
+  app
+    .whenReady()
+    .then(async () => {
+      await initializeUserData();
+
+      globalShortcut.register(APP_HOTKEYS.join('+'), () => {
+        const window = mainWindow.getWindow();
+        if (window) {
+          if (mainWindow.getIsHidden()) {
+            window.show();
+            mainWindow.setIsHidden(false);
+          } else {
+            window.hide();
+            mainWindow.setIsHidden(true);
+          }
         }
-      }
-    });
+      });
 
-    createWindow();
+      createWindow();
 
-    app.on('activate', () => {
-      // On macOS it's common to re-create a window in the app when the
-      // dock icon is clicked and there are no other windows open.
-      const window = mainWindow.getWindow();
-      if (window === null) {
-        createWindow();
-      } else {
-        mainWindow.setIsHidden(false);
-        window.show();
-      }
-    });
-  })
-  .catch(console.log);
+      app.on('activate', () => {
+        // On macOS it's common to re-create a window in the app when the
+        // dock icon is clicked and there are no other windows open.
+        const window = mainWindow.getWindow();
+        if (window === null) {
+          createWindow();
+        } else {
+          mainWindow.setIsHidden(false);
+          window.show();
+        }
+      });
+    })
+    .catch(console.log);
+}
 
 dbCalls();

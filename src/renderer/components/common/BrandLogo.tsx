@@ -1,18 +1,20 @@
-import { Anchor } from '@mantine/core';
+import { Anchor, Flex } from '@mantine/core';
 
-// className="absolute top-0 right-0 p-4 tracking-widest"
 function BrandLogo() {
   return (
-    <Anchor
-      href="https://shortcutwizard.io/"
-      target="_blank"
-      size="xs"
-      align="right"
-      mt={10}
-      mr={5}
-    >
-      Shortcut Wizard
-    </Anchor>
+    <Flex direction="row-reverse">
+      <Anchor
+        href="http://localhost:3000"
+        // href="https://shortcut-wizard.vercel.app"
+        target="_blank"
+        size="xs"
+        align="right"
+        mt={5}
+        mr={5}
+      >
+        Shortcut Wizard
+      </Anchor>
+    </Flex>
   );
 }
 

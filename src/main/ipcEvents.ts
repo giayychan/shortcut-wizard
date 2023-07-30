@@ -1,4 +1,5 @@
-import { ipcMain } from 'electron';
+import { ipcMain, shell } from 'electron';
+import path from 'path';
 import { WIDTH } from './constants';
 import appWindow from './mainWindow';
 import {
@@ -54,4 +55,13 @@ export default function dbCalls() {
   );
 
   ipcMain.handle('factoryReset', factoryReset);
+
+  // Handle window controls via IPC
+  ipcMain.on('shell:open', () => {
+    const pageDirectory = __dirname.replace('app.asar', 'app.asar.unpacked');
+    const pagePath = path.join('file://', pageDirectory, 'index.html');
+    shell.openExternal(pagePath);
+
+    console.log({ pagePath });
+  });
 }

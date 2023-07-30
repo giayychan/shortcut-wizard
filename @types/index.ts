@@ -30,6 +30,7 @@ export interface SoftwareShortcut {
     icon: IconData;
   };
   shortcuts: Shortcut[];
+  createdDate: string;
 }
 
 export interface SoftwareShortcuts {
@@ -38,7 +39,9 @@ export interface SoftwareShortcuts {
 
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 
-export type AddSoftwareFormValues = SoftwareShortcut & { file: File | null };
+export type AddSoftwareFormValues = Omit<SoftwareShortcut, 'createdDate'> & {
+  file: File | null;
+};
 export type EditShortcutFormValues = Partial<Shortcut>;
 
 export type RemoveShortcutFormValues = { shortcuts: string[] };
@@ -48,7 +51,8 @@ export type RemoveSoftwareFormValues = {
 export type SearchShortcutFormValues = {
   searchTerm: string;
 };
-export interface AddSoftwareAutocompleteOption extends SoftwareShortcut {
+export interface AddSoftwareAutocompleteOption
+  extends Omit<SoftwareShortcut, 'createdDate'> {
   value: string;
 }
 

@@ -1,6 +1,6 @@
 import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import StyledSvg from '../common/StyledSvg';
 import Settings from '../Settings/Container';
@@ -50,16 +50,22 @@ function SoftwareListContainer() {
       : [];
 
   const softwares = softwareList.length
-    ? softwareList.map((softwareKey) => {
-        const { software } = softwareShortcuts[softwareKey];
-        const { key, icon } = software;
-        const { dataUri } = icon;
+    ? softwareList
+        .sort((a, b) => {
+          const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
+          const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
+          return createdDateA - createdDateB;
+        })
+        .map((softwareKey) => {
+          const { software } = softwareShortcuts[softwareKey];
+          const { key, icon } = software;
+          const { dataUri } = icon;
 
-        return {
-          value: key,
-          label: dataUri && <StyledSvg src={dataUri} />,
-        };
-      })
+          return {
+            value: key,
+            label: dataUri && <StyledSvg src={dataUri} />,
+          };
+        })
     : [];
 
   const data = [...searchItem, ...softwares];
@@ -76,43 +82,64 @@ function SoftwareListContainer() {
     }
   };
 
+  const getIsScrollable = (ele: HTMLElement) => {
+    // Compare the height to see if the element has scrollable content
+    const hasScrollableContent = ele.scrollWidth > ele.clientWidth;
+
+    // It's not enough because the element's `overflow-y` style can be set as
+    // * `hidden`
+    // * `hidden !important`
+    // In those cases, the scrollbar isn't shown
+    const overflowXStyle = window.getComputedStyle(ele).overflowX;
+    const isOverflowHidden = overflowXStyle.indexOf('hidden') !== -1;
+
+    return hasScrollableContent && !isOverflowHidden;
+  };
+
   const viewport = useRef<HTMLDivElement>(null);
 
+  const [isScrollable, setIsScrollable] = useState(false);
+
   useEffect(() => {
-    if (viewport.current?.clientWidth)
-      console.log(viewport.current?.clientWidth);
-  }, [viewport.current?.clientWidth]);
+    if (viewport.current?.scrollWidth) {
+      const isScrollableEle = getIsScrollable(viewport.current);
+      setIsScrollable(isScrollableEle);
+    }
+  }, [viewport.current?.scrollWidth, viewport.current?.clientWidth]);
 
   if (!data.length) return null;
 
   return (
-    <Flex pos="relative" direction="row" gap="lg" align="start">
+    <Flex pos="relative" direction="row" gap="lg" align="start" mb={10}>
       <ScrollArea
         type="never"
         viewportRef={viewport}
         styles={(theme) => ({
-          root: {
-            '&:before': {
-              content: '""',
-              height: '100%',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: 20,
-              zIndex: 3,
-              boxShadow: `inset ${theme.colors.dark[9]} 52px 3px 14px -42px`,
-            },
-            '&:after': {
-              right: 0,
-              content: '""',
-              height: '100%',
-              position: 'absolute',
-              top: 0,
-              width: 35,
-              zIndex: 3,
-              boxShadow: `inset ${theme.colors.dark[9]} -52px 4px 14px -42px`,
-            },
-          },
+          root: isScrollable
+            ? {
+                '&:before': {
+                  content: '""',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: 20,
+                  zIndex: 3,
+                  boxShadow: `inset ${theme.colors.dark[9]} 52px 3px 14px -42px`,
+                },
+                '&:after': {
+                  right: 0,
+                  content: '""',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  width: 35,
+                  zIndex: 3,
+                  boxShadow: `inset ${theme.colors.dark[9]} -52px 4px 14px -42px`,
+                },
+                borderRadius: 8,
+              }
+            : { borderRadius: 8 },
         })}
       >
         <SegmentedControl

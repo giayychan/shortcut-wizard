@@ -193,6 +193,12 @@
   "build": {
     "productName": "Shortcut Wizard",
     "appId": "org.erb.shortcut_wizard",
+    "protocols": {
+      "name": "shortcut-wizard-deep-linking",
+      "schemes": [
+        "shortcut-wizard"
+      ]
+    },
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [

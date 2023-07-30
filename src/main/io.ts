@@ -6,6 +6,7 @@ import {
   copy,
   readJson,
   readFile,
+  statSync,
   writeJson,
 } from 'fs-extra';
 import { readdir } from 'fs/promises';
@@ -175,10 +176,11 @@ export const fetchSoftwareShortcuts = async () => {
         if (path.extname(file).toLowerCase() === '.json') {
           const filePath = getUserDataPath('shortcuts', file);
           const data: SoftwareShortcut = await readJson(filePath);
+          const createdDate = statSync(filePath).birthtime.toISOString();
 
           const icon = await getIconFile(data.software.icon);
           data.software.icon = icon;
-          softwareShortcuts[data.software.key] = data;
+          softwareShortcuts[data.software.key] = { ...data, createdDate };
         }
       })
     );
@@ -286,7 +288,7 @@ export const removeShortcutsBySoftwareKey = async (
 };
 
 export const addSoftwareShortcut = async (data: SoftwareShortcut) => {
-  const { key, icon } = data.software;
+  const { icon, key } = data.software;
 
   if (!key) throw Error('softwareKey is required');
 
@@ -303,10 +305,8 @@ export const addSoftwareShortcut = async (data: SoftwareShortcut) => {
 
     const found = existingSoftwares.some((software) => {
       const [softwareKey] = software.split('.');
-      return softwareKey === key;
+      return softwareKey.toLowerCase() === key.toLowerCase();
     });
-
-    // todo: sanitize software key
 
     if (found) throw Error('software already exists');
 

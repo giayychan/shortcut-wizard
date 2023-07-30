@@ -53,8 +53,11 @@ const schema: JSONSchemaType<{
           additionalProperties: false,
         },
       },
+      createdDate: {
+        type: 'string',
+      },
     },
-    required: ['software', 'shortcuts'],
+    required: ['software', 'shortcuts', 'createdDate'],
     additionalProperties: false,
   },
 };

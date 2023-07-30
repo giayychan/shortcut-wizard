@@ -74,7 +74,7 @@ function SearchShortcutContainer() {
       <TextInput
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
-        icon={<IconSearch />}
+        icon={<IconSearch size="1.25rem" />}
         value={searchTerm}
         onChange={handleChange}
         placeholder="Search shortcut description or software name"

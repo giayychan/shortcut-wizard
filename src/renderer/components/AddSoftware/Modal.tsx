@@ -75,7 +75,10 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
 
     openLoading();
 
+    const createdDate = new Date().toISOString();
+
     const newSoftware = {
+      createdDate,
       software: values.software,
       shortcuts: values.shortcuts,
     };

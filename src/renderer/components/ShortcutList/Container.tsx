@@ -25,7 +25,6 @@ function ShortcutListContainer() {
           spacing="lg"
           size="sm"
           center
-          className="first:mt-4"
           styles={{
             itemWrapper: {
               width: '100%',
@@ -74,7 +73,7 @@ function ShortcutListContainer() {
   if (selectedSoftwareShortcut.shortcuts.length === 0) {
     return (
       <Button
-        className="mt-4"
+        variant="outline"
         onClick={() => {
           openContextModal({
             title: 'Add Shortcut',
@@ -103,7 +102,6 @@ function ShortcutListContainer() {
         spacing="lg"
         size="sm"
         center
-        className="first:mt-4"
         styles={{
           itemWrapper: {
             width: '100%',
