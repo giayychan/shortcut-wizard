@@ -1,10 +1,11 @@
-Bugs:
+# Bugs
 
 * UI fixes (scroll, infinite scroll, mass data)
 * app icon
 * finish initial shortcut data - adhoc, test them?
 <!-- * infinity scroll -->
 * auth (Gia's working on it)
+* add software label
 
 Plan:
 
@@ -13,5 +14,6 @@ Plan:
 * Gold plan: AI fetch shortcut by search term
 
 Side features:
+
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 * Add dictionary?
