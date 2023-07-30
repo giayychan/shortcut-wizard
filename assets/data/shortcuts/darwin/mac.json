@@ -2,7 +2,7 @@
   "software": {
     "key": "macOS",
     "icon": {
-      "filename": "mac.svg",
+      "filename": "macos.svg",
       "isCustom": false
     }
   },

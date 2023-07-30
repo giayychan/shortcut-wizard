@@ -47,6 +47,8 @@ export const initializeUserData = async () => {
       process.platform
     );
 
+    console.log('USER_SOFTWARE_SHORTCUTS_DIR', USER_SOFTWARE_SHORTCUTS_DIR);
+
     await copy(systemShortcutsDir, USER_SOFTWARE_SHORTCUTS_DIR, {
       overwrite: false,
     });
