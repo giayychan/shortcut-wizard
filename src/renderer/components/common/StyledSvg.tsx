@@ -8,10 +8,10 @@ function StyledSvg({ src, className }: StyledSvgProps) {
       src={src}
       className={`${className || ''}`}
       beforeInjection={(rtSvg) => {
-        const width = rtSvg.getAttribute('width');
-        const height = rtSvg.getAttribute('height');
-        rtSvg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-        rtSvg.setAttribute('preserveAspectRatio', 'none');
+        // const width = rtSvg.getAttribute('width');
+        // const height = rtSvg.getAttribute('height');
+        // rtSvg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+        // rtSvg.setAttribute('preserveAspectRatio', 'none');
         // rtSvg.setAttribute('fill', '#dddddd');
         // rtSvg.setAttribute('stroke', '#dddddd');
       }}
