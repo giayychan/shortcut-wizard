@@ -94,10 +94,7 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
   };
 
   const customIcon = file ? (
-    <ReactSVG
-      src={URL.createObjectURL(file)}
-      className="[&_.injected-svg]:stroke-steam"
-    />
+    <ReactSVG src={URL.createObjectURL(file)} />
   ) : (
     icon.dataUri && <StyledSvg src={icon.dataUri} />
   );

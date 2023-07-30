@@ -1,8 +1,9 @@
+import { useCallback, useEffect, useMemo, useState, memo } from 'react';
 import Fuse from 'fuse.js';
+import { useDebouncedValue } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { TextInput } from '@mantine/core';
-import { ChangeEvent } from 'react';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import { FlattenShortcut, SearchShortcutFormValues } from '../../../../@types';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
@@ -11,6 +12,11 @@ const FORM_DEFAULT_VALUES = {
   initialValues: {
     searchTerm: '',
   },
+};
+
+const options: Fuse.IFuseOptions<FlattenShortcut> = {
+  keys: ['description', 'software.key'],
+  minMatchCharLength: 1,
 };
 
 function SearchShortcutContainer() {
@@ -23,51 +29,59 @@ function SearchShortcutContainer() {
       state.setSearchTerm,
     ]);
 
+  const [value, setValue] = useState('');
+  const [debounced] = useDebouncedValue(value, 500);
+
   const softwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.softwareShortcuts
   );
 
-  const flattenShortcutWithSoftwareDataArray = Object.keys(
-    softwareShortcuts
-  ).reduce((prev: FlattenShortcut[], curr: string) => {
-    const { software, shortcuts } = softwareShortcuts[curr];
+  const flattenShortcutWithSoftwareDataArray = useMemo(() => {
+    return Object.keys(softwareShortcuts).reduce(
+      (prev: FlattenShortcut[], curr: string) => {
+        const { software, shortcuts, createdDate } = softwareShortcuts[curr];
 
-    const shortcutsArray = shortcuts.map((shortcut) => ({
-      ...shortcut,
-      id: `${software.key}-${shortcut.id}`,
-      software,
-    }));
+        const shortcutsArray = shortcuts.map((shortcut) => ({
+          ...shortcut,
+          id: `${software.key}-${shortcut.id}`,
+          software,
+          createdDate,
+        }));
 
-    return [...prev, ...shortcutsArray];
-  }, []);
+        return [...prev, ...shortcutsArray];
+      },
+      []
+    );
+  }, [softwareShortcuts]);
 
-  const options: Fuse.IFuseOptions<FlattenShortcut> = {
-    keys: ['description', 'software.key'],
-    // looks like still only match if search term is 2 characters or more, weird!
-    minMatchCharLength: 1,
-  };
+  const fuse = useMemo(
+    () => new Fuse(flattenShortcutWithSoftwareDataArray, options),
+    [flattenShortcutWithSoftwareDataArray]
+  );
 
-  const fuse = new Fuse(flattenShortcutWithSoftwareDataArray, options);
+  const handleChange = useCallback(
+    (debouncedSearchTerm: string) => {
+      setSearchTerm(debouncedSearchTerm);
+      setShowSearchResults(!!debouncedSearchTerm);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const searchValue = e.target.value;
-    setSearchTerm(searchValue);
-    setShowSearchResults(!!searchValue);
+      if (debouncedSearchTerm === '') {
+        setResults([]);
+        return;
+      }
 
-    if (searchValue === '') {
-      setResults([]);
-      return;
-    }
+      const result = fuse.search(debouncedSearchTerm);
+      setResults(result);
+    },
+    [setSearchTerm, setShowSearchResults, setResults, fuse]
+  );
 
-    const result = fuse.search(searchTerm);
-    setResults(result);
-  };
+  useEffect(() => {
+    handleChange(debounced);
+  }, [debounced, handleChange]);
 
-  const handleSubmit = async () => {
-    handleChange({
-      target: { value: searchTerm },
-    } as ChangeEvent<HTMLInputElement>);
-  };
+  const handleSubmit = useCallback(async () => {
+    handleChange(value);
+  }, [value, handleChange]);
 
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
@@ -75,8 +89,8 @@ function SearchShortcutContainer() {
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
         icon={<IconSearch size="1.25rem" />}
-        value={searchTerm}
-        onChange={handleChange}
+        value={value}
+        onChange={(event) => setValue(event.currentTarget.value)}
         placeholder="Search shortcut description or software name"
         mb="md"
       />
@@ -84,4 +98,4 @@ function SearchShortcutContainer() {
   );
 }
 
-export default SearchShortcutContainer;
+export default memo(SearchShortcutContainer);

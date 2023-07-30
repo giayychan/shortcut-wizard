@@ -11,9 +11,11 @@ export type FuseSearchState = {
 
   searchTerm: string;
   setSearchTerm: (searchTerm: string) => void;
+
+  toggleSearchResults: () => void;
 };
 
-const useFuseSearchStore = create<FuseSearchState, []>((set) => ({
+const useFuseSearchStore = create<FuseSearchState, []>((set, get) => ({
   isSearchResultsShow: false,
   setShowSearchResults: (isShow) => {
     set({ isSearchResultsShow: isShow });
@@ -22,6 +24,11 @@ const useFuseSearchStore = create<FuseSearchState, []>((set) => ({
   searchTerm: '',
   setSearchTerm: (searchTerm) => {
     set({ searchTerm });
+  },
+
+  toggleSearchResults: () => {
+    const { isSearchResultsShow } = get();
+    set({ isSearchResultsShow: !isSearchResultsShow });
   },
 
   results: [],

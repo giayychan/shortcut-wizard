@@ -1,6 +1,6 @@
+import React, { useMemo, useCallback } from 'react';
 import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
-import { useEffect, useRef, useState } from 'react';
 
 import StyledSvg from '../common/StyledSvg';
 import Settings from '../Settings/Container';
@@ -14,33 +14,30 @@ function SoftwareListContainer() {
     (state) => state.softwareShortcuts
   );
 
-  const [selected, setSelect] = useSelectedShortcutsStore((state) => [
+  const [selected, setSelected] = useSelectedShortcutsStore((state) => [
     state.selectedSoftwareShortcut,
     state.setSelectedSoftwareShortcut,
   ]);
 
-  const [isSearchResultsShow, setShowSearchResults, searchTerm] =
-    useFuseSearchStore((state) => [
-      state.isSearchResultsShow,
-      state.setShowSearchResults,
-      state.searchTerm,
-    ]);
+  const {
+    isSearchResultsShow,
+    setShowSearchResults,
+    searchTerm,
+    toggleSearchResults,
+  } = useFuseSearchStore((state) => ({
+    isSearchResultsShow: state.isSearchResultsShow,
+    setShowSearchResults: state.setShowSearchResults,
+    searchTerm: state.searchTerm,
+    toggleSearchResults: state.toggleSearchResults,
+  }));
 
-  const softwareList = Object.keys(softwareShortcuts);
+  const softwareList = useMemo(
+    () => Object.keys(softwareShortcuts),
+    [softwareShortcuts]
+  );
 
-  const handleSelect = (
-    isSelected: boolean,
-    softwareShortcut: SoftwareShortcut
-  ) => {
-    if (isSelected) {
-      setSelect(null);
-    } else {
-      setSelect(softwareShortcut);
-    }
-  };
-
-  const searchItem =
-    isSearchResultsShow || searchTerm
+  const searchItem = useMemo(() => {
+    return isSearchResultsShow || searchTerm
       ? [
           {
             value: 'search',
@@ -48,103 +45,80 @@ function SoftwareListContainer() {
           },
         ]
       : [];
+  }, [isSearchResultsShow, searchTerm]);
 
-  const softwares = softwareList?.length
-    ? softwareList
-        .sort((a, b) => {
-          const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
-          const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
-          return createdDateA - createdDateB;
-        })
-        .map((softwareKey) => {
-          const { software } = softwareShortcuts[softwareKey];
-          const { key, icon } = software;
-          const { dataUri } = icon;
+  const softwares = useMemo(() => {
+    if (!softwareList?.length) return [];
 
-          return {
-            value: key,
-            label: dataUri && <StyledSvg src={dataUri} />,
-          };
-        })
-    : [];
+    return softwareList
+      .sort((a, b) => {
+        const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
+        const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
+        return createdDateA - createdDateB;
+      })
+      .map((softwareKey) => {
+        const { software } = softwareShortcuts[softwareKey];
+        const { key, icon } = software;
+        const { dataUri } = icon;
 
-  const data = [...searchItem, ...softwares];
+        return {
+          value: key,
+          label: dataUri && <StyledSvg src={dataUri} />,
+        };
+      });
+  }, [softwareList, softwareShortcuts]);
 
-  const handleClick = (e: any) => {
-    const { value } = e.target;
-    if (value) {
-      const isSearch = value === 'search';
-      if (isSearch) setShowSearchResults(!isSearchResultsShow);
+  const data = useMemo(
+    () => [...searchItem, ...softwares],
+    [searchItem, softwares]
+  );
 
-      const isSelected = selected?.software.key === value;
-      handleSelect(isSelected, softwareShortcuts[value]);
-      setShowSearchResults(isSearchResultsShow ? false : isSearchResultsShow);
-    }
-  };
+  const handleSelect = useCallback(
+    (isSelected: boolean, softwareShortcut: SoftwareShortcut) => {
+      setSelected(isSelected ? null : softwareShortcut);
+    },
+    [setSelected]
+  );
 
-  const getIsScrollable = (ele: HTMLElement) => {
-    // Compare the height to see if the element has scrollable content
-    const hasScrollableContent = ele.scrollWidth > ele.clientWidth;
+  const handleClick = useCallback(
+    (e: any) => {
+      const { value } = e.target;
+      if (value) {
+        const isSearch = value === 'search';
+        if (isSearch) {
+          handleSelect(false, softwareShortcuts[value]);
+          toggleSearchResults();
+        } else {
+          setShowSearchResults(false);
+          const isSelected = selected?.software.key === value;
+          handleSelect(isSelected, softwareShortcuts[value]);
+        }
+      }
+    },
+    [
+      toggleSearchResults,
+      setShowSearchResults,
+      selected,
+      handleSelect,
+      softwareShortcuts,
+    ]
+  );
 
-    // It's not enough because the element's `overflow-y` style can be set as
-    // * `hidden`
-    // * `hidden !important`
-    // In those cases, the scrollbar isn't shown
-    const overflowXStyle = window.getComputedStyle(ele).overflowX;
-    const isOverflowHidden = overflowXStyle.indexOf('hidden') !== -1;
-
-    return hasScrollableContent && !isOverflowHidden;
-  };
-
-  const viewport = useRef<HTMLDivElement>(null);
-
-  const [isScrollable, setIsScrollable] = useState(false);
-
-  useEffect(() => {
-    if (viewport.current?.scrollWidth) {
-      const isScrollableEle = getIsScrollable(viewport.current);
-      setIsScrollable(isScrollableEle);
-    }
-  }, [viewport.current?.scrollWidth, viewport.current?.clientWidth]);
-
-  if (!data.length) return null;
+  if (!data?.length) return null;
 
   return (
     <Flex pos="relative" direction="row" gap="lg" align="start" mb={10}>
-      <ScrollArea
-        type="never"
-        viewportRef={viewport}
-        styles={(theme) => ({
-          root: isScrollable
-            ? {
-                '&:before': {
-                  content: '""',
-                  height: '100%',
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: 20,
-                  zIndex: 3,
-                  boxShadow: `inset ${theme.colors.dark[9]} 52px 3px 14px -42px`,
-                },
-                '&:after': {
-                  right: 0,
-                  content: '""',
-                  height: '100%',
-                  position: 'absolute',
-                  top: 0,
-                  width: 35,
-                  zIndex: 3,
-                  boxShadow: `inset ${theme.colors.dark[9]} -52px 4px 14px -42px`,
-                },
-                borderRadius: 8,
-              }
-            : { borderRadius: 8 },
-        })}
-      >
+      <ScrollArea offsetScrollbars>
         <SegmentedControl
           fullWidth
+          transitionDuration={300}
+          transitionTimingFunction="linear"
           onClick={handleClick}
+          value={
+            isSearchResultsShow && searchTerm
+              ? 'search'
+              : selected?.software.key || ''
+          }
           data={data}
           styles={{
             control: {
@@ -158,4 +132,4 @@ function SoftwareListContainer() {
   );
 }
 
-export default SoftwareListContainer;
+export default React.memo(SoftwareListContainer);
