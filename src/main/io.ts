@@ -45,32 +45,33 @@ export const initializeUserData = async () => {
   const opened = store.get('opened');
 
   if (!opened) {
-    store.set('opened', true);
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
     } catch (error) {
       logError("Couldn't remove user shortcuts directory");
       throw error;
     }
-  }
 
-  try {
-    await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
-    await ensureDir(USER_CUSTOM_ICONS_DIR);
-  } catch (error) {
-    logError("Couldn't ensure user shortcuts directory exists");
-    throw error;
-  }
+    try {
+      await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
+      await ensureDir(USER_CUSTOM_ICONS_DIR);
+    } catch (error) {
+      logError("Couldn't ensure user shortcuts directory exists");
+      throw error;
+    }
 
-  try {
-    await copy(SYS_SOFTWARE_SHORTCUTS_DIR, USER_SOFTWARE_SHORTCUTS_DIR, {
-      overwrite: false,
-    });
+    try {
+      await copy(SYS_SOFTWARE_SHORTCUTS_DIR, USER_SOFTWARE_SHORTCUTS_DIR, {
+        overwrite: false,
+      });
 
-    logSuccess('User data initialized');
-  } catch (error) {
-    logError("Couldn't copy system shortcuts directory to user");
-    throw error;
+      logSuccess('User data initialized');
+    } catch (error) {
+      logError("Couldn't copy system shortcuts directory to user");
+      throw error;
+    }
+
+    store.set('opened', true);
   }
 };
 
