@@ -1,4 +1,6 @@
 import path from 'path';
+import Store from 'electron-store';
+
 import {
   remove,
   outputJson,
@@ -27,6 +29,8 @@ import type {
 } from '../../@types';
 import { AUTO_COMPLETE_CUSTOM_OPTION } from './constants';
 
+const store = new Store();
+
 export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
 export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
 export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
@@ -38,6 +42,18 @@ export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
 export const initializeUserData = async () => {
+  const opened = store.get('opened');
+
+  if (!opened) {
+    store.set('opened', true);
+    try {
+      await remove(USER_SOFTWARE_SHORTCUTS_DIR);
+    } catch (error) {
+      logError("Couldn't remove user shortcuts directory");
+      throw error;
+    }
+  }
+
   try {
     await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
     await ensureDir(USER_CUSTOM_ICONS_DIR);
