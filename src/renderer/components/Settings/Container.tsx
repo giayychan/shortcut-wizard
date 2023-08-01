@@ -8,6 +8,7 @@ import AddShortcutButton from '../AddShortcut/Button';
 import RemoveShortcutButton from '../RemoveShortcut/Button';
 import SettingsMenu from './Menu';
 import FactoryResetButton from './FactoryResetButton';
+import SignInButton from '../Auth/SignInButton';
 
 function SettingContainer() {
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
@@ -28,6 +29,7 @@ function SettingContainer() {
           <AddSoftwareButton />
           <RemoveSoftwareButton />
           <FactoryResetButton toggle={toggle} />
+          <SignInButton />
         </Group>
       )}
     </SettingsMenu>
