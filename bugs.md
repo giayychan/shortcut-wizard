@@ -17,3 +17,4 @@ Side features:
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 * Add dictionary?
+* https://github.com/jsonnull/electron-trpc replace ipc
