@@ -125,7 +125,20 @@ const createWindow = async () => {
 
 // Handle the protocol. In this case, we choose to show an Error Box.
 app.on('open-url', (event, url) => {
-  dialog.showErrorBox('Welcome Back', `You arrived from: ${url}`);
+  const window = mainWindow.getWindow();
+
+  const pathnameWithParams = url.split('://')[1];
+
+  const pathname = pathnameWithParams.split('?')[0];
+
+  switch (pathname) {
+    case 'sign-in':
+      window!.show();
+      mainWindow.setIsHidden(false);
+      break;
+    default:
+      break;
+  }
 });
 
 /**
