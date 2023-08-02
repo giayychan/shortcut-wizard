@@ -176,11 +176,19 @@ if (process.platform === 'win32' || process.platform === 'linux') {
         if (window.isMinimized()) window.restore();
         window.focus();
       }
-      // the commandLine is array of strings in which last element is deep link url
-      dialog.showErrorBox(
-        'Welcome Back',
-        `You arrived from: ${commandLine.pop()}`
-      );
+      // todo: handle the protocol
+      //     const pathnameWithParams = url.split('://')[1];
+
+      // const pathname = pathnameWithParams.split('?')[0];
+
+      // switch (pathname) {
+      //   case 'sign-in':
+      //     window!.show();
+      //     mainWindow.setIsHidden(false);
+      //     break;
+      //   default:
+      //     break;
+      // }
     });
   }
 } else {
