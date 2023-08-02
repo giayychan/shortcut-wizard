@@ -12,7 +12,7 @@
  */
 import path from 'path';
 
-import { app, BrowserWindow, shell, globalShortcut, dialog } from 'electron';
+import { app, BrowserWindow, shell, globalShortcut } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
