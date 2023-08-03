@@ -51,7 +51,7 @@ if (process.defaultApp) {
 }
 
 // if (isDebug) {
-// require('electron-debug')();
+require('electron-debug')();
 // }
 
 const installExtensions = async () => {
@@ -69,7 +69,7 @@ const installExtensions = async () => {
 
 const createWindow = async () => {
   if (isDebug) {
-    // await installExtensions();
+    await installExtensions();
   }
 
   mainWindow.setWindow(
@@ -84,7 +84,7 @@ const createWindow = async () => {
       frame: false,
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
-        // devTools: true,
+        devTools: true,
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
           : path.join(__dirname, '../../.erb/dll/preload.js'),

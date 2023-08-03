@@ -28,9 +28,9 @@ function SignInButton() {
           // clean up one time uuid doc ref
           await remove(oneTimeUuidDocRef);
         }
-
-        window.open(`${redirectUri}${uuid}`, '_blank');
       });
+
+      window.open(`${redirectUri}${uuid}`, '_blank');
     } catch (error: any) {
       notifications.show({
         message: `Error when signing in: ${error.message}`,
