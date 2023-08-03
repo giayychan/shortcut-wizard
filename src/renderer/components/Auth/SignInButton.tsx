@@ -19,16 +19,23 @@ function SignInButton() {
 
       const oneTimeUuidDocRef = ref(db, `onetime-uuids/${uuid}`);
 
-      onValue(oneTimeUuidDocRef, async (snapshot) => {
-        const authToken = snapshot.val();
+      onValue(
+        oneTimeUuidDocRef,
+        async (snapshot) => {
+          const authToken = snapshot.val();
 
-        if (authToken) {
-          await signInWithCustomToken(auth, authToken);
+          if (authToken) {
+            await signInWithCustomToken(auth, authToken);
 
-          // clean up one time uuid doc ref
+            // clean up one time uuid doc ref
+            await remove(oneTimeUuidDocRef);
+          }
+        },
+        async (err) => {
+          console.log('error on listening onetime-uuids ', err);
           await remove(oneTimeUuidDocRef);
         }
-      });
+      );
 
       window.open(`${redirectUri}${uuid}`, '_blank');
     } catch (error: any) {
