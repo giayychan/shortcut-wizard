@@ -5,13 +5,16 @@ import { notifications } from '@mantine/notifications';
 import { signInWithCustomToken, signOut } from 'firebase/auth';
 import { auth, db } from 'main/firebase';
 import useAuthStore from '../../stores/useAuthStore';
+import useGlobalLoadingStore from '../../stores/useGlobalLoadingStore';
 
 const { ipcRenderer } = window.electron;
 
 function SignInButton() {
   const user = useAuthStore((state) => state.user);
+  const setVisible = useGlobalLoadingStore((state) => state.setVisible);
 
   const handleSignIn = async () => {
+    setVisible(true);
     try {
       const redirectUri = await ipcRenderer.invoke('initiateLogin', undefined);
 
@@ -29,11 +32,13 @@ function SignInButton() {
 
             // clean up one time uuid doc ref
             await remove(oneTimeUuidDocRef);
+            setVisible(false);
           }
         },
         async (err) => {
           console.log('error on listening onetime-uuids ', err);
           await remove(oneTimeUuidDocRef);
+          setVisible(false);
         }
       );
 
@@ -43,6 +48,7 @@ function SignInButton() {
         message: `Error when signing in: ${error.message}`,
         color: 'red',
       });
+      setVisible(false);
     }
   };
 

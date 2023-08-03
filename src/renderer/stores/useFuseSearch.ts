@@ -1,20 +1,5 @@
 import { create } from 'zustand';
-import Fuse from 'fuse.js';
-import { FlattenShortcut } from '../../../@types';
-
-export type FuseSearchState = {
-  results: Fuse.FuseResult<FlattenShortcut>[];
-  setResults: (results: Fuse.FuseResult<FlattenShortcut>[]) => void;
-
-  isSearchResultsShow: boolean;
-  setShowSearchResults: (isShow: boolean) => void;
-
-  searchTerm: string;
-  setSearchTerm: (searchTerm: string) => void;
-
-  toggleSearchResults: () => void;
-  reset: () => void;
-};
+import { FuseSearchState } from '../../../@types';
 
 const useFuseSearchStore = create<FuseSearchState, []>((set, get) => ({
   isSearchResultsShow: false,

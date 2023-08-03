@@ -1,25 +1,17 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
 
 import SearchShortcut from './components/SearchShortcut/Container';
 import SoftwareList from './components/SoftwareList/Container';
-import useSoftwareShortcutsStore from './stores/useSoftwareShortcutsStore';
 import ShortcutList from './components/ShortcutList/Container';
 import BrandLogo from './components/common/BrandLogo';
 import Layout from './Layout';
 import './App.css';
 import useUser from './hooks/useUser';
+import useFetchSoftwareShortcuts from './hooks/useFetchSoftwareShortcuts';
 
 function Main() {
-  const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
-    (state) => state.fetchSoftwareShortcuts
-  );
-
   useUser();
-
-  useEffect(() => {
-    fetchSoftwareShortcuts();
-  }, [fetchSoftwareShortcuts]);
+  useFetchSoftwareShortcuts();
 
   return (
     <Layout>

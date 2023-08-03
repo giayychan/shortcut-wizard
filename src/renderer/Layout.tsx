@@ -4,6 +4,7 @@ import {
   MantineProvider,
   createEmotionCache,
   Paper,
+  LoadingOverlay,
 } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import { useResizeObserver } from '@mantine/hooks';
@@ -12,12 +13,14 @@ import { ModalsProvider } from '@mantine/modals';
 import './App.css';
 import useAppHeightStore from './stores/useAppHeightStore';
 import modals from './components/common/modals';
+import useGlobalLoadingStore from './stores/useGlobalLoadingStore';
 
 const myCache = createEmotionCache({ key: 'mantine' });
 
 function Layout({ children }: { children: ReactNode }) {
   const [ref, rect] = useResizeObserver();
 
+  const visible = useGlobalLoadingStore((state) => state.visible);
   const setHeight = useAppHeightStore((state) => state.setHeight);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ function Layout({ children }: { children: ReactNode }) {
         }}
       >
         <Notifications />
-
+        <LoadingOverlay visible={visible} overlayBlur={2} />
         <Paper radius="md" ref={ref}>
           <Flex p="lg" direction="column">
             {children}

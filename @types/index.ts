@@ -2,6 +2,7 @@ import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { modals } from '@mantine/modals';
 import { User } from 'firebase/auth';
+import Fuse from 'fuse.js';
 
 declare module '@mantine/modals' {
   export interface MantineModalsOverride {
@@ -146,4 +147,23 @@ export type SelectedShortcutsState = {
   setSelectedSoftwareShortcut: (
     softwareShortcut: SoftwareShortcut | null
   ) => void;
+};
+
+export type FuseSearchState = {
+  results: Fuse.FuseResult<FlattenShortcut>[];
+  setResults: (results: Fuse.FuseResult<FlattenShortcut>[]) => void;
+
+  isSearchResultsShow: boolean;
+  setShowSearchResults: (isShow: boolean) => void;
+
+  searchTerm: string;
+  setSearchTerm: (searchTerm: string) => void;
+
+  toggleSearchResults: () => void;
+  reset: () => void;
+};
+
+export type GlobalLoadingState = {
+  visible: boolean;
+  setVisible: (visible?: boolean) => void;
 };
