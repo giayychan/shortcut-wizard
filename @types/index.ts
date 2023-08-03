@@ -1,6 +1,7 @@
 import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { modals } from '@mantine/modals';
+import { User } from 'firebase/auth';
 
 declare module '@mantine/modals' {
   export interface MantineModalsOverride {
@@ -97,7 +98,7 @@ export type OnArgumentTypes = {
 export type OnChannels = keyof OnArgumentTypes;
 
 export type InvokeReturnTypes = {
-  initiateLogin: void;
+  initiateLogin: string;
   factoryReset: void;
   fetchSoftwareShortcuts: SoftwareShortcuts;
   fetchSoftwareShortcut: SoftwareShortcut;
@@ -110,7 +111,7 @@ export type InvokeReturnTypes = {
 };
 
 export type InvokeArgumentTypes = {
-  initiateLogin: string;
+  initiateLogin: undefined;
   factoryReset: undefined;
   fetchSoftwareShortcuts: undefined;
   fetchSoftwareAutoCompleteOptions: undefined;
@@ -133,10 +134,6 @@ export type AppHeightState = {
     height: number | undefined,
     { update }: { update: boolean }
   ) => void;
-};
-
-export type User = {
-  email: string;
 };
 
 export type AuthState = {

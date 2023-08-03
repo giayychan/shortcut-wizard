@@ -18,3 +18,15 @@ Side features:
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 * Add dictionary?
 * https://github.com/jsonnull/electron-trpc replace ipc
+
+DEBUG IN PROD:
+https://stackoverflow.com/a/56634497/11899667
+In terminal type lldb path/to/build.app
+In the opened debugger type run --remote-debugging-port=8315. It should open a window of your app.
+Open Chrome at http://localhost:8315/
+Click on the name of the app. For example, Webpack App.
+If you don't see anything in the opened tab, focus on the window of your app.
+
+ref should be automatically remove after 15 mins
+more secure rules before launching your app
+show user disconnect will restrict functionality on the app

@@ -13,6 +13,7 @@
 import path from 'path';
 
 import { app, BrowserWindow, shell, globalShortcut } from 'electron';
+import { signInWithCustomToken } from 'firebase/auth';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -21,6 +22,7 @@ import { APP_HOTKEYS, WIDTH } from './constants';
 import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
+import { auth } from './firebase';
 
 class AppUpdater {
   constructor() {
@@ -49,7 +51,7 @@ if (process.defaultApp) {
 }
 
 // if (isDebug) {
-//   require('electron-debug')();
+// require('electron-debug')();
 // }
 
 const installExtensions = async () => {
@@ -82,6 +84,7 @@ const createWindow = async () => {
       frame: false,
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
+        // devTools: true,
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
           : path.join(__dirname, '../../.erb/dll/preload.js'),
@@ -101,6 +104,7 @@ const createWindow = async () => {
       window.minimize();
     } else {
       window.show();
+      // window.webContents.openDevTools();
     }
   });
 
@@ -112,7 +116,6 @@ const createWindow = async () => {
   const menuBuilder = new MenuBuilder(window!);
   menuBuilder.buildMenu();
 
-  // Open urls in the user's browser
   window!.webContents.setWindowOpenHandler((data) => {
     shell.openExternal(data.url);
     return { action: 'deny' };
@@ -122,24 +125,6 @@ const createWindow = async () => {
   // eslint-disable-next-line
   new AppUpdater();
 };
-
-// Handle the protocol. In this case, we choose to show an Error Box.
-app.on('open-url', (event, url) => {
-  const window = mainWindow.getWindow();
-
-  const pathnameWithParams = url.split('://')[1];
-
-  const pathname = pathnameWithParams.split('?')[0];
-
-  switch (pathname) {
-    case 'sign-in':
-      window!.show();
-      mainWindow.setIsHidden(false);
-      break;
-    default:
-      break;
-  }
-});
 
 /**
  * Add event listeners...
@@ -165,33 +150,44 @@ app.on('window-all-closed', () => {
 
 const gotTheLock = app.requestSingleInstanceLock();
 
-if (process.platform === 'win32' || process.platform === 'linux') {
-  if (!gotTheLock) {
-    app.quit();
-  } else {
-    app.on('second-instance', (event, commandLine) => {
-      // Someone tried to run a second instance, we should focus our window.
-      const window = mainWindow.getWindow();
-      if (window) {
-        if (window.isMinimized()) window.restore();
-        window.focus();
-      }
-      // todo: handle the protocol
-      //     const pathnameWithParams = url.split('://')[1];
-
-      // const pathname = pathnameWithParams.split('?')[0];
-
-      // switch (pathname) {
-      //   case 'sign-in':
-      //     window!.show();
-      //     mainWindow.setIsHidden(false);
-      //     break;
-      //   default:
-      //     break;
-      // }
-    });
-  }
+if (!gotTheLock) {
+  app.quit();
 } else {
+  app.on('second-instance', () => {
+    // params: event, commandLine, workingDirectory
+    const window = mainWindow.getWindow();
+    // Someone tried to run a second instance, we should focus our window.
+    if (window) {
+      if (window.isMinimized()) window.restore();
+      window.focus();
+    }
+  });
+
+  app.on('open-url', async (event, url) => {
+    const window = mainWindow.getWindow();
+
+    const pathnameWithParams = url.split('://')[1];
+
+    const pathname = pathnameWithParams.split('?')[0];
+    const authToken = url.split('authToken=')[1];
+
+    switch (pathname) {
+      case 'sign-in':
+        if (authToken) {
+          try {
+            await signInWithCustomToken(auth, authToken);
+          } catch (error: any) {
+            console.log(error.message);
+          }
+        }
+        window!.show();
+        mainWindow.setIsHidden(false);
+        break;
+      default:
+        break;
+    }
+  });
+
   app
     .whenReady()
     .then(async () => {

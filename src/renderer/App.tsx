@@ -8,11 +8,14 @@ import ShortcutList from './components/ShortcutList/Container';
 import BrandLogo from './components/common/BrandLogo';
 import Layout from './Layout';
 import './App.css';
+import useUser from './hooks/useUser';
 
 function Main() {
   const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.fetchSoftwareShortcuts
   );
+
+  useUser();
 
   useEffect(() => {
     fetchSoftwareShortcuts();

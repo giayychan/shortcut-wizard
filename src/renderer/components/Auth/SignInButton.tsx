@@ -1,35 +1,59 @@
 import { Button } from '@mantine/core';
-import { ref } from 'firebase/database';
-import { db } from 'main/firebase';
+import { onValue, ref, remove } from 'firebase/database';
 import { v4 } from 'uuid';
+import { notifications } from '@mantine/notifications';
+import { signInWithCustomToken, signOut } from 'firebase/auth';
+import { auth, db } from 'main/firebase';
+import useAuthStore from '../../stores/useAuthStore';
 
 const { ipcRenderer } = window.electron;
 
 function SignInButton() {
-  const handleSignIn = () => {
-    // generating uuid
-    const uuid = v4();
+  const user = useAuthStore((state) => state.user);
 
-    // grabbing reference to the firebase realtime db document for the uuid
-    const oneTimeUuidDocRef = ref(db, `onetime-uuids/${uuid}`);
+  const handleSignIn = async () => {
+    try {
+      const redirectUri = await ipcRenderer.invoke('initiateLogin', undefined);
 
-    // applying listener to the reference document
-    oneTimeUuidDocRef.on('value', async (snapshot) => {
-      // getting the custom firebase token
-      const authToken = snapshot.val();
+      const uuid = v4();
 
-      // use this credential accordingly
-      const credential = await firebase.auth().signInWithCustomToken(authToken);
+      const oneTimeUuidDocRef = ref(db, `onetime-uuids/${uuid}`);
 
-      /*
-        Your rest auth code
-      */
-    });
+      onValue(oneTimeUuidDocRef, async (snapshot) => {
+        const authToken = snapshot.val();
 
-    // invoking main process method to open user's default browser
-    window.ipcRenderer.invoke('initiate-login', uuid);
+        if (authToken) {
+          await signInWithCustomToken(auth, authToken);
+
+          // clean up one time uuid doc ref
+          await remove(oneTimeUuidDocRef);
+        }
+
+        window.open(`${redirectUri}${uuid}`, '_blank');
+      });
+    } catch (error: any) {
+      notifications.show({
+        message: `Error when signing in: ${error.message}`,
+        color: 'red',
+      });
+    }
   };
 
-  return <Button onClick={handleSignIn}>Sign in</Button>;
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth);
+    } catch (error: any) {
+      notifications.show({
+        message: `Error when signing out: ${error.message}`,
+        color: 'red',
+      });
+    }
+  };
+
+  return user ? (
+    <Button onClick={handleSignOut}>Sign out</Button>
+  ) : (
+    <Button onClick={handleSignIn}>Sign in</Button>
+  );
 }
 export default SignInButton;

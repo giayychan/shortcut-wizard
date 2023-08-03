@@ -197,7 +197,7 @@
     "productName": "Shortcut Wizard",
     "appId": "org.erb.shortcut_wizard",
     "protocols": {
-      "name": "shortcut-wizard-deep-linking",
+      "name": "Shortcut Wizard",
       "schemes": [
         "shortcut-wizard"
       ]
