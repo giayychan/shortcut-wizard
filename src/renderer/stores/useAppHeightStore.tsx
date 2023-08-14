@@ -2,12 +2,10 @@ import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { AppHeightState } from '../../../@types';
 
-const { ipcRenderer } = window.electron;
-
 const useAppHeightStore = create(
   subscribeWithSelector<AppHeightState>((set, get) => ({
     height: 0,
-    setHeight: (updatedHeight, { update }) => {
+    setHeight: (updatedHeight, { update }, callback) => {
       if (updatedHeight === 0) return;
       const { height } = get();
 
@@ -15,7 +13,7 @@ const useAppHeightStore = create(
 
       if (update) set({ height: roundedHeight });
 
-      ipcRenderer.sendMessage('updateMainWindowHeight', [roundedHeight]);
+      callback({ height: roundedHeight });
     },
   }))
 );

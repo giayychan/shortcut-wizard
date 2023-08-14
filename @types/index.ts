@@ -1,7 +1,7 @@
 import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { modals } from '@mantine/modals';
-import { User } from 'firebase/auth';
+import { User as FirebaseUser } from 'firebase/auth';
 import Fuse from 'fuse.js';
 
 declare module '@mantine/modals' {
@@ -92,12 +92,6 @@ export type SoftwareShortcutsState = {
   ) => Promise<void>;
 };
 
-export type OnArgumentTypes = {
-  updateMainWindowHeight: [height: number];
-};
-
-export type OnChannels = keyof OnArgumentTypes;
-
 export type InvokeReturnTypes = {
   initiateLogin: string;
   factoryReset: void;
@@ -133,13 +127,23 @@ export type AppHeightState = {
   height: number;
   setHeight: (
     height: number | undefined,
-    { update }: { update: boolean }
+    { update }: { update: boolean },
+    callback: Function
   ) => void;
+};
+
+export type PlanType = 'basic' | 'efficient' | 'pro';
+export type PlanInterval = 'monthly' | 'yearly';
+
+export type User = FirebaseUser & {
+  plan_type: PlanType;
+  plan_interval: PlanInterval;
+  stripe_id: string;
 };
 
 export type AuthState = {
   user: User | null;
-  setUser: (user?: User | null) => void;
+  setUser: (user?: FirebaseUser | null) => void;
 };
 
 export type SelectedShortcutsState = {

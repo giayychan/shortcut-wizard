@@ -1,6 +1,7 @@
-import React, { useMemo, useCallback } from 'react';
-import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
+import React, { useMemo, useCallback, useRef } from 'react';
+import { Anchor, Flex, ScrollArea, SegmentedControl } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
+import { BASIC_SOFTWARE_LIMIT } from 'main/constants';
 
 import StyledSvg from '../common/StyledSvg';
 import Settings from '../Settings/Container';
@@ -8,11 +9,20 @@ import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import { SoftwareShortcut } from '../../../../@types';
 import useFuseSearchStore from '../../stores/useFuseSearch';
+import useAuthStore from '../../stores/useAuthStore';
 
 function SoftwareListContainer() {
+  // const { data: softwareShortcuts } = trpcReact.software.all.useQuery();
+
   const softwareShortcuts = useSoftwareShortcutsStore(
     (state) => state.softwareShortcuts
   );
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  const user = useAuthStore((state) => state.user);
+
+  const isFeatureLimited = !user || user.plan_type === 'basic';
 
   const [selected, setSelected] = useSelectedShortcutsStore((state) => [
     state.selectedSoftwareShortcut,
@@ -56,17 +66,35 @@ function SoftwareListContainer() {
         const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
         return createdDateA - createdDateB;
       })
-      .map((softwareKey) => {
+      .map((softwareKey, index) => {
         const { software } = softwareShortcuts[softwareKey];
         const { key, icon } = software;
         const { dataUri } = icon;
 
+        const display =
+          isFeatureLimited && index === BASIC_SOFTWARE_LIMIT ? (
+            <>
+              <Anchor
+                bg="dark"
+                className="absolute z-10 left-2 top-1"
+                target="_blank"
+                href="https://shortcut-wizard.vercel.app/pricing"
+              >
+                Upgrade your plan to add more apps
+              </Anchor>
+              <StyledSvg src={dataUri} />
+            </>
+          ) : (
+            <StyledSvg src={dataUri} />
+          );
+
         return {
           value: key,
-          label: dataUri && <StyledSvg src={dataUri} />,
+          label: dataUri ? display : null,
+          disabled: isFeatureLimited && index + 1 > BASIC_SOFTWARE_LIMIT,
         };
       });
-  }, [softwareList, softwareShortcuts]);
+  }, [softwareList, softwareShortcuts, isFeatureLimited]);
 
   const data = useMemo(
     () => [...searchItem, ...softwares],
@@ -110,6 +138,7 @@ function SoftwareListContainer() {
     <Flex pos="relative" direction="row" gap="lg" align="start" mb={10}>
       <ScrollArea offsetScrollbars>
         <SegmentedControl
+          ref={ref}
           fullWidth
           transitionDuration={300}
           transitionTimingFunction="linear"

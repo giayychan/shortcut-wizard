@@ -1,8 +1,6 @@
 import { ipcMain, shell } from 'electron';
 import path from 'path';
 import isDev from 'electron-is-dev';
-import { WIDTH } from './constants';
-import appWindow from './mainWindow';
 import {
   fetchSoftwareShortcut,
   fetchSoftwareShortcuts,
@@ -16,11 +14,6 @@ import {
 } from './io';
 
 export default function dbCalls() {
-  ipcMain.on('updateMainWindowHeight', (_, [height]) => {
-    const mainWindow = appWindow.getWindow();
-    if (mainWindow) mainWindow.setSize(WIDTH, height, true);
-  });
-
   ipcMain.handle('fetchSoftwareShortcuts', fetchSoftwareShortcuts);
   ipcMain.handle(
     'fetchSoftwareAutoCompleteOptions',

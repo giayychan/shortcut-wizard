@@ -47,3 +47,16 @@ export const mapKeyToReadable = (key: string) => {
       return key;
   }
 };
+
+export const mapSystemToReadable = (system: string) => {
+  switch (system) {
+    case 'darwin':
+      return 'macOS';
+    case 'win32':
+      return 'Windows';
+    case 'linux':
+      return 'Linux';
+    default:
+      return system;
+  }
+};
