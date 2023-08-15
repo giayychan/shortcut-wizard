@@ -44,7 +44,7 @@ function FactoryResetButton({
   };
 
   return (
-    <Button color="white" onClick={handleClick}>
+    <Button color="red" uppercase onClick={handleClick}>
       {confirmed ? 'Confirm Reset?' : 'Factory Reset'}
     </Button>
   );

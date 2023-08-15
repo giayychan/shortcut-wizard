@@ -3,11 +3,12 @@ import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
 
 import StyledSvg from '../common/StyledSvg';
-import Settings from '../Settings/Container';
+// import SettingsMenu from '../Settings/Container';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import { SoftwareShortcut } from '../../../../@types';
 import useFuseSearchStore from '../../stores/useFuseSearch';
+import SettingsButton from '../Settings/Button';
 
 function SoftwareListContainer() {
   const softwareShortcuts = useSoftwareShortcutsStore(
@@ -107,8 +108,8 @@ function SoftwareListContainer() {
   if (!data?.length) return null;
 
   return (
-    <Flex pos="relative" direction="row" gap="lg" align="start" mb={10}>
-      <ScrollArea offsetScrollbars>
+    <Flex pos="relative" direction="row" gap="lg" align="center">
+      <ScrollArea type="always" scrollbarSize={6} offsetScrollbars>
         <SegmentedControl
           fullWidth
           transitionDuration={300}
@@ -127,7 +128,8 @@ function SoftwareListContainer() {
           }}
         />
       </ScrollArea>
-      {!isSearchResultsShow && <Settings />}
+      {/* {!isSearchResultsShow && <SettingsMenu />} */}
+      <SettingsButton />
     </Flex>
   );
 }

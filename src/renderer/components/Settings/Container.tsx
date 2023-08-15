@@ -1,4 +1,3 @@
-import { Group } from '@mantine/core';
 import { useToggle } from '@mantine/hooks';
 
 import AddSoftwareButton from '../AddSoftware/Button';
@@ -18,21 +17,23 @@ function SettingContainer() {
   const [opened, toggle] = useToggle();
 
   return (
-    <SettingsMenu toggle={toggle} opened={opened}>
-      {selectedSoftwareShortcut ? (
-        <Group spacing="xs">
-          <AddShortcutButton />
-          <RemoveShortcutButton />
-        </Group>
-      ) : (
-        <Group spacing="xs">
-          <AddSoftwareButton />
-          <RemoveSoftwareButton />
-          <FactoryResetButton toggle={toggle} />
-          <SignInButton />
-        </Group>
-      )}
-    </SettingsMenu>
+    <div className="flex">
+      <SettingsMenu toggle={toggle} opened={opened}>
+        {selectedSoftwareShortcut ? (
+          <div className="border border-red-500 w-full h-full bg-transparent">
+            <AddShortcutButton />
+            <RemoveShortcutButton />
+          </div>
+        ) : (
+          <div className="border border-blue-500 p-2 w-full h-full bg-transparent relative top-0 left-0">
+            <AddSoftwareButton />
+            <RemoveSoftwareButton />
+            <FactoryResetButton toggle={toggle} />
+            <SignInButton />
+          </div>
+        )}
+      </SettingsMenu>
+    </div>
   );
 }
 

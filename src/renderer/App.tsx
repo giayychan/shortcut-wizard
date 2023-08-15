@@ -3,7 +3,7 @@ import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchShortcut from './components/SearchShortcut/Container';
 import SoftwareList from './components/SoftwareList/Container';
 import ShortcutList from './components/ShortcutList/Container';
-import BrandLogo from './components/common/BrandLogo';
+// import BrandLogo from './components/common/BrandLogo';
 import Layout from './Layout';
 import './App.css';
 import useUser from './hooks/useUser';
@@ -18,12 +18,12 @@ function Main() {
       <SearchShortcut />
       <SoftwareList />
       <ShortcutList />
-      <BrandLogo />
+      {/* <BrandLogo /> */}
     </Layout>
   );
 }
 
-export default function App() {
+export default function sApp() {
   return (
     <Router>
       <Routes>

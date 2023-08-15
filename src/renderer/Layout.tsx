@@ -14,6 +14,7 @@ import './App.css';
 import useAppHeightStore from './stores/useAppHeightStore';
 import modals from './components/common/modals';
 import useGlobalLoadingStore from './stores/useGlobalLoadingStore';
+import TitleBar from './components/TitleBar';
 
 const myCache = createEmotionCache({ key: 'mantine' });
 
@@ -45,6 +46,7 @@ function Layout({ children }: { children: ReactNode }) {
         <Notifications />
         <LoadingOverlay visible={visible} overlayBlur={2} />
         <Paper radius="md" ref={ref}>
+          <TitleBar />
           <Flex p="lg" direction="column">
             {children}
           </Flex>

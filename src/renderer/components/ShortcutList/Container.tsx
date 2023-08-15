@@ -19,7 +19,11 @@ function ShortcutListContainer() {
 
   if (isSearchResultsShow) {
     return (
-      <ScrollArea.Autosize mah={300} scrollHideDelay={1500}>
+      <ScrollArea.Autosize
+        type="always"
+        scrollbarSize={6}
+        className="border border-red-500"
+      >
         <List
           mx={6}
           spacing="lg"
@@ -96,7 +100,11 @@ function ShortcutListContainer() {
   );
 
   return (
-    <ScrollArea.Autosize mah={300} scrollHideDelay={1500} offsetScrollbars>
+    <ScrollArea.Autosize
+      type="always"
+      scrollbarSize={6}
+      className="border border-green-500"
+    >
       <Text pl={8} pb={8} weight={700}>
         {selectedSoftwareShortcut.software.key}
       </Text>
