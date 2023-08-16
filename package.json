@@ -111,8 +111,6 @@
     "firebase": "^10.1.0",
     "fs-extra": "^11.1.1",
     "fuse.js": "^6.6.2",
-    "hnswlib-node": "^1.4.2",
-    "langchain": "^0.0.125",
     "lodash": "^4.17.21",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
