@@ -6,7 +6,7 @@ function AddSoftwareButton() {
 
   return (
     <Button
-      color="white"
+      color="indigo"
       onClick={() => {
         openContextModal({
           title,

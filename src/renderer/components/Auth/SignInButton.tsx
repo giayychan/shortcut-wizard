@@ -65,9 +65,13 @@ function SignInButton() {
   };
 
   return user ? (
-    <Button onClick={handleSignOut}>Sign out</Button>
+    <Button color="pink cursor-pointer" onClick={handleSignOut}>
+      Sign out
+    </Button>
   ) : (
-    <Button onClick={handleSignIn}>Sign in</Button>
+    <Button color="indigo cursor-pointer" onClick={handleSignIn}>
+      Sign in
+    </Button>
   );
 }
 export default SignInButton;

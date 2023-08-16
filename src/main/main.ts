@@ -69,9 +69,9 @@ const installExtensions = async () => {
 };
 
 const createWindow = async () => {
-  if (isDebug) {
-    // await installExtensions();
-  }
+  // if (isDebug) {
+  //   await installExtensions();
+  // }
 
   mainWindow.setWindow(
     new BrowserWindow({
@@ -83,6 +83,8 @@ const createWindow = async () => {
       hasShadow: true,
       transparent: true,
       frame: false,
+      // titleBarStyle: 'hidden',
+      // trafficLightPosition: { x: 10, y: 2 },
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
         nodeIntegration: true,

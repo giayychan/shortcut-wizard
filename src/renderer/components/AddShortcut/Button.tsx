@@ -6,7 +6,7 @@ function AddShortcutButton() {
 
   return (
     <Button
-      color="white"
+      color="indigo"
       onClick={() => {
         openContextModal({
           title,

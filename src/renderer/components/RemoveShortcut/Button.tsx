@@ -6,7 +6,7 @@ function RemoveShortcutButton() {
 
   return (
     <Button
-      color="white"
+      color="pink"
       onClick={() => {
         openContextModal({
           title,

@@ -28,6 +28,9 @@
     "*.{css,sass,scss}.d.ts": true
   },
   "cSpell.words": [
+    "Autosize",
+    "mantine",
+    "tabler",
     "HNSW",
     "langchain",
     "llms",
