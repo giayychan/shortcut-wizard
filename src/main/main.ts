@@ -23,7 +23,7 @@ import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
-import runRealm from './configs/realm';
+// import runRealm from './configs/realm';
 
 class AppUpdater {
   constructor() {
@@ -212,7 +212,3 @@ if (!gotTheLock) {
 }
 
 dbCalls();
-
-runRealm().catch((err) => {
-  console.error('Failed to open realm:', err);
-});
