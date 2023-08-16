@@ -40,6 +40,8 @@ export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
   process.platform
 );
 
+export const USER_REALM_DIR = getUserDataPath('realm');
+
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
 export const initializeUserData = async () => {

@@ -1,55 +1,34 @@
 import Realm from 'realm';
-import isDev from 'electron-is-dev';
-import path from 'path';
-import { getUserDataPath } from '../utils';
+import { USER_REALM_DIR } from '../io';
 
-const app = new Realm.App({ id: 'shortcut-wizard-iagls' }); // create a new instance of the Realm.App
+// Define the schema for the user authentication collection
+const UserSchema = {
+  name: 'User',
+  properties: {
+    userId: 'string',
+    jwtToken: 'string',
+    createdAt: 'date',
+  },
+  primaryKey: 'userId', // Set the primary key to 'userId'
+};
 
-async function runRealm() {
-  // login with an anonymous credential
-
-  const credentials = Realm.Credentials.anonymous();
-  const user = await app.logIn(credentials);
-
-  const DogSchema = {
-    name: 'Dog',
-    properties: {
-      _id: 'int',
-      name: 'string',
-      age: 'int',
-    },
-    primaryKey: '_id',
-  };
-
-  const realmPath = isDev
-    ? './.realm/default.realm'
-    : path.join(getUserDataPath(), 'default.realm');
-
-  const realm = await Realm.open({
-    schema: [DogSchema],
-    path: realmPath,
-    // sync: {
-    //   user,
-    //   // partitionValue: 'myPartition',
-    // },
+export async function loginRealm() {
+  const realmApp = new Realm.App({
+    id: 'shortcut-wizard-iagls',
+    baseFilePath: USER_REALM_DIR,
   });
 
-  // console.log(realm.schema);
+  const credentials = Realm.Credentials.anonymous();
 
-  // // The myPartition realm is now synced to the device. You can
-  // // access it through the `realm` object returned by `Realm.open()`
-
-  // // write to the realm
-  // const dogs = realm.objects('Dog');
-  // console.log(`Main: Number of Dog objects: ${dogs.length}`);
-
-  // realm.write(() => {
-  //   realm.create('Dog', {
-  //     _id: 2,
-  //     name: 'Fido',
-  //     age: 5,
-  //   });
-  // });
+  const user = await realmApp.logIn(credentials);
+  console.log({ USERID: user.id });
+  return user;
 }
 
-export default runRealm;
+export async function storeUserAuthInfo(userId: string, jwtToken: string) {
+  const realm = await Realm.open({ schema: [UserSchema] });
+  realm.write(() => {
+    realm.create('ElectronUser', { userId, jwtToken, createdAt: new Date() });
+  });
+  realm.close();
+}
