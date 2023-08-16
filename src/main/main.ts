@@ -23,7 +23,7 @@ import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
-// import runRealm from './configs/realm';
+import { loginRealm } from './configs/realm';
 
 class AppUpdater {
   constructor() {
@@ -179,6 +179,7 @@ if (!gotTheLock) {
   app
     .whenReady()
     .then(async () => {
+      await loginRealm();
       await initializeUserData();
 
       globalShortcut.register(APP_HOTKEYS.join('+'), () => {
