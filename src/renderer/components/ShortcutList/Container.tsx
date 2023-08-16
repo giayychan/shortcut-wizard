@@ -1,22 +1,16 @@
-import { Button, List, Text, ScrollArea, Anchor } from '@mantine/core';
+import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
-import { BASIC_SHORTCUT_LIMIT } from 'main/constants';
 
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
-import useAuthStore from '../../stores/useAuthStore';
 
 function ShortcutListContainer() {
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
     (state) => state.selectedSoftwareShortcut
   );
-
-  const user = useAuthStore((state) => state.user);
-
-  const isFeatureLimited = !user || user.plan_type === 'basic';
 
   const [isSearchResultsShow, searchResults] = useFuseSearchStore((state) => [
     state.isSearchResultsShow,
@@ -131,25 +125,11 @@ function ShortcutListContainer() {
           },
         }}
       >
-        {sortedByFavorite.map((shortcut, index) => {
+        {sortedByFavorite.map((shortcut) => {
           const { id } = shortcut;
-          const count = index + 1;
-
-          if (isFeatureLimited && count > BASIC_SHORTCUT_LIMIT) return null;
 
           return <ShortcutListItem shortcut={shortcut} key={id} />;
         })}
-        {isFeatureLimited && sortedByFavorite.length > BASIC_SHORTCUT_LIMIT ? (
-          <Text>
-            <Anchor
-              target="_blank"
-              href="https://shortcut-wizard.vercel.app/pricing"
-            >
-              Upgrade
-            </Anchor>{' '}
-            to display all shortcuts
-          </Text>
-        ) : null}
       </List>
     </ScrollArea.Autosize>
   );
