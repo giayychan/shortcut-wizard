@@ -4,8 +4,9 @@
 * app icon
 * finish initial shortcut data - adhoc, test them?
 <!-- * infinity scroll -->
-* auth (Gia's working on it)
-* add software label
+* move them to db?
+* sync add/remove shortcuts vector in vector store
+* move langchain to web (security)
 
 Plan:
 
@@ -17,7 +18,6 @@ Side features:
 
 * Shortcut store to let users put shortcut templates for sell and users to buy and download
 * Add dictionary?
-* https://github.com/jsonnull/electron-trpc replace ipc
 
 DEBUG IN PROD:
 https://stackoverflow.com/a/56634497/11899667
@@ -30,3 +30,5 @@ If you don't see anything in the opened tab, focus on the window of your app.
 ref should be automatically remove after 15 mins
 more secure rules before launching your app
 show user disconnect will restrict functionality on the app
+
+/Users/yanyan/Library/Application Support/Electron/shortcuts

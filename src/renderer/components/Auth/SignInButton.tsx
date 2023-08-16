@@ -3,7 +3,7 @@ import { onValue, ref, remove } from 'firebase/database';
 import { v4 } from 'uuid';
 import { notifications } from '@mantine/notifications';
 import { signInWithCustomToken, signOut } from 'firebase/auth';
-import { auth, db } from 'main/firebase';
+import { auth, db } from 'main/configs/firebase';
 import useAuthStore from '../../stores/useAuthStore';
 import useGlobalLoadingStore from '../../stores/useGlobalLoadingStore';
 
@@ -14,7 +14,8 @@ function SignInButton() {
   const setVisible = useGlobalLoadingStore((state) => state.setVisible);
 
   const handleSignIn = async () => {
-    setVisible(true);
+    // setVisible(true);
+
     try {
       const redirectUri = await ipcRenderer.invoke('initiateLogin', undefined);
 

@@ -11,9 +11,9 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
+import { createIPCHandler } from 'electron-trpc/main';
 
 import { app, BrowserWindow, shell, globalShortcut } from 'electron';
-import { signInWithCustomToken } from 'firebase/auth';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -22,7 +22,8 @@ import { APP_HOTKEYS, WIDTH } from './constants';
 import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
-import { auth } from './firebase';
+import { appRouter as router } from './routers/_app';
+import runRealm from './configs/realm';
 
 class AppUpdater {
   constructor() {
@@ -86,6 +87,7 @@ const createWindow = async () => {
       // trafficLightPosition: { x: 10, y: 2 },
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
+        nodeIntegration: true,
         // devTools: true,
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
@@ -94,7 +96,11 @@ const createWindow = async () => {
     })
   );
 
+  process.stdin.resume();
+
   const window = mainWindow.getWindow();
+
+  createIPCHandler({ router, windows: [window!] });
 
   window!.loadURL(resolveHtmlPath('index.html'));
 
@@ -165,29 +171,11 @@ if (!gotTheLock) {
     }
   });
 
-  app.on('open-url', async (event, url) => {
+  app.on('open-url', async () => {
     const window = mainWindow.getWindow();
 
-    const pathnameWithParams = url.split('://')[1];
-
-    const pathname = pathnameWithParams.split('?')[0];
-    const authToken = url.split('authToken=')[1];
-
-    switch (pathname) {
-      case 'sign-in':
-        if (authToken) {
-          try {
-            await signInWithCustomToken(auth, authToken);
-          } catch (error: any) {
-            console.log(error.message);
-          }
-        }
-        window!.show();
-        mainWindow.setIsHidden(false);
-        break;
-      default:
-        break;
-    }
+    window!.show();
+    mainWindow.setIsHidden(false);
   });
 
   app
@@ -226,3 +214,7 @@ if (!gotTheLock) {
 }
 
 dbCalls();
+
+runRealm().catch((err) => {
+  console.error('Failed to open realm:', err);
+});

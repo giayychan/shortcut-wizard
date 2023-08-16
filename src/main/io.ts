@@ -33,6 +33,7 @@ const store = new Store();
 
 export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
 export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
+export const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
 export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
   'data',
   'shortcuts',
@@ -47,6 +48,8 @@ export const initializeUserData = async () => {
   if (!opened) {
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
+      await remove(USER_CUSTOM_ICONS_DIR);
+      await remove(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't remove user shortcuts directory");
       throw error;
@@ -55,6 +58,7 @@ export const initializeUserData = async () => {
     try {
       await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
       await ensureDir(USER_CUSTOM_ICONS_DIR);
+      await ensureDir(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't ensure user shortcuts directory exists");
       throw error;
@@ -108,7 +112,7 @@ export const getIconFile = async (icon: IconData) => {
     });
 
     const dataUri = createDataUri(res);
-    logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
+    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
 
     return { ...icon, dataUri };
   } catch (error) {

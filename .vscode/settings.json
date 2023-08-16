@@ -27,5 +27,16 @@
     "package-lock.json": true,
     "*.{css,sass,scss}.d.ts": true
   },
-  "cSpell.words": ["Autosize", "mantine", "tabler"]
+  "cSpell.words": [
+    "Autosize",
+    "mantine",
+    "tabler",
+    "HNSW",
+    "langchain",
+    "llms",
+    "openai",
+    "superjson",
+    "tabler",
+    "TRPC"
+  ]
 }
