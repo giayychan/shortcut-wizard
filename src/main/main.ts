@@ -41,32 +41,32 @@ if (process.env.NODE_ENV === 'production') {
 const isDebug =
   process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true';
 
-if (process.defaultApp) {
-  if (process.argv.length >= 2) {
-    app.setAsDefaultProtocolClient('shortcut-wizard', process.execPath, [
-      path.resolve(process.argv[1]),
-    ]);
-  }
-} else {
-  app.setAsDefaultProtocolClient('shortcut-wizard');
-}
+// if (process.defaultApp) {
+//   if (process.argv.length >= 2) {
+//     app.setAsDefaultProtocolClient('shortcut-wizard', process.execPath, [
+//       path.resolve(process.argv[1]),
+//     ]);
+//   }
+// } else {
+//   app.setAsDefaultProtocolClient('shortcut-wizard');
+// }
 
 // if (isDebug) {
 // require('electron-debug')();
 // }
 
-const installExtensions = async () => {
-  const installer = require('electron-devtools-installer');
-  const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-  const extensions = ['REACT_DEVELOPER_TOOLS'];
+// const installExtensions = async () => {
+//   const installer = require('electron-devtools-installer');
+//   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
+//   const extensions = ['REACT_DEVELOPER_TOOLS'];
 
-  return installer
-    .default(
-      extensions.map((name) => installer[name]),
-      forceDownload
-    )
-    .catch(console.log);
-};
+//   return installer
+//     .default(
+//       extensions.map((name) => installer[name]),
+//       forceDownload
+//     )
+//     .catch(console.log);
+// };
 
 const createWindow = async () => {
   // if (isDebug) {
@@ -92,6 +92,7 @@ const createWindow = async () => {
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
           : path.join(__dirname, '../../.erb/dll/preload.js'),
+        contextIsolation: true,
       },
     })
   );
@@ -155,6 +156,26 @@ app.on('window-all-closed', () => {
     mainWindow.setIsHidden(false);
   }
 });
+
+// ipcMain.on('window:minimize', () => {
+//   // Now we can access the window variable
+//   window.minimize();
+// });
+
+// ipcMain.on('window:maximize', () => {
+//   // Now we can access the window variable
+//   window.maximize();
+// });
+
+// ipcMain.on('window:restore', () => {
+//   // Now we can access the window variable
+//   window.restore();
+// });
+
+// ipcMain.on('window:close', () => {
+//   // Now we can access the window variable
+//   window.close();
+// });
 
 const gotTheLock = app.requestSingleInstanceLock();
 

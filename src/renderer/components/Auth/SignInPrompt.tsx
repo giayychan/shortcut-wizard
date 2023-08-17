@@ -1,7 +1,7 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { Anchor, Button, TextInput } from '@mantine/core';
 import GOOGLE from '../../../../assets/google.svg';
-import LOGO from '../../../../assets/icon.png';
+import LOGO from '../../../../assets/wizardicontransparent.png';
 // import BrandLogo from '../common/BrandLogo';
 // import SignInButton from './SignInButton';
 
@@ -28,7 +28,7 @@ function SignInPrompt({ isDisplayed }: { isDisplayed: boolean }) {
 
   return (
     <div className="w-full h-96 flex flex-col items-center justify-center gap-6">
-      <img src={LOGO} alt="logo" width="50px" height="50px" />
+      <img src={LOGO} alt="logo" width="100px" height="100px" />
       <div className="flex flex-row gap-10">
         <TextInput
           label="Email"
