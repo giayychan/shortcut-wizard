@@ -69,7 +69,7 @@ function SignInButton() {
       Sign out
     </Button>
   ) : (
-    <Button color="indigo cursor-pointer" onClick={handleSignIn}>
+    <Button fullWidth color="indigo cursor-pointer" onClick={handleSignIn}>
       Sign in
     </Button>
   );
