@@ -1,34 +1,46 @@
 import Realm from 'realm';
 import { USER_REALM_DIR } from '../io';
+import { logInfo } from '../utils';
 
-// Define the schema for the user authentication collection
-const UserSchema = {
-  name: 'User',
-  properties: {
-    userId: 'string',
-    jwtToken: 'string',
-    createdAt: 'date',
-  },
-  primaryKey: 'userId', // Set the primary key to 'userId'
-};
+let realmApp: Realm.App | null = null;
 
-export async function loginRealm() {
-  const realmApp = new Realm.App({
+export function getRealmApp() {
+  if (!realmApp) {
+    throw Error('Realm app is not initialized');
+  }
+
+  return realmApp;
+}
+
+export function initializeRealmApp() {
+  realmApp = new Realm.App({
     id: 'shortcut-wizard-iagls',
     baseFilePath: USER_REALM_DIR,
+    app: {
+      name: 'Shortcut Wizard',
+      version: '1', // bundle id
+    },
   });
 
-  const credentials = Realm.Credentials.anonymous();
+  logInfo(
+    realmApp.currentUser?.id ? 'User is logged in' : 'User is not logged in'
+  );
+}
 
-  const user = await realmApp.logIn(credentials);
-  console.log({ USERID: user.id });
+export async function signInRealm(token: string) {
+  const app = getRealmApp();
+
+  const credentials = Realm.Credentials.jwt(token);
+  const user = await app.logIn(credentials);
+
+  logInfo('User logged in with id token');
+
   return user;
 }
 
-export async function storeUserAuthInfo(userId: string, jwtToken: string) {
-  const realm = await Realm.open({ schema: [UserSchema] });
-  realm.write(() => {
-    realm.create('ElectronUser', { userId, jwtToken, createdAt: new Date() });
-  });
-  realm.close();
+export async function signOut() {
+  const app = getRealmApp();
+
+  await app.currentUser?.logOut();
+  logInfo('User is logged out');
 }

@@ -1,6 +1,5 @@
 import { ipcMain, shell } from 'electron';
 import path from 'path';
-import isDev from 'electron-is-dev';
 import {
   fetchSoftwareShortcut,
   fetchSoftwareShortcuts,
@@ -56,14 +55,5 @@ export default function dbCalls() {
     const pagePath = path.join('file://', pageDirectory, 'index.html');
     shell.openExternal(pagePath);
     console.log({ pagePath });
-  });
-
-  ipcMain.handle('initiateLogin', () => {
-    // redirectUri should be where we host the shortcut wizard website
-    const redirectUri = `${
-      isDev ? 'http://localhost:3000' : 'https://shortcut-wizard.vercel.app'
-    }/auth/sign-in?electron_uuid=`;
-
-    return redirectUri;
   });
 }

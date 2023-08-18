@@ -1,9 +1,10 @@
 import { Anchor } from '@mantine/core';
+import { SHORTCUT_WIZARD_HREF } from 'main/constants';
 
 function BrandLogo() {
   return (
     <Anchor
-      href="https://shortcut-wizard.vercel.app"
+      href={SHORTCUT_WIZARD_HREF}
       target="_blank"
       size="xs"
       align="right"

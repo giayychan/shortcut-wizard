@@ -12,7 +12,7 @@
  */
 import path from 'path';
 import { createIPCHandler } from 'electron-trpc/main';
-
+import isDev from 'electron-is-dev';
 import { app, BrowserWindow, shell, globalShortcut } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
@@ -23,7 +23,8 @@ import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
-import { loginRealm } from './configs/realm';
+import { initializeRealmApp } from './configs/realm';
+import { authCaller } from './routers/auth';
 
 class AppUpdater {
   constructor() {
@@ -132,6 +133,8 @@ const createWindow = async () => {
   // Remove this if your app does not use auto updates
   // eslint-disable-next-line
   new AppUpdater();
+
+  return window;
 };
 
 /**
@@ -171,19 +174,28 @@ if (!gotTheLock) {
     }
   });
 
-  app.on('open-url', async () => {
+  app.on('open-url', async (_, href) => {
     const window = mainWindow.getWindow();
 
     window!.show();
     mainWindow.setIsHidden(false);
+
+    const urlObject = new URL(href);
+    const { host, searchParams } = urlObject;
+    const authToken = searchParams.get('authToken');
+
+    switch (host) {
+      case 'sign-in':
+        if (authToken) await authCaller.signInByToken({ token: authToken });
+        break;
+      default:
+        break;
+    }
   });
 
   app
     .whenReady()
     .then(async () => {
-      await loginRealm();
-      await initializeUserData();
-
       globalShortcut.register(APP_HOTKEYS.join('+'), () => {
         const window = mainWindow.getWindow();
         if (window) {
@@ -197,7 +209,16 @@ if (!gotTheLock) {
         }
       });
 
+      await initializeUserData();
+
+      initializeRealmApp();
+
       createWindow();
+
+      if (isDev) {
+        const authToken = '';
+        if (authToken) await authCaller.signInByToken({ token: authToken });
+      }
 
       app.on('activate', () => {
         // On macOS it's common to re-create a window in the app when the
