@@ -8,6 +8,22 @@ import type {
   InvokeReturnTypes,
 } from '../../@types';
 
+// const ipc = {
+//   'render': {
+//       // From render to main.
+//       'send': [
+//           'window:minimize',
+//           'window:maximize',
+//           'window:restore',
+//           'window:close'
+//       ],
+//       // From main to render.
+//       'receive': [],
+//       // From render to main and back again.
+//       'sendReceive': []
+//   }
+// };
+
 const electronHandler = {
   ipcRenderer: {
     invoke<T extends InvokeChannels>(
