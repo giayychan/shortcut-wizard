@@ -1,5 +1,6 @@
-import { ipcMain, shell } from 'electron';
-import path from 'path';
+import { ipcMain } from 'electron';
+import isDev from 'electron-is-dev';
+
 import {
   fetchSoftwareShortcut,
   fetchSoftwareShortcuts,
@@ -11,6 +12,7 @@ import {
   updateShortcutsBySoftwareKey,
   factoryReset,
 } from './io';
+import { getRealmUser, signInByToken } from './configs/realm';
 
 export default function dbCalls() {
   ipcMain.handle('fetchSoftwareShortcuts', fetchSoftwareShortcuts);
@@ -49,11 +51,27 @@ export default function dbCalls() {
 
   ipcMain.handle('factoryReset', factoryReset);
 
-  // Handle window controls via IPC
-  ipcMain.on('shell:open', () => {
-    const pageDirectory = __dirname.replace('app.asar', 'app.asar.unpacked');
-    const pagePath = path.join('file://', pageDirectory, 'index.html');
-    shell.openExternal(pagePath);
-    console.log({ pagePath });
+  // // Handle window controls via IPC
+  // ipcMain.on('shell:open', () => {
+  //   const pageDirectory = __dirname.replace('app.asar', 'app.asar.unpacked');
+  //   const pagePath = path.join('file://', pageDirectory, 'index.html');
+  //   shell.openExternal(pagePath);
+  //   console.log({ pagePath });
+  // });
+
+  ipcMain.on('authChanged', async (event) => {
+    // for dev only since electron deep link is not working during development mode. copy the authToken from the browser console and paste it here to login
+    if (isDev) {
+      const authToken = '';
+      if (authToken) await signInByToken(authToken);
+    }
+
+    const user = getRealmUser();
+
+    if (user) {
+      event.reply('authChanged', JSON.stringify(user?.profile));
+    } else {
+      event.reply('authChanged', null);
+    }
   });
 }

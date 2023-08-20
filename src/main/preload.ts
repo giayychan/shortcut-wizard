@@ -1,6 +1,6 @@
 // Disable no-unused-vars, broken for spread args
 /* eslint no-unused-vars: off */
-import { contextBridge, ipcRenderer } from 'electron';
+import { IpcRendererEvent, contextBridge, ipcRenderer } from 'electron';
 import { exposeElectronTRPC } from 'electron-trpc/main';
 import type {
   InvokeArgumentTypes,
@@ -8,24 +8,22 @@ import type {
   InvokeReturnTypes,
 } from '../../@types';
 
-// const ipc = {
-//   'render': {
-//       // From render to main.
-//       'send': [
-//           'window:minimize',
-//           'window:maximize',
-//           'window:restore',
-//           'window:close'
-//       ],
-//       // From main to render.
-//       'receive': [],
-//       // From render to main and back again.
-//       'sendReceive': []
-//   }
-// };
+export type Channels = 'authChanged' | 'loaded';
 
 const electronHandler = {
   ipcRenderer: {
+    sendMessage(channel: Channels) {
+      ipcRenderer.send(channel);
+    },
+    on(channel: Channels, func: (...args: unknown[]) => void) {
+      const subscription = (_event: IpcRendererEvent, ...args: unknown[]) =>
+        func(...args);
+      ipcRenderer.on(channel, subscription);
+
+      return () => {
+        ipcRenderer.removeListener(channel, subscription);
+      };
+    },
     invoke<T extends InvokeChannels>(
       channel: T,
       ...args: [InvokeArgumentTypes[T]]

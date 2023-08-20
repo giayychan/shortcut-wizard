@@ -1,4 +1,4 @@
-import LOGO from '../../../../assets/icon.png';
+import LOGO from '../../../../assets/borderlesslogo.png';
 import SignInButton from './SignInButton';
 
 function SignInPrompt({ isDisplayed }: { isDisplayed: boolean }) {

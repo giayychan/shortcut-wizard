@@ -12,7 +12,6 @@
  */
 import path from 'path';
 import { createIPCHandler } from 'electron-trpc/main';
-import isDev from 'electron-is-dev';
 import { app, BrowserWindow, shell, globalShortcut } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
@@ -23,8 +22,7 @@ import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
-import { initializeRealmApp } from './configs/realm';
-import { authCaller } from './routers/auth';
+import { initializeRealmApp, signInByToken } from './configs/realm';
 
 class AppUpdater {
   constructor() {
@@ -42,18 +40,18 @@ if (process.env.NODE_ENV === 'production') {
 const isDebug =
   process.env.NODE_ENV === 'development' || process.env.DEBUG_PROD === 'true';
 
-// if (process.defaultApp) {
-//   if (process.argv.length >= 2) {
-//     app.setAsDefaultProtocolClient('shortcut-wizard', process.execPath, [
-//       path.resolve(process.argv[1]),
-//     ]);
-//   }
-// } else {
-//   app.setAsDefaultProtocolClient('shortcut-wizard');
-// }
+if (process.defaultApp) {
+  if (process.argv.length >= 2) {
+    app.setAsDefaultProtocolClient('shortcut-wizard', process.execPath, [
+      path.resolve(process.argv[1]),
+    ]);
+  }
+} else {
+  app.setAsDefaultProtocolClient('shortcut-wizard');
+}
 
 // if (isDebug) {
-// require('electron-debug')();
+//   require('electron-debug')();
 // }
 
 // const installExtensions = async () => {
@@ -70,9 +68,9 @@ const isDebug =
 // };
 
 const createWindow = async () => {
-  // if (isDebug) {
-  //   await installExtensions();
-  // }
+  if (isDebug) {
+    // await installExtensions();
+  }
 
   mainWindow.setWindow(
     new BrowserWindow({
@@ -84,16 +82,12 @@ const createWindow = async () => {
       hasShadow: true,
       transparent: true,
       frame: false,
-      // titleBarStyle: 'hidden',
-      // trafficLightPosition: { x: 10, y: 2 },
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
-        nodeIntegration: true,
         // devTools: true,
         preload: app.isPackaged
           ? path.join(__dirname, 'preload.js')
           : path.join(__dirname, '../../.erb/dll/preload.js'),
-        contextIsolation: true,
       },
     })
   );
@@ -160,26 +154,6 @@ app.on('window-all-closed', () => {
   }
 });
 
-// ipcMain.on('window:minimize', () => {
-//   // Now we can access the window variable
-//   window.minimize();
-// });
-
-// ipcMain.on('window:maximize', () => {
-//   // Now we can access the window variable
-//   window.maximize();
-// });
-
-// ipcMain.on('window:restore', () => {
-//   // Now we can access the window variable
-//   window.restore();
-// });
-
-// ipcMain.on('window:close', () => {
-//   // Now we can access the window variable
-//   window.close();
-// });
-
 const gotTheLock = app.requestSingleInstanceLock();
 
 if (!gotTheLock) {
@@ -197,6 +171,7 @@ if (!gotTheLock) {
 
   app.on('open-url', async (_, href) => {
     const window = mainWindow.getWindow();
+    window!.webContents.send('loaded', false);
 
     window!.show();
     mainWindow.setIsHidden(false);
@@ -207,7 +182,8 @@ if (!gotTheLock) {
 
     switch (host) {
       case 'sign-in':
-        if (authToken) await authCaller.signInByToken({ token: authToken });
+        if (authToken) await signInByToken(authToken);
+        window!.webContents.send('loaded', true);
         break;
       default:
         break;
@@ -232,14 +208,9 @@ if (!gotTheLock) {
 
       await initializeUserData();
 
-      initializeRealmApp();
-
       createWindow();
 
-      if (isDev) {
-        const authToken = '';
-        if (authToken) await authCaller.signInByToken({ token: authToken });
-      }
+      await initializeRealmApp();
 
       app.on('activate', () => {
         // On macOS it's common to re-create a window in the app when the

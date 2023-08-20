@@ -4,7 +4,8 @@ import { useResizeObserver } from '@mantine/hooks';
 
 import SignInPrompt from 'renderer/components/Auth/SignInPrompt';
 import useUser from 'renderer/hooks/useUser';
-import useGlobalLoadingStore from '../stores/useGlobalLoadingStore';
+import useLoaded from '../hooks/useLoaded';
+
 import trpcReact from '../utils/trpc';
 import useAppHeightStore from '../stores/useAppHeightStore';
 import TitleBar from '../components/TitleBar';
@@ -20,8 +21,8 @@ function Layout({ children }: { children: ReactNode }) {
     setHeight(rect.height, { update: true }, mutation.mutate);
   }, [mutation.mutate, rect.height, setHeight]);
 
-  const visible = useGlobalLoadingStore((state) => state.visible);
   const user = useUser();
+  const visible = useLoaded();
 
   return (
     <Paper radius="md" ref={ref}>

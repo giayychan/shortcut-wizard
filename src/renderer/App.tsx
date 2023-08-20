@@ -21,7 +21,7 @@ function Main() {
   );
 }
 
-export default function sApp() {
+export default function App() {
   return (
     <Router>
       <Routes>

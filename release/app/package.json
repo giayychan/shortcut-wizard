@@ -13,6 +13,6 @@
     "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
   },
   "dependencies": {
-    "realm": "^11.10.2"
+    "realm": "^12.0.0"
   }
 }
