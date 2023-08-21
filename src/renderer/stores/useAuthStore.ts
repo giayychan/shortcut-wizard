@@ -5,6 +5,9 @@ import { onValue, ref } from 'firebase/database';
 
 import { AuthState } from '../../../@types';
 import { notifyClientError } from '../utils';
+import useGlobalLoadingStore from './useGlobalLoadingStore';
+
+const { visible, setVisible } = useGlobalLoadingStore.getState();
 
 const useAuthStore = create(
   subscribeWithSelector<AuthState>((set) => ({
@@ -25,6 +28,10 @@ const useAuthStore = create(
                 ...user,
               },
             });
+
+            if (visible) {
+              setVisible(false);
+            }
           },
           (err) => {
             notifyClientError(err.message);
@@ -32,6 +39,9 @@ const useAuthStore = create(
         );
       } else {
         set({ user });
+        if (visible) {
+          setVisible(false);
+        }
       }
     },
   }))

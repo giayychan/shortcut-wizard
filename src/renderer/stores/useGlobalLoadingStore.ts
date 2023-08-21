@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { GlobalLoadingState } from '../../../@types';
 
 const useGlobalLoadingStore = create<GlobalLoadingState, []>((set) => ({
-  visible: false,
+  visible: true,
   setVisible: (visible) => {
     set({ visible });
   },

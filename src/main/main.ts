@@ -80,7 +80,7 @@ const createWindow = async () => {
       movable: true,
       hasShadow: true,
       transparent: true,
-      frame: false,
+      titleBarStyle: 'hidden',
       icon: getAssetPath('assets/icons/icon.ico'),
       webPreferences: {
         // devTools: true,
