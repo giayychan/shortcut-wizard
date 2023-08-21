@@ -21,7 +21,7 @@ function Layout({ children }: { children: ReactNode }) {
   }, [mutation.mutate, rect.height, setHeight]);
 
   const user = useUser();
-  const visible = useGlobalLoadingStore((state) => state.visible);
+  const visible = useGlobalLoadingStore((state) => state.loading);
 
   return (
     <Paper radius="md" ref={ref}>

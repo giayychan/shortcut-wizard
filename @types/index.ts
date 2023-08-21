@@ -132,6 +132,11 @@ export type AppHeightState = {
   ) => void;
 };
 
+export type ConnectedState = {
+  connected: boolean;
+  setConnected: (connected: boolean) => void;
+};
+
 export type PlanType = 'basic' | 'efficient' | 'pro';
 export type PlanInterval = 'monthly' | 'yearly';
 
@@ -163,6 +168,6 @@ export type FuseSearchState = {
 };
 
 export type GlobalLoadingState = {
-  visible: boolean;
-  setVisible: (visible?: boolean) => void;
+  loading: boolean;
+  setLoading: (loading?: boolean) => void;
 };

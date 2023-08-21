@@ -7,7 +7,7 @@ import { AuthState } from '../../../@types';
 import { notifyClientError } from '../utils';
 import useGlobalLoadingStore from './useGlobalLoadingStore';
 
-const { visible, setVisible } = useGlobalLoadingStore.getState();
+const { loading, setLoading } = useGlobalLoadingStore.getState();
 
 const useAuthStore = create(
   subscribeWithSelector<AuthState>((set) => ({
@@ -26,11 +26,14 @@ const useAuthStore = create(
             set({
               user: {
                 ...user,
+                // plan_type: userSnapshot.plan_type,
+                // plan_interval: userSnapshot.plan_interval,
+                // stripe_id: userSnapshot.stripe_id,
               },
             });
 
-            if (visible) {
-              setVisible(false);
+            if (loading) {
+              setLoading(false);
             }
           },
           (err) => {
@@ -39,8 +42,8 @@ const useAuthStore = create(
         );
       } else {
         set({ user });
-        if (visible) {
-          setVisible(false);
+        if (loading) {
+          setLoading(false);
         }
       }
     },
