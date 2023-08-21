@@ -11,6 +11,7 @@ import SignInButton from '../Auth/SignInButton';
 import FactoryResetButton from './FactoryResetButton';
 import RemoveSoftwareButton from '../RemoveSoftware/Button';
 import AddSoftwareButton from '../AddSoftware/Button';
+import useAuthStore from '../../stores/useAuthStore';
 
 function SettingsModal({
   innerProps,
@@ -23,28 +24,32 @@ function SettingsModal({
 
   const [, toggle] = useToggle();
   const [value, setValue] = useState('react');
+  const user = useAuthStore((state) => state.user);
 
   return (
     <>
       {/* <LoadingOverlay visible={visible} overlayBlur={2} /> */}
-      <form className="mx-5 gap-5 flex flex-col justify-center">
-        <fieldset className="p-5 border rounded-lg gap-5 flex flex-wrap flex-col justify-around">
+      <form className="flex flex-col justify-center gap-5 mx-5">
+        <fieldset className="flex flex-col flex-wrap justify-around gap-5 p-5 border rounded-lg">
           <legend className="px-1 text-lg">Software/Shortcut Settings</legend>
-          <div className="gap-5 flex">
+          <div className="flex gap-5">
             <AddShortcutButton />
             <RemoveShortcutButton />
           </div>
-          <div className="gap-5 flex">
+          <div className="flex gap-5">
             <AddSoftwareButton />
             <RemoveSoftwareButton />
           </div>
         </fieldset>
-        <fieldset className="p-5 border rounded-lg flex flex-col gap-5">
+        <fieldset className="flex flex-col gap-5 p-5 border rounded-lg">
           <legend className="px-1 text-lg">Account Information</legend>
           <SignInButton />
-          <Text size="xl">Current pricing plan: </Text>
+          <Text size="xl">Current pricing plan: {user?.plan?.type}</Text>
+          <Text size="xl">
+            Current pricing interval: {user?.plan?.interval}
+          </Text>
         </fieldset>
-        <fieldset className="p-5 border rounded-lg flex flex-col gap-5">
+        <fieldset className="flex flex-col gap-5 p-5 border rounded-lg">
           <legend className="px-1 text-lg">Global Settings</legend>
           <div className="flex flex-row items-center justify-between">
             <Text size="xl">Operating System / Keyboard layout: </Text>

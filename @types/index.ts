@@ -1,8 +1,8 @@
 import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
 import { modals } from '@mantine/modals';
+import { User } from 'firebase/auth';
 import Fuse from 'fuse.js';
-import { User } from 'realm';
 
 declare module '@mantine/modals' {
   export interface MantineModalsOverride {
@@ -135,6 +135,7 @@ export type AppHeightState = {
 export type PlanType = 'basic' | 'efficient' | 'pro';
 export type PlanInterval = 'monthly' | 'yearly';
 
+// todo: fix type
 export type AuthState = {
   user: User | null;
   setUser: (user?: User | null) => void;

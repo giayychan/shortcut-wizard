@@ -1,5 +1,5 @@
 import { Group } from '@mantine/core';
-import mapArrayWithId from '../../utils';
+import { mapArrayWithId } from '../../utils';
 import Hotkey from './ShortcutHotkey';
 
 function Hotkeys({ hotkeys }: { hotkeys: string[][] }) {

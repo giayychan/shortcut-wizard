@@ -1,4 +1,6 @@
-const mapArrayWithId = (source: any[]): any[] => {
+import { notifications } from '@mantine/notifications';
+
+export const mapArrayWithId = (source: any[]): any[] => {
   if (!source) return source;
   if (!Array.isArray(source)) return source;
 
@@ -7,4 +9,19 @@ const mapArrayWithId = (source: any[]): any[] => {
     value: mapArrayWithId(value),
   }));
 };
-export default mapArrayWithId;
+
+export const notifyClientError = (message: string) => {
+  if (!message) return;
+  notifications.show({
+    message,
+    color: 'red',
+  });
+};
+
+export const notifyClientInfo = (message: string) => {
+  if (!message) return;
+  notifications.show({
+    message,
+    color: 'blue',
+  });
+};

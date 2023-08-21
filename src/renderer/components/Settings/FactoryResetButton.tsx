@@ -1,9 +1,9 @@
 import { SetStateAction, useState } from 'react';
 import { Button } from '@mantine/core';
-import { notifications } from '@mantine/notifications';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useFuseSearchStore from '../../stores/useFuseSearch';
+import { notifyClientError } from '../../utils';
 
 function FactoryResetButton({
   toggle,
@@ -36,10 +36,7 @@ function FactoryResetButton({
       toggle(false);
       setConfirmed(false);
     } catch (error: any) {
-      notifications.show({
-        message: `Error when factory resetting: ${error.message}`,
-        color: 'red',
-      });
+      notifyClientError(`Error when factory resetting: ${error.message}`);
     }
   };
 

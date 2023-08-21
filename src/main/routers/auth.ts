@@ -1,20 +1,28 @@
 import isDev from 'electron-is-dev';
 import { z } from 'zod';
 
-import { signOut } from '../configs/realm';
 import { router, publicProcedure } from '../configs/trpc';
 import { SHORTCUT_WIZARD_HREF } from '../constants';
 
 const authRouter = router({
   getAuthUri: publicProcedure
+    .input(
+      z.object({
+        uuid: z.string(),
+      })
+    )
     .output(
       z.object({
         authUri: z.string(),
       })
     )
-    .mutation(async () => {
+    .mutation(async (opts) => {
+      const {
+        input: { uuid },
+      } = opts;
+
       const url = new URL(
-        `${SHORTCUT_WIZARD_HREF}/auth/sign-in?fromElectron=true`
+        `${SHORTCUT_WIZARD_HREF}/auth/sign-in?electronUuid=${uuid}`
       );
 
       if (isDev) {
@@ -24,14 +32,6 @@ const authRouter = router({
 
       return { authUri: url.toString() };
     }),
-  signOut: publicProcedure.mutation(async () => {
-    try {
-      await signOut();
-    } catch (error: any) {
-      console.log(error.message);
-      throw Error('Sign out error');
-    }
-  }),
 });
 
 export default authRouter;

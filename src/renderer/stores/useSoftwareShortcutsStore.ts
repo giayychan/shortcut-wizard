@@ -1,8 +1,8 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
-import { notifications } from '@mantine/notifications';
 import { SoftwareShortcutsState } from '../../../@types';
 import useSelectedShortcutsStore from './useSelectedShortcutsStore';
+import { notifyClientError } from '../utils';
 
 const defaultState = {
   softwareShortcuts: {},
@@ -23,10 +23,7 @@ const useSoftwareShortcutsStore = create(
 
         set({ softwareShortcuts });
       } catch (error: any) {
-        notifications.show({
-          message: `fetchSoftwareShortcuts: ${error.message}`,
-          color: 'red',
-        });
+        notifyClientError(`fetchSoftwareShortcuts: ${error.message}`);
       }
     },
 

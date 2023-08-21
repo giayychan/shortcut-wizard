@@ -12,7 +12,5 @@
     "postinstall": "npm run rebuild && npm run link-modules",
     "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
   },
-  "dependencies": {
-    "realm": "^12.0.0"
-  }
+  "dependencies": {}
 }

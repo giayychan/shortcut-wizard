@@ -1,14 +1,12 @@
 import { ReactNode, useEffect } from 'react';
-import { Flex, Paper, LoadingOverlay } from '@mantine/core';
+import { Flex, Paper } from '@mantine/core';
 import { useResizeObserver } from '@mantine/hooks';
 
 import SignInPrompt from 'renderer/components/Auth/SignInPrompt';
 import useUser from 'renderer/hooks/useUser';
-import useLoaded from '../hooks/useLoaded';
 
 import trpcReact from '../utils/trpc';
 import useAppHeightStore from '../stores/useAppHeightStore';
-import TitleBar from '../components/TitleBar';
 
 function Layout({ children }: { children: ReactNode }) {
   const [ref, rect] = useResizeObserver();
@@ -22,12 +20,9 @@ function Layout({ children }: { children: ReactNode }) {
   }, [mutation.mutate, rect.height, setHeight]);
 
   const user = useUser();
-  const visible = useLoaded();
 
   return (
     <Paper radius="md" ref={ref}>
-      <LoadingOverlay visible={visible} overlayBlur={2} />
-      <TitleBar />
       <Flex p="lg" direction="column">
         {!user ? <SignInPrompt isDisplayed={!user} /> : children}
       </Flex>

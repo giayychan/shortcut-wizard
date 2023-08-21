@@ -24,7 +24,7 @@ import { nanoid } from 'nanoid';
 
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { EditShortcutFormValues, Shortcut } from '../../../../@types';
-import mapArrayWithId from '../../utils';
+import { mapArrayWithId } from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 

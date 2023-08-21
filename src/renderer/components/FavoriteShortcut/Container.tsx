@@ -1,8 +1,8 @@
 import { ActionIcon } from '@mantine/core';
-import { notifications } from '@mantine/notifications';
 import { IconStar } from '@tabler/icons-react';
 import { Shortcut } from '../../../../@types';
 import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
+import { notifyClientError } from '../../utils';
 
 type Props = { shortcut: Shortcut };
 
@@ -18,10 +18,7 @@ function Container({ shortcut }: Props) {
       const updatedShortcut = { ...shortcut, isFavorite: !isFavorite };
       await updateShortcutsBySoftwareKey(updatedShortcut);
     } catch (error: any) {
-      notifications.show({
-        message: `Error when favorite a shortcut: ${error.message}`,
-        color: 'red',
-      });
+      notifyClientError(`Error when favorite a shortcut: ${error.message}`);
     }
   };
 

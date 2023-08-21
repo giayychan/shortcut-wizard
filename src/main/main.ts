@@ -22,7 +22,6 @@ import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
-import { initializeRealmApp, signInByToken } from './configs/realm';
 
 class AppUpdater {
   constructor() {
@@ -74,11 +73,11 @@ const createWindow = async () => {
 
   mainWindow.setWindow(
     new BrowserWindow({
-      // type: 'panel',
       show: false,
       width: WIDTH,
       height: 0,
       resizable: process.env.NODE_ENV !== 'production',
+      movable: true,
       hasShadow: true,
       transparent: true,
       frame: false,
@@ -171,19 +170,15 @@ if (!gotTheLock) {
 
   app.on('open-url', async (_, href) => {
     const window = mainWindow.getWindow();
-    window!.webContents.send('loaded', false);
-
-    window!.show();
-    mainWindow.setIsHidden(false);
 
     const urlObject = new URL(href);
-    const { host, searchParams } = urlObject;
-    const authToken = searchParams.get('authToken');
+    const { host } = urlObject;
 
     switch (host) {
-      case 'sign-in':
-        if (authToken) await signInByToken(authToken);
-        window!.webContents.send('loaded', true);
+      case 'open':
+        window!.show();
+        mainWindow.setIsHidden(false);
+
         break;
       default:
         break;
@@ -209,8 +204,6 @@ if (!gotTheLock) {
       await initializeUserData();
 
       createWindow();
-
-      await initializeRealmApp();
 
       app.on('activate', () => {
         // On macOS it's common to re-create a window in the app when the
