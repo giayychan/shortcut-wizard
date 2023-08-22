@@ -1,5 +1,6 @@
 import path from 'path';
 import Store from 'electron-store';
+import { machineId } from 'node-machine-id';
 
 import {
   remove,
@@ -46,6 +47,12 @@ export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
 export const initializeUserData = async () => {
   const opened = store.get('opened');
+  const storeMachineId = store.get('machineId');
+
+  if (!storeMachineId) {
+    const id = await machineId();
+    store.set('machineId', id);
+  }
 
   if (!opened) {
     try {

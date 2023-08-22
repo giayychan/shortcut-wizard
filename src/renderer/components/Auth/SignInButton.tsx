@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { v4 } from 'uuid';
 import { onValue, ref, remove } from 'firebase/database';
 import { signInWithCustomToken, signOut } from 'firebase/auth';
 import { Button, Flex, Loader, Text } from '@mantine/core';
@@ -14,8 +13,9 @@ function SignInButton() {
   const user = useAuthStore((state) => state.user);
   const [signInLoading, setSignInLoading] = useState(false);
   const [signOutLoading, setSignOutLoading] = useState(false);
-  const [signInUnsubscribe, setSignInUnsubscribe] =
-    useState<() => Promise<void>>();
+  const [signInUnsubscribe, setSignInUnsubscribe] = useState<
+    () => Promise<void>
+  >(async () => {});
 
   const getAuthUri = trpcReact.auth.getAuthUri.useMutation();
 
@@ -23,13 +23,12 @@ function SignInButton() {
     setSignInLoading(true);
 
     try {
-      const uuid = v4();
-      const { authUri } = await getAuthUri.mutateAsync({ uuid });
+      const { authUri, id } = await getAuthUri.mutateAsync();
 
-      const oneTimeUuidDocRef = ref(db, `onetime-uuids/${uuid}`);
+      const oneTimeIdDocRef = ref(db, `onetime-ids/${id}`);
 
       const unsubscribeFirebaseDocListener = onValue(
-        oneTimeUuidDocRef,
+        oneTimeIdDocRef,
         async (snapshot) => {
           const authToken = snapshot.val();
 
@@ -39,22 +38,22 @@ function SignInButton() {
             } catch (error: any) {
               notifyClientError(`Sign in error: ${error.message}`);
             } finally {
-              await remove(oneTimeUuidDocRef);
+              await remove(oneTimeIdDocRef);
               unsubscribeFirebaseDocListener();
               setSignInLoading(false);
             }
           }
         },
         async (err) => {
-          console.log('error on listening onetime-uuids ', err);
-          await remove(oneTimeUuidDocRef);
+          notifyClientError(`Error on listening onetime-ids: ${err.message}`);
+          await remove(oneTimeIdDocRef);
           unsubscribeFirebaseDocListener();
           setSignInLoading(false);
         }
       );
 
       const unsubscribe = async () => {
-        await remove(oneTimeUuidDocRef);
+        await remove(oneTimeIdDocRef);
         unsubscribeFirebaseDocListener();
         setSignInLoading(false);
       };
@@ -82,10 +81,7 @@ function SignInButton() {
   };
 
   const handleCancelSignIn = async () => {
-    if (!signInUnsubscribe) {
-      setSignInLoading(false);
-      return;
-    }
+    setSignInLoading(false);
     await signInUnsubscribe();
   };
 

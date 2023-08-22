@@ -140,9 +140,22 @@ export type ConnectedState = {
 export type PlanType = 'basic' | 'efficient' | 'pro';
 export type PlanInterval = 'monthly' | 'yearly';
 
-// todo: fix type
+export type DbUserData = {
+  electronId: string;
+  plan: {
+    type: string;
+    interval: string;
+  };
+  trial: {
+    startDate: number | null;
+    endDate: number | null;
+  };
+  stripePaymentId?: string;
+};
+
 export type AuthState = {
-  user: User | null;
+  user: DbUserData | null;
+  unsubscribeUserChanged: () => void;
   setUser: (user?: User | null) => void;
 };
 
