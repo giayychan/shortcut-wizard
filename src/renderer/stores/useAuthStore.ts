@@ -1,56 +1,42 @@
 import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
-import { auth, db } from 'main/configs/firebase';
-import {
-  onChildChanged,
-  ref,
-  get as getRef,
-  DatabaseReference,
-} from 'firebase/database';
+import { onChildChanged } from 'firebase/database';
 import { signOut } from 'firebase/auth';
+import { auth } from 'main/configs/firebase';
 
-import { AuthState, DbUserData } from '../../../@types';
+import { AuthState } from '../../../@types';
 import { notifyClientError } from '../utils';
-import useGlobalLoadingStore from './useGlobalLoadingStore';
+import { getUserFromDB, getUserRef } from '../services/user';
 
-const { loading, setLoading } = useGlobalLoadingStore.getState();
-
-const getUserFromDB = async (userRef: DatabaseReference) => {
-  const userData = await getRef(userRef);
-
-  try {
-    if (!userData.exists()) {
-      await signOut(auth);
-      throw new Error('User not found in DB');
-    }
-
-    return userData.val() as DbUserData;
-  } catch (error: any) {
-    notifyClientError(`Retrieving user error from DB: ${error.message}`);
-    return null;
-  }
+const defaultAuthState = {
+  user: null,
+  unsubscribeUserChanged: () => {},
 };
 
-const useAuthStore = create(
-  subscribeWithSelector<AuthState>((set, get) => ({
-    user: null,
-    unsubscribeUserChanged: () => {},
+const useAuthStore = create<AuthState>()(
+  subscribeWithSelector((set, get) => ({
+    ...defaultAuthState,
+    loading: true,
+    setLoading: (isLoading) => set({ loading: isLoading }),
     setUser: async (user) => {
-      if (loading) {
-        setLoading(false);
-      }
-
       if (user) {
-        const userRef = ref(db, `users/${user.uid}`);
+        const dbUser = await getUserFromDB(user.uid);
+        set({ user: dbUser, loading: false });
 
-        const dbUser = await getUserFromDB(userRef);
-        set({ user: dbUser });
+        const userRef = getUserRef(user.uid);
 
         const unsubscribeUserChanged = onChildChanged(
           userRef,
           async () => {
-            const updatedUser = await getUserFromDB(userRef);
-            set({ user: updatedUser });
+            const updatedUser = await getUserFromDB(user.uid);
+
+            if (!updatedUser) {
+              set({ ...defaultAuthState });
+              unsubscribeUserChanged();
+              await signOut(auth);
+            } else {
+              set({ user: updatedUser });
+            }
           },
           (err) => {
             notifyClientError(err.message);
@@ -62,7 +48,8 @@ const useAuthStore = create(
       } else {
         const { unsubscribeUserChanged } = get();
         unsubscribeUserChanged();
-        set({ unsubscribeUserChanged: () => {}, user: null });
+
+        set({ ...defaultAuthState, loading: false });
       }
     },
   }))

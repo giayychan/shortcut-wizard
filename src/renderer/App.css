@@ -7,10 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  overflow: hidden;
-}
-
 .titlebar {
   -webkit-app-region: drag;
   -webkit-user-select: none;

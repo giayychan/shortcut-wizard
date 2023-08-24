@@ -133,7 +133,6 @@ function SoftwareListContainer() {
           }}
         />
       </ScrollArea>
-      {/* {!isSearchResultsShow && <SettingsMenu />} */}
       <SettingsButton />
     </Flex>
   );

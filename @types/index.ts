@@ -134,7 +134,8 @@ export type AppHeightState = {
 
 export type ConnectedState = {
   connected: boolean;
-  setConnected: (connected: boolean) => void;
+  loading: boolean;
+  onConnected: () => void;
 };
 
 export type PlanType = 'basic' | 'efficient' | 'pro';
@@ -154,6 +155,8 @@ export type DbUserData = {
 };
 
 export type AuthState = {
+  loading: boolean;
+  setLoading: (loading: boolean) => void;
   user: DbUserData | null;
   unsubscribeUserChanged: () => void;
   setUser: (user?: User | null) => void;

@@ -11,6 +11,7 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
+import isDev from 'electron-is-dev';
 import { createIPCHandler } from 'electron-trpc/main';
 import { app, BrowserWindow, shell, globalShortcut } from 'electron';
 import { autoUpdater } from 'electron-updater';
@@ -66,6 +67,20 @@ if (process.defaultApp) {
 //     .catch(console.log);
 // };
 
+const getType = () => {
+  let type;
+
+  if (process.platform === 'darwin') {
+    type = 'panel';
+  } else if (process.platform === 'win32') {
+    type = 'toolbar';
+  } else {
+    type = 'notification';
+  }
+
+  return type;
+};
+
 const createWindow = async () => {
   if (isDebug) {
     // await installExtensions();
@@ -73,15 +88,23 @@ const createWindow = async () => {
 
   mainWindow.setWindow(
     new BrowserWindow({
-      show: false,
+      type: getType(),
       width: WIDTH,
-      height: 0,
-      resizable: process.env.NODE_ENV !== 'production',
+      height: 100,
+      alwaysOnTop: true,
       movable: true,
       hasShadow: true,
-      transparent: true,
-      titleBarStyle: 'hidden',
+      show: true,
+      backgroundColor: '#141517',
+      resizable: isDev,
+      center: true,
+      title: 'Shortcut Wizard',
+      paintWhenInitiallyHidden: false,
+      frame: false,
       icon: getAssetPath('assets/icons/icon.ico'),
+      titleBarStyle: 'hidden',
+      titleBarOverlay: true,
+      trafficLightPosition: { x: 20, y: 15 },
       webPreferences: {
         // devTools: true,
         preload: app.isPackaged

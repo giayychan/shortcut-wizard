@@ -6,6 +6,7 @@ import ShortcutList from './components/ShortcutList/Container';
 import LayoutProvider from './layout/LayoutProvider';
 import Layout from './layout/Layout';
 import useFetchSoftwareShortcuts from './hooks/useFetchSoftwareShortcuts';
+import AuthProvider from './providers/AuthProvider';
 
 function Main() {
   useFetchSoftwareShortcuts();
@@ -13,9 +14,11 @@ function Main() {
   return (
     <LayoutProvider>
       <Layout>
-        <SearchShortcut />
-        <SoftwareList />
-        <ShortcutList />
+        <AuthProvider>
+          <SearchShortcut />
+          <SoftwareList />
+          <ShortcutList />
+        </AuthProvider>
       </Layout>
     </LayoutProvider>
   );
