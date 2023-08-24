@@ -5,7 +5,6 @@ import { BrowserWindow, app, globalShortcut } from 'electron';
 import chalk from 'chalk';
 import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
 import mainWindow from './mainWindow';
-import MenuBuilder from './menu';
 
 export function resolveHtmlPath(htmlFileName: string) {
   if (process.env.NODE_ENV === 'development') {
@@ -102,18 +101,19 @@ export const setMainBrowserWindow = () => {
     new BrowserWindow({
       type: getBrowserWindowType(),
       width: WIDTH,
+      minWidth: WIDTH,
       height: DEFAULT_HEIGHT,
       minHeight: DEFAULT_HEIGHT,
       alwaysOnTop: true,
       movable: true,
       hasShadow: true,
-      show: true,
+      show: false,
       backgroundColor: '#141517',
       resizable: true,
-      center: true,
       title: 'Shortcut Wizard',
-      paintWhenInitiallyHidden: false,
+      paintWhenInitiallyHidden: true,
       frame: false,
+      center: true,
       icon: getAssetPath('assets/icons/icon.ico'),
       titleBarStyle: 'hidden',
       titleBarOverlay: true,

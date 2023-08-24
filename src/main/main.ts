@@ -79,14 +79,14 @@ const createWindow = async () => {
   createIPCHandler({ router, windows: [window] });
   window.loadURL(resolveHtmlPath('index.html'));
 
-  // window.on('ready-to-show', () => {
-  //   if (process.env.START_MINIMIZED) {
-  //     window.minimize();
-  //   } else {
-  //     window.show();
-  //     // window.webContents.openDevTools();
-  //   }
-  // });
+  window.on('ready-to-show', () => {
+    if (process.env.START_MINIMIZED) {
+      window.minimize();
+    } else {
+      window.show();
+      // window.webContents.openDevTools();
+    }
+  });
 
   const menuBuilder = new MenuBuilder(window);
   menuBuilder.buildMenu();
