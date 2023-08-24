@@ -46,14 +46,14 @@ function SignInButton() {
         },
         async (err) => {
           notifyClientError(`Error on listening onetime-ids: ${err.message}`);
-          await remove(oneTimeIdDocRef);
+          if (user) await remove(oneTimeIdDocRef);
           unsubscribeFirebaseDocListener();
           setSignInLoading(false);
         }
       );
 
       const unsubscribe = async () => {
-        await remove(oneTimeIdDocRef);
+        if (user) await remove(oneTimeIdDocRef);
         unsubscribeFirebaseDocListener();
         setSignInLoading(false);
       };

@@ -113,6 +113,7 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
       icon={icon}
       limit={autoCompleteOptions.length}
       maxDropdownHeight={250}
+      autoFocus
     />
   );
 }
