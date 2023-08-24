@@ -155,13 +155,7 @@ export default class MenuBuilder {
       label: 'Help',
       submenu: [
         {
-          label: 'Learn More',
-          click() {
-            shell.openExternal('https://electronjs.org');
-          },
-        },
-        {
-          label: 'Documentation',
+          label: 'Tutorial',
           click() {
             shell.openExternal(
               'https://github.com/electron/electron/tree/main/docs#readme'
@@ -169,15 +163,15 @@ export default class MenuBuilder {
           },
         },
         {
-          label: 'Community Discussions',
+          label: 'Go to website',
           click() {
-            shell.openExternal('https://www.electronjs.org/community');
+            shell.openExternal('https://localhost:3000');
           },
         },
         {
-          label: 'Search Issues',
+          label: 'Community Discussions',
           click() {
-            shell.openExternal('https://github.com/electron/electron/issues');
+            shell.openExternal('https://www.electronjs.org/community');
           },
         },
       ],

@@ -1,5 +1,5 @@
 {
-  "description": "Simplify Your Workflow with Navishort Shortcut App",
+  "description": "Simplify Your Workflow with Shortcut Wizard",
   "keywords": [
     "electron",
     "boilerplate",
@@ -15,7 +15,7 @@
   "license": "UNLICENSED",
   "private": true,
   "author": {
-    "name": "Gia Chan",
+    "name": "",
     "email": "giayanny926@gmail.com"
   },
   "main": "./src/main/main.ts",
