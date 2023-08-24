@@ -18,10 +18,10 @@ function Layout({ children }: { children: ReactNode }) {
   return (
     <Paper ref={ref}>
       <Flex
-        bg="dark"
+        bg="dark.6"
         justify="center"
         align="center"
-        h={45}
+        h={35}
         className="titlebar"
         gap={10}
       >

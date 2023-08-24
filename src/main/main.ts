@@ -105,7 +105,7 @@ const createWindow = async () => {
       icon: getAssetPath('assets/icons/icon.ico'),
       titleBarStyle: 'hidden',
       titleBarOverlay: true,
-      trafficLightPosition: { x: 20, y: 15 },
+      trafficLightPosition: { x: 10, y: 10 },
       webPreferences: {
         // devTools: true,
         preload: app.isPackaged
