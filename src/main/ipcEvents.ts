@@ -2,7 +2,6 @@ import { ipcMain } from 'electron';
 
 import {
   fetchSoftwareShortcut,
-  fetchSoftwareShortcuts,
   addShortcutsBySoftwareKey,
   addSoftwareShortcut,
   removeShortcutsBySoftwareKey,
@@ -13,7 +12,6 @@ import {
 } from './io';
 
 export default function dbCalls() {
-  ipcMain.handle('fetchSoftwareShortcuts', fetchSoftwareShortcuts);
   ipcMain.handle(
     'fetchSoftwareAutoCompleteOptions',
     fetchSoftwareAutoCompleteOptions

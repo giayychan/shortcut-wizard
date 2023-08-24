@@ -1,9 +1,9 @@
 import { SetStateAction, useState } from 'react';
 import { Button } from '@mantine/core';
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import { notifyClientError } from '../../utils';
+import trpcReact from '../../utils/trpc';
 
 function FactoryResetButton({
   toggle,
@@ -11,9 +11,7 @@ function FactoryResetButton({
   toggle: (value?: SetStateAction<boolean> | undefined) => void;
 }) {
   const [confirmed, setConfirmed] = useState(false);
-  const fetchSoftwareShortcuts = useSoftwareShortcutsStore(
-    (state) => state.fetchSoftwareShortcuts
-  );
+  const utils = trpcReact.useContext();
 
   const setSelectedSoftwareShortcut = useSelectedShortcutsStore(
     (state) => state.setSelectedSoftwareShortcut
@@ -30,7 +28,7 @@ function FactoryResetButton({
       const { ipcRenderer } = window.electron;
       await ipcRenderer.invoke('factoryReset', undefined);
 
-      fetchSoftwareShortcuts();
+      await utils.software.all.refetch();
       setSelectedSoftwareShortcut(null);
       resetFuseSearch();
       toggle(false);

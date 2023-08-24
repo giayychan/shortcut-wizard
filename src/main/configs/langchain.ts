@@ -8,7 +8,7 @@ import { exists } from 'fs-extra';
 import path from 'path';
 
 import { mapSystemToReadable } from '../utils';
-import { USER_VECTOR_STORE_DIR, fetchSoftwareShortcuts } from '../io';
+import { USER_VECTOR_STORE_DIR } from '../io';
 
 // store them in a vector store
 // index the vector store
@@ -69,7 +69,7 @@ async function getVectorStore(docs: ShortcutDocument[]) {
 
 export async function loadInternalShortcuts() {
   // todo: use custom JSONLoader
-  const softwareShortcuts = await fetchSoftwareShortcuts();
+  const softwareShortcuts = {} as any;
 
   const flattenDocs = Object.keys(softwareShortcuts).reduce(
     (prev: ShortcutDocument[], curr: string) => {

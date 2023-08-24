@@ -9,7 +9,6 @@ import {
   copy,
   readJson,
   readFile,
-  statSync,
   writeJson,
 } from 'fs-extra';
 import { readdir } from 'fs/promises';
@@ -25,7 +24,6 @@ import type {
   IconData,
   Shortcut,
   SoftwareShortcut,
-  SoftwareShortcuts,
   AddSoftwareAutocompleteOption,
 } from '../../@types';
 import { AUTO_COMPLETE_CUSTOM_OPTION } from './constants';
@@ -187,34 +185,6 @@ export const fetchSoftwareAutoCompleteOptions = async () => {
     return filteredExistingSoftwaresAutoCompleteOptions;
   } catch (error: any) {
     logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
-    throw error;
-  }
-};
-
-export const fetchSoftwareShortcuts = async () => {
-  try {
-    const files = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
-
-    const softwareShortcuts: SoftwareShortcuts = {};
-
-    await Promise.all(
-      files.map(async (file) => {
-        if (path.extname(file).toLowerCase() === '.json') {
-          const filePath = getUserDataPath('shortcuts', file);
-          const data: SoftwareShortcut = await readJson(filePath);
-          const createdDate = statSync(filePath).birthtime.toISOString();
-
-          const icon = await getIconFile(data.software.icon);
-          data.software.icon = icon;
-          softwareShortcuts[data.software.key] = { ...data, createdDate };
-        }
-      })
-    );
-
-    logSuccess('fetched software shortcuts successfully');
-    return softwareShortcuts;
-  } catch (error) {
-    logError("Couldn't fetchSoftwareShortcuts:", error);
     throw error;
   }
 };

@@ -92,7 +92,7 @@ const softwareRouter = router({
 
       return softwareShortcuts;
     } catch (error) {
-      logError("Couldn't fetchSoftwareShortcuts:", error);
+      logError("Couldn't fetch all software shortcuts:", error);
       throw error;
     }
   }),

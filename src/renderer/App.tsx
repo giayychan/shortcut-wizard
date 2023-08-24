@@ -5,12 +5,9 @@ import SoftwareList from './components/SoftwareList/Container';
 import ShortcutList from './components/ShortcutList/Container';
 import LayoutProvider from './layout/LayoutProvider';
 import Layout from './layout/Layout';
-import useFetchSoftwareShortcuts from './hooks/useFetchSoftwareShortcuts';
 import AuthProvider from './providers/AuthProvider';
 
 function Main() {
-  useFetchSoftwareShortcuts();
-
   return (
     <LayoutProvider>
       <Layout>

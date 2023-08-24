@@ -6,7 +6,7 @@ import { useForm } from '@mantine/form';
 import { TextInput } from '@mantine/core';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import { FlattenShortcut, SearchShortcutFormValues } from '../../../../@types';
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
+import trpc from '../../utils/trpc';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -20,6 +20,9 @@ const options: Fuse.IFuseOptions<FlattenShortcut> = {
 };
 
 function SearchShortcutContainer() {
+  const utils = trpc.useContext();
+  const softwareShortcuts = utils.software.all.getData();
+
   const form = useForm<SearchShortcutFormValues>(FORM_DEFAULT_VALUES);
   const [setShowSearchResults, setResults, searchTerm, setSearchTerm] =
     useFuseSearchStore((state) => [
@@ -31,11 +34,8 @@ function SearchShortcutContainer() {
 
   const [debounced] = useDebouncedValue(searchTerm, 500);
 
-  const softwareShortcuts = useSoftwareShortcutsStore(
-    (state) => state.softwareShortcuts
-  );
-
   const flattenShortcutWithSoftwareDataArray = useMemo(() => {
+    if (!softwareShortcuts) return [];
     return Object.keys(softwareShortcuts).reduce(
       (prev: FlattenShortcut[], curr: string) => {
         const { software, shortcuts, createdDate } = softwareShortcuts[curr];

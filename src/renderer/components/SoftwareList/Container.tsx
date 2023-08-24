@@ -1,28 +1,39 @@
-import React, { useMemo, useCallback, useRef } from 'react';
-import { Flex, ScrollArea, SegmentedControl } from '@mantine/core';
+import { useRef } from 'react';
+import { Button, ScrollArea, SegmentedControl, Skeleton } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
+import { isEmpty } from 'lodash';
 
 import StyledSvg from '../common/StyledSvg';
-// import SettingsMenu from '../Settings/Container';
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
-import { SoftwareShortcut } from '../../../../@types';
+import { SoftwareShortcut, SoftwareShortcuts } from '../../../../@types';
 import useFuseSearchStore from '../../stores/useFuseSearch';
-import SettingsButton from '../Settings/Button';
+import trpcReact from '../../utils/trpc';
 
-function SoftwareListContainer() {
-  // const { data: softwareShortcuts } = trpcReact.software.all.useQuery();
-
-  const softwareShortcuts = useSoftwareShortcutsStore(
-    (state) => state.softwareShortcuts
-  );
-
+function SoftwareList({
+  softwareShortcuts,
+}: {
+  softwareShortcuts: SoftwareShortcuts;
+}) {
   const ref = useRef<HTMLDivElement>(null);
 
-  const [selected, setSelected] = useSelectedShortcutsStore((state) => [
-    state.selectedSoftwareShortcut,
-    state.setSelectedSoftwareShortcut,
-  ]);
+  const softwareList = Object.keys(softwareShortcuts);
+
+  const softwares = softwareList
+    .sort((a, b) => {
+      const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
+      const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
+      return createdDateA - createdDateB;
+    })
+    .map((softwareKey) => {
+      const { software } = softwareShortcuts[softwareKey];
+      const { key, icon } = software;
+      const { dataUri } = icon;
+
+      return {
+        value: key,
+        label: dataUri ? <StyledSvg src={dataUri} /> : null,
+      };
+    });
 
   const {
     isSearchResultsShow,
@@ -36,13 +47,35 @@ function SoftwareListContainer() {
     toggleSearchResults: state.toggleSearchResults,
   }));
 
-  const softwareList = useMemo(
-    () => Object.keys(softwareShortcuts),
-    [softwareShortcuts]
-  );
+  const [selected, setSelected] = useSelectedShortcutsStore((state) => [
+    state.selectedSoftwareShortcut,
+    state.setSelectedSoftwareShortcut,
+  ]);
 
-  const searchItem = useMemo(() => {
-    return isSearchResultsShow || searchTerm
+  const handleSelect = (
+    isSelected: boolean,
+    softwareShortcut: SoftwareShortcut
+  ) => {
+    setSelected(isSelected ? null : softwareShortcut);
+  };
+
+  const handleClick = (e: any) => {
+    const { value } = e.target;
+    if (value) {
+      const isSearch = value === 'search';
+      if (isSearch) {
+        handleSelect(false, softwareShortcuts[value]);
+        toggleSearchResults();
+      } else {
+        setShowSearchResults(false);
+        const isSelected = selected?.software.key === value;
+        handleSelect(isSelected, softwareShortcuts[value]);
+      }
+    }
+  };
+
+  const searchItem =
+    isSearchResultsShow || searchTerm
       ? [
           {
             value: 'search',
@@ -50,92 +83,45 @@ function SoftwareListContainer() {
           },
         ]
       : [];
-  }, [isSearchResultsShow, searchTerm]);
 
-  const softwares = useMemo(() => {
-    if (!softwareList?.length) return [];
-
-    return softwareList
-      .sort((a, b) => {
-        const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
-        const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
-        return createdDateA - createdDateB;
-      })
-      .map((softwareKey) => {
-        const { software } = softwareShortcuts[softwareKey];
-        const { key, icon } = software;
-        const { dataUri } = icon;
-
-        return {
-          value: key,
-          label: dataUri ? <StyledSvg src={dataUri} /> : null,
-        };
-      });
-  }, [softwareList, softwareShortcuts]);
-
-  const data = useMemo(
-    () => [...searchItem, ...softwares],
-    [searchItem, softwares]
-  );
-
-  const handleSelect = useCallback(
-    (isSelected: boolean, softwareShortcut: SoftwareShortcut) => {
-      setSelected(isSelected ? null : softwareShortcut);
-    },
-    [setSelected]
-  );
-
-  const handleClick = useCallback(
-    (e: any) => {
-      const { value } = e.target;
-      if (value) {
-        const isSearch = value === 'search';
-        if (isSearch) {
-          handleSelect(false, softwareShortcuts[value]);
-          toggleSearchResults();
-        } else {
-          setShowSearchResults(false);
-          const isSelected = selected?.software.key === value;
-          handleSelect(isSelected, softwareShortcuts[value]);
-        }
-      }
-    },
-    [
-      toggleSearchResults,
-      setShowSearchResults,
-      selected,
-      handleSelect,
-      softwareShortcuts,
-    ]
-  );
+  const data = [...searchItem, ...softwares];
 
   if (!data?.length) return null;
 
   return (
-    <Flex pos="relative" direction="row" gap="lg" align="center">
-      <ScrollArea type="always" scrollbarSize={6} offsetScrollbars>
-        <SegmentedControl
-          ref={ref}
-          fullWidth
-          transitionDuration={300}
-          transitionTimingFunction="linear"
-          onClick={handleClick}
-          value={
-            isSearchResultsShow && searchTerm
-              ? 'search'
-              : selected?.software.key || ''
-          }
-          data={data}
-          styles={{
-            control: {
-              borderColor: 'transparent !important',
-            },
-          }}
-        />
-      </ScrollArea>
-      <SettingsButton />
-    </Flex>
+    <ScrollArea type="always" scrollbarSize={6} offsetScrollbars>
+      <SegmentedControl
+        ref={ref}
+        fullWidth
+        transitionDuration={300}
+        transitionTimingFunction="linear"
+        onClick={handleClick}
+        value={
+          isSearchResultsShow && searchTerm
+            ? 'search'
+            : selected?.software.key || ''
+        }
+        data={data}
+        styles={{
+          control: {
+            borderColor: 'transparent !important',
+          },
+        }}
+      />
+    </ScrollArea>
   );
 }
 
-export default React.memo(SoftwareListContainer);
+function SoftwareListContainer() {
+  const { data: softwareShortcuts, isLoading } =
+    trpcReact.software.all.useQuery();
+
+  if (isLoading) return <Skeleton h={48} />;
+
+  if ((!isLoading && !softwareShortcuts) || isEmpty(softwareShortcuts))
+    return <Button>Add software shortcuts</Button>;
+
+  return <SoftwareList softwareShortcuts={softwareShortcuts} />;
+}
+
+export default SoftwareListContainer;

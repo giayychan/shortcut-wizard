@@ -1,8 +1,11 @@
 /* eslint import/prefer-default-export: off */
 import { URL } from 'url';
 import path from 'path';
-import { app } from 'electron';
+import { BrowserWindow, app, globalShortcut } from 'electron';
 import chalk from 'chalk';
+import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
+import mainWindow from './mainWindow';
+import MenuBuilder from './menu';
 
 export function resolveHtmlPath(htmlFileName: string) {
   if (process.env.NODE_ENV === 'development') {
@@ -59,4 +62,73 @@ export const mapSystemToReadable = (system: string) => {
     default:
       return system;
   }
+};
+
+export const registerGlobalOpenAppShortcut = () =>
+  globalShortcut.register(APP_HOTKEYS.join('+'), () => {
+    const window = mainWindow.getWindow();
+
+    if (!window) return;
+
+    if (mainWindow.getIsHidden()) {
+      window.show();
+      mainWindow.setIsHidden(false);
+    } else if (window.fullScreen) {
+      window.setFullScreen(false);
+      window.show();
+      mainWindow.setIsHidden(false);
+    } else {
+      window.hide();
+      mainWindow.setIsHidden(true);
+    }
+  });
+
+export const getBrowserWindowType = () => {
+  let type;
+
+  if (process.platform === 'darwin') {
+    type = 'panel';
+  } else if (process.platform === 'win32') {
+    type = 'toolbar';
+  } else {
+    type = 'notification';
+  }
+
+  return type;
+};
+
+export const setMainBrowserWindow = () => {
+  mainWindow.setWindow(
+    new BrowserWindow({
+      type: getBrowserWindowType(),
+      width: WIDTH,
+      height: DEFAULT_HEIGHT,
+      minHeight: DEFAULT_HEIGHT,
+      alwaysOnTop: true,
+      movable: true,
+      hasShadow: true,
+      show: true,
+      backgroundColor: '#141517',
+      resizable: true,
+      center: true,
+      title: 'Shortcut Wizard',
+      paintWhenInitiallyHidden: false,
+      frame: false,
+      icon: getAssetPath('assets/icons/icon.ico'),
+      titleBarStyle: 'hidden',
+      titleBarOverlay: true,
+      trafficLightPosition: { x: 10, y: 10 },
+      webPreferences: {
+        // devTools: true,
+        preload: app.isPackaged
+          ? path.join(__dirname, 'preload.js')
+          : path.join(__dirname, '../../.erb/dll/preload.js'),
+      },
+    })
+  );
+
+  const window = mainWindow.getWindow();
+  if (!window) throw Error('Something went wrong when creating window');
+
+  return window;
 };

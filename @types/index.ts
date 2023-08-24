@@ -80,7 +80,6 @@ export type StyledSvgProps = {
 
 export type SoftwareShortcutsState = {
   softwareShortcuts: SoftwareShortcuts;
-  fetchSoftwareShortcuts: () => Promise<void>;
 
   addSoftware: (newSoftware: SoftwareShortcut) => Promise<void>;
   removeSoftwares: (removedSoftwares: string[]) => Promise<void>;
@@ -96,7 +95,6 @@ export type OnChannels = 'update-auth-state';
 
 export type InvokeReturnTypes = {
   factoryReset: void;
-  fetchSoftwareShortcuts: SoftwareShortcuts;
   fetchSoftwareShortcut: SoftwareShortcut;
   fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
   addShortcutsBySoftwareKey: SoftwareShortcut;
@@ -108,7 +106,6 @@ export type InvokeReturnTypes = {
 
 export type InvokeArgumentTypes = {
   factoryReset: undefined;
-  fetchSoftwareShortcuts: undefined;
   fetchSoftwareAutoCompleteOptions: undefined;
   fetchSoftwareShortcut: [softwareKey: string];
   addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];

@@ -2,7 +2,6 @@ import { create } from 'zustand';
 import { subscribeWithSelector } from 'zustand/middleware';
 import { SoftwareShortcutsState } from '../../../@types';
 import useSelectedShortcutsStore from './useSelectedShortcutsStore';
-import { notifyClientError } from '../utils';
 
 const defaultState = {
   softwareShortcuts: {},
@@ -13,19 +12,6 @@ const { ipcRenderer } = window.electron;
 const useSoftwareShortcutsStore = create(
   subscribeWithSelector<SoftwareShortcutsState>((set, get) => ({
     ...defaultState,
-
-    fetchSoftwareShortcuts: async () => {
-      try {
-        const softwareShortcuts = await ipcRenderer.invoke(
-          'fetchSoftwareShortcuts',
-          undefined
-        );
-
-        set({ softwareShortcuts });
-      } catch (error: any) {
-        notifyClientError(`fetchSoftwareShortcuts: ${error.message}`);
-      }
-    },
 
     addSoftware: async (newSoftware) => {
       const { softwareShortcuts } = get();

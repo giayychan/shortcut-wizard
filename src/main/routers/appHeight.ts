@@ -18,7 +18,7 @@ const appHeightRouter = router({
       const mainWindow = appWindow.getWindow();
       if (mainWindow) {
         mainWindow.setSize(WIDTH, height, true);
-        console.log('height changed to', height);
+        console.log('height changed to: ', height);
       }
     }),
 });
