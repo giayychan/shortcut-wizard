@@ -100,12 +100,8 @@ function ShortcutListContainer() {
   );
 
   return (
-    <ScrollArea.Autosize
-      type="always"
-      scrollbarSize={6}
-      className="border border-green-500"
-    >
-      <Text pl={8} pb={8} weight={700}>
+    <ScrollArea.Autosize type="always" scrollbarSize={6}>
+      <Text pl={8} pb={8} weight={700} className="capitalize">
         {selectedSoftwareShortcut.software.key}
       </Text>
       <List
