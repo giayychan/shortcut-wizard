@@ -1,10 +1,9 @@
 {
   "name": "shortcut_wizard",
   "version": "4.6.0",
-  "description": "Simplify Your Workflow with Navishort Shortcut App",
+  "description": "Simplify Your Workflow with Shortcut Wizard",
   "author": {
-    "name": "Gia Chan",
-    "email": "giayanny926@gmail.com"
+    "name": ""
   },
   "main": "./dist/main/main.js",
   "scripts": {
