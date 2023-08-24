@@ -18,7 +18,7 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { getAssetPath, resolveHtmlPath } from './utils';
-import { APP_HOTKEYS, WIDTH } from './constants';
+import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
 import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
 import { initializeUserData } from './io';
@@ -90,7 +90,8 @@ const createWindow = async () => {
     new BrowserWindow({
       type: getType(),
       width: WIDTH,
-      height: 100,
+      height: DEFAULT_HEIGHT,
+      minHeight: DEFAULT_HEIGHT,
       alwaysOnTop: true,
       movable: true,
       hasShadow: true,

@@ -17,11 +17,18 @@ function Layout({ children }: { children: ReactNode }) {
 
   return (
     <Paper ref={ref}>
-      <Flex bg="dark" justify="center" h={45} className="titlebar">
-        <Text size={14} bg="red">
+      <Flex
+        bg="dark"
+        justify="center"
+        align="center"
+        h={45}
+        className="titlebar"
+        gap={10}
+      >
+        <Text size={15} fw={700}>
           Shortcut Wizard
         </Text>
-        {/* <StatusBar /> */}
+        <StatusBar />
       </Flex>
       <Flex direction="column" p="lg">
         {children}
