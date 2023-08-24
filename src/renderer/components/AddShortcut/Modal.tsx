@@ -177,6 +177,7 @@ function AddShortcutModal({
         placeholder="Description will be used in search"
         label="Description"
         mb="md"
+        size="md"
         withAsterisk
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('description')}
@@ -188,13 +189,15 @@ function AddShortcutModal({
         description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key & each hot key can contain 3 keys."
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('hotkeys')}
+        size="md"
       >
         <Flex gap="md" my="md">
           <Stack>
             <Button
               ref={clickOutsideRef}
               variant="outline"
-              size="xs"
+              color={isRecording && currentSet === 'first' ? 'red' : 'blue'}
+              size="sm"
               onClick={() => handleRecordButtonClick('first')}
               leftIcon={
                 <IconPlayerRecordFilled
@@ -219,7 +222,8 @@ function AddShortcutModal({
               ref={clickOutsideRef}
               disabled={!firstSetHotkey?.value?.length}
               variant="outline"
-              size="xs"
+              color={isRecording && currentSet === 'second' ? 'red' : 'blue'}
+              size="sm"
               onClick={() => handleRecordButtonClick('second')}
               leftIcon={
                 <IconPlayerRecordFilled
@@ -244,6 +248,7 @@ function AddShortcutModal({
 
       <Checkbox
         my="xl"
+        size="md"
         label="Favorite shortcut"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('isFavorite', { type: 'checkbox' })}
@@ -254,7 +259,7 @@ function AddShortcutModal({
           Clear
         </Button>
         <Button variant="filled" type="submit">
-          {isUpdateShortcut ? 'Edit' : 'Add'}
+          {isUpdateShortcut ? 'Save' : 'Add'}
         </Button>
 
         <Button variant="light" onClick={handleCancel}>
