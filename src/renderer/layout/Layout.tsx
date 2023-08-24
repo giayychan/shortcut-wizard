@@ -1,9 +1,10 @@
 import { ReactNode, useEffect } from 'react';
-import { Flex, Paper, Text } from '@mantine/core';
+import { Flex, Paper, Text, Image } from '@mantine/core';
 import { useResizeObserver } from '@mantine/hooks';
 import useAppHeightStore from '../stores/useAppHeightStore';
 import trpcReact from '../utils/trpc';
 import StatusBar from '../components/StatusBar/Container';
+import LOGO from '../../../assets/borderlesslogo.png';
 
 function Layout({ children }: { children: ReactNode }) {
   const [ref, rect] = useResizeObserver();
@@ -25,12 +26,15 @@ function Layout({ children }: { children: ReactNode }) {
         className="titlebar"
         gap={10}
       >
-        <Text size={15} fw={700}>
-          Shortcut Wizard
-        </Text>
+        <Flex justify="center">
+          <Image maw={20} src={LOGO} alt="Brand logo" pt={3} mr={8} />
+          <Text size={15} fw={700}>
+            Shortcut Wizard
+          </Text>
+        </Flex>
         <StatusBar />
       </Flex>
-      <Flex direction="column" p="lg">
+      <Flex direction="column" p="md">
         {children}
       </Flex>
     </Paper>

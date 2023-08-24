@@ -16,10 +16,9 @@ function SettingsButton() {
       }}
       title="Settings"
       color="gray.5"
+      ml={13}
     >
-      <div className="mb-2">
-        <IconSettings size="lg" />
-      </div>
+      <IconSettings size="lg" />
     </ActionIcon>
   );
 }
