@@ -17,23 +17,21 @@ function SettingContainer() {
   const [opened, toggle] = useToggle();
 
   return (
-    <div className="flex">
-      <SettingsMenu toggle={toggle} opened={opened}>
-        {selectedSoftwareShortcut ? (
-          <div className="border border-red-500 w-full h-full bg-transparent">
-            <AddShortcutButton />
-            <RemoveShortcutButton />
-          </div>
-        ) : (
-          <div className="border border-blue-500 p-2 w-full h-full bg-transparent relative top-0 left-0">
-            <AddSoftwareButton />
-            <RemoveSoftwareButton />
-            <FactoryResetButton toggle={toggle} />
-            <SignInButton />
-          </div>
-        )}
-      </SettingsMenu>
-    </div>
+    <SettingsMenu toggle={toggle} opened={opened}>
+      {selectedSoftwareShortcut ? (
+        <div className="w-full h-full bg-transparent border border-red-500">
+          <AddShortcutButton />
+          <RemoveShortcutButton />
+        </div>
+      ) : (
+        <div className="relative top-0 left-0 w-full h-full p-2 bg-transparent border border-blue-500">
+          <AddSoftwareButton />
+          <RemoveSoftwareButton />
+          <FactoryResetButton toggle={toggle} />
+          <SignInButton />
+        </div>
+      )}
+    </SettingsMenu>
   );
 }
 

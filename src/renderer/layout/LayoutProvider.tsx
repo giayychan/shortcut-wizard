@@ -21,6 +21,7 @@ function LayoutProvider({ children }: { children: ReactNode }) {
         <ModalsProvider
           modals={modals}
           modalProps={{
+            styles: { header: { paddingTop: '45px' } },
             fullScreen: true,
             keepMounted: false,
             centered: true,
