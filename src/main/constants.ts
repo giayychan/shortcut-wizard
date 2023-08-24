@@ -1,7 +1,7 @@
 import { AddSoftwareAutocompleteOption } from '../../@types';
 
 export const WIDTH = 680;
-export const DEFAULT_HEIGHT = 185;
+export const DEFAULT_HEIGHT = 167;
 export const MAX_HEIGHT = 480;
 export const SHORTCUT_WIZARD_HREF = 'https://shortcut-wizard.vercel.app';
 

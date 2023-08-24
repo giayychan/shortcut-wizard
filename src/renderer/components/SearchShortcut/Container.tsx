@@ -82,7 +82,7 @@ function SearchShortcutContainer() {
   }, [searchTerm, handleChange]);
 
   return (
-    <form onSubmit={form.onSubmit(handleSubmit)}>
+    <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1">
       <TextInput
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
@@ -90,7 +90,6 @@ function SearchShortcutContainer() {
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.currentTarget.value)}
         placeholder="Search shortcut description or software name"
-        mb="md"
       />
     </form>
   );
