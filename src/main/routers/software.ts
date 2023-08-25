@@ -3,9 +3,25 @@ import path from 'path';
 import { readJson, readdir, statSync } from 'fs-extra';
 
 import { router, publicProcedure } from '../configs/trpc';
-import { getUserDataPath, logError, logSuccess } from '../utils';
-import { USER_SOFTWARE_SHORTCUTS_DIR, getIconFile } from '../io';
-import { SoftwareShortcut, SoftwareShortcuts } from '../../../@types';
+import { getAssetPath, getUserDataPath, logError, logSuccess } from '../utils';
+import { getIconFile } from '../io';
+import {
+  AddSoftwareAutocompleteOption,
+  SoftwareShortcut,
+  SoftwareShortcuts,
+} from '../../../@types';
+import { AUTO_COMPLETE_CUSTOM_OPTION } from '../constants';
+
+const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
+const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
+const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
+const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
+  'data',
+  'shortcuts',
+  process.platform
+);
+
+const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 
 const softwareSchema = z.object({
   software: z.object({
@@ -30,6 +46,69 @@ const softwareSchema = z.object({
 const allSoftwaresSchema = z.record(z.string(), softwareSchema);
 
 const softwareKeyListSchema = z.array(z.string());
+
+export const createAutoCompleteOptions = async (desc: string) => {
+  try {
+    const filenames = await readdir(desc);
+
+    const autoCompleteOptions: AddSoftwareAutocompleteOption[] =
+      await Promise.all(
+        filenames.map(async (filename) => {
+          const [key] = filename.split('.');
+
+          const json = await readJson(path.join(desc, filename));
+
+          const icon = await getIconFile({
+            isCustom: false,
+            filename: json.software.icon.filename,
+          });
+
+          return {
+            software: {
+              ...json.software,
+              icon,
+            },
+            shortcuts: [],
+            value: key,
+          };
+        })
+      );
+
+    autoCompleteOptions.push(AUTO_COMPLETE_CUSTOM_OPTION);
+
+    return autoCompleteOptions;
+  } catch (error) {
+    logError(`Couldn't create autocomplete options`, error);
+    throw error;
+  }
+};
+
+const createSoftwareRouter = router({
+  options: publicProcedure.query(async () => {
+    try {
+      const autoCompleteOptions = await createAutoCompleteOptions(
+        SYS_SOFTWARE_SHORTCUTS_DIR
+      );
+      const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+
+      const filteredExistingSoftwaresAutoCompleteOptions =
+        autoCompleteOptions.filter((option: AddSoftwareAutocompleteOption) => {
+          const found = existingSoftwares.some((software) => {
+            const [key] = software.split('.');
+            return key === option.software.key;
+          });
+
+          return !found;
+        });
+
+      logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
+      return filteredExistingSoftwaresAutoCompleteOptions;
+    } catch (error: any) {
+      logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
+      throw error;
+    }
+  }),
+});
 
 const softwareRouter = router({
   byKey: publicProcedure
@@ -96,6 +175,7 @@ const softwareRouter = router({
       throw error;
     }
   }),
+  create: createSoftwareRouter,
 });
 
 export default softwareRouter;

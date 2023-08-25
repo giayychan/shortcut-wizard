@@ -20,13 +20,7 @@ import {
   logSuccess,
 } from './utils';
 import { shortcutValidation } from './schema';
-import type {
-  IconData,
-  Shortcut,
-  SoftwareShortcut,
-  AddSoftwareAutocompleteOption,
-} from '../../@types';
-import { AUTO_COMPLETE_CUSTOM_OPTION } from './constants';
+import type { IconData, Shortcut, SoftwareShortcut } from '../../@types';
 
 const store = new Store();
 
@@ -118,67 +112,6 @@ export const getIconFile = async (icon: IconData) => {
     return { ...icon, dataUri };
   } catch (error) {
     logError(`Couldn't get user icons - ${userIconPath}`, error);
-    throw error;
-  }
-};
-
-export const createAutoCompleteOptions = async (desc: string) => {
-  try {
-    const filenames = await readdir(desc);
-
-    const autoCompleteOptions: AddSoftwareAutocompleteOption[] =
-      await Promise.all(
-        filenames.map(async (filename) => {
-          const [key] = filename.split('.');
-
-          const json = await readJson(path.join(desc, filename));
-
-          const icon = await getIconFile({
-            isCustom: false,
-            filename: json.software.icon.filename,
-          });
-
-          return {
-            software: {
-              ...json.software,
-              icon,
-            },
-            shortcuts: [],
-            value: key,
-          };
-        })
-      );
-
-    autoCompleteOptions.push(AUTO_COMPLETE_CUSTOM_OPTION);
-
-    return autoCompleteOptions;
-  } catch (error) {
-    logError(`Couldn't create autocomplete options`, error);
-    throw error;
-  }
-};
-
-export const fetchSoftwareAutoCompleteOptions = async () => {
-  try {
-    const autoCompleteOptions = await createAutoCompleteOptions(
-      SYS_SOFTWARE_SHORTCUTS_DIR
-    );
-    const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
-
-    const filteredExistingSoftwaresAutoCompleteOptions =
-      autoCompleteOptions.filter((option: AddSoftwareAutocompleteOption) => {
-        const found = existingSoftwares.some((software) => {
-          const [key] = software.split('.');
-          return key === option.software.key;
-        });
-
-        return !found;
-      });
-
-    logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
-    return filteredExistingSoftwaresAutoCompleteOptions;
-  } catch (error: any) {
-    logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
     throw error;
   }
 };

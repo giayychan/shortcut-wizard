@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { forwardRef, useEffect, useState } from 'react';
+import { forwardRef } from 'react';
 import {
   Autocomplete,
   AutocompleteItem,
   Divider,
   Group,
+  Loader,
   Text,
 } from '@mantine/core';
 import { IconSquarePlus } from '@tabler/icons-react';
@@ -12,9 +13,9 @@ import { IconSquarePlus } from '@tabler/icons-react';
 import StyledSvg from '../common/StyledSvg';
 import {
   AddSoftwareAutocompleteItemProps,
-  AddSoftwareAutocompleteOption,
   AutoCompleteProps,
 } from '../../../../@types';
+import trpcReact from '../../utils/trpc';
 
 const AutoCompleteItem = forwardRef<
   HTMLDivElement,
@@ -42,23 +43,12 @@ const AutoCompleteItem = forwardRef<
 );
 
 function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
-  const [autoCompleteOptions, setAutoCompleteOptions] = useState<
-    AddSoftwareAutocompleteOption[]
-  >([]);
+  const { data: autoCompleteOptions, isLoading } =
+    trpcReact.software.create.options.useQuery();
 
-  const fetchSoftwareAutoCompleteOptions = async () => {
-    const { ipcRenderer } = window.electron;
+  if (isLoading) return <Loader />;
 
-    const res = await ipcRenderer.invoke(
-      'fetchSoftwareAutoCompleteOptions',
-      undefined
-    );
-    setAutoCompleteOptions(res);
-  };
-
-  useEffect(() => {
-    fetchSoftwareAutoCompleteOptions();
-  }, []);
+  if (!autoCompleteOptions?.length) return null;
 
   const filterAutoComplete = (currentValue: string, item: AutocompleteItem) => {
     const hasNoValue = !item.value;
@@ -100,6 +90,7 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
       form.setFieldValue('software.key', item.software.key);
     }
   };
+
   return (
     <Autocomplete
       {...form.getInputProps('software.key')}
