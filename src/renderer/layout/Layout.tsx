@@ -1,6 +1,8 @@
 import { ReactNode, useEffect } from 'react';
-import { Paper } from '@mantine/core';
+import { Flex, Paper } from '@mantine/core';
 import { useResizeObserver } from '@mantine/hooks';
+
+import TitleBar from './TitleBar';
 import useAppHeightStore from '../stores/useAppHeightStore';
 import trpcReact from '../utils/trpc';
 
@@ -14,7 +16,12 @@ function Layout({ children }: { children: ReactNode }) {
     setHeight(rect.height, { update: true }, mutation.mutate);
   }, [mutation.mutate, rect.height, setHeight]);
 
-  return <Paper ref={ref}>{children}</Paper>;
+  return (
+    <Paper ref={ref}>
+      <TitleBar />
+      <Flex direction="column">{children}</Flex>
+    </Paper>
+  );
 }
 
 export default Layout;

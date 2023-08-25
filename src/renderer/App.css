@@ -17,8 +17,12 @@
   -webkit-app-region: no-drag;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 body::-webkit-scrollbar {
-  width: 4px; /* width of the entire scrollbar */
+  width: 3px; /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
@@ -29,9 +33,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.4); /* color of the scroll thumb */
   transition: all 1s ease;
-  -webkit-transition: all 1s ease; /* todo: transition should match scrollbar in software list but its not working */
+  -webkit-transition: all 1s ease;
   border-radius: 20px; /* roundness of the scroll thumb */
 }
+
+/* todo: transition should match scrollbar in software list but its not working */
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.5);

@@ -8,21 +8,17 @@ import LayoutProvider from './layout/LayoutProvider';
 import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
-import TitleBar from './layout/TitleBar';
 
 function MainWindow() {
   return (
     <LayoutProvider>
       <Layout>
         <AuthProvider>
-          <Flex direction="column" className="sticky top-0 z-10" bg="dark">
-            <TitleBar />
-            <Flex align="center" m="md">
-              <SearchShortcut />
-              <SettingsButton />
-            </Flex>
-            <SoftwareList />
+          <Flex align="center" m="md">
+            <SearchShortcut />
+            <SettingsButton />
           </Flex>
+          <SoftwareList />
           <ShortcutList />
         </AuthProvider>
       </Layout>

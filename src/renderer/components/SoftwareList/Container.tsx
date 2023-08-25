@@ -127,7 +127,7 @@ function SoftwareListContainer() {
   const { data: softwareShortcuts, isLoading } =
     trpcReact.software.all.useQuery();
 
-  if (isLoading) return <Skeleton h={48} />;
+  if (isLoading) return <Skeleton h={70} />;
 
   if ((!isLoading && !softwareShortcuts) || isEmpty(softwareShortcuts))
     return <Button>Add software shortcuts</Button>;
