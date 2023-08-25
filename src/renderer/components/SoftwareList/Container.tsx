@@ -1,5 +1,11 @@
 import { useRef } from 'react';
-import { Button, ScrollArea, SegmentedControl, Skeleton } from '@mantine/core';
+import {
+  Button,
+  Flex,
+  ScrollArea,
+  SegmentedControl,
+  Skeleton,
+} from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
 import { isEmpty } from 'lodash';
 
@@ -31,7 +37,12 @@ function SoftwareList({
 
       return {
         value: key,
-        label: dataUri ? <StyledSvg src={dataUri} /> : null,
+        label: dataUri ? (
+          <Flex direction="column" align="center" className="capitalize">
+            <StyledSvg src={dataUri} />
+            {key}
+          </Flex>
+        ) : null,
       };
     });
 

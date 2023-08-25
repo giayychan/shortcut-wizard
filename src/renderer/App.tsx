@@ -8,7 +8,6 @@ import LayoutProvider from './layout/LayoutProvider';
 import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
-import SelectedSoftware from './components/SelectedSoftware/Container';
 
 function Main() {
   return (
@@ -16,7 +15,6 @@ function Main() {
       <Layout>
         <AuthProvider>
           <Flex align="center" mb="md">
-            <SelectedSoftware />
             <SearchShortcut />
             <SettingsButton />
           </Flex>
@@ -33,6 +31,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/settings" element={<div>yolo</div>} />
       </Routes>
     </Router>
   );
