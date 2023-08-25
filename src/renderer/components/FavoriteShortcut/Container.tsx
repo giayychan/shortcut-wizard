@@ -1,22 +1,31 @@
 import { ActionIcon } from '@mantine/core';
 import { IconStar } from '@tabler/icons-react';
 import { Shortcut } from '../../../../@types';
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { notifyClientError } from '../../utils';
+import trpcReact from '../../utils/trpc';
+import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 
 type Props = { shortcut: Shortcut };
 
 function Container({ shortcut }: Props) {
   const { isFavorite } = shortcut;
 
-  const updateShortcutsBySoftwareKey = useSoftwareShortcutsStore(
-    (state) => state.updateShortcutBySoftwareKey
+  const selectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.selectedSoftwareShortcut
   );
+  const utils = trpcReact.useContext();
+  const updateShortcut = trpcReact.shortcut.update.useMutation();
 
   const handleClick = async () => {
+    if (!selectedSoftwareShortcut?.software.key) return;
+
     try {
       const updatedShortcut = { ...shortcut, isFavorite: !isFavorite };
-      await updateShortcutsBySoftwareKey(updatedShortcut);
+      await updateShortcut.mutateAsync({
+        shortcut: updatedShortcut,
+        softwareKey: selectedSoftwareShortcut.software.key,
+      });
+      await utils.software.all.refetch();
     } catch (error: any) {
       notifyClientError(`Error when favorite a shortcut: ${error.message}`);
     }

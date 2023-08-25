@@ -7,8 +7,7 @@ import { RetrievalQAChain } from 'langchain/chains';
 import { exists } from 'fs-extra';
 import path from 'path';
 
-import { mapSystemToReadable } from '../utils';
-import { USER_VECTOR_STORE_DIR } from '../io';
+import { USER_VECTOR_STORE_DIR, mapSystemToReadable } from '../utils';
 
 // store them in a vector store
 // index the vector store

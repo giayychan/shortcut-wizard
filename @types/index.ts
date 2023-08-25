@@ -80,32 +80,7 @@ export type StyledSvgProps = {
 
 export type SoftwareShortcutsState = {
   softwareShortcuts: SoftwareShortcuts;
-
-  addShortcutBySelectedSoftware: (newShortcut: Shortcut) => Promise<void>;
-  updateShortcutBySoftwareKey: (updatedShortcut: Shortcut) => Promise<void>;
-  removeShortcutsBySelectedSoftware: (
-    removedShortcuts: Shortcut[]
-  ) => Promise<void>;
 };
-
-export type OnChannels = 'update-auth-state';
-
-export type InvokeReturnTypes = {
-  addShortcutsBySoftwareKey: SoftwareShortcut;
-  updateShortcutsBySoftwareKey: SoftwareShortcut;
-  removeShortcutsBySoftwareKey: SoftwareShortcut;
-};
-
-export type InvokeArgumentTypes = {
-  addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-  updateShortcutsBySoftwareKey: [
-    softwareKey: string,
-    updatedShortcuts: Shortcut[]
-  ];
-  removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-};
-
-export type InvokeChannels = keyof InvokeReturnTypes;
 
 export type AppHeightState = {
   height: number;

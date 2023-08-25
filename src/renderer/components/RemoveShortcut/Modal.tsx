@@ -8,13 +8,13 @@ import {
   Checkbox,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ContextModalProps } from '@mantine/modals';
+import { ContextModalProps, modals } from '@mantine/modals';
 
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { RemoveShortcutFormValues } from '../../../../@types';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 import Hotkeys from '../common/ShortcutHotkeys';
+import trpcReact from '../../utils/trpc';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: { shortcuts: [] },
@@ -23,9 +23,9 @@ const FORM_DEFAULT_VALUES = {
 function RemoveShortcutModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
 
-  const removeShortcutsBySelectedSoftware = useSoftwareShortcutsStore(
-    (state) => state.removeShortcutsBySelectedSoftware
-  );
+  const utils = trpcReact.useContext();
+  const deleteShortcut = trpcReact.shortcut.delete.useMutation();
+
   const form = useForm<RemoveShortcutFormValues>(FORM_DEFAULT_VALUES);
 
   const [visible, { close: closeLoading, open: openLoading }] =
@@ -60,8 +60,14 @@ function RemoveShortcutModal({ context, id }: ContextModalProps) {
         }
       );
 
-      await removeShortcutsBySelectedSoftware(removedShortcuts);
+      await deleteShortcut.mutateAsync({
+        softwareKey: selectedSoftwareShortcut.software.key,
+        shortcuts: removedShortcuts,
+      });
+      await utils.software.all.refetch();
+
       handleCancel();
+      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('shortcuts', error.message);
     } finally {

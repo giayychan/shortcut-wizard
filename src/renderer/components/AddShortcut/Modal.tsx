@@ -16,17 +16,18 @@ import {
   useTimeout,
   useToggle,
 } from '@mantine/hooks';
-import { ContextModalProps } from '@mantine/modals';
+import { ContextModalProps, modals } from '@mantine/modals';
 import { useRecordHotkeys } from 'react-hotkeys-hook';
 import { IconPlayerRecordFilled } from '@tabler/icons-react';
 import { useCallback, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import { EditShortcutFormValues, Shortcut } from '../../../../@types';
 import { mapArrayWithId } from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
+import trpcReact from '../../utils/trpc';
+import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -44,16 +45,20 @@ function AddShortcutModal({
 }: ContextModalProps<{ shortcut?: Shortcut }>) {
   useModalFormHeight();
 
+  const utils = trpcReact.useContext();
   const isUpdateShortcut = Boolean(shortcut);
   const [keys, { start, stop, isRecording }] = useRecordHotkeys();
   const clickOutsideRef = useClickOutside(() => stop());
 
   const [currentSet, toggle] = useToggle(['first', 'second']);
 
-  const [addShortcut, updateShortcut] = useSoftwareShortcutsStore((state) => [
-    state.addShortcutBySelectedSoftware,
-    state.updateShortcutBySoftwareKey,
-  ]);
+  const addShortcut = trpcReact.shortcut.create.useMutation();
+  const updateShortcut = trpcReact.shortcut.update.useMutation();
+
+  const selectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.selectedSoftwareShortcut
+  );
+
   const form = useForm<EditShortcutFormValues>(
     isUpdateShortcut
       ? {
@@ -143,6 +148,11 @@ function AddShortcutModal({
       return;
     }
 
+    if (!selectedSoftwareShortcut?.software.key) {
+      form.setFieldError('description', 'Please selected software');
+      return;
+    }
+
     openLoading();
 
     const updatedShortcut = {
@@ -154,9 +164,20 @@ function AddShortcutModal({
     };
 
     try {
-      if (isUpdateShortcut) await updateShortcut(updatedShortcut);
-      else await addShortcut(updatedShortcut);
+      if (isUpdateShortcut)
+        await updateShortcut.mutateAsync({
+          shortcut: updatedShortcut,
+          softwareKey: selectedSoftwareShortcut.software.key,
+        });
+      else {
+        await addShortcut.mutateAsync({
+          shortcut: updatedShortcut,
+          softwareKey: selectedSoftwareShortcut.software.key,
+        });
+      }
+      await utils.software.all.refetch();
       handleCancel();
+      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('hotkeys', error.message);
     } finally {

@@ -122,4 +122,6 @@ const softwareRouter = router({
   }),
 });
 
+export const softwareCaller = softwareRouter.createCaller({});
+
 export default softwareRouter;

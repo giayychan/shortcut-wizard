@@ -17,13 +17,12 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import {
+  initializeUserData,
   registerGlobalOpenAppShortcut,
   resolveHtmlPath,
   setMainBrowserWindow,
 } from './utils';
-import dbCalls from './ipcEvents';
 import mainWindow from './mainWindow';
-import { initializeUserData } from './io';
 import { appRouter as router } from './routers/_app';
 
 class AppUpdater {
@@ -184,5 +183,3 @@ if (!gotTheLock) {
     })
     .catch(console.log);
 }
-
-dbCalls();

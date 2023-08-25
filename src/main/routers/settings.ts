@@ -1,6 +1,6 @@
 import Store from 'electron-store';
 import { router, publicProcedure } from '../configs/trpc';
-import { initializeUserData } from '../io';
+import { initializeUserData } from '../utils';
 
 const store = new Store();
 

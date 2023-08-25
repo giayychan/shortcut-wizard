@@ -1,13 +1,15 @@
 /* eslint import/prefer-default-export: off */
 import { URL } from 'url';
 import path from 'path';
-import { readFile } from 'fs-extra';
+import { copy, ensureDir, readFile, remove } from 'fs-extra';
 import {
   BrowserWindow,
   BrowserWindowConstructorOptions,
   app,
   globalShortcut,
 } from 'electron';
+import Store from 'electron-store';
+import { machineId } from 'node-machine-id';
 import chalk from 'chalk';
 import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
 import mainWindow from './mainWindow';
@@ -172,5 +174,50 @@ export const getIconFile = async (icon: IconData) => {
   } catch (error) {
     logError(`Couldn't get user icons - ${userIconPath}`, error);
     throw error;
+  }
+};
+
+export const initializeUserData = async () => {
+  const store = new Store();
+
+  const opened = store.get('opened');
+  const storeMachineId = store.get('machineId');
+
+  if (!storeMachineId) {
+    const id = await machineId();
+    store.set('machineId', id);
+  }
+
+  if (!opened) {
+    try {
+      await remove(USER_SOFTWARE_SHORTCUTS_DIR);
+      await remove(USER_CUSTOM_ICONS_DIR);
+      await remove(USER_VECTOR_STORE_DIR);
+    } catch (error) {
+      logError("Couldn't remove user shortcuts directory");
+      throw error;
+    }
+
+    try {
+      await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
+      await ensureDir(USER_CUSTOM_ICONS_DIR);
+      await ensureDir(USER_VECTOR_STORE_DIR);
+    } catch (error) {
+      logError("Couldn't ensure user shortcuts directory exists");
+      throw error;
+    }
+
+    try {
+      await copy(SYS_SOFTWARE_SHORTCUTS_DIR, USER_SOFTWARE_SHORTCUTS_DIR, {
+        overwrite: false,
+      });
+
+      logSuccess('User data initialized');
+    } catch (error) {
+      logError("Couldn't copy system shortcuts directory to user");
+      throw error;
+    }
+
+    store.set('opened', true);
   }
 };
