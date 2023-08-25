@@ -1,12 +1,26 @@
 import { z } from 'zod';
 import path from 'path';
-import { readJson, readdir, statSync } from 'fs-extra';
+import {
+  copy,
+  outputJson,
+  readFile,
+  readJson,
+  readdir,
+  remove,
+  statSync,
+} from 'fs-extra';
 
 import { router, publicProcedure } from '../configs/trpc';
-import { getAssetPath, getUserDataPath, logError, logSuccess } from '../utils';
-import { getIconFile } from '../io';
+import {
+  createDataUri,
+  getAssetPath,
+  getUserDataPath,
+  logError,
+  logSuccess,
+} from '../utils';
 import {
   AddSoftwareAutocompleteOption,
+  IconData,
   SoftwareShortcut,
   SoftwareShortcuts,
 } from '../../../@types';
@@ -14,7 +28,7 @@ import { AUTO_COMPLETE_CUSTOM_OPTION } from '../constants';
 
 const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
 const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
-const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
+// const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
 const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
   'data',
   'shortcuts',
@@ -22,6 +36,27 @@ const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
 );
 
 const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
+
+const getIconFile = async (icon: IconData) => {
+  const { filename, isCustom } = icon;
+
+  const srcDir = isCustom ? USER_CUSTOM_ICONS_DIR : SYS_SOFTWARES_ICONS_DIR;
+  const userIconPath = `${srcDir}/${filename}`;
+
+  try {
+    const res = await readFile(userIconPath, {
+      encoding: 'utf8',
+    });
+
+    const dataUri = createDataUri(res);
+    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
+
+    return { ...icon, dataUri };
+  } catch (error) {
+    logError(`Couldn't get user icons - ${userIconPath}`, error);
+    throw error;
+  }
+};
 
 const softwareSchema = z.object({
   software: z.object({
@@ -47,7 +82,7 @@ const allSoftwaresSchema = z.record(z.string(), softwareSchema);
 
 const softwareKeyListSchema = z.array(z.string());
 
-export const createAutoCompleteOptions = async (desc: string) => {
+const createAutoCompleteOptions = async (desc: string) => {
   try {
     const filenames = await readdir(desc);
 
@@ -83,31 +118,99 @@ export const createAutoCompleteOptions = async (desc: string) => {
   }
 };
 
+const writeCustomIconToDisk = async (
+  src: string,
+  desc: string,
+  errorCallback?: () => Promise<void>
+) => {
+  try {
+    await copy(src, desc);
+    logSuccess(`Copied custom icon to ${desc}`);
+  } catch (error: any) {
+    logError(`Couldn't write custom icon to ${desc} - ${error.message}`);
+    if (errorCallback) await errorCallback();
+    throw error;
+  }
+};
+
 const createSoftwareRouter = router({
-  options: publicProcedure.query(async () => {
-    try {
-      const autoCompleteOptions = await createAutoCompleteOptions(
-        SYS_SOFTWARE_SHORTCUTS_DIR
-      );
-      const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+  options: publicProcedure
+    // todo: check data
+    .output(z.promise(z.custom<AddSoftwareAutocompleteOption[]>()))
+    .query(async () => {
+      try {
+        const autoCompleteOptions = await createAutoCompleteOptions(
+          SYS_SOFTWARE_SHORTCUTS_DIR
+        );
+        const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
 
-      const filteredExistingSoftwaresAutoCompleteOptions =
-        autoCompleteOptions.filter((option: AddSoftwareAutocompleteOption) => {
-          const found = existingSoftwares.some((software) => {
-            const [key] = software.split('.');
-            return key === option.software.key;
-          });
+        const filteredExistingSoftwaresAutoCompleteOptions =
+          autoCompleteOptions.filter(
+            (option: AddSoftwareAutocompleteOption) => {
+              const found = existingSoftwares.some((software) => {
+                const [key] = software.split('.');
+                return key === option.software.key;
+              });
 
-          return !found;
+              return !found;
+            }
+          );
+
+        logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
+        return filteredExistingSoftwaresAutoCompleteOptions;
+      } catch (error: any) {
+        logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
+        throw error;
+      }
+    }),
+  software: publicProcedure
+    .input(
+      // todo: check data
+      z.object({
+        data: z.custom<SoftwareShortcut>(),
+      })
+    )
+    .mutation(async (opts) => {
+      const { data } = opts.input;
+      const { icon, key } = data.software;
+
+      if (!key) throw Error('softwareKey is required');
+
+      if (!data.shortcuts) throw Error('shortcuts is required');
+
+      const writeDse = getUserDataPath('shortcuts', `${key}.json`);
+
+      const localIconPath = icon.filename;
+
+      icon.filename = path.basename(icon.filename);
+
+      try {
+        const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+
+        const found = existingSoftwares.some((software) => {
+          const [softwareKey] = software.split('.');
+          return softwareKey.toLowerCase() === key.toLowerCase();
         });
 
-      logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
-      return filteredExistingSoftwaresAutoCompleteOptions;
-    } catch (error: any) {
-      logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);
-      throw error;
-    }
-  }),
+        if (found) throw Error('software already exists');
+
+        await outputJson(writeDse, data);
+        if (icon.isCustom) {
+          const desc = getUserDataPath('icons', icon.filename);
+          await writeCustomIconToDisk(localIconPath, desc, () =>
+            remove(writeDse)
+          );
+        }
+        logSuccess(`Added software - ${key}.json`);
+        const iconWithDataUri = await getIconFile(icon);
+        data.software.icon = iconWithDataUri;
+
+        return data;
+      } catch (error) {
+        logError(`Couldn't add software - ${key}.json`, error);
+        throw error;
+      }
+    }),
 });
 
 const softwareRouter = router({

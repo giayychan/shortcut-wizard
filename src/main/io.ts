@@ -1,26 +1,10 @@
-import path from 'path';
 import Store from 'electron-store';
 import { machineId } from 'node-machine-id';
 
-import {
-  remove,
-  outputJson,
-  ensureDir,
-  copy,
-  readJson,
-  readFile,
-  writeJson,
-} from 'fs-extra';
-import { readdir } from 'fs/promises';
-import {
-  createDataUri,
-  getAssetPath,
-  getUserDataPath,
-  logError,
-  logSuccess,
-} from './utils';
+import { remove, ensureDir, copy, writeJson } from 'fs-extra';
+import { getAssetPath, getUserDataPath, logError, logSuccess } from './utils';
 import { shortcutValidation } from './schema';
-import type { IconData, Shortcut, SoftwareShortcut } from '../../@types';
+import type { Shortcut } from '../../@types';
 
 const store = new Store();
 
@@ -77,59 +61,6 @@ export const initializeUserData = async () => {
     }
 
     store.set('opened', true);
-  }
-};
-
-export const writeCustomIconToDisk = async (
-  src: string,
-  desc: string,
-  errorCallback?: () => Promise<void>
-) => {
-  try {
-    await copy(src, desc);
-    logSuccess(`Copied custom icon to ${desc}`);
-  } catch (error: any) {
-    logError(`Couldn't write custom icon to ${desc} - ${error.message}`);
-    if (errorCallback) await errorCallback();
-    throw error;
-  }
-};
-
-export const getIconFile = async (icon: IconData) => {
-  const { filename, isCustom } = icon;
-
-  const srcDir = isCustom ? USER_CUSTOM_ICONS_DIR : SYS_SOFTWARES_ICONS_DIR;
-  const userIconPath = `${srcDir}/${filename}`;
-
-  try {
-    const res = await readFile(userIconPath, {
-      encoding: 'utf8',
-    });
-
-    const dataUri = createDataUri(res);
-    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
-
-    return { ...icon, dataUri };
-  } catch (error) {
-    logError(`Couldn't get user icons - ${userIconPath}`, error);
-    throw error;
-  }
-};
-
-export const fetchSoftwareShortcut = async (softwareKey: string) => {
-  const filePath = getUserDataPath('shortcuts', `${softwareKey}.json`);
-
-  try {
-    const result: SoftwareShortcut = await readJson(filePath);
-    const iconWithDataUri = await getIconFile(result.software.icon);
-    result.software.icon = iconWithDataUri;
-
-    logSuccess(`fetched software shortcut - ${softwareKey}.json successfully`);
-
-    return result;
-  } catch (error: any) {
-    logError(`Couldn't fetchSoftwareShortcut - ${softwareKey}.json: ${error}`);
-    throw error;
   }
 };
 
@@ -207,45 +138,6 @@ export const removeShortcutsBySoftwareKey = async (
     return softwareShortcut;
   } catch (error) {
     logError(`Couldn't remove user shortcuts - ${softwareKey}.json`, error);
-    throw error;
-  }
-};
-
-export const addSoftwareShortcut = async (data: SoftwareShortcut) => {
-  const { icon, key } = data.software;
-
-  if (!key) throw Error('softwareKey is required');
-
-  if (!data.shortcuts) throw Error('shortcuts is required');
-
-  const writeDse = getUserDataPath('shortcuts', `${key}.json`);
-
-  const localIconPath = icon.filename;
-
-  icon.filename = path.basename(icon.filename);
-
-  try {
-    const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
-
-    const found = existingSoftwares.some((software) => {
-      const [softwareKey] = software.split('.');
-      return softwareKey.toLowerCase() === key.toLowerCase();
-    });
-
-    if (found) throw Error('software already exists');
-
-    await outputJson(writeDse, data);
-    if (icon.isCustom) {
-      const desc = getUserDataPath('icons', icon.filename);
-      await writeCustomIconToDisk(localIconPath, desc, () => remove(writeDse));
-    }
-    logSuccess(`Added software - ${key}.json`);
-    const iconWithDataUri = await getIconFile(icon);
-    data.software.icon = iconWithDataUri;
-
-    return data;
-  } catch (error) {
-    logError(`Couldn't add software - ${key}.json`, error);
     throw error;
   }
 };
