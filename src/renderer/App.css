@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #25262b; /* color of the tracking area */
-  margin: 180px 0px 20px 0px;
+  margin: 175px 0px 10px 0px;
 }
 
 body::-webkit-scrollbar-thumb {
