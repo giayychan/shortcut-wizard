@@ -100,7 +100,8 @@ function SignInButton() {
   return user ? (
     <Button
       loading={signOutLoading}
-      color="pink cursor-pointer"
+      color="indigo"
+      className="cursor-pointer"
       onClick={handleSignOut}
     >
       Sign out
