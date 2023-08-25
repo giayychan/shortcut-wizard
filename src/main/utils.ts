@@ -130,5 +130,6 @@ export const setMainBrowserWindow = () => {
   const window = mainWindow.getWindow();
   if (!window) throw Error('Something went wrong when creating window');
 
+  window.setPosition(window.getPosition()[0], 200);
   return window;
 };

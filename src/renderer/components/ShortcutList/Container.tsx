@@ -1,11 +1,33 @@
+import { ReactNode } from 'react';
 import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
-
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
+
+const listStyles = {
+  itemWrapper: {
+    width: '100%',
+    '& > span:nth-of-type(2)': {
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+  },
+};
+
+function ScrollableListWrapper({ children }: { children: ReactNode }) {
+  return (
+    <ScrollArea.Autosize mt="md" mx="md" type="always" scrollbarSize={6}>
+      <List mx={6} spacing="lg" size="sm" center styles={listStyles}>
+        {children}
+      </List>
+    </ScrollArea.Autosize>
+  );
+}
 
 function ShortcutListContainer() {
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
@@ -19,54 +41,32 @@ function ShortcutListContainer() {
 
   if (isSearchResultsShow) {
     return (
-      <ScrollArea.Autosize
-        type="always"
-        scrollbarSize={6}
-        className="border border-red-500"
-      >
-        <List
-          mx={6}
-          spacing="lg"
-          size="sm"
-          center
-          styles={{
-            itemWrapper: {
-              width: '100%',
-              '& > span:nth-of-type(2)': {
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              },
-            },
-          }}
-        >
-          {searchResults.length ? (
-            searchResults.map(({ item }) => {
-              const { hotkeys, description, id, software } = item;
+      <ScrollableListWrapper>
+        {searchResults.length ? (
+          searchResults.map(({ item }) => {
+            const { hotkeys, description, id, software } = item;
 
-              return (
-                <List.Item
-                  key={id}
-                  icon={
-                    software.icon.dataUri && (
-                      <StyledSvg src={software.icon.dataUri} />
-                    )
-                  }
-                >
-                  <Text>
-                    {software.key}: {description}
-                  </Text>
+            return (
+              <List.Item
+                key={id}
+                icon={
+                  software.icon.dataUri && (
+                    <StyledSvg src={software.icon.dataUri} />
+                  )
+                }
+              >
+                <Text>
+                  {software.key}: {description}
+                </Text>
 
-                  <Hotkeys hotkeys={hotkeys} />
-                </List.Item>
-              );
-            })
-          ) : (
-            <Text>No results found</Text>
-          )}
-        </List>
-      </ScrollArea.Autosize>
+                <Hotkeys hotkeys={hotkeys} />
+              </List.Item>
+            );
+          })
+        ) : (
+          <Text>No results found</Text>
+        )}
+      </ScrollableListWrapper>
     );
   }
 
@@ -100,34 +100,11 @@ function ShortcutListContainer() {
   );
 
   return (
-    <ScrollArea.Autosize type="always" scrollbarSize={6}>
-      <Text pl={8} pb={8} weight={700} className="capitalize">
-        {selectedSoftwareShortcut.software.key}
-      </Text>
-      <List
-        mx={6}
-        spacing="lg"
-        size="sm"
-        center
-        styles={{
-          itemWrapper: {
-            width: '100%',
-            '& > span:nth-of-type(2)': {
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            },
-          },
-        }}
-      >
-        {sortedByFavorite.map((shortcut) => {
-          const { id } = shortcut;
-
-          return <ShortcutListItem shortcut={shortcut} key={id} />;
-        })}
-      </List>
-    </ScrollArea.Autosize>
+    <ScrollableListWrapper>
+      {sortedByFavorite.map((shortcut) => (
+        <ShortcutListItem shortcut={shortcut} key={shortcut.id} />
+      ))}
+    </ScrollableListWrapper>
   );
 }
 

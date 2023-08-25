@@ -19,7 +19,7 @@ const appHeightRouter = router({
 
       const mainWindow = appWindow.getWindow();
 
-      if (!mainWindow) return;
+      if (!mainWindow || mainWindow.isMaximized()) return;
 
       const isLargerThanMaxHeight = height > MAX_HEIGHT;
 
