@@ -9,7 +9,7 @@ import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
 
-function Main() {
+function MainWindow() {
   return (
     <LayoutProvider>
       <Layout>
@@ -30,8 +30,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/settings" element={<div>yolo</div>} />
+        <Route path="/" element={<MainWindow />} />
       </Routes>
     </Router>
   );

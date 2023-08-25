@@ -1,7 +1,12 @@
 /* eslint import/prefer-default-export: off */
 import { URL } from 'url';
 import path from 'path';
-import { BrowserWindow, app, globalShortcut } from 'electron';
+import {
+  BrowserWindow,
+  BrowserWindowConstructorOptions,
+  app,
+  globalShortcut,
+} from 'electron';
 import chalk from 'chalk';
 import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
 import mainWindow from './mainWindow';
@@ -96,36 +101,38 @@ export const getBrowserWindowType = () => {
   return type;
 };
 
+export const preloadPath = app.isPackaged
+  ? path.join(__dirname, 'preload.js')
+  : path.join(__dirname, '../../.erb/dll/preload.js');
+
+export const defaultWindowOptions = {
+  type: getBrowserWindowType(),
+  width: WIDTH,
+  minWidth: WIDTH,
+  height: DEFAULT_HEIGHT,
+  minHeight: DEFAULT_HEIGHT,
+  alwaysOnTop: true,
+  movable: true,
+  hasShadow: true,
+  show: false,
+  backgroundColor: '#141517',
+  resizable: true,
+  title: 'Shortcut Wizard',
+  paintWhenInitiallyHidden: true,
+  frame: false,
+  center: true,
+  icon: getAssetPath('assets/icons/icon.ico'),
+  titleBarStyle: 'hidden',
+  titleBarOverlay: true,
+  trafficLightPosition: { x: 10, y: 10 },
+  webPreferences: {
+    // devTools: true,
+    preload: preloadPath,
+  },
+} as BrowserWindowConstructorOptions;
+
 export const setMainBrowserWindow = () => {
-  mainWindow.setWindow(
-    new BrowserWindow({
-      type: getBrowserWindowType(),
-      width: WIDTH,
-      minWidth: WIDTH,
-      height: DEFAULT_HEIGHT,
-      minHeight: DEFAULT_HEIGHT,
-      alwaysOnTop: true,
-      movable: true,
-      hasShadow: true,
-      show: false,
-      backgroundColor: '#141517',
-      resizable: true,
-      title: 'Shortcut Wizard',
-      paintWhenInitiallyHidden: true,
-      frame: false,
-      center: true,
-      icon: getAssetPath('assets/icons/icon.ico'),
-      titleBarStyle: 'hidden',
-      titleBarOverlay: true,
-      trafficLightPosition: { x: 10, y: 10 },
-      webPreferences: {
-        // devTools: true,
-        preload: app.isPackaged
-          ? path.join(__dirname, 'preload.js')
-          : path.join(__dirname, '../../.erb/dll/preload.js'),
-      },
-    })
-  );
+  mainWindow.setWindow(new BrowserWindow(defaultWindowOptions));
 
   const window = mainWindow.getWindow();
   if (!window) throw Error('Something went wrong when creating window');

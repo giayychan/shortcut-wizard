@@ -5,6 +5,8 @@ import useFuseSearchStore from '../../stores/useFuseSearch';
 import { notifyClientError } from '../../utils';
 import trpcReact from '../../utils/trpc';
 
+const { ipcRenderer } = window.electron;
+
 function FactoryResetButton({
   toggle,
 }: {
@@ -25,7 +27,6 @@ function FactoryResetButton({
     }
 
     try {
-      const { ipcRenderer } = window.electron;
       await ipcRenderer.invoke('factoryReset', undefined);
 
       await utils.software.all.refetch();
