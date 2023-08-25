@@ -8,7 +8,6 @@ import {
   removeSoftwareShortcut,
   fetchSoftwareAutoCompleteOptions,
   updateShortcutsBySoftwareKey,
-  factoryReset,
 } from './io';
 
 export default function dbCalls() {
@@ -44,8 +43,6 @@ export default function dbCalls() {
   ipcMain.handle('removeSoftwareShortcut', (_, [softwareList]) =>
     removeSoftwareShortcut(softwareList)
   );
-
-  ipcMain.handle('factoryReset', factoryReset);
 
   // todo: test this for windows
   // Handle window controls via IPC

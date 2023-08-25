@@ -86,12 +86,6 @@ export const initializeUserData = async () => {
   }
 };
 
-export const factoryReset = async () => {
-  store.set('opened', false);
-
-  await initializeUserData();
-};
-
 export const writeCustomIconToDisk = async (
   src: string,
   desc: string,

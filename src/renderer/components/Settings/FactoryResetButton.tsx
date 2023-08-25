@@ -5,13 +5,12 @@ import useFuseSearchStore from '../../stores/useFuseSearch';
 import { notifyClientError } from '../../utils';
 import trpcReact from '../../utils/trpc';
 
-const { ipcRenderer } = window.electron;
-
 function FactoryResetButton({
   toggle,
 }: {
   toggle: (value?: SetStateAction<boolean> | undefined) => void;
 }) {
+  const factoryReset = trpcReact.settings.factoryReset.useMutation();
   const [confirmed, setConfirmed] = useState(false);
   const utils = trpcReact.useContext();
 
@@ -27,8 +26,7 @@ function FactoryResetButton({
     }
 
     try {
-      await ipcRenderer.invoke('factoryReset', undefined);
-
+      await factoryReset.mutateAsync();
       await utils.software.all.refetch();
       setSelectedSoftwareShortcut(null);
       resetFuseSearch();

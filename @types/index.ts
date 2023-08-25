@@ -94,7 +94,6 @@ export type SoftwareShortcutsState = {
 export type OnChannels = 'update-auth-state';
 
 export type InvokeReturnTypes = {
-  factoryReset: void;
   fetchSoftwareShortcut: SoftwareShortcut;
   fetchSoftwareAutoCompleteOptions: AddSoftwareAutocompleteOption[];
   addShortcutsBySoftwareKey: SoftwareShortcut;
@@ -105,7 +104,6 @@ export type InvokeReturnTypes = {
 };
 
 export type InvokeArgumentTypes = {
-  factoryReset: undefined;
   fetchSoftwareAutoCompleteOptions: undefined;
   fetchSoftwareShortcut: [softwareKey: string];
   addShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
