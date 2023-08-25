@@ -16,3 +16,23 @@
 .titlebutton {
   -webkit-app-region: no-drag;
 }
+
+body::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #25262b; /* color of the tracking area */
+  margin: 180px 0px 20px 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* color of the scroll thumb */
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease; /* todo: transition should match scrollbar in software list but its not working */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
