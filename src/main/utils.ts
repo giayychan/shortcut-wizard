@@ -1,6 +1,7 @@
 /* eslint import/prefer-default-export: off */
 import { URL } from 'url';
 import path from 'path';
+import { readFile } from 'fs-extra';
 import {
   BrowserWindow,
   BrowserWindowConstructorOptions,
@@ -10,6 +11,7 @@ import {
 import chalk from 'chalk';
 import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from './constants';
 import mainWindow from './mainWindow';
+import { IconData } from '../../@types';
 
 export function resolveHtmlPath(htmlFileName: string) {
   if (process.env.NODE_ENV === 'development') {
@@ -139,4 +141,36 @@ export const setMainBrowserWindow = () => {
 
   window.setPosition(window.getPosition()[0], 200);
   return window;
+};
+
+export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
+export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
+export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
+export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
+  'data',
+  'shortcuts',
+  process.platform
+);
+
+export const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
+
+export const getIconFile = async (icon: IconData) => {
+  const { filename, isCustom } = icon;
+
+  const srcDir = isCustom ? USER_CUSTOM_ICONS_DIR : SYS_SOFTWARES_ICONS_DIR;
+  const userIconPath = `${srcDir}/${filename}`;
+
+  try {
+    const res = await readFile(userIconPath, {
+      encoding: 'utf8',
+    });
+
+    const dataUri = createDataUri(res);
+    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
+
+    return { ...icon, dataUri };
+  } catch (error) {
+    logError(`Couldn't get user icons - ${userIconPath}`, error);
+    throw error;
+  }
 };

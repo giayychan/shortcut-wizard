@@ -8,12 +8,12 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure } from '@mantine/hooks';
-import { ContextModalProps } from '@mantine/modals';
+import { ContextModalProps, modals } from '@mantine/modals';
 
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import StyledSvg from '../common/StyledSvg';
 import { RemoveSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
+import trpcReact from '../../utils/trpc';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -24,11 +24,12 @@ const FORM_DEFAULT_VALUES = {
 function RemoveSoftwareModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
 
-  const [removeSoftwares, softwareShortcuts] = useSoftwareShortcutsStore(
-    (state) => [state.removeSoftwares, state.softwareShortcuts]
-  );
+  const utils = trpcReact.useContext();
+  const softwareShortcuts = utils.software.all.getData();
 
-  const softwareList = Object.keys(softwareShortcuts);
+  const deleteSoftwares = trpcReact.software.delete.useMutation();
+
+  const softwareList = Object.keys(softwareShortcuts || {});
 
   const form = useForm<RemoveSoftwareFormValues>(FORM_DEFAULT_VALUES);
 
@@ -53,8 +54,10 @@ function RemoveSoftwareModal({ context, id }: ContextModalProps) {
       return;
     }
     try {
-      await removeSoftwares(removedSoftwares);
+      await deleteSoftwares.mutateAsync(removedSoftwares);
+      await utils.software.all.refetch();
       handleCancel();
+      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('removedSoftwares', error.message);
     } finally {
@@ -72,29 +75,30 @@ function RemoveSoftwareModal({ context, id }: ContextModalProps) {
       <LoadingOverlay visible={visible} overlayBlur={2} />
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <Checkbox.Group {...form.getInputProps('removedSoftwares')}>
-        {softwareList.map((softwareKey) => {
-          const data: SoftwareShortcut = softwareShortcuts[softwareKey];
-          const {
-            software: {
-              icon: { dataUri },
-              key,
-            },
-          } = data;
+        {softwareShortcuts &&
+          softwareList.map((softwareKey) => {
+            const data: SoftwareShortcut = softwareShortcuts[softwareKey];
+            const {
+              software: {
+                icon: { dataUri },
+                key,
+              },
+            } = data;
 
-          return (
-            <Checkbox
-              key={key}
-              my="xs"
-              value={key}
-              label={
-                <Flex gap="xs" className="capitalize">
-                  {dataUri ? <StyledSvg src={dataUri} /> : undefined}
-                  {key}
-                </Flex>
-              }
-            />
-          );
-        })}
+            return (
+              <Checkbox
+                key={key}
+                my="xs"
+                value={key}
+                label={
+                  <Flex gap="xs" className="capitalize">
+                    {dataUri ? <StyledSvg src={dataUri} /> : undefined}
+                    {key}
+                  </Flex>
+                }
+              />
+            );
+          })}
       </Checkbox.Group>
 
       <Group position="right" mt="xl">

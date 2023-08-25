@@ -81,9 +81,6 @@ export type StyledSvgProps = {
 export type SoftwareShortcutsState = {
   softwareShortcuts: SoftwareShortcuts;
 
-  addSoftware: (newSoftware: SoftwareShortcut) => Promise<void>;
-  removeSoftwares: (removedSoftwares: string[]) => Promise<void>;
-
   addShortcutBySelectedSoftware: (newShortcut: Shortcut) => Promise<void>;
   updateShortcutBySoftwareKey: (updatedShortcut: Shortcut) => Promise<void>;
   removeShortcutsBySelectedSoftware: (
@@ -97,8 +94,6 @@ export type InvokeReturnTypes = {
   addShortcutsBySoftwareKey: SoftwareShortcut;
   updateShortcutsBySoftwareKey: SoftwareShortcut;
   removeShortcutsBySoftwareKey: SoftwareShortcut;
-  addSoftwareShortcut: SoftwareShortcut;
-  removeSoftwareShortcut: void;
 };
 
 export type InvokeArgumentTypes = {
@@ -108,8 +103,6 @@ export type InvokeArgumentTypes = {
     updatedShortcuts: Shortcut[]
   ];
   removeShortcutsBySoftwareKey: [softwareKey: string, shortcuts: Shortcut[]];
-  addSoftwareShortcut: [data: SoftwareShortcut];
-  removeSoftwareShortcut: [softwareList: string[]];
 };
 
 export type InvokeChannels = keyof InvokeReturnTypes;

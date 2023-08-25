@@ -2,9 +2,7 @@ import { ipcMain } from 'electron';
 
 import {
   addShortcutsBySoftwareKey,
-  addSoftwareShortcut,
   removeShortcutsBySoftwareKey,
-  removeSoftwareShortcut,
   updateShortcutsBySoftwareKey,
 } from './io';
 
@@ -23,14 +21,6 @@ export default function dbCalls() {
     'removeShortcutsBySoftwareKey',
     (_, [softwareKey, shortcuts]) =>
       removeShortcutsBySoftwareKey(softwareKey, shortcuts)
-  );
-
-  ipcMain.handle('addSoftwareShortcut', (_, [data]) =>
-    addSoftwareShortcut(data)
-  );
-
-  ipcMain.handle('removeSoftwareShortcut', (_, [softwareList]) =>
-    removeSoftwareShortcut(softwareList)
   );
 
   // todo: test this for windows

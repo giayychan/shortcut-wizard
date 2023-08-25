@@ -1,14 +1,14 @@
 import { useForm } from '@mantine/form';
 import { Group, Box, Button, LoadingOverlay } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ContextModalProps } from '@mantine/modals';
+import { ContextModalProps, modals } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
-import useSoftwareShortcutsStore from '../../stores/useSoftwareShortcutsStore';
 import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import useModalFormHeight from '../../hooks/useSetModalFormHeight';
+import trpcReact from '../../utils/trpc';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -26,8 +26,8 @@ const FORM_DEFAULT_VALUES = {
 
 function AddSoftwareModal({ context, id }: ContextModalProps) {
   useModalFormHeight();
-
-  const addSoftware = useSoftwareShortcutsStore((state) => state.addSoftware);
+  const utils = trpcReact.useContext();
+  const addSoftware = trpcReact.software.create.software.useMutation();
   const form = useForm<AddSoftwareFormValues>(FORM_DEFAULT_VALUES);
 
   const [visible, { close: closeLoading, open: openLoading }] =
@@ -83,8 +83,10 @@ function AddSoftwareModal({ context, id }: ContextModalProps) {
     };
 
     try {
-      await addSoftware(newSoftware);
+      await addSoftware.mutateAsync(newSoftware);
+      await utils.software.all.refetch();
       handleCancel();
+      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('software.key', error.message);
     } finally {

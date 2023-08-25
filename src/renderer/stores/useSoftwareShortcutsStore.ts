@@ -13,34 +13,6 @@ const useSoftwareShortcutsStore = create(
   subscribeWithSelector<SoftwareShortcutsState>((set, get) => ({
     ...defaultState,
 
-    addSoftware: async (newSoftware) => {
-      const { softwareShortcuts } = get();
-      const res = await ipcRenderer.invoke('addSoftwareShortcut', [
-        newSoftware,
-      ]);
-
-      set({
-        softwareShortcuts: {
-          ...softwareShortcuts,
-          [newSoftware.software.key]: res,
-        },
-      });
-    },
-
-    removeSoftwares: async (removedSoftwares) => {
-      const { softwareShortcuts } = get();
-
-      const updated = { ...softwareShortcuts };
-
-      removedSoftwares.forEach((software) => {
-        delete updated[software];
-      });
-
-      await ipcRenderer.invoke('removeSoftwareShortcut', [removedSoftwares]);
-
-      set({ softwareShortcuts: updated });
-    },
-
     updateShortcutBySoftwareKey: async (updatedShortcut) => {
       const { softwareShortcuts } = get();
       const { selectedSoftwareShortcut, setSelectedSoftwareShortcut } =
