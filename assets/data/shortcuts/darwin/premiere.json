@@ -1,0 +1,18 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "premiere",
+    "icon": {
+      "filename": "premiere.svg",
+      "isCustom": false
+    }
+  },
+  "shortcuts": [
+    {
+      "id": "1",
+      "hotkeys": [["cmd", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}

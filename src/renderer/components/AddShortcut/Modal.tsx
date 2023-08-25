@@ -172,7 +172,6 @@ function AddShortcutModal({
       onSubmit={form.onSubmit(handleSubmit)}
     >
       <LoadingOverlay visible={visible} overlayBlur={2} />
-
       <TextInput
         placeholder="Description will be used in search"
         label="Description"
@@ -182,7 +181,6 @@ function AddShortcutModal({
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('description')}
       />
-
       <Input.Wrapper
         label="Hot Keys"
         withAsterisk
@@ -245,7 +243,6 @@ function AddShortcutModal({
           </Stack>
         </Flex>
       </Input.Wrapper>
-
       <Checkbox
         my="xl"
         size="md"
@@ -253,7 +250,6 @@ function AddShortcutModal({
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('isFavorite', { type: 'checkbox' })}
       />
-
       <Group position="right" mt="xl">
         <Button onClick={handleClear} variant="subtle">
           Clear

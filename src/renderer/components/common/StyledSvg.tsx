@@ -6,7 +6,13 @@ import { StyledSvgProps } from '../../../../@types';
 function StyledSvg({ src, className }: StyledSvgProps) {
   if (!src) return null;
   return (
-    <Box w={24} h={24} style={{ overflow: 'auto' }}>
+    <Box
+      w={24}
+      h={24}
+      style={{
+        overflow: 'auto',
+      }}
+    >
       <ReactSVG
         src={src}
         className={`${className || ''}`}
