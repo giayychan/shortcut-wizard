@@ -8,18 +8,21 @@ import LayoutProvider from './layout/LayoutProvider';
 import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
+import SettingsProvider from './providers/SettingsProvider';
 
 function MainWindow() {
   return (
     <LayoutProvider>
       <Layout>
         <AuthProvider>
-          <Flex align="center" m="md">
-            <SearchShortcut />
-            <SettingsButton />
-          </Flex>
-          <SoftwareList />
-          <ShortcutList />
+          <SettingsProvider>
+            <Flex align="center" m="md">
+              <SearchShortcut />
+              <SettingsButton />
+            </Flex>
+            <SoftwareList />
+            <ShortcutList />
+          </SettingsProvider>
         </AuthProvider>
       </Layout>
     </LayoutProvider>

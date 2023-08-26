@@ -1,6 +1,7 @@
 /* eslint import/prefer-default-export: off */
 import { URL } from 'url';
 import path from 'path';
+import AutoLaunch from 'auto-launch';
 import { copy, ensureDir, readFile, remove } from 'fs-extra';
 import {
   BrowserWindow,
@@ -47,17 +48,6 @@ export const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
 
 export const createDataUri = (svg: string) =>
   `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
-
-export const mapKeyToReadable = (key: string) => {
-  switch (key) {
-    case 'Meta':
-      return 'cmd';
-    case ' ':
-      return 'Space';
-    default:
-      return key;
-  }
-};
 
 export const mapSystemToReadable = (system: string) => {
   switch (system) {
@@ -177,18 +167,59 @@ export const getIconFile = async (icon: IconData) => {
   }
 };
 
+export const autoLaunch = async (userEnabled: boolean) => {
+  try {
+    // todo: need to test if this works on windows & linux
+    // https://github.com/Teamwork/node-auto-launch/issues/99
+    // https://github.com/Teamwork/node-auto-launch/issues/105
+    const appAutoLauncher = new AutoLaunch({
+      name: 'Shortcut Wizard Launcher',
+      path: '/Applications/Shortcut Wizard.app',
+      mac: {
+        useLaunchAgent: true,
+      },
+    });
+
+    if (!userEnabled) {
+      await appAutoLauncher.disable();
+    } else {
+      await appAutoLauncher.enable();
+    }
+
+    const isEnabled = await appAutoLauncher.isEnabled();
+
+    const store = new Store();
+    store.set('isAutoLaunchEnabled', isEnabled);
+
+    return isEnabled;
+  } catch (error: any) {
+    console.log('autoLaunch error: ', error.message);
+    throw error;
+  }
+};
+
 export const initializeUserData = async () => {
   const store = new Store();
 
-  const opened = store.get('opened');
   const storeMachineId = store.get('machineId');
+  const processPlatform = store.get('processPlatform');
 
-  if (!storeMachineId) {
+  const opened = store.get('opened');
+  const isAutoLaunchEnabled = store.get('isAutoLaunchEnabled');
+
+  if (!storeMachineId === undefined) {
     const id = await machineId();
     store.set('machineId', id);
   }
+  if (processPlatform === undefined) {
+    store.set('processPlatform', process.platform);
+  }
 
-  if (!opened) {
+  if (isAutoLaunchEnabled === undefined) {
+    await autoLaunch(true);
+  }
+
+  if (opened === undefined) {
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
       await remove(USER_CUSTOM_ICONS_DIR);

@@ -88,13 +88,13 @@
     },
     {
       "id": "14",
-      "hotkeys": [["Ctrl", ";"]],
+      "hotkeys": [["Ctrl", "semicolon"]],
       "description": "Insert current date",
       "isFavorite": false
     },
     {
       "id": "15",
-      "hotkeys": [["Ctrl", "Shift", ";"]],
+      "hotkeys": [["Ctrl", "Shift", "semicolon"]],
       "description": "Insert current time",
       "isFavorite": false
     },
@@ -112,13 +112,13 @@
     },
     {
       "id": "18",
-      "hotkeys": [["Ctrl", "Page Down"]],
+      "hotkeys": [["Ctrl", "down"]],
       "description": "Move to the next worksheet",
       "isFavorite": false
     },
     {
       "id": "19",
-      "hotkeys": [["Ctrl", "Page Up"]],
+      "hotkeys": [["Ctrl", "up"]],
       "description": "Move to the previous worksheet",
       "isFavorite": false
     },

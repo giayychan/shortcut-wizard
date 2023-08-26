@@ -10,10 +10,10 @@ function TrpcReactQueryClientProvider({ children }: { children: ReactNode }) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            networkMode: 'always',
+            networkMode: 'offlineFirst',
           },
           mutations: {
-            networkMode: 'always',
+            networkMode: 'offlineFirst',
           },
         },
       })

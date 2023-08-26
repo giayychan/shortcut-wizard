@@ -25,3 +25,14 @@ export const notifyClientInfo = (message: string) => {
     color: 'blue',
   });
 };
+
+export const mapKeyToMacReadable = (key: string) => {
+  switch (key) {
+    case 'meta':
+      return 'cmd';
+    case 'alt':
+      return 'opt';
+    default:
+      return key;
+  }
+};

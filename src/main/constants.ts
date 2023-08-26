@@ -5,7 +5,7 @@ export const DEFAULT_HEIGHT = 173;
 export const MAX_HEIGHT = 700;
 export const SHORTCUT_WIZARD_HREF = 'https://shortcut-wizard.vercel.app';
 
-export const APP_HOTKEYS = ['Shift', 'Command', 'Space'];
+export const APP_HOTKEYS = ['Shift', 'Space'];
 
 export const AUTO_COMPLETE_CUSTOM_OPTION: AddSoftwareAutocompleteOption = {
   software: {
