@@ -16,7 +16,12 @@ function SettingsModal() {
   useModalFormHeight();
 
   const [, toggle] = useToggle();
-  const user = useAuthStore((state) => state.user);
+  const dbUser = useAuthStore((state) => state.user);
+  const utils = trpcReact.useContext();
+  const paidUser = utils.user.getPaidUser.getData();
+
+  const user = dbUser || paidUser;
+
   const autoLaunch = trpcReact.settings.autoLaunch.useMutation();
   const { data: isAutoLaunchEnabled, refetch } =
     trpcReact.settings.isAutoLaunchEnabled.useQuery();
@@ -48,7 +53,6 @@ function SettingsModal() {
           Current pricing plan: {user.plan?.type}{' '}
           {user.trial?.endDate ? '(trial)' : null}
         </Text>
-        <Text size="xl">Current pricing interval: {user.plan?.interval}</Text>
         {user.trial?.endDate ? (
           <Text size="xl">
             Trial end date:{' '}

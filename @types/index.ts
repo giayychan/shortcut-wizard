@@ -98,13 +98,11 @@ export type ConnectedState = {
 };
 
 export type PlanType = 'basic' | 'efficient' | 'pro';
-export type PlanInterval = 'monthly' | 'yearly';
 
 export type DbUserData = {
   electronId: string;
   plan: {
     type: string;
-    interval: string;
   };
   trial: {
     startDate: number | null;
@@ -117,8 +115,8 @@ export type AuthState = {
   loading: boolean;
   setLoading: (loading: boolean) => void;
   user: DbUserData | null;
-  unsubscribeUserChanged: () => void;
-  setUser: (user?: User | null) => void;
+  setUserByFirebase: (user: User | null) => void;
+  setUserByPaidUser: (user: DbUserData) => void;
 };
 
 export type SelectedShortcutsState = {

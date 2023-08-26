@@ -10,7 +10,11 @@ import trpcReact from '../../utils/trpc';
 import { notifyClientError, notifyClientInfo } from '../../utils';
 
 function SignInButton() {
+  const utils = trpcReact.useContext();
+  const paidUser = utils.user.getPaidUser.getData();
+
   const user = useAuthStore((state) => state.user);
+
   const [signInLoading, setSignInLoading] = useState(false);
   const [signOutLoading, setSignOutLoading] = useState(false);
   const [signInUnsubscribe, setSignInUnsubscribe] = useState<
@@ -96,6 +100,8 @@ function SignInButton() {
       Sign in
     </Button>
   );
+
+  if (paidUser) return null;
 
   return user ? (
     <Button

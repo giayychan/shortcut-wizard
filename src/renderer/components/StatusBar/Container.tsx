@@ -1,31 +1,28 @@
+import { useEffect } from 'react';
 import { Loader, Badge } from '@mantine/core';
-import useAuthStore from '../../stores/useAuthStore';
 import useConnectedStore from '../../stores/useConnectedStore';
 
 export default function StatusBarContainer() {
-  const [connected, connectedLoading] = useConnectedStore((state) => [
+  const [connected, onConnected] = useConnectedStore((state) => [
     state.connected,
-    state.loading,
+    state.onConnected,
   ]);
-  const authLoading = useAuthStore((state) => state.loading);
 
-  const loading = connectedLoading || authLoading;
+  useEffect(() => {
+    onConnected();
+  }, [onConnected]);
 
-  if (!loading && connected) return null;
-
-  if (!connectedLoading && authLoading && !connected) {
-    return (
-      <div className="absolute right-0 pr-5">
-        <Badge variant="gradient" gradient={{ from: 'red', to: 'orange' }}>
-          You&apos;re offline
-        </Badge>
-      </div>
-    );
-  }
+  if (connected) return null;
 
   return (
     <div className="absolute right-0 pr-5">
-      <Loader size="xs" />
+      <Badge
+        variant="gradient"
+        gradient={{ from: 'red', to: 'orange' }}
+        className="flex flex-row items-center"
+      >
+        You&apos;re offline <Loader size={13} className="inline-block" />
+      </Badge>
     </div>
   );
 }

@@ -1,30 +1,83 @@
 import dayjs from 'dayjs';
 import { ReactNode, useEffect } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { onChildChanged } from 'firebase/database';
 import { auth } from 'main/configs/firebase';
 import useAuthStore from '../stores/useAuthStore';
 import TrialEndPrompt from '../components/TrialEndPrompt/Container';
 import SignInPrompt from '../components/Auth/SignInPrompt';
-import useConnectedStore from '../stores/useConnectedStore';
+import trpcReact from '../utils/trpc';
+import { getUserFromDB, getUserRef } from '../services/user';
+import { notifyClientError } from '../utils';
 
 function AuthProvider({ children }: { children: ReactNode }) {
-  const [loading, user, setUser] = useAuthStore((state) => [
-    state.loading,
-    state.user,
-    state.setUser,
-  ]);
+  const { data: paidUser, isLoading } = trpcReact.user.getPaidUser.useQuery();
 
-  const [connected, onConnected] = useConnectedStore((state) => [
-    state.connected,
-    state.onConnected,
-  ]);
+  const { mutate } = trpcReact.user.updatePaidUser.useMutation();
+
+  const [user, setUserByFirebase, setUserByPaidUser, loading] = useAuthStore(
+    (state) => [
+      state.user,
+      state.setUserByFirebase,
+      state.setUserByPaidUser,
+      state.loading,
+    ]
+  );
 
   useEffect(() => {
-    onConnected();
-    onAuthStateChanged(auth, setUser);
-  }, [setUser, onConnected]);
+    let unsubscribe: () => void = () => {};
 
-  if (loading || !connected) return children;
+    if (!isLoading) {
+      if (!paidUser) {
+        unsubscribe = onAuthStateChanged(auth, setUserByFirebase);
+      } else {
+        setUserByPaidUser(paidUser);
+      }
+    }
+
+    return () => unsubscribe();
+  }, [paidUser, setUserByFirebase, isLoading, setUserByPaidUser]);
+
+  const userId = auth.currentUser?.uid;
+
+  useEffect(() => {
+    let unsubscribeUserChanged: () => void = () => {};
+    if (userId) {
+      const userRef = getUserRef(userId);
+
+      unsubscribeUserChanged = onChildChanged(
+        userRef,
+        async () => {
+          const updatedUser = await getUserFromDB(userId);
+
+          if (!updatedUser) {
+            setUserByFirebase(null);
+            unsubscribeUserChanged();
+            await signOut(auth);
+          } else {
+            setUserByPaidUser(updatedUser);
+          }
+        },
+        (err) => {
+          notifyClientError(err.message);
+          unsubscribeUserChanged();
+        }
+      );
+    }
+
+    return () => unsubscribeUserChanged();
+  }, [userId, setUserByFirebase, setUserByPaidUser]);
+
+  const shouldUpdatePaidUser =
+    !isLoading && !paidUser?.stripePaymentId && user?.stripePaymentId;
+
+  useEffect(() => {
+    if (shouldUpdatePaidUser) {
+      mutate(user);
+    }
+  }, [mutate, user, shouldUpdatePaidUser]);
+
+  if (loading || isLoading || paidUser) return children;
 
   if (!user) return <SignInPrompt />;
 
