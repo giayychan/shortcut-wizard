@@ -12,6 +12,7 @@ function AddShortcutButton() {
           title,
           modal: 'addShortcut',
           innerProps: {},
+          closeOnEscape: false,
         });
       }}
     >
