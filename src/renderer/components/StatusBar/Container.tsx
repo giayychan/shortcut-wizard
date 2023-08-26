@@ -13,7 +13,7 @@ export default function StatusBarContainer() {
 
   if (!loading && connected) return null;
 
-  if (!loading && !connected) {
+  if (!connectedLoading && authLoading && !connected) {
     return (
       <div className="absolute right-0 pr-5">
         <Badge variant="gradient" gradient={{ from: 'red', to: 'orange' }}>
