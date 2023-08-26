@@ -205,7 +205,7 @@ function AddShortcutModal({
       <Input.Wrapper
         label="Hot Keys"
         withAsterisk
-        description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key & each hot key can contain 3 keys."
+        description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key's & each hot key can contain 3 key's."
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('hotkeys')}
         size="md"
