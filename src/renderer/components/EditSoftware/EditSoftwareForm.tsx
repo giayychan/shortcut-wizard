@@ -14,6 +14,7 @@ import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import trpcReact from '../../utils/trpc';
+import { modals } from '@mantine/modals';
 
 const FORM_DEFAULT_VALUES = {
   file: null,
@@ -110,6 +111,7 @@ function EditSoftware({
       }
       await utils.software.all.refetch();
       close();
+      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('software.key', error.message);
     } finally {

@@ -86,7 +86,7 @@ function ShortcutListContainer() {
             modal: 'openSettings',
             fullScreen: true,
             withCloseButton: false,
-            innerProps: { selectedSettingsTab: 2 },
+            innerProps: { selectedSettingsTab: 3 },
           });
           setOpened(true);
         }}

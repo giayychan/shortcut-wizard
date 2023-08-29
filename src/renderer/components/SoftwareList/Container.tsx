@@ -104,7 +104,6 @@ function SoftwareList({
     <ScrollArea type="always" scrollbarSize={6} offsetScrollbars>
       <SegmentedControl
         ref={ref}
-        fullWidth
         transitionDuration={300}
         transitionTimingFunction="linear"
         onClick={handleClick}
@@ -154,7 +153,7 @@ function SoftwareListContainer() {
               fullScreen: true,
               withCloseButton: false,
               innerProps: {
-                selectedSettingsTab: 1,
+                selectedSettingsTab: 2,
               },
             })
           }
