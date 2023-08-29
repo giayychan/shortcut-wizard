@@ -85,6 +85,13 @@ export type AppHeightState = {
   ) => void;
 };
 
+export type SoftwareShortcutsState = {
+  softwareShortcuts: SoftwareShortcuts | undefined;
+  setSoftwareShortcuts: (
+    softwareShortcuts: SoftwareShortcuts | undefined
+  ) => void;
+};
+
 export type EditShortcutState = {
   opened: boolean;
   shortcutId: string;

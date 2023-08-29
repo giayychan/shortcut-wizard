@@ -148,6 +148,7 @@ export default function EditSoftwareList() {
         </ScrollArea>
         <Flex p="md" gap="xl">
           <Button
+            compact
             color="orange"
             disabled={(!indeterminate && !allChecked) || !softwareList?.length}
             onClick={handleDelete}
@@ -155,7 +156,7 @@ export default function EditSoftwareList() {
           >
             {confirmed ? 'Confirm Delete?' : 'Delete'}
           </Button>
-          <Button color="indigo" onClick={() => handleClick()}>
+          <Button compact color="indigo" onClick={() => handleClick()}>
             Add new software
           </Button>
         </Flex>

@@ -248,11 +248,11 @@ function EditShortcut({
         {...form.getInputProps('isFavorite', { type: 'checkbox' })}
       />
       <Group position="right" mt="xl">
-        <Button onClick={handleClear} variant="subtle">
+        <Button onClick={handleClear} variant="outline">
           Clear
         </Button>
         <Button variant="filled" type="submit">
-          {isUpdateShortcut ? 'Save' : 'Add'}
+          Confirm
         </Button>
 
         <Button variant="light" onClick={handleCancel}>

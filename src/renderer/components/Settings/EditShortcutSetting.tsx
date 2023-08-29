@@ -30,6 +30,7 @@ const FORM_DEFAULT_VALUES = {
 function EditShortcutSetting() {
   const utils = trpcReact.useContext();
   const softwareShortcuts = utils.software.all.getData();
+
   const globalSelectedSoftware = useSelectedShortcutsStore(
     (state) => state.selectedSoftwareShortcut
   );
@@ -103,7 +104,7 @@ function EditShortcutSetting() {
     }
   };
 
-  const handleBulkFavourite = async () => {
+  const handleBulkFavorite = async () => {
     if (!softwareShortcuts) return;
 
     const { shortcuts } = form.values;
@@ -195,6 +196,7 @@ function EditShortcutSetting() {
         <ScrollArea className="flex-1" offsetScrollbars>
           {value &&
           softwareShortcuts &&
+          softwareShortcuts[value] &&
           softwareShortcuts[value].shortcuts?.length ? (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <Checkbox.Group {...form.getInputProps('shortcuts')}>
@@ -239,8 +241,9 @@ function EditShortcutSetting() {
           )}
         </ScrollArea>
 
-        <Flex p="md" gap="xl">
+        <Group p="md" w="100%">
           <Button
+            compact
             color="orange"
             disabled={
               !value || !form.values.shortcuts?.length || updatingFavorite
@@ -251,14 +254,16 @@ function EditShortcutSetting() {
             Delete
           </Button>
           <Button
+            compact
             color="pink"
             disabled={!value || !form.values.shortcuts?.length || isLoading}
             loading={updatingFavorite}
-            onClick={handleBulkFavourite}
+            onClick={handleBulkFavorite}
           >
-            Favourite
+            (Un)favorite
           </Button>
           <Button
+            compact
             color="indigo"
             disabled={!value}
             onClick={() => {
@@ -269,7 +274,7 @@ function EditShortcutSetting() {
           >
             Add new shortcut
           </Button>
-        </Flex>
+        </Group>
       </Box>
     </Aside>
   );

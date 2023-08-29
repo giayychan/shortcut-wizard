@@ -18,12 +18,6 @@ function GlobalSettings() {
   return (
     <>
       <FactoryResetButton toggle={toggle} />
-      <Flex gap={20}>
-        <Button h={50} w={130} variant="light">
-          Export Data
-        </Button>
-        <Text>Export your shortcuts data in json.</Text>
-      </Flex>
       <Checkbox
         label={
           <Group>

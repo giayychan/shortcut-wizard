@@ -6,7 +6,7 @@ function Feedback() {
     <>
       <Text>Have feedback on Shortcut Wizard? </Text>
       <Anchor href={`${SHORTCUT_WIZARD_HREF}/feedback`} target="_blank">
-        <Button type="button" color="indigo" w="100%" maw={200}>
+        <Button compact type="button" color="indigo" w="100%" maw={200}>
           Contact Us
         </Button>
       </Anchor>

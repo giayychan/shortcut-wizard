@@ -38,11 +38,11 @@ function FactoryResetButton({
   };
 
   return (
-    <Flex gap={20}>
-      <Button onClick={handleClick} h={50} w={130} variant="light">
+    <Flex gap={20} align="center">
+      <Button compact onClick={handleClick}>
         {confirmed ? 'Confirm Reset?' : 'Factory Reset'}
       </Button>
-      <Text>This will reset your data to default settings.</Text>
+      <Text size="sm">This will reset your data to default settings.</Text>
     </Flex>
   );
 }

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   Button,
   Flex,
@@ -125,12 +125,25 @@ function SoftwareList({
 }
 
 function SoftwareListContainer() {
-  const { data: softwareShortcuts, isLoading } =
-    trpcReact.software.all.useQuery();
+  const { data, isLoading } = trpcReact.software.all.useQuery();
+
+  const [selectedSoftware, setSelectedSoftware] = useSelectedShortcutsStore(
+    (state) => [
+      state.selectedSoftwareShortcut,
+      state.setSelectedSoftwareShortcut,
+    ]
+  );
+
+  useEffect(() => {
+    if (selectedSoftware) {
+      if (data) setSelectedSoftware(data[selectedSoftware.software.key]);
+      else setSelectedSoftware(null);
+    }
+  }, [selectedSoftware, setSelectedSoftware, data]);
 
   if (isLoading) return <Skeleton h={70} />;
 
-  if ((!isLoading && !softwareShortcuts) || isEmpty(softwareShortcuts))
+  if ((!isLoading && !data) || isEmpty(data))
     return (
       <div className="ml-4 h-[70px]">
         <Button
@@ -151,7 +164,7 @@ function SoftwareListContainer() {
       </div>
     );
 
-  return <SoftwareList softwareShortcuts={softwareShortcuts} />;
+  return <SoftwareList softwareShortcuts={data} />;
 }
 
 export default SoftwareListContainer;

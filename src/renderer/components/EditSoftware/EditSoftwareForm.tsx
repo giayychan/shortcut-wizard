@@ -156,16 +156,16 @@ function EditSoftware({
       {icon.isCustom ? <UploadCustomIcon active={active} form={form} /> : null}
 
       <Group position="right" mt="xl">
-        <Button variant="outlined" onClick={() => close()}>
-          Back
-        </Button>
         {isNew && (
-          <Button onClick={handleClear} variant="subtle">
+          <Button onClick={handleClear} variant="outline">
             Clear
           </Button>
         )}
         <Button variant="filled" type="submit">
           Confirm
+        </Button>
+        <Button variant="light" onClick={() => close()}>
+          Back
         </Button>
       </Group>
     </Box>

@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import {
   Navbar,
   ScrollArea,
@@ -16,8 +16,8 @@ import {
   IconMessages,
   IconArrowBackUp,
 } from '@tabler/icons-react';
+import { MAX_HEIGHT } from 'main/constants';
 
-import useModalFormHeight from 'renderer/hooks/useSetModalFormHeight';
 import useAuthStore from '../../stores/useAuthStore';
 import trpcReact from '../../utils/trpc';
 import { UserAccountDetail, UserAccountLink } from './UserLink';
@@ -27,6 +27,7 @@ import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import Feedback from './Feedback';
 import GlobalSettings from './GlobalSettings';
 import EditShortcutSetting from './EditShortcutSetting';
+import useAppHeightStore from '../../stores/useAppHeightStore';
 
 function SettingWrapper({ children }: { children: ReactNode }) {
   return (
@@ -76,9 +77,14 @@ function SettingsModal({
 }: ContextModalProps<{
   selectedSettingsTab: number;
 }>) {
-  useModalFormHeight();
-
   const [selected, setSelected] = useState(selectedSettingsTab);
+  const { mutate } = trpcReact.appHeight.update.useMutation();
+  const height = useAppHeightStore((state) => state.height);
+
+  useEffect(() => {
+    mutate({ height: MAX_HEIGHT });
+    return () => mutate({ height });
+  }, [mutate, height]);
 
   const dbUser = useAuthStore((state) => state.user);
   const utils = trpcReact.useContext();
