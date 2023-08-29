@@ -16,7 +16,7 @@ function LayoutProvider({ children }: { children: ReactNode }) {
         emotionCache={myCache}
         withGlobalStyles
         withNormalizeCSS
-        theme={{ colorScheme: 'dark' }}
+        theme={{ colorScheme: 'dark', primaryColor: 'indigo' }}
       >
         <ModalsProvider
           modals={modals}
