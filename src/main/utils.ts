@@ -43,8 +43,10 @@ export const getUserDataPath = (...paths: string[]): string => {
 const { log } = console;
 export const logError = (...text: unknown[]) =>
   log(chalk.bold.bgRedBright(text));
-const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
-const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
+
+export const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
+
+export const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
 
 const createDataUri = (svg: string) =>
   `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
@@ -158,7 +160,7 @@ export const getIconFile = async (icon: IconData) => {
     });
 
     const dataUri = createDataUri(res);
-    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
+    logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
 
     return { ...icon, dataUri };
   } catch (error) {
