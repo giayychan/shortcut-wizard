@@ -140,11 +140,13 @@ function SoftwareListContainer() {
               modal: 'openSettings',
               fullScreen: true,
               withCloseButton: false,
-              innerProps: {},
+              innerProps: {
+                selectedSettingsTab: 1,
+              },
             })
           }
         >
-          Add software shortcuts
+          Add software
         </Button>
       </div>
     );

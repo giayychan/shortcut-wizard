@@ -6,6 +6,7 @@ import Hotkeys from '../common/ShortcutHotkeys';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
+import useEditShortcutStore from '../../stores/useEditShortcutStore';
 
 const listStyles = {
   itemWrapper: {
@@ -38,6 +39,8 @@ function ShortcutListContainer() {
     state.isSearchResultsShow,
     state.results,
   ]);
+
+  const setOpened = useEditShortcutStore((state) => state.setOpened);
 
   if (isSearchResultsShow) {
     return (
@@ -80,10 +83,12 @@ function ShortcutListContainer() {
         variant="outline"
         onClick={() => {
           openContextModal({
-            title: 'Add Shortcut',
-            modal: 'addShortcut',
-            innerProps: {},
+            modal: 'openSettings',
+            fullScreen: true,
+            withCloseButton: false,
+            innerProps: { selectedSettingsTab: 2 },
           });
+          setOpened(true);
         }}
       >
         Add {selectedSoftwareShortcut.software.key} Shortcut

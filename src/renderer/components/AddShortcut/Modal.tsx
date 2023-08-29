@@ -3,20 +3,13 @@ import {
   Group,
   Box,
   Button,
-  LoadingOverlay,
   TextInput,
   Input,
   Stack,
   Checkbox,
   Flex,
 } from '@mantine/core';
-import {
-  useClickOutside,
-  useDisclosure,
-  useTimeout,
-  useToggle,
-} from '@mantine/hooks';
-import { ContextModalProps, modals } from '@mantine/modals';
+import { useClickOutside, useTimeout, useToggle } from '@mantine/hooks';
 import { useRecordHotkeys } from 'react-hotkeys-hook';
 import { IconPlayerRecordFilled } from '@tabler/icons-react';
 import { useCallback, useEffect } from 'react';
@@ -25,9 +18,7 @@ import { nanoid } from 'nanoid';
 import { EditShortcutFormValues, Shortcut } from '../../../../@types';
 import { mapArrayWithId } from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
-import useModalFormHeight from '../../hooks/useSetModalFormHeight';
 import trpcReact from '../../utils/trpc';
-import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -38,13 +29,16 @@ const FORM_DEFAULT_VALUES = {
   },
 };
 
-function AddShortcutModal({
-  context,
-  id,
-  innerProps: { shortcut },
-}: ContextModalProps<{ shortcut?: Shortcut }>) {
-  useModalFormHeight();
-
+function EditShortcut({
+  shortcut,
+  close,
+  softwareKey,
+}: {
+  // eslint-disable-next-line react/require-default-props
+  shortcut?: Shortcut;
+  close: () => void;
+  softwareKey: string;
+}) {
   const utils = trpcReact.useContext();
   const isUpdateShortcut = Boolean(shortcut);
   const [keys, { start, stop, isRecording }] = useRecordHotkeys();
@@ -54,10 +48,6 @@ function AddShortcutModal({
 
   const addShortcut = trpcReact.shortcut.create.useMutation();
   const updateShortcut = trpcReact.shortcut.update.useMutation();
-
-  const selectedSoftwareShortcut = useSelectedShortcutsStore(
-    (state) => state.selectedSoftwareShortcut
-  );
 
   const form = useForm<EditShortcutFormValues>(
     isUpdateShortcut
@@ -75,9 +65,6 @@ function AddShortcutModal({
     () => form.clearFieldError('hotkeys'),
     3000
   );
-
-  const [visible, { close: closeLoading, open: openLoading }] =
-    useDisclosure(false);
 
   // useCallback hook to memoize the callback function
   const handleKeysChange = useCallback(() => {
@@ -131,7 +118,7 @@ function AddShortcutModal({
 
   const handleCancel = () => {
     handleClear();
-    context.closeModal(id);
+    close();
   };
 
   const handleSubmit = async (values: EditShortcutFormValues) => {
@@ -148,13 +135,6 @@ function AddShortcutModal({
       return;
     }
 
-    if (!selectedSoftwareShortcut?.software.key) {
-      form.setFieldError('description', 'Please selected software');
-      return;
-    }
-
-    openLoading();
-
     const updatedShortcut = {
       ...values,
       id: shortcut?.id || nanoid(),
@@ -167,21 +147,18 @@ function AddShortcutModal({
       if (isUpdateShortcut)
         await updateShortcut.mutateAsync({
           shortcut: updatedShortcut,
-          softwareKey: selectedSoftwareShortcut.software.key,
+          softwareKey,
         });
       else {
         await addShortcut.mutateAsync({
           shortcut: updatedShortcut,
-          softwareKey: selectedSoftwareShortcut.software.key,
+          softwareKey,
         });
       }
       await utils.software.all.refetch();
       handleCancel();
-      modals.closeAll();
     } catch (error: any) {
       form.setFieldError('hotkeys', error.message);
-    } finally {
-      closeLoading();
     }
   };
 
@@ -192,7 +169,6 @@ function AddShortcutModal({
       mx="auto"
       onSubmit={form.onSubmit(handleSubmit)}
     >
-      <LoadingOverlay visible={visible} overlayBlur={2} />
       <TextInput
         placeholder="Description will be used in search"
         label="Description"
@@ -287,4 +263,4 @@ function AddShortcutModal({
   );
 }
 
-export default AddShortcutModal;
+export default EditShortcut;

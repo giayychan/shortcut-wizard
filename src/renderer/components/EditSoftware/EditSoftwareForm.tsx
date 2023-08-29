@@ -86,8 +86,6 @@ function EditSoftware({
     software: { icon },
   } = form.values;
 
-  console.log(form.values);
-
   const handleClear = () => {
     form.reset();
   };

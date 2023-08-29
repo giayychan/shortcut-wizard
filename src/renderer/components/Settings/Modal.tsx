@@ -8,7 +8,7 @@ import {
   Text,
   Group,
 } from '@mantine/core';
-import { modals } from '@mantine/modals';
+import { ContextModalProps, modals } from '@mantine/modals';
 import {
   IconWorld,
   IconDatabaseEdit,
@@ -23,9 +23,10 @@ import trpcReact from '../../utils/trpc';
 import { UserAccountDetail, UserAccountLink } from './UserLink';
 import MainLinks from './MainLinks';
 
-import EditSoftwareList from './EditSoftwareList';
+import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import Feedback from './Feedback';
 import GlobalSettings from './GlobalSettings';
+import EditShortcutSetting from './EditShortcutSetting';
 
 function SettingWrapper({ children }: { children: ReactNode }) {
   return (
@@ -50,13 +51,13 @@ const LINK_DATA = [
     icon: <IconDatabaseEdit size="1rem" />,
     color: 'teal',
     label: 'Edit Software',
-    component: <EditSoftwareList />,
+    component: <EditSoftwareSetting />,
   },
   {
     icon: <IconEditCircle size="1rem" />,
     color: 'violet',
     label: 'Edit Shortcut',
-    component: <SettingWrapper>Edit Shortcuts</SettingWrapper>,
+    component: <EditShortcutSetting />,
   },
   {
     icon: <IconMessages size="1rem" />,
@@ -70,10 +71,14 @@ const LINK_DATA = [
   },
 ];
 
-function SettingsModal() {
+function SettingsModal({
+  innerProps: { selectedSettingsTab },
+}: ContextModalProps<{
+  selectedSettingsTab: number;
+}>) {
   useModalFormHeight();
 
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(selectedSettingsTab);
 
   const dbUser = useAuthStore((state) => state.user);
   const utils = trpcReact.useContext();

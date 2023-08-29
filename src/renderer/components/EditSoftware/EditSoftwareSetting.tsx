@@ -15,7 +15,7 @@ import { useState } from 'react';
 import { IconEdit } from '@tabler/icons-react';
 import trpcReact from '../../utils/trpc';
 import StyledSvg from '../common/StyledSvg';
-import EditSoftware from '../EditSoftware/EditSoftware';
+import EditSoftware from './EditSoftwareForm';
 import { SoftwareShortcut } from '../../../../@types';
 
 export default function EditSoftwareList() {
@@ -128,34 +128,37 @@ export default function EditSoftwareList() {
           close={() => toggleIsEditSoftware(false)}
         />
       </Drawer>
-      <ScrollArea>
-        <Flex direction="column" w="100%" p="md" pt={40}>
-          <Checkbox
-            checked={allChecked}
-            indeterminate={indeterminate}
-            label="Select All"
-            transitionDuration={0}
-            onChange={() =>
-              handlers.setState((current) =>
-                current.map((value) => ({ ...value, checked: !allChecked }))
-              )
-            }
-          />
-          {items}
+      <Flex direction="column" h="100%" p="md" pt={40}>
+        <ScrollArea className="flex-1">
+          <Flex direction="column" w="100%">
+            <Checkbox
+              disabled={!softwareList?.length}
+              checked={allChecked}
+              indeterminate={indeterminate}
+              label="Select All"
+              transitionDuration={0}
+              onChange={() =>
+                handlers.setState((current) =>
+                  current.map((value) => ({ ...value, checked: !allChecked }))
+                )
+              }
+            />
+            {items}
+          </Flex>
+        </ScrollArea>
+        <Flex p="md" gap="xl">
+          <Button
+            color="orange"
+            disabled={(!indeterminate && !allChecked) || !softwareList?.length}
+            onClick={handleDelete}
+            loading={isDeleting}
+          >
+            {confirmed ? 'Confirm Delete?' : 'Delete'}
+          </Button>
+          <Button color="indigo" onClick={() => handleClick()}>
+            Add new software
+          </Button>
         </Flex>
-      </ScrollArea>
-      <Flex p="md" gap="xl">
-        <Button
-          color="orange"
-          disabled={!indeterminate && !allChecked}
-          onClick={handleDelete}
-          loading={isDeleting}
-        >
-          {confirmed ? 'Confirm Delete?' : 'Delete'}
-        </Button>
-        <Button color="indigo" onClick={() => handleClick()}>
-          Add new software
-        </Button>
       </Flex>
     </Aside>
   );
