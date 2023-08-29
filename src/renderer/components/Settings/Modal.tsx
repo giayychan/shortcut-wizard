@@ -15,12 +15,13 @@ import {
   IconEditCircle,
   IconMessages,
   IconArrowBackUp,
+  IconUser,
 } from '@tabler/icons-react';
 import { MAX_HEIGHT } from 'main/constants';
 
 import useAuthStore from '../../stores/useAuthStore';
 import trpcReact from '../../utils/trpc';
-import { UserAccountDetail, UserAccountLink } from './UserLink';
+import UserAccountDetail from './UserLink';
 import MainLinks from './MainLinks';
 
 import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
@@ -38,6 +39,16 @@ function SettingWrapper({ children }: { children: ReactNode }) {
 }
 
 const LINK_DATA = [
+  {
+    icon: <IconUser size="1rem" />,
+    color: 'blue',
+    label: 'Account',
+    component: (
+      <SettingWrapper>
+        <UserAccountDetail />
+      </SettingWrapper>
+    ),
+  },
   {
     icon: <IconWorld size="1rem" />,
     color: 'blue',
@@ -118,23 +129,9 @@ function SettingsModal({
             selected={selected}
           />
         </Navbar.Section>
-        <Navbar.Section pr="xs">
-          <Divider mt="md" />
-          <UserAccountLink
-            user={user}
-            selected={selected === LINK_DATA.length + 1}
-            setSelected={() => {
-              setSelected(LINK_DATA.length + 1);
-            }}
-          />
-        </Navbar.Section>
       </Navbar>
 
-      {LINK_DATA[selected]?.component || (
-        <SettingWrapper>
-          <UserAccountDetail user={user} />
-        </SettingWrapper>
-      )}
+      {LINK_DATA[selected]?.component}
     </Flex>
   );
 }

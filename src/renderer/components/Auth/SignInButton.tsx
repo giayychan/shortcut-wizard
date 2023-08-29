@@ -90,16 +90,22 @@ function SignInButton() {
   };
 
   const renderSignIn = signInLoading ? (
-    <Flex align="center" direction="column" gap="xl">
-      <Loader />
-      <Text>
-        We&apos;ve opened a new browser tab for you to sign in. Once you&apos;ve
-        been authenticated you will automatically continue here.
+    <Flex align="center" direction="column" justify="center" gap="xl">
+      <Text align="center">
+        We&apos;ve opened a new browser tab for you to sign in. <br /> Once
+        you&apos;ve been authenticated you will automatically continue here.
       </Text>
-      <Button onClick={handleCancelSignIn}>Cancel Sign in</Button>
+      <Button onClick={handleCancelSignIn} compact>
+        Cancel Sign in
+      </Button>
     </Flex>
   ) : (
-    <Button fullWidth color="indigo cursor-pointer" onClick={handleSignIn}>
+    <Button
+      compact
+      fullWidth
+      color="indigo cursor-pointer"
+      onClick={handleSignIn}
+    >
       Sign in
     </Button>
   );
@@ -108,6 +114,7 @@ function SignInButton() {
 
   return user ? (
     <Button
+      compact
       loading={signOutLoading}
       color="indigo"
       className="cursor-pointer"

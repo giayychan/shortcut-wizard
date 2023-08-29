@@ -18,7 +18,7 @@ export default function StatusBarContainer() {
     <div className="absolute right-0 pr-5">
       <Badge
         variant="gradient"
-        gradient={{ from: 'red', to: 'orange' }}
+        gradient={{ from: 'indigo', to: 'blue' }}
         className="flex flex-row items-center"
       >
         You&apos;re offline <Loader size={13} className="inline-block" />
