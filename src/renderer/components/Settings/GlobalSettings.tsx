@@ -1,4 +1,4 @@
-import { Button, Checkbox, Flex, Group, Loader, Text } from '@mantine/core';
+import { Checkbox, Group, Loader } from '@mantine/core';
 import { useToggle } from '@mantine/hooks';
 import trpcReact from '../../utils/trpc';
 import FactoryResetButton from './FactoryResetButton';

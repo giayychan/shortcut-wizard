@@ -27,6 +27,7 @@ function LayoutProvider({ children }: { children: ReactNode }) {
             },
             fullScreen: true,
             keepMounted: false,
+            closeOnEscape: false,
           }}
         >
           <Notifications />

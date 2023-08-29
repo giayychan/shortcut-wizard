@@ -41,9 +41,10 @@ function EditShortcut({
 }) {
   const utils = trpcReact.useContext();
   const isUpdateShortcut = Boolean(shortcut);
-  const [keys, { start, stop, isRecording }] = useRecordHotkeys();
+  const [keys, { start, stop }] = useRecordHotkeys();
   const clickOutsideRef = useClickOutside(() => stop());
 
+  const [isRecording, toggleRecording] = useToggle();
   const [currentSet, toggle] = useToggle(['first', 'second']);
 
   const addShortcut = trpcReact.shortcut.create.useMutation();
@@ -109,6 +110,7 @@ function EditShortcut({
       start();
       toggle(set);
     }
+    toggleRecording();
   };
 
   const handleClear = () => {

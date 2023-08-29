@@ -21,7 +21,7 @@ import { RemoveShortcutFormValues, Shortcut } from '../../../../@types';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useEditShortcutStore from '../../stores/useEditShortcutStore';
-import EditShortcut from '../AddShortcut/Modal';
+import EditShortcut from '../EditShortcut/Form';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: { shortcuts: [] },
@@ -142,6 +142,7 @@ function EditShortcutSetting() {
   return (
     <Aside>
       <Drawer
+        closeOnEscape={false}
         withCloseButton={false}
         opened={Boolean(softwareKey && opened)}
         onClose={close}
@@ -204,7 +205,7 @@ function EditShortcutSetting() {
                 const { description, id, hotkeys, isFavorite } = shortcut;
 
                 return (
-                  <Flex w="100%" my="xs" align="center">
+                  <Flex w="100%" my="xs" align="center" key={id}>
                     <Checkbox
                       key={id}
                       value={id}
