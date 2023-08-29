@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { onValue, ref, remove } from 'firebase/database';
 import { signInWithCustomToken, signOut } from 'firebase/auth';
-import { Button, Flex, Loader, Text } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import { modals } from '@mantine/modals';
 import { auth, db } from 'main/configs/firebase';
 
