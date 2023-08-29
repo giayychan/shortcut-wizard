@@ -76,22 +76,6 @@ export type StyledSvgProps = {
   src?: string;
 };
 
-export type AppHeightState = {
-  height: number;
-  setHeight: (
-    height: number | undefined,
-    { update }: { update: boolean },
-    callback: Function
-  ) => void;
-};
-
-export type SoftwareShortcutsState = {
-  softwareShortcuts: SoftwareShortcuts | undefined;
-  setSoftwareShortcuts: (
-    softwareShortcuts: SoftwareShortcuts | undefined
-  ) => void;
-};
-
 export type EditShortcutState = {
   opened: boolean;
   shortcutId: string;
