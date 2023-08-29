@@ -1,9 +1,9 @@
-import { Flex, Text, Badge } from '@mantine/core';
+import { SHORTCUT_WIZARD_HREF } from 'main/constants';
+import { Flex, Text, Badge, Button, Group } from '@mantine/core';
 import dayjs from 'dayjs';
 import SignInButton from '../Auth/SignInButton';
 import trpcReact from '../../utils/trpc';
 import useAuthStore from '../../stores/useAuthStore';
-import TrialEndPromptContainer from '../TrialEndPrompt/Container';
 
 function UserAccountDetail() {
   const dbUser = useAuthStore((state) => state.user);
@@ -16,8 +16,6 @@ function UserAccountDetail() {
 
   return (
     <Flex direction="column" gap="md">
-      <SignInButton />
-
       <Text>
         Plan type:{' '}
         <Badge variant="filled">
@@ -30,7 +28,18 @@ function UserAccountDetail() {
           <Text>
             Trial Ends: {dayjs.unix(user.trial.endDate).format('DD-MMM-YYYY')}
           </Text>
-          <TrialEndPromptContainer />
+          <Group>
+            <Button
+              compact
+              color="green"
+              component="a"
+              href={`${SHORTCUT_WIZARD_HREF}/pricing`}
+              target="_href"
+            >
+              Buy Plan
+            </Button>
+            <SignInButton />
+          </Group>
         </>
       ) : (
         <Text>Thanks for your support! ❤️</Text>

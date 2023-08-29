@@ -83,7 +83,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
 
   const isTrialEnded =
     user?.trial?.endDate &&
-    dayjs(user?.trial?.endDate).toDate() < dayjs().toDate();
+    dayjs.unix(user?.trial?.endDate).toDate() < dayjs().toDate();
 
   if (isTrialEnded) return <TrialEndPrompt />;
 

@@ -108,7 +108,6 @@ function EditSoftware({
       } else {
         await updateSoftware.mutateAsync(newSoftware);
       }
-      // todo: update software list when refetched
       await utils.software.all.refetch();
       close();
     } catch (error: any) {

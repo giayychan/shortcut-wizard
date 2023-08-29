@@ -6,15 +6,19 @@ import PromptContainer from '../common/Prompt';
 function TrialEndPromptContainer() {
   return (
     <PromptContainer>
-      <p>Your trial has ended. Please subscribe if you like the app.</p>
+      <p>Your trial has ended. Please buy plan if you like the app ❤️</p>
+
       <Button
+        compact
         component="a"
         href={`${SHORTCUT_WIZARD_HREF}/pricing`}
         target="_href"
       >
-        Subscribe
+        Buy Plan
       </Button>
+
       <Button
+        compact
         component="a"
         href={`${SHORTCUT_WIZARD_HREF}/feedback`}
         target="_href"

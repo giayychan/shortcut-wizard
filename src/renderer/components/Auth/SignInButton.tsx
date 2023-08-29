@@ -100,28 +100,32 @@ function SignInButton() {
       </Button>
     </Flex>
   ) : (
-    <Button
-      compact
-      fullWidth
-      color="indigo cursor-pointer"
-      onClick={handleSignIn}
-    >
-      Sign in
-    </Button>
+    <div>
+      <Button
+        compact
+        fullWidth
+        color="indigo cursor-pointer"
+        onClick={handleSignIn}
+      >
+        Sign in
+      </Button>
+    </div>
   );
 
   if (paidUser) return null;
 
   return user ? (
-    <Button
-      compact
-      loading={signOutLoading}
-      color="indigo"
-      className="cursor-pointer"
-      onClick={handleSignOut}
-    >
-      Sign out
-    </Button>
+    <div>
+      <Button
+        compact
+        loading={signOutLoading}
+        color="indigo"
+        className="cursor-pointer"
+        onClick={handleSignOut}
+      >
+        Sign out
+      </Button>
+    </div>
   ) : (
     renderSignIn
   );
