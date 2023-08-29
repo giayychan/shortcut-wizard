@@ -6,8 +6,8 @@ function UploadCustomIcon({ active, form }: UploadCustomIconProps) {
   return (
     <FocusTrap active={active}>
       <FileInput
-        label="Upload Icon"
-        placeholder="Upload icon"
+        label="Upload Custom Icon"
+        placeholder="Upload Custom Icon"
         accept="image/svg+xml"
         icon={<IconUpload size={rem(14)} />}
         // eslint-disable-next-line react/jsx-props-no-spreading

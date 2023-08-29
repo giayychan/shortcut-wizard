@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import path from 'path';
-import { copy, outputJson, readJson, readdir, remove } from 'fs-extra';
+import { outputJson, readJson, readdir, remove } from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
 import {
@@ -10,6 +10,7 @@ import {
   getUserDataPath,
   logError,
   logSuccess,
+  writeCustomIconToDisk,
 } from '../../utils';
 import {
   AddSoftwareAutocompleteOption,
@@ -49,21 +50,6 @@ const createAutoCompleteOptions = async (desc: string) => {
     return autoCompleteOptions;
   } catch (error) {
     logError(`Couldn't create autocomplete options`, error);
-    throw error;
-  }
-};
-
-const writeCustomIconToDisk = async (
-  src: string,
-  desc: string,
-  errorCallback?: () => Promise<void>
-) => {
-  try {
-    await copy(src, desc);
-    logSuccess(`Copied custom icon to ${desc}`);
-  } catch (error: any) {
-    logError(`Couldn't write custom icon to ${desc} - ${error.message}`);
-    if (errorCallback) await errorCallback();
     throw error;
   }
 };
@@ -129,13 +115,22 @@ const createSoftwareRouter = router({
 
         if (found) throw Error('software already exists');
 
-        await outputJson(writeDse, data);
+        let desc = getUserDataPath('icons', icon.filename);
+
         if (icon.isCustom) {
-          const desc = getUserDataPath('icons', icon.filename);
+          icon.filename = `${icon.filename.split('.')[0]}-${Date.now()}.${
+            icon.filename.split('.')[1]
+          }`;
+
+          desc = getUserDataPath('icons', icon.filename);
+
           await writeCustomIconToDisk(localIconPath, desc, () =>
             remove(writeDse)
           );
         }
+
+        await outputJson(writeDse, data);
+
         logSuccess(`Added software - ${key}.json`);
       } catch (error) {
         logError(`Couldn't add software - ${key}.json`, error);

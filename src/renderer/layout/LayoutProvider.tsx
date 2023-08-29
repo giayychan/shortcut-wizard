@@ -21,10 +21,12 @@ function LayoutProvider({ children }: { children: ReactNode }) {
         <ModalsProvider
           modals={modals}
           modalProps={{
-            styles: { header: { paddingTop: '45px' } },
+            styles: {
+              header: { padding: 0, margin: 0 },
+              body: { padding: 0, margin: 0 },
+            },
             fullScreen: true,
             keepMounted: false,
-            centered: true,
           }}
         >
           <Notifications />

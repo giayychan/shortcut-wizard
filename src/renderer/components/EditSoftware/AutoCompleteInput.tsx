@@ -73,10 +73,9 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
   };
 
   const handleItemSubmit = (item: AutocompleteItem) => {
-    const { isCustom, filename } = item.software.icon;
+    const { isCustom } = item.software.icon;
 
-    form.setFieldValue('software.icon.isCustom', isCustom);
-    form.setFieldValue('software.icon.filename', filename);
+    form.setFieldValue('software.icon', item.software.icon);
 
     if (isCustom) {
       if (form.values.software.key === '') {
@@ -104,7 +103,7 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
       icon={icon}
       limit={autoCompleteOptions.length}
       maxDropdownHeight={250}
-      autoFocus
+      data-autofocus
     />
   );
 }

@@ -5,13 +5,13 @@ import { User } from 'firebase/auth';
 import Fuse from 'fuse.js';
 
 declare module '@mantine/modals' {
-  export interface MantineModalsOverride {
+  interface MantineModalsOverride {
     modals: typeof modals;
   }
 }
 
-export type Hotkey = string[];
-export type Hotkeys = Hotkey[];
+type Hotkey = string[];
+type Hotkeys = Hotkey[];
 
 export interface Shortcut {
   id: string;
@@ -47,9 +47,7 @@ export type AddSoftwareFormValues = Omit<SoftwareShortcut, 'createdDate'> & {
 export type EditShortcutFormValues = Partial<Shortcut>;
 
 export type RemoveShortcutFormValues = { shortcuts: string[] };
-export type RemoveSoftwareFormValues = {
-  removedSoftwares: string[];
-};
+
 export type SearchShortcutFormValues = {
   searchTerm: string;
 };
@@ -78,10 +76,6 @@ export type StyledSvgProps = {
   src?: string;
 };
 
-export type SoftwareShortcutsState = {
-  softwareShortcuts: SoftwareShortcuts;
-};
-
 export type AppHeightState = {
   height: number;
   setHeight: (
@@ -96,8 +90,6 @@ export type ConnectedState = {
   loading: boolean;
   onConnected: () => void;
 };
-
-export type PlanType = 'basic' | 'efficient' | 'pro';
 
 export type DbUserData = {
   electronId: string;
@@ -138,9 +130,4 @@ export type FuseSearchState = {
 
   toggleSearchResults: () => void;
   reset: () => void;
-};
-
-export type GlobalLoadingState = {
-  loading: boolean;
-  setLoading: (loading?: boolean) => void;
 };

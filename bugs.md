@@ -31,3 +31,6 @@ Click on the name of the app. For example, Webpack App.
 If you don't see anything in the opened tab, focus on the window of your app.
 
 User data folder: /Users/yanyan/Library/Application Support/Electron
+
+
+We've opened a new browser tab for you to sign in. Once you've been authenticated you will automatically continue here.

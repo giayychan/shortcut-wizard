@@ -3,14 +3,13 @@ import { openContextModal } from '@mantine/modals';
 import { IconSettings } from '@tabler/icons-react';
 
 function SettingsButton() {
-  const title = 'Settings';
-
   return (
     <ActionIcon
       onClick={() => {
         openContextModal({
-          title,
           modal: 'openSettings',
+          fullScreen: true,
+          withCloseButton: false,
           innerProps: {},
         });
       }}

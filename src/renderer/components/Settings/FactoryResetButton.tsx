@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from 'react';
-import { Button } from '@mantine/core';
+import { Button, Flex, Text } from '@mantine/core';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import { notifyClientError } from '../../utils';
@@ -38,9 +38,12 @@ function FactoryResetButton({
   };
 
   return (
-    <Button color="red" uppercase onClick={handleClick}>
-      {confirmed ? 'Confirm Reset?' : 'Factory Reset'}
-    </Button>
+    <Flex gap={20}>
+      <Button onClick={handleClick} h={50} w={130} variant="light">
+        {confirmed ? 'Confirm Reset?' : 'Factory Reset'}
+      </Button>
+      <Text>This will reset your data to default settings.</Text>
+    </Flex>
   );
 }
 

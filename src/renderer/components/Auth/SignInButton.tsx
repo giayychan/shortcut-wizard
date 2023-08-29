@@ -92,7 +92,10 @@ function SignInButton() {
   const renderSignIn = signInLoading ? (
     <Flex align="center" direction="column" gap="xl">
       <Loader />
-      <Text>Redirecting you to sign in...</Text>
+      <Text>
+        We&apos;ve opened a new browser tab for you to sign in. Once you&apos;ve
+        been authenticated you will automatically continue here.
+      </Text>
       <Button onClick={handleCancelSignIn}>Cancel Sign in</Button>
     </Flex>
   ) : (

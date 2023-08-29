@@ -1,6 +1,13 @@
 import { z } from 'zod';
 import path from 'path';
-import { readJson, readdir, remove, statSync } from 'fs-extra';
+import {
+  exists,
+  readJson,
+  readdir,
+  remove,
+  statSync,
+  writeJson,
+} from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
 import {
@@ -9,6 +16,7 @@ import {
   getUserDataPath,
   logError,
   logSuccess,
+  writeCustomIconToDisk,
 } from '../../utils';
 import { SoftwareShortcut, SoftwareShortcuts } from '../../../../@types';
 import createSoftwareRouter from './create';
@@ -117,6 +125,51 @@ const softwareRouter = router({
       logSuccess(`Removed softwares - ${softwareList.join(', ')}`);
     } catch (error) {
       logError(`Couldn't remove softwares`, error);
+      throw error;
+    }
+  }),
+  update: publicProcedure.input(softwareSchema).mutation(async (opts) => {
+    const { input: data } = opts;
+    const {
+      software: { key, icon },
+    } = data;
+
+    const writeDse = getUserDataPath('shortcuts', `${key}.json`);
+    const originalData: SoftwareShortcut = await readJson(writeDse);
+    const localIconPath = icon.filename;
+
+    icon.filename = path.basename(icon.filename);
+    let desc = getUserDataPath('icons', icon.filename);
+
+    try {
+      if (icon.isCustom) {
+        const iconExisted = await exists(desc);
+
+        if (!iconExisted) {
+          icon.filename = `${icon.filename.split('.')[0]}-${Date.now()}.${
+            icon.filename.split('.')[1]
+          }`;
+          desc = getUserDataPath('icons', icon.filename);
+
+          await writeCustomIconToDisk(localIconPath, desc, () =>
+            remove(writeDse)
+          );
+
+          if (originalData.software.icon.isCustom) {
+            const originalIconPath = getUserDataPath(
+              'icons',
+              originalData.software.icon.filename
+            );
+            await remove(originalIconPath);
+          }
+        }
+      }
+
+      await writeJson(writeDse, data);
+
+      logSuccess(`Updated software - ${key}.json successfully`);
+    } catch (error) {
+      logError(`Couldn't update software`, error);
       throw error;
     }
   }),

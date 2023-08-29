@@ -3,7 +3,7 @@
 import { IpcRendererEvent, contextBridge, ipcRenderer } from 'electron';
 import { exposeElectronTRPC } from 'electron-trpc/main';
 
-export type Channels = 'window-resize';
+type Channels = 'window-resize';
 
 const electronHandler = {
   ipcRenderer: {

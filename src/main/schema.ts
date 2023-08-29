@@ -78,9 +78,7 @@ const shortcutValidation = (softwareShortcut: SoftwareShortcut) => {
   });
 };
 
-export { validate, shortcutValidation };
-
-export default schema;
+export default shortcutValidation;
 
 // @ts-ignore
 // const store = new Store<SoftwareShortcut[]>({ schema });

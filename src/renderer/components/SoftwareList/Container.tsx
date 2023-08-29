@@ -8,6 +8,7 @@ import {
 } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
 import { isEmpty } from 'lodash';
+import { openContextModal } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
@@ -130,7 +131,23 @@ function SoftwareListContainer() {
   if (isLoading) return <Skeleton h={70} />;
 
   if ((!isLoading && !softwareShortcuts) || isEmpty(softwareShortcuts))
-    return <Button>Add software shortcuts</Button>;
+    return (
+      <div className="ml-4 h-[70px]">
+        <Button
+          variant="outline"
+          onClick={() =>
+            openContextModal({
+              modal: 'openSettings',
+              fullScreen: true,
+              withCloseButton: false,
+              innerProps: {},
+            })
+          }
+        >
+          Add software shortcuts
+        </Button>
+      </div>
+    );
 
   return <SoftwareList softwareShortcuts={softwareShortcuts} />;
 }

@@ -32,7 +32,7 @@ const RESOURCES_PATH = app.isPackaged
 
 const USER_PATH = app.getPath('userData');
 
-export const getAssetPath = (...paths: string[]): string => {
+const getAssetPath = (...paths: string[]): string => {
   return path.join(RESOURCES_PATH, ...paths);
 };
 
@@ -40,13 +40,13 @@ export const getUserDataPath = (...paths: string[]): string => {
   return path.join(USER_PATH, ...paths);
 };
 
-export const { log } = console;
+const { log } = console;
 export const logError = (...text: unknown[]) =>
   log(chalk.bold.bgRedBright(text));
-export const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
-export const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
+const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
+const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
 
-export const createDataUri = (svg: string) =>
+const createDataUri = (svg: string) =>
   `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 
 export const mapSystemToReadable = (system: string) => {
@@ -81,7 +81,7 @@ export const registerGlobalOpenAppShortcut = () =>
     }
   });
 
-export const getBrowserWindowType = () => {
+const getBrowserWindowType = () => {
   let type;
 
   if (process.platform === 'darwin') {
@@ -95,11 +95,11 @@ export const getBrowserWindowType = () => {
   return type;
 };
 
-export const preloadPath = app.isPackaged
+const preloadPath = app.isPackaged
   ? path.join(__dirname, 'preload.js')
   : path.join(__dirname, '../../.erb/dll/preload.js');
 
-export const defaultWindowOptions = {
+const defaultWindowOptions = {
   type: getBrowserWindowType(),
   width: WIDTH,
   minWidth: WIDTH,
@@ -136,8 +136,8 @@ export const setMainBrowserWindow = () => {
 };
 
 export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
-export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
-export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
+const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
+const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');
 export const SYS_SOFTWARE_SHORTCUTS_DIR = getAssetPath(
   'data',
   'shortcuts',
@@ -250,5 +250,20 @@ export const initializeUserData = async () => {
     }
 
     store.set('opened', true);
+  }
+};
+
+export const writeCustomIconToDisk = async (
+  src: string,
+  desc: string,
+  errorCallback?: () => Promise<void>
+) => {
+  try {
+    await copy(src, desc);
+    logSuccess(`Copied custom icon to ${desc}`);
+  } catch (error: any) {
+    logError(`Couldn't write custom icon to ${desc} - ${error.message}`);
+    if (errorCallback) await errorCallback();
+    throw error;
   }
 };

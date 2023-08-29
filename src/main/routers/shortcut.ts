@@ -1,6 +1,6 @@
 import z from 'zod';
 import { writeJson } from 'fs-extra';
-import { shortcutValidation } from '../schema';
+import shortcutValidation from '../schema';
 import { getUserDataPath, logSuccess, logError } from '../utils';
 import { router, publicProcedure } from '../configs/trpc';
 import { Shortcut } from '../../../@types';

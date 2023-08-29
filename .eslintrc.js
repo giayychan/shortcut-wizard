@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'import/no-unused-modules': [1, { unusedExports: true }],
   },
   parserOptions: {
     ecmaVersion: 2020,
