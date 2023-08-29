@@ -137,6 +137,8 @@ function SoftwareListContainer() {
     if (selectedSoftware) {
       if (data) setSelectedSoftware(data[selectedSoftware.software.key]);
       else setSelectedSoftware(null);
+
+      // todo: remove search results
     }
   }, [selectedSoftware, setSelectedSoftware, data]);
 

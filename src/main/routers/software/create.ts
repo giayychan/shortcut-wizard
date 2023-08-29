@@ -39,7 +39,7 @@ const createAutoCompleteOptions = async (desc: string) => {
               ...json.software,
               icon,
             },
-            shortcuts: [],
+            shortcuts: json.shortcuts,
             value: key,
           };
         })
@@ -78,6 +78,7 @@ const createSoftwareRouter = router({
           );
 
         logSuccess(`fetchSoftwareAutoCompleteOptions - successfully`);
+
         return filteredExistingSoftwaresAutoCompleteOptions;
       } catch (error: any) {
         logError(`Couldn't fetchSoftwareAutoCompleteOptions: ${error}`);

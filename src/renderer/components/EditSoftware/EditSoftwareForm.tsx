@@ -8,13 +8,13 @@ import {
   Checkbox,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import { modals } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
 import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import trpcReact from '../../utils/trpc';
-import { modals } from '@mantine/modals';
 
 const FORM_DEFAULT_VALUES = {
   file: null,

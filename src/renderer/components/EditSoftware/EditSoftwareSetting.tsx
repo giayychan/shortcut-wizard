@@ -129,7 +129,7 @@ export default function EditSoftwareList() {
         />
       </Drawer>
       <Flex direction="column" h="100%" p="md" pt={40}>
-        <ScrollArea className="flex-1">
+        <ScrollArea className="flex-1" offsetScrollbars>
           <Flex direction="column" w="100%">
             <Checkbox
               disabled={!softwareList?.length}
