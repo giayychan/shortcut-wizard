@@ -8,22 +8,35 @@ const store = new Store();
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
     store.delete('opened');
-    store.delete('isAutoLaunchEnabled');
-    store.delete('sortedSoftwareList');
     await initializeUserData();
   }),
   autoLaunch: publicProcedure.input(z.boolean()).mutation(async (opts) => {
     const { input: enabled } = opts;
     await autoLaunch(enabled);
   }),
-  isAutoLaunchEnabled: publicProcedure
-    .output(z.boolean().optional())
+  sortSoftwareByRecentOpened: publicProcedure
+    .input(z.boolean())
+    .mutation(async (opts) => {
+      const { input: enabled } = opts;
+      store.set('sortSoftwareByRecentOpened', enabled);
+    }),
+  get: publicProcedure
+    .output(
+      z.object({
+        sortSoftwareByRecentOpened: z.boolean().optional(),
+        isAutoLaunchEnabled: z.boolean().optional(),
+      })
+    )
     .query(async () => {
       const isAutoLaunchEnabled = store.get('isAutoLaunchEnabled') as
         | boolean
         | undefined;
 
-      return isAutoLaunchEnabled;
+      const sortSoftwareByRecentOpened = store.get(
+        'sortSoftwareByRecentOpened'
+      ) as boolean | undefined;
+
+      return { isAutoLaunchEnabled, sortSoftwareByRecentOpened };
     }),
   processPlatform: publicProcedure
     .output(z.string().optional())

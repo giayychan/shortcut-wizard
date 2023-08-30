@@ -28,6 +28,7 @@ function FactoryResetButton({
     try {
       await factoryReset.mutateAsync();
       await utils.software.all.refetch();
+      await utils.settings.get.refetch();
       setSelectedSoftwareShortcut(null);
       resetFuseSearch();
       toggle(false);

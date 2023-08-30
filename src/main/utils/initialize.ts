@@ -63,7 +63,6 @@ const initializeUserData = async () => {
   const processPlatform = store.get('processPlatform');
 
   const opened = store.get('opened');
-  const isAutoLaunchEnabled = store.get('isAutoLaunchEnabled');
 
   if (!storeMachineId === undefined) {
     const id = await machineId();
@@ -73,11 +72,10 @@ const initializeUserData = async () => {
     store.set('processPlatform', process.platform);
   }
 
-  if (isAutoLaunchEnabled === undefined) {
-    await autoLaunch(true);
-  }
-
   if (opened === undefined) {
+    await autoLaunch(true);
+    store.set('sortSoftwareByRecentOpened', true);
+
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
       await remove(USER_CUSTOM_ICONS_DIR);

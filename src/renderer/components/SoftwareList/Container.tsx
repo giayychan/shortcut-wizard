@@ -19,6 +19,8 @@ function SoftwareList({
     state.setSelectedSoftwareShortcut,
   ]);
 
+  const { data: settings } = trpcReact.settings.get.useQuery();
+
   const { mutateAsync: updateMostRecent } =
     trpcReact.software.sort.updateMostRecent.useMutation();
 
@@ -31,13 +33,16 @@ function SoftwareList({
     if (selected?.software.key === key) {
       setSelected(null);
     } else {
-      await updateMostRecent(key);
       const selectedSoftwareData = softwareShortcuts.find(
         (softwareData) => softwareData.software.key === key
       );
       setSelected(selectedSoftwareData || null);
-      await utils.software.all.refetch();
-      scrollToLeft();
+
+      if (settings?.sortSoftwareByRecentOpened) {
+        await updateMostRecent(key);
+        await utils.software.all.refetch();
+        scrollToLeft();
+      }
     }
   };
 
