@@ -1,19 +1,18 @@
 import z from 'zod';
 import { writeJson } from 'fs-extra';
-import shortcutValidation from '../schema';
-import { getUserDataPath, logSuccess, logError } from '../utils';
+import { logSuccess, logError } from '../utils';
 import { router, publicProcedure } from '../configs/trpc';
-import { Shortcut } from '../../../@types';
 import { softwareCaller } from './software';
+import { getUserDataPath } from '../utils/path';
+import { ShortcutSchema } from '../schema/software';
 
-const shortcutInputSchema = z.object({
+const ShortcutInputSchema = z.object({
   softwareKey: z.string(),
-  // todo: check this type
-  shortcut: z.custom<Shortcut>(),
+  shortcut: ShortcutSchema,
 });
 
 const shortcutRouter = router({
-  create: publicProcedure.input(shortcutInputSchema).mutation(async (opts) => {
+  create: publicProcedure.input(ShortcutInputSchema).mutation(async (opts) => {
     const { input } = opts;
     const { softwareKey: key, shortcut } = input;
 
@@ -22,8 +21,6 @@ const shortcutRouter = router({
       softwareShortcut.shortcuts = [...softwareShortcut.shortcuts, shortcut];
 
       const writeDse = getUserDataPath('shortcuts', `${key}.json`);
-
-      await shortcutValidation(softwareShortcut);
 
       await writeJson(writeDse, softwareShortcut);
       logSuccess(`Added user shortcuts - ${key}.json`);
@@ -34,7 +31,7 @@ const shortcutRouter = router({
       throw error;
     }
   }),
-  update: publicProcedure.input(shortcutInputSchema).mutation(async (opts) => {
+  update: publicProcedure.input(ShortcutInputSchema).mutation(async (opts) => {
     const { input } = opts;
     const { softwareKey: key, shortcut } = input;
     try {
@@ -45,8 +42,6 @@ const shortcutRouter = router({
       softwareShortcut.shortcuts[updateIndex] = shortcut;
 
       const writeDse = getUserDataPath('shortcuts', `${key}.json`);
-
-      await shortcutValidation(softwareShortcut);
 
       await writeJson(writeDse, softwareShortcut);
       logSuccess(`Update user shortcuts - ${key}.json`);
@@ -61,8 +56,7 @@ const shortcutRouter = router({
     .input(
       z.object({
         softwareKey: z.string(),
-        // todo: check this type
-        shortcuts: z.custom<Shortcut[]>(),
+        shortcuts: z.array(ShortcutSchema),
       })
     )
     .mutation(async (opts) => {

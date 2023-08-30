@@ -89,7 +89,7 @@ function SearchShortcutContainer() {
         icon={<IconSearch size="1.25rem" />}
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.currentTarget.value)}
-        placeholder="Search shortcut description or software name"
+        placeholder="Search shortcut description"
       />
     </form>
   );

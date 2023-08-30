@@ -4,10 +4,7 @@ import { outputJson, readJson, readdir, remove } from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
 import { logError, logSuccess } from '../../utils';
-import {
-  AddSoftwareAutocompleteOption,
-  SoftwareShortcut,
-} from '../../../../@types';
+import { AddSoftwareAutocompleteOption } from '../../../../@types';
 import { AUTO_COMPLETE_CUSTOM_OPTION } from '../../constants';
 import { getIconFile, writeCustomIconToDisk } from '../../utils/icon';
 import {
@@ -15,6 +12,7 @@ import {
   USER_SOFTWARE_SHORTCUTS_DIR,
   getUserDataPath,
 } from '../../utils/path';
+import { SoftwareSchema } from '../../schema/software';
 
 const createAutoCompleteOptions = async (desc: string) => {
   try {
@@ -52,10 +50,17 @@ const createAutoCompleteOptions = async (desc: string) => {
   }
 };
 
+const autoCompleteSchema = SoftwareSchema.omit({ createdDate: true });
+
 const createSoftwareRouter = router({
   options: publicProcedure
-    // todo: check data
-    .output(z.custom<AddSoftwareAutocompleteOption[]>())
+    .output(
+      z.array(
+        autoCompleteSchema.extend({
+          value: z.string(),
+        })
+      )
+    )
     .query(async () => {
       try {
         const autoCompleteOptions = await createAutoCompleteOptions(
@@ -83,59 +88,54 @@ const createSoftwareRouter = router({
         throw error;
       }
     }),
-  software: publicProcedure
-    .input(
-      // todo: check data
-      z.custom<SoftwareShortcut>()
-    )
-    .mutation(async (opts) => {
-      const data = opts.input;
-      const { software, shortcuts } = data;
+  software: publicProcedure.input(SoftwareSchema).mutation(async (opts) => {
+    const data = opts.input;
+    const { software, shortcuts } = data;
 
-      const { icon, key } = software;
+    const { icon, key } = software;
 
-      if (!key) throw Error('softwareKey is required');
+    if (!key) throw Error('softwareKey is required');
 
-      if (!shortcuts) throw Error('shortcuts is required');
+    if (!shortcuts) throw Error('shortcuts is required');
 
-      const writeDse = getUserDataPath('shortcuts', `${key}.json`);
+    const writeDse = getUserDataPath('shortcuts', `${key}.json`);
 
-      const localIconPath = icon.filename;
+    const localIconPath = icon.filename;
 
-      icon.filename = path.basename(icon.filename);
+    icon.filename = path.basename(icon.filename);
 
-      try {
-        const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+    try {
+      const existingSoftwares = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
 
-        const found = existingSoftwares.some((existedS) => {
-          const [softwareKey] = existedS.split('.');
-          return softwareKey.toLowerCase() === key.toLowerCase();
-        });
+      const found = existingSoftwares.some((existedS) => {
+        const [softwareKey] = existedS.split('.');
+        return softwareKey.toLowerCase() === key.toLowerCase();
+      });
 
-        if (found) throw Error('software already exists');
+      if (found) throw Error('software already exists');
 
-        let desc = getUserDataPath('icons', icon.filename);
+      let desc = getUserDataPath('icons', icon.filename);
 
-        if (icon.isCustom) {
-          icon.filename = `${icon.filename.split('.')[0]}-${Date.now()}.${
-            icon.filename.split('.')[1]
-          }`;
+      if (icon.isCustom) {
+        icon.filename = `${icon.filename.split('.')[0]}-${Date.now()}.${
+          icon.filename.split('.')[1]
+        }`;
 
-          desc = getUserDataPath('icons', icon.filename);
+        desc = getUserDataPath('icons', icon.filename);
 
-          await writeCustomIconToDisk(localIconPath, desc, () =>
-            remove(writeDse)
-          );
-        }
-
-        await outputJson(writeDse, data);
-
-        logSuccess(`Added software - ${key}.json`);
-      } catch (error) {
-        logError(`Couldn't add software - ${key}.json`, error);
-        throw error;
+        await writeCustomIconToDisk(localIconPath, desc, () =>
+          remove(writeDse)
+        );
       }
-    }),
+
+      await outputJson(writeDse, data);
+
+      logSuccess(`Added software - ${key}.json`);
+    } catch (error) {
+      logError(`Couldn't add software - ${key}.json`, error);
+      throw error;
+    }
+  }),
 });
 
 export default createSoftwareRouter;

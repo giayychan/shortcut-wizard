@@ -3,25 +3,20 @@ import Store from 'electron-store';
 
 import { router, publicProcedure } from '../configs/trpc';
 import { DbUserData } from '../../../@types';
+import { userSchema } from '../schema/user';
 
 const store = new Store();
 
 const userRouter = router({
   getPaidUser: publicProcedure
-    .output(
-      // todo: need to check data
-      z.custom<DbUserData>().nullable()
-    )
+    .output(z.custom<DbUserData>().nullable())
     .query(() => {
       const paidUser = store.get('paidUser') as DbUserData | undefined;
 
       return paidUser || null;
     }),
   updatePaidUser: publicProcedure
-    .input(
-      // todo: need to check data
-      z.custom<DbUserData>().optional()
-    )
+    .input(userSchema.optional())
     .mutation((opts) => {
       const { input: paidUser } = opts;
 

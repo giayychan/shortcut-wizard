@@ -11,32 +11,11 @@ import {
 
 import { router, publicProcedure } from '../../configs/trpc';
 import { logError, logSuccess } from '../../utils';
-import { SoftwareShortcut, SoftwareShortcuts } from '../../../../@types';
+import { SoftwareShortcut } from '../../../../@types';
 import createSoftwareRouter from './create';
 import { getUserDataPath, USER_SOFTWARE_SHORTCUTS_DIR } from '../../utils/path';
 import { getIconFile, writeCustomIconToDisk } from '../../utils/icon';
-
-const softwareSchema = z.object({
-  software: z.object({
-    key: z.string(),
-    icon: z.object({
-      isCustom: z.boolean(),
-      filename: z.string(),
-      dataUri: z.string().optional(),
-    }),
-  }),
-  shortcuts: z.array(
-    z.object({
-      id: z.string(),
-      description: z.string(),
-      hotkeys: z.array(z.array(z.string())),
-      isFavorite: z.boolean(),
-    })
-  ),
-  createdDate: z.string(),
-});
-
-const allSoftwaresSchema = z.record(z.string(), softwareSchema);
+import { SoftwareSchema, AllSoftwaresSchema } from '../../schema/software';
 
 const softwareRouter = router({
   byKey: publicProcedure
@@ -45,7 +24,7 @@ const softwareRouter = router({
         key: z.string(),
       })
     )
-    .output(softwareSchema)
+    .output(SoftwareSchema)
     .query(async (opts) => {
       const {
         input: { key },
@@ -66,25 +45,32 @@ const softwareRouter = router({
         throw error;
       }
     }),
-  all: publicProcedure.output(allSoftwaresSchema).query(async () => {
+  all: publicProcedure.output(AllSoftwaresSchema).query(async () => {
     try {
       const files = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
 
-      const softwareShortcuts: SoftwareShortcuts = {};
-
-      await Promise.all(
-        files.map(async (file) => {
-          if (path.extname(file).toLowerCase() === '.json') {
-            const filePath = getUserDataPath('shortcuts', file);
+      const softwareShortcutsPromises = files.reduce(
+        async (arr: Promise<SoftwareShortcut[]>, filename) => {
+          if (path.extname(filename).toLowerCase() === '.json') {
+            const filePath = getUserDataPath('shortcuts', filename);
             const data: SoftwareShortcut = await readJson(filePath);
             const createdDate = statSync(filePath).birthtime.toISOString();
 
             const icon = await getIconFile(data.software.icon);
             data.software.icon = icon;
-            softwareShortcuts[data.software.key] = { ...data, createdDate };
+
+            const newArr = await arr; // Wait for the promise to resolve
+            newArr.push({ ...data, createdDate });
+
+            return newArr;
           }
-        })
+
+          return arr;
+        },
+        Promise.resolve([])
       );
+
+      const softwareShortcuts = await softwareShortcutsPromises;
 
       logSuccess('fetched software shortcuts successfully');
 
@@ -112,7 +98,7 @@ const softwareRouter = router({
       throw error;
     }
   }),
-  update: publicProcedure.input(softwareSchema).mutation(async (opts) => {
+  update: publicProcedure.input(SoftwareSchema).mutation(async (opts) => {
     const { input: data } = opts;
     const {
       software: { key, icon },
