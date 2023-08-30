@@ -32,10 +32,8 @@ export default function EditSoftwareList() {
   const { mutateAsync: deleteSoftware, isLoading: isDeleting } =
     trpcReact.software.delete.useMutation();
 
-  const softwareList = Object.keys(softwareShortcuts || {});
-
-  const data = softwareList?.map((softwareKey) => {
-    return { label: softwareKey, checked: false, key: softwareKey };
+  const data = softwareShortcuts?.map(({ software }) => {
+    return { label: software.key, checked: false, key: software.key };
   });
 
   const [values, handlers] = useListState(data);
@@ -48,42 +46,48 @@ export default function EditSoftwareList() {
     setSelectedSoftwareShortcut(softwareShortcut);
   };
 
-  const items = values?.map((value, index) => (
-    <Flex align="center" key={value.key}>
-      <Checkbox
-        mt="xs"
-        ml={33}
-        label={
-          <Group>
-            <ThemeIcon color="dark" variant="light">
-              {softwareShortcuts && softwareShortcuts[value.key] ? (
-                <StyledSvg
-                  src={softwareShortcuts[value.key].software.icon.dataUri}
-                />
-              ) : null}
-            </ThemeIcon>
-            <Text size="md">{value.key}</Text>
-          </Group>
-        }
-        key={value.key}
-        checked={value.checked}
-        onChange={(event) =>
-          handlers.setItemProp(index, 'checked', event.currentTarget.checked)
-        }
-      />
-      <ActionIcon
-        ml="auto"
-        variant="light"
-        onClick={() =>
-          handleClick(
-            softwareShortcuts ? softwareShortcuts[value.key] : undefined
-          )
-        }
-      >
-        <IconEdit size="1rem" />
-      </ActionIcon>
-    </Flex>
-  ));
+  const items = values?.map((value, index) => {
+    const selected = softwareShortcuts?.find((softwareShortcut) => {
+      return softwareShortcut.software.key === value.key;
+    });
+
+    return (
+      <Flex align="center" key={value.key}>
+        <Checkbox
+          mt="xs"
+          ml={33}
+          label={
+            <Group>
+              <ThemeIcon color="dark" variant="light">
+                {selected ? (
+                  <StyledSvg src={selected.software.icon.dataUri} />
+                ) : null}
+              </ThemeIcon>
+              <Text size="md">{value.key}</Text>
+            </Group>
+          }
+          key={value.key}
+          checked={value.checked}
+          onChange={(event) =>
+            handlers.setItemProp(index, 'checked', event.currentTarget.checked)
+          }
+        />
+        <ActionIcon
+          ml="auto"
+          variant="light"
+          onClick={() =>
+            handleClick(
+              softwareShortcuts?.find((softwareShortcut) => {
+                return softwareShortcut.software.key === value.key;
+              })
+            )
+          }
+        >
+          <IconEdit size="1rem" />
+        </ActionIcon>
+      </Flex>
+    );
+  });
 
   const handleDelete = async () => {
     if (confirmed) {
@@ -132,7 +136,7 @@ export default function EditSoftwareList() {
         <ScrollArea className="flex-1" offsetScrollbars>
           <Flex direction="column" w="100%">
             <Checkbox
-              disabled={!softwareList?.length}
+              disabled={!softwareShortcuts?.length}
               checked={allChecked}
               indeterminate={indeterminate}
               label="Select All"
@@ -150,7 +154,9 @@ export default function EditSoftwareList() {
           <Button
             compact
             color="orange"
-            disabled={(!indeterminate && !allChecked) || !softwareList?.length}
+            disabled={
+              (!indeterminate && !allChecked) || !softwareShortcuts?.length
+            }
             onClick={handleDelete}
             loading={isDeleting}
           >

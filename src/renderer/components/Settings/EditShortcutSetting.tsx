@@ -55,7 +55,9 @@ function EditShortcutSetting() {
     globalSelectedSoftware ? globalSelectedSoftware.software.key : ''
   );
 
-  const softwareList = ['', ...Object.keys(softwareShortcuts || {})];
+  const selectedSoftware = softwareShortcuts?.find((softwareShortcut) => {
+    return softwareShortcut.software.key === value;
+  });
 
   const { mutateAsync, isLoading } = trpcReact.shortcut.delete.useMutation();
 
@@ -86,18 +88,18 @@ function EditShortcutSetting() {
     if (!softwareShortcuts) return;
 
     try {
-      const removedShortcuts = softwareShortcuts[value].shortcuts?.filter(
-        (shortcut) => {
-          return shortcuts.includes(shortcut.id);
-        }
-      );
-
-      await mutateAsync({
-        softwareKey: softwareShortcuts[value].software.key,
-        shortcuts: removedShortcuts,
-      });
-      await utils.software.all.refetch();
-
+      if (selectedSoftware) {
+        const removedShortcuts = selectedSoftware.shortcuts.filter(
+          (shortcut) => {
+            return shortcuts.includes(shortcut.id);
+          }
+        );
+        await mutateAsync({
+          softwareKey: selectedSoftware.software.key,
+          shortcuts: removedShortcuts,
+        });
+        await utils.software.all.refetch();
+      }
       handleCancel();
     } catch (error: any) {
       form.setFieldError('shortcuts', error.message);
@@ -110,8 +112,8 @@ function EditShortcutSetting() {
     const { shortcuts } = form.values;
 
     try {
-      const updatedShortcuts = softwareShortcuts[value].shortcuts?.map(
-        (shortcut) => {
+      if (selectedSoftware) {
+        const updatedShortcuts = selectedSoftware.shortcuts?.map((shortcut) => {
           if (shortcuts.includes(shortcut.id)) {
             return {
               ...shortcut,
@@ -119,13 +121,13 @@ function EditShortcutSetting() {
             };
           }
           return shortcut;
-        }
-      );
+        });
 
-      softwareShortcuts[value].shortcuts = updatedShortcuts;
+        selectedSoftware.shortcuts = updatedShortcuts;
 
-      await bulkFavorite(softwareShortcuts[value]);
-      await utils.software.all.refetch();
+        await bulkFavorite(selectedSoftware);
+        await utils.software.all.refetch();
+      }
 
       handleCancel();
     } catch (error: any) {
@@ -138,6 +140,14 @@ function EditShortcutSetting() {
     setShortcutId('');
     setSoftwareKey('');
   };
+  const selectedOption = softwareShortcuts
+    ? [
+        '',
+        ...softwareShortcuts.map((softwareShortcut) => {
+          return softwareShortcut.software.key;
+        }),
+      ]
+    : [''];
 
   return (
     <Aside>
@@ -160,13 +170,9 @@ function EditShortcutSetting() {
         <EditShortcut
           close={close}
           softwareKey={softwareKey}
-          shortcut={
-            softwareShortcuts && softwareShortcuts[softwareKey]
-              ? softwareShortcuts[softwareKey].shortcuts.find(
-                  (shortcut: Shortcut) => shortcut.id === shortcutId
-                )
-              : undefined
-          }
+          shortcut={selectedSoftware?.shortcuts.find(
+            (shortcut: Shortcut) => shortcut.id === shortcutId
+          )}
         />
       </Drawer>
       <Box<'form'>
@@ -178,30 +184,27 @@ function EditShortcutSetting() {
         onSubmit={form.onSubmit(handleSubmit)}
       >
         <NativeSelect
-          disabled={softwareList.length === 1}
+          disabled={selectedOption.length === 1}
           value={value}
           onChange={(event) => setValue(event.currentTarget.value)}
-          data={softwareList}
+          data={selectedOption}
           label="Select software to edit its shortcut"
           variant="filled"
           radius="md"
           withAsterisk
           icon={
-            softwareShortcuts && softwareShortcuts[value] ? (
-              <StyledSvg src={softwareShortcuts[value].software.icon.dataUri} />
+            selectedSoftware ? (
+              <StyledSvg src={selectedSoftware.software.icon.dataUri} />
             ) : null
           }
         />
         <Divider mt="xs" />
 
         <ScrollArea className="flex-1" offsetScrollbars>
-          {value &&
-          softwareShortcuts &&
-          softwareShortcuts[value] &&
-          softwareShortcuts[value].shortcuts?.length ? (
+          {value && selectedSoftware && selectedSoftware.shortcuts?.length ? (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <Checkbox.Group {...form.getInputProps('shortcuts')}>
-              {softwareShortcuts[value].shortcuts.map((shortcut) => {
+              {selectedSoftware.shortcuts.map((shortcut) => {
                 const { description, id, hotkeys, isFavorite } = shortcut;
 
                 return (

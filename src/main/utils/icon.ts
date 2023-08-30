@@ -18,7 +18,7 @@ export const getIconFile = async (icon: IconData) => {
     });
 
     const dataUri = createDataUri(res);
-    logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
+    // logSuccess(`Got ${isCustom ? 'user' : 'system'} ${filename} icons `);
 
     return { ...icon, dataUri };
   } catch (error) {

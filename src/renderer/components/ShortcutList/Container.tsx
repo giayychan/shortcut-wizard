@@ -22,7 +22,7 @@ const listStyles = {
 
 function ScrollableListWrapper({ children }: { children: ReactNode }) {
   return (
-    <ScrollArea.Autosize m="md">
+    <ScrollArea.Autosize p="md">
       <List mx={6} spacing="lg" size="sm" center styles={listStyles}>
         {children}
       </List>

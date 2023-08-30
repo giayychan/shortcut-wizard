@@ -3,10 +3,16 @@ import Fuse from 'fuse.js';
 import { useDebouncedValue } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
-import { TextInput } from '@mantine/core';
+import { CloseButton, TextInput } from '@mantine/core';
 import useFuseSearchStore from '../../stores/useFuseSearch';
-import { FlattenShortcut, SearchShortcutFormValues } from '../../../../@types';
+import {
+  FlattenShortcut,
+  SearchShortcutFormValues,
+  SoftwareShortcut,
+} from '../../../../@types';
 import trpc from '../../utils/trpc';
+import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
+import StyledSvg from '../common/StyledSvg';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -32,13 +38,17 @@ function SearchShortcutContainer() {
       state.setSearchTerm,
     ]);
 
+  const selectedSoftwareShortcut = useSelectedShortcutsStore(
+    (state) => state.selectedSoftwareShortcut
+  );
+
   const [debounced] = useDebouncedValue(searchTerm, 500);
 
-  const flattenShortcutWithSoftwareDataArray = useMemo(() => {
+  const flattenSearchData = useMemo(() => {
     if (!softwareShortcuts) return [];
-    return Object.keys(softwareShortcuts).reduce(
-      (prev: FlattenShortcut[], curr: string) => {
-        const { software, shortcuts, createdDate } = softwareShortcuts[curr];
+    return softwareShortcuts.reduce(
+      (prev: FlattenShortcut[], curr: SoftwareShortcut) => {
+        const { software, shortcuts, createdDate } = curr;
 
         const shortcutsArray = shortcuts.map((shortcut) => ({
           ...shortcut,
@@ -53,12 +63,17 @@ function SearchShortcutContainer() {
     );
   }, [softwareShortcuts]);
 
-  console.log({ flattenShortcutWithSoftwareDataArray });
+  const fuse = useMemo(() => {
+    let searchData = flattenSearchData;
 
-  const fuse = useMemo(
-    () => new Fuse(flattenShortcutWithSoftwareDataArray, options),
-    [flattenShortcutWithSoftwareDataArray]
-  );
+    if (selectedSoftwareShortcut) {
+      searchData = flattenSearchData.filter((d) => {
+        return d.software.key === selectedSoftwareShortcut?.software.key;
+      });
+    }
+
+    return new Fuse(searchData, options);
+  }, [flattenSearchData, selectedSoftwareShortcut]);
 
   const handleChange = useCallback(
     (debouncedSearchTerm: string) => {
@@ -83,12 +98,25 @@ function SearchShortcutContainer() {
     handleChange(searchTerm);
   }, [searchTerm, handleChange]);
 
+  const reset = () => {
+    setResults([]);
+    setSearchTerm('');
+    setShowSearchResults(false);
+  };
+
   return (
     <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1">
       <TextInput
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
-        icon={<IconSearch size="1.25rem" />}
+        rightSection={<CloseButton onClick={reset} />}
+        icon={
+          selectedSoftwareShortcut ? (
+            <StyledSvg src={selectedSoftwareShortcut?.software.icon.dataUri} />
+          ) : (
+            <IconSearch size="1.25rem" />
+          )
+        }
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.currentTarget.value)}
         placeholder="Search shortcut description"

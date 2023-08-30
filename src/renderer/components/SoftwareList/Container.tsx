@@ -7,45 +7,90 @@ import {
   Skeleton,
 } from '@mantine/core';
 import { IconInputSearch } from '@tabler/icons-react';
-import { isEmpty } from 'lodash';
 import { openContextModal } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
-import { SoftwareShortcut, SoftwareShortcuts } from '../../../../@types';
+import { SoftwareShortcut } from '../../../../@types';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import trpcReact from '../../utils/trpc';
 
 function SoftwareList({
   softwareShortcuts,
 }: {
-  softwareShortcuts: SoftwareShortcuts;
+  softwareShortcuts: SoftwareShortcut[];
+}) {
+  const [selected, setSelected] = useSelectedShortcutsStore((state) => [
+    state.selectedSoftwareShortcut,
+    state.setSelectedSoftwareShortcut,
+  ]);
+
+  if (softwareShortcuts.length === 0) return null;
+
+  const handleSelect = (key: string) => {
+    if (selected?.software.key === key) {
+      setSelected(null);
+    } else {
+      const selectedSoftwareData = softwareShortcuts.find(
+        (softwareData) => softwareData.software.key === key
+      );
+      setSelected(selectedSoftwareData || null);
+    }
+  };
+
+  return (
+    <ScrollArea type="auto" scrollbarSize={5} offsetScrollbars>
+      <div className="flex flex-row px-3.5 overflow-auto">
+        {softwareShortcuts.map((softwareData) => {
+          const { software } = softwareData;
+          const { key, icon } = software;
+          const isSelected = selected?.software.key === key;
+
+          return (
+            <Button
+              h={60}
+              variant={isSelected ? 'light' : 'subtle'}
+              onClick={() => handleSelect(key)}
+            >
+              <Flex
+                direction="column"
+                align="center"
+                className="capitalize"
+                gap={5}
+              >
+                <StyledSvg src={icon.dataUri} />
+                {key}
+              </Flex>
+            </Button>
+          );
+        })}
+      </div>
+    </ScrollArea>
+  );
+}
+
+function SoftwareListOld({
+  softwareShortcuts,
+}: {
+  softwareShortcuts: SoftwareShortcut[];
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
-  const softwareList = Object.keys(softwareShortcuts);
+  const softwares = softwareShortcuts.map((softwareData) => {
+    const { software } = softwareData;
+    const { key, icon } = software;
+    const { dataUri } = icon;
 
-  const softwares = softwareList
-    .sort((a, b) => {
-      const createdDateA = Date.parse(softwareShortcuts[a].createdDate);
-      const createdDateB = Date.parse(softwareShortcuts[b].createdDate);
-      return createdDateA - createdDateB;
-    })
-    .map((softwareKey) => {
-      const { software } = softwareShortcuts[softwareKey];
-      const { key, icon } = software;
-      const { dataUri } = icon;
-
-      return {
-        value: key,
-        label: dataUri ? (
-          <Flex direction="column" align="center" className="capitalize">
-            <StyledSvg src={dataUri} />
-            {key}
-          </Flex>
-        ) : null,
-      };
-    });
+    return {
+      value: key,
+      label: dataUri ? (
+        <Flex direction="column" align="center" className="capitalize">
+          <StyledSvg src={dataUri} />
+          {key}
+        </Flex>
+      ) : null,
+    };
+  });
 
   const {
     isSearchResultsShow,
@@ -73,6 +118,7 @@ function SoftwareList({
 
   const handleClick = (e: any) => {
     const { value } = e.target;
+
     if (value) {
       const isSearch = value === 'search';
       if (isSearch) {
@@ -135,8 +181,15 @@ function SoftwareListContainer() {
 
   useEffect(() => {
     if (selectedSoftware) {
-      if (data) setSelectedSoftware(data[selectedSoftware.software.key]);
-      else setSelectedSoftware(null);
+      if (data) {
+        const updatedSelectedSoftware = data.find((softwareShortcut) => {
+          return (
+            softwareShortcut.software.key === selectedSoftware.software.key
+          );
+        });
+        if (updatedSelectedSoftware)
+          setSelectedSoftware(updatedSelectedSoftware);
+      } else setSelectedSoftware(null);
 
       // todo: remove search results
     }
@@ -144,7 +197,7 @@ function SoftwareListContainer() {
 
   if (isLoading) return <Skeleton h={70} />;
 
-  if ((!isLoading && !data) || isEmpty(data))
+  if (!data?.length)
     return (
       <div className="ml-4 h-[70px]">
         <Button

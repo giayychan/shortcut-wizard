@@ -1,10 +1,9 @@
 import { ReactNode, useEffect } from 'react';
-import { Flex, Paper } from '@mantine/core';
+import { Paper } from '@mantine/core';
 import { useDebouncedState, useResizeObserver } from '@mantine/hooks';
 import { useModals } from '@mantine/modals';
 import { MAX_HEIGHT } from 'main/constants';
 
-import TitleBar from './TitleBar';
 import trpcReact from '../utils/trpc';
 
 function Layout({ children }: { children: ReactNode }) {
@@ -28,12 +27,7 @@ function Layout({ children }: { children: ReactNode }) {
     mutate({ height: roundedH });
   }, [isModalOpen, mutate, height]);
 
-  return (
-    <Paper ref={ref}>
-      <TitleBar />
-      <Flex direction="column">{children}</Flex>
-    </Paper>
-  );
+  return <Paper ref={ref}>{children}</Paper>;
 }
 
 export default Layout;

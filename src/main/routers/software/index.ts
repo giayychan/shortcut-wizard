@@ -74,7 +74,13 @@ const softwareRouter = router({
 
       logSuccess('fetched software shortcuts successfully');
 
-      return softwareShortcuts;
+      const sortedByCreatedDate = softwareShortcuts.sort((a, b) => {
+        const createdDateA = Date.parse(a.createdDate);
+        const createdDateB = Date.parse(b.createdDate);
+        return createdDateA - createdDateB;
+      });
+
+      return sortedByCreatedDate;
     } catch (error) {
       logError("Couldn't fetch all software shortcuts:", error);
       throw error;

@@ -5,7 +5,7 @@ import LOGO from '../../../assets/borderlesslogo.png';
 export default function TitleBar() {
   return (
     <Flex
-      bg="dark.6"
+      // bg="dark.6"
       justify="center"
       align="center"
       h={35}
