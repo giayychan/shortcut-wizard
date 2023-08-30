@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import Store from 'electron-store';
 import { router, publicProcedure } from '../configs/trpc';
-import { autoLaunch, initializeUserData } from '../utils';
+import initializeUserData, { autoLaunch } from '../utils/initialize';
 
 const store = new Store();
 

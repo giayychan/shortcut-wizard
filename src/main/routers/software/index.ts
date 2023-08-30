@@ -10,16 +10,11 @@ import {
 } from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
-import {
-  USER_SOFTWARE_SHORTCUTS_DIR,
-  getIconFile,
-  getUserDataPath,
-  logError,
-  logSuccess,
-  writeCustomIconToDisk,
-} from '../../utils';
+import { logError, logSuccess } from '../../utils';
 import { SoftwareShortcut, SoftwareShortcuts } from '../../../../@types';
 import createSoftwareRouter from './create';
+import { getUserDataPath, USER_SOFTWARE_SHORTCUTS_DIR } from '../../utils/path';
+import { getIconFile, writeCustomIconToDisk } from '../../utils/icon';
 
 const softwareSchema = z.object({
   software: z.object({
@@ -42,8 +37,6 @@ const softwareSchema = z.object({
 });
 
 const allSoftwaresSchema = z.record(z.string(), softwareSchema);
-
-const softwareKeyListSchema = z.array(z.string());
 
 const softwareRouter = router({
   byKey: publicProcedure
@@ -73,15 +66,6 @@ const softwareRouter = router({
         throw error;
       }
     }),
-  keyList: publicProcedure.output(softwareKeyListSchema).query(async () => {
-    try {
-      const filenames = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
-      return filenames;
-    } catch (error: any) {
-      logError(`Couldn't software keyList: ${error}`);
-      throw error;
-    }
-  }),
   all: publicProcedure.output(allSoftwaresSchema).query(async () => {
     try {
       const files = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);

@@ -16,14 +16,11 @@ import { app, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
-import {
-  initializeUserData,
-  registerGlobalOpenAppShortcut,
-  resolveHtmlPath,
-  setMainBrowserWindow,
-} from './utils';
+import { registerGlobalOpenAppShortcut, setMainBrowserWindow } from './utils';
 import mainWindow from './mainWindow';
 import { appRouter as router } from './routers/_app';
+import { resolveHtmlPath } from './utils/path';
+import initializeUserData from './utils/initialize';
 
 class AppUpdater {
   constructor() {

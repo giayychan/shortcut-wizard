@@ -101,7 +101,7 @@ function SoftwareList({
   if (!data?.length) return null;
 
   return (
-    <ScrollArea type="always" scrollbarSize={6} offsetScrollbars>
+    <ScrollArea type="auto" scrollbarSize={6} offsetScrollbars>
       <SegmentedControl
         ref={ref}
         transitionDuration={300}

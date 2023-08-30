@@ -60,13 +60,13 @@ const LINK_DATA = [
   {
     icon: <IconDatabaseEdit size="1rem" />,
     color: 'teal',
-    label: 'Edit Software',
+    label: 'Software',
     component: <EditSoftwareSetting />,
   },
   {
     icon: <IconEditCircle size="1rem" />,
     color: 'violet',
-    label: 'Edit Shortcut',
+    label: 'Shortcut',
     component: <EditShortcutSetting />,
   },
   {

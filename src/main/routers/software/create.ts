@@ -3,20 +3,18 @@ import path from 'path';
 import { outputJson, readJson, readdir, remove } from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
-import {
-  SYS_SOFTWARE_SHORTCUTS_DIR,
-  USER_SOFTWARE_SHORTCUTS_DIR,
-  getIconFile,
-  getUserDataPath,
-  logError,
-  logSuccess,
-  writeCustomIconToDisk,
-} from '../../utils';
+import { logError, logSuccess } from '../../utils';
 import {
   AddSoftwareAutocompleteOption,
   SoftwareShortcut,
 } from '../../../../@types';
 import { AUTO_COMPLETE_CUSTOM_OPTION } from '../../constants';
+import { getIconFile, writeCustomIconToDisk } from '../../utils/icon';
+import {
+  SYS_SOFTWARE_SHORTCUTS_DIR,
+  USER_SOFTWARE_SHORTCUTS_DIR,
+  getUserDataPath,
+} from '../../utils/path';
 
 const createAutoCompleteOptions = async (desc: string) => {
   try {
