@@ -1,18 +1,10 @@
 import { useEffect, useRef } from 'react';
-import {
-  Button,
-  Flex,
-  ScrollArea,
-  SegmentedControl,
-  Skeleton,
-} from '@mantine/core';
-import { IconInputSearch } from '@tabler/icons-react';
+import { Button, Flex, ScrollArea, Skeleton } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import { SoftwareShortcut } from '../../../../@types';
-import useFuseSearchStore from '../../stores/useFuseSearch';
 import trpcReact from '../../utils/trpc';
 
 function SoftwareList({
@@ -20,26 +12,42 @@ function SoftwareList({
 }: {
   softwareShortcuts: SoftwareShortcut[];
 }) {
+  const viewport = useRef<HTMLDivElement>(null);
+  const utils = trpcReact.useContext();
   const [selected, setSelected] = useSelectedShortcutsStore((state) => [
     state.selectedSoftwareShortcut,
     state.setSelectedSoftwareShortcut,
   ]);
 
+  const { mutateAsync: updateMostRecent } =
+    trpcReact.software.sort.updateMostRecent.useMutation();
+
+  const scrollToLeft = () =>
+    viewport.current?.scrollTo({ left: 0, behavior: 'smooth' });
+
   if (softwareShortcuts.length === 0) return null;
 
-  const handleSelect = (key: string) => {
+  const handleSelect = async (key: string) => {
     if (selected?.software.key === key) {
       setSelected(null);
     } else {
+      await updateMostRecent(key);
       const selectedSoftwareData = softwareShortcuts.find(
         (softwareData) => softwareData.software.key === key
       );
       setSelected(selectedSoftwareData || null);
+      await utils.software.all.refetch();
+      scrollToLeft();
     }
   };
 
   return (
-    <ScrollArea type="auto" scrollbarSize={5} offsetScrollbars>
+    <ScrollArea
+      type="auto"
+      scrollbarSize={5}
+      offsetScrollbars
+      viewportRef={viewport}
+    >
       <div className="flex flex-row px-3.5 overflow-auto">
         {softwareShortcuts.map((softwareData) => {
           const { software } = softwareData;
@@ -65,106 +73,6 @@ function SoftwareList({
           );
         })}
       </div>
-    </ScrollArea>
-  );
-}
-
-function SoftwareListOld({
-  softwareShortcuts,
-}: {
-  softwareShortcuts: SoftwareShortcut[];
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const softwares = softwareShortcuts.map((softwareData) => {
-    const { software } = softwareData;
-    const { key, icon } = software;
-    const { dataUri } = icon;
-
-    return {
-      value: key,
-      label: dataUri ? (
-        <Flex direction="column" align="center" className="capitalize">
-          <StyledSvg src={dataUri} />
-          {key}
-        </Flex>
-      ) : null,
-    };
-  });
-
-  const {
-    isSearchResultsShow,
-    setShowSearchResults,
-    searchTerm,
-    toggleSearchResults,
-  } = useFuseSearchStore((state) => ({
-    isSearchResultsShow: state.isSearchResultsShow,
-    setShowSearchResults: state.setShowSearchResults,
-    searchTerm: state.searchTerm,
-    toggleSearchResults: state.toggleSearchResults,
-  }));
-
-  const [selected, setSelected] = useSelectedShortcutsStore((state) => [
-    state.selectedSoftwareShortcut,
-    state.setSelectedSoftwareShortcut,
-  ]);
-
-  const handleSelect = (
-    isSelected: boolean,
-    softwareShortcut: SoftwareShortcut
-  ) => {
-    setSelected(isSelected ? null : softwareShortcut);
-  };
-
-  const handleClick = (e: any) => {
-    const { value } = e.target;
-
-    if (value) {
-      const isSearch = value === 'search';
-      if (isSearch) {
-        handleSelect(false, softwareShortcuts[value]);
-        toggleSearchResults();
-      } else {
-        setShowSearchResults(false);
-        const isSelected = selected?.software.key === value;
-        handleSelect(isSelected, softwareShortcuts[value]);
-      }
-    }
-  };
-
-  const searchItem =
-    isSearchResultsShow || searchTerm
-      ? [
-          {
-            value: 'search',
-            label: <IconInputSearch />,
-          },
-        ]
-      : [];
-
-  const data = [...searchItem, ...softwares];
-
-  if (!data?.length) return null;
-
-  return (
-    <ScrollArea type="auto" scrollbarSize={6} offsetScrollbars>
-      <SegmentedControl
-        ref={ref}
-        transitionDuration={300}
-        transitionTimingFunction="linear"
-        onClick={handleClick}
-        value={
-          isSearchResultsShow && searchTerm
-            ? 'search'
-            : selected?.software.key || ''
-        }
-        data={data}
-        styles={{
-          control: {
-            borderColor: 'transparent !important',
-          },
-        }}
-      />
     </ScrollArea>
   );
 }

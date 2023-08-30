@@ -1,21 +1,15 @@
 import { z } from 'zod';
 import path from 'path';
-import {
-  exists,
-  readJson,
-  readdir,
-  remove,
-  statSync,
-  writeJson,
-} from 'fs-extra';
+import { exists, readJson, remove, statSync, writeJson } from 'fs-extra';
 
 import { router, publicProcedure } from '../../configs/trpc';
 import { logError, logSuccess } from '../../utils';
 import { SoftwareShortcut } from '../../../../@types';
 import createSoftwareRouter from './create';
-import { getUserDataPath, USER_SOFTWARE_SHORTCUTS_DIR } from '../../utils/path';
+import { getUserDataPath } from '../../utils/path';
 import { getIconFile, writeCustomIconToDisk } from '../../utils/icon';
 import { SoftwareSchema, AllSoftwaresSchema } from '../../schema/software';
+import sortSoftwareRouter, { sortSoftwareCaller } from './sort';
 
 const softwareRouter = router({
   byKey: publicProcedure
@@ -47,40 +41,24 @@ const softwareRouter = router({
     }),
   all: publicProcedure.output(AllSoftwaresSchema).query(async () => {
     try {
-      const files = await readdir(USER_SOFTWARE_SHORTCUTS_DIR);
+      const files = await sortSoftwareCaller.get();
 
-      const softwareShortcutsPromises = files.reduce(
-        async (arr: Promise<SoftwareShortcut[]>, filename) => {
-          if (path.extname(filename).toLowerCase() === '.json') {
-            const filePath = getUserDataPath('shortcuts', filename);
-            const data: SoftwareShortcut = await readJson(filePath);
-            const createdDate = statSync(filePath).birthtime.toISOString();
+      const softwareShortcutsPromises = files.map(async (filename) => {
+        const filePath = getUserDataPath('shortcuts', `${filename}.json`);
+        const data: SoftwareShortcut = await readJson(filePath);
+        const createdDate = statSync(filePath).birthtime.toISOString();
 
-            const icon = await getIconFile(data.software.icon);
-            data.software.icon = icon;
+        const icon = await getIconFile(data.software.icon);
+        data.software.icon = icon;
 
-            const newArr = await arr; // Wait for the promise to resolve
-            newArr.push({ ...data, createdDate });
+        return { ...data, createdDate };
+      });
 
-            return newArr;
-          }
-
-          return arr;
-        },
-        Promise.resolve([])
-      );
-
-      const softwareShortcuts = await softwareShortcutsPromises;
+      const softwareShortcuts = await Promise.all(softwareShortcutsPromises);
 
       logSuccess('fetched software shortcuts successfully');
 
-      const sortedByCreatedDate = softwareShortcuts.sort((a, b) => {
-        const createdDateA = Date.parse(a.createdDate);
-        const createdDateB = Date.parse(b.createdDate);
-        return createdDateA - createdDateB;
-      });
-
-      return sortedByCreatedDate;
+      return softwareShortcuts;
     } catch (error) {
       logError("Couldn't fetch all software shortcuts:", error);
       throw error;
@@ -98,6 +76,14 @@ const softwareRouter = router({
       });
 
       await Promise.all(promises);
+
+      const sortedSoftwareList = await sortSoftwareCaller.get();
+      const filteredSortedSoftwareList = sortedSoftwareList.filter(
+        (software) => !softwareList.includes(software)
+      );
+
+      await sortSoftwareCaller.update(filteredSortedSoftwareList);
+
       logSuccess(`Removed softwares - ${softwareList.join(', ')}`);
     } catch (error) {
       logError(`Couldn't remove softwares`, error);
@@ -149,6 +135,7 @@ const softwareRouter = router({
       throw error;
     }
   }),
+  sort: sortSoftwareRouter,
 });
 
 export const softwareCaller = softwareRouter.createCaller({});

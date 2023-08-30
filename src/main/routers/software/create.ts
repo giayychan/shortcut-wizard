@@ -13,6 +13,7 @@ import {
   getUserDataPath,
 } from '../../utils/path';
 import { SoftwareSchema } from '../../schema/software';
+import { sortSoftwareCaller } from './sort';
 
 const createAutoCompleteOptions = async (desc: string) => {
   try {
@@ -129,6 +130,10 @@ const createSoftwareRouter = router({
       }
 
       await outputJson(writeDse, data);
+
+      const sortedSoftwareList = await sortSoftwareCaller.get();
+      sortedSoftwareList.push(key);
+      await sortSoftwareCaller.update(sortedSoftwareList);
 
       logSuccess(`Added software - ${key}.json`);
     } catch (error) {

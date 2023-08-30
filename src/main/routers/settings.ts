@@ -9,6 +9,7 @@ const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
     store.delete('opened');
     store.delete('isAutoLaunchEnabled');
+    store.delete('sortedSoftwareList');
     await initializeUserData();
   }),
   autoLaunch: publicProcedure.input(z.boolean()).mutation(async (opts) => {

@@ -18,7 +18,8 @@ const createSortedSoftwareList = async () => {
     const sortedList = filenames.map((filename) =>
       filename.replace('.json', '')
     );
-    store.set('sortedSoftwareKeys', sortedList);
+
+    store.set('sortedSoftwareList', sortedList);
 
     return sortedList;
   } catch (error: any) {
