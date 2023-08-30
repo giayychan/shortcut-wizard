@@ -7,6 +7,7 @@ import {
   UnstyledButton,
   Text,
   Group,
+  Aside,
 } from '@mantine/core';
 import { ContextModalProps, modals } from '@mantine/modals';
 import {
@@ -16,6 +17,7 @@ import {
   IconMessages,
   IconArrowBackUp,
   IconUser,
+  IconSortAscending,
 } from '@tabler/icons-react';
 
 import useAuthStore from '../../stores/useAuthStore';
@@ -27,12 +29,13 @@ import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import Feedback from './Feedback';
 import GlobalSettings from './GlobalSettings';
 import EditShortcutSetting from './EditShortcutSetting';
+import SortSoftwareList from './SortSoftwareList';
 
 function SettingWrapper({ children }: { children: ReactNode }) {
   return (
-    <Flex direction="column" w="100%" gap="xl" pt={95} px="md">
-      {children}
-    </Flex>
+    <Aside pt={95} className="overflow-hidden">
+      <Flex px="md">{children}</Flex>
+    </Aside>
   );
 }
 
@@ -49,7 +52,7 @@ const LINK_DATA = [
   },
   {
     icon: <IconWorld size="1rem" />,
-    color: 'blue',
+    color: 'pink',
     label: 'System Settings',
     component: (
       <SettingWrapper>
@@ -60,13 +63,19 @@ const LINK_DATA = [
   {
     icon: <IconDatabaseEdit size="1rem" />,
     color: 'teal',
-    label: 'Software',
+    label: 'Edit Software',
     component: <EditSoftwareSetting />,
+  },
+  {
+    icon: <IconSortAscending size="1rem" />,
+    color: 'yellow',
+    label: 'Sort Softwares',
+    component: <SortSoftwareList />,
   },
   {
     icon: <IconEditCircle size="1rem" />,
     color: 'violet',
-    label: 'Shortcut',
+    label: 'Edit Shortcut',
     component: <EditShortcutSetting />,
   },
   {

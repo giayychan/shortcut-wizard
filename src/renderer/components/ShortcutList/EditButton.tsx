@@ -22,7 +22,7 @@ function EditButton({ shortcut }: Props) {
       fullScreen: true,
       withCloseButton: false,
       innerProps: {
-        selectedSettingsTab: 3,
+        selectedSettingsTab: 4,
       },
     });
     setOpened(true);
