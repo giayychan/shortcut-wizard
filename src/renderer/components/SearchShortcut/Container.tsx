@@ -53,6 +53,8 @@ function SearchShortcutContainer() {
     );
   }, [softwareShortcuts]);
 
+  console.log({ flattenShortcutWithSoftwareDataArray });
+
   const fuse = useMemo(
     () => new Fuse(flattenShortcutWithSoftwareDataArray, options),
     [flattenShortcutWithSoftwareDataArray]
