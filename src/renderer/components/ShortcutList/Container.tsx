@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ReactNode } from 'react';
 import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
