@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react';
-import { Button, Flex, ScrollArea, Skeleton } from '@mantine/core';
+import {
+  UnstyledButton,
+  Button,
+  ScrollArea,
+  Skeleton,
+  Flex,
+} from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
@@ -53,28 +59,25 @@ function SoftwareList({
       offsetScrollbars
       viewportRef={viewport}
     >
-      <div className="flex flex-row px-3.5 overflow-auto">
+      <div className="flex flex-row gap-1 pb-2 overflow-auto">
         {softwareShortcuts.map((softwareData) => {
           const { software } = softwareData;
           const { key, icon } = software;
           const isSelected = selected?.software.key === key;
 
           return (
-            <Button
-              h={60}
-              variant={isSelected ? 'light' : 'subtle'}
+            <UnstyledButton
+              key={key}
+              variant="filled"
               onClick={() => handleSelect(key)}
+              className="capitalize rounded"
+              bg={isSelected ? 'dark.6' : 'dark.7'}
             >
-              <Flex
-                direction="column"
-                align="center"
-                className="capitalize"
-                gap={5}
-              >
+              <Flex align="center" gap={4} className="px-2 py-1 text-[15px]">
                 <StyledSvg src={icon.dataUri} />
                 {key}
               </Flex>
-            </Button>
+            </UnstyledButton>
           );
         })}
       </div>
@@ -108,11 +111,11 @@ function SoftwareListContainer() {
     }
   }, [selectedSoftware, setSelectedSoftware, data]);
 
-  if (isLoading) return <Skeleton h={70} />;
+  if (isLoading) return <Skeleton h={50} />;
 
   if (!data?.length)
     return (
-      <div className="ml-4 h-[70px]">
+      <div className="ml-2 h-[50px]">
         <Button
           variant="outline"
           onClick={() =>

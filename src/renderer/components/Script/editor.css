@@ -1,0 +1,8 @@
+ul,
+menu {
+  list-style: disc;
+}
+
+ol {
+  list-style: number;
+}

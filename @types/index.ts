@@ -84,6 +84,10 @@ export type EditShortcutState = {
   setSoftwareKey: (key: string) => void;
   setOpened: (opened: boolean) => void;
 };
+export type EditScriptState = {
+  content: string;
+  setContent: (content: string) => void;
+};
 
 export type ConnectedState = {
   connected: boolean;

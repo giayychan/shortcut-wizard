@@ -15,9 +15,11 @@ function SettingsButton() {
       }}
       title="Settings"
       color="gray.5"
-      ml={13}
+      size="md"
+      ml="auto"
+      mr="xs"
     >
-      <IconSettings size="lg" />
+      <IconSettings />
     </ActionIcon>
   );
 }

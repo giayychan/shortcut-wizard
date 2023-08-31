@@ -5,6 +5,7 @@ import { useModals } from '@mantine/modals';
 import { MAX_HEIGHT } from 'main/constants';
 
 import trpcReact from '../utils/trpc';
+import TitleBar from './TitleBar';
 
 function Layout({ children }: { children: ReactNode }) {
   const [ref, rect] = useResizeObserver();

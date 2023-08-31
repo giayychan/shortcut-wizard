@@ -39,18 +39,22 @@ function SortableItem({
   };
 
   return (
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <Group
-        mb="xs"
-        p="xs"
-        className="duration-300 border border-gray-700 rounded select-none hover:bg-gray-700"
-      >
-        <IconMenu2 />
-        <StyledSvg src={software.icon.dataUri} />
-        <Text>{software.key}</Text>
-      </Group>
-    </div>
+    <Group
+      mb="xs"
+      px="xs"
+      py={1}
+      className="select-none"
+      ref={setNodeRef}
+      style={style}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...attributes}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...listeners}
+    >
+      <IconMenu2 size="0.85rem" />
+      <StyledSvg src={software.icon.dataUri} />
+      <Text>{software.key}</Text>
+    </Group>
   );
 }
 
