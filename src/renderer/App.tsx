@@ -11,7 +11,7 @@ import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
 import SettingsProvider from './providers/SettingsProvider';
-import TextEditor from './components/Script/TextEditor';
+import TextEditor from './components/Note/TextEditor';
 
 function TabsProvider({ children }: { children: ReactNode }) {
   return (

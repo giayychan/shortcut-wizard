@@ -108,20 +108,21 @@ function SettingsModal({
   return (
     <Flex>
       <Navbar width={{ base: 300 }} pt={30} pb={15} pl={10}>
+        <UnstyledButton
+          sx={(theme) => ({
+            display: 'block',
+            width: '100%',
+            padding: theme.spacing.xs,
+          })}
+          onClick={() => modals.closeAll()}
+        >
+          <Group>
+            <IconArrowBackUp />
+            <Text size="sm">Back</Text>
+          </Group>
+        </UnstyledButton>
+
         <Navbar.Section grow component={ScrollArea} pr="xs">
-          <UnstyledButton
-            sx={(theme) => ({
-              display: 'block',
-              width: '100%',
-              padding: theme.spacing.xs,
-            })}
-            onClick={() => modals.closeAll()}
-          >
-            <Group>
-              <IconArrowBackUp />
-              <Text size="sm">Back</Text>
-            </Group>
-          </UnstyledButton>
           <Divider mb="md" />
           <MainLinks
             data={LINK_DATA}

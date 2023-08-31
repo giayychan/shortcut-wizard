@@ -103,11 +103,11 @@ function SoftwareListContainer() {
             softwareShortcut.software.key === selectedSoftware.software.key
           );
         });
+
         if (updatedSelectedSoftware)
           setSelectedSoftware(updatedSelectedSoftware);
-      } else setSelectedSoftware(null);
-
-      // todo: remove search results
+        else setSelectedSoftware(null);
+      }
     }
   }, [selectedSoftware, setSelectedSoftware, data]);
 

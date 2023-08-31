@@ -45,7 +45,7 @@ function SearchShortcutContainer() {
   const [debounced] = useDebouncedValue(searchTerm, 500);
 
   const flattenSearchData = useMemo(() => {
-    if (!softwareShortcuts) return [];
+    if (!softwareShortcuts?.length) return [];
     return softwareShortcuts.reduce(
       (prev: FlattenShortcut[], curr: SoftwareShortcut) => {
         const { software, shortcuts, createdDate } = curr;

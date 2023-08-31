@@ -26,7 +26,7 @@ function ScrollableListWrapper({ children }: { children: ReactNode }) {
     <ScrollArea.Autosize
       scrollbarSize={5}
       type="auto"
-      py="sm"
+      pt="sm"
       offsetScrollbars
       mah={MAX_HEIGHT - DEFAULT_HEIGHT}
     >
