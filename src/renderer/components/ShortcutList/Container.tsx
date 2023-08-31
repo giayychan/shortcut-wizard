@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
@@ -7,6 +7,7 @@ import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
 import useEditShortcutStore from '../../stores/useEditShortcutStore';
+import { MAX_HEIGHT, DEFAULT_HEIGHT } from '../../../main/constants';
 
 const listStyles = {
   itemWrapper: {
@@ -22,7 +23,13 @@ const listStyles = {
 
 function ScrollableListWrapper({ children }: { children: ReactNode }) {
   return (
-    <ScrollArea.Autosize p="md">
+    <ScrollArea.Autosize
+      scrollbarSize={5}
+      type="auto"
+      py="sm"
+      offsetScrollbars
+      mah={MAX_HEIGHT - DEFAULT_HEIGHT}
+    >
       <List mx={6} spacing="lg" size="sm" center styles={listStyles}>
         {children}
       </List>

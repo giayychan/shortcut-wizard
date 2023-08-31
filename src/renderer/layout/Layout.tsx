@@ -28,7 +28,12 @@ function Layout({ children }: { children: ReactNode }) {
     mutate({ height: roundedH });
   }, [isModalOpen, mutate, height]);
 
-  return <Paper ref={ref}>{children}</Paper>;
+  return (
+    <Paper ref={ref}>
+      <TitleBar />
+      {children}
+    </Paper>
+  );
 }
 
 export default Layout;

@@ -59,7 +59,7 @@ function SoftwareList({
       offsetScrollbars
       viewportRef={viewport}
     >
-      <div className="flex flex-row gap-1 pb-2 overflow-auto">
+      <div className="flex flex-row gap-1 pb-2">
         {softwareShortcuts.map((softwareData) => {
           const { software } = softwareData;
           const { key, icon } = software;
