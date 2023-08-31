@@ -11,7 +11,6 @@ import Layout from './layout/Layout';
 import AuthProvider from './providers/AuthProvider';
 import SettingsButton from './components/Settings/Button';
 import SettingsProvider from './providers/SettingsProvider';
-import TextEditor from './components/Note/TextEditor';
 
 function TabsProvider({ children }: { children: ReactNode }) {
   return (
@@ -48,9 +47,7 @@ function MainWindow() {
                 </div>
                 <ShortcutList />
               </Tabs.Panel>
-              <Tabs.Panel value="note">
-                <TextEditor />
-              </Tabs.Panel>
+              <Tabs.Panel value="note">{/* <TextEditor /> */}</Tabs.Panel>
             </TabsProvider>
           </Layout>
         </SettingsProvider>
