@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from 'react';
-import { Paper } from '@mantine/core';
+import { Flex } from '@mantine/core';
 import { useDebouncedState, useResizeObserver } from '@mantine/hooks';
 import { useModals } from '@mantine/modals';
 import { MAX_HEIGHT } from 'main/constants';
@@ -29,10 +29,10 @@ function Layout({ children }: { children: ReactNode }) {
   }, [isModalOpen, mutate, height]);
 
   return (
-    <Paper ref={ref}>
+    <Flex direction="column" ref={ref}>
       <TitleBar />
       {children}
-    </Paper>
+    </Flex>
   );
 }
 

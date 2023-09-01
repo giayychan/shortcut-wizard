@@ -7,7 +7,6 @@ import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
 import useEditShortcutStore from '../../stores/useEditShortcutStore';
-import { MAX_HEIGHT, DEFAULT_HEIGHT } from '../../../main/constants';
 
 const listStyles = {
   itemWrapper: {
@@ -23,13 +22,7 @@ const listStyles = {
 
 function ScrollableListWrapper({ children }: { children: ReactNode }) {
   return (
-    <ScrollArea.Autosize
-      scrollbarSize={5}
-      type="auto"
-      pt="sm"
-      offsetScrollbars
-      mah={MAX_HEIGHT - DEFAULT_HEIGHT}
-    >
+    <ScrollArea.Autosize scrollbarSize={5} type="auto" pt="sm" offsetScrollbars>
       <List mx={6} spacing="lg" size="sm" center styles={listStyles}>
         {children}
       </List>

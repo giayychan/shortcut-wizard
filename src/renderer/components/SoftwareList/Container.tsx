@@ -53,12 +53,7 @@ function SoftwareList({
   };
 
   return (
-    <ScrollArea
-      type="auto"
-      scrollbarSize={5}
-      offsetScrollbars
-      viewportRef={viewport}
-    >
+    <ScrollArea type="auto" scrollbarSize={5} viewportRef={viewport}>
       <div className="flex flex-row gap-1 pb-2">
         {softwareShortcuts.map((softwareData) => {
           const { software } = softwareData;

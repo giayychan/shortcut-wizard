@@ -1,5 +1,5 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import { Tabs } from '@mantine/core';
+import { Tabs, Paper } from '@mantine/core';
 import { IconScript, IconTableShortcut } from '@tabler/icons-react';
 import { ReactNode } from 'react';
 
@@ -15,7 +15,7 @@ import SettingsProvider from './providers/SettingsProvider';
 function TabsProvider({ children }: { children: ReactNode }) {
   return (
     <Tabs color="indigo" variant="outline" radius="md" defaultValue="shortcut">
-      <Tabs.List>
+      <Tabs.List className="sticky z-10 top-[35px]" bg="dark.7">
         <Tabs.Tab
           className="ml-2"
           value="shortcut"
@@ -40,11 +40,16 @@ function MainWindow() {
         <SettingsProvider>
           <Layout>
             <TabsProvider>
-              <Tabs.Panel value="shortcut" className="p-2">
-                <div className="border rounded border-[#373A40]">
-                  <SearchShortcut />
-                  <SoftwareList />
-                </div>
+              <Tabs.Panel value="shortcut" bg="dark.7">
+                <Paper bg="dark.7" className="sticky z-10 top-[71px]  p-2">
+                  <Paper
+                    bg="dark.7"
+                    className="border rounded border-[#373A40]"
+                  >
+                    <SearchShortcut />
+                    <SoftwareList />
+                  </Paper>
+                </Paper>
                 <ShortcutList />
               </Tabs.Panel>
               <Tabs.Panel value="note">{/* <TextEditor /> */}</Tabs.Panel>
