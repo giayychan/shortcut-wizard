@@ -5,26 +5,45 @@ import FactoryResetButton from './FactoryResetButton';
 
 function GlobalSettings() {
   const [, toggle] = useToggle();
+  const { data: settings, refetch } = trpcReact.settings.get.useQuery();
 
   const { mutateAsync: updateAutoLaunch, isLoading: updatingAutoLaunch } =
-    trpcReact.settings.autoLaunch.useMutation();
+    trpcReact.settings.autoLaunch.useMutation({
+      onSuccess: async () => {
+        await refetch();
+      },
+    });
+
   const {
     mutateAsync: updateSortSoftwareByRecentOpened,
     isLoading: updatingSortSoftwareByRecentOpened,
-  } = trpcReact.settings.sortSoftwareByRecentOpened.useMutation();
+  } = trpcReact.settings.sortSoftwareByRecentOpened.useMutation({
+    onSuccess: async () => {
+      await refetch();
+    },
+  });
 
-  const { data: settings, refetch } = trpcReact.settings.get.useQuery();
+  const {
+    mutateAsync: updateIsPanelAlwaysAtCenter,
+    isLoading: updatingIsPanelAlwaysAtCenter,
+  } = trpcReact.settings.isPanelAlwaysAtCenter.useMutation({
+    onSuccess: async () => {
+      await refetch();
+    },
+  });
 
   const handleAutoLaunchChange = async () => {
     await updateAutoLaunch(!settings?.isAutoLaunchEnabled);
-    await refetch();
   };
 
-  const handleChange = async () => {
+  const handleSortChange = async () => {
     await updateSortSoftwareByRecentOpened(
       !settings?.sortSoftwareByRecentOpened
     );
-    await refetch();
+  };
+
+  const handleIsPanelCenterChange = async () => {
+    await updateIsPanelAlwaysAtCenter(!settings?.isPanelAlwaysAtCenter);
   };
 
   return (
@@ -48,7 +67,17 @@ function GlobalSettings() {
           </Group>
         }
         checked={Boolean(settings?.sortSoftwareByRecentOpened)}
-        onChange={handleChange}
+        onChange={handleSortChange}
+      />
+      <Checkbox
+        label={
+          <Group>
+            Panel always at center
+            {updatingIsPanelAlwaysAtCenter && <Loader size="xs" />}
+          </Group>
+        }
+        checked={Boolean(settings?.isPanelAlwaysAtCenter)}
+        onChange={handleIsPanelCenterChange}
       />
     </Flex>
   );

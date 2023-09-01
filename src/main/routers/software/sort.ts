@@ -1,9 +1,6 @@
 import { z } from 'zod';
-import Store from 'electron-store';
 import { router, publicProcedure } from '../../configs/trpc';
-import { logError } from '../../utils';
-
-const store = new Store();
+import { logError, store } from '../../utils';
 
 const sortSoftwareRouter = router({
   get: publicProcedure.output(z.array(z.string())).query(() => {

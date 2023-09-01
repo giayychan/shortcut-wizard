@@ -12,7 +12,7 @@ function ShortcutListItem({ shortcut }: Props) {
   return (
     <List.Item icon={<FavoriteShortcut shortcut={shortcut} />}>
       <Text>{description}</Text>
-      <Flex gap="xs" align="center" ml={5}>
+      <Flex gap="xs" align="center">
         <Hotkeys hotkeys={hotkeys} />
         <EditButton shortcut={shortcut} />
       </Flex>

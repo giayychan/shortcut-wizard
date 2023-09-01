@@ -16,7 +16,11 @@ import { app, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
-import { registerGlobalOpenAppShortcut, setMainBrowserWindow } from './utils';
+import {
+  registerGlobalOpenAppShortcut,
+  setMainBrowserWindow,
+  store,
+} from './utils';
 import mainWindow from './mainWindow';
 import { appRouter as router } from './routers/_app';
 import { resolveHtmlPath } from './utils/path';
@@ -87,6 +91,14 @@ const createWindow = async () => {
   const menuBuilder = new MenuBuilder(window);
   menuBuilder.buildMenu();
 
+  window.on('close', () => {
+    const { x, y } = window.getBounds();
+    const isPanelAlwaysAtCenter = store.get('isPanelAlwaysAtCenter');
+
+    if (isPanelAlwaysAtCenter) store.delete('panelPosition');
+    else store.set('panelPosition', { x, y });
+  });
+
   window.on('closed', () => {
     mainWindow.setWindow(null);
     mainWindow.setIsHidden(false);
@@ -109,7 +121,6 @@ const createWindow = async () => {
  */
 // to minimize the window when the user clicks outside of the app
 app.on('browser-window-blur', () => {
-  // && process.env.NODE_ENV === 'production'
   const window = mainWindow.getWindow();
   if (window && !window.fullScreen) {
     window.hide();

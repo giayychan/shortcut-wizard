@@ -4,10 +4,13 @@ import {
   globalShortcut,
 } from 'electron';
 import chalk from 'chalk';
+import Store from 'electron-store';
 import { APP_HOTKEYS, DEFAULT_HEIGHT, WIDTH } from '../constants';
 import mainWindow from '../mainWindow';
 
 import { getAssetPath, preloadPath } from './path';
+
+export const store = new Store();
 
 const { log } = console;
 export const logError = (...text: unknown[]) =>
@@ -63,6 +66,23 @@ const getBrowserWindowType = () => {
   return type;
 };
 
+const getPanelPosition = () => {
+  const isPanelAlwaysAtCenter = store.get('isPanelAlwaysAtCenter') as
+    | boolean
+    | undefined;
+
+  const panelPosition = store.get('panelPosition') as
+    | { x: number; y: number }
+    | undefined;
+
+  if (isPanelAlwaysAtCenter) return { center: true };
+
+  if (panelPosition?.x && panelPosition?.y)
+    return { ...panelPosition, center: false };
+
+  return { center: true };
+};
+
 const defaultWindowOptions = {
   type: getBrowserWindowType(),
   width: WIDTH,
@@ -78,7 +98,6 @@ const defaultWindowOptions = {
   title: 'Shortcut Wizard',
   paintWhenInitiallyHidden: true,
   frame: false,
-  center: true,
   icon: getAssetPath('assets/icons/icon.ico'),
   titleBarStyle: 'hidden',
   titleBarOverlay: true,
@@ -87,6 +106,7 @@ const defaultWindowOptions = {
     // devTools: true,
     preload: preloadPath,
   },
+  ...getPanelPosition(),
 } as BrowserWindowConstructorOptions;
 
 export const setMainBrowserWindow = () => {
@@ -95,6 +115,5 @@ export const setMainBrowserWindow = () => {
   const window = mainWindow.getWindow();
   if (!window) throw Error('Something went wrong when creating window');
 
-  window.setPosition(window.getPosition()[0], 200);
   return window;
 };

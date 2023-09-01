@@ -1,11 +1,9 @@
 import { z } from 'zod';
-import Store from 'electron-store';
 
 import { router, publicProcedure } from '../configs/trpc';
 import { DbUserData } from '../../../@types';
 import { userSchema } from '../schema/user';
-
-const store = new Store();
+import { store } from '../utils';
 
 const userRouter = router({
   getPaidUser: publicProcedure

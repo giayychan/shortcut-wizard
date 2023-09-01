@@ -32,7 +32,7 @@ function EditButton({ shortcut }: Props) {
   };
 
   return (
-    <ActionIcon size="sm" onClick={handleClick} color="gray.6">
+    <ActionIcon size="1rem" onClick={handleClick} color="gray.6">
       <IconEdit />
     </ActionIcon>
   );

@@ -1,9 +1,7 @@
 import { z } from 'zod';
-import Store from 'electron-store';
 import { router, publicProcedure } from '../configs/trpc';
 import initializeUserData, { autoLaunch } from '../utils/initialize';
-
-const store = new Store();
+import { store } from '../utils';
 
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
@@ -20,11 +18,32 @@ const settingsRouter = router({
       const { input: enabled } = opts;
       store.set('sortSoftwareByRecentOpened', enabled);
     }),
+  isPanelAlwaysAtCenter: publicProcedure
+    .input(z.boolean())
+    .mutation(async (opts) => {
+      const { input: enabled } = opts;
+      if (!enabled) {
+        store.delete('isPanelAlwaysAtCenter');
+        store.delete('panelPosition');
+        return;
+      }
+      store.set('isPanelAlwaysAtCenter', enabled);
+    }),
+  processPlatform: publicProcedure
+    .output(z.string().optional())
+    .query(async () => {
+      const processPlatform = store.get('processPlatform') as  // eslint-disable-next-line no-undef
+        | NodeJS.Platform
+        | undefined;
+
+      return processPlatform;
+    }),
   get: publicProcedure
     .output(
       z.object({
         sortSoftwareByRecentOpened: z.boolean().optional(),
         isAutoLaunchEnabled: z.boolean().optional(),
+        isPanelAlwaysAtCenter: z.boolean().optional(),
       })
     )
     .query(async () => {
@@ -36,16 +55,15 @@ const settingsRouter = router({
         'sortSoftwareByRecentOpened'
       ) as boolean | undefined;
 
-      return { isAutoLaunchEnabled, sortSoftwareByRecentOpened };
-    }),
-  processPlatform: publicProcedure
-    .output(z.string().optional())
-    .query(async () => {
-      const processPlatform = store.get('processPlatform') as  // eslint-disable-next-line no-undef
-        | NodeJS.Platform
+      const isPanelAlwaysAtCenter = store.get('isPanelAlwaysAtCenter') as
+        | boolean
         | undefined;
 
-      return processPlatform;
+      return {
+        isAutoLaunchEnabled,
+        sortSoftwareByRecentOpened,
+        isPanelAlwaysAtCenter,
+      };
     }),
 });
 

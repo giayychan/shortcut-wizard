@@ -1,11 +1,9 @@
 import isDev from 'electron-is-dev';
 import { z } from 'zod';
-import Store from 'electron-store';
 
 import { router, publicProcedure } from '../configs/trpc';
 import { SHORTCUT_WIZARD_HREF } from '../constants';
-
-const store = new Store();
+import { store } from '../utils';
 
 const authRouter = router({
   getAuthUri: publicProcedure

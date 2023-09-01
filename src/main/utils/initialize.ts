@@ -1,16 +1,13 @@
 import { machineId } from 'node-machine-id';
 import AutoLaunch from 'auto-launch';
 import { remove, ensureDir, copy, readdir } from 'fs-extra';
-import Store from 'electron-store';
-import { logError, logSuccess } from '.';
+import { logError, logSuccess, store } from '.';
 import {
   USER_SOFTWARE_SHORTCUTS_DIR,
   USER_CUSTOM_ICONS_DIR,
   USER_VECTOR_STORE_DIR,
   SYS_SOFTWARE_SHORTCUTS_DIR,
 } from './path';
-
-const store = new Store();
 
 const createSortedSoftwareList = async () => {
   try {
@@ -75,6 +72,8 @@ const initializeUserData = async () => {
   if (opened === undefined) {
     await autoLaunch(true);
     store.set('sortSoftwareByRecentOpened', true);
+    store.delete('isPanelAlwaysAtCenter');
+    store.delete('panelPosition');
 
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
