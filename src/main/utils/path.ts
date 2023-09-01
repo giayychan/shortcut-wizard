@@ -35,7 +35,8 @@ export function resolveHtmlPath(htmlFileName: string) {
     url.pathname = htmlFileName;
     return url.href;
   }
-  return `file://${path.resolve(__dirname, '../../renderer/', htmlFileName)}`;
+  // electron-react-boilerplate/release/build/mac-arm64/ElectronReact.app/Contents/Resources/app.asar/dist/renderer/index.html
+  return `file://${path.resolve(__dirname, '../renderer/', htmlFileName)}`;
 }
 
 export const preloadPath = app.isPackaged

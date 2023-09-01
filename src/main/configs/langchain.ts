@@ -1,11 +1,11 @@
+import { exists } from 'fs-extra';
+import path from 'path';
 import { OpenAI } from 'langchain/llms/openai';
 import { PromptTemplate } from 'langchain/prompts';
 import { HNSWLib } from 'langchain/vectorstores/hnswlib';
 import { OpenAIEmbeddings } from 'langchain/embeddings/openai';
 import { Document } from 'langchain/document';
 import { RetrievalQAChain } from 'langchain/chains';
-import { exists } from 'fs-extra';
-import path from 'path';
 
 import { mapSystemToReadable } from '../utils';
 import { USER_VECTOR_STORE_DIR } from '../utils/path';
@@ -25,7 +25,7 @@ type ShortcutDocument = Document<{
 }>;
 
 const model = new OpenAI({
-  openAIApiKey: process.env.OPEN_AI_API_KEY,
+  openAIApiKey: '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',
   temperature: 0,
   maxTokens: 100,
   verbose: true,
@@ -45,7 +45,7 @@ const chainTwoPrompt = new PromptTemplate({
 
 async function getVectorStore(docs: ShortcutDocument[]) {
   const embeddings = new OpenAIEmbeddings({
-    openAIApiKey: process.env.OPEN_AI_API_KEY,
+    openAIApiKey: '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',
     verbose: true,
   });
 
@@ -67,7 +67,7 @@ async function getVectorStore(docs: ShortcutDocument[]) {
   return vectorStore;
 }
 
-export async function loadInternalShortcuts() {
+async function loadInternalShortcuts() {
   // todo: use custom JSONLoader
   const softwareShortcuts = {} as any;
 
@@ -105,10 +105,7 @@ async function similaritySearch(
   });
 }
 
-export async function searchInternalShortcut(
-  searchTerm: string,
-  softwareKey: string
-) {
+async function searchInternalShortcut(searchTerm: string, softwareKey: string) {
   let result;
 
   const docs = await loadInternalShortcuts();
@@ -149,10 +146,7 @@ export async function searchInternalShortcut(
   return result;
 }
 
-export async function searchExternalShortcut(
-  searchTerm: string,
-  softwareKey: string
-) {
+async function searchExternalShortcut(searchTerm: string, softwareKey: string) {
   try {
     const input = await chainTwoPrompt.format({
       action: searchTerm,
@@ -172,23 +166,31 @@ export async function searchExternalShortcut(
   }
 }
 
-function sanitizedData(searchTerm: string, softwareKey: string) {
+function sanitizedData(prompt: string, softwareKey: string) {
   // todo: software key should be the human readable name, so we should change the data structure and add a software label to each json
   const sanitizedSoftwareKey = softwareKey.toLowerCase().trim();
 
-  const sanitizedSearchTerm = searchTerm.trim();
-  return { key: sanitizedSoftwareKey, term: sanitizedSearchTerm };
+  const sanitizedPrompt = prompt.trim();
+  return { key: sanitizedSoftwareKey, prompt: sanitizedPrompt };
 }
 
-export async function searchShortcut(searchTerm: string, softwareKey: string) {
+export default async function langchainSearchShortcuts({
+  userPrompt,
+  softwareKey,
+  openAIKey,
+}: {
+  userPrompt: string;
+  openAIKey: string;
+  softwareKey?: string;
+}) {
   let result;
 
-  const { term, key } = sanitizedData(searchTerm, softwareKey);
+  const { prompt, key } = sanitizedData(userPrompt, softwareKey || '');
 
   try {
-    result = await searchInternalShortcut(term, key);
+    // result = await searchInternalShortcut(term, key);
 
-    console.log({ result });
+    // console.log({ result });
 
     // if (!result) {
     //   result = await searchExternalShortcut(searchTerm, sanitizedSoftwareKey);
