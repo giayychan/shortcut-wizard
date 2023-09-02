@@ -105,7 +105,7 @@ function SearchShortcutContainer() {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1 px-4 py-2">
+    <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1 p-2">
       <TextInput
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('searchTerm')}
