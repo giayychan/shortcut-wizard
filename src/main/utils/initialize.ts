@@ -61,7 +61,7 @@ const initializeUserData = async () => {
 
   const opened = store.get('opened');
 
-  if (!storeMachineId === undefined) {
+  if (storeMachineId === undefined) {
     const id = await machineId();
     store.set('machineId', id);
   }

@@ -14,13 +14,12 @@ const authRouter = router({
       })
     )
     .mutation(async () => {
-      const machineId = await store.get('machineId');
-      const id = String(machineId);
+      const machineId = store.get('machineId') as string | undefined;
 
-      if (!id) throw new Error('Machine ID not found');
+      if (!machineId) throw new Error('Machine ID not found');
 
       const url = new URL(
-        `${SHORTCUT_WIZARD_HREF}/auth/sign-in?electronId=${id}`
+        `${SHORTCUT_WIZARD_HREF}/auth/sign-in?electronId=${String(machineId)}`
       );
 
       if (isDev) {
@@ -28,7 +27,7 @@ const authRouter = router({
         url.host = 'localhost:3000';
       }
 
-      return { authUri: url.toString(), id };
+      return { authUri: url.toString(), id: machineId };
     }),
 });
 

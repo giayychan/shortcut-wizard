@@ -173,8 +173,6 @@ if (!gotTheLock) {
     .whenReady()
     .then(async () => {
       registerGlobalOpenAppShortcut();
-      await initializeUserData();
-
       createWindow();
 
       app.on('activate', () => {
@@ -191,3 +189,5 @@ if (!gotTheLock) {
     })
     .catch(console.log);
 }
+
+initializeUserData().catch(console.log);
