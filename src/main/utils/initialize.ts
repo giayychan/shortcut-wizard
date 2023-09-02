@@ -74,11 +74,13 @@ const initializeUserData = async () => {
     store.set('sortSoftwareByRecentOpened', true);
     store.delete('isPanelAlwaysAtCenter');
     store.delete('panelPosition');
+    store.delete('openAIApiKey');
+    store.delete('enabledAiSearch');
 
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
       await remove(USER_CUSTOM_ICONS_DIR);
-      // await remove(USER_VECTOR_STORE_DIR);
+      await remove(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't remove user shortcuts directory");
       throw error;
@@ -87,7 +89,7 @@ const initializeUserData = async () => {
     try {
       await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
       await ensureDir(USER_CUSTOM_ICONS_DIR);
-      // await ensureDir(USER_VECTOR_STORE_DIR);
+      await ensureDir(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't ensure user shortcuts directory exists");
       throw error;

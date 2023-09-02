@@ -34,3 +34,9 @@ User data folder: /Users/yanyan/Library/Application Support/Electron
 
 
 We've opened a new browser tab for you to sign in. Once you've been authenticated you will automatically continue here.
+
+
+You're all set!
+You can now close this browser tab and go back to your application.
+/deep-link
+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

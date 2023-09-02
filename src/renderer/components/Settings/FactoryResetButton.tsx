@@ -1,15 +1,14 @@
-import { SetStateAction, useState } from 'react';
+import { useToggle } from '@mantine/hooks';
+import { useState } from 'react';
 import { Button, Flex, Text } from '@mantine/core';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import { notifyClientError } from '../../utils';
 import trpcReact from '../../utils/trpc';
 
-function FactoryResetButton({
-  toggle,
-}: {
-  toggle: (value?: SetStateAction<boolean> | undefined) => void;
-}) {
+function FactoryResetButton() {
+  const [, toggle] = useToggle();
+
   const factoryReset = trpcReact.settings.factoryReset.useMutation();
   const [confirmed, setConfirmed] = useState(false);
   const utils = trpcReact.useContext();
@@ -29,6 +28,8 @@ function FactoryResetButton({
       await factoryReset.mutateAsync();
       await utils.software.all.refetch();
       await utils.settings.get.refetch();
+      await utils.shortcut.ai.enabledAiSearch.refetch();
+
       setSelectedSoftwareShortcut(null);
       resetFuseSearch();
       toggle(false);

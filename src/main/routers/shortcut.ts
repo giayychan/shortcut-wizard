@@ -5,7 +5,7 @@ import { router, publicProcedure } from '../configs/trpc';
 import { softwareCaller } from './software';
 import { getUserDataPath } from '../utils/path';
 import { ShortcutSchema } from '../schema/software';
-import aiSearchRouter from './search';
+import aiSearchRouter from './aiSearch';
 
 const ShortcutInputSchema = z.object({
   softwareKey: z.string(),

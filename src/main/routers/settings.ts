@@ -14,55 +14,54 @@ const settingsRouter = router({
   }),
   sortSoftwareByRecentOpened: publicProcedure
     .input(z.boolean())
-    .mutation(async (opts) => {
+    .mutation((opts) => {
       const { input: enabled } = opts;
       store.set('sortSoftwareByRecentOpened', enabled);
     }),
-  isPanelAlwaysAtCenter: publicProcedure
-    .input(z.boolean())
-    .mutation(async (opts) => {
-      const { input: enabled } = opts;
-      if (!enabled) {
-        store.delete('isPanelAlwaysAtCenter');
-        store.delete('panelPosition');
-        return;
-      }
-      store.set('isPanelAlwaysAtCenter', enabled);
-    }),
-  processPlatform: publicProcedure
-    .output(z.string().optional())
-    .query(async () => {
-      const processPlatform = store.get('processPlatform') as  // eslint-disable-next-line no-undef
-        | NodeJS.Platform
-        | undefined;
+  isPanelAlwaysAtCenter: publicProcedure.input(z.boolean()).mutation((opts) => {
+    const { input: enabled } = opts;
+    if (!enabled) {
+      store.delete('isPanelAlwaysAtCenter');
+      store.delete('panelPosition');
+      return;
+    }
+    store.set('isPanelAlwaysAtCenter', enabled);
+  }),
+  processPlatform: publicProcedure.output(z.string().optional()).query(() => {
+    const processPlatform = store.get('processPlatform') as  // eslint-disable-next-line no-undef
+      | NodeJS.Platform
+      | undefined;
 
-      return processPlatform;
-    }),
+    return processPlatform;
+  }),
   get: publicProcedure
     .output(
       z.object({
-        sortSoftwareByRecentOpened: z.boolean().optional(),
-        isAutoLaunchEnabled: z.boolean().optional(),
-        isPanelAlwaysAtCenter: z.boolean().optional(),
+        sortSoftwareByRecentOpened: z.boolean(),
+        isAutoLaunchEnabled: z.boolean(),
+        isPanelAlwaysAtCenter: z.boolean(),
+        enabledAiSearch: z.boolean(),
+        openAIApiKey: z.string().optional(),
       })
     )
-    .query(async () => {
-      const isAutoLaunchEnabled = store.get('isAutoLaunchEnabled') as
-        | boolean
-        | undefined;
+    .query(() => {
+      const isAutoLaunchEnabled = Boolean(store.get('isAutoLaunchEnabled'));
 
-      const sortSoftwareByRecentOpened = store.get(
-        'sortSoftwareByRecentOpened'
-      ) as boolean | undefined;
+      const sortSoftwareByRecentOpened = Boolean(
+        store.get('sortSoftwareByRecentOpened')
+      );
 
-      const isPanelAlwaysAtCenter = store.get('isPanelAlwaysAtCenter') as
-        | boolean
-        | undefined;
+      const isPanelAlwaysAtCenter = Boolean(store.get('isPanelAlwaysAtCenter'));
+
+      const enabledAiSearch = Boolean(store.get('enabledAiSearch'));
+      const openAIApiKey = store.get('openAIApiKey') as string | undefined;
 
       return {
         isAutoLaunchEnabled,
         sortSoftwareByRecentOpened,
         isPanelAlwaysAtCenter,
+        enabledAiSearch,
+        openAIApiKey,
       };
     }),
 });
