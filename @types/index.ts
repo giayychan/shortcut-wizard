@@ -35,10 +35,6 @@ export interface SoftwareShortcut {
   createdDate: string;
 }
 
-export interface SoftwareShortcuts {
-  [key: string]: SoftwareShortcut;
-}
-
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
 
 export type AddSoftwareFormValues = Omit<SoftwareShortcut, 'createdDate'> & {
