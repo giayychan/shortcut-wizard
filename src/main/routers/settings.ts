@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { router, publicProcedure } from '../configs/trpc';
 import initializeUserData, { autoLaunch } from '../utils/initialize';
 import { store } from '../utils';
+import mainWindow from '../mainWindow';
 
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
@@ -38,6 +39,13 @@ const settingsRouter = router({
 
       return processPlatform;
     }),
+  openWindow: publicProcedure.mutation(() => {
+    const window = mainWindow.getWindow();
+    if (!window) return;
+
+    mainWindow.setIsHidden(false);
+    window.show();
+  }),
   get: publicProcedure
     .output(
       z.object({

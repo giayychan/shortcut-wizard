@@ -12,7 +12,7 @@ import { notifyClientError, notifyClientInfo } from '../../utils';
 function SignInButton() {
   const utils = trpcReact.useContext();
   const paidUser = utils.user.getPaidUser.getData();
-
+  const { mutate: openWindow } = trpcReact.settings.openWindow.useMutation();
   const user = useAuthStore((state) => state.user);
 
   const [signInLoading, setSignInLoading] = useState(false);
@@ -45,6 +45,7 @@ function SignInButton() {
               await remove(oneTimeIdDocRef);
               unsubscribeFirebaseDocListener();
               setSignInLoading(false);
+              openWindow();
             }
           }
         },
