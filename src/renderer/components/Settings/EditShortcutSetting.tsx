@@ -204,39 +204,49 @@ function EditShortcutSetting() {
           {value && selectedSoftware && selectedSoftware.shortcuts?.length ? (
             // eslint-disable-next-line react/jsx-props-no-spreading
             <Checkbox.Group {...form.getInputProps('shortcuts')}>
-              {selectedSoftware.shortcuts.map((shortcut) => {
-                const { description, id, hotkeys, isFavorite } = shortcut;
+              {selectedSoftware.shortcuts
+                .sort((a, b) => {
+                  if (a.isFavorite && !b.isFavorite) {
+                    return -1;
+                  }
+                  if (!a.isFavorite && b.isFavorite) {
+                    return 1;
+                  }
+                  return 0;
+                })
+                .map((shortcut) => {
+                  const { description, id, hotkeys, isFavorite } = shortcut;
 
-                return (
-                  <Flex w="100%" my="xs" align="center" key={id}>
-                    <Checkbox
-                      key={id}
-                      value={id}
-                      label={
-                        <Group align="center">
-                          <IconStar
-                            size="1rem"
-                            fill={isFavorite ? 'white' : 'transparent'}
-                          />
-                          <Hotkeys hotkeys={hotkeys} />
-                          <Text>{description}</Text>
-                        </Group>
-                      }
-                    />
-                    <ActionIcon
-                      ml="auto"
-                      variant="light"
-                      onClick={() => {
-                        setOpened(true);
-                        setShortcutId(id);
-                        setSoftwareKey(value);
-                      }}
-                    >
-                      <IconEdit size="1rem" />
-                    </ActionIcon>
-                  </Flex>
-                );
-              })}
+                  return (
+                    <Flex w="100%" my="xs" align="center" key={id}>
+                      <Checkbox
+                        key={id}
+                        value={id}
+                        label={
+                          <Group align="center">
+                            <IconStar
+                              size="1rem"
+                              fill={isFavorite ? 'white' : 'transparent'}
+                            />
+                            <Hotkeys hotkeys={hotkeys} />
+                            <Text>{description}</Text>
+                          </Group>
+                        }
+                      />
+                      <ActionIcon
+                        ml="auto"
+                        variant="light"
+                        onClick={() => {
+                          setOpened(true);
+                          setShortcutId(id);
+                          setSoftwareKey(value);
+                        }}
+                      >
+                        <IconEdit size="1rem" />
+                      </ActionIcon>
+                    </Flex>
+                  );
+                })}
             </Checkbox.Group>
           ) : (
             <Text className="p-3" hidden={!value}>

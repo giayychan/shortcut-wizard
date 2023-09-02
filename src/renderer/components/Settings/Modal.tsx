@@ -69,7 +69,7 @@ const LINK_DATA = [
   {
     icon: <IconSortAscending size="1rem" />,
     color: 'yellow',
-    label: 'Sort Softwares',
+    label: 'Sort Software',
     component: <SortSoftwareList />,
   },
   {

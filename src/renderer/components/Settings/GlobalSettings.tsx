@@ -52,7 +52,8 @@ function GlobalSettings() {
       <Checkbox
         label={
           <Group>
-            Open app at launch
+            Open app at launch (Needs to move the application to Application
+            folder)
             {updatingAutoLaunch && <Loader size="xs" />}
           </Group>
         }
@@ -62,7 +63,8 @@ function GlobalSettings() {
       <Checkbox
         label={
           <Group>
-            Sort software by recent opened, otherwise sort by alphabet
+            Enabled: Sort software by recently opened - Disabled: Sort by
+            alphabet
             {updatingSortSoftwareByRecentOpened && <Loader size="xs" />}
           </Group>
         }
@@ -72,7 +74,7 @@ function GlobalSettings() {
       <Checkbox
         label={
           <Group>
-            Panel always at center
+            Open window in center horizontally
             {updatingIsPanelAlwaysAtCenter && <Loader size="xs" />}
           </Group>
         }
