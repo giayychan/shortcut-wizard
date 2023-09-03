@@ -1,4 +1,4 @@
-import { Checkbox, Flex, Group, Loader } from '@mantine/core';
+import { Checkbox, Flex, Loader } from '@mantine/core';
 import { useToggle } from '@mantine/hooks';
 import trpcReact from '../../utils/trpc';
 import FactoryResetButton from './FactoryResetButton';
@@ -51,32 +51,30 @@ function GlobalSettings() {
       <FactoryResetButton toggle={toggle} />
       <Checkbox
         label={
-          <Group>
-            Open app at launch (Needs to move the application to Application
-            folder)
-            {updatingAutoLaunch && <Loader size="xs" />}
-          </Group>
+          <Flex gap="sm">
+            Open app at launch{updatingAutoLaunch && <Loader size="xs" />}
+          </Flex>
         }
         checked={Boolean(settings?.isAutoLaunchEnabled)}
         onChange={handleAutoLaunchChange}
       />
       <Checkbox
         label={
-          <Group>
+          <Flex gap="sm">
             Enabled: Sort software by recently opened - Disabled: Sort by
             alphabet
             {updatingSortSoftwareByRecentOpened && <Loader size="xs" />}
-          </Group>
+          </Flex>
         }
         checked={Boolean(settings?.sortSoftwareByRecentOpened)}
         onChange={handleSortChange}
       />
       <Checkbox
         label={
-          <Group>
+          <Flex gap="sm">
             Open window in center horizontally
             {updatingIsPanelAlwaysAtCenter && <Loader size="xs" />}
-          </Group>
+          </Flex>
         }
         checked={Boolean(settings?.isPanelAlwaysAtCenter)}
         onChange={handleIsPanelCenterChange}

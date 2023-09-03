@@ -28,11 +28,8 @@ const createSortedSoftwareList = async () => {
 export const autoLaunch = async (userEnabled: boolean) => {
   try {
     // todo: need to test if this works on windows & linux
-    // https://github.com/Teamwork/node-auto-launch/issues/99
-    // https://github.com/Teamwork/node-auto-launch/issues/105
     const appAutoLauncher = new AutoLaunch({
-      name: 'Shortcut Wizard Launcher',
-      path: '/Applications/Shortcut Wizard.app',
+      name: 'Shortcut Wizard',
       mac: {
         useLaunchAgent: true,
       },
@@ -55,6 +52,28 @@ export const autoLaunch = async (userEnabled: boolean) => {
   }
 };
 
+const isExecPathChanged = async () => {
+  const currPath = process.execPath;
+  const prev = store.get('execPath');
+  if (prev !== currPath) store.set('execPath', currPath);
+  return prev !== currPath;
+};
+
+const initializeAutoLaunch = async () => {
+  try {
+    const userEnabled = store.get('isAutoLaunchEnabled');
+
+    const pathChanged = await isExecPathChanged();
+
+    if ((pathChanged && userEnabled) || userEnabled === undefined) {
+      await autoLaunch(true);
+    }
+  } catch (error: any) {
+    console.log('autoLaunch error: ', error.message);
+    throw error;
+  }
+};
+
 const initializeUserData = async () => {
   const storeMachineId = store.get('machineId');
   const processPlatform = store.get('processPlatform');
@@ -70,7 +89,6 @@ const initializeUserData = async () => {
   }
 
   if (opened === undefined) {
-    await autoLaunch(true);
     store.set('sortSoftwareByRecentOpened', true);
     store.delete('isPanelAlwaysAtCenter');
     store.delete('panelPosition');
@@ -108,6 +126,8 @@ const initializeUserData = async () => {
 
     store.set('opened', true);
   }
+
+  await initializeAutoLaunch();
 };
 
 export default initializeUserData;

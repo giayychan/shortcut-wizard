@@ -7,6 +7,7 @@ import mainWindow from '../mainWindow';
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
     store.delete('opened');
+    store.set('isAutoLaunchEnabled', true);
     await initializeUserData();
   }),
   autoLaunch: publicProcedure.input(z.boolean()).mutation(async (opts) => {
