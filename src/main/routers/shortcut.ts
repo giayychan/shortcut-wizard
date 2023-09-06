@@ -5,7 +5,6 @@ import { router, publicProcedure } from '../configs/trpc';
 import { softwareCaller } from './software';
 import { getUserDataPath } from '../utils/path';
 import { ShortcutSchema } from '../schema/software';
-import aiSearchRouter from './search';
 
 const ShortcutInputSchema = z.object({
   softwareKey: z.string(),
@@ -13,7 +12,6 @@ const ShortcutInputSchema = z.object({
 });
 
 const shortcutRouter = router({
-  ai: aiSearchRouter,
   create: publicProcedure.input(ShortcutInputSchema).mutation(async (opts) => {
     const { input } = opts;
     const { softwareKey: key, shortcut } = input;
