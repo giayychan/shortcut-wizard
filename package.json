@@ -259,7 +259,7 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "shortcut-wizard",
+      "owner": "Giayychan",
       "repo": "shortcut-wizard"
     }
   },
