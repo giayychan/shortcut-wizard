@@ -18,6 +18,10 @@
     "name": "",
     "email": "giayanny926@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Giayychan/shortcut_wizard.git"
+  },
   "main": "./src/main/main.ts",
   "scripts": {
     "find-deadcode": "ts-prune",
@@ -260,7 +264,9 @@
     "publish": {
       "provider": "github",
       "owner": "Giayychan",
-      "repo": "shortcut-wizard"
+      "repo": "shortcut-wizard",
+      "private": true,
+      "token": "<personal-access-token>"
     }
   },
   "devEngines": {
