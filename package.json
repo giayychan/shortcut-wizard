@@ -18,10 +18,6 @@
     "name": "",
     "email": "giayanny926@gmail.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Giayychan/shortcut_wizard.git"
-  },
   "main": "./src/main/main.ts",
   "scripts": {
     "find-deadcode": "ts-prune",
