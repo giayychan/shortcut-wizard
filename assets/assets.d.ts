@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 type Styles = Record<string, string>;
 
 declare module '*.svg' {

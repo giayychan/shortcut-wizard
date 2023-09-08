@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-unused-modules
 export default function dbCalls() {
   // todo: test this for windows
   // Handle window controls via IPC
