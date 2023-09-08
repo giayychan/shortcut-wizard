@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import { useForm } from '@mantine/form';
 import {
   Group,
@@ -19,6 +20,7 @@ import trpcReact from '../../utils/trpc';
 const FORM_DEFAULT_VALUES = {
   file: null,
   software: {
+    id: nanoid(),
     key: '',
     icon: {
       isCustom: false,

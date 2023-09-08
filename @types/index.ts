@@ -28,6 +28,7 @@ export interface IconData {
 
 export interface SoftwareShortcut {
   software: {
+    id: string;
     key: string;
     icon: IconData;
   };

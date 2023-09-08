@@ -1,18 +1,1 @@
-{
-  "createdDate": "2023-07-28T10:26:00.996Z",
-  "software": {
-    "key": "framer",
-    "icon": {
-      "filename": "framer.svg",
-      "isCustom": false
-    }
-  },
-  "shortcuts": [
-    {
-      "id": "1",
-      "hotkeys": [["cmd", "z"]],
-      "description": "Undo",
-      "isFavorite": false
-    }
-  ]
-}
+{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"framer","icon":{"filename":"framer.svg","isCustom":false},"id":"aeb4bbcf-98f2-48b2-8209-201857c94dd8"},"shortcuts":[{"id":"fc5af7c6-8db0-44a9-96f7-a84bc4047db5","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}

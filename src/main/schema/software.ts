@@ -9,6 +9,7 @@ export const ShortcutSchema = z.object({
 
 export const SoftwareSchema = z.object({
   software: z.object({
+    id: z.string(),
     key: z.string(),
     icon: z.object({
       isCustom: z.boolean(),

@@ -1,18 +1,1 @@
-{
-  "createdDate": "2023-07-28T10:26:00.996Z",
-  "software": {
-    "key": "loom",
-    "icon": {
-      "filename": "loom.svg",
-      "isCustom": false
-    }
-  },
-  "shortcuts": [
-    {
-      "id": "1",
-      "hotkeys": [["cmd", "z"]],
-      "description": "Undo",
-      "isFavorite": false
-    }
-  ]
-}
+{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"loom","icon":{"filename":"loom.svg","isCustom":false},"id":"53f938c8-62e4-4c44-a292-cdc83328d475"},"shortcuts":[{"id":"5a725add-0aa0-4c7e-a16d-28a4db508295","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}

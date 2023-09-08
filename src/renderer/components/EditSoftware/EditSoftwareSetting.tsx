@@ -33,7 +33,11 @@ export default function EditSoftwareList() {
     trpcReact.software.delete.useMutation();
 
   const data = softwareShortcuts?.map(({ software }) => {
-    return { label: software.key, checked: false, key: software.key };
+    return {
+      label: software.key,
+      checked: false,
+      key: software.key,
+    };
   });
 
   const [values, handlers] = useListState(data);
@@ -75,13 +79,7 @@ export default function EditSoftwareList() {
         <ActionIcon
           ml="auto"
           variant="light"
-          onClick={() =>
-            handleClick(
-              softwareShortcuts?.find((softwareShortcut) => {
-                return softwareShortcut.software.key === value.key;
-              })
-            )
-          }
+          onClick={() => handleClick(selected)}
         >
           <IconEdit size="1rem" />
         </ActionIcon>
