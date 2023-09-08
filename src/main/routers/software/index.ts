@@ -50,7 +50,6 @@ const softwareRouter = router({
 
         const icon = await getIconFile(data.software.icon);
         data.software.icon = icon;
-
         return { ...data, createdDate };
       });
 

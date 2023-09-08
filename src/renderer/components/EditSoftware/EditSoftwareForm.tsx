@@ -22,6 +22,7 @@ const FORM_DEFAULT_VALUES = {
   software: {
     id: nanoid(),
     key: '',
+    label: '',
     icon: {
       isCustom: false,
       filename: '',
@@ -47,10 +48,11 @@ function EditSoftware({
     initialValues: { ...FORM_DEFAULT_VALUES, ...softwareShortcut },
     validate: {
       software: {
-        key: (value) => {
+        label: (value) => {
           if (value === '') return 'Please enter a software name';
-          if (value.toLowerCase() === 'search')
-            return 'Cannot set software name to reserve key "search"';
+          const regex = /[^a-zA-Z0-9\s]/;
+          if (regex.test(value))
+            return 'Please enter a valid software name (no special characters)';
           return null;
         },
         icon: {
@@ -74,7 +76,7 @@ function EditSoftware({
       ...values,
       software: {
         ...values.software,
-        key: values.software.key.toLowerCase(),
+        key: values.software.label.toLowerCase().replace(/\s/g, '-'),
       },
     }),
   });
@@ -115,7 +117,7 @@ function EditSoftware({
       close();
       modals.closeAll();
     } catch (error: any) {
-      form.setFieldError('software.key', error.message);
+      form.setFieldError('software.label', error.message);
     } finally {
       closeLoading();
     }
@@ -136,7 +138,7 @@ function EditSoftware({
       {!isNew ? (
         <TextInput
           // eslint-disable-next-line react/jsx-props-no-spreading
-          {...form.getInputProps('software.key')}
+          {...form.getInputProps('software.label')}
           data-autofocus
           label="Software Name"
           icon={icon.filename ? customIcon : null}

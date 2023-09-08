@@ -53,7 +53,7 @@ function SortableItem({
     >
       <IconMenu2 size="0.85rem" />
       <StyledSvg src={software.icon.dataUri} />
-      <Text>{software.key}</Text>
+      <Text>{software.label}</Text>
     </Group>
   );
 }

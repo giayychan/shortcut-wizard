@@ -1,1 +1,131 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"blender","icon":{"filename":"blender.svg","isCustom":false},"id":"70bdb3fe-d899-40f8-bfb0-56356b8c6b4c","label":"Blender"},"shortcuts":[{"id":"c9b8961a-2f23-4560-a8da-de4ff5ae629c","hotkeys":[["lmb"]],"description":"Select","isFavorite":false},{"id":"921b0663-3af9-42e6-aa88-c1511c2606c2","hotkeys":[["ctrl","lmb"]],"description":"Context Menu","isFavorite":false},{"id":"c7372068-dd7f-4660-9c0e-24653e78ef08","hotkeys":[["alt","lmb"]],"description":"Pan View","isFavorite":false},{"id":"88b53b98-8732-410e-a16a-c7cbc9e1ba9e","hotkeys":[["scroll wheel"]],"description":"Zoom In/Out","isFavorite":false},{"id":"16b8ac98-4ced-4a70-8cd3-2aed1af2d30b","hotkeys":[["shift","alt","lmb"]],"description":"Orbit View","isFavorite":false},{"id":"ddce1bdb-11ca-4d3e-aa8a-04875144a489","hotkeys":[["g"]],"description":"Grab/Move","isFavorite":false},{"id":"b8a518fe-7c12-4482-9533-336c7d126cfa","hotkeys":[["r"]],"description":"Rotate","isFavorite":false},{"id":"b328ad08-07e5-443e-a3e9-f871afb18871","hotkeys":[["s"]],"description":"Scale","isFavorite":false},{"id":"f4f7d734-9e14-42b5-96ae-e647ac00e72d","hotkeys":[["x"]],"description":"Restrict Transformation to X Axis","isFavorite":false},{"id":"5ce18581-79c0-4c85-9c13-5375e7585d72","hotkeys":[["y"]],"description":"Restrict Transformation to Y Axis","isFavorite":false},{"id":"e060bc8e-d358-46a9-a5d7-03f8a3c555a0","hotkeys":[["z"]],"description":"Restrict Transformation to Z Axis","isFavorite":false},{"id":"6402fcda-5e72-4f41-a4fb-4a9cee13faf1","hotkeys":[["shift","x"]],"description":"Restrict Transformation to XY Plane","isFavorite":false},{"id":"4fd7a0e6-e78f-4bd9-bb7a-734947d67890","hotkeys":[["shift","y"]],"description":"Restrict Transformation to XZ Plane","isFavorite":false},{"id":"14f43f5a-003f-4536-99f2-8c5eddc7ef67","hotkeys":[["shift","z"]],"description":"Restrict Transformation to YZ Plane","isFavorite":false},{"id":"984722d4-41c4-463d-97e6-c7f4cedb74a6","hotkeys":[["1"]],"description":"Change Viewport Angle to Front","isFavorite":false},{"id":"54a0cc1f-9380-410c-a5bb-ed1fd21e1749","hotkeys":[["2"]],"description":"Change Viewport Angle to Right","isFavorite":false},{"id":"17e67edd-d043-42d1-bc2f-d8f518185fa4","hotkeys":[["3"]],"description":"Change Viewport Angle to Top","isFavorite":false},{"id":"24734682-e3f2-49a1-9792-de51b342e04b","hotkeys":[["4"]],"description":"Change Viewport Angle to Camera","isFavorite":false},{"id":"5deb96a6-59e9-44c3-ba43-4d94e1ef2edf","hotkeys":[["period"]],"description":"Frame Selected","isFavorite":false},{"id":"4da1ca12-9154-4e74-8960-5b42a1bd3da6","hotkeys":[["shift","c"]],"description":"Center View to Cursor","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "blender",
+    "icon": { "filename": "blender.svg", "isCustom": false },
+    "id": "70bdb3fe-d899-40f8-bfb0-56356b8c6b4c",
+    "label": "Blender"
+  },
+  "shortcuts": [
+    {
+      "id": "c9b8961a-2f23-4560-a8da-de4ff5ae629c",
+      "hotkeys": [["lmb"]],
+      "description": "Select",
+      "isFavorite": false
+    },
+    {
+      "id": "921b0663-3af9-42e6-aa88-c1511c2606c2",
+      "hotkeys": [["ctrl", "lmb"]],
+      "description": "Context Menu",
+      "isFavorite": false
+    },
+    {
+      "id": "c7372068-dd7f-4660-9c0e-24653e78ef08",
+      "hotkeys": [["alt", "lmb"]],
+      "description": "Pan View",
+      "isFavorite": false
+    },
+    {
+      "id": "88b53b98-8732-410e-a16a-c7cbc9e1ba9e",
+      "hotkeys": [["scroll wheel"]],
+      "description": "Zoom In/Out",
+      "isFavorite": false
+    },
+    {
+      "id": "16b8ac98-4ced-4a70-8cd3-2aed1af2d30b",
+      "hotkeys": [["shift", "alt", "lmb"]],
+      "description": "Orbit View",
+      "isFavorite": false
+    },
+    {
+      "id": "ddce1bdb-11ca-4d3e-aa8a-04875144a489",
+      "hotkeys": [["g"]],
+      "description": "Grab/Move",
+      "isFavorite": false
+    },
+    {
+      "id": "b8a518fe-7c12-4482-9533-336c7d126cfa",
+      "hotkeys": [["r"]],
+      "description": "Rotate",
+      "isFavorite": false
+    },
+    {
+      "id": "b328ad08-07e5-443e-a3e9-f871afb18871",
+      "hotkeys": [["s"]],
+      "description": "Scale",
+      "isFavorite": false
+    },
+    {
+      "id": "f4f7d734-9e14-42b5-96ae-e647ac00e72d",
+      "hotkeys": [["x"]],
+      "description": "Restrict Transformation to X Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "5ce18581-79c0-4c85-9c13-5375e7585d72",
+      "hotkeys": [["y"]],
+      "description": "Restrict Transformation to Y Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "e060bc8e-d358-46a9-a5d7-03f8a3c555a0",
+      "hotkeys": [["z"]],
+      "description": "Restrict Transformation to Z Axis",
+      "isFavorite": false
+    },
+    {
+      "id": "6402fcda-5e72-4f41-a4fb-4a9cee13faf1",
+      "hotkeys": [["shift", "x"]],
+      "description": "Restrict Transformation to XY Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "4fd7a0e6-e78f-4bd9-bb7a-734947d67890",
+      "hotkeys": [["shift", "y"]],
+      "description": "Restrict Transformation to XZ Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "14f43f5a-003f-4536-99f2-8c5eddc7ef67",
+      "hotkeys": [["shift", "z"]],
+      "description": "Restrict Transformation to YZ Plane",
+      "isFavorite": false
+    },
+    {
+      "id": "984722d4-41c4-463d-97e6-c7f4cedb74a6",
+      "hotkeys": [["1"]],
+      "description": "Change Viewport Angle to Front",
+      "isFavorite": false
+    },
+    {
+      "id": "54a0cc1f-9380-410c-a5bb-ed1fd21e1749",
+      "hotkeys": [["2"]],
+      "description": "Change Viewport Angle to Right",
+      "isFavorite": false
+    },
+    {
+      "id": "17e67edd-d043-42d1-bc2f-d8f518185fa4",
+      "hotkeys": [["3"]],
+      "description": "Change Viewport Angle to Top",
+      "isFavorite": false
+    },
+    {
+      "id": "24734682-e3f2-49a1-9792-de51b342e04b",
+      "hotkeys": [["4"]],
+      "description": "Change Viewport Angle to Camera",
+      "isFavorite": false
+    },
+    {
+      "id": "5deb96a6-59e9-44c3-ba43-4d94e1ef2edf",
+      "hotkeys": [["period"]],
+      "description": "Frame Selected",
+      "isFavorite": false
+    },
+    {
+      "id": "4da1ca12-9154-4e74-8960-5b42a1bd3da6",
+      "hotkeys": [["shift", "c"]],
+      "description": "Center View to Cursor",
+      "isFavorite": false
+    }
+  ]
+}

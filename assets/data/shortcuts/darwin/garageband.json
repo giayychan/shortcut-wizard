@@ -1,1 +1,131 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"garageband","icon":{"filename":"garageband.svg","isCustom":false},"id":"64d33d81-1869-4c6a-b89b-c695aee4c90a","label":"Garageband"},"shortcuts":[{"id":"320be208-899c-4aa4-91d5-5a9ed4dfb6d3","hotkeys":[["meta","x"]],"description":"Cut","isFavorite":false},{"id":"bc1528e5-5d23-4640-86c7-6ab55b3c7001","hotkeys":[["meta","c"]],"description":"Copy","isFavorite":false},{"id":"586c47a8-0eed-4701-92de-289076da23c2","hotkeys":[["meta","v"]],"description":"Paste","isFavorite":false},{"id":"e14be3b2-048f-4046-8d16-f506bc3d00f3","hotkeys":[["meta","a"]],"description":"Select All","isFavorite":false},{"id":"73ebf84a-a483-4707-ba0a-702ddd49bacd","hotkeys":[["alt","meta","n"]],"description":"Create a new track","isFavorite":false},{"id":"73026a72-b122-4036-b3c5-6a112b666c74","hotkeys":[["alt","meta","a"]],"description":"Create a new audio track","isFavorite":false},{"id":"31be5cba-2af4-4b84-997f-1a24796eb42d","hotkeys":[["alt","meta","s"]],"description":"Create a new software instrument track","isFavorite":false},{"id":"da4bc899-d77d-458e-bb5d-229b31faea2d","hotkeys":[["up"]],"description":"Show tablature and standard notation (guitar) / Show both hands (piano)","isFavorite":false},{"id":"513249b8-ccee-4a6a-a916-f37ba24f65a4","hotkeys":[["meta","k"]],"description":"Show or Hide the Musical Typing window","isFavorite":false},{"id":"da509d82-2395-4a89-9baa-d43a0a0bc46c","hotkeys":[["meta","b"]],"description":"Split at Playhead","isFavorite":false},{"id":"b5f166a9-c9ad-4f31-80bc-09e84e681331","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false},{"id":"179df1ae-31f4-412a-9079-d12e301ba880","hotkeys":[["meta","shift","z"]],"description":"Redo","isFavorite":false},{"id":"e1f17cb3-3b6a-402a-9abf-dbff014b0ffb","hotkeys":[["meta","s"]],"description":"Save","isFavorite":false},{"id":"41526783-8734-4867-abca-b34db2c29e3a","hotkeys":[["meta","o"]],"description":"Open","isFavorite":false},{"id":"96f9e03c-b26a-4a6f-b4b4-b2823bb5c8f1","hotkeys":[["meta","n"]],"description":"New","isFavorite":false},{"id":"928b3094-3e77-4d66-834a-ea316cb62657","hotkeys":[["meta","w"]],"description":"Close","isFavorite":false},{"id":"80a26705-f587-4be5-b3b7-b8bb1692c567","hotkeys":[["meta","q"]],"description":"Quit","isFavorite":false},{"id":"cd7a59cb-5650-456a-9cf7-578948bedc54","hotkeys":[["meta","f"]],"description":"Find","isFavorite":false},{"id":"6c56e437-358d-4aa8-907f-fad611395df1","hotkeys":[["meta","g"]],"description":"Find Next","isFavorite":false},{"id":"5dca297f-13a4-4bb3-917d-d9c46ca44b52","hotkeys":[["meta","shift","g"]],"description":"Find Previous","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "garageband",
+    "icon": { "filename": "garageband.svg", "isCustom": false },
+    "id": "64d33d81-1869-4c6a-b89b-c695aee4c90a",
+    "label": "Garage Band"
+  },
+  "shortcuts": [
+    {
+      "id": "320be208-899c-4aa4-91d5-5a9ed4dfb6d3",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "bc1528e5-5d23-4640-86c7-6ab55b3c7001",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "586c47a8-0eed-4701-92de-289076da23c2",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "e14be3b2-048f-4046-8d16-f506bc3d00f3",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "73ebf84a-a483-4707-ba0a-702ddd49bacd",
+      "hotkeys": [["alt", "meta", "n"]],
+      "description": "Create a new track",
+      "isFavorite": false
+    },
+    {
+      "id": "73026a72-b122-4036-b3c5-6a112b666c74",
+      "hotkeys": [["alt", "meta", "a"]],
+      "description": "Create a new audio track",
+      "isFavorite": false
+    },
+    {
+      "id": "31be5cba-2af4-4b84-997f-1a24796eb42d",
+      "hotkeys": [["alt", "meta", "s"]],
+      "description": "Create a new software instrument track",
+      "isFavorite": false
+    },
+    {
+      "id": "da4bc899-d77d-458e-bb5d-229b31faea2d",
+      "hotkeys": [["up"]],
+      "description": "Show tablature and standard notation (guitar) / Show both hands (piano)",
+      "isFavorite": false
+    },
+    {
+      "id": "513249b8-ccee-4a6a-a916-f37ba24f65a4",
+      "hotkeys": [["meta", "k"]],
+      "description": "Show or Hide the Musical Typing window",
+      "isFavorite": false
+    },
+    {
+      "id": "da509d82-2395-4a89-9baa-d43a0a0bc46c",
+      "hotkeys": [["meta", "b"]],
+      "description": "Split at Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "b5f166a9-c9ad-4f31-80bc-09e84e681331",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "179df1ae-31f4-412a-9079-d12e301ba880",
+      "hotkeys": [["meta", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "e1f17cb3-3b6a-402a-9abf-dbff014b0ffb",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "41526783-8734-4867-abca-b34db2c29e3a",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open",
+      "isFavorite": false
+    },
+    {
+      "id": "96f9e03c-b26a-4a6f-b4b4-b2823bb5c8f1",
+      "hotkeys": [["meta", "n"]],
+      "description": "New",
+      "isFavorite": false
+    },
+    {
+      "id": "928b3094-3e77-4d66-834a-ea316cb62657",
+      "hotkeys": [["meta", "w"]],
+      "description": "Close",
+      "isFavorite": false
+    },
+    {
+      "id": "80a26705-f587-4be5-b3b7-b8bb1692c567",
+      "hotkeys": [["meta", "q"]],
+      "description": "Quit",
+      "isFavorite": false
+    },
+    {
+      "id": "cd7a59cb-5650-456a-9cf7-578948bedc54",
+      "hotkeys": [["meta", "f"]],
+      "description": "Find",
+      "isFavorite": false
+    },
+    {
+      "id": "6c56e437-358d-4aa8-907f-fad611395df1",
+      "hotkeys": [["meta", "g"]],
+      "description": "Find Next",
+      "isFavorite": false
+    },
+    {
+      "id": "5dca297f-13a4-4bb3-917d-d9c46ca44b52",
+      "hotkeys": [["meta", "shift", "g"]],
+      "description": "Find Previous",
+      "isFavorite": false
+    }
+  ]
+}
