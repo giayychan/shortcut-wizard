@@ -32,5 +32,3 @@ npm-debug.log.*
 
 *.realm*
 mongodb-realm
-
-src/main/utils/admin.ts
