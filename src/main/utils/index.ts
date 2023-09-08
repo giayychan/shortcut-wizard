@@ -18,20 +18,7 @@ export const logError = (...text: unknown[]) =>
 
 export const logSuccess = (...text: unknown[]) => log(chalk.bold.green(text));
 
-const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
-
-export const mapSystemToReadable = (system: string) => {
-  switch (system) {
-    case 'darwin':
-      return 'macOS';
-    case 'win32':
-      return 'Windows';
-    case 'linux':
-      return 'Linux';
-    default:
-      return system;
-  }
-};
+export const logInfo = (...text: unknown[]) => log(chalk.bold.yellow(text));
 
 export const registerGlobalOpenAppShortcut = () =>
   globalShortcut.register(APP_HOTKEYS.join('+'), () => {

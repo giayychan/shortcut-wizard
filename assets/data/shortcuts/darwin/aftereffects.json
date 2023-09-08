@@ -2,129 +2,128 @@
   "createdDate": "2023-07-28T10:26:00.996Z",
   "software": {
     "key": "aftereffects",
-    "icon": {
-      "filename": "aftereffects.svg",
-      "isCustom": false
-    }
+    "icon": { "filename": "aftereffects.svg", "isCustom": false },
+    "id": "bd61101c-7cc8-4e49-a713-aa1d98dcb8e5",
+    "label": "After Effects"
   },
   "shortcuts": [
     {
-      "id": "1",
-      "hotkeys": [["+", "or", "-"]],
-      "description": "Timeline Zoom",
+      "id": "f3aad876-705c-4329-9eef-d3ddbffc584e",
+      "hotkeys": [["shift", "equal"]],
+      "description": "Timeline Zoom In",
       "isFavorite": false
     },
     {
-      "id": "2",
-      "hotkeys": [["Cmd", "N"]],
+      "id": "c0eef1f2-388c-4fc3-8a7d-2b18e78afb55",
+      "hotkeys": [["meta", "n"]],
       "description": "New Composition",
       "isFavorite": false
     },
     {
-      "id": "3",
-      "hotkeys": [["Cmd", "O"]],
+      "id": "65ce9ff7-7a15-4a3d-a9f0-eebd9621257f",
+      "hotkeys": [["meta", "o"]],
       "description": "Open Project",
       "isFavorite": false
     },
     {
-      "id": "4",
-      "hotkeys": [["Cmd", "S"]],
+      "id": "c487f967-9031-421d-a858-46cbab3a4dad",
+      "hotkeys": [["meta", "s"]],
       "description": "Save Project",
       "isFavorite": false
     },
     {
-      "id": "5",
-      "hotkeys": [["Cmd", "Shift", "S"]],
+      "id": "a2c21947-9ebb-4dd2-8514-a26bf42bfde6",
+      "hotkeys": [["meta", "shift", "s"]],
       "description": "Save As",
       "isFavorite": false
     },
     {
-      "id": "6",
-      "hotkeys": [["Cmd", "Z"]],
+      "id": "1a90e3e8-ef5c-466c-b630-dfa0ac720bcd",
+      "hotkeys": [["meta", "z"]],
       "description": "Undo",
       "isFavorite": false
     },
     {
-      "id": "7",
-      "hotkeys": [["Cmd", "Shift", "Z"]],
+      "id": "f71f94fd-a175-40b4-88b4-62fbdaa3007a",
+      "hotkeys": [["meta", "shift", "z"]],
       "description": "Redo",
       "isFavorite": false
     },
     {
-      "id": "8",
-      "hotkeys": [["Cmd", "C"]],
+      "id": "3e0aa71e-39d8-491b-848a-0a172f71f103",
+      "hotkeys": [["meta", "c"]],
       "description": "Copy",
       "isFavorite": false
     },
     {
-      "id": "9",
-      "hotkeys": [["Cmd", "X"]],
+      "id": "2a9739ad-cb5e-4286-a50e-38e0e2160a05",
+      "hotkeys": [["meta", "x"]],
       "description": "Cut",
       "isFavorite": false
     },
     {
-      "id": "10",
-      "hotkeys": [["Cmd", "V"]],
+      "id": "c0ebd1a7-c2ea-4a1f-ad72-7f4f39d506c2",
+      "hotkeys": [["meta", "v"]],
       "description": "Paste",
       "isFavorite": false
     },
     {
-      "id": "11",
-      "hotkeys": [["Cmd", "T"]],
+      "id": "10b2f7fe-06c5-4a5d-8c24-e6d687fe905e",
+      "hotkeys": [["meta", "t"]],
       "description": "Opacity",
       "isFavorite": false
     },
     {
-      "id": "12",
-      "hotkeys": [["Cmd", "D"]],
+      "id": "a5f009e1-fd1c-4b62-b19d-20759075c64c",
+      "hotkeys": [["meta", "d"]],
       "description": "Duplicate",
       "isFavorite": false
     },
     {
-      "id": "13",
-      "hotkeys": [["Cmd", "A"]],
+      "id": "acb7e805-b8e3-4547-9e5e-af4e0b0f59f6",
+      "hotkeys": [["meta", "a"]],
       "description": "Select All",
       "isFavorite": false
     },
     {
-      "id": "14",
-      "hotkeys": [["Cmd", "Shift", "C"]],
+      "id": "6ed15fab-d565-4d08-b2c5-248f912747ff",
+      "hotkeys": [["meta", "shift", "c"]],
       "description": "Pre-compose",
       "isFavorite": false
     },
     {
-      "id": "15",
-      "hotkeys": [["Cmd", "Shift", "D"]],
+      "id": "bc11fbc8-c2f2-46a8-a505-d595a388e25a",
+      "hotkeys": [["meta", "shift", "d"]],
       "description": "Split Layer",
       "isFavorite": false
     },
     {
-      "id": "16",
-      "hotkeys": [["Cmd", "Shift", "L"]],
+      "id": "212e430a-d15f-4142-a457-70d5ce37685e",
+      "hotkeys": [["meta", "shift", "l"]],
       "description": "Create Solid",
       "isFavorite": false
     },
     {
-      "id": "17",
-      "hotkeys": [["Cmd", "Shift", "Y"]],
+      "id": "ee6da909-484d-409a-a13a-5efc8603e840",
+      "hotkeys": [["meta", "shift", "y"]],
       "description": "New Adjustment Layer",
       "isFavorite": false
     },
     {
-      "id": "18",
-      "hotkeys": [["Cmd", "Shift", "K"]],
+      "id": "f7670a9f-8f2e-4ae8-b53f-e3d3a0205414",
+      "hotkeys": [["meta", "shift", "k"]],
       "description": "Composition Settings",
       "isFavorite": false
     },
     {
-      "id": "19",
-      "hotkeys": [["Cmd", "Shift", "H"]],
+      "id": "96522bad-f520-4302-aa6b-2dc3b3292c0f",
+      "hotkeys": [["meta", "shift", "h"]],
       "description": "Hide Properties",
       "isFavorite": false
     },
     {
-      "id": "20",
-      "hotkeys": [["Cmd", "Shift", "U"]],
+      "id": "eb960039-b298-4568-9de7-a5e07ee3acd0",
+      "hotkeys": [["meta", "shift", "u"]],
       "description": "Reveal Keyframes",
       "isFavorite": false
     }

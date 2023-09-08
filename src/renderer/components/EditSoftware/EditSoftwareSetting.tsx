@@ -33,7 +33,11 @@ export default function EditSoftwareList() {
     trpcReact.software.delete.useMutation();
 
   const data = softwareShortcuts?.map(({ software }) => {
-    return { label: software.key, checked: false, key: software.key };
+    return {
+      label: software.label,
+      checked: false,
+      key: software.key,
+    };
   });
 
   const [values, handlers] = useListState(data);
@@ -63,7 +67,7 @@ export default function EditSoftwareList() {
                   <StyledSvg src={selected.software.icon.dataUri} />
                 ) : null}
               </ThemeIcon>
-              <Text size="md">{value.key}</Text>
+              <Text size="md">{value.label}</Text>
             </Group>
           }
           key={value.key}
@@ -75,13 +79,7 @@ export default function EditSoftwareList() {
         <ActionIcon
           ml="auto"
           variant="light"
-          onClick={() =>
-            handleClick(
-              softwareShortcuts?.find((softwareShortcut) => {
-                return softwareShortcut.software.key === value.key;
-              })
-            )
-          }
+          onClick={() => handleClick(selected)}
         >
           <IconEdit size="1rem" />
         </ActionIcon>
@@ -114,7 +112,7 @@ export default function EditSoftwareList() {
         onClose={() => toggleIsEditSoftware(false)}
         title={
           selectedSoftwareShortcut
-            ? `Edit ${selectedSoftwareShortcut.software.key}`
+            ? `Edit ${selectedSoftwareShortcut.software.label}`
             : 'Add Software'
         }
         padding="xl"

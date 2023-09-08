@@ -21,7 +21,7 @@ const FORM_DEFAULT_VALUES = {
 };
 
 const options: Fuse.IFuseOptions<FlattenShortcut> = {
-  keys: ['description', 'software.key'],
+  keys: ['description', 'software.label'],
   minMatchCharLength: 1,
 };
 
@@ -52,7 +52,7 @@ function SearchShortcutContainer() {
 
         const shortcutsArray = shortcuts.map((shortcut) => ({
           ...shortcut,
-          id: `${software.key}-${shortcut.id}`,
+          id: shortcut.id,
           software,
           createdDate,
         }));

@@ -28,7 +28,9 @@ export interface IconData {
 
 export interface SoftwareShortcut {
   software: {
+    id: string;
     key: string;
+    label: string;
     icon: IconData;
   };
   shortcuts: Shortcut[];
@@ -79,10 +81,6 @@ export type EditShortcutState = {
   setShortcutId: (shortcutId: string) => void;
   setSoftwareKey: (key: string) => void;
   setOpened: (opened: boolean) => void;
-};
-export type EditScriptState = {
-  content: string;
-  setContent: (content: string) => void;
 };
 
 export type ConnectedState = {
