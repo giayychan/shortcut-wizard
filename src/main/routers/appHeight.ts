@@ -32,8 +32,7 @@ const appHeightRouter = router({
 
       if (isDev) {
         logInfo(
-          'height changed to: ',
-          isLargerThanMaxHeight ? MAX_HEIGHT : height
+          `height changed to: ${isLargerThanMaxHeight ? MAX_HEIGHT : height}px`
         );
       }
     }),
