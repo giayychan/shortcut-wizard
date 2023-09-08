@@ -5,7 +5,6 @@ import { logError, logSuccess, store } from '.';
 import {
   USER_SOFTWARE_SHORTCUTS_DIR,
   USER_CUSTOM_ICONS_DIR,
-  USER_VECTOR_STORE_DIR,
   SYS_SOFTWARE_SHORTCUTS_DIR,
 } from './path';
 
@@ -47,7 +46,7 @@ export const autoLaunch = async (userEnabled: boolean) => {
 
     return isEnabled;
   } catch (error: any) {
-    console.log('autoLaunch error: ', error.message);
+    logError('autoLaunch error: ', error.message);
     throw error;
   }
 };
@@ -69,7 +68,7 @@ const initializeAutoLaunch = async () => {
       await autoLaunch(true);
     }
   } catch (error: any) {
-    console.log('autoLaunch error: ', error.message);
+    logError('autoLaunch error: ', error.message);
     throw error;
   }
 };
@@ -96,7 +95,6 @@ const initializeUserData = async () => {
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
       await remove(USER_CUSTOM_ICONS_DIR);
-      // await remove(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't remove user shortcuts directory");
       throw error;
@@ -105,7 +103,6 @@ const initializeUserData = async () => {
     try {
       await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
       await ensureDir(USER_CUSTOM_ICONS_DIR);
-      // await ensureDir(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't ensure user shortcuts directory exists");
       throw error;

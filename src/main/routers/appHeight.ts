@@ -4,6 +4,7 @@ import isDev from 'electron-is-dev';
 import { router, publicProcedure } from '../configs/trpc';
 import appWindow from '../mainWindow';
 import { MAX_HEIGHT, WIDTH } from '../constants';
+import { logInfo } from '../utils';
 
 const appHeightRouter = router({
   update: publicProcedure
@@ -30,7 +31,7 @@ const appHeightRouter = router({
       );
 
       if (isDev) {
-        console.log(
+        logInfo(
           'height changed to: ',
           isLargerThanMaxHeight ? MAX_HEIGHT : height
         );

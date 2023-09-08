@@ -74,4 +74,5 @@ const configuration: webpack.Configuration = {
   ],
 };
 
+// eslint-disable-next-line import/no-unused-modules
 export default merge(baseConfig, configuration);
