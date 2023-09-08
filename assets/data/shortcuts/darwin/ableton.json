@@ -1,1 +1,131 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"ableton","icon":{"filename":"ableton.svg","isCustom":false},"id":"41798b62-5d96-4833-9888-6fc560292771"},"shortcuts":[{"id":"ee0eba10-142f-48e8-b5dc-72b0478ef4e1","hotkeys":[["meta","t"]],"description":"New Audio Track","isFavorite":false},{"id":"9d873a3d-04c6-4425-af42-2e9bbea00d4a","hotkeys":[["meta","shift","t"]],"description":"New MIDI Track","isFavorite":false},{"id":"e80674a3-3d4e-4978-af77-a88c58c2f4a9","hotkeys":[["meta","shift","x"]],"description":"Cut Time","isFavorite":false},{"id":"1b984f58-5f93-4565-bacb-4fa82913573c","hotkeys":[["shift","v"]],"description":"Paste Time","isFavorite":false},{"id":"a0fe6d65-bf12-4c47-a08a-4629dd1b447a","hotkeys":[["shift","d"]],"description":"Duplicate Time","isFavorite":false},{"id":"b81024c0-4c95-4615-a535-66112dc56796","hotkeys":[["meta","s"]],"description":"Save Live Set","isFavorite":false},{"id":"00b032cd-e30f-49ff-97d2-2562806c0895","hotkeys":[["meta","shift","s"]],"description":"Save As","isFavorite":false},{"id":"fe20d7b3-52d2-4498-8620-3f50cda9f58f","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false},{"id":"c9cd7d4f-5246-49d9-9b36-9339c742969a","hotkeys":[["meta","c"]],"description":"Copy","isFavorite":false},{"id":"06d62bb9-b6a7-44c3-ad85-3680edde06fb","hotkeys":[["meta","v"]],"description":"Paste","isFavorite":false},{"id":"bcda643d-5a68-4291-bbd8-9b040499c051","hotkeys":[["meta","x"]],"description":"Cut","isFavorite":false},{"id":"f4ae5734-27f4-49c8-8cc1-17398ffb5171","hotkeys":[["meta","a"]],"description":"Select All","isFavorite":false},{"id":"4c21ba8f-a109-4db6-8463-dade53ba9f73","hotkeys":[["meta","d"]],"description":"Duplicate","isFavorite":false},{"id":"e347b03c-a066-4285-93dd-398dc38c5506","hotkeys":[["meta","r"]],"description":"Rename","isFavorite":false},{"id":"8744c1c5-893b-4c6c-9e29-750c55028cd3","hotkeys":[["meta","e"]],"description":"Simplify Envelope","isFavorite":false},{"id":"04df0f3e-79ec-4a63-bbd7-d6c78115c8d6","hotkeys":[["meta","p"]],"description":"Create MIDI Clip","isFavorite":false},{"id":"15a89764-fa50-499f-ad0a-c5b4bc757b00","hotkeys":[["meta","shift","m"]],"description":"Insert MIDI Clip","isFavorite":false},{"id":"d0c004ea-7522-4b5d-a6c3-21c580ae07ec","hotkeys":[["meta","shift","o"]],"description":"Insert Audio Track","isFavorite":false},{"id":"a18ecfb1-b77a-48e2-8b4b-e9036c28a5c8","hotkeys":[["meta","shift","i"]],"description":"Insert Return Track","isFavorite":false},{"id":"0951287e-4e07-4967-b96d-3cb7fd31f85a","hotkeys":[["meta","shift","i"]],"description":"Insert Return Track","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "ableton",
+    "icon": { "filename": "ableton.svg", "isCustom": false },
+    "id": "41798b62-5d96-4833-9888-6fc560292771",
+    "label": "Ableton"
+  },
+  "shortcuts": [
+    {
+      "id": "ee0eba10-142f-48e8-b5dc-72b0478ef4e1",
+      "hotkeys": [["meta", "t"]],
+      "description": "New Audio Track",
+      "isFavorite": false
+    },
+    {
+      "id": "9d873a3d-04c6-4425-af42-2e9bbea00d4a",
+      "hotkeys": [["meta", "shift", "t"]],
+      "description": "New MIDI Track",
+      "isFavorite": false
+    },
+    {
+      "id": "e80674a3-3d4e-4978-af77-a88c58c2f4a9",
+      "hotkeys": [["meta", "shift", "x"]],
+      "description": "Cut Time",
+      "isFavorite": false
+    },
+    {
+      "id": "1b984f58-5f93-4565-bacb-4fa82913573c",
+      "hotkeys": [["shift", "v"]],
+      "description": "Paste Time",
+      "isFavorite": false
+    },
+    {
+      "id": "a0fe6d65-bf12-4c47-a08a-4629dd1b447a",
+      "hotkeys": [["shift", "d"]],
+      "description": "Duplicate Time",
+      "isFavorite": false
+    },
+    {
+      "id": "b81024c0-4c95-4615-a535-66112dc56796",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save Live Set",
+      "isFavorite": false
+    },
+    {
+      "id": "00b032cd-e30f-49ff-97d2-2562806c0895",
+      "hotkeys": [["meta", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "fe20d7b3-52d2-4498-8620-3f50cda9f58f",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "c9cd7d4f-5246-49d9-9b36-9339c742969a",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "06d62bb9-b6a7-44c3-ad85-3680edde06fb",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "bcda643d-5a68-4291-bbd8-9b040499c051",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "f4ae5734-27f4-49c8-8cc1-17398ffb5171",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "4c21ba8f-a109-4db6-8463-dade53ba9f73",
+      "hotkeys": [["meta", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "e347b03c-a066-4285-93dd-398dc38c5506",
+      "hotkeys": [["meta", "r"]],
+      "description": "Rename",
+      "isFavorite": false
+    },
+    {
+      "id": "8744c1c5-893b-4c6c-9e29-750c55028cd3",
+      "hotkeys": [["meta", "e"]],
+      "description": "Simplify Envelope",
+      "isFavorite": false
+    },
+    {
+      "id": "04df0f3e-79ec-4a63-bbd7-d6c78115c8d6",
+      "hotkeys": [["meta", "p"]],
+      "description": "Create MIDI Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "15a89764-fa50-499f-ad0a-c5b4bc757b00",
+      "hotkeys": [["meta", "shift", "m"]],
+      "description": "Insert MIDI Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "d0c004ea-7522-4b5d-a6c3-21c580ae07ec",
+      "hotkeys": [["meta", "shift", "o"]],
+      "description": "Insert Audio Track",
+      "isFavorite": false
+    },
+    {
+      "id": "a18ecfb1-b77a-48e2-8b4b-e9036c28a5c8",
+      "hotkeys": [["meta", "shift", "i"]],
+      "description": "Insert Return Track",
+      "isFavorite": false
+    },
+    {
+      "id": "0951287e-4e07-4967-b96d-3cb7fd31f85a",
+      "hotkeys": [["meta", "shift", "i"]],
+      "description": "Insert Return Track",
+      "isFavorite": false
+    }
+  ]
+}

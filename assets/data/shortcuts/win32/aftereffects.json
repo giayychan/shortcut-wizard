@@ -1,1 +1,131 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"aftereffects","icon":{"filename":"aftereffects.svg","isCustom":false},"id":"4b20c1e9-a4ff-4360-8d44-4a18d7a9548d"},"shortcuts":[{"id":"701a80a5-613e-46d7-ae48-a62d08fd2166","hotkeys":[["ctrl","z"]],"description":"Undo","isFavorite":false},{"id":"8caa45c4-b2a6-4e86-95c3-6bf9472670fd","hotkeys":[["ctrl","shift","z"]],"description":"Redo","isFavorite":false},{"id":"e4242941-dd7f-4204-ab4d-be7c0c319c81","hotkeys":[["ctrl","c"]],"description":"Copy","isFavorite":false},{"id":"ad662987-4c84-49bf-80ad-7d6f863a123e","hotkeys":[["ctrl","v"]],"description":"Paste","isFavorite":false},{"id":"1f18b7f8-8dc5-4646-80e5-f4177be684da","hotkeys":[["ctrl","x"]],"description":"Cut","isFavorite":false},{"id":"606027b0-56d7-4282-ac4c-1246a79c04c5","hotkeys":[["ctrl","d"]],"description":"Duplicate","isFavorite":false},{"id":"144dfaa7-9e7e-4019-8eab-b246ca008bac","hotkeys":[["ctrl","a"]],"description":"Select All","isFavorite":false},{"id":"6d144787-129e-450f-9486-f754bce5e464","hotkeys":[["ctrl","shift","a"]],"description":"Deselect All","isFavorite":false},{"id":"d79f69ee-e9a1-402d-b59a-bf79e8b1b814","hotkeys":[["ctrl","alt","shift","c"]],"description":"Pre-compose","isFavorite":false},{"id":"7e9d3edd-bea3-4e40-b464-aeea00f4a388","hotkeys":[["ctrl","alt","home"]],"description":"Set work area to composition duration","isFavorite":false},{"id":"a0dfa684-2b34-44e9-b712-a2043915ec0e","hotkeys":[["ctrl","alt","n"]],"description":"New composition","isFavorite":false},{"id":"93b377b7-54ea-4c9f-aae9-6c877890e8f5","hotkeys":[["ctrl","alt","k"]],"description":"Preferences","isFavorite":false},{"id":"2599bd2c-30d7-43be-8d4a-ef8ab0e1a78c","hotkeys":[["ctrl","alt","s"]],"description":"Save As","isFavorite":false},{"id":"f557b8dd-249a-42a5-a533-a15bb9b4aa24","hotkeys":[["ctrl","alt","slash"]],"description":"Toggle expansion of selected layers to show all properties","isFavorite":false},{"id":"2cfcecd0-35e3-4bfa-be7b-ca5c78c074ae","hotkeys":[["ctrl","alt","shift","h"]],"description":"Hide properties with keyframes","isFavorite":false},{"id":"917a01b3-1193-4648-a168-5bb19ae5d3c3","hotkeys":[["ctrl","alt","shift","t"]],"description":"Reveal properties with keyframes","isFavorite":false},{"id":"bef6875b-711e-4a1f-b513-f90fa8eead81","hotkeys":[["ctrl","alt","shift","p"]],"description":"Reveal properties with expressions","isFavorite":false},{"id":"19fa2821-e106-47eb-bca9-da7444356199","hotkeys":[["ctrl","alt","shift","f"]],"description":"Reveal properties with expressions and keyframes","isFavorite":false},{"id":"1ad283b3-27d0-4550-9fe2-045d23e46f94","hotkeys":[["ctrl","alt","shift","e"]],"description":"Reveal properties with expressions and effects","isFavorite":false},{"id":"2169051e-e052-450d-b41a-0734eafd326e","hotkeys":[["ctrl","alt","shift","m"]],"description":"Reveal properties with expressions and masks","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "aftereffects",
+    "icon": { "filename": "aftereffects.svg", "isCustom": false },
+    "id": "4b20c1e9-a4ff-4360-8d44-4a18d7a9548d",
+    "label": "After Effects"
+  },
+  "shortcuts": [
+    {
+      "id": "701a80a5-613e-46d7-ae48-a62d08fd2166",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "8caa45c4-b2a6-4e86-95c3-6bf9472670fd",
+      "hotkeys": [["ctrl", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "e4242941-dd7f-4204-ab4d-be7c0c319c81",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "ad662987-4c84-49bf-80ad-7d6f863a123e",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "1f18b7f8-8dc5-4646-80e5-f4177be684da",
+      "hotkeys": [["ctrl", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "606027b0-56d7-4282-ac4c-1246a79c04c5",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "144dfaa7-9e7e-4019-8eab-b246ca008bac",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "6d144787-129e-450f-9486-f754bce5e464",
+      "hotkeys": [["ctrl", "shift", "a"]],
+      "description": "Deselect All",
+      "isFavorite": false
+    },
+    {
+      "id": "d79f69ee-e9a1-402d-b59a-bf79e8b1b814",
+      "hotkeys": [["ctrl", "alt", "shift", "c"]],
+      "description": "Pre-compose",
+      "isFavorite": false
+    },
+    {
+      "id": "7e9d3edd-bea3-4e40-b464-aeea00f4a388",
+      "hotkeys": [["ctrl", "alt", "home"]],
+      "description": "Set work area to composition duration",
+      "isFavorite": false
+    },
+    {
+      "id": "a0dfa684-2b34-44e9-b712-a2043915ec0e",
+      "hotkeys": [["ctrl", "alt", "n"]],
+      "description": "New composition",
+      "isFavorite": false
+    },
+    {
+      "id": "93b377b7-54ea-4c9f-aae9-6c877890e8f5",
+      "hotkeys": [["ctrl", "alt", "k"]],
+      "description": "Preferences",
+      "isFavorite": false
+    },
+    {
+      "id": "2599bd2c-30d7-43be-8d4a-ef8ab0e1a78c",
+      "hotkeys": [["ctrl", "alt", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "f557b8dd-249a-42a5-a533-a15bb9b4aa24",
+      "hotkeys": [["ctrl", "alt", "slash"]],
+      "description": "Toggle expansion of selected layers to show all properties",
+      "isFavorite": false
+    },
+    {
+      "id": "2cfcecd0-35e3-4bfa-be7b-ca5c78c074ae",
+      "hotkeys": [["ctrl", "alt", "shift", "h"]],
+      "description": "Hide properties with keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "917a01b3-1193-4648-a168-5bb19ae5d3c3",
+      "hotkeys": [["ctrl", "alt", "shift", "t"]],
+      "description": "Reveal properties with keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "bef6875b-711e-4a1f-b513-f90fa8eead81",
+      "hotkeys": [["ctrl", "alt", "shift", "p"]],
+      "description": "Reveal properties with expressions",
+      "isFavorite": false
+    },
+    {
+      "id": "19fa2821-e106-47eb-bca9-da7444356199",
+      "hotkeys": [["ctrl", "alt", "shift", "f"]],
+      "description": "Reveal properties with expressions and keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "1ad283b3-27d0-4550-9fe2-045d23e46f94",
+      "hotkeys": [["ctrl", "alt", "shift", "e"]],
+      "description": "Reveal properties with expressions and effects",
+      "isFavorite": false
+    },
+    {
+      "id": "2169051e-e052-450d-b41a-0734eafd326e",
+      "hotkeys": [["ctrl", "alt", "shift", "m"]],
+      "description": "Reveal properties with expressions and masks",
+      "isFavorite": false
+    }
+  ]
+}

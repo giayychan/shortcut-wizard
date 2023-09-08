@@ -142,12 +142,26 @@ function EditShortcutSetting() {
   };
   const selectedOption = softwareShortcuts
     ? [
-        '',
+        {
+          value: '',
+          key: '',
+          label: '',
+        },
         ...softwareShortcuts.map((softwareShortcut) => {
-          return softwareShortcut.software.key;
+          return {
+            value: softwareShortcut.software.key,
+            key: softwareShortcut.software.key,
+            label: softwareShortcut.software.label,
+          };
         }),
       ]
-    : [''];
+    : [
+        {
+          value: '',
+          key: '',
+          label: '',
+        },
+      ];
 
   return (
     <Aside>

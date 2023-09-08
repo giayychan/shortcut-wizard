@@ -1,1 +1,17 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"asana","icon":{"filename":"asana.svg","isCustom":false},"id":"acc21204-670f-4a74-996b-2cae7741eb36"},"shortcuts":[{"id":"5cb8cc7a-6177-4ccb-8265-5a577a248c4d","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "asana",
+    "icon": { "filename": "asana.svg", "isCustom": false },
+    "id": "acc21204-670f-4a74-996b-2cae7741eb36",
+    "label": "Asana"
+  },
+  "shortcuts": [
+    {
+      "id": "5cb8cc7a-6177-4ccb-8265-5a577a248c4d",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}

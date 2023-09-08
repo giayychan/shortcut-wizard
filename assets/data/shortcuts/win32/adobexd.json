@@ -1,1 +1,131 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"adobexd","icon":{"filename":"adobexd.svg","isCustom":false},"id":"dcc224cb-9d73-4e4a-85e1-32b174e01ad4"},"shortcuts":[{"id":"20260d06-7461-45de-93ca-4331e613c13a","hotkeys":[["ctrl","n"]],"description":"New Document","isFavorite":false},{"id":"00bce574-3205-4786-b1bb-98e216df4806","hotkeys":[["ctrl","o"]],"description":"Open Document","isFavorite":false},{"id":"79b29c6b-c97d-471f-9ad7-37f0eb4f7c04","hotkeys":[["ctrl","s"]],"description":"Save Document","isFavorite":false},{"id":"09a71440-00f5-4389-951a-ed14dda172b8","hotkeys":[["ctrl","shift","s"]],"description":"Save Document As","isFavorite":false},{"id":"f067a5cf-3b06-4b26-a123-48f632d1c65a","hotkeys":[["ctrl","z"]],"description":"Undo","isFavorite":false},{"id":"27ae8d75-3ae9-4c71-8212-6d0303e94bb2","hotkeys":[["ctrl","y"]],"description":"Redo","isFavorite":false},{"id":"49f851a0-a51e-4870-becf-88c94adf1a3a","hotkeys":[["ctrl","d"]],"description":"Duplicate Selection","isFavorite":false},{"id":"7ff36283-10be-4a58-a2a3-a0da92096972","hotkeys":[["ctrl","g"]],"description":"Group Selection","isFavorite":false},{"id":"b8fe7761-3d86-4970-a440-ba61f2b0f033","hotkeys":[["ctrl","shift","g"]],"description":"Ungroup Selection","isFavorite":false},{"id":"d2f3c6dd-5656-49b5-9946-097192c66efa","hotkeys":[["ctrl","r"]],"description":"Toggle Rulers","isFavorite":false},{"id":"3f69e5ad-45bd-4edc-a87a-1e1d77639516","hotkeys":[["ctrl","shift","r"]],"description":"Toggle Grid","isFavorite":false},{"id":"6723d8af-44f1-48df-a9bd-c556aeb69974","hotkeys":[["ctrl","shift","p"]],"description":"Toggle Pixel Preview","isFavorite":false},{"id":"339cdfda-7984-4b18-ba4c-c6daaa335d55","hotkeys":[["ctrl","1"]],"description":"Zoom to 100%","isFavorite":false},{"id":"20a89b60-7c54-4206-85c6-eae1ae133bf3","hotkeys":[["ctrl","0"]],"description":"Fit Artboard in Window","isFavorite":false},{"id":"a3b3db9e-8b46-4bc1-a54a-0adfba79cfef","hotkeys":[["ctrl","shift","c"]],"description":"Copy CSS","isFavorite":false},{"id":"980341d1-73b6-4b44-9433-5f2cf5511df3","hotkeys":[["ctrl","shift","x"]],"description":"Copy SVG","isFavorite":false},{"id":"2c3f60f8-fb68-49eb-a76f-3cdbe264e603","hotkeys":[["ctrl","shift","v"]],"description":"Paste in Place","isFavorite":false},{"id":"de4a77cf-0d40-47f3-ae0e-1f5d1617af4c","hotkeys":[["ctrl","shift","h"]],"description":"Toggle Hide/Show UI","isFavorite":false},{"id":"765ddbf2-01b8-4f0f-842c-b1697efe6c23","hotkeys":[["ctrl","shift","l"]],"description":"Toggle Lock/Unlock Selection","isFavorite":false},{"id":"f838cfcb-8ca0-4bf3-8155-f91bc4891b64","hotkeys":[["ctrl","shift","g"]],"description":"Toggle Grid","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobexd",
+    "icon": { "filename": "adobexd.svg", "isCustom": false },
+    "id": "dcc224cb-9d73-4e4a-85e1-32b174e01ad4",
+    "label": "Adobe XD"
+  },
+  "shortcuts": [
+    {
+      "id": "20260d06-7461-45de-93ca-4331e613c13a",
+      "hotkeys": [["ctrl", "n"]],
+      "description": "New Document",
+      "isFavorite": false
+    },
+    {
+      "id": "00bce574-3205-4786-b1bb-98e216df4806",
+      "hotkeys": [["ctrl", "o"]],
+      "description": "Open Document",
+      "isFavorite": false
+    },
+    {
+      "id": "79b29c6b-c97d-471f-9ad7-37f0eb4f7c04",
+      "hotkeys": [["ctrl", "s"]],
+      "description": "Save Document",
+      "isFavorite": false
+    },
+    {
+      "id": "09a71440-00f5-4389-951a-ed14dda172b8",
+      "hotkeys": [["ctrl", "shift", "s"]],
+      "description": "Save Document As",
+      "isFavorite": false
+    },
+    {
+      "id": "f067a5cf-3b06-4b26-a123-48f632d1c65a",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "27ae8d75-3ae9-4c71-8212-6d0303e94bb2",
+      "hotkeys": [["ctrl", "y"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "49f851a0-a51e-4870-becf-88c94adf1a3a",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Duplicate Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "7ff36283-10be-4a58-a2a3-a0da92096972",
+      "hotkeys": [["ctrl", "g"]],
+      "description": "Group Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "b8fe7761-3d86-4970-a440-ba61f2b0f033",
+      "hotkeys": [["ctrl", "shift", "g"]],
+      "description": "Ungroup Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "d2f3c6dd-5656-49b5-9946-097192c66efa",
+      "hotkeys": [["ctrl", "r"]],
+      "description": "Toggle Rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "3f69e5ad-45bd-4edc-a87a-1e1d77639516",
+      "hotkeys": [["ctrl", "shift", "r"]],
+      "description": "Toggle Grid",
+      "isFavorite": false
+    },
+    {
+      "id": "6723d8af-44f1-48df-a9bd-c556aeb69974",
+      "hotkeys": [["ctrl", "shift", "p"]],
+      "description": "Toggle Pixel Preview",
+      "isFavorite": false
+    },
+    {
+      "id": "339cdfda-7984-4b18-ba4c-c6daaa335d55",
+      "hotkeys": [["ctrl", "1"]],
+      "description": "Zoom to 100%",
+      "isFavorite": false
+    },
+    {
+      "id": "20a89b60-7c54-4206-85c6-eae1ae133bf3",
+      "hotkeys": [["ctrl", "0"]],
+      "description": "Fit Artboard in Window",
+      "isFavorite": false
+    },
+    {
+      "id": "a3b3db9e-8b46-4bc1-a54a-0adfba79cfef",
+      "hotkeys": [["ctrl", "shift", "c"]],
+      "description": "Copy CSS",
+      "isFavorite": false
+    },
+    {
+      "id": "980341d1-73b6-4b44-9433-5f2cf5511df3",
+      "hotkeys": [["ctrl", "shift", "x"]],
+      "description": "Copy SVG",
+      "isFavorite": false
+    },
+    {
+      "id": "2c3f60f8-fb68-49eb-a76f-3cdbe264e603",
+      "hotkeys": [["ctrl", "shift", "v"]],
+      "description": "Paste in Place",
+      "isFavorite": false
+    },
+    {
+      "id": "de4a77cf-0d40-47f3-ae0e-1f5d1617af4c",
+      "hotkeys": [["ctrl", "shift", "h"]],
+      "description": "Toggle Hide/Show UI",
+      "isFavorite": false
+    },
+    {
+      "id": "765ddbf2-01b8-4f0f-842c-b1697efe6c23",
+      "hotkeys": [["ctrl", "shift", "l"]],
+      "description": "Toggle Lock/Unlock Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "f838cfcb-8ca0-4bf3-8155-f91bc4891b64",
+      "hotkeys": [["ctrl", "shift", "g"]],
+      "description": "Toggle Grid",
+      "isFavorite": false
+    }
+  ]
+}

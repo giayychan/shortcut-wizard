@@ -1,11 +1,5 @@
 import { useEffect, useRef } from 'react';
-import {
-  UnstyledButton,
-  Button,
-  ScrollArea,
-  Skeleton,
-  Flex,
-} from '@mantine/core';
+import { Button, ScrollArea, Skeleton, Text } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
 
 import StyledSvg from '../common/StyledSvg';
@@ -54,25 +48,23 @@ function SoftwareList({
 
   return (
     <ScrollArea type="auto" scrollbarSize={5} viewportRef={viewport}>
-      <div className="flex flex-row gap-1 pb-2">
+      <div className="flex flex-row gap-1 px-2 pb-2">
         {softwareShortcuts.map((softwareData) => {
           const { software } = softwareData;
-          const { key, icon } = software;
+          const { key, icon, label } = software;
           const isSelected = selected?.software.key === key;
 
           return (
-            <UnstyledButton
+            <Button
               key={key}
-              variant="filled"
+              variant="default"
               onClick={() => handleSelect(key)}
-              className="capitalize rounded"
+              className="w-full rounded"
               bg={isSelected ? 'dark.6' : 'dark.7'}
+              leftIcon={<StyledSvg src={icon.dataUri} />}
             >
-              <Flex align="center" gap={4} className="px-2 py-1 text-[15px]">
-                <StyledSvg src={icon.dataUri} />
-                {key}
-              </Flex>
-            </UnstyledButton>
+              <Text>{label}</Text>
+            </Button>
           );
         })}
       </div>

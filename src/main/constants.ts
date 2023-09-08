@@ -1,3 +1,4 @@
+import { v4 } from 'uuid';
 import { AddSoftwareAutocompleteOption } from '../../@types';
 
 export const WIDTH = 720;
@@ -9,6 +10,8 @@ export const APP_HOTKEYS = ['Shift', 'Space'];
 
 export const AUTO_COMPLETE_CUSTOM_OPTION: AddSoftwareAutocompleteOption = {
   software: {
+    id: v4(),
+    label: '',
     key: '',
     icon: {
       isCustom: true,

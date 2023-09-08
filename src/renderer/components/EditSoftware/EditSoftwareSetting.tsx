@@ -34,7 +34,7 @@ export default function EditSoftwareList() {
 
   const data = softwareShortcuts?.map(({ software }) => {
     return {
-      label: software.key,
+      label: software.label,
       checked: false,
       key: software.key,
     };
@@ -67,7 +67,7 @@ export default function EditSoftwareList() {
                   <StyledSvg src={selected.software.icon.dataUri} />
                 ) : null}
               </ThemeIcon>
-              <Text size="md">{value.key}</Text>
+              <Text size="md">{value.label}</Text>
             </Group>
           }
           key={value.key}
@@ -112,7 +112,7 @@ export default function EditSoftwareList() {
         onClose={() => toggleIsEditSoftware(false)}
         title={
           selectedSoftwareShortcut
-            ? `Edit ${selectedSoftwareShortcut.software.key}`
+            ? `Edit ${selectedSoftwareShortcut.software.label}`
             : 'Add Software'
         }
         padding="xl"

@@ -59,7 +59,7 @@ function ShortcutListContainer() {
                 }
               >
                 <Text>
-                  {software.key}: {description}
+                  {software.label}: {description}
                 </Text>
 
                 <Hotkeys hotkeys={hotkeys} />
@@ -91,7 +91,7 @@ function ShortcutListContainer() {
           setOpened(true);
         }}
       >
-        Add {selectedSoftwareShortcut.software.key} Shortcut
+        Add {selectedSoftwareShortcut.software.label} Shortcut
       </Button>
     );
   }
