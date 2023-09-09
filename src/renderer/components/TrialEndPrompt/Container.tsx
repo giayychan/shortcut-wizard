@@ -16,6 +16,9 @@ function TrialEndPromptContainer() {
 
   return (
     <PromptContainer>
+      {auth?.currentUser?.email ? (
+        <p>You are logged in as {auth?.currentUser?.email}</p>
+      ) : null}
       <p>
         Your trial has ended. Please purchase the pro plan if you like the app
         ❤️

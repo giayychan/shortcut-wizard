@@ -20,8 +20,6 @@ import {
   IconSortAscending,
 } from '@tabler/icons-react';
 
-import useAuthStore from '../../stores/useAuthStore';
-import trpcReact from '../../utils/trpc';
 import UserAccountDetail from './UserLink';
 import MainLinks from './MainLinks';
 
@@ -96,14 +94,6 @@ function SettingsModal({
   selectedSettingsTab: number;
 }>) {
   const [selected, setSelected] = useState(selectedSettingsTab);
-
-  const dbUser = useAuthStore((state) => state.user);
-  const utils = trpcReact.useContext();
-  const paidUser = utils.user.getPaidUser.getData();
-
-  const user = dbUser || paidUser;
-
-  if (!user) return null;
 
   return (
     <Flex>

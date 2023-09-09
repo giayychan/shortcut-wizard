@@ -4,7 +4,6 @@ import authRouter from './auth';
 import softwareRouter from './software';
 import settingsRouter from './settings';
 import shortcutRouter from './shortcut';
-import userRouter from './user';
 
 export const appRouter = router({
   appHeight: appHeightRouter,
@@ -12,7 +11,6 @@ export const appRouter = router({
   auth: authRouter,
   settings: settingsRouter,
   shortcut: shortcutRouter,
-  user: userRouter,
 });
 
 export type AppRouter = typeof appRouter;

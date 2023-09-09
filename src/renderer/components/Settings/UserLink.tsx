@@ -1,18 +1,16 @@
 import { SHORTCUT_WIZARD_HREF } from 'main/constants';
-import { Flex, Text, Badge, Button, Group } from '@mantine/core';
+import { Flex, Text, Badge, Button, Group, Center } from '@mantine/core';
 import dayjs from 'dayjs';
 import SignInButton from '../Auth/SignInButton';
-import trpcReact from '../../utils/trpc';
 import useAuthStore from '../../stores/useAuthStore';
+import useConnectedStore from '../../stores/useConnectedStore';
 
 function UserAccountDetail() {
-  const dbUser = useAuthStore((state) => state.user);
-  const utils = trpcReact.useContext();
-  const paidUser = utils.user.getPaidUser.getData();
+  const user = useAuthStore((state) => state.user);
 
-  const user = dbUser || paidUser;
-
-  if (!user) return null;
+  const connected = useConnectedStore((state) => state.connected);
+  if (!connected) return <Center>Not connected to internet</Center>;
+  if (!user) return <Center>Please sign in</Center>;
 
   return (
     <Flex direction="column" gap="md">

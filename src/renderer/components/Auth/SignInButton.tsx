@@ -11,7 +11,6 @@ import { notifyClientError, notifyClientInfo } from '../../utils';
 
 function SignInButton() {
   const utils = trpcReact.useContext();
-  const paidUser = utils.user.getPaidUser.getData();
   const isDev = utils.settings.isDev.getData();
   const { mutate: openWindow } = trpcReact.settings.openWindow.useMutation();
   const user = useAuthStore((state) => state.user);
@@ -116,8 +115,6 @@ function SignInButton() {
       </Button>
     </div>
   );
-
-  if (paidUser) return null;
 
   return user ? (
     <div>

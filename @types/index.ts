@@ -108,11 +108,9 @@ export type DbUserData = {
 };
 
 export type AuthState = {
-  loading: boolean;
-  setLoading: (loading: boolean) => void;
-  user: DbUserData | null;
-  setUserByFirebase: (user: User | null) => void;
-  setUserByPaidUser: (user: DbUserData) => void;
+  user: (DbUserData & User) | null;
+  setUser: (user: User | null) => void;
+  setDbUser: (user: DbUserData | null) => void;
 };
 
 export type SelectedShortcutsState = {
