@@ -1,3 +1,4 @@
+import isDev from 'electron-is-dev';
 import { z } from 'zod';
 import { router, publicProcedure } from '../configs/trpc';
 import initializeUserData, { autoLaunch } from '../utils/initialize';
@@ -40,6 +41,9 @@ const settingsRouter = router({
 
       return processPlatform;
     }),
+  isDev: publicProcedure.output(z.boolean()).query(() => {
+    return isDev;
+  }),
   openWindow: publicProcedure.mutation(() => {
     const window = mainWindow.getWindow();
     if (!window) return;

@@ -23,6 +23,8 @@ function UserAccountDetail() {
         </Badge>
       </Text>
 
+      <Text>Email: {user.email}</Text>
+
       {user.trial?.endDate ? (
         <>
           <Text>

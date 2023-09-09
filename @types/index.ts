@@ -83,6 +83,11 @@ export type EditShortcutState = {
   setOpened: (opened: boolean) => void;
 };
 
+export type IsDevState = {
+  isDev: boolean;
+  setIsDev: (isDev: boolean) => void;
+};
+
 export type ConnectedState = {
   connected: boolean;
   loading: boolean;
@@ -90,6 +95,7 @@ export type ConnectedState = {
 };
 
 export type DbUserData = {
+  email: string;
   electronId: string;
   plan: {
     type: string;
