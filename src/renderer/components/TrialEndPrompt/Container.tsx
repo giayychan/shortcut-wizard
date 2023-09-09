@@ -20,7 +20,7 @@ function TrialEndPromptContainer() {
       <Button
         compact
         component="a"
-        href={`${SHORTCUT_WIZARD_HREF}/feedback`}
+        href={`${SHORTCUT_WIZARD_HREF}/contact`}
         target="_href"
       >
         Feedback
