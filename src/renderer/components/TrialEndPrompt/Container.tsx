@@ -6,7 +6,10 @@ import PromptContainer from '../common/Prompt';
 function TrialEndPromptContainer() {
   return (
     <PromptContainer>
-      <p>Your trial has ended. Please buy plan if you like the app ❤️</p>
+      <p>
+        Your trial has ended. Please purchase the pro plan if you like the app
+        ❤️
+      </p>
 
       <Button
         compact
