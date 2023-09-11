@@ -44,6 +44,15 @@ const settingsRouter = router({
   isDev: publicProcedure.output(z.boolean()).query(() => {
     return isDev;
   }),
+  isClosedTutorial: publicProcedure.output(z.boolean()).query(() => {
+    return Boolean(store.get('isClosedTutorial'));
+  }),
+  updateIsClosedTutorial: publicProcedure
+    .input(z.boolean())
+    .mutation((opts) => {
+      const { input } = opts;
+      store.set('isClosedTutorial', input);
+    }),
   openWindow: publicProcedure.mutation(() => {
     const window = mainWindow.getWindow();
     if (!window) return;

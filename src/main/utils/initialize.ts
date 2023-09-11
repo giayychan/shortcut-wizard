@@ -91,6 +91,7 @@ const initializeUserData = async () => {
     store.set('sortSoftwareByRecentOpened', true);
     store.delete('isPanelAlwaysAtCenter');
     store.delete('panelPosition');
+    store.delete('isClosedTutorial');
 
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);

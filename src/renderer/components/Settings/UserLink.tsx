@@ -1,7 +1,9 @@
 import { SHORTCUT_WIZARD_HREF } from 'main/constants';
+import { modals } from '@mantine/modals';
 import { Flex, Text, Badge, Button, Group, Center } from '@mantine/core';
+import { auth } from 'main/configs/firebase';
+import { signOut } from 'firebase/auth';
 import dayjs from 'dayjs';
-import SignInButton from '../Auth/SignInButton';
 import useAuthStore from '../../stores/useAuthStore';
 import useConnectedStore from '../../stores/useConnectedStore';
 
@@ -12,6 +14,10 @@ function UserAccountDetail() {
   if (!connected) return <Center>Not connected to internet</Center>;
   if (!user) return <Center>Please sign in</Center>;
 
+  const handleSignOut = async () => {
+    await signOut(auth);
+    modals.closeAll();
+  };
   return (
     <Flex direction="column" gap="md">
       <Text>
@@ -38,12 +44,20 @@ function UserAccountDetail() {
             >
               Buy Plan
             </Button>
-            <SignInButton />
           </Group>
         </>
       ) : (
-        <Text>Thanks for your support! ❤️</Text>
+        <Text>Thank you for your support! ❤️</Text>
       )}
+
+      <Button
+        compact
+        color="indigo"
+        className="cursor-pointer"
+        onClick={handleSignOut}
+      >
+        Sign out
+      </Button>
     </Flex>
   );
 }

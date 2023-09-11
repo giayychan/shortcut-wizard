@@ -30,7 +30,7 @@ function LayoutProvider({ children }: { children: ReactNode }) {
             closeOnEscape: false,
           }}
         >
-          <Notifications />
+          <Notifications position="top-right" top="2rem" />
           {children}
         </ModalsProvider>
       </MantineProvider>
