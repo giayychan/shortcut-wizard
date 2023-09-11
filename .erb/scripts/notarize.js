@@ -1,7 +1,12 @@
 const { notarize } = require('@electron/notarize');
 const { build } = require('../../package.json');
 
+// disable since it is too expensive to notarize
 exports.default = async function notarizeMacos(context) {
+  if (process.env.SKIP_NOTARIZE) {
+    return;
+  }
+
   const { electronPlatformName, appOutDir } = context;
   if (electronPlatformName !== 'darwin') {
     return;

@@ -1,6 +1,6 @@
 import { SHORTCUT_WIZARD_HREF } from 'main/constants';
 import { modals } from '@mantine/modals';
-import { Flex, Text, Badge, Button, Group, Center } from '@mantine/core';
+import { Flex, Text, Badge, Button, Center } from '@mantine/core';
 import { auth } from 'main/configs/firebase';
 import { signOut } from 'firebase/auth';
 import dayjs from 'dayjs';
@@ -34,17 +34,15 @@ function UserAccountDetail() {
           <Text>
             Trial Ends: {dayjs.unix(user.trial.endDate).format('DD-MMM-YYYY')}
           </Text>
-          <Group>
-            <Button
-              compact
-              color="green"
-              component="a"
-              href={`${SHORTCUT_WIZARD_HREF}/pricing`}
-              target="_href"
-            >
-              Buy Plan
-            </Button>
-          </Group>
+          <Button
+            compact
+            color="green"
+            component="a"
+            href={`${SHORTCUT_WIZARD_HREF}/pricing`}
+            target="_href"
+          >
+            Buy Plan
+          </Button>
         </>
       ) : (
         <Text>Thank you for your support! ❤️</Text>
