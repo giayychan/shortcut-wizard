@@ -20,6 +20,7 @@
   },
   "main": "./src/main/main.ts",
   "scripts": {
+    "publish:local": "npm exec electron-builder -- --publish always --win --mac --linux",
     "find-deadcode": "ts-prune",
     "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
     "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.prod.ts",
@@ -263,7 +264,8 @@
     "publish": {
       "provider": "github",
       "owner": "Giayychan",
-      "repo": "shortcut-wizard"
+      "repo": "shortcut-wizard-release",
+      "private": false
     }
   },
   "devEngines": {

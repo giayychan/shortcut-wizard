@@ -28,6 +28,8 @@ npm-debug.log.*
 *.sass.d.ts
 *.scss.d.ts
 
-.env.*
+.env*
 
 src/main/utils/admin.ts
+
+codesign.p12
