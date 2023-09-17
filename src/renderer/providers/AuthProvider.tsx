@@ -1,12 +1,12 @@
 import dayjs from 'dayjs';
 import { ReactNode, useEffect } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { onChildChanged } from 'firebase/database';
+import { onValue } from 'firebase/database';
 import { auth } from 'main/configs/firebase';
 import useAuthStore from '../stores/useAuthStore';
 import TrialEndPrompt from '../components/TrialEndPrompt/Container';
 import SignInPrompt from '../components/Auth/SignInPrompt';
-import { getUserFromDB, getUserRef } from '../services/user';
+import { getUserRef } from '../services/user';
 import { notifyClientError } from '../utils';
 import useConnectedStore from '../stores/useConnectedStore';
 
@@ -27,23 +27,30 @@ function AuthProvider({ children }: { children: ReactNode }) {
     return () => unsubscribe();
   }, [setUser]);
 
+  const userId = user?.uid;
+
   useEffect(() => {
     let unsubscribeUserChanged: () => void = () => {};
 
-    if (user && user.uid) {
-      const userRef = getUserRef(user.uid);
-
-      unsubscribeUserChanged = onChildChanged(
+    if (userId) {
+      const userRef = getUserRef(userId);
+      unsubscribeUserChanged = onValue(
         userRef,
-        async () => {
-          const updatedUser = await getUserFromDB(user.uid);
+        async (snapshot) => {
+          const updatedUser = snapshot.val();
 
           if (!updatedUser) {
             setUser(null);
             unsubscribeUserChanged();
             await signOut(auth);
           } else {
-            setDbUser(updatedUser);
+            const sanitizedData = {
+              ...updatedUser,
+              trial: updatedUser.trial || null,
+              stripePaymentId: updatedUser.stripePaymentId || null,
+            };
+
+            setDbUser(sanitizedData);
           }
         },
         (err) => {
@@ -51,10 +58,12 @@ function AuthProvider({ children }: { children: ReactNode }) {
           unsubscribeUserChanged();
         }
       );
+    } else {
+      unsubscribeUserChanged();
     }
 
     return () => unsubscribeUserChanged();
-  }, [user, setUser, setDbUser]);
+  }, [userId, setUser, setDbUser]);
 
   if (!user && connected) return <SignInPrompt />;
 

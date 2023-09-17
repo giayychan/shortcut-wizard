@@ -27,7 +27,9 @@ function TrialEndPromptContainer() {
       <Button
         compact
         component="a"
-        href={`${SHORTCUT_WIZARD_HREF}/pricing`}
+        href={`${
+          isDev ? 'http://localhost:3000' : SHORTCUT_WIZARD_HREF
+        }/pricing`}
         target="_href"
       >
         Buy Plan

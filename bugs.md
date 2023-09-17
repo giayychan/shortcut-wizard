@@ -25,3 +25,8 @@ Click on the name of the app. For example, Webpack App.
 If you don't see anything in the opened tab, focus on the window of your app.
 
 User data folder: /Users/yanyan/Library/Application Support/Electron
+
+PROD BUGS:
+
+setting navbar UI?
+auth loading?
