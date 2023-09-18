@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Button, ScrollArea, Skeleton, Text } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
+import { useSearchParams } from 'react-router-dom';
 
 import StyledSvg from '../common/StyledSvg';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
@@ -74,6 +75,7 @@ function SoftwareList({
 
 function SoftwareListContainer() {
   const { data, isLoading } = trpcReact.software.all.useQuery();
+  const [, setSearchParams] = useSearchParams();
 
   const [selectedSoftware, setSelectedSoftware] = useSelectedShortcutsStore(
     (state) => [
@@ -102,19 +104,20 @@ function SoftwareListContainer() {
 
   if (!data?.length)
     return (
-      <div className="ml-2 h-[50px]">
+      <div className="ml-2 h-[50px] flex items-center">
         <Button
-          variant="outline"
-          onClick={() =>
+          variant="light"
+          onClick={() => {
             openContextModal({
               modal: 'openSettings',
               fullScreen: true,
               withCloseButton: false,
               innerProps: {
-                selectedSettingsTab: 2,
+                selectedSettingsTab: 'Add Software',
               },
-            })
-          }
+            });
+            setSearchParams({ from: 'main' });
+          }}
         >
           Add software
         </Button>

@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 import { Button, List, Text, ScrollArea } from '@mantine/core';
 import { openContextModal } from '@mantine/modals';
+import { useSearchParams } from 'react-router-dom';
+
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
 import ShortcutListItem from './Item';
-import useEditShortcutStore from '../../stores/useEditShortcutStore';
 
 const listStyles = {
   itemWrapper: {
@@ -22,8 +23,13 @@ const listStyles = {
 
 function ScrollableListWrapper({ children }: { children: ReactNode }) {
   return (
-    <ScrollArea.Autosize scrollbarSize={5} type="auto" pt="sm" offsetScrollbars>
-      <List mx={10} spacing="lg" size="sm" center styles={listStyles}>
+    <ScrollArea.Autosize
+      scrollbarSize={5}
+      type="auto"
+      offsetScrollbars
+      className="ml-4"
+    >
+      <List m={10} spacing="lg" size="sm" center styles={listStyles}>
         {children}
       </List>
     </ScrollArea.Autosize>
@@ -31,6 +37,7 @@ function ScrollableListWrapper({ children }: { children: ReactNode }) {
 }
 
 function ShortcutListContainer() {
+  const [, setSearchParams] = useSearchParams();
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
     (state) => state.selectedSoftwareShortcut
   );
@@ -39,8 +46,6 @@ function ShortcutListContainer() {
     state.isSearchResultsShow,
     state.results,
   ]);
-
-  const setOpened = useEditShortcutStore((state) => state.setOpened);
 
   if (isSearchResultsShow) {
     return (
@@ -79,20 +84,22 @@ function ShortcutListContainer() {
 
   if (selectedSoftwareShortcut.shortcuts.length === 0) {
     return (
-      <Button
-        variant="outline"
-        onClick={() => {
-          openContextModal({
-            modal: 'openSettings',
-            fullScreen: true,
-            withCloseButton: false,
-            innerProps: { selectedSettingsTab: 4 },
-          });
-          setOpened(true);
-        }}
-      >
-        Add {selectedSoftwareShortcut.software.label} Shortcut
-      </Button>
+      <div className="px-4 pb-4">
+        <Button
+          variant="light"
+          onClick={() => {
+            openContextModal({
+              modal: 'openSettings',
+              fullScreen: true,
+              withCloseButton: false,
+              innerProps: { selectedSettingsTab: 'Add Shortcut' },
+            });
+            setSearchParams({ from: 'main' });
+          }}
+        >
+          Add {selectedSoftwareShortcut.software.label} Shortcut
+        </Button>
+      </div>
     );
   }
 

@@ -1,129 +1,183 @@
-import { ReactNode, useState } from 'react';
-import {
-  Navbar,
-  ScrollArea,
-  Flex,
-  Divider,
-  UnstyledButton,
-  Text,
-  Group,
-  Aside,
-} from '@mantine/core';
+import { useEffect, useState } from 'react';
+
+import { Flex, Grid, NavLink } from '@mantine/core';
 import { ContextModalProps, modals } from '@mantine/modals';
 import {
-  IconWorld,
-  IconDatabaseEdit,
-  IconEditCircle,
-  IconMessages,
+  IconChevronRight,
+  IconSettings,
+  IconComponents,
+  IconKeyboard,
+  IconHeartFilled,
   IconArrowBackUp,
   IconUser,
-  IconSortAscending,
 } from '@tabler/icons-react';
+import { useSearchParams } from 'react-router-dom';
 
-import UserAccountDetail from './UserLink';
-import MainLinks from './MainLinks';
-
-import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import Feedback from './Feedback';
 import GlobalSettings from './GlobalSettings';
-import EditShortcutSetting from './EditShortcutSetting';
 import SortSoftwareList from './SortSoftwareList';
+import TitleBar from '../../layout/TitleBar';
 
-function SettingWrapper({ children }: { children: ReactNode }) {
-  return (
-    <Aside pt={95} className="overflow-hidden">
-      <Flex px="md">{children}</Flex>
-    </Aside>
-  );
-}
-
-const LINK_DATA = [
-  {
-    icon: <IconUser size="1rem" />,
-    color: 'blue',
-    label: 'Account',
-    component: (
-      <SettingWrapper>
-        <UserAccountDetail />
-      </SettingWrapper>
-    ),
-  },
-  {
-    icon: <IconWorld size="1rem" />,
-    color: 'pink',
-    label: 'System Settings',
-    component: (
-      <SettingWrapper>
-        <GlobalSettings />
-      </SettingWrapper>
-    ),
-  },
-  {
-    icon: <IconDatabaseEdit size="1rem" />,
-    color: 'teal',
-    label: 'Edit Software',
-    component: <EditSoftwareSetting />,
-  },
-  {
-    icon: <IconSortAscending size="1rem" />,
-    color: 'yellow',
-    label: 'Sort Software',
-    component: <SortSoftwareList />,
-  },
-  {
-    icon: <IconEditCircle size="1rem" />,
-    color: 'violet',
-    label: 'Edit Shortcut',
-    component: <EditShortcutSetting />,
-  },
-  {
-    icon: <IconMessages size="1rem" />,
-    color: 'grape',
-    label: 'Feedback',
-    component: (
-      <SettingWrapper>
-        <Feedback />
-      </SettingWrapper>
-    ),
-  },
-];
+import UserProfile, { UpgradeButton } from './UserProfile';
+import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
+import EditShortcutSetting from './EditShortcutSetting';
+import { TabType } from '../../../../@types';
+import AddSoftwareSetting from '../EditSoftware/AddSoftwareSetting';
 
 function SettingsModal({
   innerProps: { selectedSettingsTab },
 }: ContextModalProps<{
-  selectedSettingsTab: number;
+  selectedSettingsTab: TabType;
 }>) {
-  const [selected, setSelected] = useState(selectedSettingsTab);
+  const [selected, setSelected] = useState(selectedSettingsTab || 'Account');
+
+  const [searchParams] = useSearchParams();
+  const modalTab = searchParams.get('modalTab');
+
+  useEffect(() => {
+    if (modalTab) {
+      setSelected(modalTab as TabType);
+      searchParams.delete('modalTab');
+    }
+  }, [modalTab, searchParams]);
+
+  const renderSelectedTab = () => {
+    switch (selected) {
+      case 'Account':
+        return { component: <UserProfile /> };
+      case 'System Setting':
+        return { component: <GlobalSettings /> };
+      case 'Add Software':
+        return { component: <AddSoftwareSetting /> };
+      case 'Edit Software':
+        return {
+          component: <EditSoftwareSetting setSelected={setSelected} />,
+        };
+      case 'Sort Software':
+        return { component: <SortSoftwareList /> };
+      case 'Add Shortcut':
+        return {
+          component: <EditShortcutSetting type="Add" />,
+        };
+      case 'Edit Shortcut':
+        return {
+          component: (
+            <EditShortcutSetting setSelectedTab={setSelected} type="Edit" />
+          ),
+        };
+      case 'Feedback':
+        return { component: <Feedback /> };
+      default:
+        return { component: <div /> };
+    }
+  };
+
+  const { component } = renderSelectedTab();
 
   return (
-    <Flex>
-      <Navbar width={{ base: 300 }} pt={30} pb={15} pl={10}>
-        <UnstyledButton
-          sx={(theme) => ({
-            display: 'block',
-            width: '100%',
-            padding: theme.spacing.xs,
-          })}
-          onClick={() => modals.closeAll()}
-        >
-          <Group>
-            <IconArrowBackUp />
-            <Text size="sm">Back</Text>
-          </Group>
-        </UnstyledButton>
+    <>
+      <TitleBar />
+      <Grid px="sm" py="sm" m={0} h="calc(100vh - 35px)">
+        <Grid.Col span={4} p={0} pr={10}>
+          <Flex
+            direction="column"
+            h="100%"
+            className="p-4 border border-[#373A40] rounded-lg"
+          >
+            <Flex direction="column" gap={5} className="flex-grow">
+              <NavLink
+                label="Back"
+                className="rounded-lg"
+                icon={<IconArrowBackUp size="1rem" stroke={1.5} />}
+                onClick={() => modals.closeAll()}
+              />
+              <NavLink
+                active={selected === 'Account'}
+                label="Account"
+                className="rounded-lg"
+                icon={<IconUser size="1rem" stroke={1.5} />}
+                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                onClick={() => setSelected('Account')}
+              />
+              <NavLink
+                active={selected === 'System Setting'}
+                label="System Setting"
+                className="rounded-lg"
+                icon={<IconSettings size="1rem" stroke={1.5} />}
+                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                onClick={() => setSelected('System Setting')}
+              />
 
-        <Navbar.Section grow component={ScrollArea} pr="xs">
-          <Divider mb="md" />
-          <MainLinks
-            data={LINK_DATA}
-            setSelected={setSelected}
-            selected={selected}
-          />
-        </Navbar.Section>
-      </Navbar>
-
-      {LINK_DATA[selected]?.component}
-    </Flex>
+              <NavLink
+                active={selected.includes('Software')}
+                label="Software"
+                childrenOffset={28}
+                icon={<IconComponents size="1rem" stroke={1.5} />}
+                className="rounded-lg"
+              >
+                <NavLink
+                  active={selected === 'Add Software'}
+                  className="mb-1 rounded-lg"
+                  label="Add"
+                  onClick={() => setSelected('Add Software')}
+                />
+                <NavLink
+                  active={selected === 'Edit Software'}
+                  className="mb-1 rounded-lg"
+                  label="Edit / Delete"
+                  onClick={() => setSelected('Edit Software')}
+                />
+                <NavLink
+                  active={selected === 'Sort Software'}
+                  className="rounded-lg"
+                  label="Sort"
+                  onClick={() => setSelected('Sort Software')}
+                />
+              </NavLink>
+              <NavLink
+                active={selected.includes('Shortcut')}
+                label="Shortcut"
+                childrenOffset={28}
+                icon={<IconKeyboard size="1rem" stroke={1.5} />}
+                className="rounded-lg"
+              >
+                <NavLink
+                  active={selected === 'Add Shortcut'}
+                  className="mb-1 rounded-lg"
+                  label="Add"
+                  onClick={() => setSelected('Add Shortcut')}
+                />
+                <NavLink
+                  active={selected === 'Edit Shortcut'}
+                  className="rounded-lg"
+                  label="Edit / Delete"
+                  onClick={() => setSelected('Edit Shortcut')}
+                />
+              </NavLink>
+              <NavLink
+                active={selected === 'Feedback'}
+                label="Feedback"
+                className="rounded-lg"
+                icon={<IconHeartFilled size="1rem" stroke={1.5} />}
+                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                onClick={() => setSelected('Feedback')}
+              />
+            </Flex>
+            {/* <UserProfile /> */}
+            <UpgradeButton />
+          </Flex>
+        </Grid.Col>
+        <Grid.Col span={8} p={0} h="100%" className="overflow-hidden">
+          <Flex
+            direction="column"
+            h="100%"
+            className="flex-grow border border-[#373A40] rounded-lg py-3 px-4"
+          >
+            {component}
+          </Flex>
+        </Grid.Col>
+      </Grid>
+    </>
   );
 }
 

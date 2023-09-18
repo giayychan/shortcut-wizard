@@ -16,14 +16,27 @@ function LayoutProvider({ children }: { children: ReactNode }) {
         emotionCache={myCache}
         withGlobalStyles
         withNormalizeCSS
-        theme={{ colorScheme: 'dark', primaryColor: 'indigo' }}
+        theme={{
+          colorScheme: 'dark',
+          primaryColor: 'indigo',
+          components: {
+            Button: {
+              styles: () => ({
+                root: {
+                  borderRadius: 10,
+                },
+              }),
+            },
+          },
+        }}
       >
         <ModalsProvider
           modals={modals}
           modalProps={{
+            transitionProps: { duration: 500, transition: 'fade' },
             styles: {
               header: { padding: 0, margin: 0 },
-              body: { padding: 0, margin: 0 },
+              body: { padding: 0, margin: 0, height: '100%' },
             },
             fullScreen: true,
             keepMounted: false,

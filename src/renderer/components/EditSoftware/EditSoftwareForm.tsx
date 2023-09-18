@@ -1,21 +1,16 @@
 import { nanoid } from 'nanoid';
 import { useForm } from '@mantine/form';
-import {
-  Group,
-  Box,
-  Button,
-  LoadingOverlay,
-  TextInput,
-  Checkbox,
-} from '@mantine/core';
+import { Group, Box, Button, TextInput, Checkbox } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { modals } from '@mantine/modals';
+import { useSearchParams } from 'react-router-dom';
 
 import StyledSvg from '../common/StyledSvg';
 import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import trpcReact from '../../utils/trpc';
+import { notifyClientInfo } from '../../utils';
 
 const FORM_DEFAULT_VALUES = {
   file: null,
@@ -33,16 +28,18 @@ const FORM_DEFAULT_VALUES = {
 
 function EditSoftware({
   softwareShortcut,
-  close,
 }: {
   softwareShortcut: SoftwareShortcut | undefined;
-  close: () => void;
 }) {
   const isNew = !softwareShortcut;
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const utils = trpcReact.useContext();
-  const addSoftware = trpcReact.software.create.software.useMutation();
-  const updateSoftware = trpcReact.software.update.useMutation();
+  const { mutateAsync: addSoftware } =
+    trpcReact.software.create.software.useMutation();
+
+  const { mutateAsync: updateSoftware } =
+    trpcReact.software.update.useMutation();
 
   const form = useForm<AddSoftwareFormValues>({
     initialValues: { ...FORM_DEFAULT_VALUES, ...softwareShortcut },
@@ -81,7 +78,7 @@ function EditSoftware({
     }),
   });
 
-  const [visible, { close: closeLoading, open: openLoading }] =
+  const [isLoading, { close: stopLoading, open: setLoading }] =
     useDisclosure(false);
 
   const [active, { toggle: showNextInput }] = useDisclosure(false);
@@ -96,7 +93,7 @@ function EditSoftware({
   };
 
   const handleSubmit = async (values: AddSoftwareFormValues) => {
-    openLoading();
+    setLoading();
 
     const createdDate =
       softwareShortcut?.createdDate || new Date().toISOString();
@@ -109,17 +106,29 @@ function EditSoftware({
 
     try {
       if (isNew) {
-        await addSoftware.mutateAsync(newSoftware);
+        await addSoftware(newSoftware);
+        notifyClientInfo('Software added');
       } else {
-        await updateSoftware.mutateAsync(newSoftware);
+        await updateSoftware({
+          ...newSoftware,
+          software: {
+            ...newSoftware.software,
+            key: softwareShortcut.software.key,
+          },
+        });
+        notifyClientInfo('Software updated');
       }
       await utils.software.all.refetch();
-      close();
-      modals.closeAll();
+
+      const from = searchParams.get('from');
+      searchParams.delete('softwareKey');
+      searchParams.delete('from');
+      if (from === 'modal') setSearchParams({ modalTab: 'Edit Software' });
+      else if (from === 'main') modals.closeAll();
     } catch (error: any) {
       form.setFieldError('software.label', error.message);
     } finally {
-      closeLoading();
+      stopLoading();
     }
   };
 
@@ -133,8 +142,6 @@ function EditSoftware({
       w="100%"
       onSubmit={form.onSubmit(handleSubmit)}
     >
-      <LoadingOverlay visible={visible} overlayBlur={2} />
-
       {!isNew ? (
         <TextInput
           // eslint-disable-next-line react/jsx-props-no-spreading
@@ -166,11 +173,8 @@ function EditSoftware({
             Clear
           </Button>
         )}
-        <Button variant="filled" type="submit">
+        <Button variant="filled" type="submit" loading={isLoading}>
           Confirm
-        </Button>
-        <Button variant="light" onClick={() => close()}>
-          Back
         </Button>
       </Group>
     </Box>

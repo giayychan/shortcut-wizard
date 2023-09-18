@@ -2,7 +2,7 @@ import { SetStateAction, useState } from 'react';
 import { Button, Flex, Text } from '@mantine/core';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import useFuseSearchStore from '../../stores/useFuseSearch';
-import { notifyClientError } from '../../utils';
+import { notifyClientError, notifyClientInfo } from '../../utils';
 import trpcReact from '../../utils/trpc';
 
 function FactoryResetButton({
@@ -33,17 +33,18 @@ function FactoryResetButton({
       resetFuseSearch();
       toggle(false);
       setConfirmed(false);
+      notifyClientInfo('Factory reset successful');
     } catch (error: any) {
       notifyClientError(`Error when factory resetting: ${error.message}`);
     }
   };
 
   return (
-    <Flex gap={20} align="center">
-      <Button compact onClick={handleClick}>
+    <Flex gap={10} align="center">
+      <Button variant={confirmed ? 'filled' : 'light'} onClick={handleClick}>
         {confirmed ? 'Confirm Reset?' : 'Factory Reset'}
       </Button>
-      <Text size="sm">This will reset your data to default settings.</Text>
+      <Text size="sm">This will reset everything to default</Text>
     </Flex>
   );
 }

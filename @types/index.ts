@@ -74,15 +74,6 @@ export type StyledSvgProps = {
   src?: string;
 };
 
-export type EditShortcutState = {
-  opened: boolean;
-  shortcutId: string;
-  softwareKey: string;
-  setShortcutId: (shortcutId: string) => void;
-  setSoftwareKey: (key: string) => void;
-  setOpened: (opened: boolean) => void;
-};
-
 export type IsDevState = {
   isDev: boolean;
   setIsDev: (isDev: boolean) => void;
@@ -111,6 +102,9 @@ export type AuthState = {
   user: (DbUserData & User) | null;
   setUser: (user: User | null) => void;
   setDbUser: (user: DbUserData | null) => void;
+
+  loading: boolean;
+  setLoading: (loading: boolean) => void;
 };
 
 export type SelectedShortcutsState = {
@@ -133,3 +127,13 @@ export type FuseSearchState = {
   toggleSearchResults: () => void;
   reset: () => void;
 };
+
+export type TabType =
+  | 'Account'
+  | 'System Setting'
+  | 'Add Software'
+  | 'Edit Software'
+  | 'Sort Software'
+  | 'Add Shortcut'
+  | 'Edit Shortcut'
+  | 'Feedback';

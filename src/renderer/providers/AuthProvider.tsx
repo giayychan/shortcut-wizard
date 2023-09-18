@@ -11,10 +11,11 @@ import { notifyClientError } from '../utils';
 import useConnectedStore from '../stores/useConnectedStore';
 
 function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser, setDbUser] = useAuthStore((state) => [
+  const [user, setUser, setDbUser, setLoading] = useAuthStore((state) => [
     state.user,
     state.setUser,
     state.setDbUser,
+    state.setLoading,
   ]);
 
   const [connected] = useConnectedStore((state) => [state.connected]);
@@ -22,10 +23,14 @@ function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     let unsubscribe: () => void = () => {};
 
-    unsubscribe = onAuthStateChanged(auth, setUser);
+    unsubscribe = onAuthStateChanged(auth, (fbUser) => {
+      setUser(fbUser);
+      if (fbUser) setLoading(false);
+      if (fbUser === null) setLoading(false);
+    });
 
     return () => unsubscribe();
-  }, [setUser]);
+  }, [setLoading, setUser]);
 
   const userId = user?.uid;
 

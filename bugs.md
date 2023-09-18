@@ -28,5 +28,6 @@ User data folder: /Users/yanyan/Library/Application Support/Electron
 
 PROD BUGS:
 
-setting navbar UI?
-auth loading?
+auth loading? flickering
+add shortcut login auth flickering
+on blur window disappeared

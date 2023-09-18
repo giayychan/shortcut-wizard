@@ -9,14 +9,20 @@ import {
   Checkbox,
   Flex,
 } from '@mantine/core';
+import { modals } from '@mantine/modals';
 import { useClickOutside, useTimeout, useToggle } from '@mantine/hooks';
 import { useRecordHotkeys } from 'react-hotkeys-hook';
 import { IconPlayerRecordFilled } from '@tabler/icons-react';
 import { useCallback, useEffect } from 'react';
 import { nanoid } from 'nanoid';
+import { useSearchParams } from 'react-router-dom';
 
 import { EditShortcutFormValues, Shortcut } from '../../../../@types';
-import { mapArrayWithId } from '../../utils';
+import {
+  mapArrayWithId,
+  notifyClientError,
+  notifyClientInfo,
+} from '../../utils';
 import Hotkey from '../common/ShortcutHotkey';
 import trpcReact from '../../utils/trpc';
 
@@ -31,14 +37,14 @@ const FORM_DEFAULT_VALUES = {
 
 function EditShortcut({
   shortcut,
-  close,
   softwareKey,
 }: {
   // eslint-disable-next-line react/require-default-props
   shortcut?: Shortcut;
-  close: () => void;
   softwareKey: string;
 }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const utils = trpcReact.useContext();
   const isUpdateShortcut = Boolean(shortcut);
   const [keys, { start, stop }] = useRecordHotkeys();
@@ -115,12 +121,18 @@ function EditShortcut({
 
   const handleClear = () => {
     stop();
-    form.reset();
+    toggleRecording(false);
   };
 
   const handleCancel = () => {
+    const from = searchParams.get('from');
+
+    searchParams.delete('shortcutId');
+    searchParams.delete('from');
+    if (from === 'modal') setSearchParams({ modalTab: 'Edit Shortcut' });
+    else if (from === 'main') modals.closeAll();
+
     handleClear();
-    close();
   };
 
   const handleSubmit = async (values: EditShortcutFormValues) => {
@@ -135,6 +147,10 @@ function EditShortcut({
       form.setFieldError('hotkeys', 'Please record hotkeys');
       clearHotkeysFieldError();
       return;
+    }
+
+    if (!softwareKey) {
+      notifyClientError('Please select software');
     }
 
     const updatedShortcut = {
@@ -159,6 +175,7 @@ function EditShortcut({
       }
       await utils.software.all.refetch();
       handleCancel();
+      notifyClientInfo('Shortcut saved');
     } catch (error: any) {
       form.setFieldError('hotkeys', error.message);
     }
@@ -167,15 +184,14 @@ function EditShortcut({
   return (
     <Box<'form'>
       component="form"
-      maw="90%"
-      mx="auto"
       onSubmit={form.onSubmit(handleSubmit)}
+      className="flex flex-col h-full"
     >
       <TextInput
         placeholder="Description will be used in search"
         label="Description"
-        mb="md"
-        size="md"
+        my="md"
+        size="sm"
         withAsterisk
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('description')}
@@ -186,14 +202,14 @@ function EditShortcut({
         description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key's & each hot key can contain 3 key's."
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('hotkeys')}
-        size="md"
+        size="sm"
       >
         <Flex gap="md" my="md">
           <Stack>
             <Button
               ref={clickOutsideRef}
               variant="outline"
-              color={isRecording && currentSet === 'first' ? 'red' : 'blue'}
+              color={isRecording && currentSet === 'first' ? 'red' : 'indigo'}
               size="sm"
               onClick={() => handleRecordButtonClick('first')}
               leftIcon={
@@ -244,21 +260,17 @@ function EditShortcut({
       </Input.Wrapper>
       <Checkbox
         my="xl"
-        size="md"
+        size="sm"
         label="Favorite shortcut"
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('isFavorite', { type: 'checkbox' })}
       />
-      <Group position="right" mt="xl">
-        <Button onClick={handleClear} variant="outline">
+      <Group position="right" className="mt-auto">
+        <Button onClick={handleClear} variant="subtle">
           Clear
         </Button>
-        <Button variant="filled" type="submit">
+        <Button variant="light" type="submit" disabled={!softwareKey}>
           Confirm
-        </Button>
-
-        <Button variant="light" onClick={handleCancel}>
-          Cancel
         </Button>
       </Group>
     </Box>

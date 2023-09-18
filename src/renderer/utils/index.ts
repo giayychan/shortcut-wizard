@@ -22,7 +22,7 @@ export const notifyClientInfo = (message: string) => {
   if (!message) return;
   notifications.show({
     message,
-    color: 'blue',
+    color: 'indigo',
   });
 };
 

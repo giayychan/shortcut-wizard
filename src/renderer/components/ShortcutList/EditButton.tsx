@@ -1,20 +1,13 @@
+import { useSearchParams } from 'react-router-dom';
 import { ActionIcon } from '@mantine/core';
 import { IconEdit } from '@tabler/icons-react';
 import { openContextModal } from '@mantine/modals';
 import { Shortcut } from '../../../../@types';
-import useEditShortcutStore from '../../stores/useEditShortcutStore';
-import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 
 type Props = { shortcut: Shortcut };
 
 function EditButton({ shortcut }: Props) {
-  const [setOpened, setShortcutId, setSoftwareKey] = useEditShortcutStore(
-    (state) => [state.setOpened, state.setShortcutId, state.setSoftwareKey]
-  );
-
-  const selectedSoftwareShortcut = useSelectedShortcutsStore(
-    (state) => state.selectedSoftwareShortcut
-  );
+  const [, setSearchParams] = useSearchParams();
 
   const handleClick = () => {
     openContextModal({
@@ -22,13 +15,11 @@ function EditButton({ shortcut }: Props) {
       fullScreen: true,
       withCloseButton: false,
       innerProps: {
-        selectedSettingsTab: 4,
+        selectedSettingsTab: 'Add Shortcut',
       },
     });
-    setOpened(true);
-    setShortcutId(shortcut.id);
-    if (selectedSoftwareShortcut?.software.key)
-      setSoftwareKey(selectedSoftwareShortcut?.software.key);
+
+    setSearchParams({ shortcutId: shortcut.id, from: 'main' });
   };
 
   return (
