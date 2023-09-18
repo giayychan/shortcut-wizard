@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useEffect, useState } from 'react';
 import {
   DndContext,
@@ -46,14 +47,12 @@ function SortableItem({
       className="select-none"
       ref={setNodeRef}
       style={style}
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...attributes}
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...listeners}
     >
       <IconMenu2 size="0.85rem" />
       <StyledSvg src={software.icon.dataUri} />
-      <Text>{software.label}</Text>
+      <Text size="sm">{software.label}</Text>
     </Group>
   );
 }

@@ -106,6 +106,14 @@ function EditSoftware({
 
     try {
       if (isNew) {
+        const templates = utils.software.create.options.getData();
+        const template = templates?.find(
+          (t) => t.software.id === newSoftware.software.id
+        );
+
+        newSoftware.software.key =
+          template?.software.key || newSoftware.software.key;
+
         await addSoftware(newSoftware);
         notifyClientInfo('Software added');
       } else {
@@ -119,12 +127,14 @@ function EditSoftware({
         notifyClientInfo('Software updated');
       }
       await utils.software.all.refetch();
+      handleClear();
 
       const from = searchParams.get('from');
       searchParams.delete('softwareKey');
       searchParams.delete('from');
       if (from === 'modal') setSearchParams({ modalTab: 'Edit Software' });
       else if (from === 'main') modals.closeAll();
+      else await utils.software.create.options.refetch();
     } catch (error: any) {
       form.setFieldError('software.label', error.message);
     } finally {

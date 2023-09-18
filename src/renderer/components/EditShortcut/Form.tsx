@@ -122,6 +122,7 @@ function EditShortcut({
   const handleClear = () => {
     stop();
     toggleRecording(false);
+    form.reset();
   };
 
   const handleCancel = () => {

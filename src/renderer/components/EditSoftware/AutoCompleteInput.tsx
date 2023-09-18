@@ -80,6 +80,7 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
     const { isCustom } = item.software.icon;
 
     form.setFieldValue('software.icon', item.software.icon);
+    form.setFieldValue('software.id', item.software.id);
     form.setFieldValue('shortcuts', item.shortcuts);
 
     if (isCustom) {

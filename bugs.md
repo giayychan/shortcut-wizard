@@ -29,5 +29,6 @@ User data folder: /Users/yanyan/Library/Application Support/Electron
 PROD BUGS:
 
 auth loading? flickering
-add shortcut login auth flickering
 on blur window disappeared
+
+theme?

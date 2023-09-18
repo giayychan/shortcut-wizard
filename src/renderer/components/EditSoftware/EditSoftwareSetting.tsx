@@ -71,7 +71,7 @@ export default function EditSoftwareList({
                   <StyledSvg src={selected.software.icon.dataUri} />
                 ) : null}
               </ThemeIcon>
-              <Text size="md">{value.label}</Text>
+              <Text>{value.label}</Text>
             </Group>
           }
           key={value.key}

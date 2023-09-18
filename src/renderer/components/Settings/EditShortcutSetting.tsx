@@ -11,6 +11,7 @@ import {
   Checkbox,
   Group,
   ActionIcon,
+  Stack,
 } from '@mantine/core';
 import { useSearchParams } from 'react-router-dom';
 import { IconEdit, IconStar } from '@tabler/icons-react';
@@ -98,15 +99,11 @@ function EditShortcutSetting({
     }
   };
 
-  const handleBulkFavorite = async () => {
-    if (!softwareShortcuts) return;
-
-    const { shortcuts } = form.values;
-
+  const handleFavorite = async (id: string) => {
     try {
       if (selectedSoftware) {
         const updatedShortcuts = selectedSoftware.shortcuts?.map((shortcut) => {
-          if (shortcuts.includes(shortcut.id)) {
+          if (shortcut.id === id) {
             return {
               ...shortcut,
               isFavorite: !shortcut.isFavorite,
@@ -119,8 +116,33 @@ function EditShortcutSetting({
 
         await bulkFavorite(selectedSoftware);
         await utils.software.all.refetch();
-        notifyClientInfo('Shortcut(s) updated');
+        notifyClientInfo('Shortcut updated');
       }
+
+      handleCancel();
+    } catch (error: any) {
+      form.setFieldError('shortcuts', error.message);
+    }
+  };
+
+  const handleBulkFavorite = async () => {
+    if (!selectedSoftware?.shortcuts?.length) return;
+
+    const { shortcuts } = form.values;
+
+    try {
+      const updatedShortcuts = selectedSoftware.shortcuts.map((shortcut) => ({
+        ...shortcut,
+        isFavorite: shortcuts.includes(shortcut.id)
+          ? !shortcut.isFavorite
+          : shortcut.isFavorite,
+      }));
+
+      selectedSoftware.shortcuts = updatedShortcuts;
+
+      await bulkFavorite(selectedSoftware);
+      await utils.software.all.refetch();
+      notifyClientInfo('Shortcut(s) updated');
 
       handleCancel();
     } catch (error: any) {
@@ -284,28 +306,36 @@ function EditShortcutSetting({
                   const { description, id, hotkeys, isFavorite } = shortcut;
 
                   return (
-                    <Flex w="100%" my="xs" align="center" key={id}>
+                    <Flex my="md" align="start" key={id}>
                       <Checkbox
                         key={id}
                         value={id}
                         label={
-                          <Group align="center">
-                            <IconStar
-                              size="1rem"
-                              fill={isFavorite ? 'white' : 'transparent'}
-                            />
+                          <Stack spacing="xs">
+                            <Group>
+                              <Text truncate>{description}</Text>
+                            </Group>
                             <Hotkeys hotkeys={hotkeys} />
-                            <Text>{description}</Text>
-                          </Group>
+                          </Stack>
                         }
                       />
-                      <ActionIcon
-                        ml="auto"
-                        variant="light"
-                        onClick={() => handleOpenEditShortcut(id)}
-                      >
-                        <IconEdit size="1rem" />
-                      </ActionIcon>
+                      <Group className="ml-auto">
+                        <ActionIcon
+                          variant="light"
+                          onClick={() => handleOpenEditShortcut(id)}
+                        >
+                          <IconEdit size="1rem" />
+                        </ActionIcon>
+                        <ActionIcon
+                          variant="light"
+                          onClick={() => handleFavorite(id)}
+                        >
+                          <IconStar
+                            size="1rem"
+                            fill={isFavorite ? 'white' : 'transparent'}
+                          />
+                        </ActionIcon>
+                      </Group>
                     </Flex>
                   );
                 })}
