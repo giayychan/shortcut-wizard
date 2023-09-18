@@ -11,7 +11,6 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import isDev from 'electron-is-dev';
 
 import { createIPCHandler } from 'electron-trpc/main';
 import { app, shell } from 'electron';
@@ -53,10 +52,6 @@ if (process.defaultApp) {
 } else {
   app.setAsDefaultProtocolClient('shortcut-wizard');
 }
-
-// if (isDebug) {
-//   require('electron-debug')();
-// }
 
 // const installExtensions = async () => {
 //   const installer = require('electron-devtools-installer');
@@ -123,12 +118,6 @@ const createWindow = async () => {
  */
 // to minimize the window when the user clicks outside of the app
 
-const isInApplicationsFolder = app.isInApplicationsFolder();
-
-if (!isInApplicationsFolder && !isDev) {
-  app.moveToApplicationsFolder();
-}
-
 app.on('browser-window-blur', () => {
   const window = mainWindow.getWindow();
   if (window && !window.fullScreen) {
@@ -182,6 +171,7 @@ if (!gotTheLock) {
     .whenReady()
     .then(async () => {
       registerGlobalOpenAppShortcut();
+
       createWindow();
 
       app.on('activate', () => {
