@@ -75,7 +75,7 @@ function GlobalSettings() {
         <Checkbox
           label={
             <Flex gap="sm">
-              Open window in center horizontally
+              Open window in center next time
               {updatingIsPanelAlwaysAtCenter && <Loader size="xs" />}
             </Flex>
           }

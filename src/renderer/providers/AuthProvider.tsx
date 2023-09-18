@@ -70,7 +70,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
     return () => unsubscribeUserChanged();
   }, [userId, setUser, setDbUser]);
 
-  if (!user && connected) return <SignInPrompt />;
+  if (user === null && connected) return <SignInPrompt />;
 
   const isTrialEnded =
     user?.trial?.endDate &&

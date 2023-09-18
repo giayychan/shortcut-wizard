@@ -1,47 +1,15 @@
 import { modals } from '@mantine/modals';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { SHORTCUT_WIZARD_HREF } from 'main/constants';
 import { signOut } from 'firebase/auth';
 import { auth } from 'main/configs/firebase';
 
-import { Flex, Avatar, Button, Text } from '@mantine/core';
+import { Flex, Avatar, Button, Text, Skeleton } from '@mantine/core';
 
 import useAuthStore from '../../stores/useAuthStore';
-import trpcReact from '../../utils/trpc';
+import UpgradeButton from './UpgradeButton';
 
 dayjs.extend(relativeTime);
-
-export function UpgradeButton() {
-  const [user, loading] = useAuthStore((state) => [state.user, state.loading]);
-
-  const utils = trpcReact.useContext();
-  const isDev = utils.settings.isDev.getData();
-
-  if (loading) return null;
-
-  return user?.trial.endDate ? (
-    <Flex direction="column" gap={5} align="center">
-      <Text size="sm" weight={700}>
-        Trial ends {dayjs().to(dayjs.unix(user.trial.endDate))}
-      </Text>
-      <Button
-        fullWidth
-        component="a"
-        gradient={{ from: 'red', to: 'purple', deg: 145 }}
-        target="_blank"
-        variant="gradient"
-        href={`${
-          isDev ? 'http://localhost:3000' : SHORTCUT_WIZARD_HREF
-        }/pricing`}
-      >
-        Upgrade Now
-      </Button>
-    </Flex>
-  ) : (
-    <Button>Thanks for purchasing! ❤️</Button>
-  );
-}
 
 function UserProfile() {
   const user = useAuthStore((state) => state.user);
@@ -57,25 +25,44 @@ function UserProfile() {
       .map((n) => n[0].toUpperCase())
       .join('') || '';
 
+  if (user === undefined)
+    return (
+      <Flex direction="column" gap="md" h="100%">
+        <Text size="xl" mb={4}>
+          Account Information
+        </Text>
+        <Flex direction="column" gap="md" className="flex-grow" align="center">
+          <Skeleton height={60} circle mb="xl" />
+
+          <Skeleton height={20} width="40%" radius="xl" />
+          <Skeleton height={20} width="40%" radius="xl" />
+
+          <Skeleton height={30} mt={6} width="30%" radius="xl" />
+        </Flex>
+      </Flex>
+    );
+
   return (
-    <Flex direction="column" gap="md" h="100%">
+    <Flex direction="column" gap="md" h="100%" w="100%">
       <Text size="xl" mb={4}>
         Account Information
       </Text>
-      <Flex direction="column" gap="md" className="flex-grow">
-        <Flex align="center" gap="xs">
-          <Avatar src={user?.photoURL} alt="User avatar" size="md" radius="xl">
-            {userInitials}
-          </Avatar>
-          <div className="truncate">
-            <p className="font-bold">{user?.displayName || 'User'} </p>
-            <p className="text-sm truncate">{user?.email}</p>
-          </div>
-        </Flex>
+      <Flex direction="column" gap="md" className="flex-grow" align="center">
+        <Avatar src={user?.photoURL} alt="User avatar" size={60} radius="xl">
+          {userInitials}
+        </Avatar>
+
+        <div className="max-w-sm text-center truncate">
+          <p className="font-bold truncate">{user?.displayName || 'User'} </p>
+          <p className="truncate">{user?.email || ''}</p>
+        </div>
         <UpgradeButton />
-        <Button variant="light" onClick={handleSignOut}>
-          Sign Out
-        </Button>
+
+        {user === undefined ? null : (
+          <Button variant="light" onClick={handleSignOut} mt="xs">
+            Sign Out
+          </Button>
+        )}
       </Flex>
     </Flex>
   );

@@ -12,7 +12,7 @@ export default function StatusBarContainer() {
   const [user, loading] = useAuthStore((state) => [state.user, state.loading]);
 
   const isAuth = user && !loading && connected;
-  const isNotAuth = !user && !loading && connected;
+  const isNotAuth = user === null && !loading && connected;
 
   useEffect(() => {
     onConnected();

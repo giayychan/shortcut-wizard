@@ -28,7 +28,6 @@ User data folder: /Users/yanyan/Library/Application Support/Electron
 
 PROD BUGS:
 
-auth loading? flickering
-on blur window disappeared
+on blur window disappeared (cannot fixed)
 
 theme?

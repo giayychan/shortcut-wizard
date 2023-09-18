@@ -99,7 +99,7 @@ export type DbUserData = {
 };
 
 export type AuthState = {
-  user: (DbUserData & User) | null;
+  user: (DbUserData & User) | null | undefined;
   setUser: (user: User | null) => void;
   setDbUser: (user: DbUserData | null) => void;
 

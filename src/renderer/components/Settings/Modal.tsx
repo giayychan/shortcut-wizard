@@ -18,11 +18,12 @@ import GlobalSettings from './GlobalSettings';
 import SortSoftwareList from './SortSoftwareList';
 import TitleBar from '../../layout/TitleBar';
 
-import UserProfile, { UpgradeButton } from './UserProfile';
+import UserProfile from './UserProfile';
 import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import EditShortcutSetting from './EditShortcutSetting';
 import { TabType } from '../../../../@types';
 import AddSoftwareSetting from '../EditSoftware/AddSoftwareSetting';
+import UpgradeButton from './UpgradeButton';
 
 function SettingsModal({
   innerProps: { selectedSettingsTab },
@@ -163,7 +164,6 @@ function SettingsModal({
                 onClick={() => setSelected('Feedback')}
               />
             </Flex>
-            {/* <UserProfile /> */}
             <UpgradeButton />
           </Flex>
         </Grid.Col>

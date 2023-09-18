@@ -7,7 +7,7 @@ import { notifyClientError } from '../utils';
 
 const useAuthStore = create<AuthState>()(
   subscribeWithSelector((set, get) => ({
-    user: null,
+    user: undefined,
     loading: true,
     setLoading: (loading) => set({ loading }),
     setUser: async (user) => {
