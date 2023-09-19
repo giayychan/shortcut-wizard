@@ -150,7 +150,9 @@ function EditSoftware({
     <Box<'form'>
       component="form"
       w="100%"
+      h="100%"
       onSubmit={form.onSubmit(handleSubmit)}
+      className="flex flex-col"
     >
       {!isNew ? (
         <TextInput
@@ -177,7 +179,7 @@ function EditSoftware({
 
       {icon.isCustom ? <UploadCustomIcon active={active} form={form} /> : null}
 
-      <Group position="right" mt="xl">
+      <Group position="right" mt="auto">
         {isNew && (
           <Button onClick={handleClear} variant="outline">
             Clear

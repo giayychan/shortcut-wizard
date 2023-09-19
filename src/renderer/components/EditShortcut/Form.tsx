@@ -186,7 +186,7 @@ function EditShortcut({
     <Box<'form'>
       component="form"
       onSubmit={form.onSubmit(handleSubmit)}
-      className="flex flex-col h-full"
+      className="flex flex-col h-full "
     >
       <TextInput
         placeholder="Description will be used in search"
@@ -266,11 +266,11 @@ function EditShortcut({
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('isFavorite', { type: 'checkbox' })}
       />
-      <Group position="right" className="mt-auto">
-        <Button onClick={handleClear} variant="subtle">
+      <Group position="right">
+        <Button onClick={handleClear} variant="outline">
           Clear
         </Button>
-        <Button variant="light" type="submit" disabled={!softwareKey}>
+        <Button variant="filled" type="submit" disabled={!softwareKey}>
           Confirm
         </Button>
       </Group>

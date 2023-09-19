@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Flex, Grid, NavLink } from '@mantine/core';
+import { Flex, Grid, NavLink, ScrollArea } from '@mantine/core';
 import { ContextModalProps, modals } from '@mantine/modals';
 import {
   IconChevronRight,
@@ -79,91 +79,93 @@ function SettingsModal({
     <>
       <TitleBar />
       <Grid px="sm" py="sm" m={0} h="calc(100vh - 35px)">
-        <Grid.Col span={4} p={0} pr={10}>
+        <Grid.Col span={4} p={0} pr={10} h="100%" className="overflow-hidden">
           <Flex
             direction="column"
             h="100%"
             className="p-4 border border-[#373A40] rounded-lg"
           >
-            <Flex direction="column" gap={5} className="flex-grow">
-              <NavLink
-                label="Back"
-                className="rounded-lg"
-                icon={<IconArrowBackUp size="1rem" stroke={1.5} />}
-                onClick={() => modals.closeAll()}
-              />
-              <NavLink
-                active={selected === 'Account'}
-                label="Account"
-                className="rounded-lg"
-                icon={<IconUser size="1rem" stroke={1.5} />}
-                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
-                onClick={() => setSelected('Account')}
-              />
-              <NavLink
-                active={selected === 'System Setting'}
-                label="System Setting"
-                className="rounded-lg"
-                icon={<IconSettings size="1rem" stroke={1.5} />}
-                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
-                onClick={() => setSelected('System Setting')}
-              />
+            <ScrollArea h="100%" offsetScrollbars>
+              <Flex direction="column" gap={5} className="flex-grow">
+                <NavLink
+                  label="Back"
+                  className="rounded-lg"
+                  icon={<IconArrowBackUp size="1rem" stroke={1.5} />}
+                  onClick={() => modals.closeAll()}
+                />
+                <NavLink
+                  active={selected === 'Account'}
+                  label="Account"
+                  className="rounded-lg"
+                  icon={<IconUser size="1rem" stroke={1.5} />}
+                  rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                  onClick={() => setSelected('Account')}
+                />
+                <NavLink
+                  active={selected === 'System Setting'}
+                  label="System Setting"
+                  className="rounded-lg"
+                  icon={<IconSettings size="1rem" stroke={1.5} />}
+                  rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                  onClick={() => setSelected('System Setting')}
+                />
 
-              <NavLink
-                active={selected.includes('Software')}
-                label="Software"
-                childrenOffset={28}
-                icon={<IconComponents size="1rem" stroke={1.5} />}
-                className="rounded-lg"
-              >
                 <NavLink
-                  active={selected === 'Add Software'}
-                  className="mb-1 rounded-lg"
-                  label="Add"
-                  onClick={() => setSelected('Add Software')}
-                />
-                <NavLink
-                  active={selected === 'Edit Software'}
-                  className="mb-1 rounded-lg"
-                  label="Edit / Delete"
-                  onClick={() => setSelected('Edit Software')}
-                />
-                <NavLink
-                  active={selected === 'Sort Software'}
+                  active={selected.includes('Software')}
+                  label="Software"
+                  childrenOffset={28}
+                  icon={<IconComponents size="1rem" stroke={1.5} />}
                   className="rounded-lg"
-                  label="Sort"
-                  onClick={() => setSelected('Sort Software')}
-                />
-              </NavLink>
-              <NavLink
-                active={selected.includes('Shortcut')}
-                label="Shortcut"
-                childrenOffset={28}
-                icon={<IconKeyboard size="1rem" stroke={1.5} />}
-                className="rounded-lg"
-              >
+                >
+                  <NavLink
+                    active={selected === 'Add Software'}
+                    className="mb-1 rounded-lg"
+                    label="Add"
+                    onClick={() => setSelected('Add Software')}
+                  />
+                  <NavLink
+                    active={selected === 'Edit Software'}
+                    className="mb-1 rounded-lg"
+                    label="Edit / Delete"
+                    onClick={() => setSelected('Edit Software')}
+                  />
+                  <NavLink
+                    active={selected === 'Sort Software'}
+                    className="rounded-lg"
+                    label="Sort"
+                    onClick={() => setSelected('Sort Software')}
+                  />
+                </NavLink>
                 <NavLink
-                  active={selected === 'Add Shortcut'}
-                  className="mb-1 rounded-lg"
-                  label="Add"
-                  onClick={() => setSelected('Add Shortcut')}
-                />
-                <NavLink
-                  active={selected === 'Edit Shortcut'}
+                  active={selected.includes('Shortcut')}
+                  label="Shortcut"
+                  childrenOffset={28}
+                  icon={<IconKeyboard size="1rem" stroke={1.5} />}
                   className="rounded-lg"
-                  label="Edit / Delete"
-                  onClick={() => setSelected('Edit Shortcut')}
+                >
+                  <NavLink
+                    active={selected === 'Add Shortcut'}
+                    className="mb-1 rounded-lg"
+                    label="Add"
+                    onClick={() => setSelected('Add Shortcut')}
+                  />
+                  <NavLink
+                    active={selected === 'Edit Shortcut'}
+                    className="rounded-lg"
+                    label="Edit / Delete"
+                    onClick={() => setSelected('Edit Shortcut')}
+                  />
+                </NavLink>
+                <NavLink
+                  active={selected === 'Feedback'}
+                  label="Feedback"
+                  className="rounded-lg"
+                  icon={<IconHeartFilled size="1rem" stroke={1.5} />}
+                  rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
+                  onClick={() => setSelected('Feedback')}
                 />
-              </NavLink>
-              <NavLink
-                active={selected === 'Feedback'}
-                label="Feedback"
-                className="rounded-lg"
-                icon={<IconHeartFilled size="1rem" stroke={1.5} />}
-                rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
-                onClick={() => setSelected('Feedback')}
-              />
-            </Flex>
+              </Flex>
+            </ScrollArea>
             <UpgradeButton />
           </Flex>
         </Grid.Col>

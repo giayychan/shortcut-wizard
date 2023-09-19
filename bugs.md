@@ -29,5 +29,4 @@ User data folder: /Users/yanyan/Library/Application Support/Electron
 PROD BUGS:
 
 on blur window disappeared (cannot fixed)
-
 theme?
