@@ -28,7 +28,6 @@ function FactoryResetButton() {
       await factoryReset.mutateAsync();
       await utils.software.all.refetch();
       await utils.settings.get.refetch();
-      await utils.shortcut.ai.enabledAiSearch.refetch();
 
       setSelectedSoftwareShortcut(null);
       resetFuseSearch();
