@@ -28,15 +28,13 @@ export interface IconData {
 
 export interface SoftwareShortcut {
   software: {
+    id: string;
     key: string;
+    label: string;
     icon: IconData;
   };
   shortcuts: Shortcut[];
   createdDate: string;
-}
-
-export interface SoftwareShortcuts {
-  [key: string]: SoftwareShortcut;
 }
 
 export type FlattenShortcut = Shortcut & Omit<SoftwareShortcut, 'shortcuts'>;
@@ -76,17 +74,9 @@ export type StyledSvgProps = {
   src?: string;
 };
 
-export type EditShortcutState = {
-  opened: boolean;
-  shortcutId: string;
-  softwareKey: string;
-  setShortcutId: (shortcutId: string) => void;
-  setSoftwareKey: (key: string) => void;
-  setOpened: (opened: boolean) => void;
-};
-export type EditScriptState = {
-  content: string;
-  setContent: (content: string) => void;
+export type IsDevState = {
+  isDev: boolean;
+  setIsDev: (isDev: boolean) => void;
 };
 
 export type ConnectedState = {
@@ -96,6 +86,7 @@ export type ConnectedState = {
 };
 
 export type DbUserData = {
+  email: string;
   electronId: string;
   plan: {
     type: string;
@@ -108,11 +99,12 @@ export type DbUserData = {
 };
 
 export type AuthState = {
+  user: (DbUserData & User) | null | undefined;
+  setUser: (user: User | null) => void;
+  setDbUser: (user: DbUserData | null) => void;
+
   loading: boolean;
   setLoading: (loading: boolean) => void;
-  user: DbUserData | null;
-  setUserByFirebase: (user: User | null) => void;
-  setUserByPaidUser: (user: DbUserData) => void;
 };
 
 export type SelectedShortcutsState = {
@@ -135,3 +127,13 @@ export type FuseSearchState = {
   toggleSearchResults: () => void;
   reset: () => void;
 };
+
+export type TabType =
+  | 'Account'
+  | 'System Setting'
+  | 'Add Software'
+  | 'Edit Software'
+  | 'Sort Software'
+  | 'Add Shortcut'
+  | 'Edit Shortcut'
+  | 'Feedback';

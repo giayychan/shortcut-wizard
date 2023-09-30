@@ -28,7 +28,8 @@ npm-debug.log.*
 *.sass.d.ts
 *.scss.d.ts
 
-.env.*
+.env*
 
-*.realm*
-mongodb-realm
+src/main/utils/admin.ts
+
+codesign.p12

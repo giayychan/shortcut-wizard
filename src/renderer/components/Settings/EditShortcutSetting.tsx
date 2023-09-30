@@ -1,5 +1,6 @@
+/* eslint-disable react/require-default-props */
+
 import {
-  Aside,
   Flex,
   ScrollArea,
   Button,
@@ -10,46 +11,37 @@ import {
   Checkbox,
   Group,
   ActionIcon,
-  Drawer,
+  Stack,
 } from '@mantine/core';
+import { useSearchParams } from 'react-router-dom';
 import { IconEdit, IconStar } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { useState } from 'react';
 import trpcReact from '../../utils/trpc';
 import StyledSvg from '../common/StyledSvg';
-import { RemoveShortcutFormValues, Shortcut } from '../../../../@types';
+import { RemoveShortcutFormValues, TabType } from '../../../../@types';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
-import useEditShortcutStore from '../../stores/useEditShortcutStore';
 import EditShortcut from '../EditShortcut/Form';
+import { notifyClientError, notifyClientInfo } from '../../utils';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: { shortcuts: [] },
 };
 
-function EditShortcutSetting() {
+function EditShortcutSetting({
+  type,
+  setSelectedTab,
+}: {
+  type: 'Edit' | 'Add';
+  setSelectedTab?: (tab: TabType) => void;
+}) {
   const utils = trpcReact.useContext();
   const softwareShortcuts = utils.software.all.getData();
 
   const globalSelectedSoftware = useSelectedShortcutsStore(
     (state) => state.selectedSoftwareShortcut
   );
-
-  const [
-    opened,
-    shortcutId,
-    softwareKey,
-    setOpened,
-    setShortcutId,
-    setSoftwareKey,
-  ] = useEditShortcutStore((state) => [
-    state.opened,
-    state.shortcutId,
-    state.softwareKey,
-    state.setOpened,
-    state.setShortcutId,
-    state.setSoftwareKey,
-  ]);
 
   const [value, setValue] = useState(
     globalSelectedSoftware ? globalSelectedSoftware.software.key : ''
@@ -71,7 +63,7 @@ function EditShortcutSetting() {
         if (!shortcutsValue.length) {
           return 'Please select shortcut(s)';
         }
-        return true;
+        return null;
       },
     },
   });
@@ -99,6 +91,7 @@ function EditShortcutSetting() {
           shortcuts: removedShortcuts,
         });
         await utils.software.all.refetch();
+        notifyClientInfo('Shortcut(s) deleted');
       }
       handleCancel();
     } catch (error: any) {
@@ -106,15 +99,11 @@ function EditShortcutSetting() {
     }
   };
 
-  const handleBulkFavorite = async () => {
-    if (!softwareShortcuts) return;
-
-    const { shortcuts } = form.values;
-
+  const handleFavorite = async (id: string) => {
     try {
       if (selectedSoftware) {
         const updatedShortcuts = selectedSoftware.shortcuts?.map((shortcut) => {
-          if (shortcuts.includes(shortcut.id)) {
+          if (shortcut.id === id) {
             return {
               ...shortcut,
               isFavorite: !shortcut.isFavorite,
@@ -127,6 +116,7 @@ function EditShortcutSetting() {
 
         await bulkFavorite(selectedSoftware);
         await utils.software.all.refetch();
+        notifyClientInfo('Shortcut updated');
       }
 
       handleCancel();
@@ -135,60 +125,96 @@ function EditShortcutSetting() {
     }
   };
 
-  const close = () => {
-    setOpened(false);
-    setShortcutId('');
-    setSoftwareKey('');
+  const handleBulkFavorite = async () => {
+    if (!selectedSoftware?.shortcuts?.length) return;
+
+    const { shortcuts } = form.values;
+
+    try {
+      const updatedShortcuts = selectedSoftware.shortcuts.map((shortcut) => ({
+        ...shortcut,
+        isFavorite: shortcuts.includes(shortcut.id)
+          ? !shortcut.isFavorite
+          : shortcut.isFavorite,
+      }));
+
+      selectedSoftware.shortcuts = updatedShortcuts;
+
+      await bulkFavorite(selectedSoftware);
+      await utils.software.all.refetch();
+      notifyClientInfo('Shortcut(s) updated');
+
+      handleCancel();
+    } catch (error: any) {
+      form.setFieldError('shortcuts', error.message);
+    }
   };
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const handleOpenEditShortcut = (shortcutId?: string) => {
+    if (setSelectedTab) {
+      setSelectedTab('Add Shortcut');
+      if (shortcutId) setSearchParams({ shortcutId, from: 'modal' });
+      return;
+    }
+
+    notifyClientError('Error opening shortcut editor');
+  };
+
   const selectedOption = softwareShortcuts
     ? [
-        '',
+        {
+          value: '',
+          key: '',
+          label: 'Please select software',
+        },
         ...softwareShortcuts.map((softwareShortcut) => {
-          return softwareShortcut.software.key;
+          return {
+            value: softwareShortcut.software.key,
+            key: softwareShortcut.software.key,
+            label: softwareShortcut.software.label,
+          };
         }),
       ]
-    : [''];
+    : [
+        {
+          value: '',
+          key: '',
+          label: 'Please select software',
+        },
+      ];
 
-  return (
-    <Aside>
-      <Drawer
-        closeOnEscape={false}
-        withCloseButton={false}
-        opened={Boolean(softwareKey && opened)}
-        onClose={close}
-        title="Edit Shortcut"
-        padding="xl"
-        size="xl"
-        position="right"
-        zIndex={10000}
-        styles={{
-          header: {
-            paddingTop: 50,
-          },
-        }}
-      >
-        <EditShortcut
-          close={close}
-          softwareKey={softwareKey}
-          shortcut={selectedSoftware?.shortcuts.find(
-            (shortcut: Shortcut) => shortcut.id === shortcutId
-          )}
-        />
-      </Drawer>
-      <Box<'form'>
-        className="flex flex-col h-full "
-        h="100%"
-        p="md"
-        pt={40}
-        component="form"
-        onSubmit={form.onSubmit(handleSubmit)}
-      >
+  const handleSelectAll = (event: any) => {
+    const isChecked = event.target.checked;
+    if (!selectedSoftware || !selectedSoftware.shortcuts?.length) return;
+
+    if (isChecked) {
+      form.setFieldValue(
+        'shortcuts',
+        selectedSoftware.shortcuts.map((shortcut) => shortcut.id)
+      );
+    } else {
+      form.setFieldValue('shortcuts', []);
+    }
+  };
+
+  if (type === 'Add') {
+    const shortcutIdParam = searchParams.get('shortcutId');
+
+    return (
+      <Box className="flex flex-col h-full">
+        <Flex align="center">
+          <Text size="xl" mb="lg">
+            {type} Shortcut
+          </Text>
+        </Flex>
         <NativeSelect
           disabled={selectedOption.length === 1}
           value={value}
           onChange={(event) => setValue(event.currentTarget.value)}
           data={selectedOption}
-          label="Select software to edit its shortcut"
+          label={`Select software to ${type.toLowerCase()} shortcut`}
           variant="filled"
           radius="md"
           withAsterisk
@@ -198,89 +224,136 @@ function EditShortcutSetting() {
             ) : null
           }
         />
-        <Divider mt="xs" />
 
-        <ScrollArea className="flex-1" offsetScrollbars>
-          {value && selectedSoftware && selectedSoftware.shortcuts?.length ? (
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            <Checkbox.Group {...form.getInputProps('shortcuts')}>
-              {selectedSoftware.shortcuts.map((shortcut) => {
-                const { description, id, hotkeys, isFavorite } = shortcut;
+        {selectedSoftware?.software.key && (
+          <EditShortcut
+            softwareKey={selectedSoftware.software.key}
+            shortcut={selectedSoftware.shortcuts.find(
+              (s) => s.id === shortcutIdParam
+            )}
+          />
+        )}
+      </Box>
+    );
+  }
 
-                return (
-                  <Flex w="100%" my="xs" align="center" key={id}>
-                    <Checkbox
-                      key={id}
-                      value={id}
-                      label={
-                        <Group align="center">
-                          <IconStar
-                            size="1rem"
-                            fill={isFavorite ? 'white' : 'transparent'}
-                          />
-                          <Hotkeys hotkeys={hotkeys} />
-                          <Text>{description}</Text>
-                        </Group>
-                      }
-                    />
-                    <ActionIcon
-                      ml="auto"
-                      variant="light"
-                      onClick={() => {
-                        setOpened(true);
-                        setShortcutId(id);
-                        setSoftwareKey(value);
-                      }}
-                    >
-                      <IconEdit size="1rem" />
-                    </ActionIcon>
-                  </Flex>
-                );
-              })}
-            </Checkbox.Group>
-          ) : (
-            <Text className="p-3" hidden={!value}>
-              No shortcut
-            </Text>
-          )}
-        </ScrollArea>
+  return (
+    <Box<'form'>
+      className="flex flex-col h-full"
+      component="form"
+      onSubmit={form.onSubmit(handleSubmit)}
+    >
+      <Flex align="center">
+        <Text size="xl" mb="lg">
+          {type} Shortcut
+        </Text>
 
-        <Group p="md" w="100%">
+        <Group ml="auto">
           <Button
-            compact
-            color="orange"
+            type="submit"
+            variant="light"
             disabled={
               !value || !form.values.shortcuts?.length || updatingFavorite
             }
-            type="submit"
             loading={isLoading}
           >
             Delete
           </Button>
           <Button
-            compact
-            color="pink"
+            variant="light"
             disabled={!value || !form.values.shortcuts?.length || isLoading}
             loading={updatingFavorite}
             onClick={handleBulkFavorite}
           >
             (Un)favorite
           </Button>
-          <Button
-            compact
-            color="indigo"
-            disabled={!value}
-            onClick={() => {
-              setOpened(true);
-              setShortcutId('');
-              setSoftwareKey(value);
-            }}
-          >
-            Add new shortcut
-          </Button>
         </Group>
-      </Box>
-    </Aside>
+      </Flex>
+      <NativeSelect
+        disabled={selectedOption.length === 1}
+        value={value}
+        onChange={(event) => setValue(event.currentTarget.value)}
+        data={selectedOption}
+        label={`Select software to ${type.toLowerCase()} shortcut`}
+        variant="filled"
+        radius="md"
+        withAsterisk
+        icon={
+          selectedSoftware ? (
+            <StyledSvg src={selectedSoftware.software.icon.dataUri} />
+          ) : null
+        }
+      />
+
+      <Divider mt="xs" />
+      <ScrollArea h="100%" offsetScrollbars>
+        {value && selectedSoftware && selectedSoftware.shortcuts?.length ? (
+          <>
+            <Checkbox label="Select all" my={15} onClick={handleSelectAll} />
+            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+            <Checkbox.Group {...form.getInputProps('shortcuts')}>
+              {selectedSoftware.shortcuts
+                .sort((a, b) => {
+                  if (a.isFavorite && !b.isFavorite) {
+                    return -1;
+                  }
+                  if (!a.isFavorite && b.isFavorite) {
+                    return 1;
+                  }
+                  return 0;
+                })
+                .map((shortcut) => {
+                  const { description, id, hotkeys, isFavorite } = shortcut;
+
+                  return (
+                    <Flex my="md" align="start" key={id}>
+                      <Checkbox
+                        key={id}
+                        value={id}
+                        label={
+                          <Stack spacing="xs">
+                            <Group>
+                              <Text truncate>{description}</Text>
+                            </Group>
+                            <Hotkeys hotkeys={hotkeys} />
+                          </Stack>
+                        }
+                      />
+                      <Group className="ml-auto">
+                        <ActionIcon
+                          variant="light"
+                          onClick={() => handleOpenEditShortcut(id)}
+                        >
+                          <IconEdit size="1rem" />
+                        </ActionIcon>
+                        <ActionIcon
+                          variant="light"
+                          onClick={() => handleFavorite(id)}
+                        >
+                          <IconStar
+                            size="1rem"
+                            fill={isFavorite ? 'white' : 'transparent'}
+                          />
+                        </ActionIcon>
+                      </Group>
+                    </Flex>
+                  );
+                })}
+            </Checkbox.Group>
+          </>
+        ) : (
+          value && (
+            <Button
+              onClick={() => handleOpenEditShortcut()}
+              variant="light"
+              className="p-3"
+            >
+              Add shortcut
+            </Button>
+          )
+        )}
+      </ScrollArea>
+    </Box>
   );
 }
 

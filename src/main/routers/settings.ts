@@ -1,11 +1,14 @@
+import isDev from 'electron-is-dev';
 import { z } from 'zod';
 import { router, publicProcedure } from '../configs/trpc';
 import initializeUserData, { autoLaunch } from '../utils/initialize';
 import { store } from '../utils';
+import mainWindow from '../mainWindow';
 
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
     store.delete('opened');
+    store.set('isAutoLaunchEnabled', true);
     await initializeUserData();
   }),
   autoLaunch: publicProcedure.input(z.boolean()).mutation(async (opts) => {
@@ -33,6 +36,25 @@ const settingsRouter = router({
       | undefined;
 
     return processPlatform;
+  }),
+  isDev: publicProcedure.output(z.boolean()).query(() => {
+    return isDev;
+  }),
+  isClosedTutorial: publicProcedure.output(z.boolean()).query(() => {
+    return Boolean(store.get('isClosedTutorial'));
+  }),
+  updateIsClosedTutorial: publicProcedure
+    .input(z.boolean())
+    .mutation((opts) => {
+      const { input } = opts;
+      store.set('isClosedTutorial', input);
+    }),
+  openWindow: publicProcedure.mutation(() => {
+    const window = mainWindow.getWindow();
+    if (!window) return;
+
+    mainWindow.setIsHidden(false);
+    window.show();
   }),
   get: publicProcedure
     .output(

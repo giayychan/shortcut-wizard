@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useEffect, useState } from 'react';
 import {
   DndContext,
@@ -18,7 +19,7 @@ import {
   useSortable,
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { Aside, Flex, Group, ScrollArea, Text } from '@mantine/core';
+import { Group, ScrollArea, Text } from '@mantine/core';
 import StyledSvg from '../common/StyledSvg';
 import { SoftwareShortcut } from '../../../../@types';
 import trpcReact from '../../utils/trpc';
@@ -46,14 +47,12 @@ function SortableItem({
       className="select-none"
       ref={setNodeRef}
       style={style}
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...attributes}
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...listeners}
     >
       <IconMenu2 size="0.85rem" />
       <StyledSvg src={software.icon.dataUri} />
-      <Text>{software.key}</Text>
+      <Text size="sm">{software.label}</Text>
     </Group>
   );
 }
@@ -96,23 +95,19 @@ function SortList({ softwareData }: { softwareData: SoftwareShortcut[] }) {
   };
 
   return (
-    <Aside>
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-      >
-        <SortableContext items={items} strategy={verticalListSortingStrategy}>
-          <Flex direction="column" h="100%" p="md" pt={40} gap="md">
-            <ScrollArea offsetScrollbars>
-              {items.map(({ id, software }) => (
-                <SortableItem key={id} id={id} software={software} />
-              ))}
-            </ScrollArea>
-          </Flex>
-        </SortableContext>
-      </DndContext>
-    </Aside>
+    <DndContext
+      sensors={sensors}
+      collisionDetection={closestCenter}
+      onDragEnd={handleDragEnd}
+    >
+      <SortableContext items={items} strategy={verticalListSortingStrategy}>
+        <ScrollArea h="100%" offsetScrollbars>
+          {items.map(({ id, software }) => (
+            <SortableItem key={id} id={id} software={software} />
+          ))}
+        </ScrollArea>
+      </SortableContext>
+    </DndContext>
   );
 }
 
@@ -126,7 +121,14 @@ function SortSoftwareListContainer() {
     };
   }, [utils.software.all]);
 
-  return softwareData ? <SortList softwareData={softwareData} /> : null;
+  return (
+    <>
+      <Text size="xl" mb="lg">
+        Sort Software
+      </Text>
+      {softwareData ? <SortList softwareData={softwareData} /> : null}
+    </>
+  );
 }
 
 export default SortSoftwareListContainer;

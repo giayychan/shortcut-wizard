@@ -3,8 +3,13 @@ import { get as getRef, ref } from 'firebase/database';
 import { auth, db } from 'main/configs/firebase';
 import { notifyClientError } from 'renderer/utils';
 import { DbUserData } from '../../../@types';
+import useIsDevStore from '../stores/useIsDevStore';
 
-export const getUserRef = (userUid: string) => ref(db, `users/${userUid}`);
+export const getUserRef = (userUid: string) => {
+  const { isDev } = useIsDevStore.getState();
+
+  return ref(db, `${isDev ? 'development' : 'production'}/users/${userUid}`);
+};
 
 export const getUserFromDB = async (userUid: string) => {
   const userRef = getUserRef(userUid);

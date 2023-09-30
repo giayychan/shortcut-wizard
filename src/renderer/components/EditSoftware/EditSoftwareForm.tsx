@@ -1,25 +1,23 @@
+import { nanoid } from 'nanoid';
 import { useForm } from '@mantine/form';
-import {
-  Group,
-  Box,
-  Button,
-  LoadingOverlay,
-  TextInput,
-  Checkbox,
-} from '@mantine/core';
+import { Group, Box, Button, TextInput, Checkbox } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { modals } from '@mantine/modals';
+import { useSearchParams } from 'react-router-dom';
 
 import StyledSvg from '../common/StyledSvg';
 import AutoCompleteInput from './AutoCompleteInput';
 import { AddSoftwareFormValues, SoftwareShortcut } from '../../../../@types';
 import UploadCustomIcon from './UploadCustomIcon';
 import trpcReact from '../../utils/trpc';
+import { notifyClientInfo } from '../../utils';
 
 const FORM_DEFAULT_VALUES = {
   file: null,
   software: {
+    id: nanoid(),
     key: '',
+    label: '',
     icon: {
       isCustom: false,
       filename: '',
@@ -30,25 +28,28 @@ const FORM_DEFAULT_VALUES = {
 
 function EditSoftware({
   softwareShortcut,
-  close,
 }: {
   softwareShortcut: SoftwareShortcut | undefined;
-  close: () => void;
 }) {
   const isNew = !softwareShortcut;
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const utils = trpcReact.useContext();
-  const addSoftware = trpcReact.software.create.software.useMutation();
-  const updateSoftware = trpcReact.software.update.useMutation();
+  const { mutateAsync: addSoftware } =
+    trpcReact.software.create.software.useMutation();
+
+  const { mutateAsync: updateSoftware } =
+    trpcReact.software.update.useMutation();
 
   const form = useForm<AddSoftwareFormValues>({
     initialValues: { ...FORM_DEFAULT_VALUES, ...softwareShortcut },
     validate: {
       software: {
-        key: (value) => {
+        label: (value) => {
           if (value === '') return 'Please enter a software name';
-          if (value.toLowerCase() === 'search')
-            return 'Cannot set software name to reserve key "search"';
+          const regex = /[^a-zA-Z0-9\s]/;
+          if (regex.test(value))
+            return 'Please enter a valid software name (no special characters)';
           return null;
         },
         icon: {
@@ -72,12 +73,12 @@ function EditSoftware({
       ...values,
       software: {
         ...values.software,
-        key: values.software.key.toLowerCase(),
+        key: values.software.label.toLowerCase().replace(/\s/g, '-'),
       },
     }),
   });
 
-  const [visible, { close: closeLoading, open: openLoading }] =
+  const [isLoading, { close: stopLoading, open: setLoading }] =
     useDisclosure(false);
 
   const [active, { toggle: showNextInput }] = useDisclosure(false);
@@ -92,7 +93,7 @@ function EditSoftware({
   };
 
   const handleSubmit = async (values: AddSoftwareFormValues) => {
-    openLoading();
+    setLoading();
 
     const createdDate =
       softwareShortcut?.createdDate || new Date().toISOString();
@@ -105,17 +106,39 @@ function EditSoftware({
 
     try {
       if (isNew) {
-        await addSoftware.mutateAsync(newSoftware);
+        const templates = utils.software.create.options.getData();
+        const template = templates?.find(
+          (t) => t.software.id === newSoftware.software.id
+        );
+
+        newSoftware.software.key =
+          template?.software.key || newSoftware.software.key;
+
+        await addSoftware(newSoftware);
+        notifyClientInfo('Software added');
       } else {
-        await updateSoftware.mutateAsync(newSoftware);
+        await updateSoftware({
+          ...newSoftware,
+          software: {
+            ...newSoftware.software,
+            key: softwareShortcut.software.key,
+          },
+        });
+        notifyClientInfo('Software updated');
       }
       await utils.software.all.refetch();
-      close();
-      modals.closeAll();
+      handleClear();
+
+      const from = searchParams.get('from');
+      searchParams.delete('softwareKey');
+      searchParams.delete('from');
+      if (from === 'modal') setSearchParams({ modalTab: 'Edit Software' });
+      else if (from === 'main') modals.closeAll();
+      else await utils.software.create.options.refetch();
     } catch (error: any) {
-      form.setFieldError('software.key', error.message);
+      form.setFieldError('software.label', error.message);
     } finally {
-      closeLoading();
+      stopLoading();
     }
   };
 
@@ -127,14 +150,14 @@ function EditSoftware({
     <Box<'form'>
       component="form"
       w="100%"
+      h="100%"
       onSubmit={form.onSubmit(handleSubmit)}
+      className="flex flex-col"
     >
-      <LoadingOverlay visible={visible} overlayBlur={2} />
-
       {!isNew ? (
         <TextInput
           // eslint-disable-next-line react/jsx-props-no-spreading
-          {...form.getInputProps('software.key')}
+          {...form.getInputProps('software.label')}
           data-autofocus
           label="Software Name"
           icon={icon.filename ? customIcon : null}
@@ -156,17 +179,14 @@ function EditSoftware({
 
       {icon.isCustom ? <UploadCustomIcon active={active} form={form} /> : null}
 
-      <Group position="right" mt="xl">
+      <Group position="right" mt="auto">
         {isNew && (
           <Button onClick={handleClear} variant="outline">
             Clear
           </Button>
         )}
-        <Button variant="filled" type="submit">
+        <Button variant="filled" type="submit" loading={isLoading}>
           Confirm
-        </Button>
-        <Button variant="light" onClick={() => close()}>
-          Back
         </Button>
       </Group>
     </Box>

@@ -5,7 +5,6 @@ import { logError, logSuccess, store } from '.';
 import {
   USER_SOFTWARE_SHORTCUTS_DIR,
   USER_CUSTOM_ICONS_DIR,
-  USER_VECTOR_STORE_DIR,
   SYS_SOFTWARE_SHORTCUTS_DIR,
 } from './path';
 
@@ -28,11 +27,8 @@ const createSortedSoftwareList = async () => {
 export const autoLaunch = async (userEnabled: boolean) => {
   try {
     // todo: need to test if this works on windows & linux
-    // https://github.com/Teamwork/node-auto-launch/issues/99
-    // https://github.com/Teamwork/node-auto-launch/issues/105
     const appAutoLauncher = new AutoLaunch({
-      name: 'Shortcut Wizard Launcher',
-      path: '/Applications/Shortcut Wizard.app',
+      name: 'Shortcut Wizard',
       mac: {
         useLaunchAgent: true,
       },
@@ -50,7 +46,29 @@ export const autoLaunch = async (userEnabled: boolean) => {
 
     return isEnabled;
   } catch (error: any) {
-    console.log('autoLaunch error: ', error.message);
+    logError('autoLaunch error: ', error.message);
+    throw error;
+  }
+};
+
+const isExecPathChanged = async () => {
+  const currPath = process.execPath;
+  const prev = store.get('execPath');
+  if (prev !== currPath) store.set('execPath', currPath);
+  return prev !== currPath;
+};
+
+const initializeAutoLaunch = async () => {
+  try {
+    const userEnabled = store.get('isAutoLaunchEnabled');
+
+    const pathChanged = await isExecPathChanged();
+
+    if ((pathChanged && userEnabled) || userEnabled === undefined) {
+      await autoLaunch(true);
+    }
+  } catch (error: any) {
+    logError('autoLaunch error: ', error.message);
     throw error;
   }
 };
@@ -61,7 +79,7 @@ const initializeUserData = async () => {
 
   const opened = store.get('opened');
 
-  if (!storeMachineId === undefined) {
+  if (storeMachineId === undefined) {
     const id = await machineId();
     store.set('machineId', id);
   }
@@ -70,17 +88,14 @@ const initializeUserData = async () => {
   }
 
   if (opened === undefined) {
-    await autoLaunch(true);
     store.set('sortSoftwareByRecentOpened', true);
     store.delete('isPanelAlwaysAtCenter');
     store.delete('panelPosition');
-    store.delete('openAIApiKey');
-    store.delete('enabledAiSearch');
+    store.delete('isClosedTutorial');
 
     try {
       await remove(USER_SOFTWARE_SHORTCUTS_DIR);
       await remove(USER_CUSTOM_ICONS_DIR);
-      await remove(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't remove user shortcuts directory");
       throw error;
@@ -89,7 +104,6 @@ const initializeUserData = async () => {
     try {
       await ensureDir(USER_SOFTWARE_SHORTCUTS_DIR);
       await ensureDir(USER_CUSTOM_ICONS_DIR);
-      await ensureDir(USER_VECTOR_STORE_DIR);
     } catch (error) {
       logError("Couldn't ensure user shortcuts directory exists");
       throw error;
@@ -110,6 +124,8 @@ const initializeUserData = async () => {
 
     store.set('opened', true);
   }
+
+  await initializeAutoLaunch();
 };
 
 export default initializeUserData;

@@ -10,7 +10,7 @@ function SettingsButton() {
           modal: 'openSettings',
           fullScreen: true,
           withCloseButton: false,
-          innerProps: { selectedSettingsTab: 0 },
+          innerProps: { selectedSettingsTab: 'Account' },
         });
       }}
       title="Settings"

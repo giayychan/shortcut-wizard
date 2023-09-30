@@ -17,8 +17,6 @@ export const getUserDataPath = (...paths: string[]): string => {
 
 export const USER_SOFTWARE_SHORTCUTS_DIR = getUserDataPath('shortcuts');
 
-export const USER_VECTOR_STORE_DIR = getUserDataPath('vector_store');
-
 export const USER_CUSTOM_ICONS_DIR = getUserDataPath('icons');
 
 export const SYS_SOFTWARES_ICONS_DIR = getAssetPath('icons', 'softwares');

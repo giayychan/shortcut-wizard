@@ -22,7 +22,11 @@ const AutoCompleteItem = forwardRef<
   AddSoftwareAutocompleteItemProps
 >(
   (
-    { value, software: { icon }, ...others }: AddSoftwareAutocompleteItemProps,
+    {
+      value,
+      software: { icon, label },
+      ...others
+    }: AddSoftwareAutocompleteItemProps,
     ref
   ) => (
     <>
@@ -35,7 +39,7 @@ const AutoCompleteItem = forwardRef<
             icon.dataUri && <StyledSvg src={icon.dataUri} />
           )}
 
-          <Text className="capitalize">{value || 'Add a new software'}</Text>
+          <Text>{label || 'Add a new software'}</Text>
         </Group>
       </div>
     </>
@@ -76,24 +80,25 @@ function AutoCompleteInput({ form, icon, showNextInput }: AutoCompleteProps) {
     const { isCustom } = item.software.icon;
 
     form.setFieldValue('software.icon', item.software.icon);
+    form.setFieldValue('software.id', item.software.id);
     form.setFieldValue('shortcuts', item.shortcuts);
 
     if (isCustom) {
-      if (form.values.software.key === '') {
-        form.setFieldError('software.key', 'Please enter a software name');
+      if (form.values.software.label === '') {
+        form.setFieldError('software.label', 'Please enter a software name');
         return;
       }
-      form.setFieldValue('software.key', form.values.software.key);
+      form.setFieldValue('software.label', form.values.software.label);
       form.setFieldValue('file', null);
       showNextInput();
     } else {
-      form.setFieldValue('software.key', item.software.key);
+      form.setFieldValue('software.label', item.software.label);
     }
   };
 
   return (
     <Autocomplete
-      {...form.getInputProps('software.key')}
+      {...form.getInputProps('software.label')}
       hoverOnSearchChange
       label="Software Name"
       placeholder="Pick one or add a new one"

@@ -18,7 +18,7 @@
 }
 
 body {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 body::-webkit-scrollbar {
@@ -27,7 +27,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: #25262b; /* color of the tracking area */
-  margin: 175px 0px 8px 0px;
+  margin: 145px 0px 8px 0px;
 }
 
 body::-webkit-scrollbar-thumb {

@@ -1,14 +1,8 @@
 import { useCallback, useMemo, memo } from 'react';
 import Fuse from 'fuse.js';
-import { IconRobot, IconSearch } from '@tabler/icons-react';
+import { IconSearch } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
-import {
-  ActionIcon,
-  CloseButton,
-  Flex,
-  TextInput,
-  Tooltip,
-} from '@mantine/core';
+import { CloseButton, TextInput } from '@mantine/core';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import {
   FlattenShortcut,
@@ -18,7 +12,6 @@ import {
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import StyledSvg from '../common/StyledSvg';
 import trpcReact from '../../utils/trpc';
-import { notifyClientError } from '../../utils';
 
 const FORM_DEFAULT_VALUES = {
   initialValues: {
@@ -27,26 +20,13 @@ const FORM_DEFAULT_VALUES = {
 };
 
 const options: Fuse.IFuseOptions<FlattenShortcut> = {
-  keys: ['description', 'software.key'],
+  keys: ['description', 'software.label'],
   minMatchCharLength: 1,
 };
 
 function SearchShortcutContainer() {
   const utils = trpcReact.useContext();
   const softwareShortcuts = utils.software.all.getData();
-
-  const { data: enabledAiSearch, refetch: refetchEnabledAiSearch } =
-    trpcReact.shortcut.ai.enabledAiSearch.useQuery();
-
-  const { mutate: toggleAiSearch } =
-    trpcReact.shortcut.ai.toggleAiSearch.useMutation({
-      onSuccess: () => {
-        refetchEnabledAiSearch();
-      },
-    });
-
-  const { mutateAsync: aiSearchShortcuts } =
-    trpcReact.shortcut.ai.search.useMutation();
 
   const form = useForm<SearchShortcutFormValues>(FORM_DEFAULT_VALUES);
   const [setShowSearchResults, setResults, searchTerm, setSearchTerm] =
@@ -71,7 +51,7 @@ function SearchShortcutContainer() {
 
         const shortcutsArray = shortcuts.map((shortcut) => ({
           ...shortcut,
-          id: `${software.key}-${shortcut.id}`,
+          id: shortcut.id,
           software,
           createdDate,
         }));
@@ -102,26 +82,9 @@ function SearchShortcutContainer() {
       return;
     }
 
-    if (enabledAiSearch) {
-      aiSearchShortcuts({
-        userPrompt: searchTerm,
-        softwareKey: selectedSoftwareShortcut?.software.key,
-      })
-        .then((res) => setResults(res))
-        .catch((err) => notifyClientError(err.message));
-    } else {
-      const result = fuse.search(searchTerm);
-      setResults(result);
-    }
-  }, [
-    setShowSearchResults,
-    setResults,
-    fuse,
-    searchTerm,
-    aiSearchShortcuts,
-    enabledAiSearch,
-    selectedSoftwareShortcut?.software.key,
-  ]);
+    const result = fuse.search(searchTerm);
+    setResults(result);
+  }, [setShowSearchResults, setResults, fuse, searchTerm]);
 
   const reset = () => {
     setResults([]);
@@ -129,48 +92,24 @@ function SearchShortcutContainer() {
     setShowSearchResults(false);
   };
 
-  const handleAiToggle = () => toggleAiSearch(!enabledAiSearch);
-
   return (
-    <Flex className="p-2" gap="xs" align="center">
-      <Tooltip
-        arrowOffset={10}
-        arrowSize={4}
-        label="Enable AI Search with your openAI API key. Go to settings and update your API key."
-        withArrow
-        events={{ hover: true, focus: true, touch: false }}
-        position="bottom-start"
-      >
-        <ActionIcon
-          variant={enabledAiSearch ? 'gradient' : 'default'}
-          aria-label="ai search"
-          onClick={handleAiToggle}
-        >
-          <IconRobot />
-        </ActionIcon>
-      </Tooltip>
-
-      <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1">
-        <TextInput
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...form.getInputProps('searchTerm')}
-          rightSection={<CloseButton onClick={reset} />}
-          w="100%"
-          icon={
-            selectedSoftwareShortcut ? (
-              <StyledSvg
-                src={selectedSoftwareShortcut?.software.icon.dataUri}
-              />
-            ) : (
-              <IconSearch size="1.25rem" />
-            )
-          }
-          value={searchTerm}
-          onChange={(event) => setSearchTerm(event.currentTarget.value)}
-          placeholder="Press enter to search shortcut description"
-        />
-      </form>
-    </Flex>
+    <form onSubmit={form.onSubmit(handleSubmit)} className="flex-1 p-2">
+      <TextInput
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...form.getInputProps('searchTerm')}
+        rightSection={<CloseButton onClick={reset} />}
+        icon={
+          selectedSoftwareShortcut ? (
+            <StyledSvg src={selectedSoftwareShortcut?.software.icon.dataUri} />
+          ) : (
+            <IconSearch size="1.25rem" />
+          )
+        }
+        value={searchTerm}
+        onChange={(event) => setSearchTerm(event.currentTarget.value)}
+        placeholder="Search shortcut description"
+      />
+    </form>
   );
 }
 

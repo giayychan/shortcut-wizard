@@ -1,6 +1,5 @@
 import { useListState, useToggle } from '@mantine/hooks';
 import {
-  Aside,
   Button,
   Checkbox,
   Flex,
@@ -9,41 +8,50 @@ import {
   ThemeIcon,
   Text,
   ActionIcon,
-  Drawer,
 } from '@mantine/core';
-import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+
 import { IconEdit } from '@tabler/icons-react';
 import trpcReact from '../../utils/trpc';
 import StyledSvg from '../common/StyledSvg';
-import EditSoftware from './EditSoftwareForm';
-import { SoftwareShortcut } from '../../../../@types';
+import { SoftwareShortcut, TabType } from '../../../../@types';
+import { notifyClientInfo } from '../../utils';
 
-export default function EditSoftwareList() {
+export default function EditSoftwareList({
+  setSelected,
+}: {
+  setSelected: (tab: TabType) => void;
+}) {
   const utils = trpcReact.useContext();
   const softwareShortcuts = utils.software.all.getData();
 
-  const [selectedSoftwareShortcut, setSelectedSoftwareShortcut] = useState<
-    SoftwareShortcut | undefined
-  >();
-
   const [confirmed, toggle] = useToggle();
-  const [isEditSoftware, toggleIsEditSoftware] = useToggle();
 
   const { mutateAsync: deleteSoftware, isLoading: isDeleting } =
     trpcReact.software.delete.useMutation();
 
   const data = softwareShortcuts?.map(({ software }) => {
-    return { label: software.key, checked: false, key: software.key };
+    return {
+      label: software.label,
+      checked: false,
+      key: software.key,
+    };
   });
 
   const [values, handlers] = useListState(data);
+  const [, setSearchParams] = useSearchParams();
 
   const allChecked = values?.every((value) => value.checked);
   const indeterminate = values?.some((value) => value.checked) && !allChecked;
 
   const handleClick = (softwareShortcut?: SoftwareShortcut) => {
-    toggleIsEditSoftware(true);
-    setSelectedSoftwareShortcut(softwareShortcut);
+    setSelected('Add Software');
+    if (softwareShortcut) {
+      setSearchParams({
+        softwareKey: softwareShortcut.software.key,
+        from: 'modal',
+      });
+    }
   };
 
   const items = values?.map((value, index) => {
@@ -63,7 +71,7 @@ export default function EditSoftwareList() {
                   <StyledSvg src={selected.software.icon.dataUri} />
                 ) : null}
               </ThemeIcon>
-              <Text size="md">{value.key}</Text>
+              <Text>{value.label}</Text>
             </Group>
           }
           key={value.key}
@@ -75,13 +83,7 @@ export default function EditSoftwareList() {
         <ActionIcon
           ml="auto"
           variant="light"
-          onClick={() =>
-            handleClick(
-              softwareShortcuts?.find((softwareShortcut) => {
-                return softwareShortcut.software.key === value.key;
-              })
-            )
-          }
+          onClick={() => handleClick(selected)}
         >
           <IconEdit size="1rem" />
         </ActionIcon>
@@ -101,72 +103,44 @@ export default function EditSoftwareList() {
       await utils.software.all.refetch();
 
       handlers.setState((current) => current.filter((value) => !value.checked));
+      notifyClientInfo('Software deleted');
     }
 
     toggle();
   };
 
   return (
-    <Aside>
-      <Drawer
-        withCloseButton={false}
-        opened={isEditSoftware}
-        onClose={() => toggleIsEditSoftware(false)}
-        title={
-          selectedSoftwareShortcut
-            ? `Edit ${selectedSoftwareShortcut.software.key}`
-            : 'Add Software'
-        }
-        padding="xl"
-        size="xl"
-        position="right"
-        zIndex={10000}
-        styles={{
-          header: {
-            paddingTop: 50,
-          },
-        }}
-      >
-        <EditSoftware
-          softwareShortcut={selectedSoftwareShortcut}
-          close={() => toggleIsEditSoftware(false)}
-        />
-      </Drawer>
-      <Flex direction="column" h="100%" p="md" pt={40}>
-        <ScrollArea className="flex-1" offsetScrollbars>
-          <Flex direction="column" w="100%">
-            <Checkbox
-              disabled={!softwareShortcuts?.length}
-              checked={allChecked}
-              indeterminate={indeterminate}
-              label="Select All"
-              transitionDuration={0}
-              onChange={() =>
-                handlers.setState((current) =>
-                  current.map((value) => ({ ...value, checked: !allChecked }))
-                )
-              }
-            />
-            {items}
-          </Flex>
-        </ScrollArea>
-        <Flex p="md" gap="xl">
-          <Button
-            compact
-            color="orange"
-            disabled={
-              (!indeterminate && !allChecked) || !softwareShortcuts?.length
-            }
-            onClick={handleDelete}
-            loading={isDeleting}
-          >
-            {confirmed ? 'Confirm Delete?' : 'Delete'}
-          </Button>
-          <Button compact color="indigo" onClick={() => handleClick()}>
-            Add new software
-          </Button>
-        </Flex>
+    <>
+      <Flex justify="space-between">
+        <Text size="xl" mb="lg">
+          Edit Software
+        </Text>
+        <Button
+          variant="light"
+          disabled={
+            (!indeterminate && !allChecked) || !softwareShortcuts?.length
+          }
+          onClick={handleDelete}
+          loading={isDeleting}
+        >
+          {confirmed ? 'Confirm Delete?' : 'Delete'}
+        </Button>
       </Flex>
-    </Aside>
+      <ScrollArea h="100%" offsetScrollbars>
+        <Checkbox
+          disabled={!softwareShortcuts?.length}
+          checked={allChecked}
+          indeterminate={indeterminate}
+          label="Select All"
+          transitionDuration={0}
+          onChange={() =>
+            handlers.setState((current) =>
+              current.map((value) => ({ ...value, checked: !allChecked }))
+            )
+          }
+        />
+        {items}
+      </ScrollArea>
+    </>
   );
 }
