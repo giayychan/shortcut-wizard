@@ -80,7 +80,11 @@ const createWindow = async () => {
     if (process.env.START_MINIMIZED) {
       window.minimize();
     } else {
+      window.setAlwaysOnTop(true);
       window.show();
+      app.focus({
+        steal: true,
+      });
       // window.webContents.openDevTools();
     }
   });
@@ -182,7 +186,11 @@ if (!gotTheLock) {
           createWindow();
         } else {
           mainWindow.setIsHidden(false);
+          window.setAlwaysOnTop(true);
           window.show();
+          app.focus({
+            steal: true,
+          });
         }
       });
     })

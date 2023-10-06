@@ -39,20 +39,6 @@ export const registerGlobalOpenAppShortcut = () =>
     }
   });
 
-const getBrowserWindowType = () => {
-  let type;
-
-  if (process.platform === 'darwin') {
-    type = 'panel';
-  } else if (process.platform === 'win32') {
-    type = 'toolbar';
-  } else {
-    type = 'notification';
-  }
-
-  return type;
-};
-
 const getPanelPosition = () => {
   const isPanelAlwaysAtCenter = store.get('isPanelAlwaysAtCenter') as
     | boolean
@@ -71,7 +57,7 @@ const getPanelPosition = () => {
 };
 
 const defaultWindowOptions = {
-  type: getBrowserWindowType(),
+  ...(process.platform === 'darwin' ? { type: 'panel' } : undefined),
   width: WIDTH,
   minWidth: WIDTH,
   height: DEFAULT_HEIGHT,
@@ -88,7 +74,7 @@ const defaultWindowOptions = {
   icon: getAssetPath('assets/icons/icon.ico'),
   titleBarStyle: 'hidden',
   titleBarOverlay: {
-    color: '#141517',
+    color: '#1A1B1E',
     symbolColor: '#dddddd',
   },
   trafficLightPosition: { x: 10, y: 10 },
