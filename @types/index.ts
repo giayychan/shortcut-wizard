@@ -130,7 +130,7 @@ export type FuseSearchState = {
 
 export type TabType =
   | 'Account'
-  | 'System Setting'
+  | 'System'
   | 'Add Software'
   | 'Edit Software'
   | 'Sort Software'

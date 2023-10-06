@@ -46,7 +46,7 @@ function SettingsModal({
     switch (selected) {
       case 'Account':
         return { component: <UserProfile /> };
-      case 'System Setting':
+      case 'System':
         return { component: <GlobalSettings /> };
       case 'Add Software':
         return { component: <AddSoftwareSetting /> };
@@ -102,12 +102,12 @@ function SettingsModal({
                   onClick={() => setSelected('Account')}
                 />
                 <NavLink
-                  active={selected === 'System Setting'}
-                  label="System Setting"
+                  active={selected === 'System'}
+                  label="System"
                   className="rounded-lg"
                   icon={<IconSettings size="1rem" stroke={1.5} />}
                   rightSection={<IconChevronRight size="1rem" stroke={1.5} />}
-                  onClick={() => setSelected('System Setting')}
+                  onClick={() => setSelected('System')}
                 />
 
                 <NavLink

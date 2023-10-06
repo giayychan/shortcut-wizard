@@ -49,7 +49,7 @@ function GlobalSettings() {
   return (
     <Flex direction="column" gap="md" h="100%">
       <Text size="xl" mb={4}>
-        System Setting
+        System
       </Text>
       <Flex direction="column" gap="md" className="flex-grow">
         <Checkbox
