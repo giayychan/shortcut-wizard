@@ -1,1 +1,25 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"gmail","icon":{"filename":"gmail.svg","isCustom":false},"id":"9483fc5c-545b-40ff-b1cf-40d4274a9221","label":"Gmail"},"shortcuts":[{"id":"d6eed142-0ca1-45ed-925c-71d12deb6896","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "gmail",
+    "icon": {
+      "filename": "gmail.svg",
+      "isCustom": false
+    },
+    "id": "9483fc5c-545b-40ff-b1cf-40d4274a9221",
+    "label": "Gmail"
+  },
+  "shortcuts": [
+    {
+      "id": "d6eed142-0ca1-45ed-925c-71d12deb6896",
+      "hotkeys": [
+        [
+          "meta",
+          "z"
+        ]
+      ],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}

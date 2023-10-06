@@ -1,1 +1,25 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"unity","icon":{"filename":"unity.svg","isCustom":false},"id":"a30912fb-ed76-46ca-b16a-a95492478c76","label":"Unity"},"shortcuts":[{"id":"d0784550-c8f8-4b95-990a-eff530c7a900","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "unity",
+    "icon": {
+      "filename": "unity.svg",
+      "isCustom": false
+    },
+    "id": "a30912fb-ed76-46ca-b16a-a95492478c76",
+    "label": "Unity"
+  },
+  "shortcuts": [
+    {
+      "id": "d0784550-c8f8-4b95-990a-eff530c7a900",
+      "hotkeys": [
+        [
+          "meta",
+          "z"
+        ]
+      ],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}

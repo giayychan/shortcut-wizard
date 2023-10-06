@@ -1,1 +1,75 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"chrome","icon":{"filename":"chrome.svg","isCustom":false},"id":"0cd80c24-149f-4a13-98d3-8aa9879c027d","label":"Chrome"},"shortcuts":[{"id":"fc4659a8-ef26-417f-8a14-1d9df3c3a1c1","hotkeys":[["meta","t"]],"description":"Open a new tab","isFavorite":false},{"id":"b37df842-8eb3-4875-8295-72b5564c42c2","hotkeys":[["shift","meta","t"]],"description":"Reopen previous tab","isFavorite":false},{"id":"6453909c-27da-45a2-a104-5942fd78a715","hotkeys":[["meta","w"]],"description":"Close the current tab","isFavorite":false},{"id":"0da0079b-ad6a-4407-9240-59a27f804155","hotkeys":[["shift","meta","w"]],"description":"Close all tabs","isFavorite":false},{"id":"f9f15779-830d-4957-a8d6-f6a1a68d9853","hotkeys":[["meta","l"],["x","y"]],"description":"Place the focus on the Address Bar","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "chrome",
+    "icon": {
+      "filename": "chrome.svg",
+      "isCustom": false
+    },
+    "id": "0cd80c24-149f-4a13-98d3-8aa9879c027d",
+    "label": "Chrome"
+  },
+  "shortcuts": [
+    {
+      "id": "fc4659a8-ef26-417f-8a14-1d9df3c3a1c1",
+      "hotkeys": [
+        [
+          "meta",
+          "t"
+        ]
+      ],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "b37df842-8eb3-4875-8295-72b5564c42c2",
+      "hotkeys": [
+        [
+          "shift",
+          "meta",
+          "t"
+        ]
+      ],
+      "description": "Reopen previous tab",
+      "isFavorite": false
+    },
+    {
+      "id": "6453909c-27da-45a2-a104-5942fd78a715",
+      "hotkeys": [
+        [
+          "meta",
+          "w"
+        ]
+      ],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "0da0079b-ad6a-4407-9240-59a27f804155",
+      "hotkeys": [
+        [
+          "shift",
+          "meta",
+          "w"
+        ]
+      ],
+      "description": "Close all tabs",
+      "isFavorite": false
+    },
+    {
+      "id": "f9f15779-830d-4957-a8d6-f6a1a68d9853",
+      "hotkeys": [
+        [
+          "meta",
+          "l"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "description": "Place the focus on the Address Bar",
+      "isFavorite": false
+    }
+  ]
+}

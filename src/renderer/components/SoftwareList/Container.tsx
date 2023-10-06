@@ -7,6 +7,7 @@ import StyledSvg from '../common/StyledSvg';
 import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import { SoftwareShortcut } from '../../../../@types';
 import trpcReact from '../../utils/trpc';
+import { notifyClientError } from '../../utils';
 
 function SoftwareList({
   softwareShortcuts,
@@ -74,7 +75,7 @@ function SoftwareList({
 }
 
 function SoftwareListContainer() {
-  const { data, isLoading } = trpcReact.software.all.useQuery();
+  const { data, isLoading, error } = trpcReact.software.all.useQuery();
   const [, setSearchParams] = useSearchParams();
 
   const [selectedSoftware, setSelectedSoftware] = useSelectedShortcutsStore(
@@ -99,6 +100,12 @@ function SoftwareListContainer() {
       }
     }
   }, [selectedSoftware, setSelectedSoftware, data]);
+
+  useEffect(() => {
+    if (error) {
+      notifyClientError(`Error during fetching shortcuts: ${error.message}`);
+    }
+  }, [error]);
 
   if (isLoading) return <Skeleton h={50} />;
 

@@ -1,1 +1,253 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"brave","icon":{"filename":"brave.svg","isCustom":false},"id":"f532dd76-1f87-4585-a7e1-5a2194c06a8b","label":"Brave"},"shortcuts":[{"id":"2d93f9f8-1a72-4295-946f-119e1da2348e","hotkeys":[["ctrl","t"]],"description":"Open a new tab","isFavorite":false},{"id":"a7c45df0-94e8-4d83-885f-202a0194b479","hotkeys":[["ctrl","shift","t"]],"description":"Reopen the last closed tab","isFavorite":true},{"id":"7789955c-951c-4ec3-925e-637e3266c496","hotkeys":[["ctrl","tab"],["ctrl","shift","tab"]],"description":"Switch between tabs (forward/backward)","isFavorite":false},{"id":"31d0faf3-f377-426d-ac16-005ad90da854","hotkeys":[["ctrl","w"]],"description":"Close the current tab","isFavorite":false},{"id":"b7d05d45-368a-407c-86f3-96ceed34bd36","hotkeys":[["ctrl","shift","n"]],"description":"Restore closed tab","isFavorite":true},{"id":"69658aca-f4d8-4975-9ba5-f24a746c44b8","hotkeys":[["ctrl","n"]],"description":"Open a new window","isFavorite":false},{"id":"46134bfd-b116-4593-88d5-6ddabe6897ea","hotkeys":[["ctrl","shift","n"]],"description":"Open a new private window","isFavorite":false},{"id":"be10d88c-5405-44cc-a08c-2687e5377a38","hotkeys":[["ctrl","shift","equal"],["ctrl","scroll up"]],"description":"Zoom in","isFavorite":false},{"id":"386a48af-1930-4980-9b14-5cdc17c50ff8","hotkeys":[["ctrl","minus"],["ctrl","scroll down"]],"description":"Zoom out","isFavorite":false},{"id":"5ffa798b-2e12-4db1-a24c-8d4a8f9cdfde","hotkeys":[["ctrl","0"]],"description":"Reset zoom level","isFavorite":false},{"id":"a4c0bfd2-12f5-4857-9e6e-940bcbed6785","hotkeys":[["ctrl","f"]],"description":"Find text on the current page","isFavorite":false},{"id":"a0aa54ea-8438-48a8-8aac-5498221601df","hotkeys":[["ctrl","l"]],"description":"Open the address bar","isFavorite":false},{"id":"6d855770-ace8-4b01-ba59-5aa14067e3f1","hotkeys":[["alt","left"]],"description":"Go back","isFavorite":false},{"id":"c02eadc0-265b-47d3-bc97-a0defe49f682","hotkeys":[["alt","right"]],"description":"Go forward","isFavorite":false},{"id":"46267650-1cbf-4772-9a93-9b9b146cfdbe","hotkeys":[["ctrl","r"]],"description":"Reload current page","isFavorite":false},{"id":"765d9670-ceb8-43aa-9a79-cf39a8a5d85b","hotkeys":[["ctrl","shift","i"]],"description":"Open Developer Tools","isFavorite":false},{"id":"671a9f49-8197-47aa-9b5f-26072f0bbdf8","hotkeys":[["ctrl","j"]],"description":"Open Downloads","isFavorite":false},{"id":"0aae76c7-a75c-457b-a2b8-135d33fc9333","hotkeys":[["ctrl","d"]],"description":"Bookmark the current page","isFavorite":false},{"id":"84c03686-630c-43d8-bc6c-e5f987734fed","hotkeys":[["ctrl","h"]],"description":"Open History","isFavorite":false},{"id":"94110f14-cdcd-4ee0-ba20-dd0b8a70bdbb","hotkeys":[["ctrl","shift","s"]],"description":"Open Settings","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "brave",
+    "icon": {
+      "filename": "brave.svg",
+      "isCustom": false
+    },
+    "id": "f532dd76-1f87-4585-a7e1-5a2194c06a8b",
+    "label": "Brave"
+  },
+  "shortcuts": [
+    {
+      "id": "2d93f9f8-1a72-4295-946f-119e1da2348e",
+      "hotkeys": [
+        [
+          "ctrl",
+          "t"
+        ]
+      ],
+      "description": "Open a new tab",
+      "isFavorite": false
+    },
+    {
+      "id": "a7c45df0-94e8-4d83-885f-202a0194b479",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "t"
+        ]
+      ],
+      "description": "Reopen the last closed tab",
+      "isFavorite": true
+    },
+    {
+      "id": "7789955c-951c-4ec3-925e-637e3266c496",
+      "hotkeys": [
+        [
+          "ctrl",
+          "tab"
+        ],
+        [
+          "ctrl",
+          "shift",
+          "tab"
+        ]
+      ],
+      "description": "Switch between tabs (forward/backward)",
+      "isFavorite": false
+    },
+    {
+      "id": "31d0faf3-f377-426d-ac16-005ad90da854",
+      "hotkeys": [
+        [
+          "ctrl",
+          "w"
+        ]
+      ],
+      "description": "Close the current tab",
+      "isFavorite": false
+    },
+    {
+      "id": "b7d05d45-368a-407c-86f3-96ceed34bd36",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "n"
+        ]
+      ],
+      "description": "Restore closed tab",
+      "isFavorite": true
+    },
+    {
+      "id": "69658aca-f4d8-4975-9ba5-f24a746c44b8",
+      "hotkeys": [
+        [
+          "ctrl",
+          "n"
+        ]
+      ],
+      "description": "Open a new window",
+      "isFavorite": false
+    },
+    {
+      "id": "46134bfd-b116-4593-88d5-6ddabe6897ea",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "n"
+        ]
+      ],
+      "description": "Open a new private window",
+      "isFavorite": false
+    },
+    {
+      "id": "be10d88c-5405-44cc-a08c-2687e5377a38",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "equal"
+        ],
+        [
+          "ctrl",
+          "scroll up"
+        ]
+      ],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "386a48af-1930-4980-9b14-5cdc17c50ff8",
+      "hotkeys": [
+        [
+          "ctrl",
+          "minus"
+        ],
+        [
+          "ctrl",
+          "scroll down"
+        ]
+      ],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "5ffa798b-2e12-4db1-a24c-8d4a8f9cdfde",
+      "hotkeys": [
+        [
+          "ctrl",
+          "0"
+        ]
+      ],
+      "description": "Reset zoom level",
+      "isFavorite": false
+    },
+    {
+      "id": "a4c0bfd2-12f5-4857-9e6e-940bcbed6785",
+      "hotkeys": [
+        [
+          "ctrl",
+          "f"
+        ]
+      ],
+      "description": "Find text on the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "a0aa54ea-8438-48a8-8aac-5498221601df",
+      "hotkeys": [
+        [
+          "ctrl",
+          "l"
+        ]
+      ],
+      "description": "Open the address bar",
+      "isFavorite": false
+    },
+    {
+      "id": "6d855770-ace8-4b01-ba59-5aa14067e3f1",
+      "hotkeys": [
+        [
+          "alt",
+          "left"
+        ]
+      ],
+      "description": "Go back",
+      "isFavorite": false
+    },
+    {
+      "id": "c02eadc0-265b-47d3-bc97-a0defe49f682",
+      "hotkeys": [
+        [
+          "alt",
+          "right"
+        ]
+      ],
+      "description": "Go forward",
+      "isFavorite": false
+    },
+    {
+      "id": "46267650-1cbf-4772-9a93-9b9b146cfdbe",
+      "hotkeys": [
+        [
+          "ctrl",
+          "r"
+        ]
+      ],
+      "description": "Reload current page",
+      "isFavorite": false
+    },
+    {
+      "id": "765d9670-ceb8-43aa-9a79-cf39a8a5d85b",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "i"
+        ]
+      ],
+      "description": "Open Developer Tools",
+      "isFavorite": false
+    },
+    {
+      "id": "671a9f49-8197-47aa-9b5f-26072f0bbdf8",
+      "hotkeys": [
+        [
+          "ctrl",
+          "j"
+        ]
+      ],
+      "description": "Open Downloads",
+      "isFavorite": false
+    },
+    {
+      "id": "0aae76c7-a75c-457b-a2b8-135d33fc9333",
+      "hotkeys": [
+        [
+          "ctrl",
+          "d"
+        ]
+      ],
+      "description": "Bookmark the current page",
+      "isFavorite": false
+    },
+    {
+      "id": "84c03686-630c-43d8-bc6c-e5f987734fed",
+      "hotkeys": [
+        [
+          "ctrl",
+          "h"
+        ]
+      ],
+      "description": "Open History",
+      "isFavorite": false
+    },
+    {
+      "id": "94110f14-cdcd-4ee0-ba20-dd0b8a70bdbb",
+      "hotkeys": [
+        [
+          "ctrl",
+          "shift",
+          "s"
+        ]
+      ],
+      "description": "Open Settings",
+      "isFavorite": false
+    }
+  ]
+}

@@ -1,1 +1,245 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"photoshop","icon":{"filename":"photoshop.svg","isCustom":false},"id":"c3e46405-3658-465d-8afd-bf1c21d6d3f5","label":"Photoshop"},"shortcuts":[{"id":"362dafa5-9e09-4d5c-83cc-990a110ab561","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false},{"id":"4e15cf18-e2a0-42fe-8497-5fbab8416bd3","hotkeys":[["meta","shift","z"]],"description":"Redo","isFavorite":false},{"id":"f2cf79e0-59dd-4fc8-a691-ddf5276ddaad","hotkeys":[["meta","c"]],"description":"Copy","isFavorite":false},{"id":"a263d061-f31d-4e9d-a825-bb195e193da5","hotkeys":[["meta","v"]],"description":"Paste","isFavorite":false},{"id":"0428562a-fa9e-4104-aba5-f91473c46de0","hotkeys":[["meta","t"]],"description":"Transform","isFavorite":false},{"id":"d4b0d5d9-7da9-4d20-b79b-783f8066bd86","hotkeys":[["meta","j"]],"description":"Duplicate Layer","isFavorite":false},{"id":"9511c0e5-cee5-4624-855d-01a88e629710","hotkeys":[["meta","e"]],"description":"Merge Layers","isFavorite":false},{"id":"ff5f6490-d286-41a0-ac69-fd69be2c7bff","hotkeys":[["meta","i"]],"description":"Invert Selection","isFavorite":false},{"id":"14e470c7-d790-4a66-97f0-757be2083b03","hotkeys":[["meta","shift","i"]],"description":"Deselect","isFavorite":false},{"id":"696ed8ec-c9bd-4521-b619-f2dba3f2d64f","hotkeys":[["meta","shift","bracketleft"]],"description":"Move Layer Down","isFavorite":false},{"id":"abdebbcc-eeb7-4342-b3f0-5f9dcd04226e","hotkeys":[["meta","shift","bracketright"]],"description":"Move Layer Up","isFavorite":false},{"id":"72dbb3ae-3489-4927-bb2e-fbc64ea5adef","hotkeys":[["meta","0"]],"description":"Fit to Screen","isFavorite":false},{"id":"54ece40b-641d-4800-bccc-1bbdba8bdc36","hotkeys":[["meta","space"]],"description":"Hand Tool","isFavorite":false},{"id":"e6efaa4e-eb1d-4caa-a581-724b7d0e7762","hotkeys":[["meta","shift","equal"]],"description":"Zoom In","isFavorite":false},{"id":"72308a48-53a3-4ca7-811c-2578b0485811","hotkeys":[["meta","minus"]],"description":"Zoom Out","isFavorite":false},{"id":"cc543135-b0f5-4793-869d-92d07f3123fd","hotkeys":[["meta","alt","z"]],"description":"Step Backward","isFavorite":false},{"id":"7c5f42b8-5fd3-4ed7-a31e-04f87d6f9beb","hotkeys":[["meta","alt","shift","z"]],"description":"Step Forward","isFavorite":false},{"id":"36f552b2-2bab-4eb3-99e5-81eba109a4ff","hotkeys":[["meta","d"]],"description":"Deselect","isFavorite":false},{"id":"86f3f67a-8d6d-4a8d-ab83-161ecef14ea9","hotkeys":[["meta","shift","s"]],"description":"Save As","isFavorite":false},{"id":"9c973fe1-87a9-4140-bc47-972022e9d512","hotkeys":[["meta","alt","shift","s"]],"description":"Save for Web","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "photoshop",
+    "icon": {
+      "filename": "photoshop.svg",
+      "isCustom": false
+    },
+    "id": "c3e46405-3658-465d-8afd-bf1c21d6d3f5",
+    "label": "Photoshop"
+  },
+  "shortcuts": [
+    {
+      "id": "362dafa5-9e09-4d5c-83cc-990a110ab561",
+      "hotkeys": [
+        [
+          "meta",
+          "z"
+        ]
+      ],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "4e15cf18-e2a0-42fe-8497-5fbab8416bd3",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "z"
+        ]
+      ],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "f2cf79e0-59dd-4fc8-a691-ddf5276ddaad",
+      "hotkeys": [
+        [
+          "meta",
+          "c"
+        ]
+      ],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "a263d061-f31d-4e9d-a825-bb195e193da5",
+      "hotkeys": [
+        [
+          "meta",
+          "v"
+        ]
+      ],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "0428562a-fa9e-4104-aba5-f91473c46de0",
+      "hotkeys": [
+        [
+          "meta",
+          "t"
+        ]
+      ],
+      "description": "Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "d4b0d5d9-7da9-4d20-b79b-783f8066bd86",
+      "hotkeys": [
+        [
+          "meta",
+          "j"
+        ]
+      ],
+      "description": "Duplicate Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "9511c0e5-cee5-4624-855d-01a88e629710",
+      "hotkeys": [
+        [
+          "meta",
+          "e"
+        ]
+      ],
+      "description": "Merge Layers",
+      "isFavorite": false
+    },
+    {
+      "id": "ff5f6490-d286-41a0-ac69-fd69be2c7bff",
+      "hotkeys": [
+        [
+          "meta",
+          "i"
+        ]
+      ],
+      "description": "Invert Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "14e470c7-d790-4a66-97f0-757be2083b03",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "i"
+        ]
+      ],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "696ed8ec-c9bd-4521-b619-f2dba3f2d64f",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "bracketleft"
+        ]
+      ],
+      "description": "Move Layer Down",
+      "isFavorite": false
+    },
+    {
+      "id": "abdebbcc-eeb7-4342-b3f0-5f9dcd04226e",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "bracketright"
+        ]
+      ],
+      "description": "Move Layer Up",
+      "isFavorite": false
+    },
+    {
+      "id": "72dbb3ae-3489-4927-bb2e-fbc64ea5adef",
+      "hotkeys": [
+        [
+          "meta",
+          "0"
+        ]
+      ],
+      "description": "Fit to Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "54ece40b-641d-4800-bccc-1bbdba8bdc36",
+      "hotkeys": [
+        [
+          "meta",
+          "space"
+        ]
+      ],
+      "description": "Hand Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e6efaa4e-eb1d-4caa-a581-724b7d0e7762",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "equal"
+        ]
+      ],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "72308a48-53a3-4ca7-811c-2578b0485811",
+      "hotkeys": [
+        [
+          "meta",
+          "minus"
+        ]
+      ],
+      "description": "Zoom Out",
+      "isFavorite": false
+    },
+    {
+      "id": "cc543135-b0f5-4793-869d-92d07f3123fd",
+      "hotkeys": [
+        [
+          "meta",
+          "alt",
+          "z"
+        ]
+      ],
+      "description": "Step Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "7c5f42b8-5fd3-4ed7-a31e-04f87d6f9beb",
+      "hotkeys": [
+        [
+          "meta",
+          "alt",
+          "shift",
+          "z"
+        ]
+      ],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "36f552b2-2bab-4eb3-99e5-81eba109a4ff",
+      "hotkeys": [
+        [
+          "meta",
+          "d"
+        ]
+      ],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "86f3f67a-8d6d-4a8d-ab83-161ecef14ea9",
+      "hotkeys": [
+        [
+          "meta",
+          "shift",
+          "s"
+        ]
+      ],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "9c973fe1-87a9-4140-bc47-972022e9d512",
+      "hotkeys": [
+        [
+          "meta",
+          "alt",
+          "shift",
+          "s"
+        ]
+      ],
+      "description": "Save for Web",
+      "isFavorite": false
+    }
+  ]
+}

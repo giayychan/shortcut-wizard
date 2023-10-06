@@ -1,1 +1,25 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"discord","icon":{"filename":"discord.svg","isCustom":false},"id":"327fa5bc-f382-4b9d-b1f7-e04810d331ce","label":"Discord"},"shortcuts":[{"id":"7afda123-c5e1-4b59-a2d4-5921acb0bf2f","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "discord",
+    "icon": {
+      "filename": "discord.svg",
+      "isCustom": false
+    },
+    "id": "327fa5bc-f382-4b9d-b1f7-e04810d331ce",
+    "label": "Discord"
+  },
+  "shortcuts": [
+    {
+      "id": "7afda123-c5e1-4b59-a2d4-5921acb0bf2f",
+      "hotkeys": [
+        [
+          "meta",
+          "z"
+        ]
+      ],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}

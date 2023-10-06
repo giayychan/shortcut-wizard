@@ -54,7 +54,7 @@ const softwareRouter = router({
       });
 
       const softwareShortcuts = await Promise.all(softwareShortcutsPromises);
-
+      AllSoftwaresSchema.parse(softwareShortcuts);
       logSuccess('fetched software shortcuts successfully');
 
       return softwareShortcuts;

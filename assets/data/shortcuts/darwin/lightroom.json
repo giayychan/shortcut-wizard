@@ -1,1 +1,25 @@
-{"createdDate":"2023-07-28T10:26:00.996Z","software":{"key":"lightroom","icon":{"filename":"lightroom.svg","isCustom":false},"id":"c5638c53-0bc2-4a7a-a65f-bff6d284a21d","label":"Lightroom"},"shortcuts":[{"id":"59a6d704-5b07-4777-aa20-be3ba92545f2","hotkeys":[["meta","z"]],"description":"Undo","isFavorite":false}]}
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "lightroom",
+    "icon": {
+      "filename": "lightroom.svg",
+      "isCustom": false
+    },
+    "id": "c5638c53-0bc2-4a7a-a65f-bff6d284a21d",
+    "label": "Lightroom"
+  },
+  "shortcuts": [
+    {
+      "id": "59a6d704-5b07-4777-aa20-be3ba92545f2",
+      "hotkeys": [
+        [
+          "meta",
+          "z"
+        ]
+      ],
+      "description": "Undo",
+      "isFavorite": false
+    }
+  ]
+}
