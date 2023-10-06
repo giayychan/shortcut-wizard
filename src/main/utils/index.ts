@@ -87,7 +87,10 @@ const defaultWindowOptions = {
   frame: false,
   icon: getAssetPath('assets/icons/icon.ico'),
   titleBarStyle: 'hidden',
-  titleBarOverlay: true,
+  titleBarOverlay: {
+    color: '#141517',
+    symbolColor: '#dddddd',
+  },
   trafficLightPosition: { x: 10, y: 10 },
   webPreferences: {
     // devTools: true,
