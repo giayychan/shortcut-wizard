@@ -5,8 +5,7 @@ const RESOURCES_PATH = app.isPackaged
   ? path.join(process.resourcesPath, 'assets')
   : path.join(__dirname, '../../../assets');
 
-const USER_PATH = app.getPath('userData');
-
+export const USER_PATH = app.getPath('userData');
 
 export const getAssetPath = (...paths: string[]): string => {
   return path.join(RESOURCES_PATH, ...paths);

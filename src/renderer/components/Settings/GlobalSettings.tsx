@@ -1,4 +1,4 @@
-import { Checkbox, Flex, Loader, Text } from '@mantine/core';
+import { Checkbox, Flex, Input, Loader, Text } from '@mantine/core';
 import { useToggle } from '@mantine/hooks';
 import trpcReact from '../../utils/trpc';
 import FactoryResetButton from './FactoryResetButton';
@@ -82,6 +82,9 @@ function GlobalSettings() {
           checked={Boolean(settings?.isPanelAlwaysAtCenter)}
           onChange={handleIsPanelCenterChange}
         />
+        <Text>
+          User folder: <Input value={settings?.userFolder} disabled />
+        </Text>
       </Flex>
       <FactoryResetButton toggle={toggle} />
     </Flex>

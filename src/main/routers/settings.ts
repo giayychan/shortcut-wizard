@@ -4,6 +4,7 @@ import { router, publicProcedure } from '../configs/trpc';
 import initializeUserData, { autoLaunch } from '../utils/initialize';
 import { store } from '../utils';
 import mainWindow from '../mainWindow';
+import { USER_PATH } from '../utils/path';
 
 const settingsRouter = router({
   factoryReset: publicProcedure.mutation(async () => {
@@ -66,6 +67,7 @@ const settingsRouter = router({
         sortSoftwareByRecentOpened: z.boolean().optional(),
         isAutoLaunchEnabled: z.boolean().optional(),
         isPanelAlwaysAtCenter: z.boolean().optional(),
+        userFolder: z.string(),
       })
     )
     .query(async () => {
@@ -85,6 +87,7 @@ const settingsRouter = router({
         isAutoLaunchEnabled,
         sortSoftwareByRecentOpened,
         isPanelAlwaysAtCenter,
+        userFolder: USER_PATH,
       };
     }),
 });
