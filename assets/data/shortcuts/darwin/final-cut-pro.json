@@ -1,0 +1,2066 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "final-cut-pro",
+    "icon": {
+      "filename": "finalcutpro.svg",
+      "isCustom": false
+    },
+    "id": "98bbe28d-4538-4620-817d-2415657b5128",
+    "label": "Final Cut Pro"
+  },
+  "shortcuts": [
+    {
+      "id": "41501de4-e02f-4933-884f-fb3aea813fdb",
+      "hotkeys": [["meta", "h"]],
+      "description": "Hide Final Cut Pro",
+      "isFavorite": false
+    },
+    {
+      "id": "566df3d1-89ee-4920-baea-d17d8b77aa7b",
+      "hotkeys": [["alt", "meta", "h"]],
+      "description": "Hide all applications except Final Cut Pro",
+      "isFavorite": false
+    },
+    {
+      "id": "f8018745-2a6e-4f7d-ab06-af4401e6414b",
+      "hotkeys": [["alt", "meta", "k"]],
+      "description": "Open the Command Editor",
+      "isFavorite": false
+    },
+    {
+      "id": "12046418-8ce7-4759-99c5-36a795593fa2",
+      "hotkeys": [["meta", "m"]],
+      "description": "Minimize Final Cut Pro",
+      "isFavorite": false
+    },
+    {
+      "id": "820d432d-aab1-4c63-b6d7-89fef7643dd0",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open an existing library or a new library",
+      "isFavorite": false
+    },
+    {
+      "id": "a09f23c3-be22-46d2-a63b-5a06d042f71f",
+      "hotkeys": [["meta", "q"]],
+      "description": "Quit Final Cut Pro",
+      "isFavorite": false
+    },
+    {
+      "id": "24264fac-32ab-43c1-8909-ff21c2a15d32",
+      "hotkeys": [["shift", "meta", "z"]],
+      "description": "Redo the last command",
+      "isFavorite": false
+    },
+    {
+      "id": "283fc161-b9ce-4c90-b2bb-6e081fb11d56",
+      "hotkeys": [["meta", "comma"]],
+      "description": "Open the Final Cut Pro Settings window",
+      "isFavorite": false
+    },
+    {
+      "id": "c80b4023-d869-4de9-a8c6-c348aae571be",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo the last command",
+      "isFavorite": false
+    },
+    {
+      "id": "7a12c55d-3ebe-4197-9760-27ab96988a54",
+      "hotkeys": [["ctrl", "alt", "l"]],
+      "description": "Adjust the audio volume across all selected clips to a specific dB value",
+      "isFavorite": false
+    },
+    {
+      "id": "ead9a761-0a6f-46d9-9e62-31169d749208",
+      "hotkeys": [["ctrl", "l"]],
+      "description": "Adjust the audio volume across all selected clips by the same dB value",
+      "isFavorite": false
+    },
+    {
+      "id": "ac6a0a3c-0838-4aaa-ae55-48cda5b2439c",
+      "hotkeys": [["e"]],
+      "description": "Add the selection to the end of the storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "7249d349-e212-42b7-9fea-35d1edfce0b1",
+      "hotkeys": [["ctrl", "shift", "y"]],
+      "description": "Add the selected clip to the audition",
+      "isFavorite": false
+    },
+    {
+      "id": "f4a33bab-c638-44a7-9da8-49ae8df53fa2",
+      "hotkeys": [["alt", "y"]],
+      "description": "Create an audition with a timeline clip and a duplicate version of the clip, including applied effects",
+      "isFavorite": false
+    },
+    {
+      "id": "f25a7a50-112a-4f37-9020-7eb7f9064eaa",
+      "hotkeys": [["shift", "meta", "y"]],
+      "description": "Duplicate the selected audition clip without applied effects",
+      "isFavorite": false
+    },
+    {
+      "id": "51402a39-869b-4166-95b0-559a32ae8d42",
+      "hotkeys": [["shift", "y"]],
+      "description": "Create an audition and replace the timeline clip with the current selection",
+      "isFavorite": false
+    },
+    {
+      "id": "ed008595-7c44-4337-9fdb-656a462d93d2",
+      "hotkeys": [["meta", "b"]],
+      "description": "Cut the primary storyline clip (or the selection) at the skimmer or playhead location",
+      "isFavorite": false
+    },
+    {
+      "id": "e0d5070c-395d-4e54-9034-99dfee838642",
+      "hotkeys": [["shift", "meta", "b"]],
+      "description": "Cut all clips at the skimmer or playhead location",
+      "isFavorite": false
+    },
+    {
+      "id": "88aae7fe-5637-41b2-b041-f6b71413a97f",
+      "hotkeys": [["shift", "meta", "g"]],
+      "description": "Break the selected item into its component parts",
+      "isFavorite": false
+    },
+    {
+      "id": "702e3061-4bac-470f-977b-0a0a7a9e3570",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Change the duration of the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "97143d7c-51ab-4911-a72a-015e988dbd24",
+      "hotkeys": [["ctrl", "shift", "t"]],
+      "description": "Connect the default lower third to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "713f297e-5e3c-4422-bdc6-f9dd97308427",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Connect the default title to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "e87358f7-0e40-42a7-9ce6-99a721487cf4",
+      "hotkeys": [["q"]],
+      "description": "Connect the selection to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "552c6b4d-b0fe-4b50-baaa-4640df86fdc2",
+      "hotkeys": [["shift", "q"]],
+      "description": "Connect the selection to the primary storyline, aligning the selection’s end point with the skimmer or playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "a0b09a9a-695f-4e07-bdb1-28768c7323e7",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "2a59f1eb-5c35-43d5-9b89-6a18590ff4fb",
+      "hotkeys": [["meta", "y"]],
+      "description": "Create an audition from the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "1a28bac0-37a3-4d59-a90e-daad21fa277c",
+      "hotkeys": [["meta", "g"]],
+      "description": "Create a storyline from a selection of connected clips",
+      "isFavorite": false
+    },
+    {
+      "id": "4414f023-ae39-4007-b04c-19df47812f5f",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "186e4b37-5b57-405b-be49-93aca3d0c810",
+      "hotkeys": [["1"]],
+      "description": "Cut and switch the multicam clip to angle 1 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "fd8d63a0-bde0-445b-8175-ae694ca3a499",
+      "hotkeys": [["2"]],
+      "description": "Cut and switch the multicam clip to angle 2 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "bd00cd1e-e576-4766-921f-19d9c19e3002",
+      "hotkeys": [["3"]],
+      "description": "Cut and switch the multicam clip to angle 3 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "f0015e8c-d99c-4807-a63c-96868794d742",
+      "hotkeys": [["4"]],
+      "description": "Cut and switch the multicam clip to angle 4 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "903cb6d5-49f4-4459-a491-f16148d5b6ea",
+      "hotkeys": [["5"]],
+      "description": "Cut and switch the multicam clip to angle 5 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "de1fa54c-98a1-45f8-95a2-e0b109bfd4c4",
+      "hotkeys": [["6"]],
+      "description": "Cut and switch the multicam clip to angle 6 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "165ea6f6-99ae-4cb9-a5a3-740244d285e6",
+      "hotkeys": [["7"]],
+      "description": "Cut and switch the multicam clip to angle 7 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "edb4fe40-5bd8-4158-abc7-5fda4950fffd",
+      "hotkeys": [["8"]],
+      "description": "Cut and switch the multicam clip to angle 8 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "b42f5d19-70ff-4d79-bed8-92f80b510a71",
+      "hotkeys": [["9"]],
+      "description": "Cut and switch the multicam clip to angle 9 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "dac2c272-e8a9-4733-a641-aec30f0af6de",
+      "hotkeys": [["backspace"]],
+      "description": "Delete the timeline selection, reject the browser selection, or remove a through edit",
+      "isFavorite": false
+    },
+    {
+      "id": "c2b0d160-8923-4134-9d15-ddb858f8f670",
+      "hotkeys": [["alt", "meta", "backspace"]],
+      "description": "Delete the selection and attach the connected clip or clips to the resulting gap clip",
+      "isFavorite": false
+    },
+    {
+      "id": "28cb1a27-71b5-4855-9b3c-f420b768b0ca",
+      "hotkeys": [["shift", "meta", "a"]],
+      "description": "Deselect all selected items",
+      "isFavorite": false
+    },
+    {
+      "id": "21639c73-c270-470c-9223-0d66b1ed32bd",
+      "hotkeys": [["meta", "d"]],
+      "description": "Duplicate the browser selection",
+      "isFavorite": false
+    },
+    {
+      "id": "fae5cdf5-b2f6-4364-8386-188fec3a0561",
+      "hotkeys": [["v"]],
+      "description": "Enable or disable playback for the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "ab9ba03e-660e-42d3-8993-f9564f8f6684",
+      "hotkeys": [["ctrl", "s"]],
+      "description": "View audio and video separately for selected clips",
+      "isFavorite": false
+    },
+    {
+      "id": "8e7005b5-612b-4f63-bf87-4917fc7ad6e2",
+      "hotkeys": [["ctrl", "alt", "s"]],
+      "description": "Expand or collapse audio components for the selection in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "d8e01ad0-f2f5-410c-91ca-960c539d47b7",
+      "hotkeys": [["shift", "x"]],
+      "description": "Extend the selected edit point to the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "ada5e524-6423-4915-9f9b-54c9c24ad18e",
+      "hotkeys": [["shift", "down"]],
+      "description": "In the browser list view, add the next item to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "23eff5c3-dd6e-4e13-baae-3c2d23bb7838",
+      "hotkeys": [["shift", "up"]],
+      "description": "In the browser list view, add the previous item to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "48bd43b3-1a74-4433-a1ac-14807046ddf4",
+      "hotkeys": [["alt", "shift", "y"]],
+      "description": "Dissolve the audition and replace it with the audition pick",
+      "isFavorite": false
+    },
+    {
+      "id": "831fa649-98b7-4b76-a6f0-f191a2766eee",
+      "hotkeys": [["w"]],
+      "description": "Insert the selection at the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "c59e3a36-6fda-4278-95a7-39de62d69845",
+      "hotkeys": [["alt", "f"]],
+      "description": "Insert a freeze frame at the playhead or skimmer location in the timeline, or connect a freeze frame from the skimmer or playhead location in the event to the playhead location in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "e5bdd5d2-1b58-45ce-aa02-b79b3253b17e",
+      "hotkeys": [["alt", "w"]],
+      "description": "Insert a gap clip at the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "4d1ee925-2a35-4101-8a69-daf4bf3c02bc",
+      "hotkeys": [["alt", "meta", "w"]],
+      "description": "Insert the default generator at the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "9191c0da-3b5a-486e-8efc-13b0b5fda880",
+      "hotkeys": [["alt", "meta", "up"]],
+      "description": "Lift the selection from the storyline and connect it to the resulting gap clips",
+      "isFavorite": false
+    },
+    {
+      "id": "cbd1a7ad-e1c1-4f5f-9533-9745e01de0e3",
+      "hotkeys": [["ctrl", "minus"]],
+      "description": "Lower the audio volume by 1 dB",
+      "isFavorite": false
+    },
+    {
+      "id": "cf0b5f79-5fd5-4742-a391-de135e2dda33",
+      "hotkeys": [["ctrl", "p"]],
+      "description": "Move the playhead by entering a timecode value",
+      "isFavorite": false
+    },
+    {
+      "id": "b90b5432-b772-4377-9c83-8c222271c2cc",
+      "hotkeys": [["alt", "g"]],
+      "description": "Create a new compound clip (if there’s no selection, create an empty compound clip)",
+      "isFavorite": false
+    },
+    {
+      "id": "87090f6d-6739-4eca-bd92-e14f6e0b36b8",
+      "hotkeys": [["alt", "comma"]],
+      "description": "Nudge the selected audio edit point left by one subframe, creating a split edit",
+      "isFavorite": false
+    },
+    {
+      "id": "5b6ed862-3e4d-443e-b29e-6ba4d355366c",
+      "hotkeys": [["alt", "shift", "comma"]],
+      "description": "Nudge the selected audio edit point left by 10 subframes, creating a split edit",
+      "isFavorite": false
+    },
+    {
+      "id": "f4d29f8a-6011-4bfe-949f-e001a9af9311",
+      "hotkeys": [["alt", "period"]],
+      "description": "Nudge the selected audio edit point right by one subframe, creating a split edit",
+      "isFavorite": false
+    },
+    {
+      "id": "1495bd9b-1d6b-41ee-b6d8-f953508cbef3",
+      "hotkeys": [["alt", "shift", "period"]],
+      "description": "Nudge the selected audio edit point right by 10 subframes, creating a split edit",
+      "isFavorite": false
+    },
+    {
+      "id": "69f2a586-b2c8-4df6-a5b2-d0c3de970d7f",
+      "hotkeys": [["alt", "down"]],
+      "description": "Nudge down the value of the selected keyframe in the animation editor",
+      "isFavorite": false
+    },
+    {
+      "id": "0aba185e-6794-4fff-a899-4b6bd361c2e2",
+      "hotkeys": [["comma"]],
+      "description": "Nudge the selection one unit to the left",
+      "isFavorite": false
+    },
+    {
+      "id": "60f44911-53aa-4bee-a15c-574e6c13ec01",
+      "hotkeys": [["shift", "comma"]],
+      "description": "Nudge the selection 10 units to the left",
+      "isFavorite": false
+    },
+    {
+      "id": "8b807400-774b-4cf7-8cc3-87f815131424",
+      "hotkeys": [["period"]],
+      "description": "Nudge the selection one unit to the right",
+      "isFavorite": false
+    },
+    {
+      "id": "0b052444-872c-4bc4-8e7d-cc157706f557",
+      "hotkeys": [["shift", "period"]],
+      "description": "Nudge the selection 10 units to the right",
+      "isFavorite": false
+    },
+    {
+      "id": "6d06be52-6243-4b97-8057-45a127bc512f",
+      "hotkeys": [["alt", "up"]],
+      "description": "Nudge up the value of the selected keyframe in the animation editor",
+      "isFavorite": false
+    },
+    {
+      "id": "f2e20838-0158-4bed-bca6-98c47c0b4f2b",
+      "hotkeys": [["y"]],
+      "description": "Open the selected audition",
+      "isFavorite": false
+    },
+    {
+      "id": "53038f94-48e1-41e5-b599-fefe6442fdda",
+      "hotkeys": [["backquote"]],
+      "description": "Temporarily override clip connections for the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "ebd0e307-827e-438a-8b72-ed54d7b7ce60",
+      "hotkeys": [["d"]],
+      "description": "Overwrite at the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "970dceed-1cc4-47d4-be53-57d45821f31c",
+      "hotkeys": [["shift", "d"]],
+      "description": "Overwrite from the skimmer or playhead position back",
+      "isFavorite": false
+    },
+    {
+      "id": "a0f1790d-eaa1-4706-8c47-b6eb3f4ef30b",
+      "hotkeys": [["alt", "meta", "down"]],
+      "description": "Overwrite at the skimmer or playhead position in the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "7877497a-9b04-4155-8a29-61a40b39572e",
+      "hotkeys": [["alt", "v"]],
+      "description": "Paste the selection and connect it to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "0437973e-7ed4-4c89-98f4-f04d73b79700",
+      "hotkeys": [["meta", "v"]],
+      "description": "Insert the Clipboard contents at the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "68bb223d-1bc9-4289-abd3-4edfaf277d6a",
+      "hotkeys": [["ctrl", "shift", "left"]],
+      "description": "Switch to the previous angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "a6189d72-9f1a-4de7-ab9f-39d309e35732",
+      "hotkeys": [["alt", "shift", "left"]],
+      "description": "Switch to the previous audio angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "4a450e98-582d-4fd4-8270-5cbd1a6464c4",
+      "hotkeys": [["ctrl", "left"]],
+      "description": "Select the previous clip in the Audition window, making it the audition pick",
+      "isFavorite": false
+    },
+    {
+      "id": "9fce7540-1650-415b-9c41-ad05f6917bf8",
+      "hotkeys": [["shift", "meta", "left"]],
+      "description": "Switch to the previous video angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "09d85457-e3ba-4dd4-a886-ff31c5fd60c4",
+      "hotkeys": [["ctrl", "equal"]],
+      "description": "Raise the audio volume by 1 dB",
+      "isFavorite": false
+    },
+    {
+      "id": "26dd81dc-162a-42e4-95b6-98d00d849280",
+      "hotkeys": [["shift", "r"]],
+      "description": "Replace the selected clip in the timeline with the browser selection",
+      "isFavorite": false
+    },
+    {
+      "id": "61d88934-fb92-4d32-9416-d8d99bac07dc",
+      "hotkeys": [["alt", "r"]],
+      "description": "Replace the selected clip in the timeline with the browser selection, starting from its start point",
+      "isFavorite": false
+    },
+    {
+      "id": "1f28a043-c8bb-496a-90f2-4529001c173f",
+      "hotkeys": [["shift", "backspace"]],
+      "description": "Replace the selected timeline clip with a gap clip",
+      "isFavorite": false
+    },
+    {
+      "id": "8c9782c3-1ce9-48d7-aeeb-f14994217919",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select all clips",
+      "isFavorite": false
+    },
+    {
+      "id": "49d45b01-e2c6-4b6c-91cd-70e6d81391da",
+      "hotkeys": [["c"]],
+      "description": "Select the clip under the pointer in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "0e70e0bd-5de9-4061-bed2-2bb20a5cce80",
+      "hotkeys": [["meta", "up"]],
+      "description": "Select the clip above the current timeline selection at the skimmer or playhead location",
+      "isFavorite": false
+    },
+    {
+      "id": "3b122c67-7212-438a-8c06-e8d7e9cd0691",
+      "hotkeys": [["meta", "down"]],
+      "description": "Select the clip below the current timeline selection at the skimmer or playhead location",
+      "isFavorite": false
+    },
+    {
+      "id": "ed24c00b-478a-45db-a52f-3156bca58672",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "For audio/video clips in expanded view, select the left edge of the audio edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "ab1a9ef7-18e5-4e17-b675-bf92b69f1492",
+      "hotkeys": [["bracketleft"]],
+      "description": "Select the left edge of the edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "f7beb756-ae5f-49b8-9ec7-98aa3febf85f",
+      "hotkeys": [["shift", "backslash"]],
+      "description": "For audio/video clips in expanded view, select the left and right edges of the audio edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "3405a336-97a2-4f7b-9a07-6cf45f5f3014",
+      "hotkeys": [["backslash"]],
+      "description": "Select the left and right edges of the edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "6624a725-289e-4249-a68c-a9517fd7ad34",
+      "hotkeys": [["ctrl", "backslash"]],
+      "description": "For audio/video clips in expanded view, select the left and right edges of the video edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "69cfb995-ad04-42a4-adfd-9fa5fc072b16",
+      "hotkeys": [["ctrl", "bracketleft"]],
+      "description": "For audio/video clips in expanded view, select the left edge of the video edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "7d2eea39-2b99-4c70-b4e5-91b9ce9511a7",
+      "hotkeys": [["ctrl", "shift", "right"]],
+      "description": "Switch to the next angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "091c95f4-3634-421a-abfe-ee12ac866832",
+      "hotkeys": [["alt", "shift", "right"]],
+      "description": "Switch to the next audio angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "f3c192f5-4b0a-4f16-84c3-524f5e2dc433",
+      "hotkeys": [["meta", "right"]],
+      "description": "Move the playhead and the selection to the next topmost timeline clip in the same role",
+      "isFavorite": false
+    },
+    {
+      "id": "4ebda898-0341-451e-b0ed-0e59d0ab2379",
+      "hotkeys": [["ctrl", "right"]],
+      "description": "Select the next clip in the Audition window, making it the audition pick",
+      "isFavorite": false
+    },
+    {
+      "id": "196a4bbe-eb72-4d51-a95d-2b15b00dd3a0",
+      "hotkeys": [["shift", "meta", "right"]],
+      "description": "Switch to the next video angle in the multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "403c0c6e-39b9-431a-a97d-0a4b1500d89e",
+      "hotkeys": [["meta", "left"]],
+      "description": "Move the playhead and the selection to the previous topmost timeline clip in the same role",
+      "isFavorite": false
+    },
+    {
+      "id": "004111ee-0744-4c63-8592-bb5a3035463a",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "For audio/video clips in expanded view, select the right edge of the audio edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "549cae7f-7a73-4e8d-9f05-e9da51648cd8",
+      "hotkeys": [["bracketright"]],
+      "description": "Select the right edge of the edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "cdab4f63-7737-4cfa-a7eb-43276edcc758",
+      "hotkeys": [["ctrl", "bracketright"]],
+      "description": "For audio/video clips in expanded view, select the right edge of the video edit point",
+      "isFavorite": false
+    },
+    {
+      "id": "7ce9a7ed-8e8a-4055-8302-f41628b5d231",
+      "hotkeys": [["shift", "meta", "o"]],
+      "description": "Set an additional range selection end point at the playhead or skimmer location",
+      "isFavorite": false
+    },
+    {
+      "id": "57de0db9-ca6d-4269-aa1d-529121243cc8",
+      "hotkeys": [["shift", "meta", "i"]],
+      "description": "Set an additional range selection start point at the playhead or skimmer location",
+      "isFavorite": false
+    },
+    {
+      "id": "191d5adb-057f-4c88-b9ff-f142804a0610",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "When an edit point is selected, show or hide the precision editor",
+      "isFavorite": false
+    },
+    {
+      "id": "c4e249e5-d576-4e3c-965a-7ca9c4e64fa0",
+      "hotkeys": [["n"]],
+      "description": "Turn snapping on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "cfc48180-8193-4a59-a2b9-154d74268d72",
+      "hotkeys": [["alt", "s"]],
+      "description": "Solo the selected items in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "da712e81-fa09-4454-91d4-bbd9032b88fd",
+      "hotkeys": [["shift", "1"]],
+      "description": "Turn on audio/video mode to add the video and audio portion of your selection to the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "05a54d9d-9510-4f51-a2d8-f5df55a44d2f",
+      "hotkeys": [["shift", "3"]],
+      "description": "Turn on audio-only mode to add the audio portion of your selection to the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "6ddcf125-723f-4830-a4a4-e51d154378d9",
+      "hotkeys": [["shift", "2"]],
+      "description": "Turn on video-only mode to add the video portion of your selection to the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "87182d10-4a6d-495d-80b9-c0b6c4221bea",
+      "hotkeys": [["ctrl", "alt", "meta", "c"]],
+      "description": "Replace the selected captions with abutting single-line captions, one for each line of text in the original captions.",
+      "isFavorite": false
+    },
+    {
+      "id": "690044f2-d90b-4cd4-b897-8940281d7953",
+      "hotkeys": [["alt", "1"]],
+      "description": "Switch the multicam clip to angle 1 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "87eb75ff-3e64-4ed3-b6dc-e2c6d395abc4",
+      "hotkeys": [["alt", "2"]],
+      "description": "Switch the multicam clip to angle 2 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "d46afecf-61bb-4976-b0f3-c9a2da3ac145",
+      "hotkeys": [["alt", "3"]],
+      "description": "Switch the multicam clip to angle 3 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "e03db58b-cea0-4f1e-a88f-7e6c03d97a61",
+      "hotkeys": [["alt", "4"]],
+      "description": "Switch the multicam clip to angle 4 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "2e039ae8-b4c8-4b26-b99a-547c843f6795",
+      "hotkeys": [["alt", "5"]],
+      "description": "Switch the multicam clip to angle 5 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "880c60b9-5d0b-4897-9d3d-1d5047f6a234",
+      "hotkeys": [["alt", "6"]],
+      "description": "Switch the multicam clip to angle 6 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "a38a4772-65ce-41b7-ab63-89e65b6cceb1",
+      "hotkeys": [["alt", "7"]],
+      "description": "Switch the multicam clip to angle 7 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "ed5cef63-6106-4212-9bfa-fb35be400b02",
+      "hotkeys": [["alt", "8"]],
+      "description": "Switch the multicam clip to angle 8 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "a7c007fe-3c2f-404c-8d4f-774463e874ea",
+      "hotkeys": [["alt", "9"]],
+      "description": "Switch the multicam clip to angle 9 of the current bank",
+      "isFavorite": false
+    },
+    {
+      "id": "70ab8919-c8d5-4c02-b538-20f6bfa714dd",
+      "hotkeys": [["g"]],
+      "description": "Turn on or turn off the ability to build storylines when dragging clips in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "130d7497-d21b-482f-b36a-762cfb65c8d4",
+      "hotkeys": [["alt", "bracketright"]],
+      "description": "Trim the end of the selected or topmost clip to the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "850a3ebc-3c67-4ddf-bab0-f7332819e18a",
+      "hotkeys": [["alt", "bracketleft"]],
+      "description": "Trim the clip start point to the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "13f0591b-3e31-4acc-bf26-d50915c3e41a",
+      "hotkeys": [["alt", "backslash"]],
+      "description": "Trim clip start and end points to the range selection",
+      "isFavorite": false
+    },
+    {
+      "id": "0383450b-0735-4271-bc2e-af913d70b69c",
+      "hotkeys": [["ctrl", "shift", "t"]],
+      "description": "Connect a basic lower-third title to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "37f9827c-369c-45b9-a194-7eedae82cccd",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Connect a basic title to the primary storyline",
+      "isFavorite": false
+    },
+    {
+      "id": "1c43004d-7473-4c1b-ae11-a69f19e81df8",
+      "hotkeys": [["alt", "meta", "e"]],
+      "description": "Add the default audio effect to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "97f15821-e4de-4953-af15-ce8e56182c23",
+      "hotkeys": [["meta", "t"]],
+      "description": "Add the default transition to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "098d7e84-e1fc-48a0-a177-e93a6d96315f",
+      "hotkeys": [["alt", "t"]],
+      "description": "Apply a crossfade to the audio edit point between the selected clips",
+      "isFavorite": false
+    },
+    {
+      "id": "c97f64dd-b3aa-43ac-9d8e-d3fc50bbd44b",
+      "hotkeys": [["alt", "e"]],
+      "description": "Add the default video effect to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "de6fbbaf-88f3-47e0-a41e-c60b08f50b5b",
+      "hotkeys": [["alt", "backspace"]],
+      "description": "Reset the controls in the current Color Board pane",
+      "isFavorite": false
+    },
+    {
+      "id": "85d4f891-2479-42a6-aa22-fd4e0967e491",
+      "hotkeys": [["ctrl", "meta", "c"]],
+      "description": "Switch to the Color pane in the Color Board",
+      "isFavorite": false
+    },
+    {
+      "id": "02697f53-a71b-4603-a34e-d4a024844c0a",
+      "hotkeys": [["ctrl", "meta", "e"]],
+      "description": "Switch to the Exposure pane in the Color Board",
+      "isFavorite": false
+    },
+    {
+      "id": "e9cb0efb-29e2-4961-b6a4-68f9f29ce9f9",
+      "hotkeys": [["ctrl", "meta", "s"]],
+      "description": "Switch to the Saturation pane in the Color Board",
+      "isFavorite": false
+    },
+    {
+      "id": "99cd0fd3-751f-4d6f-a6d6-dcc3c93c650b",
+      "hotkeys": [["alt", "meta", "c"]],
+      "description": "Copy the selected effects and their settings",
+      "isFavorite": false
+    },
+    {
+      "id": "45112b1b-9e13-4b45-9b7c-ac746fa32793",
+      "hotkeys": [["alt", "shift", "c"]],
+      "description": "Copy the selected keyframes and their settings",
+      "isFavorite": false
+    },
+    {
+      "id": "84dd46b4-716b-475f-b68f-0548e1dbe8ba",
+      "hotkeys": [["alt", "shift", "x"]],
+      "description": "Cut the selected keyframes and their settings",
+      "isFavorite": false
+    },
+    {
+      "id": "46e5df0a-0722-4ba1-b662-ee73fbc32acd",
+      "hotkeys": [["alt", "meta", "b"]],
+      "description": "Turn Balance Color corrections on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "63d5ed80-4d01-42d6-88e8-379af3d6fa7a",
+      "hotkeys": [["shift", "meta", "m"]],
+      "description": "Match the sound between clips",
+      "isFavorite": false
+    },
+    {
+      "id": "f3ec5f46-25f6-4d0f-9ad7-8df55b25fb01",
+      "hotkeys": [["alt", "meta", "m"]],
+      "description": "Match color between clips",
+      "isFavorite": false
+    },
+    {
+      "id": "88a613e9-89cd-4816-90a3-dcf257d36839",
+      "hotkeys": [["alt", "tab"]],
+      "description": "Navigate to the next text item",
+      "isFavorite": false
+    },
+    {
+      "id": "706095c7-c9c4-4d3b-a019-3197c127f17a",
+      "hotkeys": [["shift", "meta", "v"]],
+      "description": "Paste selected attributes and their settings to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "ef3b4866-ec9c-41de-81c6-d410a32a9988",
+      "hotkeys": [["alt", "meta", "v"]],
+      "description": "Paste effects and their settings to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "42408639-0d39-4aae-8cd1-27f0795eda28",
+      "hotkeys": [["alt", "shift", "v"]],
+      "description": "Paste keyframes and their settings to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "72465ad3-a74d-4c98-a407-fedffa08b32f",
+      "hotkeys": [["alt", "shift", "tab"]],
+      "description": "Navigate to the previous text item",
+      "isFavorite": false
+    },
+    {
+      "id": "b0ebfdd6-afff-4674-b056-f3c455dfdb60",
+      "hotkeys": [["shift", "meta", "x"]],
+      "description": "Remove selected attributes from the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "f81ad32a-6ca3-435f-b708-94dc1f8a3093",
+      "hotkeys": [["alt", "meta", "x"]],
+      "description": "Remove all effects from the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "87f5091a-ec92-4359-8b33-db4406e4d80d",
+      "hotkeys": [["meta", "r"]],
+      "description": "Show or hide the retime editor",
+      "isFavorite": false
+    },
+    {
+      "id": "948d828d-4c2e-4eb1-ad4e-0e4e05969445",
+      "hotkeys": [["shift", "n"]],
+      "description": "Set the selection to play at normal (100 percent) speed",
+      "isFavorite": false
+    },
+    {
+      "id": "90874cae-48d7-448b-8094-42b5e6666eaf",
+      "hotkeys": [["shift", "h"]],
+      "description": "Create a 2-second hold segment",
+      "isFavorite": false
+    },
+    {
+      "id": "0f162d37-1cc3-4557-9e56-d84fcb777f0f",
+      "hotkeys": [["alt", "meta", "r"]],
+      "description": "Reset the selection to play forward at normal (100 percent) speed",
+      "isFavorite": false
+    },
+    {
+      "id": "e9e0db77-7be4-4462-97d2-44d1f8d0df0a",
+      "hotkeys": [["ctrl", "shift", "v"]],
+      "description": "Show one effect at a time in the Video Animation editor",
+      "isFavorite": false
+    },
+    {
+      "id": "840bf682-9706-442c-8bbc-7acfeef7242c",
+      "hotkeys": [["backspace"]],
+      "description": "Delete the timeline selection, reject the browser selection, or remove a through edit",
+      "isFavorite": false
+    },
+    {
+      "id": "fbdd69a2-3739-4439-9424-a98257745c90",
+      "hotkeys": [["meta", "f"]],
+      "description": "Show or hide the Filter window (in the browser) or the timeline index (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "97f9865f-fa25-4122-9796-c35dee23ca24",
+      "hotkeys": [["alt", "meta", "3"]],
+      "description": "Make the event viewer active",
+      "isFavorite": false
+    },
+    {
+      "id": "71289617-028c-451e-b4ad-887268c56c57",
+      "hotkeys": [["meta", "i"]],
+      "description": "Import media from a device, a camera, or an archive",
+      "isFavorite": false
+    },
+    {
+      "id": "76dfabac-68cb-48ac-856b-6cf8c02b5990",
+      "hotkeys": [["ctrl", "meta", "j"]],
+      "description": "Open the Library Properties inspector for the current library",
+      "isFavorite": false
+    },
+    {
+      "id": "a711007b-ad70-4ed6-b51b-d8ef669029c1",
+      "hotkeys": [["meta", "backspace"]],
+      "description": "Move the selection to the Finder Trash",
+      "isFavorite": false
+    },
+    {
+      "id": "2dc27b58-7746-4f51-997b-01a6133bd580",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new project",
+      "isFavorite": false
+    },
+    {
+      "id": "d70ffb06-a744-4c2e-bbd5-859001ca6a4a",
+      "hotkeys": [["meta", "j"]],
+      "description": "Open the Properties inspector for the current project",
+      "isFavorite": false
+    },
+    {
+      "id": "d45ae563-d3d6-4f78-a403-4987ab39b081",
+      "hotkeys": [["ctrl", "shift", "r"]],
+      "description": "Start all rendering tasks for the current project",
+      "isFavorite": false
+    },
+    {
+      "id": "6da506b5-9a0a-40ab-af11-3fd9a134e60e",
+      "hotkeys": [["ctrl", "r"]],
+      "description": "Start rendering tasks for the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "4ba9ef2a-88fa-41dd-bfcf-28467f60a3a5",
+      "hotkeys": [["shift", "meta", "r"]],
+      "description": "Reveal the selected event clip’s source media file in the Finder",
+      "isFavorite": false
+    },
+    {
+      "id": "62917fc9-c9c7-4902-a5fe-1c2b9f41d5d4",
+      "hotkeys": [["alt", "c"]],
+      "description": "Add a caption to the active language subrole at the playhead location",
+      "isFavorite": false
+    },
+    {
+      "id": "311268d0-80cd-4c19-ab2d-20b01675b7aa",
+      "hotkeys": [["m"]],
+      "description": "Add a marker at the location of the skimmer or playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "152c7167-6d89-4202-8bc1-c14614200836",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Change the browser filter settings to show all clips",
+      "isFavorite": false
+    },
+    {
+      "id": "cf710970-a0b5-42de-b7b9-7b2256b700fb",
+      "hotkeys": [["alt", "m"]],
+      "description": "Add a marker and edit the marker’s text",
+      "isFavorite": false
+    },
+    {
+      "id": "59036854-8780-4069-ada1-a6f71a92c1a9",
+      "hotkeys": [["ctrl", "1"]],
+      "description": "Apply keyword 1 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "c2ee7a53-3d9e-43b1-93f2-26ef7bb0dbea",
+      "hotkeys": [["ctrl", "2"]],
+      "description": "Apply keyword 2 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "03b1dee8-ae42-4854-a653-456d355ec907",
+      "hotkeys": [["ctrl", "3"]],
+      "description": "Apply keyword 3 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "0c867765-8629-49cd-b4b4-0ab5248ea630",
+      "hotkeys": [["ctrl", "4"]],
+      "description": "Apply keyword 4 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "6e75a16a-a175-4710-a551-e78fe9dcad18",
+      "hotkeys": [["ctrl", "5"]],
+      "description": "Apply keyword 5 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "47c17d35-e0bd-46c1-ba36-ec289608696c",
+      "hotkeys": [["ctrl", "6"]],
+      "description": "Apply keyword 6 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "ad681891-e1ef-4315-a312-c472e03fdae9",
+      "hotkeys": [["ctrl", "7"]],
+      "description": "Apply keyword 7 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "22ab9c65-f596-47e6-adc0-4dbd2ec087fc",
+      "hotkeys": [["ctrl", "8"]],
+      "description": "Apply keyword 8 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "c39787f5-105a-4702-b63b-6c08cd27b36e",
+      "hotkeys": [["ctrl", "9"]],
+      "description": "Apply keyword 9 to the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "9c74445e-60aa-4dee-a77e-94785eb87255",
+      "hotkeys": [["alt", "x"]],
+      "description": "Clear the range selection",
+      "isFavorite": false
+    },
+    {
+      "id": "cc9c18cb-7bd7-4d04-8230-337479cc76b9",
+      "hotkeys": [["alt", "o"]],
+      "description": "Clear the range’s end point",
+      "isFavorite": false
+    },
+    {
+      "id": "d27b7dd7-d6c5-4d3e-9037-297941152327",
+      "hotkeys": [["alt", "i"]],
+      "description": "Clear the range’s start point",
+      "isFavorite": false
+    },
+    {
+      "id": "5ec7d79f-45b9-4bc9-a095-61f20c1f2a97",
+      "hotkeys": [["ctrl", "m"]],
+      "description": "Delete the selected marker",
+      "isFavorite": false
+    },
+    {
+      "id": "e3755765-4935-466f-97df-013a4dd79067",
+      "hotkeys": [["ctrl", "shift", "m"]],
+      "description": "Delete all of the markers in the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "70e6681b-d220-44dc-a626-0843a7ca5c58",
+      "hotkeys": [["shift", "meta", "a"]],
+      "description": "Deselect all selected items",
+      "isFavorite": false
+    },
+    {
+      "id": "a04903f1-2f63-4540-88f4-e5cf962a483d",
+      "hotkeys": [["ctrl", "shift", "c"]],
+      "description": "Open the selected caption in the caption editor",
+      "isFavorite": false
+    },
+    {
+      "id": "d924af84-29ae-43aa-a53e-ec382de4df3c",
+      "hotkeys": [["f"]],
+      "description": "Rate the browser selection as favorite",
+      "isFavorite": false
+    },
+    {
+      "id": "2456a1b8-dac1-4e76-ba74-b72d14ff0eb2",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Change the browser filter settings to show favorites",
+      "isFavorite": false
+    },
+    {
+      "id": "e00a5757-b665-4196-a445-7d29524c84b3",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "Change the browser filter settings to hide rejected clips",
+      "isFavorite": false
+    },
+    {
+      "id": "5fd3f503-c30f-4ea0-8e00-43d69234f138",
+      "hotkeys": [["shift", "meta", "k"]],
+      "description": "Create a new Keyword Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "a7215d14-b5b4-4121-9e10-9ff09bffd3d7",
+      "hotkeys": [["alt", "meta", "n"]],
+      "description": "Create a new Smart Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "2a56093b-ff67-4089-9741-8f59fb664c20",
+      "hotkeys": [["r"]],
+      "description": "Make the Range Selection tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "aab5b708-6e62-4cb6-a9d0-fc8cb560e87d",
+      "hotkeys": [["backspace"]],
+      "description": "Mark the current selection in the browser as rejectedNote: The Delete key removes selected items if the timeline is active instead of the browser.",
+      "isFavorite": false
+    },
+    {
+      "id": "0edc5945-857e-485e-a96c-2fbff0ba8477",
+      "hotkeys": [["ctrl", "backspace"]],
+      "description": "Change the browser filter settings to show rejected clips",
+      "isFavorite": false
+    },
+    {
+      "id": "0e544f4b-069d-42a3-9745-65bcbce1fd8c",
+      "hotkeys": [["ctrl", "0"]],
+      "description": "Remove all keywords from the browser selection",
+      "isFavorite": false
+    },
+    {
+      "id": "05dc5fb9-d75c-47c7-98f1-1551341e1cbd",
+      "hotkeys": [["ctrl", "alt", "d"]],
+      "description": "Apply Dialogue subroles to the selected clip’s components",
+      "isFavorite": false
+    },
+    {
+      "id": "97631a5d-461c-42a9-9d1a-a6fd77dbbc46",
+      "hotkeys": [["ctrl", "alt", "e"]],
+      "description": "Apply Effects subroles to the selected clip’s components",
+      "isFavorite": false
+    },
+    {
+      "id": "018482f6-83d5-4bbf-abc9-ef29ffd23d52",
+      "hotkeys": [["ctrl", "alt", "m"]],
+      "description": "Apply Music subroles to the selected clip’s components",
+      "isFavorite": false
+    },
+    {
+      "id": "ef011bcd-43ee-4ddb-b933-67b06bf3ded3",
+      "hotkeys": [["ctrl", "alt", "t"]],
+      "description": "Apply the Titles role to the selected clip",
+      "isFavorite": false
+    },
+    {
+      "id": "a56fe889-6422-49f8-ae8c-62f21e641fd5",
+      "hotkeys": [["ctrl", "alt", "v"]],
+      "description": "Apply the Video role to the selected clip",
+      "isFavorite": false
+    },
+    {
+      "id": "db22a5a0-1b36-473a-b9c1-de0956fccd33",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select all clips",
+      "isFavorite": false
+    },
+    {
+      "id": "e3d3aed8-e2da-4bd2-b611-e363e2bcfe55",
+      "hotkeys": [["x"]],
+      "description": "Set the range selection to match the boundaries of the clip below the skimmer or playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "f40d3e88-c756-4357-b95e-2dcca95d671f",
+      "hotkeys": [["shift", "meta", "o"]],
+      "description": "Set an additional range selection end point at the playhead or skimmer location",
+      "isFavorite": false
+    },
+    {
+      "id": "4b962bdc-81b8-45bb-823f-56b7daf8359e",
+      "hotkeys": [["shift", "meta", "i"]],
+      "description": "Set an additional range selection start point at the playhead or skimmer location",
+      "isFavorite": false
+    },
+    {
+      "id": "f1a8a652-94e7-4009-bc6d-752c26e7e093",
+      "hotkeys": [["o"]],
+      "description": "Set the end point for the range",
+      "isFavorite": false
+    },
+    {
+      "id": "15197513-f479-46de-b165-74df5775a639",
+      "hotkeys": [["ctrl", "o"]],
+      "description": "Set the end point for the range while editing a text field",
+      "isFavorite": false
+    },
+    {
+      "id": "961adf9e-8041-4f25-b4e3-205751ddc0f4",
+      "hotkeys": [["i"]],
+      "description": "Set the start point for the range",
+      "isFavorite": false
+    },
+    {
+      "id": "a8e8c26b-60c2-4d7e-ae33-843fe63fd517",
+      "hotkeys": [["ctrl", "i"]],
+      "description": "Set the start point for the range while editing a text field",
+      "isFavorite": false
+    },
+    {
+      "id": "8b39f573-f24f-4582-8a3f-6a2dcff5addf",
+      "hotkeys": [["u"]],
+      "description": "Remove ratings from the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "28f51692-91a4-4c7f-84de-c2bfb15db6e5",
+      "hotkeys": [["alt", "n"]],
+      "description": "Create a new event",
+      "isFavorite": false
+    },
+    {
+      "id": "bfc9465f-5d69-42cf-91ad-8e8cdd2fa0ff",
+      "hotkeys": [["shift", "meta", "n"]],
+      "description": "Create a new folder",
+      "isFavorite": false
+    },
+    {
+      "id": "30626744-9e9f-4822-87cd-2185819638b4",
+      "hotkeys": [["shift", "f"]],
+      "description": "Reveal the selected clip in the browser",
+      "isFavorite": false
+    },
+    {
+      "id": "fdc8aff1-bd75-404e-b372-6282fdee4140",
+      "hotkeys": [["alt", "shift", "meta", "f"]],
+      "description": "Reveal the open project in the browser",
+      "isFavorite": false
+    },
+    {
+      "id": "97241c23-560d-4fe1-be81-4d129c1a9693",
+      "hotkeys": [["alt", "meta", "g"]],
+      "description": "Sync the selected event clips",
+      "isFavorite": false
+    },
+    {
+      "id": "d4c87abf-9041-44bd-8503-6c8e29f10d53",
+      "hotkeys": [["shift", "s"]],
+      "description": "Turn audio skimming on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "6cb0e817-50ad-426b-afb2-b163d45a7525",
+      "hotkeys": [["ctrl", "meta", "y"]],
+      "description": "Play the pick in context in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "f6670f40-8e0c-42e4-a14a-92bf35bd7df7",
+      "hotkeys": [["alt", "meta", "s"]],
+      "description": "Turn clip skimming on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "c7ab2521-c8be-41ba-a164-450f80f299ea",
+      "hotkeys": [["alt", "shift", "3"]],
+      "description": "Turn on audio-only mode for multicam cutting and switching",
+      "isFavorite": false
+    },
+    {
+      "id": "9ec3a0a1-d9f4-4187-9611-47047b38a0d3",
+      "hotkeys": [["alt", "shift", "1"]],
+      "description": "Turn on audio/video mode for multicam cutting and switching",
+      "isFavorite": false
+    },
+    {
+      "id": "ac3af747-2807-42a1-bdd8-ed288fd99f97",
+      "hotkeys": [["alt", "shift", "2"]],
+      "description": "Turn on video-only mode for multicam cutting and switching",
+      "isFavorite": false
+    },
+    {
+      "id": "c73d00f6-3f3d-42f9-9d5d-cca320ec8211",
+      "hotkeys": [["down"]],
+      "description": "Go to the next item (in the browser) or the next edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "c75972fc-88bf-4073-98cc-154f7db0e65b",
+      "hotkeys": [["ctrl", "down"]],
+      "description": "While editing a text field, go to the next item (in the browser) or the next edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "d1ad5f3a-b2a3-4be4-8230-4abb328f3f06",
+      "hotkeys": [["alt", "meta", "right"]],
+      "description": "Move the playhead to the next timeline clip containing the same duplicate range and select the clip",
+      "isFavorite": false
+    },
+    {
+      "id": "be8ebc38-aea6-4665-a941-9875b0ff0065",
+      "hotkeys": [["alt", "meta", "left"]],
+      "description": "Move the playhead to the previous timeline clip containing the same duplicate range and select the clip",
+      "isFavorite": false
+    },
+    {
+      "id": "4f28dbfb-3486-4c47-a842-00c6d1fa3bd6",
+      "hotkeys": [["shift", "left"]],
+      "description": "Move the playhead back 10 frames",
+      "isFavorite": false
+    },
+    {
+      "id": "0705f3c5-891d-4114-b631-5a9cbd4fa0ad",
+      "hotkeys": [["shift", "right"]],
+      "description": "Move the playhead forward 10 frames",
+      "isFavorite": false
+    },
+    {
+      "id": "4895deeb-23b5-46ac-8986-2c04219b1a41",
+      "hotkeys": [["alt", "shift", "quote"]],
+      "description": "Display the next bank of angles in the current multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "af82c523-3ae0-41f6-84ee-99369ab7864e",
+      "hotkeys": [["quote"]],
+      "description": "Move the playhead to the next edit point in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "07ade3e5-5cf3-4f4a-a0b6-17fcf2651d35",
+      "hotkeys": [["alt", "right"]],
+      "description": "Move the playhead to the next field in an interlaced clip",
+      "isFavorite": false
+    },
+    {
+      "id": "91c1c7e7-6a51-4111-b192-0f6c65413f47",
+      "hotkeys": [["alt", "shift", "meta", "right"]],
+      "description": "Move the playhead to the next focus point",
+      "isFavorite": false
+    },
+    {
+      "id": "482ffb34-188c-4527-a735-bc54da1baf42",
+      "hotkeys": [["right"]],
+      "description": "Move the playhead to the next frame",
+      "isFavorite": false
+    },
+    {
+      "id": "ab7120ac-b220-4a32-bfb7-ccc989f2212c",
+      "hotkeys": [["alt", "right"]],
+      "description": "Move the playhead to the next audio subframe",
+      "isFavorite": false
+    },
+    {
+      "id": "ebb21ac1-b208-43b0-b65c-1aa036b857ac",
+      "hotkeys": [["alt", "shift", "semicolon"]],
+      "description": "Display the previous bank of angles in the current multicam clip",
+      "isFavorite": false
+    },
+    {
+      "id": "a737f511-fee5-445d-bf7b-28ea471d1b5e",
+      "hotkeys": [["semicolon"]],
+      "description": "Move the playhead to the previous edit point in the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "93571aa6-0fb9-4f63-b9bf-88b9d32f7e34",
+      "hotkeys": [["alt", "left"]],
+      "description": "Move the playhead to the previous field in an interlaced clip",
+      "isFavorite": false
+    },
+    {
+      "id": "c00a07c6-b2f1-43e3-8b9f-b71f427a426b",
+      "hotkeys": [["alt", "shift", "meta", "left"]],
+      "description": "Move the playhead to the previous focus point",
+      "isFavorite": false
+    },
+    {
+      "id": "80926042-dae6-4c51-8928-d37d32fe4d3d",
+      "hotkeys": [["left"]],
+      "description": "Move the playhead to the previous frame",
+      "isFavorite": false
+    },
+    {
+      "id": "ae467cc5-e5c2-4c9c-ac7b-b2ce40201638",
+      "hotkeys": [["alt", "left"]],
+      "description": "Move the playhead to the previous audio subframe",
+      "isFavorite": false
+    },
+    {
+      "id": "72858dc8-0b3a-458f-92b4-18ee6027676f",
+      "hotkeys": [["shift", "o"]],
+      "description": "Move the playhead to the end of the range selection",
+      "isFavorite": false
+    },
+    {
+      "id": "70d4d4a9-e99c-4dc9-b01a-6847f70d1e8f",
+      "hotkeys": [["shift", "i"]],
+      "description": "Move the playhead to the beginning of the range selection",
+      "isFavorite": false
+    },
+    {
+      "id": "4ce54b12-e73f-4816-9f2c-4c9ba9f201c2",
+      "hotkeys": [["ctrl", "alt", "meta", "bracketright"]],
+      "description": "Roll the 360° viewer clockwise",
+      "isFavorite": false
+    },
+    {
+      "id": "c256cfbb-e7f7-4c3d-a7c0-95dbe1f21171",
+      "hotkeys": [["ctrl", "alt", "meta", "bracketleft"]],
+      "description": "Roll the 360° viewer counterclockwise",
+      "isFavorite": false
+    },
+    {
+      "id": "4a857fe3-8692-4488-859c-adb9019f7661",
+      "hotkeys": [["ctrl", "alt", "meta", "down"]],
+      "description": "Tilt the 360° viewer down",
+      "isFavorite": false
+    },
+    {
+      "id": "cbf5aa92-16ea-405b-bd40-392f62dd8eda",
+      "hotkeys": [["ctrl", "alt", "meta", "left"]],
+      "description": "Pan the 360° viewer to the left",
+      "isFavorite": false
+    },
+    {
+      "id": "f3b49c9a-0b0c-4c83-ad20-3882a8ee8913",
+      "hotkeys": [["ctrl", "alt", "meta", "right"]],
+      "description": "Pan the 360° viewer to the right",
+      "isFavorite": false
+    },
+    {
+      "id": "a7c493b8-ec52-4147-8510-201a26c99e61",
+      "hotkeys": [["ctrl", "alt", "meta", "up"]],
+      "description": "Pan the 360° viewer up",
+      "isFavorite": false
+    },
+    {
+      "id": "8345a015-6048-4260-ac7f-75977482780b",
+      "hotkeys": [["meta", "l"]],
+      "description": "Turn looped playback on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "b4643cdb-da27-4467-a7c3-62431f6a3a2b",
+      "hotkeys": [["ctrl", "alt", "meta", "9"]],
+      "description": "Mirror the display of the connected VR headset in the 360° viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "9391d734-a23b-4ffe-9a37-05dbce5fd34e",
+      "hotkeys": [["shift", "a"]],
+      "description": "Turn on or turn off audio monitoring for the angle being skimmed",
+      "isFavorite": false
+    },
+    {
+      "id": "c611b0d5-f755-4aa6-b857-9013baf07520",
+      "hotkeys": [["minus"]],
+      "description": "Enter a negative timecode value to move the playhead back, move a clip earlier, or trim a range or clip, depending on your selection",
+      "isFavorite": false
+    },
+    {
+      "id": "5623bfb2-be78-4baa-a39e-9fb7ecd0a1c1",
+      "hotkeys": [["ctrl", "meta", "right"]],
+      "description": "Go to the next item (in the browser) or the next edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "26accc0d-6da7-4b7e-8045-60745fa032eb",
+      "hotkeys": [["ctrl", "quote"]],
+      "description": "Move the playhead to the next marker",
+      "isFavorite": false
+    },
+    {
+      "id": "8848e4e0-bc4d-43a9-87d0-b5a3d623a386",
+      "hotkeys": [["ctrl", "alt", "meta", "7"]],
+      "description": "Send 360° video to the connected VR headset",
+      "isFavorite": false
+    },
+    {
+      "id": "0d01374f-43f4-4045-8784-2c4ac6faac56",
+      "hotkeys": [["shift", "slash"]],
+      "description": "Play around the playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "42f37040-1bdd-4b4d-9935-91f67041dfb3",
+      "hotkeys": [["l"]],
+      "description": "Play forward (press L multiple times to increase the playback speed)",
+      "isFavorite": false
+    },
+    {
+      "id": "5d56cfeb-1182-4946-bdc7-8b9430d7e45a",
+      "hotkeys": [["alt", "space"]],
+      "description": "Play from the playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "b6bc9403-8417-4dff-8da7-080e4cd125b1",
+      "hotkeys": [["shift", "meta", "f"]],
+      "description": "Play full screen from the skimmer or playhead position",
+      "isFavorite": false
+    },
+    {
+      "id": "58a702b0-b628-4ea1-9428-ce030b1c9dc1",
+      "hotkeys": [["j"]],
+      "description": "Play in reverse (press J multiple times to increase the reverse playback speed)",
+      "isFavorite": false
+    },
+    {
+      "id": "5aa4ad09-7429-4d00-a447-6dcf5f30d9fb",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "Play in reverse while editing a text field (press J multiple times to increase the reverse playback speed)",
+      "isFavorite": false
+    },
+    {
+      "id": "e5acbdb3-e984-4c11-a45d-74abfe30d243",
+      "hotkeys": [["shift", "space"]],
+      "description": "Play in reverse",
+      "isFavorite": false
+    },
+    {
+      "id": "9b242c20-2086-4cc9-8a48-3f817fbea76e",
+      "hotkeys": [["slash"]],
+      "description": "Play the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "12587b37-c2ad-4bb8-8a24-6bcf6ed9d0bb",
+      "hotkeys": [["ctrl", "shift", "o"]],
+      "description": "Play from the playhead to the end of the selection",
+      "isFavorite": false
+    },
+    {
+      "id": "97d3cecc-8b62-435b-9682-bf186548bcae",
+      "hotkeys": [["space"]],
+      "description": "Start or pause playback",
+      "isFavorite": false
+    },
+    {
+      "id": "0e4fe5e2-5b40-4184-91a8-d184bb615d54",
+      "hotkeys": [["ctrl", "space"]],
+      "description": "Start or pause playback while editing a text field",
+      "isFavorite": false
+    },
+    {
+      "id": "30b4cd61-b565-4df3-87f2-564ce1d59bc5",
+      "hotkeys": [["equal"]],
+      "description": "Enter a positive timecode value to move the playhead forward, move a clip later, or trim a range or clip, depending on your selection",
+      "isFavorite": false
+    },
+    {
+      "id": "c41341e8-ec8b-4452-a0eb-849912428a4e",
+      "hotkeys": [["ctrl", "meta", "left"]],
+      "description": "Go to the previous item (in the browser) or the previous edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "fde6d386-9d4b-40c6-abc8-294bb27f3888",
+      "hotkeys": [["ctrl", "semicolon"]],
+      "description": "Move the playhead to the previous marker",
+      "isFavorite": false
+    },
+    {
+      "id": "02b4a708-2771-4d53-ba9a-a775ed94f53f",
+      "hotkeys": [["shift", "v"]],
+      "description": "Set the angle being skimmed as the monitoring angle",
+      "isFavorite": false
+    },
+    {
+      "id": "0f2f829a-4961-45e2-b83e-5d40f1d70510",
+      "hotkeys": [["s"]],
+      "description": "Turn skimming on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "d7c1dc9c-efe1-46db-9d97-9f74df41589a",
+      "hotkeys": [["alt", "shift", "a"]],
+      "description": "Start or stop recording audio from the Record Voiceover window",
+      "isFavorite": false
+    },
+    {
+      "id": "6a3c5f6d-29ca-4860-bf63-a9434ee4c5c8",
+      "hotkeys": [["k"]],
+      "description": "Stop playback",
+      "isFavorite": false
+    },
+    {
+      "id": "48515ccb-d925-445f-b3a9-304a9f2ebec8",
+      "hotkeys": [["ctrl", "k"]],
+      "description": "Stop playback while editing a text field",
+      "isFavorite": false
+    },
+    {
+      "id": "0f2e6fc5-02ec-4943-9bc9-fef6f4beabaf",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Go back one level in the timeline history",
+      "isFavorite": false
+    },
+    {
+      "id": "bc90ffc1-472d-43d3-ad16-afadfb499e55",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Go forward one level in the timeline history",
+      "isFavorite": false
+    },
+    {
+      "id": "fcbc208d-6c34-4fb3-bde9-3ec1c67c6965",
+      "hotkeys": [["up"]],
+      "description": "Go to the previous item (in the browser) or the previous edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "05fb56d1-9eda-4ba5-ae88-f9b21fdfa3a1",
+      "hotkeys": [["ctrl", "up"]],
+      "description": "While editing a text field, go to the previous item (in the browser) or the previous edit point (in the timeline)",
+      "isFavorite": false
+    },
+    {
+      "id": "9062b3f4-971c-47a7-95ac-c1631fab71ab",
+      "hotkeys": [["meta", "e"]],
+      "description": "Share the selected project or clip using the default destination",
+      "isFavorite": false
+    },
+    {
+      "id": "58194cc5-406f-4e0b-a9dc-6f8a18a351df",
+      "hotkeys": [["a"]],
+      "description": "Make the Select tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "c84fe750-4240-4161-9530-eda0eb62b602",
+      "hotkeys": [["b"]],
+      "description": "Make the Blade tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "ec596b12-a7b0-4e91-bf6b-2163b2c0259d",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "Make the Cinematic tool active and display onscreen controls for the selected clip or the topmost clip under the playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "ac8a1399-35c9-44ca-a050-2e0e7f80bf58",
+      "hotkeys": [["shift", "c"]],
+      "description": "Make the Crop tool active and display onscreen controls for the selected clip or the topmost clip under the playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "8a3be304-0b64-4fe4-9f0d-e132137efe18",
+      "hotkeys": [["alt", "d"]],
+      "description": "Make the Distort tool active and display onscreen controls for the selected clip or the topmost clip under the playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "8774b204-cbb0-403f-a103-4d594e2a6215",
+      "hotkeys": [["h"]],
+      "description": "Make the Hand tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "c8e3e530-0569-429a-aa87-b393f2bca882",
+      "hotkeys": [["p"]],
+      "description": "Make the Position tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "f4271174-70d3-48f9-80c9-a6a2c645549c",
+      "hotkeys": [["shift", "t"]],
+      "description": "Make the Transform tool active and display onscreen controls for the selected clip or the topmost clip under the playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "02b25570-5ddc-40a4-b75f-ba820b098d5d",
+      "hotkeys": [["t"]],
+      "description": "Make the Trim tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "bf029d04-2081-41cc-99cf-5ef7a971710d",
+      "hotkeys": [["z"]],
+      "description": "Make the Zoom tool active",
+      "isFavorite": false
+    },
+    {
+      "id": "6d6a3779-5bc5-400c-9e97-f3439fe16b35",
+      "hotkeys": [["ctrl", "alt", "f"]],
+      "description": "Show or hide the Cinematic Editor for the selected timeline clips",
+      "isFavorite": false
+    },
+    {
+      "id": "00808adc-7f46-4336-a670-35985c0a7045",
+      "hotkeys": [["ctrl", "alt", "6"]],
+      "description": "Depending on the clip name setting, display timeline clips with clip names, role names, or active angle names only",
+      "isFavorite": false
+    },
+    {
+      "id": "16f3e338-74b4-480a-8970-a2ea9e3e9125",
+      "hotkeys": [["ctrl", "alt", "down"]],
+      "description": "Decrease the size of audio waveforms for timeline clips",
+      "isFavorite": false
+    },
+    {
+      "id": "f00826ee-3ffc-408b-abab-36f6372ab5e4",
+      "hotkeys": [["ctrl", "alt", "5"]],
+      "description": "Display timeline clips with large filmstrips only",
+      "isFavorite": false
+    },
+    {
+      "id": "fd764eb7-25df-4bce-82e5-08b05c1aa41b",
+      "hotkeys": [["ctrl", "alt", "up"]],
+      "description": "Increase the size of audio waveforms for timeline clips",
+      "isFavorite": false
+    },
+    {
+      "id": "2153cc95-77d9-4e25-811d-0296f2fc5fdc",
+      "hotkeys": [["ctrl", "alt", "4"]],
+      "description": "Display timeline clips with small audio waveforms and large filmstrips",
+      "isFavorite": false
+    },
+    {
+      "id": "7f4d9fbe-8a95-4bc3-acf3-0e15c19cf557",
+      "hotkeys": [["ctrl", "alt", "2"]],
+      "description": "Display timeline clips with large audio waveforms and small filmstrips",
+      "isFavorite": false
+    },
+    {
+      "id": "99bb4787-f48e-42a4-863b-fe555e55f8bc",
+      "hotkeys": [["ctrl", "alt", "3"]],
+      "description": "Display timeline clips with audio waveforms and video filmstrips of equal size",
+      "isFavorite": false
+    },
+    {
+      "id": "80dc1e08-d8ba-4292-98d8-5ee9af13ddfc",
+      "hotkeys": [["ctrl", "alt", "1"]],
+      "description": "Display timeline clips with large audio waveforms only",
+      "isFavorite": false
+    },
+    {
+      "id": "334e4be6-3ba6-4355-9ed2-a8b2f8d2bc12",
+      "hotkeys": [["shift", "meta", "minus"]],
+      "description": "Decrease the browser clip height",
+      "isFavorite": false
+    },
+    {
+      "id": "b47554fb-4a13-48a4-8f95-9a72cece505f",
+      "hotkeys": [["shift", "meta", "equal"]],
+      "description": "Increase the browser clip height",
+      "isFavorite": false
+    },
+    {
+      "id": "b504eb1a-3601-4664-a7f0-74e264e004b1",
+      "hotkeys": [["shift", "meta", "comma"]],
+      "description": "Show fewer filmstrip frames in browser clips",
+      "isFavorite": false
+    },
+    {
+      "id": "92c8d0f5-0cc8-4da4-810f-fae427b9b4e9",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Show or hide the Audio Animation editor for the selected clips or components",
+      "isFavorite": false
+    },
+    {
+      "id": "a9d07107-8fb3-4d93-bd29-abde68a0a458",
+      "hotkeys": [["ctrl", "y"]],
+      "description": "Show or hide clip information when skimming in the browser",
+      "isFavorite": false
+    },
+    {
+      "id": "ba0df81e-1e54-4449-ad38-b706695d14fb",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Show or hide the Video Animation editor for the selected timeline clips",
+      "isFavorite": false
+    },
+    {
+      "id": "accb4064-d2aa-44ac-a5dd-88c9ad051199",
+      "hotkeys": [["shift", "meta", "period"]],
+      "description": "Show more filmstrip frames in browser clips",
+      "isFavorite": false
+    },
+    {
+      "id": "04a23c85-bb85-4677-a356-7828107911c1",
+      "hotkeys": [["alt", "shift", "meta", "comma"]],
+      "description": "Show one frame per filmstrip",
+      "isFavorite": false
+    },
+    {
+      "id": "3291c9d0-0d99-4c66-a597-eb0c515355da",
+      "hotkeys": [["alt", "meta", "2"]],
+      "description": "Switch the browser between filmstrip view and list view",
+      "isFavorite": false
+    },
+    {
+      "id": "bf23e036-7986-4852-bd2f-5d20e5b97b9b",
+      "hotkeys": [["alt", "shift", "n"]],
+      "description": "Show or hide clip names in the browser",
+      "isFavorite": false
+    },
+    {
+      "id": "c0b27415-8d28-46cc-a1a5-74cd63803d6f",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom in to the browser, viewer, or timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "c6cc83d0-e504-4f84-bc71-5ee37970db3d",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out of the browser, viewer, or timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "615f1778-d485-4d71-8878-8cd1b41e79f5",
+      "hotkeys": [["shift", "z"]],
+      "description": "Zoom the contents to fit the size of the browser, viewer, or timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "d8aba279-e254-4c53-9f90-1381a04817ed",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Turn zooming in to audio samples on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "df9bbf40-283b-4058-a70a-241806499e04",
+      "hotkeys": [["ctrl", "alt", "meta", "3"]],
+      "description": "Switch to the Anaglyph view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "de5bb8ad-0a71-403c-909c-154ed406770c",
+      "hotkeys": [["ctrl", "alt", "meta", "4"]],
+      "description": "Switch to the Anaglyph Monochrome view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "fdbf8654-5c1c-4782-8f62-8e903a2289c7",
+      "hotkeys": [["ctrl", "alt", "meta", "5"]],
+      "description": "Switch to the Anaglyph Outline view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "e6ceda9b-c6f4-456e-aed2-bf0fe00242e5",
+      "hotkeys": [["meta", "9"]],
+      "description": "Show or hide the Background Tasks window",
+      "isFavorite": false
+    },
+    {
+      "id": "bea18829-9a72-4369-a84a-5ca6c40160ff",
+      "hotkeys": [["ctrl", "alt", "meta", "6"]],
+      "description": "Switch to the Difference view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "dbefffa8-91ed-41f4-8f8e-5431b73ef250",
+      "hotkeys": [["meta", "8"]],
+      "description": "Make the Audio Enhancements inspector active",
+      "isFavorite": false
+    },
+    {
+      "id": "fe796938-14bd-4ad1-af97-251927069082",
+      "hotkeys": [["meta", "1"]],
+      "description": "Make the browser active",
+      "isFavorite": false
+    },
+    {
+      "id": "7071d317-668b-4d9d-8dbc-f512d411a3f9",
+      "hotkeys": [["meta", "6"]],
+      "description": "Make the Color Board active",
+      "isFavorite": false
+    },
+    {
+      "id": "650bd190-32af-478c-af3a-8d6183e21f92",
+      "hotkeys": [["alt", "meta", "4"]],
+      "description": "Make the current inspector active",
+      "isFavorite": false
+    },
+    {
+      "id": "f484a6a8-3923-4e7f-8b5e-e78ef2f37696",
+      "hotkeys": [["meta", "2"]],
+      "description": "Make the timeline active",
+      "isFavorite": false
+    },
+    {
+      "id": "b9ca0961-12ba-4cfc-ac78-4b24da3c0522",
+      "hotkeys": [["meta", "3"]],
+      "description": "Make the viewer active",
+      "isFavorite": false
+    },
+    {
+      "id": "ccdeb3f9-fdbe-4d29-b68e-f018b08d2e5e",
+      "hotkeys": [["ctrl", "alt", "meta", "1"]],
+      "description": "Switch to the Left Eye view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "97d7291f-6534-4db8-9436-afa20b8195ef",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Go to the next pane in the inspector or the Color Board",
+      "isFavorite": false
+    },
+    {
+      "id": "9b56153f-42cb-4509-83c0-00504b21cc2f",
+      "hotkeys": [["ctrl", "shift", "tab"]],
+      "description": "Go to the previous pane in the inspector or the Color Board",
+      "isFavorite": false
+    },
+    {
+      "id": "90d2a7ba-48ad-422a-8ef7-815d430c369c",
+      "hotkeys": [["alt", "meta", "8"]],
+      "description": "Show or hide the Record Voiceover window",
+      "isFavorite": false
+    },
+    {
+      "id": "cf75c5c7-e42b-4d57-929d-c6019769eac9",
+      "hotkeys": [["ctrl", "alt", "meta", "2"]],
+      "description": "Switch to the Right Eye view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "1df95014-8c78-4e65-b185-f4ff5625b08b",
+      "hotkeys": [["ctrl", "meta", "v"]],
+      "description": "Show the vectorscope in the viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "cc6235ee-7b9b-43e5-a032-5e69c526f79e",
+      "hotkeys": [["ctrl", "meta", "w"]],
+      "description": "Show the waveform monitor in the viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "9d588cfd-2c87-4524-a263-2fc976d17088",
+      "hotkeys": [["shift", "meta", "7"]],
+      "description": "Show or hide the angle viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "d36ada5c-7262-4fe3-b84b-cb5703ea2c4c",
+      "hotkeys": [["shift", "meta", "8"]],
+      "description": "Show or hide the audio meters",
+      "isFavorite": false
+    },
+    {
+      "id": "de26b4e8-e6a7-48de-885c-c6fca9b7629c",
+      "hotkeys": [["ctrl", "meta", "1"]],
+      "description": "Show or hide the browser",
+      "isFavorite": false
+    },
+    {
+      "id": "58a8198d-b428-4ca1-9eef-213bcb269d9c",
+      "hotkeys": [["ctrl", "meta", "6"]],
+      "description": "Show or hide the comparison viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "82dff75f-2582-49c1-9f28-b3279315b87c",
+      "hotkeys": [["meta", "5"]],
+      "description": "Show or hide the Effects browser",
+      "isFavorite": false
+    },
+    {
+      "id": "5286bf7c-ad08-487f-bfe2-49aeea240ecd",
+      "hotkeys": [["ctrl", "meta", "5"]],
+      "description": "Show or hide the Transitions browser",
+      "isFavorite": false
+    },
+    {
+      "id": "9e6b3ccf-8545-46ca-a946-d4e7efa70eaf",
+      "hotkeys": [["ctrl", "meta", "3"]],
+      "description": "Show or hide the event viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "b95f305c-66ab-4d4e-87ef-c624beaa129c",
+      "hotkeys": [["meta", "4"]],
+      "description": "Show or hide the inspector",
+      "isFavorite": false
+    },
+    {
+      "id": "7e6216f8-2694-4758-8759-4dce59caebc6",
+      "hotkeys": [["meta", "k"]],
+      "description": "Show or hide the keyword editor",
+      "isFavorite": false
+    },
+    {
+      "id": "2b713ba7-7134-4352-9c7d-0f05472ca9ab",
+      "hotkeys": [["meta", "1"]],
+      "description": "Show or hide the Libraries sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "3d8caac9-8c49-4dad-a29f-3988fb85fb7c",
+      "hotkeys": [["shift", "meta", "1"]],
+      "description": "Show or hide the Photos, Videos, and Audio sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "3dc76757-1477-4066-8e78-e5be2a7295aa",
+      "hotkeys": [["meta", "backquote"]],
+      "description": "Show or hide the sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "a0832d4c-1edc-49e6-9e8a-95e9df9e980d",
+      "hotkeys": [["alt", "meta", "7"]],
+      "description": "Show or hide the 360° viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "68d96bfa-f942-4825-81f0-0d72e7ae22a5",
+      "hotkeys": [["ctrl", "meta", "2"]],
+      "description": "Show or hide the timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "3d2d3cb8-0738-46b9-9e4b-0fd9d6b647fe",
+      "hotkeys": [["shift", "meta", "2"]],
+      "description": "Show or hide the timeline index for the open project",
+      "isFavorite": false
+    },
+    {
+      "id": "b19d4efd-6bfc-47fe-aa86-7d77635a8423",
+      "hotkeys": [["alt", "meta", "1"]],
+      "description": "Show or hide the Titles and Generators sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "23efdb6e-8b8b-421c-aafe-18336eb81553",
+      "hotkeys": [["meta", "7"]],
+      "description": "Show or hide the video scopes in the viewer",
+      "isFavorite": false
+    },
+    {
+      "id": "82e3200d-f1df-4d8b-9369-1888f581940e",
+      "hotkeys": [["ctrl", "alt", "meta", "backquote"]],
+      "description": "Switch to the Superimpose view in the 360° viewer (stereoscopic only)",
+      "isFavorite": false
+    },
+    {
+      "id": "88c86825-4bc8-4534-87b0-b757a962d302",
+      "hotkeys": [["ctrl", "meta", "4"]],
+      "description": "Switch between the half-height view and full-height view in the inspector",
+      "isFavorite": false
+    }
+  ]
+}

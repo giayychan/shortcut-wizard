@@ -1,0 +1,1496 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobe-illustrator",
+    "icon": {
+      "filename": "illustrator.svg",
+      "isCustom": false
+    },
+    "id": "fe48a798-d9c5-41a4-b65d-5173503d0a26",
+    "label": "Illustrator"
+  },
+  "shortcuts": [
+    {
+      "id": "bc3cf3d8-ba9f-48c0-83ee-4b26c9b36fbc",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "290f1047-ed95-45fa-bef7-3d3d31329a2a",
+      "hotkeys": [["shift", "meta", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "6b51a4ca-47d1-4f52-aae7-dd71fe76c68f",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "03748486-c353-4b71-9f92-251ca910d11b",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "ce94f292-c048-4a32-8d87-c2be56dae676",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "636d08fa-b01b-4704-b370-4f3e1b6570a9",
+      "hotkeys": [["meta", "f"]],
+      "description": "Paste in front",
+      "isFavorite": false
+    },
+    {
+      "id": "66e9b2b8-f573-47bb-ac78-bf6ea7eb9f54",
+      "hotkeys": [["meta", "b"]],
+      "description": "Paste at back",
+      "isFavorite": false
+    },
+    {
+      "id": "2b45cf35-9913-4345-96bc-4e15f42e2cec",
+      "hotkeys": [["shift", "meta", "v"]],
+      "description": "Paste in place",
+      "isFavorite": false
+    },
+    {
+      "id": "c10e1d76-aa08-46e4-ab5d-56d70223ae8e",
+      "hotkeys": [["alt", "shift", "meta", "v"]],
+      "description": "Paste on all artboards",
+      "isFavorite": false
+    },
+    {
+      "id": "864d2264-19b7-4c8f-a88e-3a64d6611b2a",
+      "hotkeys": [["meta", "i"]],
+      "description": "Check spelling",
+      "isFavorite": false
+    },
+    {
+      "id": "f1e54174-cd15-4073-b2b3-4c1fce95f4e8",
+      "hotkeys": [["shift", "meta", "k"]],
+      "description": "Open the Color Settings dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "63e7c0aa-ed25-474f-9884-01674ae26b37",
+      "hotkeys": [["alt", "shift", "meta", "k"]],
+      "description": "Open the Keyboard Shortcuts dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "9afca55d-cf9d-4ebc-8b3f-eddfe54967c6",
+      "hotkeys": [["meta", "k"]],
+      "description": "Open the Preferences dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "c97aca9c-87b9-4139-8df7-791772cb8048",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a document",
+      "isFavorite": false
+    },
+    {
+      "id": "134debbc-aec7-4ce7-a5df-463d40050deb",
+      "hotkeys": [["shift", "meta", "n"]],
+      "description": "Create a document from a template",
+      "isFavorite": false
+    },
+    {
+      "id": "fdc15ce3-53bd-470b-9e02-eb153c87da0e",
+      "hotkeys": [["alt", "meta", "n"]],
+      "description": "Create a document without opening the New Document dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "fdb0e12d-4865-445b-b44b-7553cea50cc0",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open a document",
+      "isFavorite": false
+    },
+    {
+      "id": "399c5ff6-287d-4bbd-a47f-c2d65cd1ff51",
+      "hotkeys": [["shift", "meta", "p"]],
+      "description": "Place a file in the document",
+      "isFavorite": false
+    },
+    {
+      "id": "fef1d63b-c1eb-461c-98b8-b54295854d3f",
+      "hotkeys": [["alt", "shift", "meta", "i"]],
+      "description": "Open the File Information dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "006cb1ac-a092-425e-971d-396ede1af6c9",
+      "hotkeys": [["alt", "meta", "p"]],
+      "description": "Open the Document Setup dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "83e7c401-3433-4adf-9a1f-7df84999b037",
+      "hotkeys": [["alt", "meta", "o"]],
+      "description": "Browse in Adobe Bridge",
+      "isFavorite": false
+    },
+    {
+      "id": "eff38149-dcb7-41ea-97db-b6d3cae1d13c",
+      "hotkeys": [["meta", "w"]],
+      "description": "Close the document window",
+      "isFavorite": false
+    },
+    {
+      "id": "67ae1999-a98d-411c-ba91-416b9989a3fe",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save changes made to the document",
+      "isFavorite": false
+    },
+    {
+      "id": "eb07f734-2a63-4027-b418-5752f90354cd",
+      "hotkeys": [["shift", "meta", "s"]],
+      "description": "Open the Save As dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "26363141-e231-4354-afce-c6ad1669268e",
+      "hotkeys": [["alt", "meta", "s"]],
+      "description": "Save a copy of the document",
+      "isFavorite": false
+    },
+    {
+      "id": "d487b910-4054-4d02-83f1-5dbdc6cc7a0a",
+      "hotkeys": [["meta", "f12"]],
+      "description": "Save the document as script files",
+      "isFavorite": false
+    },
+    {
+      "id": "e9a2c9a1-bd9a-4f2f-a8bf-0012e372b35d",
+      "hotkeys": [["alt", "meta", "e"]],
+      "description": "Open the Export for screens dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "9d105f8f-7179-4807-ac71-562c54f048eb",
+      "hotkeys": [["alt", "shift", "meta", "s"]],
+      "description": "Open the Save For Web dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "b4fd7a43-ae28-422a-b8cf-638971ca3e52",
+      "hotkeys": [["alt", "shift", "meta", "p"]],
+      "description": "Package the document",
+      "isFavorite": false
+    },
+    {
+      "id": "3412c1fa-5e10-4e94-81ff-07e390937e2e",
+      "hotkeys": [["meta", "p"]],
+      "description": "Print",
+      "isFavorite": false
+    },
+    {
+      "id": "dc5ca7ac-bbd4-46cc-8490-a2f578bcff51",
+      "hotkeys": [["meta", "q"]],
+      "description": "Exit the application",
+      "isFavorite": false
+    },
+    {
+      "id": "6bcc5e8c-073f-4163-80bb-155916297ec1",
+      "hotkeys": [["shift", "o"]],
+      "description": "Artboard tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3efdc4ef-136f-4b1e-a671-b235bd87737a",
+      "hotkeys": [["v"]],
+      "description": "Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1de1414c-34d0-4261-a81f-31da3a6f68db",
+      "hotkeys": [["a"]],
+      "description": "Direct Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "407a2029-7de7-445d-b8b7-4f8ec8b78aac",
+      "hotkeys": [["y"]],
+      "description": "Magic Wand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e8f16f19-1b43-4003-bfbb-21ca4bd67cc0",
+      "hotkeys": [["q"]],
+      "description": "Lasso tool",
+      "isFavorite": false
+    },
+    {
+      "id": "95f7b2b0-1b1f-4623-b019-877b49f4e56c",
+      "hotkeys": [["p"]],
+      "description": "Pen tool",
+      "isFavorite": false
+    },
+    {
+      "id": "cd1210ec-985e-491e-bbeb-de6cef6ed6f9",
+      "hotkeys": [["shift", "backquote"]],
+      "description": "Curvature tool",
+      "isFavorite": false
+    },
+    {
+      "id": "9771c6d0-8bb7-499b-afac-46eb92619c92",
+      "hotkeys": [["shift", "b"]],
+      "description": "Blob Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e9bcc8bd-e6c9-40c2-ba49-1e50d63ffed2",
+      "hotkeys": [["shift", "c"]],
+      "description": "Switch to Anchor Point tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b52406a0-d103-48d8-bdec-25576c30d470",
+      "hotkeys": [["t"]],
+      "description": "Type tool",
+      "isFavorite": false
+    },
+    {
+      "id": "d27dfe4c-8593-4d6a-8eb2-f9cac9b0d23e",
+      "hotkeys": [["shift", "t"]],
+      "description": "Touch Type tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c9728baa-80ff-4c28-8003-702f1a1fb5c9",
+      "hotkeys": [["backslash"]],
+      "description": "Line Segment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b92af11c-c755-4839-ae51-44ac9982ef05",
+      "hotkeys": [["m"]],
+      "description": "Rectangle tool",
+      "isFavorite": false
+    },
+    {
+      "id": "40e73b80-ea9e-4f6a-b1a8-e89d39897cd7",
+      "hotkeys": [["l"]],
+      "description": "Ellipse tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6d4f3d42-7e85-400e-9e1e-733f3547fc5c",
+      "hotkeys": [["b"]],
+      "description": "Paintbrush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e0fa19b2-bcbd-4906-bb3e-7371549aaaa9",
+      "hotkeys": [["n"]],
+      "description": "Pencil tool",
+      "isFavorite": false
+    },
+    {
+      "id": "8c159f69-9f35-4061-b1d4-25efb9e21a9b",
+      "hotkeys": [["shift", "n"]],
+      "description": "Shaper tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c7be94ad-7fc1-4c8a-a9c2-86bbf9ef355c",
+      "hotkeys": [["r"]],
+      "description": "Rotate tool",
+      "isFavorite": false
+    },
+    {
+      "id": "ae25ae21-3660-40a2-ab84-66eb875f75e5",
+      "hotkeys": [["o"]],
+      "description": "Reflect tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e61c98d4-639c-46d2-af67-56fd9e7df24b",
+      "hotkeys": [["s"]],
+      "description": "Scale tool",
+      "isFavorite": false
+    },
+    {
+      "id": "24c9e95d-43f4-476a-98c2-ed5e81a70cfa",
+      "hotkeys": [["shift", "r"]],
+      "description": "Warp tool",
+      "isFavorite": false
+    },
+    {
+      "id": "f9323e0f-409b-452d-95ef-73deb2860431",
+      "hotkeys": [["shift", "w"]],
+      "description": "Width Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1d831b6c-8df8-4c9d-861b-96ea71c3f6d2",
+      "hotkeys": [["e"]],
+      "description": "Free Transform tool",
+      "isFavorite": false
+    },
+    {
+      "id": "f3ae53d9-6ca7-4ef8-895e-a6a546420bdf",
+      "hotkeys": [["shift", "m"]],
+      "description": "Shape Builder Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "180d1c0e-80dc-43b8-b25b-46b59894fb58",
+      "hotkeys": [["shift", "p"]],
+      "description": "Perspective Grid Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3c9607c1-fe33-4ab2-9ea8-38ecc53cacec",
+      "hotkeys": [["shift", "v"]],
+      "description": "Perspective Selection Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "115fbbfc-96da-4c6b-8c31-4ac550d505ae",
+      "hotkeys": [["shift", "s"]],
+      "description": "Symbol Sprayer tool",
+      "isFavorite": false
+    },
+    {
+      "id": "372afcfd-c8ea-4e56-9c85-cb60d13abdd2",
+      "hotkeys": [["j"]],
+      "description": "Column Graph tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6b802fbb-0b4b-4ac6-931c-d7fedf480315",
+      "hotkeys": [["u"]],
+      "description": "Mesh tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5cc0c76f-030e-49a8-9add-47b30ce03bdf",
+      "hotkeys": [["g"]],
+      "description": "Gradient tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6fe8f934-0909-48e0-a12a-d21ea71c5bfd",
+      "hotkeys": [["i"]],
+      "description": "Eyedropper tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c31caa9c-4dcb-49d8-bf2a-7308727da534",
+      "hotkeys": [["w"]],
+      "description": "Blend tool",
+      "isFavorite": false
+    },
+    {
+      "id": "35bea0ba-e191-4426-a5b5-398ea67495ee",
+      "hotkeys": [["k"]],
+      "description": "Live Paint Bucket tool",
+      "isFavorite": false
+    },
+    {
+      "id": "a47c5b61-345a-48db-ae5a-caa27941f67b",
+      "hotkeys": [["shift", "l"]],
+      "description": "Live Paint Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6d1d9b4f-a6a5-46a4-92e6-a149d0aa1f61",
+      "hotkeys": [["shift", "k"]],
+      "description": "Slice tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6a8ab9e1-df7e-4a38-9106-6d851509fdfa",
+      "hotkeys": [["shift", "e"]],
+      "description": "Eraser tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e76595c8-01cf-4747-82cd-f1d7fb320536",
+      "hotkeys": [["c"]],
+      "description": "Scissors tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c2ed8520-4f19-45dd-97e5-ecb97034bea8",
+      "hotkeys": [["h"]],
+      "description": "Hand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "68c787d4-cff4-496d-ae6d-363c3232c598",
+      "hotkeys": [["z"]],
+      "description": "Zoom tool",
+      "isFavorite": false
+    },
+    {
+      "id": "ba53dc6f-dfb8-4d55-99a4-ba58550b0964",
+      "hotkeys": [["f"]],
+      "description": "Toggle between screen modes: Normal Screen Mode, Full Screen Mode with Menu Bar, Full Screen Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "c64f6e66-ef2f-4109-a2b7-c1bdf3098346",
+      "hotkeys": [["space"]],
+      "description": "Switch to Hand tool (when not in text-edit mode)",
+      "isFavorite": false
+    },
+    {
+      "id": "5eb01c46-3b49-459e-8916-d155427a4285",
+      "hotkeys": [["space", "meta"]],
+      "description": "Switch to Zoom tool in magnify mode",
+      "isFavorite": false
+    },
+    {
+      "id": "fb19e9c9-d0b1-4add-b6af-251bfb3c6e0d",
+      "hotkeys": [["space", "meta", "alt"]],
+      "description": "Switch to Zoom tool in reduce mode",
+      "isFavorite": false
+    },
+    {
+      "id": "56920c4e-1de1-445d-8b7a-0897be85f259",
+      "hotkeys": [["space"]],
+      "description": "Move Zoom marquee while dragging with the Zoom tool",
+      "isFavorite": false
+    },
+    {
+      "id": "9cf10b9b-8fca-4282-b252-d927a5337651",
+      "hotkeys": [["shift", "meta", "b"]],
+      "description": "Hide bounding box",
+      "isFavorite": false
+    },
+    {
+      "id": "96b6a3a4-9edb-4400-ac37-2035c9c22023",
+      "hotkeys": [["meta", "alt", "shift", "3"]],
+      "description": "Hide unselected artwork",
+      "isFavorite": false
+    },
+    {
+      "id": "4b8e03a3-7a31-46c7-85ea-611abe899d98",
+      "hotkeys": [["meta", "h"]],
+      "description": "Show document template",
+      "isFavorite": false
+    },
+    {
+      "id": "73c4bdbf-8b3d-4c9b-b1ed-b427e0c46c85",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Show/Hide artboards",
+      "isFavorite": false
+    },
+    {
+      "id": "30a2f4d0-8934-4909-88cd-8fd47c5b0bb7",
+      "hotkeys": [["meta", "alt", "r"]],
+      "description": "Show/Hide artboard rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "b3b40dd2-d280-4f9f-806d-6dd72effbfad",
+      "hotkeys": [["shift", "meta", "d"]],
+      "description": "Show transparency grid",
+      "isFavorite": false
+    },
+    {
+      "id": "66a27717-8eee-4c9d-b432-d808f3ca8cb5",
+      "hotkeys": [["meta", "shift", "v"]],
+      "description": "Paste in place on the active artboard",
+      "isFavorite": false
+    },
+    {
+      "id": "40722606-6536-4485-b3e4-1c955a7d23e1",
+      "hotkeys": [["escape"]],
+      "description": "Exit Artboard tool mode",
+      "isFavorite": false
+    },
+    {
+      "id": "3f7df32f-06fc-467b-b64e-f193c82c62de",
+      "hotkeys": [["meta", "f6"]],
+      "description": "Navigate to next document",
+      "isFavorite": false
+    },
+    {
+      "id": "8d71c332-a682-4b9d-bb68-cc7f2a894d1f",
+      "hotkeys": [["meta", "shift", "f6"]],
+      "description": "Navigate to previous document",
+      "isFavorite": false
+    },
+    {
+      "id": "18ccf08b-52a7-4eea-a106-cb7a79f222ed",
+      "hotkeys": [["meta", "alt", "f6"]],
+      "description": "Navigate to next document group",
+      "isFavorite": false
+    },
+    {
+      "id": "62deda37-2256-4115-a8e6-b7e9b90f0404",
+      "hotkeys": [["meta", "alt", "shift", "f6"]],
+      "description": "Navigate to previous document group",
+      "isFavorite": false
+    },
+    {
+      "id": "6ad14613-098a-4921-aced-7676ff746961",
+      "hotkeys": [["meta", "y"]],
+      "description": "Toggle between Outline and GPU Preview of the document",
+      "isFavorite": false
+    },
+    {
+      "id": "c9216d32-ad70-4660-8271-4a62472f9557",
+      "hotkeys": [["meta", "e"]],
+      "description": "Toggle between GPU and CPU Preview of the document",
+      "isFavorite": false
+    },
+    {
+      "id": "769f4bf8-30a5-4fa0-abe7-dc968259df71",
+      "hotkeys": [["alt", "shift", "meta", "y"]],
+      "description": "View the document in Overprint Preview mode",
+      "isFavorite": false
+    },
+    {
+      "id": "830797a8-e2d7-424b-b26b-4f21393a09c8",
+      "hotkeys": [["alt", "meta", "y"]],
+      "description": "View the document in Pixel Preview mode",
+      "isFavorite": false
+    },
+    {
+      "id": "b1c64280-e009-4812-a4be-7f3dfd899aa0",
+      "hotkeys": [["escape"]],
+      "description": "Exit Full Screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "7ee57263-98bf-4ba6-bb7f-0fc4747697e5",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "d2049c0b-fe9a-4d28-b1f4-638445fb9579",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "313901d9-72ad-41b8-a0f1-6558c89b07d6",
+      "hotkeys": [["meta", "semicolon"]],
+      "description": "Hide guides",
+      "isFavorite": false
+    },
+    {
+      "id": "12bc207d-04fe-495c-9b6b-8d9b1468543e",
+      "hotkeys": [["alt", "meta", "semicolon"]],
+      "description": "Lock guides",
+      "isFavorite": false
+    },
+    {
+      "id": "32d4612f-b1df-4ea3-a67d-a3ebe338d7f1",
+      "hotkeys": [["meta", "5"]],
+      "description": "Make guides",
+      "isFavorite": false
+    },
+    {
+      "id": "040c158a-6eb8-4513-84cd-1536602b21d2",
+      "hotkeys": [["alt", "ctrl", "5"]],
+      "description": "Release guides",
+      "isFavorite": false
+    },
+    {
+      "id": "f2433d28-c16a-4678-bf9b-7582199c3a58",
+      "hotkeys": [["meta", "u"]],
+      "description": "Show/ hide smart guides",
+      "isFavorite": false
+    },
+    {
+      "id": "98c44b16-d8b1-4b25-98cd-0febe8e65eb9",
+      "hotkeys": [["meta", "shift", "i"]],
+      "description": "Show/ hide perspective grid",
+      "isFavorite": false
+    },
+    {
+      "id": "d4b8e5e8-f20a-4f44-8215-ad4b4999e1a1",
+      "hotkeys": [["meta", "quote"]],
+      "description": "Show grid",
+      "isFavorite": false
+    },
+    {
+      "id": "bae7482d-8056-48ae-80e6-e34156e01ff3",
+      "hotkeys": [["shift", "meta", "quote"]],
+      "description": "Snap to grid",
+      "isFavorite": false
+    },
+    {
+      "id": "ac1b34b1-9402-4282-9206-4ea745e460f6",
+      "hotkeys": [["alt", "meta", "quote"]],
+      "description": "Snap to point",
+      "isFavorite": false
+    },
+    {
+      "id": "6952dba5-7623-4e7a-b743-e0026f46693c",
+      "hotkeys": [["meta", "backquote"]],
+      "description": "Switch to last-used selection tool (Selection tool, Direct Selection tool, or Group Selection tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "13d11c62-b921-4e1b-a948-224d574a002d",
+      "hotkeys": [["alt"]],
+      "description": "Switch between Direct Selection tool and Group Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "25e2f776-0df1-4a95-b343-8436e81349cd",
+      "hotkeys": [["meta", "alt", "a"]],
+      "description": "Select artwork in active artboard",
+      "isFavorite": false
+    },
+    {
+      "id": "c7f27fcb-a827-4aba-ae19-ce0bc328b714",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select all",
+      "isFavorite": false
+    },
+    {
+      "id": "442acc38-3f61-49d4-a798-f80b30310669",
+      "hotkeys": [["shift", "meta", "a"]],
+      "description": "Deselect",
+      "isFavorite": false
+    },
+    {
+      "id": "7a3f831e-de63-4e34-9bf3-269b93ad6b0f",
+      "hotkeys": [["meta", "6"]],
+      "description": "Reselect",
+      "isFavorite": false
+    },
+    {
+      "id": "86dcef91-b645-41f8-a9a5-60fe06c9ac89",
+      "hotkeys": [["alt", "meta", "bracketright"]],
+      "description": "Select the object above the current selection",
+      "isFavorite": false
+    },
+    {
+      "id": "7671bf73-53f7-4da7-9813-04d5ca0c9f4d",
+      "hotkeys": [["meta", "g"]],
+      "description": "Group the selected artwork",
+      "isFavorite": false
+    },
+    {
+      "id": "d5ee5127-377f-43a8-af0f-388a69d0a9de",
+      "hotkeys": [["shift", "meta", "g"]],
+      "description": "Ungroup the selected artwork",
+      "isFavorite": false
+    },
+    {
+      "id": "d1c074a5-9e73-491d-8e58-cc35423f793e",
+      "hotkeys": [["meta", "2"]],
+      "description": "Lock a selection",
+      "isFavorite": false
+    },
+    {
+      "id": "4df5f228-a6b6-4ff3-9cae-0ce8557b73e0",
+      "hotkeys": [["alt", "meta", "2"]],
+      "description": "Unlock a selection",
+      "isFavorite": false
+    },
+    {
+      "id": "1cab8bc2-e730-4203-8361-9b9e5a86d211",
+      "hotkeys": [["meta", "3"]],
+      "description": "Hide a selection",
+      "isFavorite": false
+    },
+    {
+      "id": "34e28a93-d44d-44a5-a1e8-4c4a18773f17",
+      "hotkeys": [["alt", "meta", "3"]],
+      "description": "Show all selections",
+      "isFavorite": false
+    },
+    {
+      "id": "cf3ad81a-9942-4486-85e6-a32b9cbabc63",
+      "hotkeys": [["meta", "alt", "shift", "2"]],
+      "description": "Lock all deselected artwork",
+      "isFavorite": false
+    },
+    {
+      "id": "799ffd84-4b5a-4277-bd3b-4748a789a9ce",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Bring a selection forward",
+      "isFavorite": false
+    },
+    {
+      "id": "96d9d821-2986-4df0-8a05-2b3fb0f0170a",
+      "hotkeys": [["shift", "meta", "bracketright"]],
+      "description": "Move a selection to the front",
+      "isFavorite": false
+    },
+    {
+      "id": "1c11d047-347a-4a71-8aca-938ca1f74ad6",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Send a selection backward",
+      "isFavorite": false
+    },
+    {
+      "id": "524bb06d-e0c1-45b7-83ae-b0de51581add",
+      "hotkeys": [["shift", "meta", "bracketleft"]],
+      "description": "Move a selection to the back",
+      "isFavorite": false
+    },
+    {
+      "id": "533fefc2-65b4-411d-b6e3-a5b93503ee18",
+      "hotkeys": [["shift"]],
+      "description": "Constrain Blob Brush path horizontally or vertically",
+      "isFavorite": false
+    },
+    {
+      "id": "6181fdeb-ccd1-4c15-b859-047690953b23",
+      "hotkeys": [["shift", "d"]],
+      "description": "Switch through drawing modes",
+      "isFavorite": false
+    },
+    {
+      "id": "5039470f-0ee5-4d3c-a3d9-00420282ae9d",
+      "hotkeys": [["meta", "8"]],
+      "description": "Create a compound path",
+      "isFavorite": false
+    },
+    {
+      "id": "bbdb91a5-f632-4ec1-859b-94d4690259f5",
+      "hotkeys": [["alt", "shift", "meta", "8"]],
+      "description": "Release a compound path",
+      "isFavorite": false
+    },
+    {
+      "id": "f441ffd4-7359-4ce8-a023-db57205b9841",
+      "hotkeys": [["shift", "meta", "f8"]],
+      "description": "Edit a pattern",
+      "isFavorite": false
+    },
+    {
+      "id": "87770021-8370-48d2-8d6d-d71625517df0",
+      "hotkeys": [["shift", "p"]],
+      "description": "Perspective Grid Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b2a62406-987a-4d2b-9422-8f9872a85e4b",
+      "hotkeys": [["shift", "v"]],
+      "description": "Perspective Selection Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "113b891c-3d28-4387-b647-419d9044de85",
+      "hotkeys": [["meta", "shift", "i"]],
+      "description": "Perspective Grid",
+      "isFavorite": false
+    },
+    {
+      "id": "e1fcca0d-7477-4d1f-acb6-72a527c45e67",
+      "hotkeys": [["meta", "d"]],
+      "description": "Repeat transforming objects in perspective",
+      "isFavorite": false
+    },
+    {
+      "id": "9e59db1a-22a0-498f-bd39-dcb1bbc85104",
+      "hotkeys": [["shift", "d"]],
+      "description": "Switching between drawing modes",
+      "isFavorite": false
+    },
+    {
+      "id": "ee6d11d2-4aa6-44cc-af27-166176860403",
+      "hotkeys": [["alt"]],
+      "description": "Switch Pen tool to Convert Anchor Point tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5207f4ab-1ce9-41e6-a3f0-1683264768a8",
+      "hotkeys": [["alt"]],
+      "description": "Switch between Add Anchor Point tool and Delete Anchor Point tool",
+      "isFavorite": false
+    },
+    {
+      "id": "eba54e88-d435-4769-a4f2-bcbf6c2bfbe8",
+      "hotkeys": [["alt"]],
+      "description": "Switch Scissors tool to Add Anchor Point tool",
+      "isFavorite": false
+    },
+    {
+      "id": "49d4d4de-2299-4040-bb62-9521c3656cbf",
+      "hotkeys": [["alt"]],
+      "description": "Switch Pencil tool to Smooth tool",
+      "isFavorite": false
+    },
+    {
+      "id": "01527fdc-9d18-4a98-82bc-2d4291487f0a",
+      "hotkeys": [["shift", "m"]],
+      "description": "Select the Shape Builder tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4cf73b1b-fba2-4496-a526-88d4564a9999",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Increase the intensity of symbols (when using Symbolism tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "5d3113db-129e-41c7-a00f-db4fd5a32986",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "Decrease the intensity of symbols (when using Symbolism tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "1f0dc44e-020f-41f0-8f08-b7b9210595b3",
+      "hotkeys": [["alt", "meta", "b"]],
+      "description": "Blend objects",
+      "isFavorite": false
+    },
+    {
+      "id": "4f8809cc-47df-4494-9196-83e8d85b7973",
+      "hotkeys": [["alt", "shift", "meta", "b"]],
+      "description": "Finish adding objects to the blend",
+      "isFavorite": false
+    },
+    {
+      "id": "bfdd0607-925f-45d4-844c-cfd869ac535e",
+      "hotkeys": [["alt", "meta", "shift", "w"]],
+      "description": "Distort objects using a warp-shaped envelope",
+      "isFavorite": false
+    },
+    {
+      "id": "47b38133-e869-4a6c-aae8-031368d1cd5f",
+      "hotkeys": [["alt", "meta", "m"]],
+      "description": "Distort objects using a mesh as the shape of the envelope",
+      "isFavorite": false
+    },
+    {
+      "id": "06084f20-197d-4981-aae2-c3ffcaada547",
+      "hotkeys": [["alt", "meta", "c"]],
+      "description": "Distort objects using another object as the shape of the envelope",
+      "isFavorite": false
+    },
+    {
+      "id": "7359343b-31d4-4ebb-8aa6-eb2cd67bedcd",
+      "hotkeys": [["x"]],
+      "description": "Toggle between fill and stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "3d0589fe-6838-49a5-b96b-b24585e8d4a8",
+      "hotkeys": [["d"]],
+      "description": "Set fill and stroke to default",
+      "isFavorite": false
+    },
+    {
+      "id": "3cf5e9a1-6adb-4df0-980c-730f91f2e27f",
+      "hotkeys": [["shift", "x"]],
+      "description": "Swap fill and stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "d4a3614a-3835-4676-819d-4690b45abfeb",
+      "hotkeys": [["shift", "period"]],
+      "description": "Select gradient fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "02e24ea1-ba52-45c2-84e0-34c5488671d4",
+      "hotkeys": [["alt", "meta", "g"]],
+      "description": "Hide gradient annotator (when using the Gradient tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "43bd7e98-65cb-4c35-afbf-2b9adb4742d7",
+      "hotkeys": [["shift", "comma"]],
+      "description": "Select color fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "d11e4b85-9a40-4c87-bfcc-5bcdc6d24ef9",
+      "hotkeys": [["slash"]],
+      "description": "Select no stroke/fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "3e58ad4c-bafd-4228-a836-cb3bb55b4aab",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Add new fill",
+      "isFavorite": false
+    },
+    {
+      "id": "5f9179fe-dea5-424a-83c0-239b7c2362ce",
+      "hotkeys": [["meta", "alt", "slash"]],
+      "description": "Add new stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "7b927f68-9128-4e61-990c-a6b45bdd8484",
+      "hotkeys": [["alt", "meta", "x"]],
+      "description": "Make Live Paint (when using the Paint Bucket tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "263b3bbe-a925-459f-8f92-4f616b260153",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Bristle brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "8e53e492-3d4d-484f-8f3a-8f5c73d3339b",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Bristle brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "fdcdc9b7-6a89-4d05-a5ed-3091e1383703",
+      "hotkeys": [["meta", "d"]],
+      "description": "Reapply a transformation to an object",
+      "isFavorite": false
+    },
+    {
+      "id": "7be29b60-44c2-4a64-aa20-278139dac9ed",
+      "hotkeys": [["meta", "4"]],
+      "description": "Apply last pathfinder effect to the selected object",
+      "isFavorite": false
+    },
+    {
+      "id": "9e49925a-731a-4db2-bb67-42c6c09b17fe",
+      "hotkeys": [["shift", "meta", "m"]],
+      "description": "Move an object",
+      "isFavorite": false
+    },
+    {
+      "id": "083dec2b-7903-4306-a909-2c56865ab1b0",
+      "hotkeys": [["alt", "shift", "meta", "d"]],
+      "description": "Open the Transform Each dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "f1fe96b7-eae9-472e-a91a-6448772d4867",
+      "hotkeys": [["meta", "7"]],
+      "description": "Make a clipping mask",
+      "isFavorite": false
+    },
+    {
+      "id": "3eeeb9c3-7d51-4c35-84fa-8b101b88e5c0",
+      "hotkeys": [["alt", "meta", "7"]],
+      "description": "Release a clipping mask",
+      "isFavorite": false
+    },
+    {
+      "id": "39df6e0b-8a70-427d-8043-45645735d7c6",
+      "hotkeys": [["x"]],
+      "description": "Toggle between fill and stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "83d9454d-b807-4853-93c4-fa775e699f0a",
+      "hotkeys": [["d"]],
+      "description": "Set fill and stroke to default",
+      "isFavorite": false
+    },
+    {
+      "id": "316a3aa2-827e-4857-91f8-23505672a11e",
+      "hotkeys": [["shift", "x"]],
+      "description": "Swap fill and stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "26499b24-b166-4d27-8e35-55dfed4bdf5e",
+      "hotkeys": [["shift", "period"]],
+      "description": "Select gradient fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "4c74a739-4966-44d4-9950-8ffe59b9940c",
+      "hotkeys": [["alt", "meta", "g"]],
+      "description": "Hide gradient annotator (when using the Gradient tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "918ceeb6-ae39-415e-bfec-e5adcda63c4e",
+      "hotkeys": [["shift", "comma"]],
+      "description": "Select color fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "23f24d59-b88b-4f95-b154-c4e79173a0d2",
+      "hotkeys": [["slash"]],
+      "description": "Select no stroke/fill mode",
+      "isFavorite": false
+    },
+    {
+      "id": "db9717a9-f9fb-46dc-8e51-25f6f23bf600",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Add new fill",
+      "isFavorite": false
+    },
+    {
+      "id": "81163821-9033-4a5a-999d-8bf2af9f2f45",
+      "hotkeys": [["meta", "alt", "slash"]],
+      "description": "Add new stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "bc54e304-1aea-4697-bdae-4fe9ec3cdf80",
+      "hotkeys": [["alt", "meta", "x"]],
+      "description": "Make Live Paint (when using the Paint Bucket tool)",
+      "isFavorite": false
+    },
+    {
+      "id": "764c480a-c1f3-4b19-acab-4aae7392f548",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Bristle brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "cdc0e9d1-43e2-4ba3-bfea-2587b236a4f5",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Bristle brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "8659228c-af69-4896-80a7-4e5f327db3d9",
+      "hotkeys": [["backspace"]],
+      "description": "Delete selected width point",
+      "isFavorite": false
+    },
+    {
+      "id": "37e5b150-420b-408b-b3a8-573c7199d159",
+      "hotkeys": [["escape"]],
+      "description": "Deselect a width point",
+      "isFavorite": false
+    },
+    {
+      "id": "552db440-74fb-4e05-9bd7-dbcc2b38eb5c",
+      "hotkeys": [["meta", "shift", "j"]],
+      "description": "Justify text left",
+      "isFavorite": false
+    },
+    {
+      "id": "7c7dcbec-079b-461e-80ae-e627353dab6b",
+      "hotkeys": [["shift", "meta", "f"]],
+      "description": "Justify all lines",
+      "isFavorite": false
+    },
+    {
+      "id": "2178c69c-5756-4e48-8240-99e18b1d0385",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Insert soft return",
+      "isFavorite": false
+    },
+    {
+      "id": "84e0d591-47dd-47f7-b7dd-7e58d042400d",
+      "hotkeys": [["meta", "alt", "k"]],
+      "description": "Highlight kerning",
+      "isFavorite": false
+    },
+    {
+      "id": "1962480e-93de-46b3-8de0-f14f03b8f9fd",
+      "hotkeys": [["meta", "shift", "x"]],
+      "description": "Reset horizontal scale to 100%",
+      "isFavorite": false
+    },
+    {
+      "id": "2a2915ad-f19b-4aa4-800b-5220fdf78cf5",
+      "hotkeys": [["alt", "meta", "k"]],
+      "description": "Select tracking value",
+      "isFavorite": false
+    },
+    {
+      "id": "6bd3292a-6bd6-41b3-9485-49469d019af4",
+      "hotkeys": [["meta", "alt", "q"]],
+      "description": "Reset tracking/kerning to 0",
+      "isFavorite": false
+    },
+    {
+      "id": "847e0727-0840-45bf-a144-3df20059a895",
+      "hotkeys": [["shift"]],
+      "description": "Switch between Type and Vertical Type, Area Type and Vertical Area Type, and Path Type and Vertical Path Type tools",
+      "isFavorite": false
+    },
+    {
+      "id": "e82c940b-8bc4-4973-85bb-7a676e777fc5",
+      "hotkeys": [["alt"]],
+      "description": "Switch between Area Type and Path Type, Vertical Area Type and Vertical Path Type tools",
+      "isFavorite": false
+    },
+    {
+      "id": "5b36d421-2b46-4ce1-8272-52b8a757d973",
+      "hotkeys": [["shift", "meta", "o"]],
+      "description": "Create outlines",
+      "isFavorite": false
+    },
+    {
+      "id": "8d5979ee-4315-477c-823c-806cb77037dc",
+      "hotkeys": [["meta", "t"]],
+      "description": "Open the Character panel",
+      "isFavorite": false
+    },
+    {
+      "id": "6d404c5a-6964-406c-ba8b-f256482765d8",
+      "hotkeys": [["alt", "meta", "t"]],
+      "description": "Open the Paragraph panel",
+      "isFavorite": false
+    },
+    {
+      "id": "89aa287e-57cc-4288-9760-836b7dc116a9",
+      "hotkeys": [["shift", "meta", "t"]],
+      "description": "Open the Tabs panel",
+      "isFavorite": false
+    },
+    {
+      "id": "51dd6b47-d1fc-40c6-ac79-9822eefd7163",
+      "hotkeys": [["alt", "shift", "meta", "t"]],
+      "description": "Open the OpenType panel",
+      "isFavorite": false
+    },
+    {
+      "id": "db64bd2e-ecbf-469b-bbfa-aa0caf447713",
+      "hotkeys": [["alt", "8"]],
+      "description": "Insert bullets",
+      "isFavorite": false
+    },
+    {
+      "id": "82c6b168-7460-4940-b4a9-35bef1938845",
+      "hotkeys": [["alt", "g"]],
+      "description": "Insert copyright symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "50cbf630-ac8f-41e9-b1c1-454a9949bd7b",
+      "hotkeys": [["alt", "semicolon"]],
+      "description": "Insert ellipsis",
+      "isFavorite": false
+    },
+    {
+      "id": "56e2caa1-5538-43bc-9416-9c09ec4e0c29",
+      "hotkeys": [["alt", "7"]],
+      "description": "Insert paragraph symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "6a333625-0b51-4acc-9d19-359a457d2f16",
+      "hotkeys": [["alt", "6"]],
+      "description": "Insert section symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "4d7a25f0-9264-418d-ab62-1acf78b99a78",
+      "hotkeys": [["alt", "2"]],
+      "description": "Insert trademark symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "c1f14dee-c559-4dee-858b-55d766e1eb19",
+      "hotkeys": [["alt", "r"]],
+      "description": "Insert registered trademark symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "821b7b9d-238b-4cfb-ac0d-46f93193d1b2",
+      "hotkeys": [["shift", "meta", "equal"]],
+      "description": "Superscript",
+      "isFavorite": false
+    },
+    {
+      "id": "69618a92-0c6b-49e7-a3e0-ddc9762feb3d",
+      "hotkeys": [["alt", "shift", "ctrl", "equal"]],
+      "description": "Subscript",
+      "isFavorite": false
+    },
+    {
+      "id": "a82ec09f-1a8e-4111-bc2d-4795460f8b80",
+      "hotkeys": [["alt", "shift", "minus"]],
+      "description": "Insert em dash",
+      "isFavorite": false
+    },
+    {
+      "id": "81a611a1-0350-40f8-8d2c-610cb3a5f55c",
+      "hotkeys": [["alt", "minus"]],
+      "description": "Insert en dash",
+      "isFavorite": false
+    },
+    {
+      "id": "756cc597-5aa6-4070-9f54-82849cc9e8f7",
+      "hotkeys": [["shift", "meta", "minus"]],
+      "description": "Insert discretionary hyphen",
+      "isFavorite": false
+    },
+    {
+      "id": "a1bc4a64-e53a-477f-a2a0-9ac99f946099",
+      "hotkeys": [["alt", "shift", "meta", "h"]],
+      "description": "Toggle auto-hyphenation",
+      "isFavorite": false
+    },
+    {
+      "id": "26ba6f50-76c4-465a-91f6-5a407bed2224",
+      "hotkeys": [["alt", "bracketleft"]],
+      "description": "Insert double left quotation marks",
+      "isFavorite": false
+    },
+    {
+      "id": "d91a8a5e-5b7d-4a2d-bbaa-ca9303def717",
+      "hotkeys": [["alt", "shift", "bracketleft"]],
+      "description": "Insert double right quotation marks",
+      "isFavorite": false
+    },
+    {
+      "id": "78050d9b-d0cf-4665-88fb-a40b49a92987",
+      "hotkeys": [["alt", "bracketright"]],
+      "description": "Insert single left quotation marks",
+      "isFavorite": false
+    },
+    {
+      "id": "7afa83ed-ea56-468c-87d8-8d942871ce2e",
+      "hotkeys": [["alt", "shift", "bracketright"]],
+      "description": "Insert single right quotation marks",
+      "isFavorite": false
+    },
+    {
+      "id": "7aa004d9-040e-4b5f-98d1-a6e6debc9e19",
+      "hotkeys": [["shift", "meta", "m"]],
+      "description": "Insert em space",
+      "isFavorite": false
+    },
+    {
+      "id": "4287a7b1-be15-4b5a-a2c7-259cd4ab7160",
+      "hotkeys": [["shift", "meta", "n"]],
+      "description": "Insert en space",
+      "isFavorite": false
+    },
+    {
+      "id": "0f2a908f-6d11-4ac6-8912-552f913865e9",
+      "hotkeys": [["alt", "shift", "meta", "m"]],
+      "description": "Insert thin space",
+      "isFavorite": false
+    },
+    {
+      "id": "d9034b01-df08-419c-8c21-189025743008",
+      "hotkeys": [["alt", "meta", "i"]],
+      "description": "Show hidden characters",
+      "isFavorite": false
+    },
+    {
+      "id": "a26e849a-00a6-45ed-858b-49a39e2ff286",
+      "hotkeys": [["alt", "shift", "meta", "u"]],
+      "description": "Switch units of measurement",
+      "isFavorite": false
+    },
+    {
+      "id": "8a6616b1-831d-4bbe-b3c3-15343dbc57c0",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Apply value and keep text box active",
+      "isFavorite": false
+    },
+    {
+      "id": "d8a09c4b-aac7-488a-8ed0-a1dfd0cf8df4",
+      "hotkeys": [["tab"]],
+      "description": "Show/Hide all panels",
+      "isFavorite": false
+    },
+    {
+      "id": "178e3018-4fdf-4114-8401-f83aa9d72dad",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Show/Hide all panels except the Tools panel and Control panel",
+      "isFavorite": false
+    },
+    {
+      "id": "6d6abe39-25ff-46f6-8593-ed57e60d417c",
+      "hotkeys": [["meta", "t"]],
+      "description": "Open the Character panel",
+      "isFavorite": false
+    },
+    {
+      "id": "980b7320-5080-414b-a53e-4949b3fc95cb",
+      "hotkeys": [["alt", "meta", "t"]],
+      "description": "Open the Paragraph panel",
+      "isFavorite": false
+    },
+    {
+      "id": "9e7967cd-04b5-4087-a966-cf3acc2eb5ad",
+      "hotkeys": [["meta", "alt", "shift", "f"]],
+      "description": "Highlight the font name field in the Character panel",
+      "isFavorite": false
+    },
+    {
+      "id": "98342776-36f7-45ad-9632-0ae0b5474325",
+      "hotkeys": [["shift", "f3"]],
+      "description": "Open Color Guide",
+      "isFavorite": false
+    },
+    {
+      "id": "1141637c-8dde-4d0e-afc9-3c8c567350e8",
+      "hotkeys": [["meta", "alt", "g"]],
+      "description": "Show/Hide gradient arrow",
+      "isFavorite": false
+    },
+    {
+      "id": "1050ca50-d140-41ee-874e-70435a4d95b4",
+      "hotkeys": [["g"]],
+      "description": "View Gradient annotator in selected gradient filled object",
+      "isFavorite": false
+    },
+    {
+      "id": "5bd0c97c-1fb8-4079-8443-9da45f7c0d15",
+      "hotkeys": [["meta", "l"]],
+      "description": "Add a layer",
+      "isFavorite": false
+    },
+    {
+      "id": "b85b48e5-92c2-4020-bc4c-1ccd82501c0a",
+      "hotkeys": [["alt", "meta", "l"]],
+      "description": "Add a layer while opening the New Layer dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "e8b5199c-f885-4031-be19-4ba5210f2301",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Apply a value and keep focus in edit field",
+      "isFavorite": false
+    },
+    {
+      "id": "91d8581f-b80d-4f2b-870b-f443f8107aee",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Apply a value and copy object",
+      "isFavorite": false
+    },
+    {
+      "id": "af7f1ed0-88ad-4476-9fe6-a6592c21412e",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Apply a value and scale option proportionately for width or height",
+      "isFavorite": false
+    },
+    {
+      "id": "f34301f2-02d5-46b3-8426-3467aba06ccc",
+      "hotkeys": [["shift", "meta", "e"]],
+      "description": "Apply last effect to the selected object",
+      "isFavorite": false
+    },
+    {
+      "id": "a6dd46cc-6d07-49e3-96bb-c05cd76262ae",
+      "hotkeys": [["alt", "shift", "meta", "e"]],
+      "description": "Apply last effect to the selected object by adjusting the values in the effects dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "69a4a5c3-ca6f-4ed9-b438-625fab973b1a",
+      "hotkeys": [["f1"]],
+      "description": "Invoke Help",
+      "isFavorite": false
+    },
+    {
+      "id": "2c0d913e-9504-4b8f-90e3-ad93921125a3",
+      "hotkeys": [["f2"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "b8883e24-f049-4993-8bb9-58d011590372",
+      "hotkeys": [["f3"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "45826697-3bee-4d09-960b-8e0432348e55",
+      "hotkeys": [["f4"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "5fb4bb1a-6ebb-4698-9b93-91773f397401",
+      "hotkeys": [["f5"]],
+      "description": "Show/hide Brushes panel",
+      "isFavorite": false
+    },
+    {
+      "id": "52711526-a232-4a9a-bc60-38c084cc3830",
+      "hotkeys": [["f6"]],
+      "description": "Show/hide Color panel",
+      "isFavorite": false
+    },
+    {
+      "id": "a705fd7e-a907-4912-8418-84095aa3fd17",
+      "hotkeys": [["f7"]],
+      "description": "Show/hide Layers panel",
+      "isFavorite": false
+    },
+    {
+      "id": "1456c282-9456-46d9-854f-3f2d80109393",
+      "hotkeys": [["f8"]],
+      "description": "Create new symbol",
+      "isFavorite": false
+    },
+    {
+      "id": "ab904721-861d-404e-8a2a-7ee62e8e25e9",
+      "hotkeys": [["meta", "f8"]],
+      "description": "Show/hide Info panel",
+      "isFavorite": false
+    },
+    {
+      "id": "93fe7b28-27b9-4b04-91e2-d6c65e6e2d1d",
+      "hotkeys": [["meta", "f9"]],
+      "description": "Show/hide Gradient panel",
+      "isFavorite": false
+    },
+    {
+      "id": "2f76e1e2-2a4a-462d-a6b6-86c3a4da745a",
+      "hotkeys": [["meta", "f10"]],
+      "description": "Show/hide Stroke panel",
+      "isFavorite": false
+    },
+    {
+      "id": "888a97ef-479b-4927-b766-7bb1556db343",
+      "hotkeys": [["meta", "f11"]],
+      "description": "Show/hide Attributes panel",
+      "isFavorite": false
+    },
+    {
+      "id": "e4a59377-3b58-4e76-85ed-cac35422dd4c",
+      "hotkeys": [["f12"]],
+      "description": "Revert",
+      "isFavorite": false
+    },
+    {
+      "id": "3f454588-95d3-48ce-9f29-a6698221d312",
+      "hotkeys": [["shift", "f5"]],
+      "description": "Show/hide Graphic Styles panel",
+      "isFavorite": false
+    },
+    {
+      "id": "73857382-f9b8-4b43-8c36-a576f8dc25dd",
+      "hotkeys": [["shift", "f6"]],
+      "description": "Show/hide Appearance panel",
+      "isFavorite": false
+    },
+    {
+      "id": "222bbc48-8d97-4d00-9f15-fee07145a9ad",
+      "hotkeys": [["shift", "f7"]],
+      "description": "Show/hide Align panel",
+      "isFavorite": false
+    },
+    {
+      "id": "8da40386-a923-4005-9c64-6640fdac9933",
+      "hotkeys": [["shift", "f8"]],
+      "description": "Show/hide Transform panel",
+      "isFavorite": false
+    },
+    {
+      "id": "87cdd026-c223-4a89-8ef8-0c12923007a7",
+      "hotkeys": [["shift", "meta", "f9"]],
+      "description": "Show/hide Pathfinder panel",
+      "isFavorite": false
+    },
+    {
+      "id": "13279b49-99e0-4dd3-a6d4-784474652220",
+      "hotkeys": [["shift", "meta", "f10"]],
+      "description": "Show/hide Transparency panel",
+      "isFavorite": false
+    },
+    {
+      "id": "52e7644e-ff8e-45ae-a633-455a37613467",
+      "hotkeys": [["shift", "meta", "f11"]],
+      "description": "Show/hide Symbols panel",
+      "isFavorite": false
+    }
+  ]
+}

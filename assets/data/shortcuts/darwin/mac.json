@@ -1,0 +1,794 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "mac",
+    "icon": {
+      "filename": "mac.svg",
+      "isCustom": false
+    },
+    "id": "55d31071-5c82-4fa4-98ec-2e98d0425d8d",
+    "label": "Mac"
+  },
+  "shortcuts": [
+    {
+      "id": "502d22dc-8d57-4fa4-b100-d468582c237b",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut the selected item and copy it to the Clipboard.",
+      "isFavorite": false
+    },
+    {
+      "id": "1ee17388-91ad-4e73-9555-6db07afa9c8d",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy the selected item to the Clipboard. This also works for files in the Finder.",
+      "isFavorite": false
+    },
+    {
+      "id": "f295bafa-cc46-4516-8ca3-ffc44c048ce2",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste the contents of the Clipboard into the current document or app. This also works for files in the Finder.",
+      "isFavorite": false
+    },
+    {
+      "id": "7123162d-d9d4-43cb-b8ef-9254b32fb956",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo the previous command. You can then press Shift-Command-Z to Redo, reversing the undo command. In some apps, you can undo and redo multiple commands.",
+      "isFavorite": false
+    },
+    {
+      "id": "07a0eebc-3126-47e9-b693-5243ad189237",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select All items.",
+      "isFavorite": false
+    },
+    {
+      "id": "68a3bad3-cfa2-4e54-a914-42f1623ede8b",
+      "hotkeys": [["meta", "f"]],
+      "description": "Find items in a document or open a Find window.",
+      "isFavorite": false
+    },
+    {
+      "id": "8ab35368-8686-4cc1-abe4-473128cb9167",
+      "hotkeys": [["meta", "g"]],
+      "description": "Find Again: find the next occurrence of the item found previously. To find the previous occurrence, press Shift-Command-G.",
+      "isFavorite": false
+    },
+    {
+      "id": "c62f8137-d453-48f0-9370-a20ce958b8b3",
+      "hotkeys": [["meta", "h"]],
+      "description": "Hide the windows of the front app. To view the front app but hide all other apps, press Option-Command-H.",
+      "isFavorite": false
+    },
+    {
+      "id": "831930f4-67ca-4659-a538-00afbe731699",
+      "hotkeys": [["meta", "m"]],
+      "description": "Minimize the front window to the Dock. To minimize all windows of the front app, press Option-Command-M.",
+      "isFavorite": false
+    },
+    {
+      "id": "d8212751-b01a-4b45-b753-dc35f155a1fe",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open the selected item or open a dialogue to select a file to open.",
+      "isFavorite": false
+    },
+    {
+      "id": "e4e6f7b6-5f35-4657-8403-ce3a41fd19f3",
+      "hotkeys": [["meta", "p"]],
+      "description": "Print the current document.",
+      "isFavorite": false
+    },
+    {
+      "id": "5e98a843-6e08-48a2-b513-0df458bad174",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save the current document.",
+      "isFavorite": false
+    },
+    {
+      "id": "ba35361b-ca5c-40cc-96f1-2c2a8b89a173",
+      "hotkeys": [["meta", "t"]],
+      "description": "Open a new tab.",
+      "isFavorite": false
+    },
+    {
+      "id": "74412c49-307b-4027-8569-5d43a81987a1",
+      "hotkeys": [["meta", "w"]],
+      "description": "Close the front window. To close all windows of the app, press Option-Command-W.",
+      "isFavorite": false
+    },
+    {
+      "id": "f0e4e921-40da-400c-99a6-357ddcc4bcf1",
+      "hotkeys": [["alt", "meta", "escape"]],
+      "description": "Force quit an app.",
+      "isFavorite": false
+    },
+    {
+      "id": "8001743a-34ba-4cd7-a7ff-eeaec61b692f",
+      "hotkeys": [["meta", "space"]],
+      "description": "Show or hide the Spotlight search field. To perform a Spotlight search from a Finder window, press Command-Option-Space bar.",
+      "isFavorite": false
+    },
+    {
+      "id": "0fd459c1-1ee0-44f4-8b5e-ccaf6db013ea",
+      "hotkeys": [["ctrl", "meta", "space"]],
+      "description": "Show the Character Viewer, from which you can choose emoji and other symbols.",
+      "isFavorite": false
+    },
+    {
+      "id": "2c9f65f7-ab2d-4549-9cc9-94e1eabb5bc6",
+      "hotkeys": [["ctrl", "meta", "f"]],
+      "description": "Use the app in full screen, if supported by the app.",
+      "isFavorite": false
+    },
+    {
+      "id": "56b9864a-b4fe-453a-b830-371f7412512d",
+      "hotkeys": [["space"]],
+      "description": "Use Quick Look to preview the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "8ed4d360-2d0d-4308-89aa-a95e5a88deb8",
+      "hotkeys": [["meta", "tab"]],
+      "description": "Switch to the next most recently used app amongst your open apps.",
+      "isFavorite": false
+    },
+    {
+      "id": "ef2c2889-f252-46b7-9034-1cb7119e80ec",
+      "hotkeys": [["meta", "backquote"]],
+      "description": "Switch between the windows of the app you're using. (The character on the second key varies by keyboard. It's generally the key above the Tab key and to the left of the number 1.)",
+      "isFavorite": false
+    },
+    {
+      "id": "47b24d0c-e031-4c97-bb27-3c5bac86cb43",
+      "hotkeys": [["shift", "meta", "5"]],
+      "description": "In macOS Mojave or later, take a screenshot or make a screen recording. Or use Shift-Command-3 or Shift-Command-4 for screenshots.",
+      "isFavorite": false
+    },
+    {
+      "id": "b546b9bd-941a-48e2-b027-f4eac1354357",
+      "hotkeys": [["shift", "meta", "n"]],
+      "description": "Create a new folder in the Finder.",
+      "isFavorite": false
+    },
+    {
+      "id": "e221e6ee-ce20-4ae2-8388-9de43dcbc11b",
+      "hotkeys": [["meta", "comma"]],
+      "description": "Open preferences for the front app.",
+      "isFavorite": false
+    },
+    {
+      "id": "0686e897-1116-4af0-b52e-82b9dec56a47",
+      "hotkeys": [["ctrl", "meta", "q"]],
+      "description": "Lock your screen immediately.",
+      "isFavorite": false
+    },
+    {
+      "id": "914c5724-5bad-4c31-b0b9-55db8312d39b",
+      "hotkeys": [["shift", "meta", "q"]],
+      "description": "Log out of your macOS user account. You will be asked to confirm. To log out immediately without confirming, press Option-Shift-Command-Q.",
+      "isFavorite": false
+    },
+    {
+      "id": "00c5037d-c8dc-440e-ac65-37c372a01df1",
+      "hotkeys": [["meta", "d"]],
+      "description": "Duplicate the selected files.",
+      "isFavorite": false
+    },
+    {
+      "id": "795237e8-45d2-4bf2-a989-b0af3380a13d",
+      "hotkeys": [["meta", "e"]],
+      "description": "Eject the selected disk or volume.",
+      "isFavorite": false
+    },
+    {
+      "id": "9e2471b6-aaa2-42d7-afba-3e7aa3804d43",
+      "hotkeys": [["meta", "f"]],
+      "description": "Start a Spotlight search in the Finder window.",
+      "isFavorite": false
+    },
+    {
+      "id": "a5b2c397-3d55-41ad-b76c-38a9b0439670",
+      "hotkeys": [["meta", "i"]],
+      "description": "Show the Get Info window for a selected file.",
+      "isFavorite": false
+    },
+    {
+      "id": "80f91cfe-aefa-4fb0-9b69-eeb0b7414310",
+      "hotkeys": [["meta", "r"]],
+      "description": "(1) When an alias is selected in the Finder, this shows the original file for the selected alias. (2) In some apps, such as Calendar or Safari, refresh or reload the page. (3) In Software Update, check for software updates again.",
+      "isFavorite": false
+    },
+    {
+      "id": "03e696e2-fb71-4914-bb44-b6f2d3cd6cfd",
+      "hotkeys": [["shift", "meta", "c"]],
+      "description": "Open the Computer window.",
+      "isFavorite": false
+    },
+    {
+      "id": "225541a9-59b5-4521-8d0e-77bf5e354166",
+      "hotkeys": [["shift", "meta", "d"]],
+      "description": "Open the desktop folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "79083846-0e35-4384-9731-ae766230e2ec",
+      "hotkeys": [["shift", "meta", "f"]],
+      "description": "Open the Recents window, showing all of the files you have viewed or changed recently.",
+      "isFavorite": false
+    },
+    {
+      "id": "96e2b983-fe37-4448-a0c1-10a59c3d0bca",
+      "hotkeys": [["shift", "meta", "g"]],
+      "description": "Open a Go to Folder window.",
+      "isFavorite": false
+    },
+    {
+      "id": "96eadbb9-1afa-495e-b1f9-251be02a2407",
+      "hotkeys": [["shift", "meta", "h"]],
+      "description": "Open the Home folder of the current macOS user account.",
+      "isFavorite": false
+    },
+    {
+      "id": "dc188949-57bb-4df5-bbf3-ecb5e1489a6f",
+      "hotkeys": [["shift", "meta", "i"]],
+      "description": "Open iCloud Drive.",
+      "isFavorite": false
+    },
+    {
+      "id": "4b83a291-4e78-4a99-96dd-ab5a0aa604d1",
+      "hotkeys": [["shift", "meta", "k"]],
+      "description": "Open the Network window.",
+      "isFavorite": false
+    },
+    {
+      "id": "aa70e379-305a-4a8c-b591-39d170dbb258",
+      "hotkeys": [["alt", "meta", "l"]],
+      "description": "Open the Downloads folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "3a634864-d973-40c7-a05e-7f5fa4f3facc",
+      "hotkeys": [["shift", "meta", "n"]],
+      "description": "Create a new folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "5e0e9fbb-6333-4ce4-bab1-d29186b77622",
+      "hotkeys": [["shift", "meta", "o"]],
+      "description": "Open the Documents folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "bfb2695e-38da-4148-ab00-24925401880a",
+      "hotkeys": [["shift", "meta", "p"]],
+      "description": "Show or hide the Preview pane in Finder windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "da5dc155-ad2d-45de-ab99-702a031e08e2",
+      "hotkeys": [["shift", "meta", "r"]],
+      "description": "Open the AirDrop window.",
+      "isFavorite": false
+    },
+    {
+      "id": "ce91997d-959e-4479-80d3-c374ab5f3854",
+      "hotkeys": [["shift", "meta", "t"]],
+      "description": "Show or hide the tab bar in Finder windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "8fe3126e-97a7-42ed-8d92-7e021ca09a0b",
+      "hotkeys": [["ctrl", "shift", "meta", "t"]],
+      "description": "Add selected Finder item to the Dock (OS X Mavericks or later).",
+      "isFavorite": false
+    },
+    {
+      "id": "e4ddff9c-0968-4e87-96e9-66be035831f2",
+      "hotkeys": [["shift", "meta", "u"]],
+      "description": "Open the Utilities folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "0c3e9191-bea4-4c9c-843d-c8af7bd68f53",
+      "hotkeys": [["alt", "meta", "d"]],
+      "description": "Show or hide the Dock.",
+      "isFavorite": false
+    },
+    {
+      "id": "6012841a-46fa-40c0-b117-1b2e69ee9120",
+      "hotkeys": [["ctrl", "meta", "t"]],
+      "description": "Add the selected item to the sidebar (OS X Mavericks or later).",
+      "isFavorite": false
+    },
+    {
+      "id": "7aea1a09-fc8d-418d-8161-f14385caeee5",
+      "hotkeys": [["alt", "meta", "p"]],
+      "description": "Hide or show the path bar in Finder windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "4e1eaf88-0db9-42d3-9f88-d20803b15f63",
+      "hotkeys": [["alt", "meta", "s"]],
+      "description": "Hide or show the Sidebar in Finder windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "d80624c2-214e-4a85-b78a-77fe59316374",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Hide or show the status bar in Finder windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "3227a4e4-c5b2-467e-947b-fbd87186b4ac",
+      "hotkeys": [["meta", "j"]],
+      "description": "Show View Options.",
+      "isFavorite": false
+    },
+    {
+      "id": "7cf0a1c7-bc55-41a9-97b3-768fc0f90724",
+      "hotkeys": [["meta", "k"]],
+      "description": "Open the Connect to Server window.",
+      "isFavorite": false
+    },
+    {
+      "id": "2eacc869-1dd7-4a74-a67a-0c7d0cd72c6e",
+      "hotkeys": [["ctrl", "meta", "a"]],
+      "description": "Make an alias of the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "efaf61bb-eb4e-4ce4-bfc4-2c939cef3d72",
+      "hotkeys": [["meta", "n"]],
+      "description": "Open a new Finder window.",
+      "isFavorite": false
+    },
+    {
+      "id": "6fa8d714-4d9e-424d-9d91-f8d38d722eed",
+      "hotkeys": [["alt", "meta", "n"]],
+      "description": "Create a new Smart Folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "c242a64f-3214-43a5-a952-030f60df1a6e",
+      "hotkeys": [["meta", "t"]],
+      "description": "Show or hide the tab bar when a single tab is open in the current Finder window.",
+      "isFavorite": false
+    },
+    {
+      "id": "e56abb2e-080a-4d58-8e8e-641bd275739f",
+      "hotkeys": [["alt", "meta", "t"]],
+      "description": "Show or hide the toolbar when a single tab is open in the current Finder window.",
+      "isFavorite": false
+    },
+    {
+      "id": "cf202122-e13b-412c-b209-fac9e4337dea",
+      "hotkeys": [["alt", "meta", "v"]],
+      "description": "Move the files in the Clipboard from their original location to the current location.",
+      "isFavorite": false
+    },
+    {
+      "id": "201bef39-1884-4245-b247-e53a2e94687d",
+      "hotkeys": [["meta", "y"]],
+      "description": "Use Quick Look to preview the selected files.",
+      "isFavorite": false
+    },
+    {
+      "id": "13d3819d-4eb8-42d8-8a3d-37f659b5375c",
+      "hotkeys": [["alt", "meta", "y"]],
+      "description": "View a Quick Look slideshow of the selected files.",
+      "isFavorite": false
+    },
+    {
+      "id": "6810e0a2-15d6-4838-bfc6-86ff53a437a7",
+      "hotkeys": [["meta", "1"]],
+      "description": "View the items in the Finder window as icons.",
+      "isFavorite": false
+    },
+    {
+      "id": "0bf08ae8-6fb2-47dd-b150-f44a41a76fef",
+      "hotkeys": [["meta", "2"]],
+      "description": "View the items in a Finder window as a list.",
+      "isFavorite": false
+    },
+    {
+      "id": "f4b63cca-eea6-428c-ad34-b22c963781f2",
+      "hotkeys": [["meta", "3"]],
+      "description": "View the items in a Finder window in columns.",
+      "isFavorite": false
+    },
+    {
+      "id": "8c6894ef-d313-439e-ae5d-8806a6021968",
+      "hotkeys": [["meta", "4"]],
+      "description": "View the items in a Finder window in a gallery.",
+      "isFavorite": false
+    },
+    {
+      "id": "e2c19a7e-c71c-4c8c-94ee-c4d4c16c75da",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Go to the previous folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "4aace1f8-efbb-47f7-a4ce-ee0352f8ed2c",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Go to the next folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "625585df-b990-4b2a-83f8-4fa903ec61cb",
+      "hotkeys": [["meta", "up"]],
+      "description": "Open the folder that contains the current folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "53edd243-baeb-4b21-af15-7e855e7da50f",
+      "hotkeys": [["meta", "ctrl", "up"]],
+      "description": "Open the folder that contains the current folder in a new window.",
+      "isFavorite": false
+    },
+    {
+      "id": "5e7f7ffe-93ad-4a90-bcc9-761dcfa25990",
+      "hotkeys": [["meta", "down"]],
+      "description": "Open the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "0a6ac8a0-dd96-4b69-8c99-bec7aba6e89c",
+      "hotkeys": [["right"]],
+      "description": "Open the selected folder. This only works when in list view.",
+      "isFavorite": false
+    },
+    {
+      "id": "8f8d2bc9-3fa6-4c9a-b295-1f336e1a39ac",
+      "hotkeys": [["left"]],
+      "description": "Close the selected folder. This only works when in list view.",
+      "isFavorite": false
+    },
+    {
+      "id": "4a5a2c5e-9df8-4147-9351-b9ef5404859f",
+      "hotkeys": [["meta", "backspace"]],
+      "description": "Move the selected item to the Bin.",
+      "isFavorite": false
+    },
+    {
+      "id": "45758fb5-9d42-4343-b57e-029f51c3620f",
+      "hotkeys": [["shift", "meta", "backspace"]],
+      "description": "Empty the Bin.",
+      "isFavorite": false
+    },
+    {
+      "id": "2fb70ef2-15eb-4e99-be86-86d490919270",
+      "hotkeys": [["alt", "shift", "meta", "backspace"]],
+      "description": "Empty the Bin without a confirmation dialogue.",
+      "isFavorite": false
+    },
+    {
+      "id": "720973fc-88d1-4e2b-a010-4ed64dd73628",
+      "hotkeys": [["ctrl", "down"]],
+      "description": "Show all windows of the front app.",
+      "isFavorite": false
+    },
+    {
+      "id": "d4be1342-4fe5-4d57-a78c-2402ed754643",
+      "hotkeys": [["meta", "b"]],
+      "description": "Boldface the selected text, or turn boldfacing on or off.",
+      "isFavorite": false
+    },
+    {
+      "id": "054f1ca4-baed-408b-a19d-9f4211a585b5",
+      "hotkeys": [["meta", "i"]],
+      "description": "Italicise the selected text, or turn italics on or off.",
+      "isFavorite": false
+    },
+    {
+      "id": "2508f1f1-4740-47e6-9868-9379844c0d43",
+      "hotkeys": [["meta", "k"]],
+      "description": "Add a web link.",
+      "isFavorite": false
+    },
+    {
+      "id": "71109184-bbda-4a8d-b31d-a55c22457090",
+      "hotkeys": [["meta", "u"]],
+      "description": "Underline the selected text or turn underlining on or off.",
+      "isFavorite": false
+    },
+    {
+      "id": "87549f63-467d-44f9-af8c-7119e4ede355",
+      "hotkeys": [["meta", "t"]],
+      "description": "Show or hide the Fonts window.",
+      "isFavorite": false
+    },
+    {
+      "id": "1f6ca821-3952-474c-9f28-c501141f69d8",
+      "hotkeys": [["meta", "d"]],
+      "description": "Select the Desktop folder from within an Open dialogue or Save dialogue.",
+      "isFavorite": false
+    },
+    {
+      "id": "b6712f29-6500-483f-9a07-cb96ccf418bb",
+      "hotkeys": [["ctrl", "meta", "d"]],
+      "description": "Show or hide the definition of the selected word.",
+      "isFavorite": false
+    },
+    {
+      "id": "a5a238fd-db2c-49e2-b6dc-37fa683299ae",
+      "hotkeys": [["shift", "meta", "semicolon"]],
+      "description": "Display the Spelling and Grammar window.",
+      "isFavorite": false
+    },
+    {
+      "id": "76cddcde-bdd8-46a0-86b8-8f3cb5316cb5",
+      "hotkeys": [["meta", "semicolon"]],
+      "description": "Find misspelled words in the document.",
+      "isFavorite": false
+    },
+    {
+      "id": "d335ce69-23f3-4f20-a35d-d11b303d8d42",
+      "hotkeys": [["alt", "backspace"]],
+      "description": "Delete the word to the left of the insertion point.",
+      "isFavorite": false
+    },
+    {
+      "id": "03b5920a-27ba-4799-b97d-5bb7a8742746",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "Delete the character to the left of the insertion point. Or use Delete.",
+      "isFavorite": false
+    },
+    {
+      "id": "0cefcd77-fb2c-4a38-b00f-4ffc4e259766",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Delete the character to the right of the insertion point. Or use Fn-Delete.",
+      "isFavorite": false
+    },
+    {
+      "id": "5221758b-5da7-48f5-8641-55c042955bff",
+      "hotkeys": [["ctrl", "k"]],
+      "description": "Delete the text between the insertion point and the end of the line or paragraph.",
+      "isFavorite": false
+    },
+    {
+      "id": "d27004b1-43b3-4a46-aa63-2c94b73416ea",
+      "hotkeys": [["meta", "up"]],
+      "description": "Move the insertion point to the beginning of the document.",
+      "isFavorite": false
+    },
+    {
+      "id": "f0b4f7ca-563e-400f-aea1-43ebb6d841fc",
+      "hotkeys": [["meta", "down"]],
+      "description": "Move the insertion point to the end of the document.",
+      "isFavorite": false
+    },
+    {
+      "id": "c41a7563-629e-4674-9408-3b56698ae5b6",
+      "hotkeys": [["meta", "left"]],
+      "description": "Move the insertion point to the beginning of the current line.",
+      "isFavorite": false
+    },
+    {
+      "id": "1bc454f3-56c2-44c1-95bb-b2ae8ac91b64",
+      "hotkeys": [["meta", "right"]],
+      "description": "Move the insertion point to the end of the current line.",
+      "isFavorite": false
+    },
+    {
+      "id": "c6178e87-60ce-419e-9646-eb768560eff4",
+      "hotkeys": [["alt", "left"]],
+      "description": "Move the insertion point to the beginning of the previous word.",
+      "isFavorite": false
+    },
+    {
+      "id": "a87a7fd0-fee4-4a4f-9885-278720d457ee",
+      "hotkeys": [["alt", "right"]],
+      "description": "Move the insertion point to the end of the next word.",
+      "isFavorite": false
+    },
+    {
+      "id": "42669414-696d-4b01-aef2-81939cc4b0e4",
+      "hotkeys": [["shift", "meta", "up"]],
+      "description": "Select the text between the insertion point and the beginning of the document.",
+      "isFavorite": false
+    },
+    {
+      "id": "13081f13-ee16-4ec9-80f9-5506eb77d23d",
+      "hotkeys": [["shift", "meta", "down"]],
+      "description": "Select the text between the insertion point and the end of the document.",
+      "isFavorite": false
+    },
+    {
+      "id": "25c47fdb-a904-45ad-988b-6c412ac738b2",
+      "hotkeys": [["shift", "meta", "left"]],
+      "description": "Select the text between the insertion point and the beginning of the current line.",
+      "isFavorite": false
+    },
+    {
+      "id": "43d90cc6-759f-4a91-af17-46cc17e5ac8d",
+      "hotkeys": [["shift", "meta", "right"]],
+      "description": "Select the text between the insertion point and the end of the current line.",
+      "isFavorite": false
+    },
+    {
+      "id": "ed8e250e-213e-4714-8c19-11eb089dbe0f",
+      "hotkeys": [["shift", "up"]],
+      "description": "Extend text selection to the nearest character at the same horizontal location on the line above.",
+      "isFavorite": false
+    },
+    {
+      "id": "ebd5fb0f-7131-46b5-a8f9-ecb4f70870c4",
+      "hotkeys": [["shift", "down"]],
+      "description": "Extend text selection to the nearest character at the same horizontal location on the line below.",
+      "isFavorite": false
+    },
+    {
+      "id": "54decd37-fe96-4c4d-bdb5-37558dbd23ce",
+      "hotkeys": [["shift", "left"]],
+      "description": "Extend text selection one character to the left.",
+      "isFavorite": false
+    },
+    {
+      "id": "8aa2b887-894b-4b63-9143-5b408ec0f364",
+      "hotkeys": [["shift", "right"]],
+      "description": "Extend text selection one character to the right.",
+      "isFavorite": false
+    },
+    {
+      "id": "550ee754-b39d-49f7-8d08-288424e78acc",
+      "hotkeys": [["alt", "shift", "up"]],
+      "description": "Extend text selection to the beginning of the current paragraph, then to the beginning of the following paragraph if pressed again.",
+      "isFavorite": false
+    },
+    {
+      "id": "9bbb8545-2913-48f2-80a7-13f867f4fde8",
+      "hotkeys": [["alt", "shift", "down"]],
+      "description": "Extend text selection to the end of the current paragraph, then to the end of the following paragraph if pressed again.",
+      "isFavorite": false
+    },
+    {
+      "id": "b22e425d-eae6-4990-8378-698197227040",
+      "hotkeys": [["alt", "shift", "left"]],
+      "description": "Extend text selection to the beginning of the current word, then to the beginning of the following word if pressed again.",
+      "isFavorite": false
+    },
+    {
+      "id": "d7e2e551-3744-4b13-93b9-d25ac23d0d2d",
+      "hotkeys": [["alt", "shift", "right"]],
+      "description": "Extend text selection to the end of the current word, then to the end of the following word if pressed again.",
+      "isFavorite": false
+    },
+    {
+      "id": "15816f15-7399-4b8a-bd96-0157b35fae1a",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Move to the beginning of the line or paragraph.",
+      "isFavorite": false
+    },
+    {
+      "id": "dcd185e4-ed7e-48ec-aa4a-8882b98212f2",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Move to the end of a line or paragraph.",
+      "isFavorite": false
+    },
+    {
+      "id": "1af43b6f-507a-42b5-b051-30f32725b22d",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Move one character forwards.",
+      "isFavorite": false
+    },
+    {
+      "id": "f54f9180-a7c2-4997-afc3-caddb51817b5",
+      "hotkeys": [["ctrl", "b"]],
+      "description": "Move one character backwards.",
+      "isFavorite": false
+    },
+    {
+      "id": "f1b94e5b-6f80-48bc-825a-49e38642da7b",
+      "hotkeys": [["ctrl", "l"]],
+      "description": "Centre the cursor or selection in the visible area.",
+      "isFavorite": false
+    },
+    {
+      "id": "17eb5b08-6d12-430d-87fd-46e0af41b59f",
+      "hotkeys": [["ctrl", "p"]],
+      "description": "Move up one line.",
+      "isFavorite": false
+    },
+    {
+      "id": "7c0228c4-7ca9-45be-baf8-555cc187579e",
+      "hotkeys": [["ctrl", "n"]],
+      "description": "Move down one line.",
+      "isFavorite": false
+    },
+    {
+      "id": "8abdbb4e-31b6-4d79-aa82-439a68105f25",
+      "hotkeys": [["ctrl", "o"]],
+      "description": "Insert a new line after the insertion point.",
+      "isFavorite": false
+    },
+    {
+      "id": "d9365dab-5b9b-4756-b779-c2fc0ab0ca8f",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Swap the character behind the insertion point with the character in front of the insertion point.",
+      "isFavorite": false
+    },
+    {
+      "id": "a4961231-6048-40dc-b360-58905f08cb98",
+      "hotkeys": [["meta", "left", "bracketleft"]],
+      "description": "Left align.",
+      "isFavorite": false
+    },
+    {
+      "id": "d8a34544-ea04-43f4-84e2-199a7cdbff86",
+      "hotkeys": [["meta", "right", "bracketright"]],
+      "description": "Right align.",
+      "isFavorite": false
+    },
+    {
+      "id": "cb2a79d4-8602-4e72-8b4b-4acfdc14ec4c",
+      "hotkeys": [["shift", "meta", "backslash"]],
+      "description": "Centre align.",
+      "isFavorite": false
+    },
+    {
+      "id": "9f87a242-537e-4446-aa41-1bfcfe8c9938",
+      "hotkeys": [["alt", "meta", "f"]],
+      "description": "Go to the search field.",
+      "isFavorite": false
+    },
+    {
+      "id": "a6b3ed66-f48a-41ad-ad9b-b3ac5bdc271b",
+      "hotkeys": [["alt", "meta", "t"]],
+      "description": "Show or hide a toolbar in the app.",
+      "isFavorite": false
+    },
+    {
+      "id": "a94e3c87-062d-40ff-a4df-5413b35d4920",
+      "hotkeys": [["alt", "meta", "c"]],
+      "description": "Copy Style: Copy the formatting settings of the selected item to the Clipboard.",
+      "isFavorite": false
+    },
+    {
+      "id": "820b9cb6-cb98-4289-a72e-7013060755ed",
+      "hotkeys": [["alt", "meta", "v"]],
+      "description": "Paste Style: Apply the copied style to the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "ea4138ae-90ea-4516-a24e-e9ae1cd9fb91",
+      "hotkeys": [["alt", "shift", "meta", "v"]],
+      "description": "Paste and Match Style: Apply the style of the surrounding content to the item pasted within that content.",
+      "isFavorite": false
+    },
+    {
+      "id": "05daa8c6-474b-407a-8026-3662e5742305",
+      "hotkeys": [["alt", "meta", "i"]],
+      "description": "Show or hide the inspector window.",
+      "isFavorite": false
+    },
+    {
+      "id": "760c274e-dd46-42df-b1bf-b5be84bee837",
+      "hotkeys": [["shift", "meta", "p"]],
+      "description": "Page setup: Display a window for selecting document settings.",
+      "isFavorite": false
+    },
+    {
+      "id": "d58bce69-62c2-4892-ab74-b40215c05316",
+      "hotkeys": [["shift", "meta", "s"]],
+      "description": "Display the Save As dialogue or duplicate the current document.",
+      "isFavorite": false
+    },
+    {
+      "id": "87097a99-6a49-4463-8afc-d7e71010629b",
+      "hotkeys": [["shift", "meta", "minus"]],
+      "description": "Decrease the size of the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "22558aa2-15d2-4b69-b3b7-23173a2901e9",
+      "hotkeys": [["shift", "meta", "equal"]],
+      "description": "Increase the size of the selected item. Command–Equal sign (=) performs the same function.",
+      "isFavorite": false
+    },
+    {
+      "id": "a3aff070-a7ec-47fd-91b9-37ae1ae75057",
+      "hotkeys": [["shift", "meta", "slash"]],
+      "description": "Open the Help menu.",
+      "isFavorite": false
+    }
+  ]
+}

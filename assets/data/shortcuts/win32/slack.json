@@ -6,529 +6,523 @@
       "filename": "slack.svg",
       "isCustom": false
     },
-    "id": "004a0259-c436-4af7-858e-b77bfed073bc",
+    "id": "6d09dd9c-7e0c-4a94-a65b-fdba6ba764ab",
     "label": "Slack"
   },
   "shortcuts": [
     {
-      "id": "2a869fc1-eb1d-4ef6-b30b-2e9ee100f5f5",
-      "hotkeys": [["meta", "n"]],
+      "id": "21d5d27f-2603-4ff0-975e-d67a6f83e38d",
+      "hotkeys": [["ctrl", "n"]],
       "description": "Compose a new message",
       "isFavorite": false
     },
     {
-      "id": "a424879a-1759-445f-aa89-f234c2129dc8",
-      "hotkeys": [["meta", "z"]],
+      "id": "ded6acd9-c304-4a7b-bbc6-09df0efee8cd",
+      "hotkeys": [["ctrl", "z"]],
       "description": "Unsend a message",
       "isFavorite": false
     },
     {
-      "id": "e96bf011-254e-4221-a1da-a0de51ae74cf",
-      "hotkeys": [["meta", "shift", "y"]],
+      "id": "1992e25b-905d-467b-a865-b80256654d73",
+      "hotkeys": [["ctrl", "shift", "y"]],
       "description": "Set your status",
       "isFavorite": false
     },
     {
-      "id": "e1695ad4-f9a4-42f6-91eb-09cc0434acdc",
-      "hotkeys": [["meta", "comma"]],
+      "id": "a7694bdc-8df5-474d-8619-ff03d5364cdd",
+      "hotkeys": [["ctrl", "comma"]],
       "description": "Open your preferences**",
       "isFavorite": false
     },
     {
-      "id": "a2c06c4c-c96d-4329-a3cc-7c63e436d7d0",
-      "hotkeys": [["meta", "shift", "d"]],
+      "id": "e6114a64-2636-4dad-a0e6-cc376b8b0146",
+      "hotkeys": [["ctrl", "shift", "d"]],
       "description": "Show or hide the left sidebar",
       "isFavorite": false
     },
     {
-      "id": "216abfe3-9d6c-4fba-aba5-4de0a5dea491",
-      "hotkeys": [["meta", "period"]],
+      "id": "c48560ac-a955-4e8b-bd29-13dbb265b4bc",
+      "hotkeys": [["ctrl", "period"]],
       "description": "Hide the right sidebar",
       "isFavorite": false
     },
     {
-      "id": "ccf84101-cf0f-4900-851c-037648501119",
-      "hotkeys": [["meta", "shift", "n"]],
+      "id": "a4fae00d-2d1c-429c-b40b-d21b29bf06b9",
+      "hotkeys": [["ctrl", "shift", "n"]],
       "description": "Create a new canvas",
       "isFavorite": false
     },
     {
-      "id": "d2a02e9c-d0a3-4a34-a8da-dae750039f64",
-      "hotkeys": [["meta", "u"]],
+      "id": "fa8e6637-a57d-44ff-8ae3-bb2173f38765",
+      "hotkeys": [["ctrl", "u"]],
       "description": "Upload a file",
       "isFavorite": false
     },
     {
-      "id": "00ebe54c-54dc-459f-b95e-144261b9d8e3",
-      "hotkeys": [["meta", "shift", "j"]],
+      "id": "b41003b7-7930-46c3-8bc4-3e9d9be51334",
+      "hotkeys": [["ctrl", "shift", "j"]],
       "description": "View all downloaded files",
       "isFavorite": false
     },
     {
-      "id": "e4e23d01-2a4f-4bb7-9720-7280d9da8710",
-      "hotkeys": [["meta", "shift", "enter"]],
+      "id": "923a32f5-d407-43d1-906d-87de7dd63e15",
+      "hotkeys": [["ctrl", "shift", "enter"]],
       "description": "Create a new snippet",
       "isFavorite": false
     },
     {
-      "id": "ec0fb717-e8c7-4151-b13b-eeedbb90aa6a",
-      "hotkeys": [["meta", "shift", "backslash"]],
-      "description": "Add an emoji reaction to a message*",
-      "isFavorite": false
-    },
-    {
-      "id": "1969aa07-125c-44f2-8d45-5a86df8d1106",
-      "hotkeys": [["meta", "shift", "e"]],
+      "id": "07720a3a-2fc3-49ba-ab0e-847d8017749e",
+      "hotkeys": [["ctrl", "shift", "e"]],
       "description": "Open the directory",
       "isFavorite": false
     },
     {
-      "id": "b0f56b3c-9c11-46da-8584-7525aa5272ec",
-      "hotkeys": [["meta", "g"]],
+      "id": "0aee5284-90d2-4427-ba02-b08fc4bace43",
+      "hotkeys": [["ctrl", "g"]],
       "description": "Start a search",
       "isFavorite": false
     },
     {
-      "id": "6a451278-9905-4740-8a8e-77fb7d933f8b",
-      "hotkeys": [["meta", "f"]],
+      "id": "5599c262-1497-430d-8e3e-4e0dcff2ff10",
+      "hotkeys": [["ctrl", "f"]],
       "description": "Search in the current conversation",
       "isFavorite": false
     },
     {
-      "id": "6add6fab-7a24-4d36-86f6-895b768f7252",
-      "hotkeys": [["meta", "shift", "h"]],
+      "id": "4c8c1a87-2809-4e71-97c1-5918903bd219",
+      "hotkeys": [["ctrl", "shift", "h"]],
       "description": "Start, join, leave or end a huddle",
       "isFavorite": false
     },
     {
-      "id": "e51cb6c0-62b2-4efb-8f77-79e96e9ef266",
-      "hotkeys": [["meta", "shift", "space"]],
+      "id": "e961f125-befa-45eb-a772-802aa8a8885f",
+      "hotkeys": [["ctrl", "shift", "space"]],
       "description": "Toggle mute on a huddle",
       "isFavorite": false
     },
     {
-      "id": "8c563b16-d049-4c46-9f04-659df454cb7d",
-      "hotkeys": [["f1"]],
-      "description": "Open Help",
-      "isFavorite": false
-    },
-    {
-      "id": "f8ba66c1-ed7c-4852-9ee4-c1764928db68",
-      "hotkeys": [["ctrl", "meta", "f"]],
+      "id": "d327d32d-d0dc-4c20-81bd-215f88837f43",
+      "hotkeys": [["f11"]],
       "description": "Toggle full-screen view",
       "isFavorite": false
     },
     {
-      "id": "724b3dbc-ce6a-4f22-a8e1-582356d8bacc",
-      "hotkeys": [["meta", "shift", "w"]],
+      "id": "8bd20b48-5e46-40d4-b088-6787a491fc63",
+      "hotkeys": [["ctrl", "shift", "w"]],
       "description": "Reopen last closed window",
       "isFavorite": false
     },
     {
-      "id": "345635eb-78db-4e51-9f50-a6ba08a38ef9",
-      "hotkeys": [["meta", "k", "meta", "t"]],
+      "id": "12d810fb-4fba-4211-97fc-0edd66eb3691",
+      "hotkeys": [["ctrl", "k", "ctrl", "t"]],
       "description": "Jump to a conversation",
       "isFavorite": false
     },
     {
-      "id": "b5086e34-8ec7-4bf8-9154-bf81db64abb9",
-      "hotkeys": [["meta", "j"]],
+      "id": "2cbfb803-8c50-4d20-b028-7f57871bcad9",
+      "hotkeys": [["ctrl", "j"]],
       "description": "Jump to the most recent unread message in a conversation",
       "isFavorite": false
     },
     {
-      "id": "7ca87526-f39a-4edf-868f-21848fb65fbf",
+      "id": "51c78ee6-1b06-4bc5-a677-d0ac493ed2b9",
       "hotkeys": [["alt", "shift", "up"]],
-      "description": "Jump to previous unread channel or direct message (DM)",
+      "description": "Jump to previous unread channel or DM",
       "isFavorite": false
     },
     {
-      "id": "10a912c2-3d08-4f73-a85d-77d469f7a4a4",
+      "id": "76d2a817-7481-4442-921b-a7e5bbcf729a",
       "hotkeys": [["alt", "shift", "down"]],
       "description": "Jump to next unread channel or DM",
       "isFavorite": false
     },
     {
-      "id": "94364dad-ea4c-4f1f-90e3-55b7d4465eff",
-      "hotkeys": [["meta", "bracketleft"]],
+      "id": "c3f0d9d0-71ca-41ae-9c93-f6ea3839802e",
+      "hotkeys": [["alt", "left"]],
       "description": "Go back in history",
       "isFavorite": false
     },
     {
-      "id": "a27b7118-1a2b-42e5-bd97-b73ad0df13d3",
-      "hotkeys": [["meta", "bracketright"]],
+      "id": "49ccce7b-2698-4f57-b359-b0c25eb3e92a",
+      "hotkeys": [["alt", "right"]],
       "description": "Go forwards in history",
       "isFavorite": false
     },
     {
-      "id": "18167d92-79ab-45c6-b4b0-b8aeb51cce4a",
-      "hotkeys": [["meta", "shift", "t"]],
+      "id": "be0bbce9-5df8-472a-b6cd-e68ff921bd2d",
+      "hotkeys": [["ctrl", "shift", "t"]],
       "description": "Open the Threads view**",
       "isFavorite": false
     },
     {
-      "id": "b238dc34-6748-4221-a675-53498e0ffd38",
-      "hotkeys": [["meta", "shift", "k"]],
-      "description": "Browse DMs",
+      "id": "fc3b14d1-47c4-4db5-8d6b-8c6a1c74640f",
+      "hotkeys": [["ctrl", "shift", "k"]],
+      "description": "Browse direct messages",
       "isFavorite": false
     },
     {
-      "id": "17b2004f-aaa1-432f-8448-c300a1124cff",
-      "hotkeys": [["meta", "shift", "m"]],
-      "description": "View Mentions & reactions**",
+      "id": "8d6b8d2f-37a5-430d-b347-4efdbb97a158",
+      "hotkeys": [["ctrl", "shift", "m"]],
+      "description": "View mentions and reactions**",
       "isFavorite": false
     },
     {
-      "id": "c355b586-c4e5-48b5-a38d-54b77540e82c",
-      "hotkeys": [["meta", "shift", "l"]],
+      "id": "e8150e49-790c-49de-8e24-b8c4dff0ec08",
+      "hotkeys": [["ctrl", "shift", "l"]],
       "description": "Browse channels",
       "isFavorite": false
     },
     {
-      "id": "6a0fdba9-f4bc-4395-b718-ab5bf8160a82",
-      "hotkeys": [["meta", "shift", "i"]],
+      "id": "9beef573-dbee-4c8f-9b57-cec132a503b5",
+      "hotkeys": [["ctrl", "shift", "i"]],
       "description": "Open conversation details",
       "isFavorite": false
     },
     {
-      "id": "cfc2b334-4782-4c22-957a-ca28bb80c670",
-      "hotkeys": [["meta", "alt", "period"]],
+      "id": "1dcee6d2-d760-4d1e-97b3-164245ef95e7",
+      "hotkeys": [["ctrl", "alt", "period"]],
       "description": "Open a conversation's canvas",
       "isFavorite": false
     },
     {
-      "id": "cb176795-f94d-4e27-b1cb-fb13e0371794",
+      "id": "a4a7dc5f-40dd-4496-9beb-48d31e9edba4",
       "hotkeys": [["f6"]],
       "description": "Move focus to the next section",
       "isFavorite": false
     },
     {
-      "id": "c2c6d702-ee50-4725-8d29-cdc5e9ff4353",
+      "id": "c67fd1a1-9cc4-43ed-a795-b1a5751c4f1a",
       "hotkeys": [["shift", "f6"]],
       "description": "Move focus to the previous section",
       "isFavorite": false
     },
     {
-      "id": "1818539d-aafd-4f51-948a-9d11e5cf61c2",
+      "id": "fde6549e-63ee-427d-b18b-6a6c287eae3a",
       "hotkeys": [["escape"]],
       "description": "Mark all messages in current conversation as read",
       "isFavorite": false
     },
     {
-      "id": "1566d435-de11-45f0-8a9c-ac57155eeba8",
+      "id": "d2094542-2f99-4676-a2f6-cec24f21d261",
       "hotkeys": [["shift", "escape"]],
       "description": "Mark all messages as read",
       "isFavorite": false
     },
     {
-      "id": "aa2a42a3-3890-4a80-9716-5f4ead31c7e1",
-      "hotkeys": [["meta", "shift", "a"]],
+      "id": "8f3b5816-a7f4-466b-ab88-dbb8d2c347ca",
+      "hotkeys": [["ctrl", "shift", "a"]],
       "description": "Open the All unread view",
       "isFavorite": false
     },
     {
-      "id": "6a8584d1-de9a-448d-9a6d-e418ded19baa",
+      "id": "b839e81b-d3bc-4155-a200-280f59267789",
       "hotkeys": [["up", "down"]],
       "description": "Move between messages",
       "isFavorite": false
     },
     {
-      "id": "d728fb14-9ab0-48fe-a5bb-5de121da13fd",
+      "id": "c38d229b-5442-4780-a4c1-1cc2b0d3dc2c",
       "hotkeys": [["escape"]],
       "description": "Mark a group of messages as unread",
       "isFavorite": false
     },
     {
-      "id": "78f80a43-73e2-4939-8efb-61931d24b898",
+      "id": "df287c6d-a4cc-4386-90d7-2b8ac6654a04",
       "hotkeys": [["left", "right"]],
       "description": "Open or collapse a group of messages",
       "isFavorite": false
     },
     {
-      "id": "d9e45fdd-f490-4367-8fcc-d1f268440db3",
-      "hotkeys": [["meta", "shift", "bracketleft"]],
+      "id": "9a8d082d-22aa-46c6-94ca-d75ced3050c8",
+      "hotkeys": [["ctrl", "shift", "tab"]],
       "description": "Switch to previous workspace",
       "isFavorite": false
     },
     {
-      "id": "8a9abeb9-e555-4d2d-a6d9-1a74ecdc95d9",
-      "hotkeys": [["meta", "shift", "bracketright"]],
+      "id": "ec10cd50-2532-4e00-ba2c-ca92ebd64805",
+      "hotkeys": [["ctrl", "tab"]],
       "description": "Switch to next workspace",
       "isFavorite": false
     },
     {
-      "id": "52226c51-d679-4e89-8b10-046c5fdf6242",
-      "hotkeys": [["meta", "1"]],
-      "description": "Switch to a specific workspace (hover over a workspace icon in the left sidebar of the Slack desktop app to see its assigned number)",
+      "id": "ef9f229f-a50f-4f86-a1fa-cad7362df48b",
+      "hotkeys": [["ctrl", "1"]],
+      "description": "Switch to a specific workspace (see assigned number under the workspace icon in the left sidebar of the Slack desktop app)",
       "isFavorite": false
     },
     {
-      "id": "90af25e5-8219-4d07-a78d-e2bc249a2827",
-      "hotkeys": [["meta", "2"]],
-      "description": "Switch to a specific workspace (hover over a workspace icon in the left sidebar of the Slack desktop app to see its assigned number)",
+      "id": "79745c39-d439-43e6-8c50-bf776335d03f",
+      "hotkeys": [["ctrl", "2"]],
+      "description": "Switch to a specific workspace (see assigned number under the workspace icon in the left sidebar of the Slack desktop app)",
       "isFavorite": false
     },
     {
-      "id": "0c252f03-2573-4e69-9d41-c667a0ecf376",
-      "hotkeys": [["meta", "3"]],
-      "description": "Switch to a specific workspace (hover over a workspace icon in the left sidebar of the Slack desktop app to see its assigned number)",
+      "id": "7cac07d9-da3e-4b33-8e65-2aef4d118a46",
+      "hotkeys": [["ctrl", "3"]],
+      "description": "Switch to a specific workspace (see assigned number under the workspace icon in the left sidebar of the Slack desktop app)",
       "isFavorite": false
     },
     {
-      "id": "eaa872b3-16e3-492b-bc99-7b1d44b7df0e",
+      "id": "2c41a190-1f02-44ef-a227-245e6f5703f8",
       "hotkeys": [["e"]],
       "description": "Edit a message that you sent",
       "isFavorite": false
     },
     {
-      "id": "d9af2f7e-28a0-439a-ad33-5f225b901db2",
+      "id": "c37f06cd-cc1b-496b-9ad9-5d2d921d7414",
       "hotkeys": [["backspace"]],
       "description": "Delete a message that you sent",
       "isFavorite": false
     },
     {
-      "id": "02ace905-f893-4713-8b15-c27c89f68273",
+      "id": "f115f508-8c43-4d8e-bd60-0d489f25c612",
       "hotkeys": [["t", "right"]],
       "description": "Open or reply to a thread",
       "isFavorite": false
     },
     {
-      "id": "f1ebc8e3-488e-422c-89c0-066feca0fa0f",
+      "id": "7da4abac-5076-45ef-8ae1-6ec9a2f1a699",
       "hotkeys": [["f"]],
       "description": "Forward a message",
       "isFavorite": false
     },
     {
-      "id": "7e50d348-fdaa-473f-8e43-879a59d41e07",
+      "id": "5cb73551-61a8-4420-9fe2-e0cadf95a8e9",
       "hotkeys": [["p"]],
       "description": "Pin or unpin a message",
       "isFavorite": false
     },
     {
-      "id": "cfdc8e14-55c7-41f3-b973-903e11e33cc6",
+      "id": "c42e647f-99eb-4ed7-99b5-043319de1d6f",
       "hotkeys": [["a"]],
       "description": "Save a message (or remove a message from Later)",
       "isFavorite": false
     },
     {
-      "id": "4c66524b-5fcf-4ba6-a0c9-3d8c2052f4cf",
+      "id": "fbfcf4d9-d9d9-491a-99f2-e01890dd5682",
       "hotkeys": [["u"]],
       "description": "Mark all messages above the one in focus as unread",
       "isFavorite": false
     },
     {
-      "id": "86a8c381-a839-4ebf-8426-308bfc49e72a",
+      "id": "03b898c8-1485-4611-9ab9-9cea856806f7",
       "hotkeys": [["m"]],
       "description": "Create a reminder about a message",
       "isFavorite": false
     },
     {
-      "id": "1be2cb64-6cd7-499c-9df8-08469e57da6d",
+      "id": "bfae3789-3753-4082-8d86-58a86c928127",
       "hotkeys": [["r"]],
       "description": "Add an emoji reaction to a message",
       "isFavorite": false
     },
     {
-      "id": "35590fa5-b9a4-4544-b3de-929bc1dbeb45",
+      "id": "03f24618-c505-4810-9c55-5c0499ae9ca8",
       "hotkeys": [["shift", "up"]],
       "description": "Select text to beginning of current line",
       "isFavorite": false
     },
     {
-      "id": "9585b0af-2cd8-4203-b007-9658247efe47",
+      "id": "cd04a937-7e07-48a5-9e9d-20d54918cf18",
       "hotkeys": [["shift", "down"]],
       "description": "Select text to end of current line",
       "isFavorite": false
     },
     {
-      "id": "02945098-e3d1-406e-b0b6-ed931f110950",
+      "id": "acdcc3d4-a712-42c9-96df-ab3d75fb3946",
       "hotkeys": [["shift", "enter"]],
       "description": "Create a new line",
       "isFavorite": false
     },
     {
-      "id": "0b6b4e3b-d643-422a-8d53-706b2678f222",
-      "hotkeys": [["meta", "b"]],
+      "id": "691c7af8-8173-4545-9042-4d0cfa656803",
+      "hotkeys": [["ctrl", "b"]],
       "description": "Bold selected text",
       "isFavorite": false
     },
     {
-      "id": "7e1f2fbb-67b3-4755-a29a-a0ca63b4195d",
-      "hotkeys": [["meta", "i"]],
+      "id": "a92626e1-6156-4f10-9cbd-0715fca77b39",
+      "hotkeys": [["ctrl", "i"]],
       "description": "Italicise selected text",
       "isFavorite": false
     },
     {
-      "id": "e0aa37de-fda6-4f36-ad53-9ae55890c796",
-      "hotkeys": [["meta", "shift", "x"]],
+      "id": "8b10dd79-82f2-4ed0-8fcf-e6e418c9084a",
+      "hotkeys": [["ctrl", "shift", "x"]],
       "description": "Cross out selected text (strikethrough)",
       "isFavorite": false
     },
     {
-      "id": "e0677937-7296-4bfe-963a-47e5dd9e1ce5",
-      "hotkeys": [["meta", "shift", "u"]],
+      "id": "c8d81129-16d8-4034-a017-0f83e56e2173",
+      "hotkeys": [["ctrl", "shift", "u"]],
       "description": "Hyperlink selected text",
       "isFavorite": false
     },
     {
-      "id": "58698a96-f4b7-48e6-820e-36aa58d62ba1",
-      "hotkeys": [["meta", "shift", "9"]],
+      "id": "74e0ec42-9d66-44c8-ba1b-32df1e518300",
+      "hotkeys": [["ctrl", "shift", "9"]],
       "description": "Quote selected text",
       "isFavorite": false
     },
     {
-      "id": "59e561c6-1d57-49cb-b06e-21933d205fcc",
-      "hotkeys": [["meta", "shift", "c"]],
+      "id": "135141e3-7292-4ef5-9c20-a0dc166cd90c",
+      "hotkeys": [["ctrl", "shift", "c"]],
       "description": "Code selected text",
       "isFavorite": false
     },
     {
-      "id": "11c7db11-4e45-4bcf-9060-b66ce58fa60d",
-      "hotkeys": [["meta", "alt", "shift", "c"]],
+      "id": "95d0c858-932c-40f2-b603-ad265dff2780",
+      "hotkeys": [["ctrl", "alt", "shift", "c"]],
       "description": "Codeblock selected text",
       "isFavorite": false
     },
     {
-      "id": "eca51f5e-b3ce-4f61-8257-1726d0b85cf0",
-      "hotkeys": [["meta", "shift", "8"]],
+      "id": "4808341b-47ce-414b-9747-b96223f928a3",
+      "hotkeys": [["ctrl", "shift", "8"]],
       "description": "Format selected text as a bulleted list",
       "isFavorite": false
     },
     {
-      "id": "6eadcd1e-a5cd-4c7b-b4fb-497d9424c575",
-      "hotkeys": [["meta", "shift", "7"]],
+      "id": "b9bff893-33e8-4b53-a2c2-2b3e12d5b0b6",
+      "hotkeys": [["ctrl", "shift", "7"]],
       "description": "Format selected text as a numbered list",
       "isFavorite": false
     },
     {
-      "id": "69e69955-756b-4fce-9c83-fa35ef555696",
-      "hotkeys": [["meta", "shift", "f"]],
+      "id": "b962ca05-136b-45b2-9e5a-f1a17f3dfc17",
+      "hotkeys": [["ctrl", "shift", "f"]],
       "description": "Apply markdown formatting",
       "isFavorite": false
     },
     {
-      "id": "fb56c2c2-173b-4713-a5ba-239af4a75163",
-      "hotkeys": [["meta", "z"]],
+      "id": "d03378f7-8e93-4259-a108-33c707fb80b1",
+      "hotkeys": [["ctrl", "z"]],
       "description": "Undo formatting",
       "isFavorite": false
     },
     {
-      "id": "a8e33bd3-d81f-43d4-8f55-db6ab6f7b515",
-      "hotkeys": [["meta", "alt", "0"]],
+      "id": "65acc59d-79d3-4337-ad55-2e575c5843f6",
+      "hotkeys": [["ctrl", "shift", "backslash"]],
+      "description": "Add an emoji reaction to a message*",
+      "isFavorite": false
+    },
+    {
+      "id": "8fed7d00-9551-44b8-af1c-393889493f60",
+      "hotkeys": [["ctrl", "alt", "0"]],
       "description": "Format selected text as paragraph",
       "isFavorite": false
     },
     {
-      "id": "4dd88d9c-2474-410d-9a42-dc2fd3982eed",
-      "hotkeys": [["meta", "alt", "1"]],
+      "id": "2fb06246-c959-4774-96b6-598026452972",
+      "hotkeys": [["ctrl", "alt", "1"]],
       "description": "Format selected text as big heading",
       "isFavorite": false
     },
     {
-      "id": "9894db94-9cc9-436f-827c-75e29c661e1e",
-      "hotkeys": [["meta", "alt", "2"]],
+      "id": "6f317eda-5e70-4828-996d-99d3871efb7e",
+      "hotkeys": [["ctrl", "alt", "2"]],
       "description": "Format selected text as medium heading",
       "isFavorite": false
     },
     {
-      "id": "7833223b-41d6-4583-832e-4a7d6cdeb0ab",
-      "hotkeys": [["meta", "alt", "3"]],
+      "id": "99e48f7a-e938-4d49-9e2b-7fa4f60bcd6c",
+      "hotkeys": [["ctrl", "alt", "3"]],
       "description": "Format selected text as a small heading",
       "isFavorite": false
     },
     {
-      "id": "403d2802-812c-460c-81d1-de1ad70874c2",
-      "hotkeys": [["meta", "shift", "0"]],
+      "id": "9df6f80f-96e3-4034-8eee-3893097bfd4a",
+      "hotkeys": [["ctrl", "shift", "0"]],
       "description": "Format selected text as checklist",
       "isFavorite": false
     },
     {
-      "id": "2d5721d8-6ae4-48d7-a4f3-97a4d0efed3c",
-      "hotkeys": [["meta", "shift", "8"]],
+      "id": "5d4d9d8e-01f8-4557-aef5-c6d7c4182eb9",
+      "hotkeys": [["ctrl", "shift", "8"]],
       "description": "Format selected text as a bulleted list",
       "isFavorite": false
     },
     {
-      "id": "ac5ddc25-3a4c-4866-a439-394a36e61dee",
-      "hotkeys": [["meta", "shift", "7"]],
+      "id": "39547897-7dab-4537-88ca-97d225b75ab5",
+      "hotkeys": [["ctrl", "shift", "7"]],
       "description": "Format selected text as a numbered list",
       "isFavorite": false
     },
     {
-      "id": "9ad57e8e-1a09-4ff0-a624-75a121d0123b",
+      "id": "2f274be3-df0e-43ad-80ba-35807b4ef620",
       "hotkeys": [["ctrl", "backquote"]],
       "description": "Toggle heading and list styles",
       "isFavorite": false
     },
     {
-      "id": "ad69844a-e634-48e7-8b77-bda2cddcd753",
-      "hotkeys": [["meta", "alt", "t"]],
+      "id": "c29a69dc-7060-4996-921a-f3dfad386cec",
+      "hotkeys": [["ctrl", "alt", "t"]],
       "description": "View comment thread",
       "isFavorite": false
     },
     {
-      "id": "af9f8b46-b7b9-4932-b305-7ffa34d45de3",
-      "hotkeys": [["meta", "alt", "r"]],
+      "id": "5685c72f-39c5-46c0-bfb3-174a0a6b7899",
+      "hotkeys": [["ctrl", "alt", "r"]],
       "description": "Show reader or edit view",
       "isFavorite": false
     },
     {
-      "id": "723c82af-21c2-4291-aeb9-a41e609a2bd9",
-      "hotkeys": [["meta", "shift", "slash"]],
+      "id": "7a7d3fe9-2035-4648-8369-32a7b6bbdc64",
+      "hotkeys": [["shift", "f10"]],
       "description": "Open context menu",
       "isFavorite": false
     },
     {
-      "id": "caf7297d-ce10-423b-b883-9dfd5b196fcc",
-      "hotkeys": [["meta", "f"]],
+      "id": "2f95d49e-dc29-46d7-9892-6d0636d3acdf",
+      "hotkeys": [["ctrl", "f"]],
       "description": "Find text in the canvas",
       "isFavorite": false
     },
     {
-      "id": "3db6501b-4f1d-4db8-bc66-04e70805e71b",
-      "hotkeys": [["meta", "g"]],
+      "id": "807c5e5e-3774-45b4-8a1d-03fb8c512639",
+      "hotkeys": [["ctrl", "g"]],
       "description": "Find next",
       "isFavorite": false
     },
     {
-      "id": "fac807df-458b-4759-9004-355e13a871f2",
-      "hotkeys": [["meta", "shift", "g"]],
+      "id": "5b808902-1660-4637-921d-ec53ec2e5606",
+      "hotkeys": [["ctrl", "shift", "g"]],
       "description": "Find previous",
       "isFavorite": false
     },
     {
-      "id": "2c3f5951-8d77-4c5e-ab73-54af97a473a3",
-      "hotkeys": [["meta", "shift", "h"]],
+      "id": "de2379bd-9d37-4e35-aca8-41a02056e1f0",
+      "hotkeys": [["ctrl", "shift", "h"]],
       "description": "Find and replace",
       "isFavorite": false
     },
     {
-      "id": "f29e15cf-49a4-4d9a-a1d6-c0b5e5d4d0a4",
+      "id": "51c5208d-226b-4f2f-bc60-6b28ce9c2c30",
       "hotkeys": [["ctrl", "alt", "q"]],
       "description": "Copy anchor link to section",
       "isFavorite": false
     },
     {
-      "id": "a5ebc45b-dc0c-4c84-b832-89af2385cceb",
-      "hotkeys": [["meta", "z"]],
+      "id": "f41b4aa3-b67f-4c21-bc16-a7078053043a",
+      "hotkeys": [["ctrl", "z"]],
       "description": "Undo last action",
       "isFavorite": false
     },
     {
-      "id": "6af78f84-4b14-4018-9211-28770640f521",
-      "hotkeys": [["meta", "shift", "z"]],
+      "id": "6a699157-0433-45d8-915e-e50ed408c6fe",
+      "hotkeys": [["ctrl", "shift", "z"]],
       "description": "Redo last action",
       "isFavorite": false
     },
     {
-      "id": "48f2260e-af99-41d4-a650-b0a83b395d10",
-      "hotkeys": [["meta", "alt", "up"]],
+      "id": "1d10f5cb-291c-4b5c-b53e-b369d6b8508a",
+      "hotkeys": [["ctrl", "alt", "up"]],
       "description": "Move item in a formatted list up",
       "isFavorite": false
     },
     {
-      "id": "6bdb6c89-e4ef-414c-8ce5-28de57c70ab6",
-      "hotkeys": [["meta", "alt", "down"]],
+      "id": "8768759e-0f92-4a38-a52b-edf1129d7c69",
+      "hotkeys": [["ctrl", "alt", "down"]],
       "description": "Move item in a formatted list down",
       "isFavorite": false
     }

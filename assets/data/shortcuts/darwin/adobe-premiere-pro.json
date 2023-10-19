@@ -1,0 +1,1502 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobe-premiere-pro",
+    "icon": {
+      "filename": "premiere.svg",
+      "isCustom": false
+    },
+    "id": "8afbc936-462f-43c9-ab7f-29ac272102c5",
+    "label": "Premiere Pro"
+  },
+  "shortcuts": [
+    {
+      "id": "06f3a7a6-3088-472e-b2ec-bb1288a60b3d",
+      "hotkeys": [["alt", "meta", "n"]],
+      "description": "Project...",
+      "isFavorite": false
+    },
+    {
+      "id": "80eb3413-9c21-43f4-a997-70993ad95c9f",
+      "hotkeys": [["meta", "n"]],
+      "description": "Sequence...",
+      "isFavorite": false
+    },
+    {
+      "id": "a4843f14-6692-4501-8b0e-1455741722bd",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Bin",
+      "isFavorite": false
+    },
+    {
+      "id": "1324cbc5-bcb0-4475-96e0-d79a6590f435",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open Project...",
+      "isFavorite": false
+    },
+    {
+      "id": "b4d57272-795e-42e9-936b-8941e393027c",
+      "hotkeys": [["shift", "meta", "w"]],
+      "description": "Close Project",
+      "isFavorite": false
+    },
+    {
+      "id": "37ef5d00-93bf-4d59-9362-71b2290314c5",
+      "hotkeys": [["meta", "w"]],
+      "description": "Close",
+      "isFavorite": false
+    },
+    {
+      "id": "e57cb470-394a-497f-bf8c-28fd552fa41c",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save",
+      "isFavorite": false
+    },
+    {
+      "id": "86eca813-dc2a-4e7b-9653-47d6a2d36aeb",
+      "hotkeys": [["shift", "meta", "s"]],
+      "description": "Save As...",
+      "isFavorite": false
+    },
+    {
+      "id": "51a6c1c9-a160-439b-9224-384fbefebdea",
+      "hotkeys": [["alt", "meta", "s"]],
+      "description": "Save a Copy...",
+      "isFavorite": false
+    },
+    {
+      "id": "87860c0a-77fa-44d8-8caa-b55ccc321b2b",
+      "hotkeys": [["f5"]],
+      "description": "Capture...",
+      "isFavorite": false
+    },
+    {
+      "id": "98b3ff25-d8c2-456c-88af-a35340a2c188",
+      "hotkeys": [["f6"]],
+      "description": "Batch Capture...",
+      "isFavorite": false
+    },
+    {
+      "id": "a52be22b-371c-4937-bfe5-4fdb6d7e83eb",
+      "hotkeys": [["alt", "meta", "i"]],
+      "description": "Import from Media Browser",
+      "isFavorite": false
+    },
+    {
+      "id": "917f330c-3b05-4745-b26b-9b6797561202",
+      "hotkeys": [["meta", "i"]],
+      "description": "Import...",
+      "isFavorite": false
+    },
+    {
+      "id": "99bf8f47-5207-4af7-ba72-42b53ce53857",
+      "hotkeys": [["meta", "m"]],
+      "description": "Export Media",
+      "isFavorite": false
+    },
+    {
+      "id": "1eed7e5c-4e18-465e-bbb8-3ccb38e277e6",
+      "hotkeys": [["shift", "meta", "h"]],
+      "description": "Get Properties for Selection...",
+      "isFavorite": false
+    },
+    {
+      "id": "b8574950-e7cb-4ced-b92a-2837264cadcf",
+      "hotkeys": [["meta", "q"]],
+      "description": "Exit",
+      "isFavorite": false
+    },
+    {
+      "id": "4cdcd72a-baea-48bf-8ba2-2c7c607ec549",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "24a09943-919b-488b-88b8-d861b4836d23",
+      "hotkeys": [["shift", "meta", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "457d65c8-9382-428c-8afb-c7755b76cbb1",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "34811dce-2a47-448e-92af-d92f257610a5",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "bda4e776-cded-445e-8d2f-48819a755dd4",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "c5eb1245-6dae-4638-a48b-c57883fe2d90",
+      "hotkeys": [["shift", "meta", "v"]],
+      "description": "Paste Insert",
+      "isFavorite": false
+    },
+    {
+      "id": "0f610fce-db10-42d7-a2f3-f09a4c0a46a5",
+      "hotkeys": [["alt", "meta", "v"]],
+      "description": "Paste Attributes",
+      "isFavorite": false
+    },
+    {
+      "id": "9386b283-16b9-408d-a626-5d50e2cc1d19",
+      "hotkeys": [["shift", "meta", "slash"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "df354dec-a675-48fe-8538-2853412f5b70",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "5c3c4d3b-602a-4363-8b11-08510b105eaf",
+      "hotkeys": [["shift", "meta", "a"]],
+      "description": "Deselect All",
+      "isFavorite": false
+    },
+    {
+      "id": "d386efef-b42c-4e92-abf7-f453455bec02",
+      "hotkeys": [["meta", "f"]],
+      "description": "Find...",
+      "isFavorite": false
+    },
+    {
+      "id": "0dad85a8-9025-49be-92be-2d1f30057d8d",
+      "hotkeys": [["meta", "e"]],
+      "description": "Edit Original",
+      "isFavorite": false
+    },
+    {
+      "id": "2ccf60de-4be4-4dc8-863b-dbde7068e4e3",
+      "hotkeys": [["meta", "alt", "k"]],
+      "description": "Keyboard Shortcuts",
+      "isFavorite": false
+    },
+    {
+      "id": "b270f904-7e4c-4778-aa0c-8592ac12a96a",
+      "hotkeys": [["meta", "u"]],
+      "description": "Make Subclip...",
+      "isFavorite": false
+    },
+    {
+      "id": "21385f31-4de0-4eb2-8aed-36cd70d5c85b",
+      "hotkeys": [["shift", "g"]],
+      "description": "Audio Channels...",
+      "isFavorite": false
+    },
+    {
+      "id": "a3f0d5ed-1711-47eb-a9af-b3f09c58b08c",
+      "hotkeys": [["g"]],
+      "description": "Audio Gain",
+      "isFavorite": false
+    },
+    {
+      "id": "1c8a19a3-bee7-4b70-8ca2-5101b890436d",
+      "hotkeys": [["meta", "r"]],
+      "description": "Speed/Duration...",
+      "isFavorite": false
+    },
+    {
+      "id": "df1218fb-bcab-45ba-ba84-d36e8f0b2ce7",
+      "hotkeys": [["comma"]],
+      "description": "Insert",
+      "isFavorite": false
+    },
+    {
+      "id": "4f1b821d-b639-4b4a-a7e9-ce91b8de4d97",
+      "hotkeys": [["period"]],
+      "description": "Overwrite",
+      "isFavorite": false
+    },
+    {
+      "id": "dc0d8d72-486b-41c6-83d1-a5ea29de54f7",
+      "hotkeys": [["shift", "meta", "e"]],
+      "description": "Enable",
+      "isFavorite": false
+    },
+    {
+      "id": "15d15df6-71b3-4d54-a558-84b175234b21",
+      "hotkeys": [["meta", "l"]],
+      "description": "Link",
+      "isFavorite": false
+    },
+    {
+      "id": "222fd5d7-e77d-4017-8fd7-9860595257d2",
+      "hotkeys": [["meta", "g"]],
+      "description": "Group",
+      "isFavorite": false
+    },
+    {
+      "id": "45c76543-3cdf-4d1e-b9ed-a6e06e8b49f1",
+      "hotkeys": [["shift", "meta", "g"]],
+      "description": "Ungroup",
+      "isFavorite": false
+    },
+    {
+      "id": "79c7e7e5-4c1e-4227-93f1-424fe5eadc13",
+      "hotkeys": [["enter"]],
+      "description": "Render Effects in Work Area",
+      "isFavorite": false
+    },
+    {
+      "id": "3b57681d-31a4-4e3c-9e5a-a967396b4ae2",
+      "hotkeys": [["f"]],
+      "description": "Match Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "979f698e-26a5-441b-995e-6103b3b4ca7e",
+      "hotkeys": [["shift", "r"]],
+      "description": "Reverse Match Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "f3e61c35-773a-4fff-9bc0-a75f7360e605",
+      "hotkeys": [["meta", "k"]],
+      "description": "Add Edit",
+      "isFavorite": false
+    },
+    {
+      "id": "eb7c045c-d7c2-4923-8bb8-7c7311821a9c",
+      "hotkeys": [["shift", "meta", "k"]],
+      "description": "Add Edit to All Tracks",
+      "isFavorite": false
+    },
+    {
+      "id": "41e9fd5a-6224-477b-a71f-7854f398aa8a",
+      "hotkeys": [["meta", "t"]],
+      "description": "Trim Edit",
+      "isFavorite": false
+    },
+    {
+      "id": "ccfe59d4-78c5-4f4e-a5e6-698639621a13",
+      "hotkeys": [["e"]],
+      "description": "Extend Selected Edit to Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "0a7b2d27-63db-45ac-84c2-981f75353860",
+      "hotkeys": [["meta", "d"]],
+      "description": "Apply Video Transition",
+      "isFavorite": false
+    },
+    {
+      "id": "b4b1dbe0-c6ae-46b5-ae2c-9eadabbe58b0",
+      "hotkeys": [["shift", "meta", "d"]],
+      "description": "Apply Audio Transition",
+      "isFavorite": false
+    },
+    {
+      "id": "cb13bb05-5213-47c2-b1cb-c2998236aca2",
+      "hotkeys": [["shift", "d"]],
+      "description": "Apply Default Transitions to Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "387a66c9-0e07-4a26-8d45-6a141318f624",
+      "hotkeys": [["semicolon"]],
+      "description": "Lift",
+      "isFavorite": false
+    },
+    {
+      "id": "0b0c23cf-ba11-4ac5-8352-0343ec1764eb",
+      "hotkeys": [["quote"]],
+      "description": "Extract",
+      "isFavorite": false
+    },
+    {
+      "id": "0bf54d8d-5ddf-4d87-8574-2003d5a3f4c9",
+      "hotkeys": [["equal"]],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "58a07dbd-867b-43c1-92cb-90acdab0e374",
+      "hotkeys": [["minus"]],
+      "description": "Zoom Out",
+      "isFavorite": false
+    },
+    {
+      "id": "81e0ad30-9200-4aeb-974f-88ba7d2d9000",
+      "hotkeys": [["shift", "semicolon"]],
+      "description": "Next in Sequence",
+      "isFavorite": false
+    },
+    {
+      "id": "34b7e169-e8aa-4115-b546-9c3d1fc2f453",
+      "hotkeys": [["alt", "semicolon"]],
+      "description": "Previous in Sequence",
+      "isFavorite": false
+    },
+    {
+      "id": "184e2964-0556-4e7d-ae95-c6771efab573",
+      "hotkeys": [["s"]],
+      "description": "Snap in Timeline",
+      "isFavorite": false
+    },
+    {
+      "id": "1bf703ec-e9b4-4f9a-a7e1-c604de511efa",
+      "hotkeys": [["meta", "u"]],
+      "description": "Make Subsequence",
+      "isFavorite": false
+    },
+    {
+      "id": "8f7ea452-ca28-4467-9a61-a94ec9baa789",
+      "hotkeys": [["alt", "meta", "a"]],
+      "description": "Add new caption track",
+      "isFavorite": false
+    },
+    {
+      "id": "bd2a44f8-4538-4287-8b75-97746ba9e2d0",
+      "hotkeys": [["alt", "meta", "c"]],
+      "description": "Add caption at playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "a717aa5c-9618-4d14-8183-9a181cebc34e",
+      "hotkeys": [["alt", "meta", "down"]],
+      "description": "Go to next caption segment",
+      "isFavorite": false
+    },
+    {
+      "id": "5ac65cc5-762c-4fc2-a0a6-e780a143aca1",
+      "hotkeys": [["alt", "meta", "up"]],
+      "description": "Go to previous caption segment",
+      "isFavorite": false
+    },
+    {
+      "id": "d96abcfd-d741-4ed8-8699-fd96500f2183",
+      "hotkeys": [["i"]],
+      "description": "Mark In",
+      "isFavorite": false
+    },
+    {
+      "id": "33e25102-c3f2-4066-813a-1bb9a7c62b63",
+      "hotkeys": [["o"]],
+      "description": "Mark Out",
+      "isFavorite": false
+    },
+    {
+      "id": "4f54c5b0-2164-4579-9082-ddc2bc6e3cca",
+      "hotkeys": [["x"]],
+      "description": "Mark Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "9fed0313-27e2-4f39-9a7c-2f6888e1b70b",
+      "hotkeys": [["slash"]],
+      "description": "Mark Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "9dd5f80b-e5d8-42d8-9faf-a49387bd0b27",
+      "hotkeys": [["shift", "i"]],
+      "description": "Go to In",
+      "isFavorite": false
+    },
+    {
+      "id": "f61d2a08-f1b9-4326-90a9-e5ae527b479e",
+      "hotkeys": [["shift", "o"]],
+      "description": "Go to Out",
+      "isFavorite": false
+    },
+    {
+      "id": "5a234e2f-00b2-4440-b0c6-2bf9b9b50bc5",
+      "hotkeys": [["alt", "i"]],
+      "description": "Clear In",
+      "isFavorite": false
+    },
+    {
+      "id": "86421bdf-e464-4fc2-b1a7-940111c4d838",
+      "hotkeys": [["alt", "o"]],
+      "description": "Clear Out",
+      "isFavorite": false
+    },
+    {
+      "id": "ea67bf96-597b-44a8-8006-aa8f2093fa80",
+      "hotkeys": [["alt", "x"]],
+      "description": "Clear In and Out",
+      "isFavorite": false
+    },
+    {
+      "id": "97dd828d-75b0-42a6-a5a7-8b74c40b5a82",
+      "hotkeys": [["m"]],
+      "description": "Add Marker",
+      "isFavorite": false
+    },
+    {
+      "id": "d9bad338-1ab8-4c31-bf27-e62241c7d2fb",
+      "hotkeys": [["shift", "m"]],
+      "description": "Go to Next Marker",
+      "isFavorite": false
+    },
+    {
+      "id": "2c1a08a1-95e6-48df-9a97-c3f8afba8700",
+      "hotkeys": [["shift", "meta", "m"]],
+      "description": "Go to Previous Marker",
+      "isFavorite": false
+    },
+    {
+      "id": "5e4c9482-3f05-49a2-a217-e87e4fb661c2",
+      "hotkeys": [["alt", "m"]],
+      "description": "Clear Selected Marker",
+      "isFavorite": false
+    },
+    {
+      "id": "19d8de0a-de9a-4b35-9d02-c7b080db2ba4",
+      "hotkeys": [["alt", "meta", "m"]],
+      "description": "Clear All Markers",
+      "isFavorite": false
+    },
+    {
+      "id": "f12261d7-6f1f-405a-bbd8-c71b93e235c0",
+      "hotkeys": [["meta", "t"]],
+      "description": "Text",
+      "isFavorite": false
+    },
+    {
+      "id": "e690db29-7863-4386-9608-5efde96ce39f",
+      "hotkeys": [["alt", "meta", "r"]],
+      "description": "Rectangle",
+      "isFavorite": false
+    },
+    {
+      "id": "d76e5a79-f706-48f6-93c1-7b54dee83e7a",
+      "hotkeys": [["alt", "meta", "e"]],
+      "description": "Ellipse",
+      "isFavorite": false
+    },
+    {
+      "id": "94514c39-51a1-47f4-99e7-47e92cbb83a8",
+      "hotkeys": [["shift", "meta", "bracketright"]],
+      "description": "Bring to Front",
+      "isFavorite": false
+    },
+    {
+      "id": "b16fce87-1d52-4e21-b2f6-ca12cac697a7",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Bring Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "7415f65b-886f-4e44-bd87-dda5509f63e5",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Send Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "d4bfdc59-face-4427-bb79-bde21e2d5390",
+      "hotkeys": [["shift", "meta", "bracketleft"]],
+      "description": "Send to Back",
+      "isFavorite": false
+    },
+    {
+      "id": "de5edaee-82bd-479a-98ff-ff0432e1205c",
+      "hotkeys": [["alt", "meta", "bracketright"]],
+      "description": "Select Next Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "64251de8-a2ab-405a-8ca1-b6068a96ade7",
+      "hotkeys": [["alt", "meta", "bracketleft"]],
+      "description": "Select Previous Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "26d97d49-71d4-481e-ad77-a651f74806ea",
+      "hotkeys": [["alt", "shift", "0"]],
+      "description": "Reset to Saved Layout",
+      "isFavorite": false
+    },
+    {
+      "id": "c8ae59e2-35a4-41b6-a587-430af2a25bdd",
+      "hotkeys": [["shift", "9"]],
+      "description": "Audio Clip Mixer",
+      "isFavorite": false
+    },
+    {
+      "id": "cb4f0caa-2e23-4bd4-87bd-d1fa6805d299",
+      "hotkeys": [["shift", "6"]],
+      "description": "Audio Track Mixer",
+      "isFavorite": false
+    },
+    {
+      "id": "a25370e3-99f1-435e-859f-f501c63ba980",
+      "hotkeys": [["shift", "5"]],
+      "description": "Effect Controls",
+      "isFavorite": false
+    },
+    {
+      "id": "b90bd4d1-de33-4d91-a8fc-d2d821a2b379",
+      "hotkeys": [["shift", "7"]],
+      "description": "Effects",
+      "isFavorite": false
+    },
+    {
+      "id": "0abef78e-751c-433e-ae1a-2e4bd0916eb1",
+      "hotkeys": [["shift", "8"]],
+      "description": "Media Browser",
+      "isFavorite": false
+    },
+    {
+      "id": "cbc5974b-9830-4686-a00b-e0dbae2d8c48",
+      "hotkeys": [["shift", "4"]],
+      "description": "Program Monitor",
+      "isFavorite": false
+    },
+    {
+      "id": "bdd9d280-e50a-4377-811d-689656f0e0ea",
+      "hotkeys": [["shift", "1"]],
+      "description": "Projects",
+      "isFavorite": false
+    },
+    {
+      "id": "92a43174-fa6b-48da-b816-4121203af1b4",
+      "hotkeys": [["shift", "2"]],
+      "description": "Source Monitor",
+      "isFavorite": false
+    },
+    {
+      "id": "2e2f5c64-e67e-4e5f-83e0-b944536d2f5e",
+      "hotkeys": [["shift", "3"]],
+      "description": "Timelines",
+      "isFavorite": false
+    },
+    {
+      "id": "cb75a688-229a-4a96-87ce-434eedb29f05",
+      "hotkeys": [["f1"]],
+      "description": "Premiere Pro Help...",
+      "isFavorite": false
+    },
+    {
+      "id": "fb97cd60-cf84-410f-999f-0053b93c250b",
+      "hotkeys": [["alt", "meta", "t"]],
+      "description": "Show/Hide Tracks",
+      "isFavorite": false
+    },
+    {
+      "id": "9c6467db-a302-4db1-ae5d-208afb8276b3",
+      "hotkeys": [["meta", "l"]],
+      "description": "Loop",
+      "isFavorite": false
+    },
+    {
+      "id": "f0608bb0-c39f-4b64-9f9e-6f8d3b682115",
+      "hotkeys": [["ctrl", "shift", "i"]],
+      "description": "Meter Input(s) Only",
+      "isFavorite": false
+    },
+    {
+      "id": "dd50664d-9d17-47ad-963e-d5a2a0c37eaa",
+      "hotkeys": [["v"]],
+      "description": "Record Video",
+      "isFavorite": false
+    },
+    {
+      "id": "94102a5e-48b6-4ed2-bba7-9d470d264e0e",
+      "hotkeys": [["a"]],
+      "description": "Record Audio",
+      "isFavorite": false
+    },
+    {
+      "id": "5c8f3c7a-4416-4ffb-9102-ce0655375657",
+      "hotkeys": [["e"]],
+      "description": "Eject",
+      "isFavorite": false
+    },
+    {
+      "id": "b3651ee9-0f00-4e0f-b953-a9f32e69c880",
+      "hotkeys": [["f"]],
+      "description": "Fast Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "c3928d2e-6b9a-4545-b894-2611cffafb7a",
+      "hotkeys": [["q"]],
+      "description": "Go to In point",
+      "isFavorite": false
+    },
+    {
+      "id": "1e23f53d-97c1-441c-ac7d-c9b1e24d23fd",
+      "hotkeys": [["w"]],
+      "description": "Go to Out point",
+      "isFavorite": false
+    },
+    {
+      "id": "e12591d7-40e1-441e-ae64-fe97cb05a9a5",
+      "hotkeys": [["g"]],
+      "description": "Record",
+      "isFavorite": false
+    },
+    {
+      "id": "8202192a-8ccd-43a7-9804-eef27e13f8b8",
+      "hotkeys": [["r"]],
+      "description": "Rewind",
+      "isFavorite": false
+    },
+    {
+      "id": "5522cf47-024f-4981-a6df-cb17754b5fa0",
+      "hotkeys": [["left"]],
+      "description": "Step Back",
+      "isFavorite": false
+    },
+    {
+      "id": "8736fb44-417c-4de6-b958-1b07119549fb",
+      "hotkeys": [["right"]],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "c2428094-a18c-4153-a039-f436cada0809",
+      "hotkeys": [["s"]],
+      "description": "Stop",
+      "isFavorite": false
+    },
+    {
+      "id": "33714afa-f9ca-4f24-b2c5-1f003ebcfb8b",
+      "hotkeys": [["backspace"]],
+      "description": "Remove Selected Effect",
+      "isFavorite": false
+    },
+    {
+      "id": "ba081924-43d1-4eca-8b1c-d7b5764d7029",
+      "hotkeys": [["meta", "l"]],
+      "description": "Loop During Audio-Only Playback",
+      "isFavorite": false
+    },
+    {
+      "id": "a2244c56-ca20-4bf0-9331-ca51b14933ea",
+      "hotkeys": [["meta", "slash"]],
+      "description": "New Custom Bin",
+      "isFavorite": false
+    },
+    {
+      "id": "cbf471e5-6778-42dd-8ec0-00cd2c3420db",
+      "hotkeys": [["backspace"]],
+      "description": "Delete Custom Item",
+      "isFavorite": false
+    },
+    {
+      "id": "b0258ad3-1a8b-4566-b24e-fc61f3417829",
+      "hotkeys": [["meta", "t"]],
+      "description": "New text layer",
+      "isFavorite": false
+    },
+    {
+      "id": "977990df-c4ac-4aa0-8827-9eb964ef6f81",
+      "hotkeys": [["alt", "meta", "r"]],
+      "description": "Rectangle",
+      "isFavorite": false
+    },
+    {
+      "id": "3d3b23a5-7873-47a0-8371-e62b58fb4c03",
+      "hotkeys": [["alt", "meta", "e"]],
+      "description": "Ellipse",
+      "isFavorite": false
+    },
+    {
+      "id": "9a56d69a-395d-49a7-b881-a79ed9075b2c",
+      "hotkeys": [["meta", "shift", "bracketright"]],
+      "description": "Bring to Front",
+      "isFavorite": false
+    },
+    {
+      "id": "e4a5e1f7-ff8f-45b9-aa5f-a0431e3a3b2a",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Bring Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "59c1e339-0855-4b41-a9d8-37a85124c653",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Send Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "2a2665d9-894e-4271-8154-9e9ca433e041",
+      "hotkeys": [["meta", "shift", "bracketleft"]],
+      "description": "Send to Back",
+      "isFavorite": false
+    },
+    {
+      "id": "0810fc3a-eaf6-4ed2-b720-3075d599690e",
+      "hotkeys": [["meta", "alt", "bracketright"]],
+      "description": "Select Next Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "6466707a-da3f-4882-9639-fb8aa33de5cf",
+      "hotkeys": [["meta", "alt", "bracketleft"]],
+      "description": "Select Previous Layer",
+      "isFavorite": false
+    },
+    {
+      "id": "797a0e94-d286-4459-9c12-463f0213be24",
+      "hotkeys": [["backspace"]],
+      "description": "Clear Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "d830afce-3613-4e1b-87ed-9e3cbc73fffc",
+      "hotkeys": [["alt", "up"]],
+      "description": "Increase Leading by One Unit",
+      "isFavorite": false
+    },
+    {
+      "id": "24c4fd6b-6b89-4e8f-975b-016b86e3b8c3",
+      "hotkeys": [["alt", "down"]],
+      "description": "Decrease Leading by One Unit",
+      "isFavorite": false
+    },
+    {
+      "id": "23d21fc1-718b-497d-87e2-ed3ae6126ecf",
+      "hotkeys": [["alt", "shift", "up"]],
+      "description": "Increase Leading by Five Units",
+      "isFavorite": false
+    },
+    {
+      "id": "3412e225-223d-44e3-8161-d7783746fefd",
+      "hotkeys": [["alt", "shift", "down"]],
+      "description": "Decrease Leading by Five Units",
+      "isFavorite": false
+    },
+    {
+      "id": "39d4d790-fd63-48a9-91ff-9a2660171037",
+      "hotkeys": [["alt", "meta", "right"]],
+      "description": "Increase Font Size by One Unit",
+      "isFavorite": false
+    },
+    {
+      "id": "9cde831f-1a32-407b-ac03-8b2522a3497e",
+      "hotkeys": [["alt", "meta", "left"]],
+      "description": "Decrease Font Size by One Unit",
+      "isFavorite": false
+    },
+    {
+      "id": "1b422c17-4432-4d2b-9d5c-615740bad130",
+      "hotkeys": [["alt", "shift", "meta", "right"]],
+      "description": "Increase Font Size by Five Units",
+      "isFavorite": false
+    },
+    {
+      "id": "58c686a8-48e4-4e0b-9459-d2f7a87ccd09",
+      "hotkeys": [["alt", "shift", "meta", "left"]],
+      "description": "Decrease Font Size by Five Units",
+      "isFavorite": false
+    },
+    {
+      "id": "e42b5212-8a52-4264-9a53-e8244ae2855f",
+      "hotkeys": [["left"]],
+      "description": "Step Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "922d2810-9925-49c9-9c8e-1ada7976f811",
+      "hotkeys": [["right"]],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "381a406f-8d22-47d5-bfc8-b0a6f53afa3b",
+      "hotkeys": [["backspace"]],
+      "description": "Delete",
+      "isFavorite": false
+    },
+    {
+      "id": "133cf3d4-20f0-41d8-bd06-b6031ee7e7a3",
+      "hotkeys": [["shift", "o"]],
+      "description": "Open in Source Monitor",
+      "isFavorite": false
+    },
+    {
+      "id": "d1cf261c-fc66-4fc3-98af-9d309d245d72",
+      "hotkeys": [["shift", "left"]],
+      "description": "Select Directory List",
+      "isFavorite": false
+    },
+    {
+      "id": "666e7dbb-32e1-4a19-9da9-6cbf9a44738c",
+      "hotkeys": [["shift", "right"]],
+      "description": "Select Media List",
+      "isFavorite": false
+    },
+    {
+      "id": "7da5105c-3d0e-4b49-ae40-750f60a65f58",
+      "hotkeys": [["meta", "l"]],
+      "description": "Loop",
+      "isFavorite": false
+    },
+    {
+      "id": "af9a42f7-7272-4f4c-813d-4fd28a896a26",
+      "hotkeys": [["space"]],
+      "description": "Play",
+      "isFavorite": false
+    },
+    {
+      "id": "a5b76173-8b00-47ac-bf07-0498b38f388a",
+      "hotkeys": [["down"]],
+      "description": "Go to Next Edit Point",
+      "isFavorite": false
+    },
+    {
+      "id": "1ab84ca6-3c0c-4a41-b374-8d85935a53ee",
+      "hotkeys": [["shift", "down"]],
+      "description": "Go to Next Edit Point on Any Track",
+      "isFavorite": false
+    },
+    {
+      "id": "4a857b1d-8b31-43b5-a034-e275f00d3ab3",
+      "hotkeys": [["up"]],
+      "description": "Go to Previous Edit Point",
+      "isFavorite": false
+    },
+    {
+      "id": "28a82037-d295-47ea-b237-5ce3b7d37e19",
+      "hotkeys": [["shift", "up"]],
+      "description": "Go to Previous Edit Point on Any Track",
+      "isFavorite": false
+    },
+    {
+      "id": "4dbfd2d2-582d-42cc-b62d-49b2a491bd7f",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Clip Volume",
+      "isFavorite": false
+    },
+    {
+      "id": "4c3b5266-f309-4769-bd7d-9c8380607727",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Increase Clip Volume Many",
+      "isFavorite": false
+    },
+    {
+      "id": "008fb80e-6f31-4e79-9812-78f9f362aa4e",
+      "hotkeys": [["shift", "backquote"]],
+      "description": "Maximize or Restore Active Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "9c6f20e3-741c-4fbc-91e8-c4399834b656",
+      "hotkeys": [["backquote"]],
+      "description": "Maximize or Restore Frame Under Cursor",
+      "isFavorite": false
+    },
+    {
+      "id": "bf868628-0391-45f6-bf38-7edb6d50669c",
+      "hotkeys": [["shift", "minus"]],
+      "description": "Minimize All Tracks",
+      "isFavorite": false
+    },
+    {
+      "id": "c38f50d2-949c-43ae-92ae-1ffc28371d2c",
+      "hotkeys": [["shift", "k"]],
+      "description": "Play Around",
+      "isFavorite": false
+    },
+    {
+      "id": "0b40066a-2646-4fe0-9a35-d9b74f473799",
+      "hotkeys": [["alt", "k"]],
+      "description": "Play In to Out",
+      "isFavorite": false
+    },
+    {
+      "id": "30c6247b-4c40-4b19-a433-389b4c03625f",
+      "hotkeys": [["shift", "space"]],
+      "description": "Play In to Out with Preroll/Postroll",
+      "isFavorite": false
+    },
+    {
+      "id": "1e1cb222-5aa1-4b1b-b66c-56bb98dd9ccd",
+      "hotkeys": [["ctrl", "space"]],
+      "description": "Play from Playhead to Out Point",
+      "isFavorite": false
+    },
+    {
+      "id": "875c73ee-9fdd-44f6-ad4c-3d2f09e96357",
+      "hotkeys": [["space"]],
+      "description": "Play-Stop Toggle",
+      "isFavorite": false
+    },
+    {
+      "id": "8f4d7c83-7c3f-4936-a8aa-c87bf9bc874f",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "Reveal Nested Sequence",
+      "isFavorite": false
+    },
+    {
+      "id": "f496eac4-c403-49d2-9436-fbbf6583e60f",
+      "hotkeys": [["w"]],
+      "description": "Ripple Trim Next Edit To Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "2d9ee3c1-1513-4c9c-922b-dbd15250c4ba",
+      "hotkeys": [["q"]],
+      "description": "Ripple Trim Previous Edit To Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "53f54f8d-38ae-4981-b9a9-de07d80c8ddb",
+      "hotkeys": [["1"]],
+      "description": "Select Camera 1",
+      "isFavorite": false
+    },
+    {
+      "id": "5ccc5d1b-4b05-4631-8931-bbaf5b362876",
+      "hotkeys": [["2"]],
+      "description": "Select Camera 2",
+      "isFavorite": false
+    },
+    {
+      "id": "cdf8adfb-f522-46a3-a671-02ea02189128",
+      "hotkeys": [["3"]],
+      "description": "Select Camera 3",
+      "isFavorite": false
+    },
+    {
+      "id": "b92cff0e-0c38-4ce6-a376-5f75fe66bae8",
+      "hotkeys": [["4"]],
+      "description": "Select Camera 4",
+      "isFavorite": false
+    },
+    {
+      "id": "1d536468-f5c4-4741-9978-6075c616208c",
+      "hotkeys": [["5"]],
+      "description": "Select Camera 5",
+      "isFavorite": false
+    },
+    {
+      "id": "36f9cc9f-11e0-4024-be7f-579670db02ff",
+      "hotkeys": [["6"]],
+      "description": "Select Camera 6",
+      "isFavorite": false
+    },
+    {
+      "id": "039fbf79-38cd-481e-b251-7c8826345a49",
+      "hotkeys": [["7"]],
+      "description": "Select Camera 7",
+      "isFavorite": false
+    },
+    {
+      "id": "ff672112-4063-4921-b80b-ebcd9f99abc5",
+      "hotkeys": [["8"]],
+      "description": "Select Camera 8",
+      "isFavorite": false
+    },
+    {
+      "id": "0d189b86-486b-484d-ab41-bb66a09cfdd1",
+      "hotkeys": [["9"]],
+      "description": "Select Camera 9",
+      "isFavorite": false
+    },
+    {
+      "id": "97b6778f-2a68-459e-8b30-3b1689c06b39",
+      "hotkeys": [["shift", "f"]],
+      "description": "Select Find Box",
+      "isFavorite": false
+    },
+    {
+      "id": "ec8192b6-f429-4859-9f31-3ee93aeab922",
+      "hotkeys": [["d"]],
+      "description": "Select Clip at Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "8fd7b0cb-d70c-4699-9561-bb3229aef2c6",
+      "hotkeys": [["meta", "down"]],
+      "description": "Select Next Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "85683ccd-bbdd-4c99-b9cd-0558d098a6d5",
+      "hotkeys": [["ctrl", "shift", "period"]],
+      "description": "Select Next Panel",
+      "isFavorite": false
+    },
+    {
+      "id": "67e7ac89-ee24-4162-9f67-f106dfbc9e16",
+      "hotkeys": [["meta", "up"]],
+      "description": "Select Previous Clip",
+      "isFavorite": false
+    },
+    {
+      "id": "29f67827-d634-419e-b3ac-ffe858715b7e",
+      "hotkeys": [["ctrl", "shift", "comma"]],
+      "description": "Select Previous Panel",
+      "isFavorite": false
+    },
+    {
+      "id": "a94f585f-3ab4-4aad-b20c-148a38dc9ccb",
+      "hotkeys": [["meta", "p"]],
+      "description": "Set Poster Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "8b20e303-8b0d-4997-922f-460d73fe16a8",
+      "hotkeys": [["j"]],
+      "description": "Shuttle Left",
+      "isFavorite": false
+    },
+    {
+      "id": "61f36c70-af61-457d-bd57-64f2a35f4d14",
+      "hotkeys": [["l"]],
+      "description": "Shuttle Right",
+      "isFavorite": false
+    },
+    {
+      "id": "d666d16d-32c1-4065-b9c9-475ff845406c",
+      "hotkeys": [["shift", "j"]],
+      "description": "Shuttle Slow Left",
+      "isFavorite": false
+    },
+    {
+      "id": "d25b844e-b798-48b3-b964-146969871f7e",
+      "hotkeys": [["shift", "l"]],
+      "description": "Shuttle Slow Right",
+      "isFavorite": false
+    },
+    {
+      "id": "371e2ba0-b545-446c-be1e-7b1b8f7c9be3",
+      "hotkeys": [["k"]],
+      "description": "Shuttle Stop",
+      "isFavorite": false
+    },
+    {
+      "id": "4b343374-5281-4c84-84e9-522d52b77b29",
+      "hotkeys": [["left"]],
+      "description": "Step Back",
+      "isFavorite": false
+    },
+    {
+      "id": "d5d1aa32-f5d6-467b-823f-51f6662af36f",
+      "hotkeys": [["shift", "left"]],
+      "description": "Step Back Five Frames - Units",
+      "isFavorite": false
+    },
+    {
+      "id": "5efe0800-8a5d-4a6b-b8f4-76ecba2c2ed7",
+      "hotkeys": [["right"]],
+      "description": "Step Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "6f459653-1e17-4b34-81d0-91b8a6a5bbe7",
+      "hotkeys": [["shift", "right"]],
+      "description": "Step Forward Five Frames - Units",
+      "isFavorite": false
+    },
+    {
+      "id": "56ff34fc-75fd-42b7-897c-ae183cd8b11d",
+      "hotkeys": [["meta", "9"]],
+      "description": "Toggle All Audio Targets",
+      "isFavorite": false
+    },
+    {
+      "id": "0915be29-71df-4326-a05c-fd0712025752",
+      "hotkeys": [["alt", "meta", "9"]],
+      "description": "Toggle All Source Audio",
+      "isFavorite": false
+    },
+    {
+      "id": "8b2617cc-3c56-4e4e-8162-4c1fdbddd785",
+      "hotkeys": [["alt", "meta", "0"]],
+      "description": "Toggle All Source Video",
+      "isFavorite": false
+    },
+    {
+      "id": "28c4bb89-57fe-41ec-abc0-7dd525a2ddd5",
+      "hotkeys": [["meta", "0"]],
+      "description": "Toggle All Video Targets",
+      "isFavorite": false
+    },
+    {
+      "id": "9e2b32c3-3a2c-4f19-8ebf-39ae798a93fb",
+      "hotkeys": [["shift", "s"]],
+      "description": "Toggle Audio During Scrubbing",
+      "isFavorite": false
+    },
+    {
+      "id": "20aa7f77-8705-4cda-9803-e201c5428454",
+      "hotkeys": [["ctrl", "backquote"]],
+      "description": "Toggle Full Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "8910f285-33ce-4883-8d8a-071fba92d775",
+      "hotkeys": [["shift", "0"]],
+      "description": "Toggle Multi-Camera View",
+      "isFavorite": false
+    },
+    {
+      "id": "4e598b3d-fab3-4f7c-bfdc-2c4e6ff6e334",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Toggle Trim Type",
+      "isFavorite": false
+    },
+    {
+      "id": "367e895a-8ae4-4d0b-9834-55c2f0ad5de3",
+      "hotkeys": [["alt", "left"]],
+      "description": "Trim Backward",
+      "isFavorite": false
+    },
+    {
+      "id": "f36ee60e-1a5f-452c-b418-9ef25ad3f67c",
+      "hotkeys": [["alt", "shift", "left"]],
+      "description": "Trim Backward Many",
+      "isFavorite": false
+    },
+    {
+      "id": "0e5957f4-160b-4761-8462-263c29eef1aa",
+      "hotkeys": [["alt", "right"]],
+      "description": "Trim Forward",
+      "isFavorite": false
+    },
+    {
+      "id": "d28d9543-0bbb-4c31-888b-1bd59eea938b",
+      "hotkeys": [["alt", "shift", "right"]],
+      "description": "Trim Forward Many",
+      "isFavorite": false
+    },
+    {
+      "id": "c4deff48-4fe4-48fc-ab93-a4bb2ff4e093",
+      "hotkeys": [["alt", "w"]],
+      "description": "Trim Next Edit to Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "8f832dff-b765-425a-acaa-6b11e6aee5ec",
+      "hotkeys": [["alt", "q"]],
+      "description": "Trim Previous Edit to Playhead",
+      "isFavorite": false
+    },
+    {
+      "id": "b6f0b16c-0dec-4323-b761-c1fa9d6cefa1",
+      "hotkeys": [["meta", "r"]],
+      "description": "Show Rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "d4390882-a2c3-49fb-badb-345255fa5e31",
+      "hotkeys": [["meta", "semicolon"]],
+      "description": "Show Guides",
+      "isFavorite": false
+    },
+    {
+      "id": "a8a2bf18-3353-460a-88e2-830abe692618",
+      "hotkeys": [["shift", "meta", "semicolon"]],
+      "description": "Snap in Program Monitor",
+      "isFavorite": false
+    },
+    {
+      "id": "84466592-ac99-4764-8fad-5de49bb1907b",
+      "hotkeys": [["alt", "shift", "meta", "r"]],
+      "description": "Lock Guides",
+      "isFavorite": false
+    },
+    {
+      "id": "1c31f9f2-e4c3-4e85-a632-e1318aedca7e",
+      "hotkeys": [["shift", "meta", "up"]],
+      "description": "Nudge Selected Object up by five frames",
+      "isFavorite": false
+    },
+    {
+      "id": "99440117-a97d-4448-8fc4-e30cfbb8b7ad",
+      "hotkeys": [["shift", "meta", "right"]],
+      "description": "Nudge Selected Object right by five frames",
+      "isFavorite": false
+    },
+    {
+      "id": "a8475ab3-c3e5-47b5-8a8f-067635c03014",
+      "hotkeys": [["shift", "meta", "left"]],
+      "description": "Nudge Selected Object left by five frames",
+      "isFavorite": false
+    },
+    {
+      "id": "41b283cf-1064-4e2b-880f-800408fae2f9",
+      "hotkeys": [["shift", "meta", "down"]],
+      "description": "Nudge Selected Object down by five frames",
+      "isFavorite": false
+    },
+    {
+      "id": "7376f8b0-4980-4eec-b907-4043b3ec666f",
+      "hotkeys": [["meta", "up"]],
+      "description": "Nudge Selected Object up by one frame",
+      "isFavorite": false
+    },
+    {
+      "id": "116ea828-f9f5-4589-8bde-628c9aea8efe",
+      "hotkeys": [["meta", "right"]],
+      "description": "Nudge Selected Object right by one frame",
+      "isFavorite": false
+    },
+    {
+      "id": "0a483b9a-de75-4e4f-826f-b9c91cf8ef86",
+      "hotkeys": [["meta", "left"]],
+      "description": "Nudge Selected Object left by one frame",
+      "isFavorite": false
+    },
+    {
+      "id": "473febf7-428d-4128-952a-e2dc068b3a67",
+      "hotkeys": [["meta", "down"]],
+      "description": "Nudge Selected Object down by one frame",
+      "isFavorite": false
+    },
+    {
+      "id": "318228f3-67b6-40d8-b350-8d5b626749af",
+      "hotkeys": [["meta", "b"]],
+      "description": "New Bin",
+      "isFavorite": false
+    },
+    {
+      "id": "38fc271e-cfcb-43d6-b20b-3bb84f205346",
+      "hotkeys": [["backspace"]],
+      "description": "Delete",
+      "isFavorite": false
+    },
+    {
+      "id": "7370b0ed-4800-4dbd-8229-624ed51d1947",
+      "hotkeys": [["shift", "h"]],
+      "description": "Hover Scrub",
+      "isFavorite": false
+    },
+    {
+      "id": "42e8f41e-ed5b-47d8-a986-ab2eddb036f5",
+      "hotkeys": [["shift", "down"]],
+      "description": "Extend Selection Down",
+      "isFavorite": false
+    },
+    {
+      "id": "356f8c79-49a1-4915-9717-90bd7ea4b5b2",
+      "hotkeys": [["shift", "left"]],
+      "description": "Extend Selection Left",
+      "isFavorite": false
+    },
+    {
+      "id": "837a25f4-ce9b-416a-ab8b-c37b67c238c1",
+      "hotkeys": [["shift", "right"]],
+      "description": "Extend Selection Right",
+      "isFavorite": false
+    },
+    {
+      "id": "70be8ce2-a043-4f20-a808-e9b14fee0ad3",
+      "hotkeys": [["shift", "up"]],
+      "description": "Extend Selection Up",
+      "isFavorite": false
+    },
+    {
+      "id": "da9c42f3-28da-4dbf-9d49-ef82ee7a3a4d",
+      "hotkeys": [["down"]],
+      "description": "Move Selection Down",
+      "isFavorite": false
+    },
+    {
+      "id": "ba6490f2-a7d4-4ba6-9fa6-901bfddbef1b",
+      "hotkeys": [["left"]],
+      "description": "Move Selection Left",
+      "isFavorite": false
+    },
+    {
+      "id": "b5287721-e7eb-4fc1-8440-983cd3d3d3de",
+      "hotkeys": [["right"]],
+      "description": "Move Selection Right",
+      "isFavorite": false
+    },
+    {
+      "id": "a7349a1e-8159-4197-b570-92c29da08c1a",
+      "hotkeys": [["up"]],
+      "description": "Move Selection Up",
+      "isFavorite": false
+    },
+    {
+      "id": "53765145-1f22-45f6-a8e6-af5dec3d9511",
+      "hotkeys": [["tab"]],
+      "description": "Next Column Field",
+      "isFavorite": false
+    },
+    {
+      "id": "24556408-4212-45c2-8c8b-a530879b5f99",
+      "hotkeys": [["enter"]],
+      "description": "Next Row Field",
+      "isFavorite": false
+    },
+    {
+      "id": "d7427309-a087-4ad0-aa5f-ed3db64694a4",
+      "hotkeys": [["shift", "o"]],
+      "description": "Open in Source Monitor",
+      "isFavorite": false
+    },
+    {
+      "id": "47184c45-7105-4ae0-bf67-f84404961724",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Previous Column Field",
+      "isFavorite": false
+    },
+    {
+      "id": "f7e06d77-df02-45cf-8d49-cb43a9d4ee0c",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Previous Row Field",
+      "isFavorite": false
+    },
+    {
+      "id": "f171c62a-27e2-445b-8a7e-fc6421c00f88",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Thumbnail Size Next",
+      "isFavorite": false
+    },
+    {
+      "id": "e6115207-c5e3-40df-9186-d4777afcc63f",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "Thumbnail Size Previous",
+      "isFavorite": false
+    },
+    {
+      "id": "7359ff62-c4c7-4cda-88ac-a5895331b780",
+      "hotkeys": [["shift", "backslash"]],
+      "description": "Toggle View",
+      "isFavorite": false
+    },
+    {
+      "id": "6d660bf4-f5ea-46c5-9930-72bb3bff97ae",
+      "hotkeys": [["equal"]],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "4c9be04c-80b6-44b5-a065-82af6244a8c5",
+      "hotkeys": [["minus"]],
+      "description": "Zoom Out",
+      "isFavorite": false
+    },
+    {
+      "id": "8e042b6c-60da-4a33-801a-b3bed9e0775f",
+      "hotkeys": [["backspace"]],
+      "description": "Clear Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "7d0313f0-4dd4-4e2e-bb6f-eeb967a4bd51",
+      "hotkeys": [["alt", "minus"]],
+      "description": "Decrease Audio Tracks Height",
+      "isFavorite": false
+    },
+    {
+      "id": "89f4a2c9-6418-4060-b5b3-55e6e636f61b",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Decrease Video Tracks Height",
+      "isFavorite": false
+    },
+    {
+      "id": "5c62f907-62e1-4b4a-939e-c8f76fa1c821",
+      "hotkeys": [["alt", "equal"]],
+      "description": "Increase Audio Tracks Height",
+      "isFavorite": false
+    },
+    {
+      "id": "c52857e7-f6ae-4581-9782-82d7574e6ba7",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Increase Video Tracks Height",
+      "isFavorite": false
+    },
+    {
+      "id": "f0bff7df-b702-4e45-b12f-177a3a53b332",
+      "hotkeys": [["shift", "meta", "left"]],
+      "description": "Nudge Clip Selection Left Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "f269547c-4c0b-4c62-ae8e-74728ed294b8",
+      "hotkeys": [["meta", "left"]],
+      "description": "Nudge Clip Selection Left One Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "9f99f644-0229-45e8-8469-5f1d11e79b90",
+      "hotkeys": [["shift", "meta", "right"]],
+      "description": "Nudge Clip Selection Right Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "cbddec9a-fe66-4011-8964-dee5152732a6",
+      "hotkeys": [["meta", "right"]],
+      "description": "Nudge Clip Selection Right One Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "232765b9-9556-433b-85f5-d2ad2b08a489",
+      "hotkeys": [["alt", "backspace"]],
+      "description": "Ripple Delete",
+      "isFavorite": false
+    },
+    {
+      "id": "370390ef-cb17-43e5-832a-7d0f3655ed49",
+      "hotkeys": [["alt", "bracketleft"]],
+      "description": "Set Work Area Bar In Point",
+      "isFavorite": false
+    },
+    {
+      "id": "07e706fd-321f-4ec2-90b0-43a752fc9bc8",
+      "hotkeys": [["alt", "bracketright"]],
+      "description": "Set Work Area Bar Out Point",
+      "isFavorite": false
+    },
+    {
+      "id": "8a73bac3-c928-4d40-83c0-c9d43d00ed98",
+      "hotkeys": [["alt", "shift", "comma"]],
+      "description": "Slide Clip Selection Left Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "d2d3ebc1-99b2-4614-b539-f92740767e8a",
+      "hotkeys": [["alt", "comma"]],
+      "description": "Slide Clip Selection Left One Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "7fab821f-0258-4866-9114-55f84bc04e05",
+      "hotkeys": [["alt", "shift", "period"]],
+      "description": "Slide Clip Selection Right Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "8fbf84f1-1173-42c9-b90d-6784425dcb91",
+      "hotkeys": [["alt", "period"]],
+      "description": "Slide Clip Selection Right One Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "7309897b-3d8d-4f0f-a228-d97a8d230702",
+      "hotkeys": [["alt", "shift", "meta", "left"]],
+      "description": "Slip Clip Selection Left Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "e57c0d9a-7849-42f4-9379-7a8d8114d765",
+      "hotkeys": [["alt", "meta", "left"]],
+      "description": "Slip Clip Selection Left One Frame",
+      "isFavorite": false
+    },
+    {
+      "id": "2b123458-7076-4367-8f81-e55c6da316f3",
+      "hotkeys": [["alt", "shift", "meta", "right"]],
+      "description": "Slip Clip Selection Right Five Frames",
+      "isFavorite": false
+    },
+    {
+      "id": "52bb429f-a7f1-4f36-a65c-f1d10d01232d",
+      "hotkeys": [["alt", "meta", "right"]],
+      "description": "Slip Clip Selection Right One Frame",
+      "isFavorite": false
+    }
+  ]
+}
