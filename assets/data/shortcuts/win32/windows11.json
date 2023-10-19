@@ -1,0 +1,866 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "windows11",
+    "icon": {
+      "filename": "adobexd.svg",
+      "isCustom": false
+    },
+    "id": "8daa0e5b-e227-4791-84ec-f78335d575a6",
+    "label": "Windows 11"
+  },
+  "shortcuts": [
+    {
+      "id": "0a956f28-4125-4e26-9241-6929a5ff4ccd",
+      "hotkeys": [["ctrl", "x"]],
+      "description": "Cut the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "5b4aa144-d8e8-494f-8a92-2e6b7d6289f5",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "1ac65fab-b7ab-4f76-a6a5-1178e92e5338",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "3e79af3e-a622-45fa-bcb7-af61aa904e65",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "60b2881d-cadd-4a2e-97ee-4776e1cc0629",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo an action.",
+      "isFavorite": false
+    },
+    {
+      "id": "d82dd7da-9883-4707-bc2a-e16581d0a975",
+      "hotkeys": [["alt", "tab"]],
+      "description": "Switch between open apps.",
+      "isFavorite": false
+    },
+    {
+      "id": "602e085f-1788-44b4-a5b7-7437e16a720d",
+      "hotkeys": [["alt", "f4"]],
+      "description": "Close the active item, or exit the active app.",
+      "isFavorite": false
+    },
+    {
+      "id": "7a291c42-6d5c-4d4b-8de9-e4987c0bae18",
+      "hotkeys": [["meta", "l"]],
+      "description": "Lock your PC.",
+      "isFavorite": false
+    },
+    {
+      "id": "9b4ec536-aba2-48e5-bae3-a00b0cf06694",
+      "hotkeys": [["meta", "d"]],
+      "description": "Display and hide the desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "ec1b295b-0a98-4453-a2c2-3fef5a7d1cf9",
+      "hotkeys": [["f2"]],
+      "description": "Rename the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "6ca69f08-b547-4539-915a-d3292ba24974",
+      "hotkeys": [["f3"]],
+      "description": "Search for a file or folder in File Explorer.",
+      "isFavorite": false
+    },
+    {
+      "id": "10ca4366-e704-4725-a595-3badb51cd582",
+      "hotkeys": [["f4"]],
+      "description": "Display the address bar list in File Explorer.",
+      "isFavorite": false
+    },
+    {
+      "id": "0cbd2645-7d6b-41c8-8343-58391fc8e536",
+      "hotkeys": [["f5"]],
+      "description": "Refresh the active window.",
+      "isFavorite": false
+    },
+    {
+      "id": "14b38949-9fc1-4ad6-9058-73a06a09c39b",
+      "hotkeys": [["f6"]],
+      "description": "Cycle through screen elements in a window or on the desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "e684990f-2c43-4a59-a28d-41d4fb97ed4e",
+      "hotkeys": [["f10"]],
+      "description": "Activate the Menu bar in the active app.",
+      "isFavorite": false
+    },
+    {
+      "id": "b2e61b07-a727-41ec-9b9a-36e385f02f5c",
+      "hotkeys": [["alt", "a"]],
+      "description": "Set focus to the first icon in the Suggested actions menu.",
+      "isFavorite": false
+    },
+    {
+      "id": "bd11cd26-5185-4584-844c-52a67ece5504",
+      "hotkeys": [["alt", "f8"]],
+      "description": "Show your password on the sign-in screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "adea5b09-0e96-45ba-a682-a995a66a6b5d",
+      "hotkeys": [["alt", "escape"]],
+      "description": "Cycle through items in the order in which they were opened.",
+      "isFavorite": false
+    },
+    {
+      "id": "68947ede-d3eb-4968-8605-7e7ea23c9dab",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Display properties for the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "44812a40-5c99-4146-afba-17be423024bd",
+      "hotkeys": [["alt", "space"]],
+      "description": "Open the shortcut menu for the active window.",
+      "isFavorite": false
+    },
+    {
+      "id": "67a6d96a-ef31-4b3d-8a19-530183a5fd81",
+      "hotkeys": [["alt", "left"]],
+      "description": "Go back.",
+      "isFavorite": false
+    },
+    {
+      "id": "19290fc2-6e3b-4a26-bd27-9b069158f4d8",
+      "hotkeys": [["alt", "right"]],
+      "description": "Go forward.",
+      "isFavorite": false
+    },
+    {
+      "id": "207ce16e-f86e-4f18-ae3a-b12eb55faf59",
+      "hotkeys": [["ctrl", "f4"]],
+      "description": "Close the active document (in apps that are full-screen and let you have multiple documents open at the same time).",
+      "isFavorite": false
+    },
+    {
+      "id": "a4053fea-cd3a-48d8-8e14-4cd3c0e51df5",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Select all items in a document or window.",
+      "isFavorite": false
+    },
+    {
+      "id": "2b438dca-a3f1-4e96-ac24-a9e02ce8500c",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Delete the selected item and move it to the Recycle Bin.",
+      "isFavorite": false
+    },
+    {
+      "id": "a07cf9d4-4e4f-4e71-9338-b33cddeca76b",
+      "hotkeys": [["backspace"]],
+      "description": "Delete the selected item and move it to the Recycle Bin.",
+      "isFavorite": false
+    },
+    {
+      "id": "d47f8db4-950a-4fc3-90a0-58be1f0ec14e",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Open Search (in most apps).",
+      "isFavorite": false
+    },
+    {
+      "id": "f709c2e1-cb16-444a-9e3c-c9616c9df217",
+      "hotkeys": [["ctrl", "r"]],
+      "description": "Refresh the active window.",
+      "isFavorite": false
+    },
+    {
+      "id": "96057e22-9450-4402-a69e-9cff1a468d71",
+      "hotkeys": [["f5"]],
+      "description": "Refresh the active window.",
+      "isFavorite": false
+    },
+    {
+      "id": "bc3fed25-520a-4cad-9ead-4a47009986f7",
+      "hotkeys": [["ctrl", "y"]],
+      "description": "Redo an action.",
+      "isFavorite": false
+    },
+    {
+      "id": "7c014f14-1a9c-466e-ab09-4b826b0a9615",
+      "hotkeys": [["ctrl", "right"]],
+      "description": "Move the cursor to the beginning of the next word.",
+      "isFavorite": false
+    },
+    {
+      "id": "8078bb39-da78-491b-beb4-d4147a2f2950",
+      "hotkeys": [["ctrl", "left"]],
+      "description": "Move the cursor to the beginning of the previous word.",
+      "isFavorite": false
+    },
+    {
+      "id": "d6a1aa32-e778-4eae-9dc5-97e37c424d15",
+      "hotkeys": [["ctrl", "down"]],
+      "description": "Move the cursor to the beginning of the next paragraph.",
+      "isFavorite": false
+    },
+    {
+      "id": "81c10115-1aea-4dae-a7de-2ae4037766f6",
+      "hotkeys": [["ctrl", "up"]],
+      "description": "Move the cursor to the beginning of the previous paragraph.",
+      "isFavorite": false
+    },
+    {
+      "id": "0061e6c0-51d6-4a67-8336-7f869c471ab3",
+      "hotkeys": [["ctrl", "alt", "tab"]],
+      "description": "Use the arrow keys to switch between all open apps.",
+      "isFavorite": false
+    },
+    {
+      "id": "9217ffe5-4f71-499c-b4c2-1de844f57425",
+      "hotkeys": [["ctrl", "escape"]],
+      "description": "Open Start.",
+      "isFavorite": false
+    },
+    {
+      "id": "9d82383a-e99c-44c9-bd7b-60e4b9e532a8",
+      "hotkeys": [["ctrl", "shift", "escape"]],
+      "description": "Open Task Manager.",
+      "isFavorite": false
+    },
+    {
+      "id": "1f582bcb-efa5-4786-9531-3f0220e1b6f9",
+      "hotkeys": [["ctrl", "shift"]],
+      "description": "Switch the keyboard layout when multiple keyboard layouts are available.",
+      "isFavorite": false
+    },
+    {
+      "id": "e89d5d77-464f-4ec4-a240-2ce22b58a4d2",
+      "hotkeys": [["ctrl", "space"]],
+      "description": "Turn the Chinese input method editor (IME) on or off.",
+      "isFavorite": false
+    },
+    {
+      "id": "b576d2b3-524c-4541-8de9-c8ab134d0428",
+      "hotkeys": [["shift", "f10"]],
+      "description": "Display the shortcut menu for the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "b640177d-10f3-4400-9b81-df8d26c707ca",
+      "hotkeys": [["shift", "backspace"]],
+      "description": "Delete the selected item without moving it to the Recycle Bin first.",
+      "isFavorite": false
+    },
+    {
+      "id": "dea25d21-e5d8-44e5-98e5-0c965dfc5a3c",
+      "hotkeys": [["right"]],
+      "description": "Open the next menu to the right, or open a submenu.",
+      "isFavorite": false
+    },
+    {
+      "id": "94abaa3d-3b9e-4072-ba74-fe720e8adcff",
+      "hotkeys": [["left"]],
+      "description": "Open the next menu to the left, or close a submenu.",
+      "isFavorite": false
+    },
+    {
+      "id": "b0cd55d5-cef6-4893-9426-319d004bdf5d",
+      "hotkeys": [["escape"]],
+      "description": "Stop or leave the current task.",
+      "isFavorite": false
+    },
+    {
+      "id": "0c6fc745-fca3-4948-b357-de0e71ee57d7",
+      "hotkeys": [["meta"]],
+      "description": "Open or close Start.",
+      "isFavorite": false
+    },
+    {
+      "id": "d31360f7-7332-43aa-ad5e-2f6756a601af",
+      "hotkeys": [["meta", "a"]],
+      "description": "Open Quick Settings. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "e3b10bce-d20b-4464-8fe9-0f7732f81b07",
+      "hotkeys": [["meta", "b"]],
+      "description": "Set focus to the first icon in the Taskbar corner.",
+      "isFavorite": false
+    },
+    {
+      "id": "8b74ecae-f418-4acd-909d-7f37bb287f76",
+      "hotkeys": [["meta", "c"]],
+      "description": "Open Windows Copilot. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "8c21c151-c7c8-4253-8930-9114e3a4a9e8",
+      "hotkeys": [["meta", "shift", "c"]],
+      "description": "Open the charms menu.",
+      "isFavorite": false
+    },
+    {
+      "id": "71554864-fe32-4136-91b8-ed3edd10b927",
+      "hotkeys": [["meta", "ctrl", "c"]],
+      "description": "Turn on color filters (enable this shortcut first in Color Filter settings).",
+      "isFavorite": false
+    },
+    {
+      "id": "07388e2b-b8a6-4efd-946a-07526ec018bc",
+      "hotkeys": [["meta", "d"]],
+      "description": "Display and hide the desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "fe37b647-4e0b-4bde-8311-21e4e595518a",
+      "hotkeys": [["meta", "e"]],
+      "description": "Open File Explorer.",
+      "isFavorite": false
+    },
+    {
+      "id": "5b6b14f9-f2dd-4600-861b-d36a340b0b90",
+      "hotkeys": [["meta", "f"]],
+      "description": "Open Feedback Hub and take a screenshot.",
+      "isFavorite": false
+    },
+    {
+      "id": "10bd5bc7-fddd-47f5-9892-a724465f5fc2",
+      "hotkeys": [["meta", "g"]],
+      "description": "Open Xbox Game Bar when a game is open.",
+      "isFavorite": false
+    },
+    {
+      "id": "c8e5812b-e252-4199-9f51-8e505978e807",
+      "hotkeys": [["meta", "alt", "b"]],
+      "description": "Turn HDR on or off. (Applies to Xbox Game Bar app version 5.721.7292.0 or newer).",
+      "isFavorite": false
+    },
+    {
+      "id": "aa8c3239-8697-4fc1-ab97-b42ee1a0d4b2",
+      "hotkeys": [["meta", "h"]],
+      "description": "Launch voice typing. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "1ec9436b-c0e3-43cc-94d2-738e85eba845",
+      "hotkeys": [["meta", "i"]],
+      "description": "Open Settings.",
+      "isFavorite": false
+    },
+    {
+      "id": "960a8c3c-a332-44b2-9521-2cff0cb28725",
+      "hotkeys": [["meta", "j"]],
+      "description": "Set focus to a Windows tip when one is available.",
+      "isFavorite": false
+    },
+    {
+      "id": "989ebd2b-235b-4cc3-b305-34cb23993f5d",
+      "hotkeys": [["meta", "k"]],
+      "description": "Open Cast from Quick Settings. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "9d502266-87f0-44b6-97cd-75042c431ad0",
+      "hotkeys": [["meta", "alt", "k"]],
+      "description": "Toggle microphone mute in apps that support Call Mute. (Available starting in Windows 11, version 22H2).",
+      "isFavorite": false
+    },
+    {
+      "id": "302ac4ff-546f-4b6b-b434-5b970608cafa",
+      "hotkeys": [["meta", "l"]],
+      "description": "Lock your PC or switch accounts.",
+      "isFavorite": false
+    },
+    {
+      "id": "319c70f0-a84c-4ea0-bb65-d5bb71e6d5b0",
+      "hotkeys": [["meta", "m"]],
+      "description": "Minimize all windows.",
+      "isFavorite": false
+    },
+    {
+      "id": "da07d72d-9329-49d5-ac56-bc4565ab9be1",
+      "hotkeys": [["meta", "shift", "m"]],
+      "description": "Restore minimized windows on the desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "7562b5c5-7f77-4f1e-85a5-81155c7e2ab0",
+      "hotkeys": [["meta", "n"]],
+      "description": "Open notification center and calendar. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "179d2321-2c81-40f6-9661-619e37078976",
+      "hotkeys": [["meta", "o"]],
+      "description": "Lock device orientation.",
+      "isFavorite": false
+    },
+    {
+      "id": "1358cf5f-4343-4d92-9e55-dc57cc62146c",
+      "hotkeys": [["meta", "p"]],
+      "description": "Choose a presentation display mode.",
+      "isFavorite": false
+    },
+    {
+      "id": "e08a47a0-4e26-4a7f-a5f0-25130bf0f21e",
+      "hotkeys": [["meta", "ctrl", "q"]],
+      "description": "Open Quick Assist.",
+      "isFavorite": false
+    },
+    {
+      "id": "b6e108fc-85bd-4bd4-b58d-12becafa7040",
+      "hotkeys": [["meta", "r"]],
+      "description": "Open the Run dialog box.",
+      "isFavorite": false
+    },
+    {
+      "id": "ec74a8bf-2c3e-4510-bcc9-2ca1a0becb2e",
+      "hotkeys": [["meta", "alt", "r"]],
+      "description": "Record video of game window in focus (using Xbox Game Bar).",
+      "isFavorite": false
+    },
+    {
+      "id": "93c6bae1-d2fd-4290-ac09-e64cd47a851d",
+      "hotkeys": [["meta", "s"]],
+      "description": "Open search.",
+      "isFavorite": false
+    },
+    {
+      "id": "17fe6a6d-12af-4e5d-82ee-f9af3b1946e7",
+      "hotkeys": [["meta", "shift", "s"]],
+      "description": "Take a screenshot of part of your screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "1fe1b8ff-fc84-40bf-95da-ac4611abeef3",
+      "hotkeys": [["meta", "t"]],
+      "description": "Cycle through apps on the taskbar.",
+      "isFavorite": false
+    },
+    {
+      "id": "1adf3d94-6542-4ae3-81f3-7cbf6984806b",
+      "hotkeys": [["meta", "u"]],
+      "description": "Open Accessibility Settings.",
+      "isFavorite": false
+    },
+    {
+      "id": "73650b3d-6c1d-4ee2-ad85-6e1a9d2aef50",
+      "hotkeys": [["meta", "v"]],
+      "description": "Open the clipboard history.",
+      "isFavorite": false
+    },
+    {
+      "id": "217b4ad1-d4fd-4223-9d55-9684a7d1da65",
+      "hotkeys": [["meta", "shift", "v"]],
+      "description": "Set focus to a notification.",
+      "isFavorite": false
+    },
+    {
+      "id": "ed3f6ea5-a052-4d7a-b8ca-24d53b7d92a7",
+      "hotkeys": [["meta", "w"]],
+      "description": "Open Widgets. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "6a056530-3f8a-4935-bca9-3dac859bb9af",
+      "hotkeys": [["meta", "x"]],
+      "description": "Open the Quick Link menu.",
+      "isFavorite": false
+    },
+    {
+      "id": "669e1028-4967-4da4-a2f2-cbaa7c463f94",
+      "hotkeys": [["meta", "y"]],
+      "description": "Switch input between Windows Mixed Reality and your desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "cd859669-98a4-40f5-8d73-1c9107baa8bb",
+      "hotkeys": [["meta", "z"]],
+      "description": "Open the snap layouts. Updated in Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "ce1409ce-ba4d-40ec-8491-d0fa19e4a045",
+      "hotkeys": [["meta", "period"]],
+      "description": "Open emoji panel.",
+      "isFavorite": false
+    },
+    {
+      "id": "50661851-c327-4f79-9620-4deba6aabb00",
+      "hotkeys": [["semicolon"]],
+      "description": "Open emoji panel.",
+      "isFavorite": false
+    },
+    {
+      "id": "bbd94149-9f87-495d-a678-7923876f7987",
+      "hotkeys": [["meta", "comma"]],
+      "description": "Temporarily peek at the desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "5f71dd51-0b1e-48b5-9e5e-3411b5360126",
+      "hotkeys": [["meta", "ctrl", "f"]],
+      "description": "Search for PCs (if you're on a network).",
+      "isFavorite": false
+    },
+    {
+      "id": "1bbdad92-faad-47cd-80f8-12aa6b77188f",
+      "hotkeys": [["meta", "tab"]],
+      "description": "Open Task view.",
+      "isFavorite": false
+    },
+    {
+      "id": "9d265402-e6cb-474f-a7b8-05655a54e8fc",
+      "hotkeys": [["meta", "up"]],
+      "description": "Maximize the window.",
+      "isFavorite": false
+    },
+    {
+      "id": "6286f265-de3b-4deb-9044-4ebf1e3dbc35",
+      "hotkeys": [["meta", "alt", "up"]],
+      "description": "Snap window in focus to top half of screen. New with Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "2171d3f1-64e4-4e8d-8e44-be5ba151ca10",
+      "hotkeys": [["meta", "down"]],
+      "description": "Remove current app from screen or minimize the desktop window.",
+      "isFavorite": false
+    },
+    {
+      "id": "76be0cc1-ba58-42ef-942a-083061475d38",
+      "hotkeys": [["meta", "alt", "down"]],
+      "description": "Snap window in focus to bottom half of screen. New with Windows 11.",
+      "isFavorite": false
+    },
+    {
+      "id": "5c71d6f8-806e-4ecd-929e-3eccfe2cac70",
+      "hotkeys": [["meta", "left"]],
+      "description": "Maximize the app or desktop window to the left side of the screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "1c8e1c3b-0fa1-4a15-bf1a-3d4a772042ad",
+      "hotkeys": [["meta", "right"]],
+      "description": "Maximize the app or desktop window to the right side of the screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "4c411c97-5b27-4a35-a4ce-fe4a4165793b",
+      "hotkeys": [["meta", "shift", "up"]],
+      "description": "Stretch the desktop window to the top and bottom of the screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "b96e1db5-4726-4f8b-a236-ed9b8942bec3",
+      "hotkeys": [["meta", "shift", "down"]],
+      "description": "Restore/minimize active desktop windows vertically, maintaining width.",
+      "isFavorite": false
+    },
+    {
+      "id": "6ae1491c-d776-4a97-b02e-bf59eb12ecc1",
+      "hotkeys": [["meta", "shift", "left"]],
+      "description": "Move an app or window in the desktop from one monitor to another.",
+      "isFavorite": false
+    },
+    {
+      "id": "f29453be-bb9e-4d9a-9a06-f04838605f84",
+      "hotkeys": [["meta", "shift", "right"]],
+      "description": "Move an app or window in the desktop from one monitor to another.",
+      "isFavorite": false
+    },
+    {
+      "id": "dd48d4c0-2511-4bf6-8ff7-a3c6534af240",
+      "hotkeys": [["meta", "shift", "space"]],
+      "description": "Cycle backward through language and keyboard layout.",
+      "isFavorite": false
+    },
+    {
+      "id": "38aeba41-6651-4882-b512-57d964283088",
+      "hotkeys": [["meta", "space"]],
+      "description": "Switch input language and keyboard layout.",
+      "isFavorite": false
+    },
+    {
+      "id": "eb736de4-24bf-41d0-89a7-6b9b487a669f",
+      "hotkeys": [["meta", "ctrl", "space"]],
+      "description": "Change to a previously selected input.",
+      "isFavorite": false
+    },
+    {
+      "id": "dd99685f-6bbe-4be4-805b-edddaba5216b",
+      "hotkeys": [["meta", "ctrl", "enter"]],
+      "description": "Turn on Narrator.",
+      "isFavorite": false
+    },
+    {
+      "id": "1cb82cb6-64d5-45e8-a8df-8d60f69b69f5",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Open Magnifier and zoom in.",
+      "isFavorite": false
+    },
+    {
+      "id": "3d60262d-d735-4352-ac21-97f8470170bd",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out in Magnifier.",
+      "isFavorite": false
+    },
+    {
+      "id": "86f0016f-c7c8-4fa2-9a8e-bb0a6398f03c",
+      "hotkeys": [["meta", "escape"]],
+      "description": "Close Magnifier.",
+      "isFavorite": false
+    },
+    {
+      "id": "eb8bd645-bd29-47b2-91e3-e4d8826bb874",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Begin IME reconversion.",
+      "isFavorite": false
+    },
+    {
+      "id": "ffb9e269-ac02-419b-8730-214d792b46f6",
+      "hotkeys": [["meta", "ctrl", "shift", "b"]],
+      "description": "Wake PC from blank or black screen.",
+      "isFavorite": false
+    },
+    {
+      "id": "1ecfddf9-4dd0-4234-bffd-b89d26be703d",
+      "hotkeys": [["meta", "alt", "enter"]],
+      "description": "Open taskbar settings. (on taskbar item focus)",
+      "isFavorite": false
+    },
+    {
+      "id": "c3452e18-e981-4f59-ade7-11376c83673c",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy the selected text.",
+      "isFavorite": false
+    },
+    {
+      "id": "58e932be-1c05-4814-b1fb-c759bd1516c7",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste the selected text.",
+      "isFavorite": false
+    },
+    {
+      "id": "4c68985d-ddc3-48b2-8567-2b3a554a9b66",
+      "hotkeys": [["ctrl", "m"]],
+      "description": "Enter Mark mode.",
+      "isFavorite": false
+    },
+    {
+      "id": "167f32d5-76d1-4cf5-9c2b-c00af6ec2fe3",
+      "hotkeys": [["ctrl", "up"]],
+      "description": "Move up one line in the output history.",
+      "isFavorite": false
+    },
+    {
+      "id": "d16a5a52-2ae3-4219-a1c3-7afcb35aab35",
+      "hotkeys": [["ctrl", "down"]],
+      "description": "Move down one line in the output history.",
+      "isFavorite": false
+    },
+    {
+      "id": "a5681043-5c4f-4c1b-af69-0d617e02f462",
+      "hotkeys": [["f4"]],
+      "description": "Display the items in the active list.",
+      "isFavorite": false
+    },
+    {
+      "id": "b2be1802-15d7-469c-95bd-b74dfc697bc5",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Move forward through tabs.",
+      "isFavorite": false
+    },
+    {
+      "id": "378a2970-52b7-4374-96c3-b2eadce5c570",
+      "hotkeys": [["ctrl", "shift", "tab"]],
+      "description": "Move back through tabs.",
+      "isFavorite": false
+    },
+    {
+      "id": "e51d33f0-ed05-4d81-8cf6-3a4b1203143d",
+      "hotkeys": [["tab"]],
+      "description": "Move forward through options.",
+      "isFavorite": false
+    },
+    {
+      "id": "27f605df-2ac9-4bcb-a35a-83cc66375782",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Move back through options.",
+      "isFavorite": false
+    },
+    {
+      "id": "978e58df-bb83-4fd7-9c9f-e92399b8d4b5",
+      "hotkeys": [["space"]],
+      "description": "Select or clear the check box if the active option is a check box.",
+      "isFavorite": false
+    },
+    {
+      "id": "3169e083-0d28-4528-88d9-5f60f180865d",
+      "hotkeys": [["backspace"]],
+      "description": "Open a folder one level up if a folder is selected in the Save As or Open dialog box.",
+      "isFavorite": false
+    },
+    {
+      "id": "29df3bfc-2680-466d-abfd-1cd4a3f56bd8",
+      "hotkeys": [["alt", "d"]],
+      "description": "Select the address bar.",
+      "isFavorite": false
+    },
+    {
+      "id": "b50ca0a5-429c-4a97-ac53-429e7b9e95b6",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Select the search box.",
+      "isFavorite": false
+    },
+    {
+      "id": "79ae8fe0-d104-4970-86e8-57276f6eca8c",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Select the search box.",
+      "isFavorite": false
+    },
+    {
+      "id": "e613caa1-a557-46cb-8ebc-d9318dc355e4",
+      "hotkeys": [["ctrl", "n"]],
+      "description": "Open a new window.",
+      "isFavorite": false
+    },
+    {
+      "id": "1f23f35c-0f92-443f-8c59-e7b09cc24083",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Open a new tab and switch to it.",
+      "isFavorite": false
+    },
+    {
+      "id": "161b2ea6-e43d-4681-abd6-94d402015827",
+      "hotkeys": [["ctrl", "w"]],
+      "description": "Closes the active tab. Closes the window if there's only one tab open.",
+      "isFavorite": false
+    },
+    {
+      "id": "7b2d8cca-b259-4805-b168-3c07415384ab",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Move to the next tab.",
+      "isFavorite": false
+    },
+    {
+      "id": "ec55a78a-9304-45d4-9340-af6275b369bf",
+      "hotkeys": [["ctrl", "shift", "tab"]],
+      "description": "Move to the previous tab.",
+      "isFavorite": false
+    },
+    {
+      "id": "ae1ad5a0-6aa6-477e-a7df-2b10f27b3682",
+      "hotkeys": [["ctrl", "shift", "e"]],
+      "description": "Display all folders above the selected folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "6f90bc2e-df9b-4ea9-8221-4c06e3e70982",
+      "hotkeys": [["ctrl", "shift", "n"]],
+      "description": "Create a new folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "dd6cc6e2-e2b7-4608-8519-bbae30ef7126",
+      "hotkeys": [["alt", "p"]],
+      "description": "Display the preview panel.",
+      "isFavorite": false
+    },
+    {
+      "id": "afce554b-f625-4785-9e03-780b777531f0",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Open the Properties dialog box for the selected item.",
+      "isFavorite": false
+    },
+    {
+      "id": "3b9d5036-2061-4a53-9ca3-047351a06b8a",
+      "hotkeys": [["alt", "right"]],
+      "description": "View the next folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "225faffc-74eb-4b4f-bd2c-2f175e0dbd55",
+      "hotkeys": [["alt", "up"]],
+      "description": "View the folder that the folder was in.",
+      "isFavorite": false
+    },
+    {
+      "id": "d95a887c-4b5d-47b9-9e28-d61aa70ba236",
+      "hotkeys": [["alt", "left"]],
+      "description": "View the previous folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "4b0ba334-59a4-4ece-878c-6c9f1081d839",
+      "hotkeys": [["backspace"]],
+      "description": "View the previous folder.",
+      "isFavorite": false
+    },
+    {
+      "id": "cad63cf2-5755-413f-b231-4ae25c285dad",
+      "hotkeys": [["right"]],
+      "description": "Display the current selection (if it's collapsed), or select the first subfolder.",
+      "isFavorite": false
+    },
+    {
+      "id": "99fd9db3-3df6-40f4-9620-771bf1e7987c",
+      "hotkeys": [["left"]],
+      "description": "Collapse the current selection (if it's expanded), or select the folder that the folder was in.",
+      "isFavorite": false
+    },
+    {
+      "id": "772ae34f-af38-449d-85cd-32ea1819c726",
+      "hotkeys": [["f11"]],
+      "description": "Maximize or minimize the active window.",
+      "isFavorite": false
+    },
+    {
+      "id": "e9ef60a5-aca3-40c4-bf09-73135348d965",
+      "hotkeys": [["meta", "tab"]],
+      "description": "Open Task view.",
+      "isFavorite": false
+    },
+    {
+      "id": "e13bc6d8-ac56-490c-b42a-e35435ac1032",
+      "hotkeys": [["meta", "ctrl", "d"]],
+      "description": "Add a virtual desktop.",
+      "isFavorite": false
+    },
+    {
+      "id": "d8646cd4-4118-43c0-b95c-980aa3e29968",
+      "hotkeys": [["meta", "ctrl", "right"]],
+      "description": "Switch between virtual desktops you’ve created on the right.",
+      "isFavorite": false
+    },
+    {
+      "id": "269e2654-bf22-465b-b6ba-eadb08ec36b5",
+      "hotkeys": [["meta", "ctrl", "left"]],
+      "description": "Switch between virtual desktops you’ve created on the left.",
+      "isFavorite": false
+    },
+    {
+      "id": "93de3e4c-bee9-4549-8e01-d0f73f7f809f",
+      "hotkeys": [["meta", "ctrl", "f4"]],
+      "description": "Close the virtual desktop you're using.",
+      "isFavorite": false
+    },
+    {
+      "id": "85015806-55db-46ed-9694-a6febd785c66",
+      "hotkeys": [["meta", "i"]],
+      "description": "Open settings.",
+      "isFavorite": false
+    },
+    {
+      "id": "3c606acb-edc0-4de0-92cd-a089338dbbda",
+      "hotkeys": [["backspace"]],
+      "description": "Go back to the settings home page.",
+      "isFavorite": false
+    }
+  ]
+}

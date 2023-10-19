@@ -6,239 +6,878 @@
       "filename": "firefox.svg",
       "isCustom": false
     },
-    "id": "26eaf84b-29a3-4028-b90b-0b5072a29cb3",
+    "id": "5a6d36ef-512c-4143-8c76-bfe387d57869",
     "label": "Firefox"
   },
   "shortcuts": [
     {
-      "id": "6c615c14-0567-483d-bd5d-9adffd01913d",
-      "hotkeys": [
-        [
-          "meta",
-          "t"
-        ]
-      ],
-      "description": "Open a New Tab",
+      "id": "a16a0455-db93-4aa4-a4e7-0ddd5198eb73",
+      "hotkeys": [["meta", "left"]],
+      "description": "Back",
       "isFavorite": false
     },
     {
-      "id": "1a3e83e4-66b9-4118-b123-8a561dd0dca4",
-      "hotkeys": [
-        [
-          "meta",
-          "w"
-        ]
-      ],
-      "description": "Close the Current Tab",
+      "id": "099c52a7-7c0b-425c-b911-b7ee1bc8344e",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Back",
       "isFavorite": false
     },
     {
-      "id": "146ce46e-450f-49b9-808b-c470d2a97396",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "t"
-        ]
-      ],
-      "description": "Reopen the Last Closed Tab",
+      "id": "fbb80be8-2835-428b-bf0f-ec9755367b67",
+      "hotkeys": [["meta", "right"]],
+      "description": "Forward",
       "isFavorite": false
     },
     {
-      "id": "1b28deaf-f07b-4c57-b3da-fafe43187737",
-      "hotkeys": [
-        [
-          "meta",
-          "l"
-        ]
-      ],
-      "description": "Highlight the URL/Search Bar",
+      "id": "616cd81b-d368-4622-8c5c-536b6e248c62",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Forward",
       "isFavorite": false
     },
     {
-      "id": "ff5bad30-bb62-4fb5-b012-30b543ca8c7a",
-      "hotkeys": [
-        [
-          "meta",
-          "bracketleft"
-        ]
-      ],
-      "description": "Go Back in History",
+      "id": "cbedc80c-9ed9-4cf7-893d-35d692d07606",
+      "hotkeys": [["meta", "o"]],
+      "description": "Open File",
       "isFavorite": false
     },
     {
-      "id": "edbb107d-685c-414c-b2db-18d4f4b47615",
-      "hotkeys": [
-        [
-          "meta",
-          "bracketright"
-        ]
-      ],
-      "description": "Go Forward in History",
+      "id": "6d9c80ee-710c-44e3-a6a8-bf94ffd89409",
+      "hotkeys": [["meta", "r"]],
+      "description": "Reload",
       "isFavorite": false
     },
     {
-      "id": "1d9bdfd3-170b-49ca-a38a-c3f4b62f95e1",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "n"
-        ]
-      ],
-      "description": "Open a New Window",
+      "id": "15070663-6d70-4b49-b823-96a9575c491a",
+      "hotkeys": [["meta", "r"]],
+      "description": "Reload",
       "isFavorite": false
     },
     {
-      "id": "66d00830-e201-4b11-a3dc-0fc0e47ba30c",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "p"
-        ]
-      ],
-      "description": "Open a New Private Window",
+      "id": "769b87e4-ac98-432d-aeae-15e9692aee35",
+      "hotkeys": [["meta", "shift", "r"]],
+      "description": "Reload (override cache)",
       "isFavorite": false
     },
     {
-      "id": "4bebe9b6-bb5d-4a26-8534-98a40c5812b7",
-      "hotkeys": [
-        [
-          "meta",
-          "r"
-        ]
-      ],
-      "description": "Reload the Current Page",
+      "id": "9d8831ed-acc7-493d-b8e3-5bd1f49fa960",
+      "hotkeys": [["meta", "period"]],
+      "description": "Stop",
       "isFavorite": false
     },
     {
-      "id": "12a3999c-8dbb-415e-9320-45ff8d57cecb",
-      "hotkeys": [
-        [
-          "meta",
-          "comma"
-        ]
-      ],
-      "description": "Open the Settings",
+      "id": "47c06f10-6ec3-4ba2-818b-c2b6aac27d78",
+      "hotkeys": [["escape"]],
+      "description": "Stop",
       "isFavorite": false
     },
     {
-      "id": "d96d36a2-97ba-42d3-8921-a7375506ab7f",
-      "hotkeys": [
-        [
-          "meta",
-          "d"
-        ]
-      ],
-      "description": "Bookmark the Current Page",
+      "id": "3a758a16-47f7-4d29-ad8d-0e8162be3160",
+      "hotkeys": [["tab"]],
+      "description": "Focus Next Link or Input Field",
       "isFavorite": false
     },
     {
-      "id": "100146e8-6a63-497c-b089-afc27b326320",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "b"
-        ]
-      ],
-      "description": "Toggle the Bookmarks Bar",
+      "id": "fc137a15-fb90-4b00-815b-c22105e44e0d",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Focus Previous Link or Input Field",
       "isFavorite": false
     },
     {
-      "id": "b13390fe-6168-477a-afb3-0a51ce351ffe",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "backspace"
-        ]
-      ],
-      "description": "Clear Browsing Data",
+      "id": "56c14e46-5212-4539-9952-b5f8285cce27",
+      "hotkeys": [["space"]],
+      "description": "Go Down a Screen",
       "isFavorite": false
     },
     {
-      "id": "0c44cf2f-27ce-485b-8344-a242b6ba219f",
-      "hotkeys": [
-        [
-          "meta",
-          "h"
-        ]
-      ],
-      "description": "View Browsing History",
+      "id": "428bd548-7c23-46eb-a380-4f4f20047642",
+      "hotkeys": [["shift", "space"]],
+      "description": "Go Up a Screen",
       "isFavorite": false
     },
     {
-      "id": "a4ef7bd0-2612-4b7f-ad32-9cb1789be4f4",
-      "hotkeys": [
-        [
-          "meta",
-          "alt",
-          "left"
-        ]
-      ],
-      "description": "Go to the Previous Tab",
+      "id": "ebd95551-006f-47be-8ab3-90126bdc9b25",
+      "hotkeys": [["meta", "down"]],
+      "description": "Go to Bottom of Page",
       "isFavorite": false
     },
     {
-      "id": "5428675f-b3be-4412-9b07-4ff8019495e5",
-      "hotkeys": [
-        [
-          "meta",
-          "alt",
-          "right"
-        ]
-      ],
-      "description": "Go to the Next Tab",
+      "id": "29ce015f-aefd-44d1-8256-37e4a10d7b8e",
+      "hotkeys": [["meta", "up"]],
+      "description": "Go to Top of Page",
       "isFavorite": false
     },
     {
-      "id": "49aaf36a-3002-43f2-966e-8fde5a0fa581",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "bracketleft"
-        ]
-      ],
-      "description": "Move to the Previous Tab Group",
+      "id": "ec6aeceb-3eaa-4013-96dc-30c989829276",
+      "hotkeys": [["f6"]],
+      "description": "Move to Next Frame, Pop-Up",
       "isFavorite": false
     },
     {
-      "id": "6b4d2c85-c672-46d3-9667-acf7a97fe308",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "bracketright"
-        ]
-      ],
-      "description": "Move to the Next Tab Group",
+      "id": "d5b5af3c-d141-4bfc-aab6-4f494c97d0fb",
+      "hotkeys": [["shift", "f6"]],
+      "description": "Move to Previous Frame, Pop-Up",
       "isFavorite": false
     },
     {
-      "id": "6ec1dfea-c5c8-42ff-b811-278afbd9170a",
-      "hotkeys": [
-        [
-          "meta",
-          "alt",
-          "up"
-        ]
-      ],
-      "description": "Scroll Up",
+      "id": "9e07ae33-bbbb-4b8a-b07b-02ba90e0bc1c",
+      "hotkeys": [["meta", "p"]],
+      "description": "Print",
       "isFavorite": false
     },
     {
-      "id": "87216301-c7ed-4751-8c8e-8979f2719bc9",
-      "hotkeys": [
-        [
-          "meta",
-          "alt",
-          "down"
-        ]
-      ],
-      "description": "Scroll Down",
+      "id": "796382e7-3eac-4c49-a0b0-5f09c413c18b",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Save Focused Link (when browser.altClickSave is set to true)",
+      "isFavorite": false
+    },
+    {
+      "id": "69135576-3290-405c-9595-16d7f7171919",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save Page As",
+      "isFavorite": false
+    },
+    {
+      "id": "f25cadbe-787b-4659-af42-9840015afaf6",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom In",
+      "isFavorite": false
+    },
+    {
+      "id": "17335ec2-80f7-4b89-bc7c-170caee8b2d4",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom Out",
+      "isFavorite": false
+    },
+    {
+      "id": "14e35dcc-3e51-4fcd-a7e4-99c4d327387c",
+      "hotkeys": [["meta", "0"]],
+      "description": "Zoom Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "537652f0-6db7-4127-9507-b24904382ef2",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "c439ebd0-7fa7-4baa-989d-2140528ebc7f",
+      "hotkeys": [["meta", "x"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "bff08406-3eeb-4a56-85a4-2480b8c29dc7",
+      "hotkeys": [["backspace"]],
+      "description": "Delete",
+      "isFavorite": false
+    },
+    {
+      "id": "731754bb-ead3-46e0-8ac9-0e0691b6d025",
+      "hotkeys": [["meta", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "b9069302-be8a-41ea-9764-ff0cfbf1b820",
+      "hotkeys": [["meta", "shift", "v"]],
+      "description": "Paste (as plain text)",
+      "isFavorite": false
+    },
+    {
+      "id": "27664cad-d459-48e1-949c-df18cd03e316",
+      "hotkeys": [["meta", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "65007902-6825-4456-b5ac-a0c5a7993b94",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select All",
+      "isFavorite": false
+    },
+    {
+      "id": "65bdbc2a-a1c4-43d0-830f-58df7d533050",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "b151fa61-4231-4f9b-bc16-49e90e301793",
+      "hotkeys": [["meta", "f"]],
+      "description": "Find in This Page",
+      "isFavorite": false
+    },
+    {
+      "id": "55a1399a-319a-460c-8dc4-093e356cfb2d",
+      "hotkeys": [["meta", "g"]],
+      "description": "Find Again",
+      "isFavorite": false
+    },
+    {
+      "id": "2bbcf2b6-2c9d-4d48-98a5-0256a5883fb0",
+      "hotkeys": [["f3"]],
+      "description": "Find Again",
+      "isFavorite": false
+    },
+    {
+      "id": "da1256f7-6bbb-44ae-8dda-953c43089ee3",
+      "hotkeys": [["shift", "f3"]],
+      "description": "Find Previous",
+      "isFavorite": false
+    },
+    {
+      "id": "fad33400-f02e-47ed-97b8-a961c433ca89",
+      "hotkeys": [["meta", "shift", "g"]],
+      "description": "Find Previous",
+      "isFavorite": false
+    },
+    {
+      "id": "ce959ac4-3d03-4516-8583-0f51068992ec",
+      "hotkeys": [["slash"]],
+      "description": "Quick Find",
+      "isFavorite": false
+    },
+    {
+      "id": "8583a664-cc69-4e2d-86d3-2b3e1283e4fd",
+      "hotkeys": [["escape"]],
+      "description": "Close the Find or Quick Find bar (when the Find or Quick Find bar is focused)",
+      "isFavorite": false
+    },
+    {
+      "id": "d7fcb4cb-5851-4fcb-8eec-ccaefddc3ac0",
+      "hotkeys": [["alt", "down"]],
+      "description": "Switch Search Engine (after you have written something in the address bar)",
+      "isFavorite": false
+    },
+    {
+      "id": "c2ade3a5-5a83-4e6d-87ae-699c5adeb1fe",
+      "hotkeys": [["alt", "up"]],
+      "description": "Switch Search Engine (after you have written something in the address bar)",
+      "isFavorite": false
+    },
+    {
+      "id": "ce6943be-6061-4d5a-a7b9-3b29e0282dbd",
+      "hotkeys": [["meta", "k"]],
+      "description": "Focus Address bar for Web Search with Default Search Engine (if search bar is not shown)",
+      "isFavorite": false
+    },
+    {
+      "id": "93174157-7a0f-437d-bd6d-cfe5205ebe25",
+      "hotkeys": [["meta", "alt", "f"]],
+      "description": "Focus Address bar for Web Search with Default Search Engine (if search bar is not shown)",
+      "isFavorite": false
+    },
+    {
+      "id": "54754479-cade-4e6c-8cbd-bfd24a27a2c2",
+      "hotkeys": [["meta", "k", "meta", "alt", "f"]],
+      "description": "Focus Search bar (if search bar is shown)",
+      "isFavorite": false
+    },
+    {
+      "id": "a133721c-ebf3-4906-8343-78b88d947f79",
+      "hotkeys": [["meta", "down"]],
+      "description": "Change the Default Search Engine (in the Search bar or the Search field of the New Tab page)",
+      "isFavorite": false
+    },
+    {
+      "id": "3e6c50f3-3d3b-4298-974f-f9f3b887e78b",
+      "hotkeys": [["meta", "up"]],
+      "description": "Change the Default Search Engine (in the Search bar or the Search field of the New Tab page)",
+      "isFavorite": false
+    },
+    {
+      "id": "e156b47b-2d0d-4d6c-bb8f-d3090b30c792",
+      "hotkeys": [["alt", "down"]],
+      "description": "View menu to switch, add or manage search engines (when the Search bar is focused)",
+      "isFavorite": false
+    },
+    {
+      "id": "e3a99285-ffcd-4b75-990d-f7c423ac681f",
+      "hotkeys": [["alt", "up"]],
+      "description": "View menu to switch, add or manage search engines (when the Search bar is focused)",
+      "isFavorite": false
+    },
+    {
+      "id": "6cd65fd0-a266-4154-803a-610e30eee936",
+      "hotkeys": [["meta", "w"]],
+      "description": "Close Tab (except for Pinned Tabs)",
+      "isFavorite": false
+    },
+    {
+      "id": "cd44b871-429a-4876-9eaa-08d6377a6845",
+      "hotkeys": [["meta", "shift", "w"]],
+      "description": "Close Window",
+      "isFavorite": false
+    },
+    {
+      "id": "2cbd161c-f9bc-4e77-8413-efdaf5403e72",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Cycle through Tabs in Recently Used Order (if enabled in Preferences)",
+      "isFavorite": false
+    },
+    {
+      "id": "91b7a6c5-7b01-4758-b765-9df1989a134b",
+      "hotkeys": [["meta", "q"]],
+      "description": "Quit",
+      "isFavorite": false
+    },
+    {
+      "id": "8e10d4ed-55a7-4847-a0e4-114c8b6a5221",
+      "hotkeys": [["meta", "alt", "left"]],
+      "description": "Go one Tab to the Left",
+      "isFavorite": false
+    },
+    {
+      "id": "b8bfb6d7-865f-4c24-a228-8327ef911591",
+      "hotkeys": [["ctrl", "shift", "tab"]],
+      "description": "Go one Tab to the Left",
+      "isFavorite": false
+    },
+    {
+      "id": "17e5839a-056f-4171-8e2b-d7a74991dab8",
+      "hotkeys": [["meta", "alt", "right"]],
+      "description": "Go one Tab to the Right (if the setting Ctrl+Tab cycles through tabs in recently used order is disabled in Preferences)",
+      "isFavorite": false
+    },
+    {
+      "id": "ea3f6bd6-c148-450d-9ce0-e0b2c1b90346",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Go one Tab to the Right (if the setting Ctrl+Tab cycles through tabs in recently used order is disabled in Preferences)",
+      "isFavorite": false
+    },
+    {
+      "id": "332b0911-e3c2-4195-99b6-a9f50f5d11f4",
+      "hotkeys": [["meta", "1"]],
+      "description": "Go to Tab 1",
+      "isFavorite": false
+    },
+    {
+      "id": "c6c9f3d0-9c8d-44e8-8947-117314a02d37",
+      "hotkeys": [["meta", "2"]],
+      "description": "Go to Tab 2",
+      "isFavorite": false
+    },
+    {
+      "id": "2d70dfbd-e7b3-4f4a-9433-dd08b60cb659",
+      "hotkeys": [["meta", "3"]],
+      "description": "Go to Tab 3",
+      "isFavorite": false
+    },
+    {
+      "id": "49a87e8b-5ac3-4007-ad8a-ab6c74a9bab2",
+      "hotkeys": [["meta", "4"]],
+      "description": "Go to Tab 4",
+      "isFavorite": false
+    },
+    {
+      "id": "87baba5e-6b68-4347-a1e9-56b6cef98074",
+      "hotkeys": [["meta", "5"]],
+      "description": "Go to Tab 5",
+      "isFavorite": false
+    },
+    {
+      "id": "3d9efbc7-d3bb-4e84-ac57-ffd7e8353bfa",
+      "hotkeys": [["meta", "6"]],
+      "description": "Go to Tab 6",
+      "isFavorite": false
+    },
+    {
+      "id": "ce452050-7ede-4fac-b7a2-42350e219b42",
+      "hotkeys": [["meta", "7"]],
+      "description": "Go to Tab 7",
+      "isFavorite": false
+    },
+    {
+      "id": "dd7ed906-b5b3-4df7-b6d9-a8c687eb253a",
+      "hotkeys": [["meta", "8"]],
+      "description": "Go to Tab 8",
+      "isFavorite": false
+    },
+    {
+      "id": "92c993a5-7cb3-4e05-b917-6de82498f46c",
+      "hotkeys": [["meta", "9"]],
+      "description": "Go to Last Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "f1c2db16-0a87-451c-9eb6-b525f0557c2a",
+      "hotkeys": [["ctrl", "m"]],
+      "description": "Mute/Unmute Audio",
+      "isFavorite": false
+    },
+    {
+      "id": "c5f977b2-b4b4-41e9-b963-9ffbca5d28e1",
+      "hotkeys": [["meta", "t"]],
+      "description": "New Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "cd3d2a54-8b9c-412e-ada9-5f468b8ba0b3",
+      "hotkeys": [["meta", "n"]],
+      "description": "New Window",
+      "isFavorite": false
+    },
+    {
+      "id": "a3341942-5dde-40bb-a442-0e82641c9ec8",
+      "hotkeys": [["meta", "shift", "p"]],
+      "description": "New Private Window",
+      "isFavorite": false
+    },
+    {
+      "id": "349ef126-7e9e-4327-8d5d-a72dbd854647",
+      "hotkeys": [["alt", "shift", "enter"]],
+      "description": "Open Address or Search in New Background Tab (from address bar)",
+      "isFavorite": false
+    },
+    {
+      "id": "0b6bf538-a754-4b36-b417-c5696c6cddf8",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Open Address or Search in New Foreground Tab (from address bar or Search bar)",
+      "isFavorite": false
+    },
+    {
+      "id": "b8a062df-bc60-401d-ac65-4ba57f5bc552",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Open Address or Search in New Window (from address bar or the Search field on the New Tab page)",
+      "isFavorite": false
+    },
+    {
+      "id": "ec63e6bd-4e54-409b-a697-62dc3a9b319c",
+      "hotkeys": [["meta", "shift", "enter"]],
+      "description": "Open Search in New Background Tab (from the Search field on the New Tab page)",
+      "isFavorite": false
+    },
+    {
+      "id": "311b3a79-9d43-4549-8254-1dece73264a6",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Open Search in New Foreground Tab (from the Search field on the New Tab page)",
+      "isFavorite": false
+    },
+    {
+      "id": "f184aa7f-b529-4b8c-9c11-93d9e3f8ffdc",
+      "hotkeys": [["enter"]],
+      "description": "Open Focused Bookmark or Link in Current Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "c7e02358-90c2-493c-ac36-d37983c3fb3b",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Open Focused Bookmark in New Foreground Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "62d851ac-10ba-4ecc-a0f8-b299eaa08d83",
+      "hotkeys": [["meta", "shift", "enter"]],
+      "description": "Open Focused Bookmark in New Background Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "d0d0065c-c0f7-48b6-9752-21368dc72bb7",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Open Focused Link in New Background Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "65a646f9-1ddf-48e0-8af1-992954a8951b",
+      "hotkeys": [["meta", "shift", "enter"]],
+      "description": "Open Focused Link in New Foreground Tab",
+      "isFavorite": false
+    },
+    {
+      "id": "a7373466-5241-4b50-a5b3-fa20374dc4a2",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Open Focused Bookmark or Link in New Window",
+      "isFavorite": false
+    },
+    {
+      "id": "e2a9bc4a-21bc-4f4a-9a2e-b9b0d6e73f1e",
+      "hotkeys": [["ctrl", "shift", "tab"]],
+      "description": "Show All Tabs (if the setting Ctrl+Tab cycles through tabs in recently used order is enabled in Preferences)",
+      "isFavorite": false
+    },
+    {
+      "id": "72671a3f-1745-491b-ae47-5b86627eb388",
+      "hotkeys": [["meta", "shift", "t"]],
+      "description": "Reopen last closed tab or window (Reopens the last closed tab or window, in the order they were closed. If there aren't any tabs or windows to reopen, this command restores the previous session.)",
+      "isFavorite": false
+    },
+    {
+      "id": "b2ede5c0-94aa-40e6-99d4-07af860d1644",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Reopen last closed window",
+      "isFavorite": false
+    },
+    {
+      "id": "df909670-cbe6-432e-8c63-7af1f9d7746a",
+      "hotkeys": [["meta", "shift", "x"]],
+      "description": "Moves the URL left or right (if cursor is in the address bar)",
+      "isFavorite": false
+    },
+    {
+      "id": "4d74d48c-53fd-4050-bc99-88f7fffb3386",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "History sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "167d4e5f-7e02-4670-9b13-6693d1d5ae40",
+      "hotkeys": [["meta", "shift", "backspace"]],
+      "description": "Clear Recent History",
+      "isFavorite": false
+    },
+    {
+      "id": "7c87730d-f5b4-4b7b-b4a5-83585d5dd16c",
+      "hotkeys": [["meta", "shift", "d"]],
+      "description": "Bookmark All Tabs",
+      "isFavorite": false
+    },
+    {
+      "id": "0f843f37-fa1a-4b19-a1c0-665ce24f409c",
+      "hotkeys": [["meta", "d"]],
+      "description": "Bookmark This Page",
+      "isFavorite": false
+    },
+    {
+      "id": "f8fca008-91b9-4881-a3b0-3e613df3ea5e",
+      "hotkeys": [["meta", "b"]],
+      "description": "Bookmarks sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "70829418-316d-4c34-addf-34ac0bf49379",
+      "hotkeys": [["meta", "shift", "b"]],
+      "description": "Show/hide the Bookmarks toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "b87aa80f-59bf-4791-b649-39434ce65f40",
+      "hotkeys": [["meta", "shift", "o"]],
+      "description": "Show All Bookmarks (Library Window)",
+      "isFavorite": false
+    },
+    {
+      "id": "d1f82cd4-7f24-44ad-816a-8b15ef50d17d",
+      "hotkeys": [["space"]],
+      "description": "Show List of All Bookmarks (in Empty Search Field in Bookmarks Library Window or Sidebar)",
+      "isFavorite": false
+    },
+    {
+      "id": "85079bc0-f7da-4d5f-a8bf-69b4c6998ff8",
+      "hotkeys": [["meta", "j"]],
+      "description": "Downloads",
+      "isFavorite": false
+    },
+    {
+      "id": "e07251d0-b3dd-463a-9761-e5220515fdfc",
+      "hotkeys": [["meta", "shift", "a"]],
+      "description": "Add-ons",
+      "isFavorite": false
+    },
+    {
+      "id": "ac4b240d-459d-4528-a533-ae5b38b8445b",
+      "hotkeys": [["meta", "alt", "i"]],
+      "description": "Toggle Developer Tools",
+      "isFavorite": false
+    },
+    {
+      "id": "7c443204-9109-4c51-a512-d5ea3f171993",
+      "hotkeys": [["f12"]],
+      "description": "Toggle Developer Tools",
+      "isFavorite": false
+    },
+    {
+      "id": "6b6ca054-2e17-4149-bfa2-ea8005023bb6",
+      "hotkeys": [["meta", "alt", "k"]],
+      "description": "Web Console",
+      "isFavorite": false
+    },
+    {
+      "id": "21cb6a2a-944a-4d43-9d09-e9e59cfc6360",
+      "hotkeys": [["meta", "alt", "c"]],
+      "description": "Inspector",
+      "isFavorite": false
+    },
+    {
+      "id": "a727c8e8-4088-481e-b8d5-09ab58cd2d53",
+      "hotkeys": [["meta", "shift", "s"]],
+      "description": "Take a screenshot",
+      "isFavorite": false
+    },
+    {
+      "id": "c52b6b69-8dfd-4113-b376-36257abb0859",
+      "hotkeys": [["shift", "f7"]],
+      "description": "Style Editor",
+      "isFavorite": false
+    },
+    {
+      "id": "b5eb8215-619e-41b3-a020-2f707e722fc3",
+      "hotkeys": [["shift", "escape"]],
+      "description": "Task Manager",
+      "isFavorite": false
+    },
+    {
+      "id": "2e30ad8b-b2cb-4801-8cfa-bb2666db265f",
+      "hotkeys": [["shift", "f5"]],
+      "description": "Profiler",
+      "isFavorite": false
+    },
+    {
+      "id": "507b438e-ebe3-406e-a78e-ea5a1b9b78c7",
+      "hotkeys": [["meta", "alt", "e"]],
+      "description": "Network",
+      "isFavorite": false
+    },
+    {
+      "id": "52c0f934-271f-45a3-8a70-2ccb24436958",
+      "hotkeys": [["meta", "alt", "m"]],
+      "description": "Responsive Design View",
+      "isFavorite": false
+    },
+    {
+      "id": "204bc0d6-5713-4d60-a9ef-2dbe759825c5",
+      "hotkeys": [["meta", "u"]],
+      "description": "Page Source",
+      "isFavorite": false
+    },
+    {
+      "id": "c6712316-8ae9-4dcc-bb5f-5f0bb3afba5b",
+      "hotkeys": [["meta", "shift", "j"]],
+      "description": "Browser Console",
+      "isFavorite": false
+    },
+    {
+      "id": "4f9020a2-6768-4977-8584-cb8e1359db78",
+      "hotkeys": [["meta", "i"]],
+      "description": "Page Info",
+      "isFavorite": false
+    },
+    {
+      "id": "3ca06504-6b80-4039-af8e-7fdbbd3c85d7",
+      "hotkeys": [["n"]],
+      "description": "Next page",
+      "isFavorite": false
+    },
+    {
+      "id": "b9cda250-8756-481f-9c84-cb91d852c353",
+      "hotkeys": [["j"]],
+      "description": "Next page",
+      "isFavorite": false
+    },
+    {
+      "id": "ad2f1a45-5d45-4956-aaea-e15134772c32",
+      "hotkeys": [["right"]],
+      "description": "Next page",
+      "isFavorite": false
+    },
+    {
+      "id": "a7c679b0-a0ed-4344-8756-aaac138c2570",
+      "hotkeys": [["p"]],
+      "description": "Previous page",
+      "isFavorite": false
+    },
+    {
+      "id": "e6edcee5-5fa8-4460-a06c-29e7e0ecf006",
+      "hotkeys": [["k"]],
+      "description": "Previous page",
+      "isFavorite": false
+    },
+    {
+      "id": "c7618d9c-b389-4506-b170-fedd78a23c44",
+      "hotkeys": [["left"]],
+      "description": "Previous page",
+      "isFavorite": false
+    },
+    {
+      "id": "1316b43f-5a9b-4d1e-86ff-664ef57fe2cc",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "1dcf6922-cec1-427d-b7f4-0373d2c2d330",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "a24fc375-eb36-4022-9a4c-e2a15f6a876a",
+      "hotkeys": [["meta", "0"]],
+      "description": "Automatic Zoom",
+      "isFavorite": false
+    },
+    {
+      "id": "687161de-7e7e-4dbd-a67a-b322837a5cfd",
+      "hotkeys": [["r"]],
+      "description": "Rotate the document clockwise",
+      "isFavorite": false
+    },
+    {
+      "id": "24b5b782-e5da-4f06-82fb-312e913931b7",
+      "hotkeys": [["shift", "r"]],
+      "description": "Rotate counterclockwise",
+      "isFavorite": false
+    },
+    {
+      "id": "36f7202e-e91b-4ea2-a2fa-15001685866b",
+      "hotkeys": [["meta", "alt", "p"]],
+      "description": "Switch to Presentation Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "c0e660b2-a681-415f-8cb9-b1af64e533b2",
+      "hotkeys": [["s"]],
+      "description": "Choose Text Selection Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "bb1c816b-df1b-4a2b-83ae-dd9870521de1",
+      "hotkeys": [["h"]],
+      "description": "Choose Hand Tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1753a0ab-e427-459f-90c0-92f73cd23f31",
+      "hotkeys": [["meta", "alt", "g"]],
+      "description": "Focus the Page Number input box",
+      "isFavorite": false
+    },
+    {
+      "id": "c5519249-ff75-4129-ba28-51988a64bc28",
+      "hotkeys": [["ctrl", "enter"]],
+      "description": "Complete .com Address",
+      "isFavorite": false
+    },
+    {
+      "id": "5e923489-1a16-47c7-a670-c870b990abb9",
+      "hotkeys": [["shift", "backspace"]],
+      "description": "Delete Selected Autocomplete Entry",
+      "isFavorite": false
+    },
+    {
+      "id": "1677fb5c-3bc0-4a1e-8ab9-626512fa54d9",
+      "hotkeys": [["meta", "shift", "f"]],
+      "description": "Toggle Full Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "802119b3-c3ff-447c-a41c-c6550e47f823",
+      "hotkeys": [["meta", "alt", "r"]],
+      "description": "Toggle Reader Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "38876274-1ef7-4e9f-893d-06cbbb8306f4",
+      "hotkeys": [["f7"]],
+      "description": "Caret Browsing",
+      "isFavorite": false
+    },
+    {
+      "id": "e8fe6c5a-9dde-400c-b0eb-bea0efa96485",
+      "hotkeys": [["meta", "l"]],
+      "description": "Focus Address Bar",
+      "isFavorite": false
+    },
+    {
+      "id": "e7248d96-8c71-4940-8387-b60bcbe45f5f",
+      "hotkeys": [["f6"]],
+      "description": "Focus Address Bar",
+      "isFavorite": false
+    },
+    {
+      "id": "3bbed882-0663-4bf8-a1c7-69f5b3f5b611",
+      "hotkeys": [["f6"]],
+      "description": "Focus Search Field in Library",
+      "isFavorite": false
+    },
+    {
+      "id": "181a6911-76ce-4ae6-8b8d-f4563e4c8a58",
+      "hotkeys": [["meta", "f"]],
+      "description": "Focus Search Field in Library",
+      "isFavorite": false
+    },
+    {
+      "id": "a47bd291-5db7-4f34-9d80-35699ba8e751",
+      "hotkeys": [["escape"]],
+      "description": "Stop Autoscroll Mode",
+      "isFavorite": false
+    },
+    {
+      "id": "7b965905-f5b1-4d41-a926-888051aac903",
+      "hotkeys": [["escape"]],
+      "description": "Cancel Drag-and-Drop Operation",
+      "isFavorite": false
+    },
+    {
+      "id": "c5d76ab9-57ab-4e7e-b978-be5e35a3c56c",
+      "hotkeys": [["escape"]],
+      "description": "Clear Search Field in Library or Sidebar",
+      "isFavorite": false
+    },
+    {
+      "id": "15d98154-3978-465d-b9d9-3511f9281e99",
+      "hotkeys": [["escape"]],
+      "description": "Close a Menu",
+      "isFavorite": false
+    },
+    {
+      "id": "97204383-3b90-4ecb-ad4f-e1aa3a7a2575",
+      "hotkeys": [["space"]],
+      "description": "Toggle Play / Pause",
+      "isFavorite": false
+    },
+    {
+      "id": "6e45d1bf-7939-424c-b806-f6b4e4d420d9",
+      "hotkeys": [["down"]],
+      "description": "Decrease volume",
+      "isFavorite": false
+    },
+    {
+      "id": "3441c538-dadc-4f09-bb6c-ae36ac5373d9",
+      "hotkeys": [["up"]],
+      "description": "Increase volume",
+      "isFavorite": false
+    },
+    {
+      "id": "f84cf59d-5f8e-4689-be7d-20ddad544b36",
+      "hotkeys": [["meta", "down"]],
+      "description": "Mute audio",
+      "isFavorite": false
+    },
+    {
+      "id": "39844745-352b-4c28-ad26-0e000343b189",
+      "hotkeys": [["meta", "up"]],
+      "description": "Unmute audio",
+      "isFavorite": false
+    },
+    {
+      "id": "fc726331-12e2-4800-9302-5381d294183e",
+      "hotkeys": [["left"]],
+      "description": "Seek back 15 seconds",
+      "isFavorite": false
+    },
+    {
+      "id": "d264c0f3-0bee-476c-a854-445c75db7120",
+      "hotkeys": [["meta", "left"]],
+      "description": "Seek back 10 %",
+      "isFavorite": false
+    },
+    {
+      "id": "ad1d6be1-6f4c-4be0-96f0-0fe23cdd8f8a",
+      "hotkeys": [["right"]],
+      "description": "Seek forward 15 seconds",
+      "isFavorite": false
+    },
+    {
+      "id": "6ab93d27-e224-4b8a-8f0a-638f33fa07a2",
+      "hotkeys": [["meta", "right"]],
+      "description": "Seek forward 10 %",
+      "isFavorite": false
+    },
+    {
+      "id": "4b5c566d-81dd-45c3-9741-2182f15eed63",
+      "hotkeys": [["meta", "space"]],
+      "description": "Select or deselect the tab with the colored border. The other tabs stay selected or deselected.",
       "isFavorite": false
     }
   ]

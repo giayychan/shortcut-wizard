@@ -42,7 +42,7 @@ function SearchShortcutContainer() {
     (state) => state.selectedSoftwareShortcut
   );
 
-  const [debounced] = useDebouncedValue(searchTerm, 500);
+  // const [debounced] = useDebouncedValue(searchTerm, 500);
 
   const flattenSearchData = useMemo(() => {
     if (!softwareShortcuts?.length) return [];
@@ -90,13 +90,13 @@ function SearchShortcutContainer() {
     [setShowSearchResults, setResults, fuse]
   );
 
-  useEffect(() => {
-    handleChange(debounced);
-  }, [debounced, handleChange]);
+  // useEffect(() => {
+  //   handleChange(debounced);
+  // }, [debounced, handleChange]);
 
   const handleSubmit = useCallback(async () => {
     handleChange(searchTerm);
-  }, [searchTerm, handleChange]);
+  }, [handleChange, searchTerm]);
 
   const reset = () => {
     setResults([]);
@@ -125,4 +125,4 @@ function SearchShortcutContainer() {
   );
 }
 
-export default memo(SearchShortcutContainer);
+export default SearchShortcutContainer;

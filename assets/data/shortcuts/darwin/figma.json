@@ -6,227 +6,956 @@
       "filename": "figma.svg",
       "isCustom": false
     },
-    "id": "09953aa2-350f-49e9-91f8-8a8a7ff626f4",
+    "id": "83a15288-6786-4f13-b16e-8f9327a595f8",
     "label": "Figma"
   },
   "shortcuts": [
     {
-      "id": "e448e648-0021-4279-bab0-a0c955dc2795",
-      "hotkeys": [
-        [
-          "v"
-        ]
-      ],
-      "description": "Selection Tool",
+      "id": "55641277-5288-4a29-badc-2ab12b731221",
+      "hotkeys": [["v"]],
+      "description": "Move",
       "isFavorite": false
     },
     {
-      "id": "1aca0a63-c24e-4f10-9fce-17b8023996ed",
-      "hotkeys": [
-        [
-          "a"
-        ]
-      ],
-      "description": "Frame Tool",
+      "id": "afddc2ae-315e-483d-b2d7-e921be7c7dc7",
+      "hotkeys": [["k"]],
+      "description": "Scale",
       "isFavorite": false
     },
     {
-      "id": "478cc0f5-bff1-451d-87d5-29dafbc74db2",
-      "hotkeys": [
-        [
-          "d"
-        ]
-      ],
-      "description": "Shape Tool",
+      "id": "13ee5756-dc0c-4398-a41e-13e7ba83deef",
+      "hotkeys": [["a"]],
+      "description": "Frame",
       "isFavorite": false
     },
     {
-      "id": "8f5dfd0b-4e59-468b-b75b-10ec5a76d5f0",
-      "hotkeys": [
-        [
-          "t"
-        ]
-      ],
-      "description": "Text Tool",
+      "id": "406b638b-f397-4b74-af47-c6b7b77cf068",
+      "hotkeys": [["f"]],
+      "description": "Frame",
       "isFavorite": false
     },
     {
-      "id": "34aea21d-605d-4250-9f15-4613dbaaf279",
-      "hotkeys": [
-        [
-          "meta",
-          "g"
-        ]
-      ],
-      "description": "Group Selected Objects",
+      "id": "f12aeef5-5965-4b5e-8af5-59f9000fc632",
+      "hotkeys": [["shift", "s"]],
+      "description": "Section",
       "isFavorite": false
     },
     {
-      "id": "efa13580-2607-4389-9bd0-41bae8101196",
-      "hotkeys": [
-        [
-          "meta",
-          "d"
-        ]
-      ],
-      "description": "Duplicate Object",
+      "id": "6c46bb54-1c76-446c-83a4-331c359ffe59",
+      "hotkeys": [["s"]],
+      "description": "Slice",
       "isFavorite": false
     },
     {
-      "id": "9bf17fdc-1a74-4a40-944d-308e98c27571",
-      "hotkeys": [
-        [
-          "meta",
-          "z"
-        ]
-      ],
-      "description": "Undo",
+      "id": "5861011c-20e1-468a-ba9d-8d3dedf97128",
+      "hotkeys": [["r"]],
+      "description": "Rectangle",
       "isFavorite": false
     },
     {
-      "id": "9cf102ac-8f9d-4d12-930d-5a505255444a",
-      "hotkeys": [
-        [
-          "meta",
-          "y"
-        ]
-      ],
-      "description": "Redo",
+      "id": "34bb3842-ad5b-4ea2-a383-b57e76f52967",
+      "hotkeys": [["l"]],
+      "description": "Line",
       "isFavorite": false
     },
     {
-      "id": "06b39141-ad24-4493-a6da-580207a766b3",
-      "hotkeys": [
-        [
-          "meta",
-          "c"
-        ]
-      ],
+      "id": "e6d9ba38-1b38-4d9c-b970-43cf8834ba67",
+      "hotkeys": [["shift", "l"]],
+      "description": "Arrow",
+      "isFavorite": false
+    },
+    {
+      "id": "fbab5c10-9cbb-4fe4-b21c-70340f37207d",
+      "hotkeys": [["o"]],
+      "description": "Ellipse",
+      "isFavorite": false
+    },
+    {
+      "id": "665362cf-d041-4c1b-872f-bd5f6cc03ca4",
+      "hotkeys": [["shift", "ctrl", "k"]],
+      "description": "Place image",
+      "isFavorite": false
+    },
+    {
+      "id": "ac86b217-c7a9-41be-8ef8-9d8229a3fa5a",
+      "hotkeys": [["p"]],
+      "description": "Pen",
+      "isFavorite": false
+    },
+    {
+      "id": "2bcf28ab-36d2-4f39-990d-e151f7389175",
+      "hotkeys": [["shift", "p"]],
+      "description": "Pencil",
+      "isFavorite": false
+    },
+    {
+      "id": "514049fb-db88-4d67-a9cc-77a1f6a27392",
+      "hotkeys": [["t"]],
+      "description": "Text",
+      "isFavorite": false
+    },
+    {
+      "id": "062e320a-7ad5-41bb-9896-550b4a66f6be",
+      "hotkeys": [["shift", "i"]],
+      "description": "Resources",
+      "isFavorite": false
+    },
+    {
+      "id": "e88565b4-7d9f-4864-ad2f-49b8cf315eb4",
+      "hotkeys": [["h"]],
+      "description": "Hand",
+      "isFavorite": false
+    },
+    {
+      "id": "3acc779d-4933-4375-9884-97e74f6607a4",
+      "hotkeys": [["c"]],
+      "description": "Add comment",
+      "isFavorite": false
+    },
+    {
+      "id": "e72f7060-df4c-4996-b8e4-68437ba773be",
+      "hotkeys": [["i"]],
+      "description": "Pick color",
+      "isFavorite": false
+    },
+    {
+      "id": "2b083113-50b0-4541-a32a-6a832943fcb9",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Pick color",
+      "isFavorite": false
+    },
+    {
+      "id": "0741b1eb-0449-40e2-a576-ce33722e1295",
+      "hotkeys": [["ctrl", "slash"]],
+      "description": "Quick actions (Press Return or Enter to perform an action)",
+      "isFavorite": false
+    },
+    {
+      "id": "4583b3ed-7e83-4e28-939d-f506d899a651",
+      "hotkeys": [["ctrl", "p"]],
+      "description": "Quick actions (Press Return or Enter to perform an action)",
+      "isFavorite": false
+    },
+    {
+      "id": "9b3dac10-f0e5-4254-93f6-eebf8fa1ccfc",
+      "hotkeys": [["alt", "ctrl", "p"]],
+      "description": "Run last plugin",
+      "isFavorite": false
+    },
+    {
+      "id": "3710d960-1ef6-48ab-8987-5ff87efd0a2e",
+      "hotkeys": [["ctrl", "backslash"]],
+      "description": "Show/Hide UI (Editor and presentation mode)",
+      "isFavorite": false
+    },
+    {
+      "id": "9929150b-ce29-45e7-a756-0804adf58147",
+      "hotkeys": [["ctrl", "period"]],
+      "description": "Show/Hide UI (Editor and presentation mode)",
+      "isFavorite": false
+    },
+    {
+      "id": "504f4ef8-35d0-4a13-bf0f-3910cbc7ee85",
+      "hotkeys": [["alt", "ctrl", "backslash"]],
+      "description": "Multiplayer cursors",
+      "isFavorite": false
+    },
+    {
+      "id": "78493e33-5f04-4ad9-b369-5975f8518d5d",
+      "hotkeys": [["shift", "r"]],
+      "description": "Rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "84c233b1-5fb5-4677-8645-36b95d4f905c",
+      "hotkeys": [["shift", "o"]],
+      "description": "Show outlines",
+      "isFavorite": false
+    },
+    {
+      "id": "fded08ff-e2d1-477e-a470-318006514d87",
+      "hotkeys": [["ctrl", "y"]],
+      "description": "Show outlines",
+      "isFavorite": false
+    },
+    {
+      "id": "074edd3b-1c2f-431a-9a30-3bada1231df6",
+      "hotkeys": [["ctrl", "shift", "p"]],
+      "description": "Pixel preview",
+      "isFavorite": false
+    },
+    {
+      "id": "c47d5deb-26cd-4b73-a568-38828ec50b21",
+      "hotkeys": [["shift", "g"]],
+      "description": "Layout grids",
+      "isFavorite": false
+    },
+    {
+      "id": "00249b50-fabd-4405-b346-c95e30f5d99b",
+      "hotkeys": [["shift", "quote"]],
+      "description": "Pixel grid",
+      "isFavorite": false
+    },
+    {
+      "id": "7c5edd65-ae85-46cd-a9a2-feac3bbb7dcc",
+      "hotkeys": [["ctrl", "quote"]],
+      "description": "Pixel grid",
+      "isFavorite": false
+    },
+    {
+      "id": "357b0185-a1fa-4e2c-b56a-29f6952721b9",
+      "hotkeys": [["alt", "l"]],
+      "description": "Collapse layers",
+      "isFavorite": false
+    },
+    {
+      "id": "dfcb60b9-4b23-40e5-8806-3258ec792ea2",
+      "hotkeys": [["alt", "1"]],
+      "description": "Layers panel",
+      "isFavorite": false
+    },
+    {
+      "id": "0b5b4502-b218-4054-8cbe-a04e3567db0f",
+      "hotkeys": [["alt", "2"]],
+      "description": "Assets panel",
+      "isFavorite": false
+    },
+    {
+      "id": "3a4ca9a0-c91e-4311-bba4-92d5408dbf3a",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Find and replace",
+      "isFavorite": false
+    },
+    {
+      "id": "ec0b1228-f23b-4ad2-883b-9558157b2319",
+      "hotkeys": [["alt", "3"]],
+      "description": "Libraries",
+      "isFavorite": false
+    },
+    {
+      "id": "7070a650-e689-498e-a008-eb13b64a1cc4",
+      "hotkeys": [["alt", "8"]],
+      "description": "Design panel",
+      "isFavorite": false
+    },
+    {
+      "id": "22749cdc-337d-4b6f-b110-bdd0dd247da4",
+      "hotkeys": [["alt", "9"]],
+      "description": "Prototype panel",
+      "isFavorite": false
+    },
+    {
+      "id": "297e3ef1-56f5-4d2a-8cdd-2c238043f7a4",
+      "hotkeys": [["alt", "0"]],
+      "description": "Inspect panel",
+      "isFavorite": false
+    },
+    {
+      "id": "7d07b310-f37a-4d9d-9eba-8f10a7b58aa9",
+      "hotkeys": [["shift", "e"]],
+      "description": "Toggle design/prototype panel",
+      "isFavorite": false
+    },
+    {
+      "id": "d594b50b-0689-4584-a8f8-75d6e3774b55",
+      "hotkeys": [["shift", "c"]],
+      "description": "Show/Hide comments",
+      "isFavorite": false
+    },
+    {
+      "id": "21ca1413-bb24-41bd-a9ba-b9122cca6815",
+      "hotkeys": [["shift", "ctrl", "backslash"]],
+      "description": "Show/Hide left panel",
+      "isFavorite": false
+    },
+    {
+      "id": "242085f8-2056-4f81-b917-1785544ec3db",
+      "hotkeys": [["alt", "ctrl", "enter"]],
+      "description": "Present (play the prototype)",
+      "isFavorite": false
+    },
+    {
+      "id": "09fd994d-2d90-4759-a2a3-2efabf17129e",
+      "hotkeys": [["shift", "space"]],
+      "description": "Preview (play the prototype on the canvas)",
+      "isFavorite": false
+    },
+    {
+      "id": "a0bf0b9b-1c71-4b3a-a232-02806ea2f7c8",
+      "hotkeys": [["alt", "ctrl", "left"]],
+      "description": "Switch between files",
+      "isFavorite": false
+    },
+    {
+      "id": "0c606e1b-48ed-40ba-919f-f1ad3d590977",
+      "hotkeys": [["alt", "ctrl", "right"]],
+      "description": "Switch between files",
+      "isFavorite": false
+    },
+    {
+      "id": "07f87064-1775-4c10-9484-2761ecb5a88d",
+      "hotkeys": [["equal"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "85d3cb9c-5c60-4d69-9cc0-c049345f1ebd",
+      "hotkeys": [["minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "c63a8ad3-6507-41b4-852a-c0fbdabfe993",
+      "hotkeys": [["ctrl", "0"]],
+      "description": "Zoom to 100%",
+      "isFavorite": false
+    },
+    {
+      "id": "182b2419-cc2c-4987-99c2-510a86437d58",
+      "hotkeys": [["shift", "1"]],
+      "description": "Zoom to fit",
+      "isFavorite": false
+    },
+    {
+      "id": "3e4f14a4-1e62-4d63-b378-74e8f9b0ec0d",
+      "hotkeys": [["shift", "2"]],
+      "description": "Zoom to selection",
+      "isFavorite": false
+    },
+    {
+      "id": "d236eccf-498b-4cee-ab3b-a21a5e9693ba",
+      "hotkeys": [["shift", "n"]],
+      "description": "Zoom to previous frame",
+      "isFavorite": false
+    },
+    {
+      "id": "388438b6-1451-48e8-9329-304dcbd8ce6c",
+      "hotkeys": [["n"]],
+      "description": "Zoom to next frame",
+      "isFavorite": false
+    },
+    {
+      "id": "81a7c207-8fc9-46a4-b553-535a34c5544f",
+      "hotkeys": [["ctrl", "b"]],
+      "description": "Bold",
+      "isFavorite": false
+    },
+    {
+      "id": "53713770-f754-47f8-9154-c5183b6302c8",
+      "hotkeys": [["ctrl", "i"]],
+      "description": "Italic",
+      "isFavorite": false
+    },
+    {
+      "id": "219c5a81-97f4-4704-bd9a-369d0307a1cc",
+      "hotkeys": [["ctrl", "u"]],
+      "description": "Underline",
+      "isFavorite": false
+    },
+    {
+      "id": "e2233669-56af-47cb-9795-1391d6f590be",
+      "hotkeys": [["shift", "ctrl", "x"]],
+      "description": "Strikethrough",
+      "isFavorite": false
+    },
+    {
+      "id": "63dcb5f4-fbef-4972-b9e9-b0f1e9d5b259",
+      "hotkeys": [["ctrl", "k"]],
+      "description": "Create link",
+      "isFavorite": false
+    },
+    {
+      "id": "c230d25c-504f-4061-9593-531485e0cb85",
+      "hotkeys": [["shift", "ctrl", "8"]],
+      "description": "Bulleted list",
+      "isFavorite": false
+    },
+    {
+      "id": "6cfb7e8b-1ec2-46d1-b261-2da75221dfd0",
+      "hotkeys": [["shift", "ctrl", "7"]],
+      "description": "Numbered list",
+      "isFavorite": false
+    },
+    {
+      "id": "af25043b-66d4-4363-8a05-4d65598e3eb6",
+      "hotkeys": [["alt", "ctrl", "l"]],
+      "description": "Text align left",
+      "isFavorite": false
+    },
+    {
+      "id": "92daa490-5698-46c2-b581-65cc45ffdcf5",
+      "hotkeys": [["alt", "ctrl", "t"]],
+      "description": "Text align center",
+      "isFavorite": false
+    },
+    {
+      "id": "69107e30-ef55-4d8b-bfe6-58b2fda31225",
+      "hotkeys": [["alt", "ctrl", "r"]],
+      "description": "Text align right",
+      "isFavorite": false
+    },
+    {
+      "id": "0da4404e-63cf-4a13-87d0-af0f3a34d4a6",
+      "hotkeys": [["alt", "ctrl", "j"]],
+      "description": "Text align justified",
+      "isFavorite": false
+    },
+    {
+      "id": "a2a602ec-dfe6-48a1-81e7-5b9aa972345f",
+      "hotkeys": [["ctrl", "bracketright"]],
+      "description": "Increase indentation",
+      "isFavorite": false
+    },
+    {
+      "id": "d2ad6f46-ee2d-40f1-a3b7-2a9afd6fc160",
+      "hotkeys": [["ctrl", "bracketleft"]],
+      "description": "Decrease indentation",
+      "isFavorite": false
+    },
+    {
+      "id": "eeb48182-2940-4369-8a5c-05282f6dc3d3",
+      "hotkeys": [["shift", "ctrl", "period"]],
+      "description": "Increase font size",
+      "isFavorite": false
+    },
+    {
+      "id": "a16f0069-ad85-414c-835e-996f6bdcd64a",
+      "hotkeys": [["alt", "ctrl", "period"]],
+      "description": "Increase font weight",
+      "isFavorite": false
+    },
+    {
+      "id": "b12dbf36-d789-49bc-89c1-e698011a1bf2",
+      "hotkeys": [["alt", "ctrl", "comma"]],
+      "description": "Decrease font weight",
+      "isFavorite": false
+    },
+    {
+      "id": "83cff624-34be-46d6-8c06-2a27df5513ff",
+      "hotkeys": [["alt", "shift", "period"]],
+      "description": "Increase line height",
+      "isFavorite": false
+    },
+    {
+      "id": "6ddea1f5-5201-49e4-b342-f7c9b4d4f01c",
+      "hotkeys": [["alt", "shift", "comma"]],
+      "description": "Decrease line height",
+      "isFavorite": false
+    },
+    {
+      "id": "a5cb0bcc-6fba-49f8-8e12-f9795fc27e6f",
+      "hotkeys": [["alt", "comma"]],
+      "description": "Increase letter spacing",
+      "isFavorite": false
+    },
+    {
+      "id": "1f669d0a-8e38-4e52-a35b-3292482afd00",
+      "hotkeys": [["alt", "comma"]],
+      "description": "Decrease letter spacing",
+      "isFavorite": false
+    },
+    {
+      "id": "e248b77f-f288-4c12-aa14-2330df3c4240",
+      "hotkeys": [["b"]],
+      "description": "Paint bucket (While editing a shape)",
+      "isFavorite": false
+    },
+    {
+      "id": "70543169-1f1e-48ee-8550-b330d3a10add",
+      "hotkeys": [["ctrl"]],
+      "description": "Bend tool (While editing a shape)",
+      "isFavorite": false
+    },
+    {
+      "id": "051548fa-22ad-46ff-85cd-8b82e4beba00",
+      "hotkeys": [["alt", "slash"]],
+      "description": "Remove fill",
+      "isFavorite": false
+    },
+    {
+      "id": "6f1909e5-2303-48bc-a0a1-031a9aeff6b3",
+      "hotkeys": [["shift", "slash"]],
+      "description": "Remove stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "d4cb51a0-bd0f-4a09-97c6-b3cc004f3e2b",
+      "hotkeys": [["shift", "quote"]],
+      "description": "Remove stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "e0ea320e-6a06-40cb-896f-e00025ec1edb",
+      "hotkeys": [["shift", "x"]],
+      "description": "Swap fill and stroke",
+      "isFavorite": false
+    },
+    {
+      "id": "25de3263-bd11-4b3e-861e-dee945b91703",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "Join selection (After selecting points)",
+      "isFavorite": false
+    },
+    {
+      "id": "d0b53676-1d66-4e9d-a106-ac0dd569a4ad",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "Smooth join selection (After selecting points)",
+      "isFavorite": false
+    },
+    {
+      "id": "acc89735-8dc4-4abf-ac6c-0085138c5061",
+      "hotkeys": [["shift", "backspace"]],
+      "description": "Delete and heal selection (After selecting points)",
+      "isFavorite": false
+    },
+    {
+      "id": "2b6a6d68-2b0f-4348-9f4d-741973ac6ab6",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Flatten selection",
+      "isFavorite": false
+    },
+    {
+      "id": "36cb8ec1-640a-4f78-bbdc-e7ed4df600b1",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Select all",
+      "isFavorite": false
+    },
+    {
+      "id": "1100b896-f590-4f6c-ad16-7ee639904aa2",
+      "hotkeys": [["shift", "ctrl", "a"]],
+      "description": "Select inverse",
+      "isFavorite": false
+    },
+    {
+      "id": "11e6e07f-cfb7-4470-98f4-6de39a8e28df",
+      "hotkeys": [["escape"]],
+      "description": "Select none",
+      "isFavorite": false
+    },
+    {
+      "id": "ce4bcdf4-1eca-435c-b925-13e7a7df36db",
+      "hotkeys": [["enter"]],
+      "description": "Select children",
+      "isFavorite": false
+    },
+    {
+      "id": "6643cdc7-3b00-464e-9b6a-91c7155cb24e",
+      "hotkeys": [["backslash"]],
+      "description": "Select parent",
+      "isFavorite": false
+    },
+    {
+      "id": "4c6e8a08-da74-4fc0-b5b3-0018341aa52c",
+      "hotkeys": [["shift", "enter"]],
+      "description": "Select parent",
+      "isFavorite": false
+    },
+    {
+      "id": "12301d56-d123-4bd5-ab8c-dda1db7751d4",
+      "hotkeys": [["tab"]],
+      "description": "Select next sibling",
+      "isFavorite": false
+    },
+    {
+      "id": "f5f64f49-75ea-4b00-b71b-718c601e52bd",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Select previous sibling",
+      "isFavorite": false
+    },
+    {
+      "id": "9e0e6776-8a83-4e28-8ebb-c969d083115c",
+      "hotkeys": [["alt", "ctrl", "a"]],
+      "description": "Select all matching layers",
+      "isFavorite": false
+    },
+    {
+      "id": "264e962b-f7a9-4017-84db-a0ef93c51a6c",
+      "hotkeys": [["ctrl", "g"]],
+      "description": "Group selection",
+      "isFavorite": false
+    },
+    {
+      "id": "a5561f77-0f5d-4c44-865f-48fb785f06d3",
+      "hotkeys": [["shift", "ctrl", "g"]],
+      "description": "Ungroup selection",
+      "isFavorite": false
+    },
+    {
+      "id": "b4874f0e-d6e3-4c3d-9800-460dd92fba97",
+      "hotkeys": [["alt", "ctrl", "g"]],
+      "description": "Frame selection",
+      "isFavorite": false
+    },
+    {
+      "id": "c6dec8ed-351b-427d-8089-f908a4f0162e",
+      "hotkeys": [["shift", "ctrl", "h"]],
+      "description": "Show/Hide selection",
+      "isFavorite": false
+    },
+    {
+      "id": "c29a4d05-66c2-4572-88bb-af8de217dee7",
+      "hotkeys": [["shift", "ctrl", "l"]],
+      "description": "Lock/Unlock selection",
+      "isFavorite": false
+    },
+    {
+      "id": "05683939-cf9c-4e3c-8007-e27c8724af61",
+      "hotkeys": [["alt"]],
+      "description": "Measure to selection (While pointing)",
+      "isFavorite": false
+    },
+    {
+      "id": "6c0ae96e-9d73-4af0-8d83-89fb801431eb",
+      "hotkeys": [["alt"]],
+      "description": "Duplicate selection (While moving)",
+      "isFavorite": false
+    },
+    {
+      "id": "63619f1b-96cd-4538-ac2a-176fd6ab497c",
+      "hotkeys": [["alt"]],
+      "description": "Resize from center (While resizing)",
+      "isFavorite": false
+    },
+    {
+      "id": "4f2599a4-8ca4-402c-b686-79e186dab568",
+      "hotkeys": [["shift"]],
+      "description": "Resize proportionally (While resizing)",
+      "isFavorite": false
+    },
+    {
+      "id": "b3ab8d08-5fd6-4c8a-8489-1af8710578ff",
+      "hotkeys": [["ctrl"]],
+      "description": "Crop image (While resizing)",
+      "isFavorite": false
+    },
+    {
+      "id": "f7dc0023-7e25-4109-a110-2dd62e513aaf",
+      "hotkeys": [["ctrl"]],
+      "description": "Ignore constraints (frames) (While resizing)",
+      "isFavorite": false
+    },
+    {
+      "id": "e6060503-18c7-4d33-98e1-dcb639ed6ae2",
+      "hotkeys": [["space"]],
+      "description": "Move while resizing (While dragging)",
+      "isFavorite": false
+    },
+    {
+      "id": "c2e52122-4815-47f7-afea-626eedfbace0",
+      "hotkeys": [["ctrl", "c"]],
       "description": "Copy",
       "isFavorite": false
     },
     {
-      "id": "b7b1f64e-fab7-4ba9-a96a-d9a11a2a6b23",
-      "hotkeys": [
-        [
-          "meta",
-          "v"
-        ]
-      ],
-      "description": "Paste",
-      "isFavorite": false
-    },
-    {
-      "id": "47a0df69-26df-4921-a160-067c4b6e9a42",
-      "hotkeys": [
-        [
-          "meta",
-          "x"
-        ]
-      ],
+      "id": "81d87d7a-d067-445b-ae51-ffa8e305ec61",
+      "hotkeys": [["ctrl", "x"]],
       "description": "Cut",
       "isFavorite": false
     },
     {
-      "id": "cc9d5298-9954-4f14-9781-245bb2f7f9c2",
-      "hotkeys": [
-        [
-          "meta",
-          "s"
-        ]
-      ],
-      "description": "Save",
+      "id": "e8f376fe-2044-4c91-93ad-fc0b46fd48f2",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste",
       "isFavorite": false
     },
     {
-      "id": "bd6bd870-8a85-4dc7-8e3f-468c027f95d7",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "s"
-        ]
-      ],
-      "description": "Save As",
+      "id": "e3376ad4-36b1-4367-9aee-15566f58212f",
+      "hotkeys": [["shift", "ctrl", "r"]],
+      "description": "Paste to replace",
       "isFavorite": false
     },
     {
-      "id": "715bd70c-465a-471f-a936-62282acc3626",
-      "hotkeys": [
-        [
-          "meta",
-          "f"
-        ]
-      ],
-      "description": "Find",
+      "id": "66215fea-1816-4342-a3a4-ab034aab013e",
+      "hotkeys": [["shift", "ctrl", "v"]],
+      "description": "Paste over selection",
       "isFavorite": false
     },
     {
-      "id": "cb6c59d2-65be-4e3c-980f-62af77d51eac",
-      "hotkeys": [
-        [
-          "meta",
-          "r"
-        ]
-      ],
+      "id": "829ceacf-13a9-4078-8618-d9228f60cb84",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Duplicate",
+      "isFavorite": false
+    },
+    {
+      "id": "54815f56-e8ac-4448-8b98-85caf3ae3d8f",
+      "hotkeys": [["ctrl", "r"]],
       "description": "Rename",
       "isFavorite": false
     },
     {
-      "id": "ab2ee8d6-3c19-4cef-aa17-3dfe93515f58",
-      "hotkeys": [
-        [
-          "shift",
-          "move"
-        ]
-      ],
-      "description": "Move with horizontal or vertical alignment",
+      "id": "2c059c8b-0bf0-4d39-9121-c522fc9a9f13",
+      "hotkeys": [["shift", "ctrl", "e"]],
+      "description": "Export",
       "isFavorite": false
     },
     {
-      "id": "d712ff4a-c803-4367-b8c0-69957f1ef9b8",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "m"
-        ]
-      ],
-      "description": "Mirror Object",
+      "id": "8f561f74-ef9e-449a-966c-cbf36eaac7c3",
+      "hotkeys": [["shift", "ctrl", "c"]],
+      "description": "Copy as PNG",
       "isFavorite": false
     },
     {
-      "id": "626f7855-08b9-4d2a-ad5b-3f698a10d5b3",
-      "hotkeys": [
-        [
-          "meta",
-          "shift",
-          "slash"
-        ]
-      ],
-      "description": "View Keyboard Shortcuts",
+      "id": "11958b63-7624-4bc1-8fc4-d73c0ca07c49",
+      "hotkeys": [["alt", "ctrl", "c"]],
+      "description": "Copy properties",
       "isFavorite": false
     },
     {
-      "id": "8f4c359e-f9c1-40aa-a83d-a511e53dcd55",
-      "hotkeys": [
-        [
-          "meta",
-          "equal"
-        ]
-      ],
-      "description": "Zoom In",
+      "id": "ffc1452c-9584-4421-97ce-5feb6877ac01",
+      "hotkeys": [["alt", "ctrl", "v"]],
+      "description": "Paste properties",
       "isFavorite": false
     },
     {
-      "id": "7ac76a76-cbcb-4c91-a394-48c66793adc9",
-      "hotkeys": [
-        [
-          "meta",
-          "minus"
-        ]
-      ],
-      "description": "Zoom Out",
+      "id": "1ba9b3bc-5d01-4b20-80f3-6dbde1db6318",
+      "hotkeys": [["shift", "h"]],
+      "description": "Flip horizontal",
+      "isFavorite": false
+    },
+    {
+      "id": "5f4e4473-574d-4b3b-9235-88d9902fe033",
+      "hotkeys": [["shift", "v"]],
+      "description": "Flip vertical",
+      "isFavorite": false
+    },
+    {
+      "id": "965081c6-1932-41c5-98d5-98a7f91d9fa8",
+      "hotkeys": [["shift", "6", "ctrl", "m"]],
+      "description": "Use as mask",
+      "isFavorite": false
+    },
+    {
+      "id": "b9fc23fa-093b-4755-9656-b4da8f37d634",
+      "hotkeys": [["enter"]],
+      "description": "Edit shape or image",
+      "isFavorite": false
+    },
+    {
+      "id": "dec578b4-316e-44f2-924b-1b2d57132805",
+      "hotkeys": [["alt", "shift", "ctrl", "r"]],
+      "description": "Resize the frame to fit",
+      "isFavorite": false
+    },
+    {
+      "id": "bb0f659d-ef72-4ffa-a4f0-76e45dbf928e",
+      "hotkeys": [["0", "0"]],
+      "description": "Set opacity to 0%",
+      "isFavorite": false
+    },
+    {
+      "id": "8b9575a9-6f8c-478f-93ee-5a21ced8b561",
+      "hotkeys": [["1"]],
+      "description": "Set opacity to 10%",
+      "isFavorite": false
+    },
+    {
+      "id": "537aae41-6776-4c9d-928a-07b657b07f45",
+      "hotkeys": [["2"]],
+      "description": "Set opacity to 20%",
+      "isFavorite": false
+    },
+    {
+      "id": "ee73fabe-effd-41b4-be32-3191bf48ca2b",
+      "hotkeys": [["3"]],
+      "description": "Set opacity to 30%",
+      "isFavorite": false
+    },
+    {
+      "id": "3e889f87-12fd-4cdf-ae65-b9e173394e42",
+      "hotkeys": [["4"]],
+      "description": "Set opacity to 40%",
+      "isFavorite": false
+    },
+    {
+      "id": "ca9c4ca5-dc90-4dbc-afdc-b63ab3f5b036",
+      "hotkeys": [["5"]],
+      "description": "Set opacity to 50%",
+      "isFavorite": false
+    },
+    {
+      "id": "b181591f-4f4e-49e3-9d72-b1836e4e4137",
+      "hotkeys": [["6"]],
+      "description": "Set opacity to 60%",
+      "isFavorite": false
+    },
+    {
+      "id": "381b5354-fe6f-4f05-893b-c1dca5b61305",
+      "hotkeys": [["7"]],
+      "description": "Set opacity to 70%",
+      "isFavorite": false
+    },
+    {
+      "id": "4b5f6690-3465-4129-b01d-87a81bb2a120",
+      "hotkeys": [["8"]],
+      "description": "Set opacity to 80%",
+      "isFavorite": false
+    },
+    {
+      "id": "92ccfb20-31c4-425f-9264-5712602245ad",
+      "hotkeys": [["9"]],
+      "description": "Set opacity to 90%",
+      "isFavorite": false
+    },
+    {
+      "id": "bf87c55d-c763-4330-b5b3-9880d5b2c47c",
+      "hotkeys": [["0"]],
+      "description": "Set opacity to 100%",
+      "isFavorite": false
+    },
+    {
+      "id": "9c82d122-46bc-4d47-aad1-0023d2892e12",
+      "hotkeys": [["alt", "a"]],
+      "description": "Align left",
+      "isFavorite": false
+    },
+    {
+      "id": "787e4467-85fa-41f3-acb8-16390262b56c",
+      "hotkeys": [["alt", "h"]],
+      "description": "Align horizontal centers",
+      "isFavorite": false
+    },
+    {
+      "id": "36f16c71-a7fc-494e-8f54-77411fdc1b12",
+      "hotkeys": [["alt", "d"]],
+      "description": "Align right",
+      "isFavorite": false
+    },
+    {
+      "id": "46d4b1da-c349-4a2d-be9a-8143c475bab3",
+      "hotkeys": [["alt", "w"]],
+      "description": "Align top",
+      "isFavorite": false
+    },
+    {
+      "id": "930cddcd-a432-40a6-8b78-c59917fa25d0",
+      "hotkeys": [["alt", "v"]],
+      "description": "Align vertical centers",
+      "isFavorite": false
+    },
+    {
+      "id": "0aef33d4-8501-42c5-80bc-20ea37921b13",
+      "hotkeys": [["alt", "s"]],
+      "description": "Align bottom",
+      "isFavorite": false
+    },
+    {
+      "id": "7e6aca51-f813-4a01-9daa-dab6d5ba18ec",
+      "hotkeys": [["ctrl", "alt", "t"]],
+      "description": "Tidy up",
+      "isFavorite": false
+    },
+    {
+      "id": "b0a51b1d-8b46-4123-8575-bccb9a439b1b",
+      "hotkeys": [["ctrl", "alt", "h"]],
+      "description": "Distribute horizontal spacing",
+      "isFavorite": false
+    },
+    {
+      "id": "7d03862c-39b0-449a-acb6-d492d0feda0c",
+      "hotkeys": [["ctrl", "alt", "v"]],
+      "description": "Distribute vertical spacing",
+      "isFavorite": false
+    },
+    {
+      "id": "49fcca71-d1fc-448f-8710-a64e59dbdc23",
+      "hotkeys": [["ctrl", "shift", "bracketright"]],
+      "description": "Bring to front",
+      "isFavorite": false
+    },
+    {
+      "id": "e4e96667-365e-4f87-a29d-c9d7cf7a0bcf",
+      "hotkeys": [["ctrl", "bracketright"]],
+      "description": "Bring forward",
+      "isFavorite": false
+    },
+    {
+      "id": "15b98e82-ea1f-46d0-aaf5-aa9ca62de835",
+      "hotkeys": [["ctrl", "bracketleft"]],
+      "description": "Send backward",
+      "isFavorite": false
+    },
+    {
+      "id": "32dfb8df-46dd-4d41-b52c-9d1f2c3695bd",
+      "hotkeys": [["ctrl", "shift", "bracketleft"]],
+      "description": "Send to back",
+      "isFavorite": false
+    },
+    {
+      "id": "68efac09-5cda-49aa-b66f-2df3e3cfa397",
+      "hotkeys": [["alt", "2"]],
+      "description": "Show assets",
+      "isFavorite": false
+    },
+    {
+      "id": "fd303eb5-729d-432a-9405-f2c07150975a",
+      "hotkeys": [["alt", "ctrl", "o"]],
+      "description": "Libraries",
+      "isFavorite": false
+    },
+    {
+      "id": "8c0027f2-cdd7-43cf-ad20-57556909bd1b",
+      "hotkeys": [["alt", "ctrl", "k"]],
+      "description": "Create component",
+      "isFavorite": false
+    },
+    {
+      "id": "bda7b099-a931-4b8a-8a62-b38c2b9a610d",
+      "hotkeys": [["alt", "ctrl", "b"]],
+      "description": "Detach instance",
+      "isFavorite": false
+    },
+    {
+      "id": "43164e5b-8174-400f-b63c-3594ed983f1c",
+      "hotkeys": [["alt"]],
+      "description": "Swap component instance (While inserting a component)",
+      "isFavorite": false
+    },
+    {
+      "id": "99fb6450-fb3d-42ba-b903-56e41d404e55",
+      "hotkeys": [["shift", "a"]],
+      "description": "Add auto layout",
+      "isFavorite": false
+    },
+    {
+      "id": "d16d762c-26f9-4022-b98a-a049c2730195",
+      "hotkeys": [["alt", "shift", "a"]],
+      "description": "Remove auto layout",
+      "isFavorite": false
+    },
+    {
+      "id": "fca14a10-313b-412b-9116-2061916894e9",
+      "hotkeys": [["shift"]],
+      "description": "Change padding using big nudge (While dragging handles)",
+      "isFavorite": false
+    },
+    {
+      "id": "15530ca7-da32-4c66-b2d0-bb85f1fb1a4c",
+      "hotkeys": [["alt"]],
+      "description": "Change padding for opposite sides (While dragging handles)",
+      "isFavorite": false
+    },
+    {
+      "id": "1d6e1d0e-6453-44bb-a7d2-07de74cc4543",
+      "hotkeys": [["shift", "alt"]],
+      "description": "Change padding on all sides (While dragging handles)",
+      "isFavorite": false
+    },
+    {
+      "id": "3f5ad948-d313-4979-8506-e57368fd74fb",
+      "hotkeys": [["ctrl"]],
+      "description": "Single padding field (While clicking into any padding box)",
+      "isFavorite": false
+    },
+    {
+      "id": "220683dd-ec6b-444e-bfa5-e0bcd98a2edb",
+      "hotkeys": [["x"]],
+      "description": "Change spacing mode (After clicking on alignment box)",
+      "isFavorite": false
+    },
+    {
+      "id": "894b63f0-99bc-4670-b84a-a265c748dabb",
+      "hotkeys": [["b"]],
+      "description": "Toggle text baseline alignment (After clicking on alignment box)",
       "isFavorite": false
     }
   ]

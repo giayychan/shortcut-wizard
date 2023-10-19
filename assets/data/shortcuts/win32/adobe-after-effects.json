@@ -1,0 +1,1160 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobe-after-effects",
+    "icon": {
+      "filename": "aftereffects.svg",
+      "isCustom": false
+    },
+    "id": "fc4c3b76-5c6c-4d38-bdc3-1d8570d707a7",
+    "label": "After Effects"
+  },
+  "shortcuts": [
+    {
+      "id": "4b06cd38-413d-41bb-a6c4-34803f2f958b",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Select all",
+      "isFavorite": false
+    },
+    {
+      "id": "97b62616-484c-47b0-87fd-83ffc542a1ab",
+      "hotkeys": [["shift", "down"]],
+      "description": "Extend selection to next item in Project panel, Render Queue panel, or Effect Controls panel",
+      "isFavorite": false
+    },
+    {
+      "id": "fb303b1e-e966-4bf6-af13-58925cdc908d",
+      "hotkeys": [["shift", "up"]],
+      "description": "Extend selection to previous item in Project panel, Render Queue panel, or Effect Controls panel",
+      "isFavorite": false
+    },
+    {
+      "id": "2c140b14-a033-4988-a0ac-4cd12c7a35e2",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Duplicate selected layers, masks, effects, text selectors, animators, puppet meshes, shapes, render items, output modules, or compositions",
+      "isFavorite": false
+    },
+    {
+      "id": "3d2f72e7-869c-487d-9d40-888ddf1de6c6",
+      "hotkeys": [["ctrl", "q"]],
+      "description": "Quit",
+      "isFavorite": false
+    },
+    {
+      "id": "f89e7b7b-6734-41cd-8b35-5b2de78c778e",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "fd73c6b6-8509-408a-a34e-d7d8f9e8c321",
+      "hotkeys": [["ctrl", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "bd4403d0-7835-4b90-bf6c-dd1b145fd08b",
+      "hotkeys": [["escape"]],
+      "description": "Interrupt running a script",
+      "isFavorite": false
+    },
+    {
+      "id": "260170eb-b0b9-4046-8ccf-e9f92cf8c59a",
+      "hotkeys": [["ctrl", "alt", "e"]],
+      "description": "Display filename corresponding to the frame at the current time in the Info panel",
+      "isFavorite": false
+    },
+    {
+      "id": "23d91869-2e42-4db6-82c5-897eae047471",
+      "hotkeys": [["ctrl", "alt", "n"]],
+      "description": "New project",
+      "isFavorite": false
+    },
+    {
+      "id": "56c66b8d-7173-4028-ac71-de1ca30435b8",
+      "hotkeys": [["ctrl", "o"]],
+      "description": "Open project",
+      "isFavorite": false
+    },
+    {
+      "id": "dc5f7f15-7df9-409c-9a85-8cbaac4eddff",
+      "hotkeys": [["ctrl", "alt", "shift", "p"]],
+      "description": "Open most recent project",
+      "isFavorite": false
+    },
+    {
+      "id": "47d25d55-d263-400c-8e3b-d52a814be3e9",
+      "hotkeys": [["ctrl", "alt", "shift", "n"]],
+      "description": "New folder in Project panel",
+      "isFavorite": false
+    },
+    {
+      "id": "fb914eba-3d37-4544-b591-0c2a2fd46e80",
+      "hotkeys": [["ctrl", "alt", "shift", "k"]],
+      "description": "Open Project Settings dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "9997a715-7e70-49f1-a0ab-4f7873eb95c4",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Find in Project panel",
+      "isFavorite": false
+    },
+    {
+      "id": "f8bb48fe-aa70-461a-9324-5386affe9b96",
+      "hotkeys": [["ctrl", "0"]],
+      "description": "Open or close Project panel",
+      "isFavorite": false
+    },
+    {
+      "id": "30cb210b-2097-4148-830b-f5b1eef9d76d",
+      "hotkeys": [["ctrl", "alt", "0"]],
+      "description": "Open or close Render Queue panel",
+      "isFavorite": false
+    },
+    {
+      "id": "87cb242c-53dc-47ac-97c4-4dc559262794",
+      "hotkeys": [["ctrl", "1"]],
+      "description": "Open or close Tools panel",
+      "isFavorite": false
+    },
+    {
+      "id": "369f7de0-bd5d-4496-9319-cded5b8832e6",
+      "hotkeys": [["ctrl", "2"]],
+      "description": "Open or close Info panel",
+      "isFavorite": false
+    },
+    {
+      "id": "f7513101-317f-436b-a379-21f5a2cb0fa0",
+      "hotkeys": [["ctrl", "3"]],
+      "description": "Open or close Preview panel",
+      "isFavorite": false
+    },
+    {
+      "id": "e739f6e2-1f60-4b05-9168-ba468e3548f1",
+      "hotkeys": [["ctrl", "4"]],
+      "description": "Open or close Audio panel",
+      "isFavorite": false
+    },
+    {
+      "id": "cb9baa60-7a49-4419-a528-f2839a211bd8",
+      "hotkeys": [["ctrl", "5"]],
+      "description": "Open or close Effects & Presets panel",
+      "isFavorite": false
+    },
+    {
+      "id": "6ba0b485-d8ed-44e7-a984-b7394213e34d",
+      "hotkeys": [["ctrl", "6"]],
+      "description": "Open or close Character panel",
+      "isFavorite": false
+    },
+    {
+      "id": "91463244-c4af-47e0-b2f7-d5e766f0301c",
+      "hotkeys": [["ctrl", "7"]],
+      "description": "Open or close Paragraph panel",
+      "isFavorite": false
+    },
+    {
+      "id": "fa167555-4e61-4736-a48b-2410590e0617",
+      "hotkeys": [["ctrl", "8"]],
+      "description": "Open or close Paint panel",
+      "isFavorite": false
+    },
+    {
+      "id": "927f2159-81b5-484d-9873-811e4bf0aeca",
+      "hotkeys": [["ctrl", "9"]],
+      "description": "Open or close Brushes panel",
+      "isFavorite": false
+    },
+    {
+      "id": "a040671e-8711-4408-b146-05eb37aa216f",
+      "hotkeys": [["ctrl", "f11"]],
+      "description": "Open Flowchart panel for project flowchart",
+      "isFavorite": false
+    },
+    {
+      "id": "48209351-aa36-4863-9ae0-c2c7ee79058d",
+      "hotkeys": [["ctrl", "w"]],
+      "description": "Close active viewer or panel (closes content first)",
+      "isFavorite": false
+    },
+    {
+      "id": "749ad2c2-3c9c-4924-932c-5aa03934e2f5",
+      "hotkeys": [["ctrl", "shift", "w"]],
+      "description": "Close active panel or all viewers of type of active viewer (closes content first). For example, if a Timeline panel is active, this command closes all Timeline panels.",
+      "isFavorite": false
+    },
+    {
+      "id": "0908b05f-651d-4129-b83a-13547115985a",
+      "hotkeys": [["ctrl", "alt", "shift", "n"]],
+      "description": "Split the frame containing the active viewer and create a viewer with opposite locked/unlocked state",
+      "isFavorite": false
+    },
+    {
+      "id": "5d60ac5a-1e20-443e-b248-be60b1d5fc9e",
+      "hotkeys": [["backquote"]],
+      "description": "Maximize or restore panel under pointer",
+      "isFavorite": false
+    },
+    {
+      "id": "a3917aab-0df2-4ce2-adc8-b0269c8c703b",
+      "hotkeys": [["v"]],
+      "description": "Activate Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "ac59b56a-4447-44d0-9cf6-bed6ffe584d0",
+      "hotkeys": [["h"]],
+      "description": "Activate Hand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "2ee66480-f29f-4fc1-b891-11c2beadd4b2",
+      "hotkeys": [["z"]],
+      "description": "Activate Zoom In tool",
+      "isFavorite": false
+    },
+    {
+      "id": "32bfb82b-fdb0-41d9-ae28-a4c98da0eeda",
+      "hotkeys": [["w"]],
+      "description": "Activate Rotation tool",
+      "isFavorite": false
+    },
+    {
+      "id": "fd75fe97-a507-4968-83c9-8a546788df9c",
+      "hotkeys": [["alt", "w"]],
+      "description": "Activate Roto Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "50560403-834d-4f18-ab20-7aa4e8fb2a9e",
+      "hotkeys": [["alt", "w"]],
+      "description": "Activate Refine Edge tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e80de9ae-f89a-4dd0-9547-07f4387e6d70",
+      "hotkeys": [["c"]],
+      "description": "Activate and cycle through Camera tools (Unified Camera, Orbit Camera, Track XY Camera, and Track Z Camera)",
+      "isFavorite": false
+    },
+    {
+      "id": "5e8b018d-7bd3-4ec6-94d3-17eea0ef30f4",
+      "hotkeys": [["y"]],
+      "description": "Activate Pan Behind tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4d0a470f-906f-4cd4-aea1-ee613fe0938b",
+      "hotkeys": [["q"]],
+      "description": "Activate and cycle through mask and shape tools (Rectangle, Rounded Rectangle, Ellipse, Polygon, Star)",
+      "isFavorite": false
+    },
+    {
+      "id": "093135d0-ff79-4aa1-ac2b-a7dd0ee9c493",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Activate and cycle through Type tools (Horizontal and Vertical)",
+      "isFavorite": false
+    },
+    {
+      "id": "047022b7-70d1-4925-a9c8-425fd66d3826",
+      "hotkeys": [["g"]],
+      "description": "Activate and cycle between the Pen and Mask Feather tools. (Note: You can turn off this setting in the Preferences dialog box.)",
+      "isFavorite": false
+    },
+    {
+      "id": "a4f29ca6-8dfa-405a-9b63-a95f5c27787a",
+      "hotkeys": [["ctrl"]],
+      "description": "Temporarily activate Selection tool when a pen tool is selected",
+      "isFavorite": false
+    },
+    {
+      "id": "aa07f6ab-83a4-4c35-9886-22f9dc394201",
+      "hotkeys": [["ctrl", "alt"]],
+      "description": "Temporarily activate Pen tool when the Selection tool is selected and pointer is over a path (Add Vertex tool when pointer is over a segment; Convert Vertex tool when pointer is over a vertex)",
+      "isFavorite": false
+    },
+    {
+      "id": "ad249ed8-7de7-499d-92ad-9d32e272337a",
+      "hotkeys": [["ctrl", "b"]],
+      "description": "Activate and cycle through Brush, Clone Stamp, and Eraser tools",
+      "isFavorite": false
+    },
+    {
+      "id": "5bb3aed6-aeb8-40f2-9f88-e69a689b522a",
+      "hotkeys": [["ctrl", "p"]],
+      "description": "Activate and cycle through Puppet tools",
+      "isFavorite": false
+    },
+    {
+      "id": "562e4351-ee84-4ff8-ae36-00c5f46947ae",
+      "hotkeys": [["ctrl", "n"]],
+      "description": "New composition",
+      "isFavorite": false
+    },
+    {
+      "id": "61777de1-a637-485c-ab61-d7bf210d9dec",
+      "hotkeys": [["ctrl", "k"]],
+      "description": "Open Composition Settings dialog box for selected composition",
+      "isFavorite": false
+    },
+    {
+      "id": "f08ba9d8-9fa6-431e-bee5-efe6d88b30da",
+      "hotkeys": [["ctrl", "alt", "b"]],
+      "description": "Set work area to duration of selected layers or, if no layers are selected, set work area to composition duration",
+      "isFavorite": false
+    },
+    {
+      "id": "5b1f9e7e-9c52-4303-b1e9-3a58a90bea06",
+      "hotkeys": [["tab"]],
+      "description": "Open Composition Mini-Flowchart for active composition",
+      "isFavorite": false
+    },
+    {
+      "id": "a62f7058-2b36-4820-9908-6079c2e03c71",
+      "hotkeys": [["shift", "escape"]],
+      "description": "Activate the most recently active composition that is in the same composition hierarchy (network of nested compositions) as the currently active composition",
+      "isFavorite": false
+    },
+    {
+      "id": "311ef35f-3de6-4017-a43c-daf35ea25c8a",
+      "hotkeys": [["ctrl", "shift", "x"]],
+      "description": "Trim Composition to work area",
+      "isFavorite": false
+    },
+    {
+      "id": "db9c5f22-a834-4c80-9e09-9a79e681c2a6",
+      "hotkeys": [["alt", "backslash"]],
+      "description": "New Composition from selection",
+      "isFavorite": false
+    },
+    {
+      "id": "b47e1a9f-4455-4b68-9d19-5b1bce24d04f",
+      "hotkeys": [["alt", "shift", "j"]],
+      "description": "Go to specific time",
+      "isFavorite": false
+    },
+    {
+      "id": "1ac80f39-b661-459e-921c-b7b073987379",
+      "hotkeys": [["i"]],
+      "description": "Go to layer In point",
+      "isFavorite": false
+    },
+    {
+      "id": "0b977b74-60de-4ae2-a77a-fdcf9f32b7ad",
+      "hotkeys": [["o"]],
+      "description": "Go to layer Out point",
+      "isFavorite": false
+    },
+    {
+      "id": "8bc0f0fb-be5a-4539-959d-c91ebc3d00e8",
+      "hotkeys": [["ctrl", "alt", "shift", "left"]],
+      "description": "Go to previous In point or Out point",
+      "isFavorite": false
+    },
+    {
+      "id": "3fb1f95d-dc1b-476f-bd95-6ea5924cb674",
+      "hotkeys": [["ctrl", "alt", "shift", "right"]],
+      "description": "Go to next In point or Out point",
+      "isFavorite": false
+    },
+    {
+      "id": "e27c8595-c99e-4667-863f-d344b78ce7cd",
+      "hotkeys": [["d"]],
+      "description": "Scroll to current time in Timeline panel",
+      "isFavorite": false
+    },
+    {
+      "id": "f6184ca4-a24c-4dcf-8095-def86891575a",
+      "hotkeys": [["ctrl", "alt", "1"]],
+      "description": "Fast Previews > Off",
+      "isFavorite": false
+    },
+    {
+      "id": "721bb669-7b40-4783-95dd-41919b061a35",
+      "hotkeys": [["ctrl", "alt", "2"]],
+      "description": "Fast Previews > Adaptive Resolution",
+      "isFavorite": false
+    },
+    {
+      "id": "de3d584d-fca6-42e5-b420-a107858db8a2",
+      "hotkeys": [["ctrl", "alt", "3"]],
+      "description": "Fast Previews > Draft",
+      "isFavorite": false
+    },
+    {
+      "id": "ee617d71-1eb8-4189-96cf-62263dbf67fa",
+      "hotkeys": [["ctrl", "alt", "4"]],
+      "description": "Fast Previews > Fast Draft",
+      "isFavorite": false
+    },
+    {
+      "id": "fcae96b5-b298-45e3-a23f-f64c74d06562",
+      "hotkeys": [["ctrl", "alt", "5"]],
+      "description": "Fast Previews > Wireframe",
+      "isFavorite": false
+    },
+    {
+      "id": "72bdb50f-07ba-48f2-a8f8-ea6882bbbd20",
+      "hotkeys": [["alt", "shift", "4"]],
+      "description": "Toggle showing straight RGB color",
+      "isFavorite": false
+    },
+    {
+      "id": "f116221f-f261-4dbc-b6fb-ba9400e629b1",
+      "hotkeys": [["alt", "5"]],
+      "description": "Show the alpha boundary (outline between transparent and opaque regions) in the Layer panel",
+      "isFavorite": false
+    },
+    {
+      "id": "80ea5bbd-9cc4-4590-be5f-72efbea9609c",
+      "hotkeys": [["alt", "6"]],
+      "description": "Show alpha overlay (colored overlay on transparent regions) in the Layer panel",
+      "isFavorite": false
+    },
+    {
+      "id": "f2d86dc1-f501-4ecb-b100-3904bbefe890",
+      "hotkeys": [["alt", "x"]],
+      "description": "Show Refine Edge X-ray",
+      "isFavorite": false
+    },
+    {
+      "id": "504fa5a5-db3e-4203-addb-d061ba8d1cfe",
+      "hotkeys": [["comma"]],
+      "description": "Zoom-out in Composition, Layer, or Footage panel",
+      "isFavorite": false
+    },
+    {
+      "id": "0be7f4b4-e0d5-43c4-85b7-d759adbc0345",
+      "hotkeys": [["ctrl", "alt", "u"]],
+      "description": "Open the View Options dialog box for the active Composition panel",
+      "isFavorite": false
+    },
+    {
+      "id": "3f79bd8a-95f5-40a7-8b43-b27cea21ad54",
+      "hotkeys": [["quote"]],
+      "description": "Show or hide safe zones",
+      "isFavorite": false
+    },
+    {
+      "id": "872bc2c0-e2ee-47c9-8e34-2f7c5cb2447c",
+      "hotkeys": [["ctrl", "quote"]],
+      "description": "Show or hide the grid",
+      "isFavorite": false
+    },
+    {
+      "id": "203e493b-faa2-4a9e-900f-2c795c9602d3",
+      "hotkeys": [["alt", "quote"]],
+      "description": "Show or hide the proportional grid",
+      "isFavorite": false
+    },
+    {
+      "id": "7da0e096-cbde-4426-b3c3-b25f711fae10",
+      "hotkeys": [["ctrl", "r"]],
+      "description": "Show or hide rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "e9d6c1fe-f7d0-4c97-ba05-23c4c82b528d",
+      "hotkeys": [["ctrl", "shift", "quote"]],
+      "description": "Turn snapping to grid on or off",
+      "isFavorite": false
+    },
+    {
+      "id": "36612b32-e690-4a3e-89ff-df237b052316",
+      "hotkeys": [["ctrl", "shift", "h"]],
+      "description": "Show or hide layer controls (masks, motion paths, light and camera wireframes, effect control points, and layer handles)",
+      "isFavorite": false
+    },
+    {
+      "id": "4b0a9d57-08e5-4137-a393-9ee80814e714",
+      "hotkeys": [["ctrl", "i"]],
+      "description": "Import one file or image sequence",
+      "isFavorite": false
+    },
+    {
+      "id": "629d28d9-90a8-4433-a6f4-944841d46d31",
+      "hotkeys": [["ctrl", "alt", "i"]],
+      "description": "Import multiple files or image sequences",
+      "isFavorite": false
+    },
+    {
+      "id": "a0e02dbf-aa8e-4912-bb32-dc118a70a8ef",
+      "hotkeys": [["ctrl", "backspace"]],
+      "description": "Delete a footage item without a warning",
+      "isFavorite": false
+    },
+    {
+      "id": "8c6eeb3c-ed37-43b0-82e8-0fcd52aac84e",
+      "hotkeys": [["ctrl", "alt", "g"]],
+      "description": "Open Interpret Footage dialog box for selected footage item",
+      "isFavorite": false
+    },
+    {
+      "id": "477fb8c3-413e-40ec-b8a9-cfa5a2c6927d",
+      "hotkeys": [["ctrl", "alt", "c"]],
+      "description": "Remember footage interpretation",
+      "isFavorite": false
+    },
+    {
+      "id": "47d9886c-905a-4a7c-bc03-6ce30ba9ec49",
+      "hotkeys": [["ctrl", "e"]],
+      "description": "Edit selected footage item in application with which it’s associated (Edit Original)",
+      "isFavorite": false
+    },
+    {
+      "id": "5407b650-d188-44ae-9d3f-336712535ea0",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "Replace selected footage item",
+      "isFavorite": false
+    },
+    {
+      "id": "a77c6eb4-fad6-4e3e-8ac4-c306d1bc2886",
+      "hotkeys": [["ctrl", "alt", "l"]],
+      "description": "Reload selected footage items",
+      "isFavorite": false
+    },
+    {
+      "id": "bc790e1e-0050-47a5-a6f0-0a9da0d84f5a",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Set proxy for selected footage item",
+      "isFavorite": false
+    },
+    {
+      "id": "9fb4dcf7-fb15-404d-84be-14883a7cb57e",
+      "hotkeys": [["ctrl", "shift", "e"]],
+      "description": "Delete all effects from selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "8900602e-02eb-4720-8143-62bfec1e7c87",
+      "hotkeys": [["ctrl", "alt", "shift", "e"]],
+      "description": "Apply most recently applied effect to selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "19b7c145-b067-450e-bd82-5e5e92994a5c",
+      "hotkeys": [["ctrl", "alt", "shift", "f"]],
+      "description": "Apply most recently applied animation preset to selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "485f6ece-c3ae-4752-9b9a-fa291c7c74e4",
+      "hotkeys": [["ctrl", "y"]],
+      "description": "New solid layer",
+      "isFavorite": false
+    },
+    {
+      "id": "dabea3fe-bcb1-48a0-a846-67b711aeca03",
+      "hotkeys": [["ctrl", "alt", "shift", "y"]],
+      "description": "New null layer",
+      "isFavorite": false
+    },
+    {
+      "id": "dffc24e4-7470-4bc6-bc99-6b8be18e8726",
+      "hotkeys": [["ctrl", "alt", "y"]],
+      "description": "New adjustment layer",
+      "isFavorite": false
+    },
+    {
+      "id": "07bd484f-c2b6-46ef-9330-14efee7f359f",
+      "hotkeys": [["ctrl", "down"]],
+      "description": "Select next layer in stacking order",
+      "isFavorite": false
+    },
+    {
+      "id": "9c6942a4-a6d2-4524-ab3c-f2bc4d059be8",
+      "hotkeys": [["ctrl", "up"]],
+      "description": "Select previous layer in stacking order",
+      "isFavorite": false
+    },
+    {
+      "id": "dd1ace88-bbb2-4564-936a-e84984333783",
+      "hotkeys": [["ctrl", "shift", "down"]],
+      "description": "Extend selection to next layer in stacking order",
+      "isFavorite": false
+    },
+    {
+      "id": "2cfab66f-c1a7-4466-ba76-b586e31fafad",
+      "hotkeys": [["ctrl", "shift", "up"]],
+      "description": "Extend selection to previous layer in stacking order",
+      "isFavorite": false
+    },
+    {
+      "id": "528f548c-e014-46db-8708-d49a777bf1eb",
+      "hotkeys": [["ctrl", "shift", "a"]],
+      "description": "Deselect all layers",
+      "isFavorite": false
+    },
+    {
+      "id": "ea307028-937a-42b3-8c9d-e48b00081626",
+      "hotkeys": [["x"]],
+      "description": "Scroll topmost selected layer to top of Timeline panel",
+      "isFavorite": false
+    },
+    {
+      "id": "0e8e7177-5ae2-4561-8591-a7fc74f6927d",
+      "hotkeys": [["shift", "f4"]],
+      "description": "Show or hide Parent column",
+      "isFavorite": false
+    },
+    {
+      "id": "fd2ccc90-c109-4bf5-8486-46752d8aac9f",
+      "hotkeys": [["f4"]],
+      "description": "Show or hide Layer Switches and Modes columns",
+      "isFavorite": false
+    },
+    {
+      "id": "1c48a55f-51d6-45b8-aafa-848eab00d69d",
+      "hotkeys": [["alt", "b"]],
+      "description": "Setting the sampling method for selected layers (Best/Bilinear)",
+      "isFavorite": false
+    },
+    {
+      "id": "92185728-522f-4e04-94c2-173db66bfb91",
+      "hotkeys": [["alt", "shift", "b"]],
+      "description": "Setting the sampling method for selected layers (Best/Bicubic)",
+      "isFavorite": false
+    },
+    {
+      "id": "ccd1a0f6-0a5c-45c9-ace0-f155e66b1f39",
+      "hotkeys": [["ctrl", "alt", "shift", "v"]],
+      "description": "Turn Video (eyeball) switch on or off for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "77a6050b-6700-49b8-9f47-6a4b389a80fd",
+      "hotkeys": [["ctrl", "shift", "v"]],
+      "description": "Turn off Video switch for all video layers other than selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "5b2ac2f1-a632-48ff-b0c0-1209fa9b91c7",
+      "hotkeys": [["ctrl", "shift", "y"]],
+      "description": "Open settings dialog box for selected solid, light, camera, null, or adjustment layer",
+      "isFavorite": false
+    },
+    {
+      "id": "499e815b-7352-4fae-888e-5670d5eec96b",
+      "hotkeys": [["ctrl", "alt", "v"]],
+      "description": "Paste layers at current time",
+      "isFavorite": false
+    },
+    {
+      "id": "8284a11a-7e40-40f5-a219-5cc288acad3c",
+      "hotkeys": [["ctrl", "shift", "d"]],
+      "description": "Split selected layers. (If no layers are selected, split all layers.)",
+      "isFavorite": false
+    },
+    {
+      "id": "403e1ec2-12c0-4c9c-910c-bded2304d902",
+      "hotkeys": [["ctrl", "shift", "c"]],
+      "description": "Precompose selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "b0483410-c25b-4e97-be19-e34a4d593917",
+      "hotkeys": [["ctrl", "shift", "t"]],
+      "description": "Open Effect Controls panel for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "0fd69b63-e0bd-4ad9-b310-828ffa50f52e",
+      "hotkeys": [["ctrl", "alt", "r"]],
+      "description": "Reverse selected layers in time",
+      "isFavorite": false
+    },
+    {
+      "id": "a6c194a5-3504-4f88-afdd-064e0f9ce5d4",
+      "hotkeys": [["ctrl", "alt", "t"]],
+      "description": "Enable time remapping for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "8a002e00-1a18-48fd-a31b-bd693e8e07f4",
+      "hotkeys": [["ctrl", "l"]],
+      "description": "Lock selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "9db5bf54-83c0-4cdd-a41e-d08441d2588d",
+      "hotkeys": [["ctrl", "shift", "l"]],
+      "description": "Unlock all layers",
+      "isFavorite": false
+    },
+    {
+      "id": "b663df73-6ea7-4632-af36-1053b3ec4975",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Find in Timeline panel",
+      "isFavorite": false
+    },
+    {
+      "id": "48fb5073-5e21-46f8-883c-c9ba5a86b892",
+      "hotkeys": [["ctrl", "f"]],
+      "description": "Find in Timeline panel",
+      "isFavorite": false
+    },
+    {
+      "id": "b5e5aa53-5b46-40eb-a2af-6c022d79bc40",
+      "hotkeys": [["ctrl", "backquote"]],
+      "description": "Toggle expansion of selected layers to show all properties",
+      "isFavorite": false
+    },
+    {
+      "id": "713f6778-4a72-41c6-903d-7320b09e02fd",
+      "hotkeys": [["a"]],
+      "description": "Show only Anchor Point property (for lights and cameras, Point Of Interest)",
+      "isFavorite": false
+    },
+    {
+      "id": "fa3b7824-801d-4bd2-a3b4-8efe7876a042",
+      "hotkeys": [["l"]],
+      "description": "Show only Audio Levels property",
+      "isFavorite": false
+    },
+    {
+      "id": "1f9a64cf-11a9-43c6-a6d4-c9b712dccd69",
+      "hotkeys": [["f"]],
+      "description": "Show only Mask Feather property",
+      "isFavorite": false
+    },
+    {
+      "id": "995e8608-7f64-420e-a28f-25551efbd9d7",
+      "hotkeys": [["m"]],
+      "description": "Show only Mask Path property",
+      "isFavorite": false
+    },
+    {
+      "id": "8a409c4a-bd1a-4726-9385-7cd6a98dbab0",
+      "hotkeys": [["t"]],
+      "description": "Show only Opacity property (for lights, Intensity)",
+      "isFavorite": false
+    },
+    {
+      "id": "7b278b89-7bda-4571-bff7-75a4c695fb79",
+      "hotkeys": [["p"]],
+      "description": "Show only Position property",
+      "isFavorite": false
+    },
+    {
+      "id": "a46eebf4-0d7e-437c-a452-a64c8299d908",
+      "hotkeys": [["r"]],
+      "description": "Show only Rotation and Orientation properties",
+      "isFavorite": false
+    },
+    {
+      "id": "6b63f3d9-5feb-4493-b2bf-7ca28e2b8e42",
+      "hotkeys": [["s"]],
+      "description": "Show only Scale property",
+      "isFavorite": false
+    },
+    {
+      "id": "23eafa9b-81ba-4b95-b60b-ac9e91c92d18",
+      "hotkeys": [["e"]],
+      "description": "Show only Effects property group",
+      "isFavorite": false
+    },
+    {
+      "id": "bffe90c0-a423-4af6-92f9-aaa1d48110b8",
+      "hotkeys": [["u"]],
+      "description": "Show properties with keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "cf63629d-52f9-4945-83a4-2cc6020d6761",
+      "hotkeys": [["ctrl", "backquote"]],
+      "description": "Toggle expansion of selected effects to show all properties",
+      "isFavorite": false
+    },
+    {
+      "id": "e32348c6-a56a-4fee-ba67-cc53bea0ff17",
+      "hotkeys": [["ctrl", "alt", "o"]],
+      "description": "Open Auto-Orientation dialog box for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "1e1f61b7-a7cc-414a-9465-0f7638fffb62",
+      "hotkeys": [["ctrl", "shift", "o"]],
+      "description": "Open Opacity dialog box for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "afe361d3-4ffb-47f0-8fa5-9d1ba0859670",
+      "hotkeys": [["ctrl", "shift", "r"]],
+      "description": "Open Rotation dialog box for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "8be8e6a1-26b9-4ecd-aef0-20ecf86ac873",
+      "hotkeys": [["ctrl", "shift", "p"]],
+      "description": "Open Position dialog box for selected layers",
+      "isFavorite": false
+    },
+    {
+      "id": "d0da6ecd-6c32-4476-810b-bfd47620bc73",
+      "hotkeys": [["ctrl", "alt", "f"]],
+      "description": "Scale and reposition selected layers to fit composition",
+      "isFavorite": false
+    },
+    {
+      "id": "5c237c54-a998-425f-ad73-07206ff7214c",
+      "hotkeys": [["ctrl", "alt", "shift", "h"]],
+      "description": "Scale and reposition selected layers to fit composition width, preserving image aspect ratio for each layer",
+      "isFavorite": false
+    },
+    {
+      "id": "7098ffd0-c166-4a85-b53d-15423255538f",
+      "hotkeys": [["ctrl", "alt", "shift", "g"]],
+      "description": "Scale and reposition selected layers to fit composition height, preserving image aspect ratio for each layer",
+      "isFavorite": false
+    },
+    {
+      "id": "c9627847-decb-4f4e-b182-704af75adb1c",
+      "hotkeys": [["f10"]],
+      "description": "Switch to 3D view 1 (defaults to Front)",
+      "isFavorite": false
+    },
+    {
+      "id": "a64b399c-efc5-4e19-b03f-bfc6b22e185c",
+      "hotkeys": [["f11"]],
+      "description": "Switch to 3D view 2 (defaults to Custom View 1)",
+      "isFavorite": false
+    },
+    {
+      "id": "40eeb726-0177-4eac-a75e-34f6763f0805",
+      "hotkeys": [["f12"]],
+      "description": "Switch to 3D view 3 (defaults to Active Camera)",
+      "isFavorite": false
+    },
+    {
+      "id": "22609cce-eaf7-459b-aebe-790c4e235837",
+      "hotkeys": [["escape"]],
+      "description": "Return to previous view",
+      "isFavorite": false
+    },
+    {
+      "id": "46b58a5e-521c-40a4-bfc0-c6add3174b12",
+      "hotkeys": [["ctrl", "alt", "shift", "l"]],
+      "description": "New light",
+      "isFavorite": false
+    },
+    {
+      "id": "3ccb4810-fec5-450c-a3f3-815212c70dd8",
+      "hotkeys": [["1"]],
+      "description": "Switch to Orbit camera control",
+      "isFavorite": false
+    },
+    {
+      "id": "bffb8954-9ba6-4411-9372-9b902184d265",
+      "hotkeys": [["2"]],
+      "description": "Switch to Pan camera control",
+      "isFavorite": false
+    },
+    {
+      "id": "4972b034-aae9-45a9-aaac-0c551fd67e56",
+      "hotkeys": [["3"]],
+      "description": "Switch to Dolly camera control",
+      "isFavorite": false
+    },
+    {
+      "id": "4609bb0a-6640-4825-a385-1888ff47a232",
+      "hotkeys": [["ctrl", "alt", "shift", "c"]],
+      "description": "New camera",
+      "isFavorite": false
+    },
+    {
+      "id": "f1362d8c-2aca-485b-b23c-ac6f564bd95e",
+      "hotkeys": [["v"]],
+      "description": "Switch to Universal gizmo",
+      "isFavorite": false
+    },
+    {
+      "id": "c35b98e8-48cf-4fa6-a10d-a5ad49cf2195",
+      "hotkeys": [["4"]],
+      "description": "Switch to Position gizmo",
+      "isFavorite": false
+    },
+    {
+      "id": "5ebf3138-7e9f-4336-ac9c-7f32c866e647",
+      "hotkeys": [["5"]],
+      "description": "Switch to Scale gizmo",
+      "isFavorite": false
+    },
+    {
+      "id": "cb03ce7e-bd58-4136-8216-86924e209ba0",
+      "hotkeys": [["6"]],
+      "description": "Switch to Rotation gizmo",
+      "isFavorite": false
+    },
+    {
+      "id": "e278d683-3bdf-42ef-b9fa-f671f4b4e0a5",
+      "hotkeys": [["ctrl", "alt", "shift", "backslash"]],
+      "description": "Move the camera and its point of interest to look at selected 3D layers",
+      "isFavorite": false
+    },
+    {
+      "id": "baa3ae16-3e37-47e7-bca0-637c029c3514",
+      "hotkeys": [["f"]],
+      "description": "With a camera tool selected, move the camera and its point of interest to look at selected 3D layers",
+      "isFavorite": false
+    },
+    {
+      "id": "330b4b76-e078-439d-b7fa-af6fc823d7f8",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "With a camera tool selected, move the camera and its point of interest to look at all 3D layers",
+      "isFavorite": false
+    },
+    {
+      "id": "37def8e9-a54d-444b-a7e8-348e55b816eb",
+      "hotkeys": [["alt", "shift", "c"]],
+      "description": "Turn Casts Shadows property on or off for selected 3D layers",
+      "isFavorite": false
+    },
+    {
+      "id": "fc058c25-75dc-472d-9095-5f588261b3be",
+      "hotkeys": [["shift", "f3"]],
+      "description": "Toggle between Graph Editor and layer bar modes",
+      "isFavorite": false
+    },
+    {
+      "id": "a65e7770-88be-4e3c-956f-3073d60f9768",
+      "hotkeys": [["ctrl", "alt", "a"]],
+      "description": "Select all visible keyframes and properties",
+      "isFavorite": false
+    },
+    {
+      "id": "ccd8e13f-af00-4068-9b3a-06a20ab7d65b",
+      "hotkeys": [["ctrl", "alt", "k"]],
+      "description": "Set interpolation for selected keyframes (layer bar mode)",
+      "isFavorite": false
+    },
+    {
+      "id": "14b37b79-6d1b-4a18-9f3a-3c1ca93f1c3e",
+      "hotkeys": [["ctrl", "alt", "h"]],
+      "description": "Set keyframe interpolation method to hold or Auto Bezier",
+      "isFavorite": false
+    },
+    {
+      "id": "a342d217-eba3-4d1a-abb6-61fb3845e2ca",
+      "hotkeys": [["f9"]],
+      "description": "Easy ease selected keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "0ee14fdf-2c16-4ee3-8696-35610350c174",
+      "hotkeys": [["shift", "f9"]],
+      "description": "Easy ease selected keyframes in",
+      "isFavorite": false
+    },
+    {
+      "id": "f1a7d671-be39-4b46-9858-5655cfd331dc",
+      "hotkeys": [["ctrl", "shift", "f9"]],
+      "description": "Easy ease selected keyframes out",
+      "isFavorite": false
+    },
+    {
+      "id": "ca89afcf-508c-4fe8-a123-309ec3666402",
+      "hotkeys": [["ctrl", "shift", "k"]],
+      "description": "Set velocity for selected keyframes",
+      "isFavorite": false
+    },
+    {
+      "id": "f9030a2c-b5b6-4a6f-9ac4-9cb4b86f0ebf",
+      "hotkeys": [["ctrl", "alt", "shift", "t"]],
+      "description": "New text layer",
+      "isFavorite": false
+    },
+    {
+      "id": "e1d038a7-26e3-4202-a2d8-0143519ec871",
+      "hotkeys": [["ctrl", "shift", "k"]],
+      "description": "Turn All Caps on or off for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "b0d19554-9acc-468a-84c8-dbf05cc01eb8",
+      "hotkeys": [["ctrl", "alt", "shift", "k"]],
+      "description": "Turn Small Caps on or off for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "33490d00-4768-49ee-a457-4223e6f37e18",
+      "hotkeys": [["ctrl", "shift", "x"]],
+      "description": "Set horizontal scale to 100% for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "759237b6-3c85-4309-997e-6004f9a4c8ef",
+      "hotkeys": [["ctrl", "alt", "shift", "x"]],
+      "description": "Set vertical scale to 100% for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "d28a9ab1-af1f-48cd-af07-b3981f5014bd",
+      "hotkeys": [["ctrl", "alt", "shift", "a"]],
+      "description": "Auto leading for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "5eed4a90-d315-4393-b93e-a162177487e5",
+      "hotkeys": [["ctrl", "shift", "q"]],
+      "description": "Reset tracking to 0 for selected text",
+      "isFavorite": false
+    },
+    {
+      "id": "175ef1f1-808b-4455-b882-0c1c49d00915",
+      "hotkeys": [["ctrl", "shift", "j"]],
+      "description": "Justify paragraph; left align last line",
+      "isFavorite": false
+    },
+    {
+      "id": "f6bc1489-76c5-4f52-8ddb-727c44bbe580",
+      "hotkeys": [["ctrl", "alt", "shift", "j"]],
+      "description": "Justify paragraph; right align last line",
+      "isFavorite": false
+    },
+    {
+      "id": "28323173-6d80-45ab-b65e-83dec9f3f2ab",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "Justify paragraph; force last line",
+      "isFavorite": false
+    },
+    {
+      "id": "98454386-0abb-48c9-ba78-d4e24be49283",
+      "hotkeys": [["ctrl", "alt", "shift", "t"]],
+      "description": "Toggle paragraph composer",
+      "isFavorite": false
+    },
+    {
+      "id": "6b455060-7dff-4f58-9955-c08e09c43d97",
+      "hotkeys": [["ctrl", "shift", "n"]],
+      "description": "New mask",
+      "isFavorite": false
+    },
+    {
+      "id": "56237a9f-7246-4179-a8da-02af96b98cb6",
+      "hotkeys": [["escape"]],
+      "description": "Exit free-transform mask editing mode",
+      "isFavorite": false
+    },
+    {
+      "id": "3a28feca-a46a-4c66-b6d2-593914e03619",
+      "hotkeys": [["ctrl", "shift", "i"]],
+      "description": "Invert selected mask",
+      "isFavorite": false
+    },
+    {
+      "id": "7a47c444-f09c-44fb-9f65-be2d1d35a16e",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "Open the Mask Feather dialog box for selected mask",
+      "isFavorite": false
+    },
+    {
+      "id": "846c9474-9ac1-4cb5-8a3e-291327649b8b",
+      "hotkeys": [["ctrl", "shift", "m"]],
+      "description": "Open the Mask Shape dialog box for selected mask",
+      "isFavorite": false
+    },
+    {
+      "id": "7955a310-98e0-4820-81af-93eb4aa27c8f",
+      "hotkeys": [["s"]],
+      "description": "Subtract mode",
+      "isFavorite": false
+    },
+    {
+      "id": "9f4c66c7-1b01-41bf-bd0c-848937f75822",
+      "hotkeys": [["d"]],
+      "description": "Darken mode",
+      "isFavorite": false
+    },
+    {
+      "id": "7087b0d5-b756-4a40-9b8e-d0e304d5afa9",
+      "hotkeys": [["f"]],
+      "description": "Difference mode",
+      "isFavorite": false
+    },
+    {
+      "id": "7105ac1a-a554-43ef-9214-e7099e5e9d76",
+      "hotkeys": [["a"]],
+      "description": "Add mode",
+      "isFavorite": false
+    },
+    {
+      "id": "f39525e4-1f2d-4942-9f06-1776eaf7339d",
+      "hotkeys": [["i"]],
+      "description": "Intersect mode",
+      "isFavorite": false
+    },
+    {
+      "id": "6b259066-1695-4214-9e4d-a6cf0c7a1429",
+      "hotkeys": [["n"]],
+      "description": "None",
+      "isFavorite": false
+    },
+    {
+      "id": "f2af2c64-5541-41a0-86d7-74b8d3d9eba0",
+      "hotkeys": [["x"]],
+      "description": "Swap paint background color and foreground colors",
+      "isFavorite": false
+    },
+    {
+      "id": "d48014bd-e98a-4fcd-a31c-ee2776ba092c",
+      "hotkeys": [["d"]],
+      "description": "Set paint foreground color to black and background color to white",
+      "isFavorite": false
+    },
+    {
+      "id": "e566b285-07dd-4849-88b0-e1175f1dc2af",
+      "hotkeys": [["ctrl", "shift"]],
+      "description": "Momentarily activate Eraser tool with Last Stroke Only option",
+      "isFavorite": false
+    },
+    {
+      "id": "b5ecd497-3e00-4333-883c-ab5f12332d38",
+      "hotkeys": [["ctrl", "g"]],
+      "description": "Group selected shapes",
+      "isFavorite": false
+    },
+    {
+      "id": "1217dffa-0f30-4489-a157-e52e811dcdde",
+      "hotkeys": [["ctrl", "shift", "g"]],
+      "description": "Ungroup selected shapes",
+      "isFavorite": false
+    },
+    {
+      "id": "a300d83b-9c0b-4857-8baf-6a9266c3e395",
+      "hotkeys": [["ctrl", "s"]],
+      "description": "Save project",
+      "isFavorite": false
+    },
+    {
+      "id": "723568da-27d1-4598-906d-84d559c6baa7",
+      "hotkeys": [["ctrl", "alt", "shift", "s"]],
+      "description": "Increment and save project",
+      "isFavorite": false
+    },
+    {
+      "id": "ed399204-d031-4e76-9e7b-e3385df8269e",
+      "hotkeys": [["ctrl", "shift", "s"]],
+      "description": "Save As",
+      "isFavorite": false
+    },
+    {
+      "id": "1cca5526-ab7f-4d0b-838e-42da725e14f4",
+      "hotkeys": [["ctrl", "alt", "s"]],
+      "description": "Add current frame to render queue",
+      "isFavorite": false
+    },
+    {
+      "id": "70128b10-85ce-4981-9def-7a042accdd76",
+      "hotkeys": [["ctrl", "shift", "d"]],
+      "description": "Duplicate render item with same output filename as original",
+      "isFavorite": false
+    },
+    {
+      "id": "80a4be4b-2e9b-43da-b0cb-79a106984279",
+      "hotkeys": [["ctrl", "alt", "m"]],
+      "description": "Add a composition to the Adobe Media Encoder encoding queue",
+      "isFavorite": false
+    }
+  ]
+}

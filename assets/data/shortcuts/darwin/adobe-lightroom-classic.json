@@ -1,0 +1,1970 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobe-lightroom-classic",
+    "icon": {
+      "filename": "lightroom.svg",
+      "isCustom": false
+    },
+    "id": "087bbacf-002b-43c2-826b-c1084fb99d87",
+    "label": "Lightroom Classic"
+  },
+  "shortcuts": [
+    {
+      "id": "6e8e6c1a-3d9b-4c12-870b-1b6c2880c034",
+      "hotkeys": [["tab"]],
+      "description": "Show/hide side panels",
+      "isFavorite": false
+    },
+    {
+      "id": "447e207c-9750-4761-b023-0c45906b63a1",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Show/hide all panels",
+      "isFavorite": false
+    },
+    {
+      "id": "673e2681-7c0d-4e90-8806-4a57560f6808",
+      "hotkeys": [["t"]],
+      "description": "Show/hide toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "8033196c-d9a2-4eee-9a58-7a1f566d2718",
+      "hotkeys": [["f5"]],
+      "description": "Show/hide Module Picker",
+      "isFavorite": false
+    },
+    {
+      "id": "92095aef-7acd-4bbd-92d1-e55ce67f2991",
+      "hotkeys": [["f6"]],
+      "description": "Show/hide Filmstrip",
+      "isFavorite": false
+    },
+    {
+      "id": "b3d66562-fb49-4a5e-b748-ac17e0523c0a",
+      "hotkeys": [["f7"]],
+      "description": "Show/hide left panels",
+      "isFavorite": false
+    },
+    {
+      "id": "d35051ed-b98c-437f-aad4-52be63ee95b2",
+      "hotkeys": [["f8"]],
+      "description": "Show/hide right panels",
+      "isFavorite": false
+    },
+    {
+      "id": "987a1fed-4979-4b93-acbd-56fecf48a402",
+      "hotkeys": [["meta", "shift", "z"]],
+      "description": "Redo",
+      "isFavorite": false
+    },
+    {
+      "id": "c2f7e8be-8dfe-40e0-8957-ad3ff0c88c04",
+      "hotkeys": [["meta", "z"]],
+      "description": "Undo",
+      "isFavorite": false
+    },
+    {
+      "id": "1eb44829-db97-496a-9585-d5860bce122f",
+      "hotkeys": [["meta", "alt", "1"]],
+      "description": "Go to Library module",
+      "isFavorite": false
+    },
+    {
+      "id": "2c32a1ea-5fb0-42ec-b9b9-eb52704f4a0e",
+      "hotkeys": [["meta", "alt", "2"]],
+      "description": "Go to Develop module",
+      "isFavorite": false
+    },
+    {
+      "id": "0e39f826-3915-4895-a10e-ca86f06fe3b5",
+      "hotkeys": [["meta", "alt", "3"]],
+      "description": "Go to Map module",
+      "isFavorite": false
+    },
+    {
+      "id": "f5b6b4b3-ec78-464b-b615-adad76899ace",
+      "hotkeys": [["meta", "alt", "4"]],
+      "description": "Go to Book module",
+      "isFavorite": false
+    },
+    {
+      "id": "bcbfeaef-0a5b-4ed2-96de-fc66db1bc2f0",
+      "hotkeys": [["meta", "alt", "5"]],
+      "description": "Go to Slideshow module",
+      "isFavorite": false
+    },
+    {
+      "id": "a5395c2c-25d1-428c-83fe-a27ae9dc7088",
+      "hotkeys": [["meta", "alt", "6"]],
+      "description": "Go to Print module",
+      "isFavorite": false
+    },
+    {
+      "id": "dba4cdce-95b5-47da-9854-f950edb15ce9",
+      "hotkeys": [["meta", "alt", "7"]],
+      "description": "Go to Web module",
+      "isFavorite": false
+    },
+    {
+      "id": "6f51514a-db9f-4825-a8da-22b994dc7a27",
+      "hotkeys": [["meta", "alt", "left"]],
+      "description": "Go back",
+      "isFavorite": false
+    },
+    {
+      "id": "30767a0a-9a04-436e-931a-b657c6a3acf1",
+      "hotkeys": [["meta", "alt", "right"]],
+      "description": "Go forward",
+      "isFavorite": false
+    },
+    {
+      "id": "ff8a62a9-7444-4be5-a9cb-8b1c80d1d027",
+      "hotkeys": [["meta", "alt", "up"]],
+      "description": "Go back to previous module",
+      "isFavorite": false
+    },
+    {
+      "id": "0b241faa-d1b0-45c7-b140-de1e8db47634",
+      "hotkeys": [["meta", "r"]],
+      "description": "Double page view",
+      "isFavorite": false
+    },
+    {
+      "id": "8c9d3c0d-f408-4094-b537-890bf14ce3b9",
+      "hotkeys": [["meta", "e"]],
+      "description": "Multi-page view",
+      "isFavorite": false
+    },
+    {
+      "id": "58c9393e-2d57-4a5d-869e-65e2e2570ec4",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Next view mode",
+      "isFavorite": false
+    },
+    {
+      "id": "0e2fab16-e9d6-4c25-933a-e0d5c3230dc9",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Previous view mode",
+      "isFavorite": false
+    },
+    {
+      "id": "f11e1598-8c34-42ab-a848-c434b0c6694a",
+      "hotkeys": [["meta", "t"]],
+      "description": "Single page view",
+      "isFavorite": false
+    },
+    {
+      "id": "b3c13cb5-504c-49ab-bc16-7481986588ca",
+      "hotkeys": [["meta", "u"]],
+      "description": "Zoomed single-page view",
+      "isFavorite": false
+    },
+    {
+      "id": "7e607ba0-5467-45d8-9de8-15735ff30c67",
+      "hotkeys": [["meta", "s"]],
+      "description": "Create Saved Book",
+      "isFavorite": false
+    },
+    {
+      "id": "aab219e4-7ea9-4f81-9611-4ee0bd99c435",
+      "hotkeys": [["meta", "m"]],
+      "description": "Update Metadata captions",
+      "isFavorite": false
+    },
+    {
+      "id": "3dd40ff1-b06f-447f-95dc-0db295dbd77c",
+      "hotkeys": [["meta", "shift", "c"]],
+      "description": "Copy Book layout",
+      "isFavorite": false
+    },
+    {
+      "id": "23a39ab0-9e48-4ff1-ac48-eca4888a5ef6",
+      "hotkeys": [["meta", "shift", "v"]],
+      "description": "Paste Layout",
+      "isFavorite": false
+    },
+    {
+      "id": "9b6d4fb6-6e5b-4475-a420-a5b6688a0bbc",
+      "hotkeys": [["meta", "shift", "backspace"]],
+      "description": "Remove Page",
+      "isFavorite": false
+    },
+    {
+      "id": "dc499d9d-ee88-4761-b1bb-00c2a1a7eb51",
+      "hotkeys": [["meta", "shift", "alt", "a"]],
+      "description": "Select photo cells",
+      "isFavorite": false
+    },
+    {
+      "id": "902a1756-829e-4e54-a2d5-f14af36dd589",
+      "hotkeys": [["meta", "alt", "a"]],
+      "description": "Select text cells",
+      "isFavorite": false
+    },
+    {
+      "id": "765395c7-4f6d-4724-b743-45b70e52db2a",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Show / Hide Filter Text",
+      "isFavorite": false
+    },
+    {
+      "id": "2f7ae98b-b43e-47b8-aec6-c78cd417d081",
+      "hotkeys": [["meta", "shift", "u"]],
+      "description": "Show / Hide text safe area",
+      "isFavorite": false
+    },
+    {
+      "id": "26ccb50b-784f-4bc4-baf0-1f8a52cc0d68",
+      "hotkeys": [["e"]],
+      "description": "Enter Library Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "fc147e26-96da-4523-9039-3d74d340ed14",
+      "hotkeys": [["g"]],
+      "description": "Enter Library Grid view",
+      "isFavorite": false
+    },
+    {
+      "id": "44aab6e2-3f84-4f73-b2bf-bc32facc9258",
+      "hotkeys": [["c"]],
+      "description": "Enter Library Compare view",
+      "isFavorite": false
+    },
+    {
+      "id": "724e04d4-a509-4e36-9733-b6c478628c16",
+      "hotkeys": [["n"]],
+      "description": "Enter Library Survey view",
+      "isFavorite": false
+    },
+    {
+      "id": "1ee38ae5-2903-47ae-9199-36841dd40d98",
+      "hotkeys": [["d"]],
+      "description": "Open selected photo in the Develop module",
+      "isFavorite": false
+    },
+    {
+      "id": "91b76154-e258-4c61-8c65-8e2bd35be3a4",
+      "hotkeys": [["shift", "l"]],
+      "description": "Cycle backward through Lights Out modes",
+      "isFavorite": false
+    },
+    {
+      "id": "da49e249-96e6-4a2a-b6ee-80f30cf0e0cb",
+      "hotkeys": [["l"]],
+      "description": "Cycle forward through Lights Out modes",
+      "isFavorite": false
+    },
+    {
+      "id": "3b90bc55-8c00-42f7-87a9-5baa1863ed91",
+      "hotkeys": [["meta", "shift", "l"]],
+      "description": "Toggle Lights Dim mode",
+      "isFavorite": false
+    },
+    {
+      "id": "c04838c7-683c-4c90-bc1b-9988dbe16cbc",
+      "hotkeys": [["f"]],
+      "description": "Cycle screen modes",
+      "isFavorite": false
+    },
+    {
+      "id": "53453eec-eada-4aa6-93d9-0a7df179e373",
+      "hotkeys": [["shift", "f"]],
+      "description": "Previous screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "fb36a13b-c435-4f41-92aa-2d9532a269af",
+      "hotkeys": [["meta", "shift", "f"]],
+      "description": "Switch between Normal and full-screen, hide panels",
+      "isFavorite": false
+    },
+    {
+      "id": "ad0cf96c-8ae6-436a-9c6b-16d8f83ce583",
+      "hotkeys": [["meta", "alt", "f"]],
+      "description": "Go to Normal screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "ee9b067c-aa3d-495c-948e-250659aca80e",
+      "hotkeys": [["i"]],
+      "description": "Cycle info overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "44202839-aaef-48d4-9918-be20db2ff0fc",
+      "hotkeys": [["meta", "i"]],
+      "description": "Show/hide info overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "c8cc0ce4-dd5e-4f53-a944-3a98d3890b2f",
+      "hotkeys": [["shift", "r"]],
+      "description": "Open Reference view",
+      "isFavorite": false
+    },
+    {
+      "id": "7055df70-f6f6-452c-b674-33fec39552e1",
+      "hotkeys": [["meta", "alt", "o"]],
+      "description": "Enable loupe overlay in the Library",
+      "isFavorite": false
+    },
+    {
+      "id": "d204c13c-72db-4185-a4ef-bfcd7c9da893",
+      "hotkeys": [["meta", "shift", "alt", "o"]],
+      "description": "Enable and choose loupe overlay in the Library",
+      "isFavorite": false
+    },
+    {
+      "id": "5e495466-112d-4770-8eeb-e9e78bbb5a92",
+      "hotkeys": [["meta", "shift", "x"]],
+      "description": "Show Grid view styles",
+      "isFavorite": false
+    },
+    {
+      "id": "a35db126-0d49-4538-9d3c-066c7c32d54a",
+      "hotkeys": [["meta", "alt", "0"]],
+      "description": "Zoom to 100",
+      "isFavorite": false
+    },
+    {
+      "id": "44f27693-a0bc-4633-9984-6e628ed627c0",
+      "hotkeys": [["o"]],
+      "description": "Open People View in the Library module",
+      "isFavorite": false
+    },
+    {
+      "id": "e3066253-458e-4832-8485-5531a2d772d7",
+      "hotkeys": [["meta", "f11"]],
+      "description": "Open secondary window",
+      "isFavorite": false
+    },
+    {
+      "id": "9a8f5930-3d13-4956-a1be-28b079c8e74a",
+      "hotkeys": [["shift", "g"]],
+      "description": "Enter Grid view",
+      "isFavorite": false
+    },
+    {
+      "id": "1e27b697-4825-4413-aecd-0fa0409fa722",
+      "hotkeys": [["shift", "e"]],
+      "description": "Enter normal Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "79f68a86-f74f-4fbe-9903-43d5e1f7ac28",
+      "hotkeys": [["meta", "shift", "enter"]],
+      "description": "Enter locked Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "eeac3dc9-66a4-433a-8b4f-e944d5d6b035",
+      "hotkeys": [["shift", "c"]],
+      "description": "Enter Compare view",
+      "isFavorite": false
+    },
+    {
+      "id": "c9282581-2048-4d95-80ec-c5b2455c6642",
+      "hotkeys": [["shift", "n"]],
+      "description": "Enter Survey view",
+      "isFavorite": false
+    },
+    {
+      "id": "2351a5f4-1cb4-45f5-8e1e-e846d1f6f583",
+      "hotkeys": [["meta", "alt", "shift", "enter"]],
+      "description": "Enter Slideshow view",
+      "isFavorite": false
+    },
+    {
+      "id": "a0175581-92e2-41cd-84d1-683665aa6e7d",
+      "hotkeys": [["meta", "shift", "f11"]],
+      "description": "Enter full-screen mode (requires a second monitor)",
+      "isFavorite": false
+    },
+    {
+      "id": "3df58a90-9c7b-4aba-bf23-96c160288691",
+      "hotkeys": [["shift", "backslash"]],
+      "description": "Show/hide Filter bar",
+      "isFavorite": false
+    },
+    {
+      "id": "5171a32c-8f88-4fd1-8ac0-f27a644a5466",
+      "hotkeys": [["meta", "shift", "equal"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "c581a7a6-548d-466d-91d1-e58305509ede",
+      "hotkeys": [["meta", "shift", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "98160a91-b888-42ed-821b-f77c710940c4",
+      "hotkeys": [["meta", "shift", "i"]],
+      "description": "Import photos from disk",
+      "isFavorite": false
+    },
+    {
+      "id": "5f7e622f-f177-44f5-bfb1-38b9076439aa",
+      "hotkeys": [["meta", "shift", "o"]],
+      "description": "Open catalog",
+      "isFavorite": false
+    },
+    {
+      "id": "67d0e1ac-fdc0-413e-996b-6b7b0e0da7f4",
+      "hotkeys": [["meta", "comma"]],
+      "description": "Open Preferences",
+      "isFavorite": false
+    },
+    {
+      "id": "a66096fa-9577-4a77-93cd-cd8333be9705",
+      "hotkeys": [["meta", "alt", "comma"]],
+      "description": "Open Catalog Settings",
+      "isFavorite": false
+    },
+    {
+      "id": "7e5fb1a7-19c7-49c3-bbf2-1a72192a3ba6",
+      "hotkeys": [["meta", "shift", "t"]],
+      "description": "Create new subfolder (segmented tethered capture)",
+      "isFavorite": false
+    },
+    {
+      "id": "6a98390d-25f0-461a-a469-eab3c743801d",
+      "hotkeys": [["meta", "t"]],
+      "description": "Hide/show tether capture bar",
+      "isFavorite": false
+    },
+    {
+      "id": "91c17d84-eb5e-4287-bf28-d7601410f824",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Create a new folder in the Library module",
+      "isFavorite": false
+    },
+    {
+      "id": "c003a9d7-8a69-4550-b7ba-23b670ee1c8b",
+      "hotkeys": [["meta", "quote"]],
+      "description": "Create virtual copy (Library and Develop module only)",
+      "isFavorite": false
+    },
+    {
+      "id": "bf0504d1-e55c-440e-be14-ab95cc444ff8",
+      "hotkeys": [["meta", "r"]],
+      "description": "Show in Explorer/Finder (Library and Develop module only)",
+      "isFavorite": false
+    },
+    {
+      "id": "89e3d762-630d-47ef-9188-d5546a013813",
+      "hotkeys": [["right"]],
+      "description": "Go to next photo in the Filmstrip",
+      "isFavorite": false
+    },
+    {
+      "id": "0f6d9f0e-e71c-4ea7-b014-47549d361512",
+      "hotkeys": [["left"]],
+      "description": "Go to previous photo in the Filmstrip",
+      "isFavorite": false
+    },
+    {
+      "id": "daacb7cb-0663-4cc5-bd90-41d681f278b6",
+      "hotkeys": [["f2"]],
+      "description": "Rename photo (in Library module)",
+      "isFavorite": false
+    },
+    {
+      "id": "9cfb95da-5997-4614-bed7-767bf8244e27",
+      "hotkeys": [["backspace"]],
+      "description": "Delete selected photo(s)",
+      "isFavorite": false
+    },
+    {
+      "id": "b95dce97-e625-444b-a476-2b899deeba15",
+      "hotkeys": [["alt", "backspace"]],
+      "description": "Remove selected photo(s) from catalog",
+      "isFavorite": false
+    },
+    {
+      "id": "9623b25e-b3c3-4b0c-8efc-64b82741e4d0",
+      "hotkeys": [["meta", "alt", "shift", "backspace"]],
+      "description": "Delete selected photo(s) and move to Trash",
+      "isFavorite": false
+    },
+    {
+      "id": "f0822e96-2181-4876-8932-625694d51236",
+      "hotkeys": [["meta", "backspace"]],
+      "description": "Delete rejected photo(s)",
+      "isFavorite": false
+    },
+    {
+      "id": "cccd203f-aed5-4e32-a58a-273fb7f22b5d",
+      "hotkeys": [["meta", "e"]],
+      "description": "Edit in Photoshop",
+      "isFavorite": false
+    },
+    {
+      "id": "aa7c4f00-66e8-470a-817d-ff8b3f04113d",
+      "hotkeys": [["meta", "alt", "e"]],
+      "description": "Open in other editor",
+      "isFavorite": false
+    },
+    {
+      "id": "694132b7-6c9b-4c9e-9bbd-d31569e436e1",
+      "hotkeys": [["meta", "shift", "e"]],
+      "description": "Export selected photo(s)",
+      "isFavorite": false
+    },
+    {
+      "id": "921968d9-3cf8-4bd3-89eb-511caf61d655",
+      "hotkeys": [["meta", "alt", "shift", "e"]],
+      "description": "Export with previous settings",
+      "isFavorite": false
+    },
+    {
+      "id": "9212617a-b733-40f4-a594-2069014a7ba3",
+      "hotkeys": [["meta", "alt", "shift", "comma"]],
+      "description": "Open plug-in manager",
+      "isFavorite": false
+    },
+    {
+      "id": "d549c00c-2561-415a-b2f4-abd96a0588f6",
+      "hotkeys": [["meta", "p"]],
+      "description": "Print selected photo",
+      "isFavorite": false
+    },
+    {
+      "id": "c932fd3e-6952-46b6-9255-d4a17d663664",
+      "hotkeys": [["meta", "shift", "p"]],
+      "description": "Open Page Setup dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "c124e890-4044-4655-9737-64323add022a",
+      "hotkeys": [["meta", "right"]],
+      "description": "Go to the next image",
+      "isFavorite": false
+    },
+    {
+      "id": "137e1ea8-d018-4dfa-9242-606f858580f4",
+      "hotkeys": [["meta", "left"]],
+      "description": "Go to the previous image",
+      "isFavorite": false
+    },
+    {
+      "id": "f8e19204-e384-4c20-93fa-59d875de1027",
+      "hotkeys": [["f12"]],
+      "description": "Tethered capture",
+      "isFavorite": false
+    },
+    {
+      "id": "b27b8c19-5073-4774-a57d-ea3c3002aba7",
+      "hotkeys": [["ctrl", "alt", "shift", "i"]],
+      "description": "Headless enhance",
+      "isFavorite": false
+    },
+    {
+      "id": "44b22b95-402e-47ea-a921-31b73808cf6b",
+      "hotkeys": [["ctrl", "alt", "i"]],
+      "description": "Open enhance dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "60d43283-6455-46b6-87d1-e0b018198c3c",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "HDR merge",
+      "isFavorite": false
+    },
+    {
+      "id": "dc45d784-dcd7-4c1d-904d-02f0fb16e726",
+      "hotkeys": [["ctrl", "shift", "h"]],
+      "description": "Headless HDR merge",
+      "isFavorite": false
+    },
+    {
+      "id": "075dd16a-f23a-4390-9871-8e38dfdf4576",
+      "hotkeys": [["ctrl", "m"]],
+      "description": "Pano merge",
+      "isFavorite": false
+    },
+    {
+      "id": "65c6e10b-7003-4f42-a16d-f663b736b17f",
+      "hotkeys": [["ctrl", "shift", "m"]],
+      "description": "Headless pano merge",
+      "isFavorite": false
+    },
+    {
+      "id": "1f0cb2d9-7a01-42ef-9a19-78867e6ba21e",
+      "hotkeys": [["meta", "alt", "x"]],
+      "description": "Open as Smart Object in Photoshop",
+      "isFavorite": false
+    },
+    {
+      "id": "7a2abcb5-2ebf-47e7-86df-479e1b86cf13",
+      "hotkeys": [["meta", "alt", "shift", "s"]],
+      "description": "Stack visually similar photos",
+      "isFavorite": false
+    },
+    {
+      "id": "baaecbdb-5496-4b7d-98ff-2879b5e622e8",
+      "hotkeys": [["meta", "shift", "m"]],
+      "description": "E-mail photos",
+      "isFavorite": false
+    },
+    {
+      "id": "882d0848-5241-436c-b935-ce6fbc3babbb",
+      "hotkeys": [["e"]],
+      "description": "Switch to Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "76613f55-125b-4c74-b988-1e19e0fb79de",
+      "hotkeys": [["enter"]],
+      "description": "Switch to Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "31dd4435-b4b5-403e-810d-a2b11cd185b9",
+      "hotkeys": [["g"]],
+      "description": "Switch to Grid view",
+      "isFavorite": false
+    },
+    {
+      "id": "bb380727-7127-4d9b-8c58-54333f06bede",
+      "hotkeys": [["escape"]],
+      "description": "Switch to Grid view",
+      "isFavorite": false
+    },
+    {
+      "id": "18cde588-8753-4bbc-a0a1-a3a8b8157cce",
+      "hotkeys": [["c"]],
+      "description": "Switch to Compare view",
+      "isFavorite": false
+    },
+    {
+      "id": "f94efc19-e007-43d5-afb8-e624c3982eeb",
+      "hotkeys": [["n"]],
+      "description": "Switch to Survey view",
+      "isFavorite": false
+    },
+    {
+      "id": "771de6fd-c842-45ca-821f-c3248ade7e0f",
+      "hotkeys": [["space"]],
+      "description": "Switch from Grid to Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "dcdec307-d648-4b2a-be41-c46393ff2b25",
+      "hotkeys": [["e"]],
+      "description": "Switch from Grid to Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "595bccec-7727-45a7-b7bc-c0e97f80ded7",
+      "hotkeys": [["down"]],
+      "description": "Swap select and candidate photos in Compare view",
+      "isFavorite": false
+    },
+    {
+      "id": "1306cf37-9788-4d8d-9975-db1d7b7413f5",
+      "hotkeys": [["up"]],
+      "description": "Make next photos select and candidate in Compare view",
+      "isFavorite": false
+    },
+    {
+      "id": "8a7bfb18-c30e-4245-bcea-e8a311298ac9",
+      "hotkeys": [["z"]],
+      "description": "Toggle Zoom view",
+      "isFavorite": false
+    },
+    {
+      "id": "1d8bccdb-c3f1-4c92-9485-37b5fe9a9ad3",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom in / zoom out in Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "1b8dc595-9124-4775-a99d-7db428ac891a",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out in Loupe view",
+      "isFavorite": false
+    },
+    {
+      "id": "8d6c6661-dfa1-40df-a85e-e51e89fd62e9",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Play impromptu slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "0c32f63e-727d-4787-933d-1ccaa238a47d",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Rotate photo right (clockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "d84dbb09-8d78-404a-95be-fba6bf6f6ed2",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Rotate photo left (counterclockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "08a3c591-df95-41a1-b86e-fd033d8c9038",
+      "hotkeys": [["equal"]],
+      "description": "Increase Grid thumbnail size",
+      "isFavorite": false
+    },
+    {
+      "id": "18e33512-9568-4c4b-a5bf-7a977ef4e1b8",
+      "hotkeys": [["minus"]],
+      "description": "Decrease Grid thumbnail size",
+      "isFavorite": false
+    },
+    {
+      "id": "e1e7c123-7f90-4ea7-8a03-2bdf903da4c5",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Toggle cell extras",
+      "isFavorite": false
+    },
+    {
+      "id": "23bd4bb7-2882-453d-8933-896d0d53f859",
+      "hotkeys": [["meta", "alt", "shift", "h"]],
+      "description": "Show/hide badges",
+      "isFavorite": false
+    },
+    {
+      "id": "0370e24e-013d-4614-92c9-d0b35dc5f277",
+      "hotkeys": [["j"]],
+      "description": "Cycle Grid views",
+      "isFavorite": false
+    },
+    {
+      "id": "932bc0e9-f8b8-4923-a076-9865ccb8b284",
+      "hotkeys": [["meta", "j"]],
+      "description": "Open Library view options",
+      "isFavorite": false
+    },
+    {
+      "id": "4423b748-0dfd-49ca-9888-b12dd61c2157",
+      "hotkeys": [["meta", "a"]],
+      "description": "Select all photos",
+      "isFavorite": false
+    },
+    {
+      "id": "b9c0d71b-0e8e-411a-a978-6dba7df8390b",
+      "hotkeys": [["meta", "d"]],
+      "description": "Deselect all photos",
+      "isFavorite": false
+    },
+    {
+      "id": "b362f77e-5fb0-42f3-b4ec-b614984fc082",
+      "hotkeys": [["meta", "shift", "a"]],
+      "description": "Deselect all photos",
+      "isFavorite": false
+    },
+    {
+      "id": "61ee94ed-3034-4c39-9a63-48077c69a4da",
+      "hotkeys": [["meta", "shift", "d"]],
+      "description": "Select only active photo",
+      "isFavorite": false
+    },
+    {
+      "id": "8b126701-552f-461a-a7ea-115d73bf2cca",
+      "hotkeys": [["slash"]],
+      "description": "Deselect active photo",
+      "isFavorite": false
+    },
+    {
+      "id": "33556782-7224-4908-8024-9e0caa2ec499",
+      "hotkeys": [["shift", "left"]],
+      "description": "Add previous photo to selection",
+      "isFavorite": false
+    },
+    {
+      "id": "276f21ae-1638-46ab-ab34-b9a03e0bcb0b",
+      "hotkeys": [["shift", "right"]],
+      "description": "Add next photo to selection",
+      "isFavorite": false
+    },
+    {
+      "id": "339d1973-0b85-41f2-87e0-b7c7fd969d23",
+      "hotkeys": [["meta", "alt", "a"]],
+      "description": "Select flagged photos",
+      "isFavorite": false
+    },
+    {
+      "id": "c4b059c6-7aa4-4184-b6c2-e5e1ebcd0869",
+      "hotkeys": [["meta", "alt", "shift", "d"]],
+      "description": "Deselect unflagged photos",
+      "isFavorite": false
+    },
+    {
+      "id": "bb6d218d-c928-4f4a-8254-6da9eb3f09e5",
+      "hotkeys": [["meta", "g"]],
+      "description": "Group into stack",
+      "isFavorite": false
+    },
+    {
+      "id": "97c3561e-4e1a-4e5a-8069-4ca718663592",
+      "hotkeys": [["meta", "shift", "g"]],
+      "description": "Unstack",
+      "isFavorite": false
+    },
+    {
+      "id": "91c719df-bd00-42be-9591-0669fd8a3b9a",
+      "hotkeys": [["s"]],
+      "description": "Toggle stack",
+      "isFavorite": false
+    },
+    {
+      "id": "b5e0d03d-4e10-4277-9438-27b94d501439",
+      "hotkeys": [["shift", "s"]],
+      "description": "Move to top of stack",
+      "isFavorite": false
+    },
+    {
+      "id": "a50b39fa-d8c5-42be-9d17-ef1d1cc912a0",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "Move up in stack",
+      "isFavorite": false
+    },
+    {
+      "id": "a1a2341a-5cf7-4236-bc4d-d11df197565e",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Move down in stack",
+      "isFavorite": false
+    },
+    {
+      "id": "d2cc52d6-7d99-484f-8de6-9cfba11587ed",
+      "hotkeys": [["0"]],
+      "description": "Remove star rating",
+      "isFavorite": false
+    },
+    {
+      "id": "663d892c-9237-48e2-9bc1-36a7e10e0e18",
+      "hotkeys": [["shift", "0"]],
+      "description": "Remove star rating and go to next photo",
+      "isFavorite": false
+    },
+    {
+      "id": "c8e9a5d0-9a55-486a-8c26-411aba5da700",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase rating by one star",
+      "isFavorite": false
+    },
+    {
+      "id": "ca8d45bd-de25-4a09-9db7-c2aae4a80b66",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease rating by one star",
+      "isFavorite": false
+    },
+    {
+      "id": "58e715bd-7895-498e-bb1a-ad391299c0c4",
+      "hotkeys": [["6"]],
+      "description": "Assign a red label",
+      "isFavorite": false
+    },
+    {
+      "id": "a0bc7f92-0fbd-4261-896c-e4219d1b2f39",
+      "hotkeys": [["7"]],
+      "description": "Assign a yellow label",
+      "isFavorite": false
+    },
+    {
+      "id": "027da792-48b3-422b-b838-fb153aedc744",
+      "hotkeys": [["8"]],
+      "description": "Assign a green label",
+      "isFavorite": false
+    },
+    {
+      "id": "20daf5b6-6bb0-4ad7-87ce-ff369db958c4",
+      "hotkeys": [["9"]],
+      "description": "Assign a blue label",
+      "isFavorite": false
+    },
+    {
+      "id": "534ac49f-1984-49bc-85f3-a6556c01d9cc",
+      "hotkeys": [["p"]],
+      "description": "Flag photo as a pick",
+      "isFavorite": false
+    },
+    {
+      "id": "d999b6ba-28ec-4e68-a060-063a17bf3118",
+      "hotkeys": [["shift", "p"]],
+      "description": "Flag photo as a pick and go to next photo",
+      "isFavorite": false
+    },
+    {
+      "id": "3cdf1a0b-a681-43c9-b701-4bfda984c7ba",
+      "hotkeys": [["x"]],
+      "description": "Flag photo as a reject",
+      "isFavorite": false
+    },
+    {
+      "id": "e5d55992-404e-4219-956c-ac42bb2793d6",
+      "hotkeys": [["shift", "x"]],
+      "description": "Flag photo as a reject and go to next photo",
+      "isFavorite": false
+    },
+    {
+      "id": "d3ad0ef2-9db5-4045-b23a-ad450f4c7aff",
+      "hotkeys": [["u"]],
+      "description": "Unflag photo",
+      "isFavorite": false
+    },
+    {
+      "id": "8f6d3c3f-959e-4e1a-b61d-a53b0625b0eb",
+      "hotkeys": [["shift", "u"]],
+      "description": "Unflag photo and go to next photo",
+      "isFavorite": false
+    },
+    {
+      "id": "43210af3-8a77-4657-bb35-63dfcd549daa",
+      "hotkeys": [["meta", "down"]],
+      "description": "Decrease flag status",
+      "isFavorite": false
+    },
+    {
+      "id": "0bcea286-35d8-4758-a3a2-a18f1f3111a3",
+      "hotkeys": [["meta", "up"]],
+      "description": "Increase flag status",
+      "isFavorite": false
+    },
+    {
+      "id": "37f31860-17ba-4b4c-a393-722ec4ae2ccb",
+      "hotkeys": [["backquote"]],
+      "description": "Cycle flag settings",
+      "isFavorite": false
+    },
+    {
+      "id": "a2b01d84-51c2-4d32-88bc-4e03b35e9918",
+      "hotkeys": [["meta", "alt", "r"]],
+      "description": "Refine photos",
+      "isFavorite": false
+    },
+    {
+      "id": "4e74a9d5-5759-4f18-9df7-bd947d9bb027",
+      "hotkeys": [["backslash"]],
+      "description": "Show/hide Library Filter bar",
+      "isFavorite": false
+    },
+    {
+      "id": "3cdac0b7-31c4-4b74-acf4-f335c63ad4be",
+      "hotkeys": [["meta", "l"]],
+      "description": "Toggle filters on/off",
+      "isFavorite": false
+    },
+    {
+      "id": "b3ad2be7-5060-4b98-b4e4-37705f57a41f",
+      "hotkeys": [["meta", "f"]],
+      "description": "Find photo in the Library module",
+      "isFavorite": false
+    },
+    {
+      "id": "8ee19cee-1dd3-473c-a792-f9c1102fb6c3",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new collection in the Library module",
+      "isFavorite": false
+    },
+    {
+      "id": "bcb377c5-45a7-47be-b8bb-f9d2232a2c45",
+      "hotkeys": [["b"]],
+      "description": "Add to Quick Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "739e606d-2f08-4a29-9ddd-61dc28b8fa72",
+      "hotkeys": [["shift", "b"]],
+      "description": "Add to Quick Collection and go to next photo",
+      "isFavorite": false
+    },
+    {
+      "id": "99883574-83f2-445e-9248-bad5abe11b68",
+      "hotkeys": [["meta", "b"]],
+      "description": "Show Quick Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "e1ebc06a-ce58-4519-9f2d-3c79e798dc39",
+      "hotkeys": [["meta", "alt", "b"]],
+      "description": "Save Quick Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "22a781da-64da-4e9f-82c4-9bd3d57e6bbc",
+      "hotkeys": [["meta", "shift", "b"]],
+      "description": "Clear Quick Collection",
+      "isFavorite": false
+    },
+    {
+      "id": "6e2f47c5-c313-4a0b-9f2e-72038dcf56a4",
+      "hotkeys": [["meta", "alt", "shift", "b"]],
+      "description": "Set as target collection",
+      "isFavorite": false
+    },
+    {
+      "id": "6ef9f71d-464c-4b34-b5b3-39441f5b3b6d",
+      "hotkeys": [["meta", "k"]],
+      "description": "Add keywords",
+      "isFavorite": false
+    },
+    {
+      "id": "0c70873d-ecbf-418b-bce6-b9c991d3eb2a",
+      "hotkeys": [["meta", "shift", "k"]],
+      "description": "Edit keywords",
+      "isFavorite": false
+    },
+    {
+      "id": "25f1c164-9d22-43f6-9969-096fdf132d7f",
+      "hotkeys": [["meta", "alt", "shift", "k"]],
+      "description": "Set a keyword shortcut",
+      "isFavorite": false
+    },
+    {
+      "id": "b3f08bf9-6d99-42dc-83b8-29d163a6821f",
+      "hotkeys": [["shift", "k"]],
+      "description": "Add/remove keyword shortcut from selected photo",
+      "isFavorite": false
+    },
+    {
+      "id": "dfc15bf5-c89f-405e-a1f0-12233f4c85b8",
+      "hotkeys": [["meta", "alt", "k"]],
+      "description": "Enable painting",
+      "isFavorite": false
+    },
+    {
+      "id": "ede6ec82-0078-42eb-a66c-ffac1a2a888b",
+      "hotkeys": [["alt", "0"]],
+      "description": "Cycle forward through keyword sets",
+      "isFavorite": false
+    },
+    {
+      "id": "2e5143f6-82d1-4cfc-bd8a-b8b3031a295e",
+      "hotkeys": [["alt", "shift", "0"]],
+      "description": "Cycle backward through keyword sets",
+      "isFavorite": false
+    },
+    {
+      "id": "a6de220c-8d40-4362-95d9-9524410a4488",
+      "hotkeys": [["meta", "alt", "shift", "c"]],
+      "description": "Copy metadata",
+      "isFavorite": false
+    },
+    {
+      "id": "453258b3-0953-40b0-ada9-779689eae841",
+      "hotkeys": [["meta", "alt", "shift", "v"]],
+      "description": "Paste metadata",
+      "isFavorite": false
+    },
+    {
+      "id": "4561d371-b3a2-41fc-99ef-f33c73f2433c",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save metadata to file",
+      "isFavorite": false
+    },
+    {
+      "id": "22d0504b-30c4-45ec-a207-9a74e2d9c98c",
+      "hotkeys": [["meta", "shift", "semicolon"]],
+      "description": "Open Spelling dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "dd97b61f-5083-4ca4-bab2-c9c657c1d1e4",
+      "hotkeys": [["meta", "semicolon"]],
+      "description": "Check spelling",
+      "isFavorite": false
+    },
+    {
+      "id": "b06c9589-e90d-4cfd-9ef8-cf18ec6a8df6",
+      "hotkeys": [["meta", "alt", "t"]],
+      "description": "Open Character palette",
+      "isFavorite": false
+    },
+    {
+      "id": "6a8be235-82f7-4e8f-816e-a25128cc7b78",
+      "hotkeys": [["meta", "alt", "shift", "f"]],
+      "description": "Visual Search",
+      "isFavorite": false
+    },
+    {
+      "id": "860ccbb5-a32d-42fb-8e11-ba18d9546407",
+      "hotkeys": [["shift", "o"]],
+      "description": "Edit Face name",
+      "isFavorite": false
+    },
+    {
+      "id": "48edb616-c22d-4f02-8485-8f0477ab584c",
+      "hotkeys": [["v"]],
+      "description": "Convert to grayscale",
+      "isFavorite": false
+    },
+    {
+      "id": "e9899612-033a-4bbf-b8b4-3b8d2642a516",
+      "hotkeys": [["meta", "u"]],
+      "description": "Auto tone",
+      "isFavorite": false
+    },
+    {
+      "id": "00a34e65-4c60-48f4-96c3-673efe205887",
+      "hotkeys": [["meta", "shift", "u"]],
+      "description": "Auto white balance",
+      "isFavorite": false
+    },
+    {
+      "id": "c897481c-68c3-47c7-aa0f-874d7429ba09",
+      "hotkeys": [["meta", "e"]],
+      "description": "Edit in Photoshop",
+      "isFavorite": false
+    },
+    {
+      "id": "acb66673-4b0b-4dfb-bb04-d60381f3694f",
+      "hotkeys": [["meta", "shift", "c"]],
+      "description": "Copy Develop settings",
+      "isFavorite": false
+    },
+    {
+      "id": "77e2c587-41e6-4478-a976-a4706ad71f66",
+      "hotkeys": [["meta", "shift", "v"]],
+      "description": "Paste Develop settings",
+      "isFavorite": false
+    },
+    {
+      "id": "93b8facd-2528-416a-812b-a9a1b87acaaa",
+      "hotkeys": [["meta", "alt", "v"]],
+      "description": "Paste settings from previous photo",
+      "isFavorite": false
+    },
+    {
+      "id": "4d612106-bc05-4fed-937d-36153c5f55a7",
+      "hotkeys": [["meta", "alt", "shift", "left"]],
+      "description": "Copy After settings to Before",
+      "isFavorite": false
+    },
+    {
+      "id": "afe247b3-822c-4a34-a50c-2f425fe5798c",
+      "hotkeys": [["meta", "alt", "shift", "right"]],
+      "description": "Copy Before settings to After",
+      "isFavorite": false
+    },
+    {
+      "id": "b087852e-96ad-46d3-b7af-4aab1af96394",
+      "hotkeys": [["meta", "alt", "shift", "up"]],
+      "description": "Swap Before and After settings",
+      "isFavorite": false
+    },
+    {
+      "id": "8531b8d4-996b-47ed-b0ed-6e7747d6dba4",
+      "hotkeys": [["down"]],
+      "description": "Decrease selected slider in small increments",
+      "isFavorite": false
+    },
+    {
+      "id": "6fa0cf7a-6582-4e12-857b-1968629a8b2d",
+      "hotkeys": [["minus"]],
+      "description": "Decrease selected slider in small increments",
+      "isFavorite": false
+    },
+    {
+      "id": "0abd5208-8744-4299-a21a-e2154b32c646",
+      "hotkeys": [["up"]],
+      "description": "Increase selected slider in small increments",
+      "isFavorite": false
+    },
+    {
+      "id": "d93e586a-2b0a-4e01-ab7e-8eefac59c640",
+      "hotkeys": [["equal"]],
+      "description": "Increase selected slider in small increments",
+      "isFavorite": false
+    },
+    {
+      "id": "0b3fd8ce-e9e7-4cba-ac70-5a09fdc70c4d",
+      "hotkeys": [["shift", "up"]],
+      "description": "Increase selected slider in larger increments",
+      "isFavorite": false
+    },
+    {
+      "id": "cd2e974e-e820-455b-b4d1-b43f3adc9b70",
+      "hotkeys": [["shift", "equal"]],
+      "description": "Increase selected slider in larger increments",
+      "isFavorite": false
+    },
+    {
+      "id": "6779916d-11cd-41a3-9a63-25c903b107ba",
+      "hotkeys": [["shift", "down"]],
+      "description": "Decrease selected slider in larger increments",
+      "isFavorite": false
+    },
+    {
+      "id": "a09e39a1-a9e5-4d79-ba3b-4a751e527c65",
+      "hotkeys": [["shift", "minus"]],
+      "description": "Decrease selected slider in larger increments",
+      "isFavorite": false
+    },
+    {
+      "id": "44e91127-6c81-4846-982f-f3dca0047aeb",
+      "hotkeys": [["period"]],
+      "description": "Cycle through Basic panel settings (forward)",
+      "isFavorite": false
+    },
+    {
+      "id": "03cd2c13-83b3-48e5-a986-0359e40020df",
+      "hotkeys": [["comma"]],
+      "description": "Cycle through Basic panel settings (backward)",
+      "isFavorite": false
+    },
+    {
+      "id": "258e335d-0a00-457b-9048-d42aa24156d2",
+      "hotkeys": [["meta", "shift", "r"]],
+      "description": "Reset all settings",
+      "isFavorite": false
+    },
+    {
+      "id": "a65602f6-8958-488a-99d6-14725b3f5dfd",
+      "hotkeys": [["meta", "shift", "s"]],
+      "description": "Sync settings",
+      "isFavorite": false
+    },
+    {
+      "id": "9a9cb197-7839-4cda-8c62-2772617a2fdd",
+      "hotkeys": [["meta", "alt", "s"]],
+      "description": "Sync settings bypassing Synchronize Settings dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "c744d49b-8172-439e-8b0e-2be0185d131e",
+      "hotkeys": [["meta", "alt", "shift", "a"]],
+      "description": "Enable Auto Sync",
+      "isFavorite": false
+    },
+    {
+      "id": "c16666ad-053e-46ca-8c42-86c08aff52ea",
+      "hotkeys": [["meta", "alt", "shift", "m"]],
+      "description": "Match total exposures",
+      "isFavorite": false
+    },
+    {
+      "id": "c02fa773-76ae-4645-8255-91562810f14e",
+      "hotkeys": [["w"]],
+      "description": "Select White Balance tool (from any module)",
+      "isFavorite": false
+    },
+    {
+      "id": "3f2fafca-0c5d-4f7a-8cb5-e1c89ec3833f",
+      "hotkeys": [["r"]],
+      "description": "Select the Crop tool (from any module)",
+      "isFavorite": false
+    },
+    {
+      "id": "43827ede-d7d6-444c-8e93-b94e4038f1c7",
+      "hotkeys": [["a"]],
+      "description": "Constrain aspect ratio when Crop tool is selected",
+      "isFavorite": false
+    },
+    {
+      "id": "bb3ea134-6c89-4c1f-892e-4cc92fc8af67",
+      "hotkeys": [["shift", "a"]],
+      "description": "Crop to same aspect ratio as previous crop",
+      "isFavorite": false
+    },
+    {
+      "id": "8cb41228-e4ae-4769-b283-4cc267472d65",
+      "hotkeys": [["o"]],
+      "description": "Cycle Crop grid overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "66908667-a23c-4790-8448-0e0af52beb40",
+      "hotkeys": [["shift", "o"]],
+      "description": "Cycle Crop grid overlay orientation",
+      "isFavorite": false
+    },
+    {
+      "id": "4e3506b6-12ed-492c-b30f-797c7d427d58",
+      "hotkeys": [["x"]],
+      "description": "Switch crop between portrait and landscape orientation",
+      "isFavorite": false
+    },
+    {
+      "id": "3d75038f-22d6-4d69-abb5-8ab2bae8211c",
+      "hotkeys": [["meta", "alt", "r"]],
+      "description": "Reset crop",
+      "isFavorite": false
+    },
+    {
+      "id": "1bf32634-8826-42ca-85cc-afeb8a7ada35",
+      "hotkeys": [["shift", "t"]],
+      "description": "Select the Guided Upright tool (also works in the Library module when a photo is selected)",
+      "isFavorite": false
+    },
+    {
+      "id": "7c4b6344-2d2f-4c95-af44-5f652830b0ed",
+      "hotkeys": [["q"]],
+      "description": "Select the Spot Removal tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e8c4517b-5079-4560-b8b2-79efb0d5a25f",
+      "hotkeys": [["shift", "t"]],
+      "description": "Toggle Brush between Clone and Heal modes when Spot Removal tool is selected",
+      "isFavorite": false
+    },
+    {
+      "id": "a771ea27-6ca2-473c-a709-b28be512477c",
+      "hotkeys": [["k"]],
+      "description": "Select the Adjustment Brush tool (from any module)",
+      "isFavorite": false
+    },
+    {
+      "id": "bde05e0d-5fd9-4402-8e67-df8943eb448b",
+      "hotkeys": [["m"]],
+      "description": "Select the Graduated Filter tool",
+      "isFavorite": false
+    },
+    {
+      "id": "52b1e987-18c1-477b-94d7-f812b58ddf7a",
+      "hotkeys": [["shift", "t"]],
+      "description": "Toggle Mask between Edit and Brush modes when the Graduated Filter or Radial Filter is selected",
+      "isFavorite": false
+    },
+    {
+      "id": "01211b24-87b5-49bd-a722-6b1657fee987",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "262c033e-fbdc-463c-9fdc-6360c707c93f",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease brush size",
+      "isFavorite": false
+    },
+    {
+      "id": "bebcb51b-232c-40e3-8690-9093dcf6a5e0",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Increase brush feathering",
+      "isFavorite": false
+    },
+    {
+      "id": "76974a74-9f29-449e-a36e-a88d0e43ca6c",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "Decrease brush feathering",
+      "isFavorite": false
+    },
+    {
+      "id": "b7265d7b-4417-4c17-a024-c1fa469c44f8",
+      "hotkeys": [["slash"]],
+      "description": "Switch between local adjustment brush A and B",
+      "isFavorite": false
+    },
+    {
+      "id": "cd28cf95-1787-4c60-adfc-29470f559075",
+      "hotkeys": [["h"]],
+      "description": "Show/hide local adjustment pin",
+      "isFavorite": false
+    },
+    {
+      "id": "5959e568-75b7-4360-ab80-512c4cd1d570",
+      "hotkeys": [["o"]],
+      "description": "Show/hide local adjustment mask overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "2c5ed719-5e00-4743-a9ca-f5bc9c17cfcd",
+      "hotkeys": [["shift", "o"]],
+      "description": "Cycle local adjustment mask overlay colors",
+      "isFavorite": false
+    },
+    {
+      "id": "2387c69b-a27c-4422-a5ae-410e7a717eed",
+      "hotkeys": [["meta", "alt", "shift", "t"]],
+      "description": "Select Targeted Adjustment tool to apply a Tone Curve adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "2085a003-d470-46a4-a012-ceacae6d7f5a",
+      "hotkeys": [["meta", "alt", "shift", "h"]],
+      "description": "Select Targeted Adjustment tool to apply a Hue adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "c4881724-5812-47ab-b622-b22c148087ad",
+      "hotkeys": [["meta", "alt", "shift", "s"]],
+      "description": "Select Targeted Adjustment tool to apply a Saturation adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "f85de814-8635-43ba-bad9-66cbd8ec11ee",
+      "hotkeys": [["meta", "alt", "shift", "l"]],
+      "description": "Select Targeted Adjustment tool to apply a Luminance adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "bb3f6b4b-e37e-47d0-a46f-6ad164b098fb",
+      "hotkeys": [["meta", "alt", "shift", "g"]],
+      "description": "Select Targeted Adjustment tool to apply a Grayscale Mix adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "ffd2bc10-764f-43f1-8ed7-ef161b8263bd",
+      "hotkeys": [["meta", "alt", "shift", "n"]],
+      "description": "Deselect Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3b10ed55-16ea-4d33-823e-e019905b1bd6",
+      "hotkeys": [["j"]],
+      "description": "Show clipping",
+      "isFavorite": false
+    },
+    {
+      "id": "d6664110-f9e2-4c81-8cf9-0686e02a510f",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Rotate photo right (clockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "10291b6d-21ae-485d-929d-f8ccf366584d",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Rotate photo left (counterclockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "81730c84-0d6a-4017-a7d2-19205f68315f",
+      "hotkeys": [["space"]],
+      "description": "Toggle between Loupe and 1:1 Zoom preview",
+      "isFavorite": false
+    },
+    {
+      "id": "74761782-fa34-4344-abae-6e7c6aa9a017",
+      "hotkeys": [["z"]],
+      "description": "Toggle between Loupe and 1:1 Zoom preview",
+      "isFavorite": false
+    },
+    {
+      "id": "c85ad7a7-260e-4e3f-b0e4-de085b723574",
+      "hotkeys": [["meta", "equal"]],
+      "description": "Zoom in",
+      "isFavorite": false
+    },
+    {
+      "id": "bc1b4f46-d47c-4bae-bd32-6b66325ad6bf",
+      "hotkeys": [["meta", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "4d27f88b-75e9-47d2-9d42-0b7c34f5427c",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Play impromptu slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "e24faea6-5042-41d0-b184-ef16b930ad62",
+      "hotkeys": [["y"]],
+      "description": "View Before and After left/right",
+      "isFavorite": false
+    },
+    {
+      "id": "1af9acfb-b717-479b-a4b5-194cb116508f",
+      "hotkeys": [["alt", "y"]],
+      "description": "View Before and After top/bottom",
+      "isFavorite": false
+    },
+    {
+      "id": "0c90dcf9-44ca-4a56-b746-91680274891d",
+      "hotkeys": [["shift", "y"]],
+      "description": "View Before and After in a split screen",
+      "isFavorite": false
+    },
+    {
+      "id": "8177d4b4-77ec-4664-98af-dd524f2b8801",
+      "hotkeys": [["backslash"]],
+      "description": "View Before only",
+      "isFavorite": false
+    },
+    {
+      "id": "eca57836-e26e-43c2-9e66-fb490b81c1a8",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new snapshot",
+      "isFavorite": false
+    },
+    {
+      "id": "35b2803b-67ae-46e4-9a18-cac9a6ab5f2e",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Create a new preset",
+      "isFavorite": false
+    },
+    {
+      "id": "857d3ea4-41fb-4c21-a077-c83231021804",
+      "hotkeys": [["meta", "alt", "n"]],
+      "description": "Create a new preset folder",
+      "isFavorite": false
+    },
+    {
+      "id": "0cc6897d-ec5f-4813-a265-85e299b767a2",
+      "hotkeys": [["meta", "j"]],
+      "description": "Open Develop view options",
+      "isFavorite": false
+    },
+    {
+      "id": "4245aae6-f1e7-4da9-8350-a09de5a61e48",
+      "hotkeys": [["shift", "m"]],
+      "description": "Create a Radial filter",
+      "isFavorite": false
+    },
+    {
+      "id": "0735c84c-a758-4361-8a66-97ad33c7edc5",
+      "hotkeys": [["shift", "q"]],
+      "description": "Create a Luminance filter",
+      "isFavorite": false
+    },
+    {
+      "id": "3bc3f8a5-5266-49e1-ae7a-5a7de11daa4d",
+      "hotkeys": [["meta", "alt", "shift", "r"]],
+      "description": "Crop to original",
+      "isFavorite": false
+    },
+    {
+      "id": "fcc6f543-293a-45ec-bc36-3ed69d6e7758",
+      "hotkeys": [["shift", "j"]],
+      "description": "Create a color range",
+      "isFavorite": false
+    },
+    {
+      "id": "36c355cf-1a74-40cc-9f9d-94b06ef49570",
+      "hotkeys": [["alt", "o"]],
+      "description": "Cycle Overlay mode in Crop / Masking",
+      "isFavorite": false
+    },
+    {
+      "id": "539989d2-9c33-4722-b526-fdb17cafe319",
+      "hotkeys": [["shift", "meta", "equal"]],
+      "description": "Lock Zoom position in Develop or Library",
+      "isFavorite": false
+    },
+    {
+      "id": "8942ea9d-ff17-4b36-bacd-f4daa9ec8d1c",
+      "hotkeys": [["shift", "w"]],
+      "description": "Open / close Masking",
+      "isFavorite": false
+    },
+    {
+      "id": "e5b8a91d-48ac-43e0-9c31-ac038bedeef3",
+      "hotkeys": [["shift", "s"]],
+      "description": "Hide / unhide Gamut destination warning in Soft Proofing",
+      "isFavorite": false
+    },
+    {
+      "id": "f078d519-72a0-467f-afc4-d200a9bc9f63",
+      "hotkeys": [["s"]],
+      "description": "Expand / collapse soft proofing",
+      "isFavorite": false
+    },
+    {
+      "id": "41e00a8c-2d48-4883-ae4f-fbaff3d06d14",
+      "hotkeys": [["h"]],
+      "description": "Never show overlay / pins in Develop",
+      "isFavorite": false
+    },
+    {
+      "id": "807a88a1-c5be-4855-bc1c-43235a233956",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Always show overlay / pins in Develop",
+      "isFavorite": false
+    },
+    {
+      "id": "a6620c5c-7891-449f-8624-0632db9ebb91",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Cycle through transform options",
+      "isFavorite": false
+    },
+    {
+      "id": "e3fb2e2d-0648-4c51-8aff-0a850189f3f6",
+      "hotkeys": [["meta", "c"]],
+      "description": "Copy a Mask",
+      "isFavorite": false
+    },
+    {
+      "id": "85d2abc4-91a1-45be-8891-ac23736294b2",
+      "hotkeys": [["enter"]],
+      "description": "Play slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "eee23d1b-73b8-4e57-b7cc-3c4493a48522",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Play impromptu slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "5f970c36-53d0-41bf-bbd4-249216ed17fe",
+      "hotkeys": [["space"]],
+      "description": "Pause slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "6e1cca2d-5bb6-46ef-a917-dbef720db37f",
+      "hotkeys": [["alt", "enter"]],
+      "description": "Preview slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "aca44aed-bcdf-429c-b3a5-830dcf3e94b4",
+      "hotkeys": [["escape"]],
+      "description": "End slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "4d8319c0-b935-4081-bb2d-09a0d046615b",
+      "hotkeys": [["right"]],
+      "description": "Go to next slide",
+      "isFavorite": false
+    },
+    {
+      "id": "7ff0be3b-83b0-4733-aede-45b36420c03f",
+      "hotkeys": [["left"]],
+      "description": "Go to previous slide",
+      "isFavorite": false
+    },
+    {
+      "id": "c999a953-fca3-479b-a2ac-aff85a3c00f2",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Rotate photo right (clockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "0a8f10b0-4dd9-4ca8-bd72-375130c430ef",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Rotate photo left (counterclockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "866b78d2-b62c-42ad-8da3-490f9a39ed8a",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Show/hide guides",
+      "isFavorite": false
+    },
+    {
+      "id": "8ad513b5-5e19-496c-8c4a-162fb2cc38de",
+      "hotkeys": [["meta", "j"]],
+      "description": "Export PDF slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "f36a1054-6e5f-499e-819e-adc55c124d66",
+      "hotkeys": [["meta", "shift", "j"]],
+      "description": "Export JPEG slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "8336d1f7-274e-490b-9a80-02a3b4dcbcac",
+      "hotkeys": [["meta", "alt", "j"]],
+      "description": "Export video slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "7a9bf7b8-c623-461b-83c4-3ac7e9066caf",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new slide show template",
+      "isFavorite": false
+    },
+    {
+      "id": "59d5393b-1485-4df4-bb6e-a33051c0657d",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Create a new slide show template folder",
+      "isFavorite": false
+    },
+    {
+      "id": "5a80761d-3b43-4375-9d25-2a9b77cd61d3",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save slide show settings",
+      "isFavorite": false
+    },
+    {
+      "id": "cb5199b7-5395-4492-91d4-d67fe2516fe9",
+      "hotkeys": [["meta", "alt", "enter"]],
+      "description": "Play all",
+      "isFavorite": false
+    },
+    {
+      "id": "161c0ffc-7f60-4217-b140-4c46671583c1",
+      "hotkeys": [["meta", "left"]],
+      "description": "Previous menu",
+      "isFavorite": false
+    },
+    {
+      "id": "c1435423-558c-4753-84be-940f4a8a7c48",
+      "hotkeys": [["meta", "right"]],
+      "description": "Next menu",
+      "isFavorite": false
+    },
+    {
+      "id": "76837916-137f-4281-85fa-95f1c191b04f",
+      "hotkeys": [["meta", "p"]],
+      "description": "Print",
+      "isFavorite": false
+    },
+    {
+      "id": "180b77f1-be28-4189-82e1-b13105957f85",
+      "hotkeys": [["meta", "alt", "p"]],
+      "description": "Print one copy",
+      "isFavorite": false
+    },
+    {
+      "id": "a9482676-b3d0-4884-980b-64e411f1e9d3",
+      "hotkeys": [["meta", "shift", "p"]],
+      "description": "Open Page Setup dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "e781d204-e3f2-46a6-9928-de6b3030b135",
+      "hotkeys": [["meta", "alt", "shift", "p"]],
+      "description": "Open Print Settings dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "ce3882b5-c3fb-47b5-8f8e-dd1aa38bf3cb",
+      "hotkeys": [["meta", "shift", "left"]],
+      "description": "Go to first page",
+      "isFavorite": false
+    },
+    {
+      "id": "7bce2e17-3219-4e07-83a8-d982ee8ee5d9",
+      "hotkeys": [["meta", "shift", "right"]],
+      "description": "Go to last page",
+      "isFavorite": false
+    },
+    {
+      "id": "4aa714c0-09e6-4c10-8309-c8906eeff9ae",
+      "hotkeys": [["meta", "left"]],
+      "description": "Go to previous page",
+      "isFavorite": false
+    },
+    {
+      "id": "c7ae14d6-3591-4b4a-9f01-8a003decf654",
+      "hotkeys": [["meta", "right"]],
+      "description": "Go to next page",
+      "isFavorite": false
+    },
+    {
+      "id": "09e37af7-ca24-448b-b2a1-7962e3f47081",
+      "hotkeys": [["meta", "shift", "h"]],
+      "description": "Show/hide guides",
+      "isFavorite": false
+    },
+    {
+      "id": "9bad654a-d13e-431f-afd2-64562f40d034",
+      "hotkeys": [["meta", "r"]],
+      "description": "Show/hide rulers",
+      "isFavorite": false
+    },
+    {
+      "id": "b40c2dbe-0e2d-459c-9781-0ce9ed4d8e94",
+      "hotkeys": [["meta", "shift", "j"]],
+      "description": "Show/hide page bleed",
+      "isFavorite": false
+    },
+    {
+      "id": "e0d003ff-f0fb-47c9-a594-dd1dcc5d7fef",
+      "hotkeys": [["meta", "shift", "m"]],
+      "description": "Show/hide margins and gutters",
+      "isFavorite": false
+    },
+    {
+      "id": "6cadb081-3002-407a-8511-81f9cab29dd4",
+      "hotkeys": [["meta", "shift", "k"]],
+      "description": "Show/hide image cells",
+      "isFavorite": false
+    },
+    {
+      "id": "8fda76b8-ae31-4d35-9cde-b11fffb26aa7",
+      "hotkeys": [["meta", "shift", "u"]],
+      "description": "Show/hide dimensions",
+      "isFavorite": false
+    },
+    {
+      "id": "fc5b3730-1606-490a-8a3c-2da23b1c8e4d",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Play impromptu slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "b4d0c193-c61e-400c-9fbd-d1ea87dcf619",
+      "hotkeys": [["meta", "bracketright"]],
+      "description": "Rotate photo right (clockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "50a05ba0-22c4-452a-996a-3987e40746d6",
+      "hotkeys": [["meta", "bracketleft"]],
+      "description": "Rotate photo left (counterclockwise)",
+      "isFavorite": false
+    },
+    {
+      "id": "c512949d-224d-46eb-82f0-0b3057754681",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new print template",
+      "isFavorite": false
+    },
+    {
+      "id": "a926e762-43c0-42d5-bb88-0a978a18f40f",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Create a new print template folder",
+      "isFavorite": false
+    },
+    {
+      "id": "63b5072a-a18d-49c8-96ad-884bfd92ab4b",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save print settings",
+      "isFavorite": false
+    },
+    {
+      "id": "568c837c-0f8c-42ef-85d9-2912700757c6",
+      "hotkeys": [["meta", "shift", "g"]],
+      "description": "Show Guides",
+      "isFavorite": false
+    },
+    {
+      "id": "10ada753-2b58-4f0a-ba0f-502a897e104d",
+      "hotkeys": [["meta", "alt", "t"]],
+      "description": "Next Track in Tracklog",
+      "isFavorite": false
+    },
+    {
+      "id": "b1918223-4328-4950-9e73-f896bf7e2fba",
+      "hotkeys": [["meta", "alt", "shift", "t"]],
+      "description": "Previous Track in Tracklog",
+      "isFavorite": false
+    },
+    {
+      "id": "9792bd22-2571-4e80-9b6a-2c324e34c563",
+      "hotkeys": [["meta", "f"]],
+      "description": "Search",
+      "isFavorite": false
+    },
+    {
+      "id": "4c49336d-bfb1-4f1a-9dfd-40415db9211e",
+      "hotkeys": [["meta", "backspace"]],
+      "description": "Delete All Location data",
+      "isFavorite": false
+    },
+    {
+      "id": "f0863f4f-8948-4957-b241-a107a27b6207",
+      "hotkeys": [["meta", "6"]],
+      "description": "Change to Dark Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "6351a495-5d34-4d3e-93de-275bc2eb1d32",
+      "hotkeys": [["meta", "1"]],
+      "description": "Change to Hybrid Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "3d3b709b-02df-48c8-8a3e-bfdefbdff67a",
+      "hotkeys": [["meta", "5"]],
+      "description": "Change to Light Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "d5236979-4b2e-4ad0-8a88-d0e8e9b97d7a",
+      "hotkeys": [["meta", "k"]],
+      "description": "Lock Pins on Map",
+      "isFavorite": false
+    },
+    {
+      "id": "66972fcd-7505-4f1c-8548-8134170db514",
+      "hotkeys": [["meta", "2"]],
+      "description": "Change to Road Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "49616f37-0a52-46fb-bea1-4cb23f894b92",
+      "hotkeys": [["meta", "3"]],
+      "description": "Change to Satellite Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "8ce75379-fc22-46dd-b93c-b98b8e048540",
+      "hotkeys": [["meta", "4"]],
+      "description": "Change to Terrain Map style",
+      "isFavorite": false
+    },
+    {
+      "id": "aeb5c289-9849-4652-a56b-9fbc8f0a8dc5",
+      "hotkeys": [["i"]],
+      "description": "Show / Hide map info",
+      "isFavorite": false
+    },
+    {
+      "id": "0d367136-e84c-4ace-a373-580946136b02",
+      "hotkeys": [["o"]],
+      "description": "Show / Hide Location preset overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "87277d28-b70a-491b-9529-3f5f4c8c4cc8",
+      "hotkeys": [["meta", "r"]],
+      "description": "Reload web gallery",
+      "isFavorite": false
+    },
+    {
+      "id": "f16842c6-6f34-4a6c-87d9-dec69ba1289f",
+      "hotkeys": [["meta", "alt", "p"]],
+      "description": "Preview in browser",
+      "isFavorite": false
+    },
+    {
+      "id": "ff295764-69ed-40cb-9e0a-e4c05b899c20",
+      "hotkeys": [["meta", "enter"]],
+      "description": "Play impromptu slide show",
+      "isFavorite": false
+    },
+    {
+      "id": "66122932-84a6-49f9-a9e5-48afd62b105a",
+      "hotkeys": [["meta", "j"]],
+      "description": "Export web gallery",
+      "isFavorite": false
+    },
+    {
+      "id": "e49f2414-fb16-418e-9ac6-e42630656ea0",
+      "hotkeys": [["meta", "n"]],
+      "description": "Create a new web gallery template",
+      "isFavorite": false
+    },
+    {
+      "id": "ceb2d34a-26d2-43c3-b089-9b6d5d8a8410",
+      "hotkeys": [["meta", "shift", "n"]],
+      "description": "Create a new web gallery template folder",
+      "isFavorite": false
+    },
+    {
+      "id": "33efafc0-404b-4cd2-a029-d22b92e734fb",
+      "hotkeys": [["meta", "s"]],
+      "description": "Save web gallery settings",
+      "isFavorite": false
+    },
+    {
+      "id": "eed75457-053f-424e-9465-9ca0e7c0cb9f",
+      "hotkeys": [["meta", "shift", "alt", "slash"]],
+      "description": "Open advance settings panel",
+      "isFavorite": false
+    },
+    {
+      "id": "cc662561-e143-4e5d-9146-bafed0558adf",
+      "hotkeys": [["meta", "slash"]],
+      "description": "Display current module shortcuts",
+      "isFavorite": false
+    },
+    {
+      "id": "0969e529-40eb-4782-b39c-b66e9c35086c",
+      "hotkeys": [["meta", "alt", "shift", "slash"]],
+      "description": "Go to current module Help",
+      "isFavorite": false
+    },
+    {
+      "id": "3ebb401f-94de-4667-a6d6-261b9131c453",
+      "hotkeys": [["f1"]],
+      "description": "Open Community Help",
+      "isFavorite": false
+    }
+  ]
+}

@@ -78,10 +78,10 @@ function EditShortcut({
     if (isRecording) {
       const keysArray = Array.from(keys);
 
-      if (keys.size > 3) {
+      if (keys.size > 4) {
         form.setFieldError(
           'hotkeys',
-          'You can only record up to 3 keys at a time'
+          'You can only record up to 4 keys at a time'
         );
         clearHotkeysFieldError();
         return;
@@ -200,7 +200,7 @@ function EditShortcut({
       <Input.Wrapper
         label="Hot Keys"
         withAsterisk
-        description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key's & each hot key can contain 3 key's."
+        description="Click the record button to start recording hot keys. Press it again to stop recording. You can record 2 sets of hot key's & each hot key can contain 4 key's."
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...form.getInputProps('hotkeys')}
         size="sm"

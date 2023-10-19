@@ -1,0 +1,2798 @@
+{
+  "createdDate": "2023-07-28T10:26:00.996Z",
+  "software": {
+    "key": "adobe-photoshop",
+    "icon": {
+      "filename": "adobexd.svg",
+      "isCustom": false
+    },
+    "id": "3e6a1fe9-e0d5-40a5-ac6c-3b5034780e9e",
+    "label": "Photoshop"
+  },
+  "shortcuts": [
+    {
+      "id": "b60bebd2-2544-4228-b7bc-ce4390a52e12",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "e3a389aa-8aab-424e-b1cf-5d030cdb9bb7",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Deselect selections",
+      "isFavorite": false
+    },
+    {
+      "id": "44bb0583-8152-4fea-b2e2-10c908e75961",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo last command",
+      "isFavorite": false
+    },
+    {
+      "id": "1bef8142-9557-49c6-a057-4ad2fbb18878",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "54197829-d053-46d9-b780-82c680415fe9",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "c4d93ef0-0467-4566-b04c-d2c92361944a",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "26c2ee63-ba67-44c2-9a54-ac84f7afc2d9",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "a30ddb42-123b-4f2b-9aa1-fc47c8ea7932",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "c18abd32-fdbb-4f84-80bf-1274ee5052c4",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "f218cfbc-3de6-467d-b154-1492347b43bc",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "32b6a3af-21ed-4dd4-82af-43c02441d6db",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "22ec4ee2-e5f1-40ac-9768-4b85c51355f7",
+      "hotkeys": [["enter"]],
+      "description": "Selects the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "00c4c3d1-1ff3-449e-99ca-4d4759661597",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "eddfea9b-10c0-4126-919c-da2489f98a28",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "b3ff738b-21ba-4c60-aef3-6a70fd80cfbb",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "9bdc8c16-7048-4d4d-9c1a-48c7231fe77a",
+      "hotkeys": [["f1"]],
+      "description": "Start Help",
+      "isFavorite": false
+    },
+    {
+      "id": "ea8073eb-4e88-466b-b99e-edcb422ad1e2",
+      "hotkeys": [["f2"]],
+      "description": "Cut",
+      "isFavorite": false
+    },
+    {
+      "id": "005b1478-4e23-4342-b8dc-c2ac81e621c4",
+      "hotkeys": [["f3"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "15d0512d-e9c2-4349-a0e3-e105c3554074",
+      "hotkeys": [["f4"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "028905a3-a551-4f9c-9364-535689ce9cb7",
+      "hotkeys": [["f5"]],
+      "description": "Show/Hide Brush panel",
+      "isFavorite": false
+    },
+    {
+      "id": "4faa59b3-ed14-4e66-8002-c9d9cb38ca7f",
+      "hotkeys": [["f6"]],
+      "description": "Show/Hide Color panel",
+      "isFavorite": false
+    },
+    {
+      "id": "96026fc1-6c05-4eaf-a88d-94b2393b24c2",
+      "hotkeys": [["f7"]],
+      "description": "Show/Hide Layers panel",
+      "isFavorite": false
+    },
+    {
+      "id": "edf75151-c561-4750-99a5-586ac33f5970",
+      "hotkeys": [["f8"]],
+      "description": "Show/Hide Info panel",
+      "isFavorite": false
+    },
+    {
+      "id": "311fbdbf-9766-48a2-af52-b725ca798587",
+      "hotkeys": [["f9"]],
+      "description": "Show/Hide Actions panel",
+      "isFavorite": false
+    },
+    {
+      "id": "c5c46d25-3016-4f5b-bbfc-4026a1158f02",
+      "hotkeys": [["f12"]],
+      "description": "Revert",
+      "isFavorite": false
+    },
+    {
+      "id": "fcb042be-4b67-48e3-a204-4d990075f2fc",
+      "hotkeys": [["shift", "f5"]],
+      "description": "Fill",
+      "isFavorite": false
+    },
+    {
+      "id": "850e03a7-6c1f-4626-853a-86cae2f77c28",
+      "hotkeys": [["shift", "f6"]],
+      "description": "Feather Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "807bf9e4-ee42-48a1-b5ab-88a20e3598e3",
+      "hotkeys": [["shift", "f7"]],
+      "description": "Inverse Selection",
+      "isFavorite": false
+    },
+    {
+      "id": "a058467d-a3c3-42ff-96c0-108c806c374e",
+      "hotkeys": [["v"]],
+      "description": "Move tool  Artboard tool",
+      "isFavorite": false
+    },
+    {
+      "id": "39208a58-bc39-44a0-9be9-44d17c02d628",
+      "hotkeys": [["m"]],
+      "description": "Rectangular Marquee tool†  Elliptical Marquee tool",
+      "isFavorite": false
+    },
+    {
+      "id": "0ef3c18a-f087-4a06-84f8-4de8888f8077",
+      "hotkeys": [["l"]],
+      "description": "Lasso tool  Polygonal Lasso tool  Magnetic Lasso tool",
+      "isFavorite": false
+    },
+    {
+      "id": "706760c3-71d4-44a3-810b-57d6369fbcee",
+      "hotkeys": [["w"]],
+      "description": "Object Selection tool  Quick Selection tool  Magic Wand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "93663f7f-8f9e-4016-89ac-07c6ee480280",
+      "hotkeys": [["c"]],
+      "description": "Crop tool  Perspective Crop tool  Slice tool  Slice Select tool",
+      "isFavorite": false
+    },
+    {
+      "id": "10206284-ea7b-4efb-b9fd-8fcfa696ee6e",
+      "hotkeys": [["i"]],
+      "description": "Eyedropper tool†  Color Sampler tool  Ruler tool  Note tool",
+      "isFavorite": false
+    },
+    {
+      "id": "771c6698-105f-46f0-a6e1-bf50d6984b6b",
+      "hotkeys": [["k"]],
+      "description": "Frame tool",
+      "isFavorite": false
+    },
+    {
+      "id": "9c0f46c9-4082-44cb-8b21-c21620687b1a",
+      "hotkeys": [["i"]],
+      "description": "Eyedropper tool  3D Material Eyedropper tool (ADD)  Color Sampler tool  Ruler tool   Note tool  Count tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e02da980-58fc-4f5c-9349-6cc1c5246335",
+      "hotkeys": [["j"]],
+      "description": "Spot Healing Brush tool  Healing Brush tool  Patch tool  Red Eye tool  Content-Aware Move tool  Red Eye tool",
+      "isFavorite": false
+    },
+    {
+      "id": "50aed19f-bbea-4da9-9774-1792f4d2aad3",
+      "hotkeys": [["b"]],
+      "description": "Brush tool  Pencil tool  Color Replacement tool  Mixer Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "d3766b6a-1c26-413c-b251-a0d7fc18702d",
+      "hotkeys": [["s"]],
+      "description": "Clone Stamp tool  Pattern Stamp tool",
+      "isFavorite": false
+    },
+    {
+      "id": "8079d1c9-4c8a-4e74-a1c9-d02f98d41423",
+      "hotkeys": [["y"]],
+      "description": "History Brush tool  Art History Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "24a973d8-7923-46b9-8050-3007738d4bf7",
+      "hotkeys": [["e"]],
+      "description": "Eraser tool†  Background Eraser tool  Magic Eraser tool",
+      "isFavorite": false
+    },
+    {
+      "id": "f1c643d0-0f7f-408d-810d-836f74a94ace",
+      "hotkeys": [["g"]],
+      "description": "Gradient tool  Paint Bucket tool  3D Material Drop tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b624dcc8-7f49-40d4-a1a3-9177357cfefa",
+      "hotkeys": [["o"]],
+      "description": "Dodge tool  Burn tool  Sponge tool",
+      "isFavorite": false
+    },
+    {
+      "id": "717ba113-b87c-49d7-ac64-1528fbd2689f",
+      "hotkeys": [["p"]],
+      "description": "Pen tool  Freeform Pen tool  Curvature Pen tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5e4b30c1-b9e3-4fc6-a319-08de581fd814",
+      "hotkeys": [["t"]],
+      "description": "Horizontal Type tool  Vertical Type tool  Horizontal Type mask tool  Vertical Type mask tool",
+      "isFavorite": false
+    },
+    {
+      "id": "21327fd1-4d4d-40a2-9dd6-6dab3c2601df",
+      "hotkeys": [["a"]],
+      "description": "Path Selection tool  Direct Selection tool",
+      "isFavorite": false
+    },
+    {
+      "id": "898ff1a6-e0f2-4955-9480-3eee38d24d95",
+      "hotkeys": [["u"]],
+      "description": "Rectangle tool  Ellipse tool  Polygon tool  Line tool  Custom Shape tool",
+      "isFavorite": false
+    },
+    {
+      "id": "713e33e3-722a-4abb-9a95-3833bc42c9aa",
+      "hotkeys": [["h"]],
+      "description": "Hand tool†",
+      "isFavorite": false
+    },
+    {
+      "id": "96943c63-1f12-4bd3-b5d9-b232916967de",
+      "hotkeys": [["r"]],
+      "description": "Rotate View tool",
+      "isFavorite": false
+    },
+    {
+      "id": "54e6be22-0057-465b-abcc-e364d3d50847",
+      "hotkeys": [["z"]],
+      "description": "Zoom tool†  Liquify",
+      "isFavorite": false
+    },
+    {
+      "id": "ccff4e7c-7897-4075-8a87-3fae7361cb8a",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "f75d9b01-1900-4763-963d-638e86ed4235",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "444435a1-2d39-4520-b637-e67c11468dde",
+      "hotkeys": [["q"]],
+      "description": "Toggle Standard/Quick Mask modes",
+      "isFavorite": false
+    },
+    {
+      "id": "3991f900-ad6f-4f46-95b5-ca01a8171cea",
+      "hotkeys": [["v"]],
+      "description": "Artboard tool",
+      "isFavorite": false
+    },
+    {
+      "id": "78bf1ec1-9216-4d6a-867c-e4f23e757567",
+      "hotkeys": [["slash"]],
+      "description": "Toggle Preserve Transparency",
+      "isFavorite": false
+    },
+    {
+      "id": "48472e10-539a-48c2-8c05-ad4e042676e5",
+      "hotkeys": [["comma"]],
+      "description": "Previous Brush",
+      "isFavorite": false
+    },
+    {
+      "id": "a0ce4147-b0e3-4414-bc44-cb0f4b7a41ed",
+      "hotkeys": [["period"]],
+      "description": "Next Brush",
+      "isFavorite": false
+    },
+    {
+      "id": "e8e9dd79-ca5d-4c8e-ac22-c415a268bf87",
+      "hotkeys": [["ctrl", "tab"]],
+      "description": "Cycle through open documents",
+      "isFavorite": false
+    },
+    {
+      "id": "ba717793-3ed1-4709-b56b-9c590ece8b75",
+      "hotkeys": [["shift", "ctrl", "tab"]],
+      "description": "Switch to previous document",
+      "isFavorite": false
+    },
+    {
+      "id": "ec6d4630-fe36-45db-9239-2455eb1f9e8c",
+      "hotkeys": [["q"]],
+      "description": "Toggle between Standard mode and Quick Mask mode",
+      "isFavorite": false
+    },
+    {
+      "id": "32ade568-8578-43c4-b945-7edbcc294b53",
+      "hotkeys": [["f"]],
+      "description": "Toggle (forward) between Standard screen mode, Full screen mode with menu bar, and Full screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "7c4dc773-5726-4fad-a532-078a2e400c6c",
+      "hotkeys": [["shift", "f"]],
+      "description": "Toggle (backward) between Standard screen mode, Full screen mode with menu bar, and Full screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "d4146705-5b1d-4208-98af-26f32929afc8",
+      "hotkeys": [["space", "shift", "f"]],
+      "description": "Toggle (backward) canvas color",
+      "isFavorite": false
+    },
+    {
+      "id": "e892bf58-6ad3-45f8-bd9a-269220d2c075",
+      "hotkeys": [["space"]],
+      "description": "Switch to Hand tool (when not in text-edit mode)",
+      "isFavorite": false
+    },
+    {
+      "id": "6f6beba5-74c9-41ea-b81d-8def78c951a1",
+      "hotkeys": [["ctrl", "space"]],
+      "description": "Switch to Zoom In tool",
+      "isFavorite": false
+    },
+    {
+      "id": "0845e21e-66dc-4d17-abbe-f6a609818866",
+      "hotkeys": [["alt", "space"]],
+      "description": "Switch to Zoom Out tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b2b5e83b-5179-466f-afb6-dacb313e15d8",
+      "hotkeys": [["backslash"]],
+      "description": "Toggle layer mask on/off as rubylith (layer mask must be selected)",
+      "isFavorite": false
+    },
+    {
+      "id": "a882cd60-7683-4c00-8519-a9e21c9e82d5",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "4425c1ed-d0bd-4c6b-bdeb-f942eb6060c9",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "5df2d479-b00a-4a77-ab07-1b85feff0ae6",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "7e671862-d003-488b-aafc-582dcc329b25",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "6feb2691-2d4e-48df-a891-c3038190f5ca",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "de6d006e-dfa3-4871-83d5-e2bd0109d3e5",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "0829ab6b-7d96-4d76-a0ba-1476e6ba72ac",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "5190d258-f845-4a4c-a8a5-32223f9e5443",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "97c1942b-c7dc-4b37-bbfc-d0d1fac162b5",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "fb61cc79-adc2-464b-a9f3-8f9c5190733b",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "c2d7025d-645a-4267-8c28-61b6bce02cb1",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "c4c9f688-9483-4918-a4ce-3cd5b93bbe55",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "59e0801a-e450-4306-8a54-a56cb5b275f8",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "d8c20fe5-0cce-47d1-9d93-f37bbdf538de",
+      "hotkeys": [["shift", "ctrl", "alt", "b"]],
+      "description": "Use the black-and-white adjustment",
+      "isFavorite": false
+    },
+    {
+      "id": "c064f9fb-3d0b-4040-90a2-639594f7ef37",
+      "hotkeys": [["ctrl", "a"]],
+      "description": "Select all pins",
+      "isFavorite": false
+    },
+    {
+      "id": "6c52b82a-ce2c-4934-b59d-e2fa5b5067c4",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Deselect all pins",
+      "isFavorite": false
+    },
+    {
+      "id": "4414eb49-0650-45cc-afa2-6c12c0be88a2",
+      "hotkeys": [["escape"]],
+      "description": "Cancel distortions",
+      "isFavorite": false
+    },
+    {
+      "id": "d80c7bcc-810a-49b5-acb5-893207eeb89c",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "9e5a2ae0-3fa7-4fee-8bf4-c2a75725a73e",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "4db4255a-4176-46ae-a73f-49d1abee5a7c",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "449c001e-fd2f-4984-8b75-5768103b4f75",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "98336f91-5d8b-462f-a24b-62d93716e532",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "c0d64010-eb0e-455c-9648-433efaaf7803",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "ac275bf8-bc01-4db9-99d0-ffb43111e32a",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "c1bb1202-c3d3-43a5-afc0-d5dd3a83211c",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "d6ff2a49-fc09-4e18-8fa1-ea2651205453",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "8672c880-ddad-4ac4-8aae-fa83e7859c01",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "441f405d-28e4-4547-bf67-575695e4a9e9",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "389e0590-cc40-48a3-bddd-68804f20096a",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "4db1e0a0-df85-48ae-97a2-70a74b682611",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "cb2a00f0-130a-4f9b-9465-239df45d70ff",
+      "hotkeys": [["ctrl", "alt", "r"]],
+      "description": "Select and mask",
+      "isFavorite": false
+    },
+    {
+      "id": "4702eeba-8b2d-4935-89d6-37cc42531a4c",
+      "hotkeys": [["ctrl", "2"]],
+      "description": "Target the layer",
+      "isFavorite": false
+    },
+    {
+      "id": "67743e91-696c-442b-aad9-feedd608a6bd",
+      "hotkeys": [["ctrl", "backslash"]],
+      "description": "Target the mask",
+      "isFavorite": false
+    },
+    {
+      "id": "6d81081f-bf84-412d-917b-c597fedaa26b",
+      "hotkeys": [["ctrl", "i"]],
+      "description": "Invert a layer mask",
+      "isFavorite": false
+    },
+    {
+      "id": "865494f7-e224-466f-a827-cf2b74bd5018",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "fbd48bd8-6fc1-4346-b2d7-83eea2203d2b",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "b489644c-ce26-45b0-8b87-c6a9eed2412a",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "5a1b438a-795d-45c2-ae08-7c34b9f21fd9",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "936c3c3c-6da3-488b-9d5d-f7dbd1751009",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "d5ffa5cf-474b-42b2-bfdb-28de702bbe10",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "763f8cf4-5b01-4e73-a80f-75365bedaeb8",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "6a41ce80-58b3-413c-b72a-e8cdacf5ab6d",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "b1f2c390-7f74-4155-8183-ae70571261da",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "66e166bc-e12e-434a-94ac-db118055140a",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "5a6ac57d-1d26-4b0b-8416-12bfcd526c7d",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "96dd9a46-4970-45fb-ab4a-4c8f44f02c80",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "1649c21d-ace3-4e94-9d18-8dd21bb83ca8",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "78e48379-49da-4c3b-a32f-d31dafe9c397",
+      "hotkeys": [["ctrl", "shift", "z"]],
+      "description": "Step forward",
+      "isFavorite": false
+    },
+    {
+      "id": "c2d5140c-fdd0-4ab0-ac3a-b7fc7579bddb",
+      "hotkeys": [["ctrl", "alt", "z"]],
+      "description": "Step backward",
+      "isFavorite": false
+    },
+    {
+      "id": "aba2cd29-3014-47f5-821b-97c09a517d90",
+      "hotkeys": [["w"]],
+      "description": "Forward Warp tool",
+      "isFavorite": false
+    },
+    {
+      "id": "ccfa06ce-2e4b-42cb-ba90-e1e14ca6f036",
+      "hotkeys": [["r"]],
+      "description": "Reconstruct tool",
+      "isFavorite": false
+    },
+    {
+      "id": "dab6554c-9d5b-4871-8135-620ef757e356",
+      "hotkeys": [["c"]],
+      "description": "Twirl Clockwise tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1b4e5fe9-d408-4758-b07c-977296735215",
+      "hotkeys": [["s"]],
+      "description": "Pucker tool",
+      "isFavorite": false
+    },
+    {
+      "id": "f8561188-efe8-4b29-8914-da1ac75525cf",
+      "hotkeys": [["b"]],
+      "description": "Bloat tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b47e762a-0738-49d7-a722-e2d413471d2a",
+      "hotkeys": [["o"]],
+      "description": "Push Left tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c3add764-61f4-41d4-a058-a0431d6f4fa5",
+      "hotkeys": [["f"]],
+      "description": "Freeze Mask tool",
+      "isFavorite": false
+    },
+    {
+      "id": "e77a1980-509b-4f17-8f0f-4c7d24b7a5cd",
+      "hotkeys": [["d"]],
+      "description": "Thaw Mask tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4eae8817-cfa7-41db-9295-03c3d27f239d",
+      "hotkeys": [["e"]],
+      "description": "Smooth tool",
+      "isFavorite": false
+    },
+    {
+      "id": "bdbb30da-c489-44ee-b654-425303de9e60",
+      "hotkeys": [["a"]],
+      "description": "Face tool",
+      "isFavorite": false
+    },
+    {
+      "id": "408ba82b-8bb2-44ba-9176-8975eca17f73",
+      "hotkeys": [["h"]],
+      "description": "Hand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "03a5c4f0-a142-4d1d-93e1-45ab225b1b79",
+      "hotkeys": [["z"]],
+      "description": "Zoom tool",
+      "isFavorite": false
+    },
+    {
+      "id": "7d0f0a3c-2e0f-451d-9e09-eefd7e4d7648",
+      "hotkeys": [["shift", "ctrl", "x"]],
+      "description": "Liquify filter",
+      "isFavorite": false
+    },
+    {
+      "id": "3422c271-96ba-48cf-b046-2e29bae11fe0",
+      "hotkeys": [["tab"]],
+      "description": "Cycle through controls on right from top",
+      "isFavorite": false
+    },
+    {
+      "id": "77be11fa-a142-4210-908c-c3c4d3210af7",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Cycle through controls on right from bottom",
+      "isFavorite": false
+    },
+    {
+      "id": "a643afd3-9bad-436a-bf8f-8060ea651839",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "37f5c10f-7535-48a6-b92b-f89d6c8fd8e2",
+      "hotkeys": [["x"]],
+      "description": "Zoom 2x (temporary)",
+      "isFavorite": false
+    },
+    {
+      "id": "30bf9e15-2cec-4248-978d-4e08010727de",
+      "hotkeys": [["ctrl", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "b7e3af1c-68f3-4b54-abb2-99918a5c6863",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase brush size (Brush, Stamp tools)",
+      "isFavorite": false
+    },
+    {
+      "id": "d93a5c2d-8663-4df8-933a-1a99102e5e13",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease brush size (Brush, Stamp tools)",
+      "isFavorite": false
+    },
+    {
+      "id": "6d2c3ff5-721c-4aaf-83a6-088be51f158d",
+      "hotkeys": [["shift", "bracketright"]],
+      "description": "Increase brush hardness (Brush, Stamp tools)",
+      "isFavorite": false
+    },
+    {
+      "id": "525746a0-290e-4ce1-a0e9-74fc41052970",
+      "hotkeys": [["shift", "bracketleft"]],
+      "description": "Decrease brush hardness (Brush, Stamp tools)",
+      "isFavorite": false
+    },
+    {
+      "id": "1fef0980-e01f-4124-9ea4-a35621c8f995",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo last action",
+      "isFavorite": false
+    },
+    {
+      "id": "297bf1be-7cf0-4b67-a477-2ad96f819fa9",
+      "hotkeys": [["ctrl", "shift", "z"]],
+      "description": "Redo last action",
+      "isFavorite": false
+    },
+    {
+      "id": "91d55de5-c396-4bff-b159-0688ef2f4919",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Deselect all",
+      "isFavorite": false
+    },
+    {
+      "id": "d585c80d-4c99-4e4a-895a-d2b1bcb8922d",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "Hide selection and planes",
+      "isFavorite": false
+    },
+    {
+      "id": "f8ad2df8-45e9-4f82-98f6-c97023dc056b",
+      "hotkeys": [["ctrl", "c"]],
+      "description": "Copy",
+      "isFavorite": false
+    },
+    {
+      "id": "f8081edd-55e0-412e-a3d9-5225b1781cde",
+      "hotkeys": [["ctrl", "v"]],
+      "description": "Paste",
+      "isFavorite": false
+    },
+    {
+      "id": "0bab518f-0b82-411d-bbd2-e5606c68d384",
+      "hotkeys": [["ctrl", "shift", "t"]],
+      "description": "Repeat last duplicate and move",
+      "isFavorite": false
+    },
+    {
+      "id": "dcd15b66-41e9-4a28-9153-d4b22676a53d",
+      "hotkeys": [["ctrl", "alt", "t"]],
+      "description": "Create a floating selection from the current selection",
+      "isFavorite": false
+    },
+    {
+      "id": "295e042d-f4e8-49c7-9994-275561e0e925",
+      "hotkeys": [["backspace"]],
+      "description": "Delete last node while creating plane",
+      "isFavorite": false
+    },
+    {
+      "id": "8acd3ff3-3ba1-4066-82da-b8e1944292c4",
+      "hotkeys": [["z"]],
+      "description": "Zoom tool",
+      "isFavorite": false
+    },
+    {
+      "id": "258d21df-370d-4723-8167-847445da7473",
+      "hotkeys": [["h"]],
+      "description": "Hand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "5410d92a-29ab-4a19-84b7-e67de9505ca0",
+      "hotkeys": [["i"]],
+      "description": "White Balance tool",
+      "isFavorite": false
+    },
+    {
+      "id": "deac951c-568a-4ac7-bab9-0b7d28dfd2fe",
+      "hotkeys": [["s"]],
+      "description": "Color Sampler tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1b4352d0-64a6-4636-8ca2-e0898745dcef",
+      "hotkeys": [["c"]],
+      "description": "Crop tool",
+      "isFavorite": false
+    },
+    {
+      "id": "54cae2be-a2e0-4f32-94d4-7666d8df45c3",
+      "hotkeys": [["a"]],
+      "description": "Straighten tool",
+      "isFavorite": false
+    },
+    {
+      "id": "384aa723-ff81-4600-8aad-3619b1eae79e",
+      "hotkeys": [["b"]],
+      "description": "Spot Removal tool",
+      "isFavorite": false
+    },
+    {
+      "id": "1a1523bb-d543-44ce-9ba1-952cfd7a2c02",
+      "hotkeys": [["e"]],
+      "description": "Red Eye Removal tool",
+      "isFavorite": false
+    },
+    {
+      "id": "f7642d0d-f094-47a4-a923-4f1a7d8b79eb",
+      "hotkeys": [["ctrl", "alt", "1"]],
+      "description": "Basic panel",
+      "isFavorite": false
+    },
+    {
+      "id": "b0faffc7-55b0-4d21-add0-773d352c366b",
+      "hotkeys": [["ctrl", "alt", "2"]],
+      "description": "Tone Curve panel",
+      "isFavorite": false
+    },
+    {
+      "id": "6c454a3d-2768-4f5c-81d5-a156ffe2acc7",
+      "hotkeys": [["ctrl", "alt", "3"]],
+      "description": "Detail panel",
+      "isFavorite": false
+    },
+    {
+      "id": "5e5ba39b-1c7c-48f0-ba30-6d99bed1a952",
+      "hotkeys": [["ctrl", "alt", "4"]],
+      "description": "HSL/Grayscale panel",
+      "isFavorite": false
+    },
+    {
+      "id": "55c7aeff-ff3b-42af-a2a8-4ef7d88db9ac",
+      "hotkeys": [["ctrl", "alt", "5"]],
+      "description": "Split Toning panel",
+      "isFavorite": false
+    },
+    {
+      "id": "0baf9c0d-d512-46fa-8d83-b8174fdf28d7",
+      "hotkeys": [["ctrl", "alt", "6"]],
+      "description": "Lens Corrections panel",
+      "isFavorite": false
+    },
+    {
+      "id": "851c14af-e021-492e-bc72-ae9914cf866a",
+      "hotkeys": [["ctrl", "alt", "7"]],
+      "description": "Camera Calibration panel",
+      "isFavorite": false
+    },
+    {
+      "id": "cda7f54d-c2ca-48f5-b442-0c9e04db53f2",
+      "hotkeys": [["ctrl", "alt", "9"]],
+      "description": "Presets panel",
+      "isFavorite": false
+    },
+    {
+      "id": "f13d4492-4cbf-4314-8c63-5392e2ecdc7d",
+      "hotkeys": [["ctrl", "alt", "9"]],
+      "description": "Open Snapshots panel",
+      "isFavorite": false
+    },
+    {
+      "id": "d58da1e7-f132-4e21-a88c-7bc5deefb450",
+      "hotkeys": [["ctrl", "alt", "shift", "t"]],
+      "description": "Parametric Curve Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "681e6d2b-292e-47f6-bfca-00b8e70c739d",
+      "hotkeys": [["ctrl", "alt", "shift", "h"]],
+      "description": "Hue Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "82fdc1a5-a3a8-4661-a523-65f9be3cd1f0",
+      "hotkeys": [["ctrl", "alt", "shift", "s"]],
+      "description": "Saturation Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "78ea64a7-b96a-465c-87b9-a820a00b43ff",
+      "hotkeys": [["ctrl", "alt", "shift", "l"]],
+      "description": "Luminance Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "cafea0ab-ea3b-46b3-ac95-32f17a94bc39",
+      "hotkeys": [["ctrl", "alt", "shift", "g"]],
+      "description": "Grayscale Mix Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6131efac-b18b-44f9-ac83-2e2ef7330329",
+      "hotkeys": [["t"]],
+      "description": "Last-used Targeted Adjustment tool",
+      "isFavorite": false
+    },
+    {
+      "id": "9be81d6e-150f-4671-95ee-dab8ff8abfde",
+      "hotkeys": [["k"]],
+      "description": "Adjustment Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "743856dd-0d1c-4361-b98f-bf62c5132c0d",
+      "hotkeys": [["g"]],
+      "description": "Graduated Filter tool",
+      "isFavorite": false
+    },
+    {
+      "id": "301c0382-f829-4a57-ab5e-0f9f8133bc86",
+      "hotkeys": [["alt"]],
+      "description": "Temporarily switch from Add to Erase mode for theAdjustment Brush tool, or from Erase to Add mode",
+      "isFavorite": false
+    },
+    {
+      "id": "5ee5e8fb-a26e-4f8c-a889-6d6101868039",
+      "hotkeys": [["n"]],
+      "description": "Switch to New mode from Add or Erase mode of theAdjustment Brush tool or the Graduated Filter",
+      "isFavorite": false
+    },
+    {
+      "id": "e3d56f69-f309-41a3-ab40-edd8bb619c2c",
+      "hotkeys": [["m"]],
+      "description": "Toggle Auto Mask for Adjustment Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "fb36b6e5-cda7-4dd5-a124-c2bbd27af302",
+      "hotkeys": [["y"]],
+      "description": "Toggle Show Mask for Adjustment Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "75894a86-ba0f-4d86-b106-4eba39e8fe52",
+      "hotkeys": [["v"]],
+      "description": "Toggle pins for Adjustment Brush tool",
+      "isFavorite": false
+    },
+    {
+      "id": "6665e026-f122-4e59-9c2d-9281e63da0e6",
+      "hotkeys": [["v"]],
+      "description": "Toggle overlay for Graduated Filter, Spot Removal tool, or Red Eye Removal tool.",
+      "isFavorite": false
+    },
+    {
+      "id": "0d71709f-5553-4889-9f57-73baa18f696d",
+      "hotkeys": [["ctrl", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "e715380d-0b7a-4e25-bf38-5c48257bfa63",
+      "hotkeys": [["ctrl"]],
+      "description": "Temporarily switch to Zoom In tool  (Doesn’t work when Straighten tool is selected. If Crop tool is active, temporarily switches to Straighten tool.)",
+      "isFavorite": false
+    },
+    {
+      "id": "8eab1414-2afc-4e32-b452-af143b13e934",
+      "hotkeys": [["alt"]],
+      "description": "Temporarily switch to Zoom Out tool and change the Open Image button to Open Copy and the Cancel button to Reset.",
+      "isFavorite": false
+    },
+    {
+      "id": "603777aa-9f82-44ef-804b-6b60f5392876",
+      "hotkeys": [["p"]],
+      "description": "Toggle preview",
+      "isFavorite": false
+    },
+    {
+      "id": "f0157fd4-38c0-4a90-8a91-1202b4cc3836",
+      "hotkeys": [["f"]],
+      "description": "Full screen mode",
+      "isFavorite": false
+    },
+    {
+      "id": "5ad582a7-5ab9-4d41-91fa-c3ccc5cb44f4",
+      "hotkeys": [["shift"]],
+      "description": "Temporarily activate the White Balance tool and change the Open Image button to Open Object.  (Does not work if Crop tool is active)",
+      "isFavorite": false
+    },
+    {
+      "id": "ae04eedd-d8eb-4e45-806b-ab821b80c402",
+      "hotkeys": [["ctrl", "r"]],
+      "description": "Open selected images in Camera Raw dialog box from Bridge",
+      "isFavorite": false
+    },
+    {
+      "id": "aab5ea7e-0ada-4525-9811-5fd44b2bc7b4",
+      "hotkeys": [["o"]],
+      "description": "Highlight clipping warning",
+      "isFavorite": false
+    },
+    {
+      "id": "e8b7a835-d426-4596-945b-3d1908b6f560",
+      "hotkeys": [["u"]],
+      "description": "Shadows clipping warning",
+      "isFavorite": false
+    },
+    {
+      "id": "c0f21aad-8ce3-42ed-96c4-ddf799e651d6",
+      "hotkeys": [["ctrl", "6"]],
+      "description": "(Filmstrip mode) Add red label",
+      "isFavorite": false
+    },
+    {
+      "id": "8339f745-ac61-46c5-93f5-635ba744ff81",
+      "hotkeys": [["ctrl", "7"]],
+      "description": "(Filmstrip mode) Add yellow label",
+      "isFavorite": false
+    },
+    {
+      "id": "74d3cd37-65f1-4a39-b90c-a2241dae56f4",
+      "hotkeys": [["ctrl", "8"]],
+      "description": "(Filmstrip mode) Add green label",
+      "isFavorite": false
+    },
+    {
+      "id": "027524a0-008d-4d61-965c-608f7fd390e0",
+      "hotkeys": [["ctrl", "9"]],
+      "description": "(Filmstrip mode) Add blue label",
+      "isFavorite": false
+    },
+    {
+      "id": "1f12d10a-0dfe-4ea7-bc61-5cdce229946f",
+      "hotkeys": [["ctrl", "shift", "0"]],
+      "description": "(Filmstrip mode) Add purple label",
+      "isFavorite": false
+    },
+    {
+      "id": "8980e6c4-0436-4a8c-b657-d258b88ac771",
+      "hotkeys": [["ctrl", "k"]],
+      "description": "Camera Raw preferences",
+      "isFavorite": false
+    },
+    {
+      "id": "c1d4af98-8d2a-407c-a1ba-76749ca3d29e",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "163433e7-3b1f-4841-8b0d-813fff83df4b",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "f2ef4d17-ab4b-4c69-b319-86fab5ccaad9",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "795c1586-d156-4d14-8194-3eba7f4eea28",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "c888eab0-e861-4b73-a953-5f5f360d0e66",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "d7534e13-8732-4347-9945-fce584434ac8",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "3bc96fa6-7cc8-40de-91ab-2b39143c9568",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "d68d8873-7113-4ba9-a7d9-8f6f447eea20",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "2396d274-3ef4-4001-b14a-658761307b51",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "ef3ccd76-ced9-4396-a6ab-3eb18034129d",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "a3159faf-eba9-4800-aa57-379af4fb82f2",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "de716ea0-eb98-47d6-a72a-59eb38665075",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "e32b9000-08a0-4524-a51e-44b8140aa755",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "8ee12999-79cc-4f8f-b38f-bacbd42e385b",
+      "hotkeys": [["ctrl", "m"]],
+      "description": "Open the Curves dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "f03eeed5-8692-4747-9895-3f5e516d263c",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Deselect a point",
+      "isFavorite": false
+    },
+    {
+      "id": "61014115-c654-442a-b7d5-08850766fb64",
+      "hotkeys": [["slash"]],
+      "description": "Toggle crop shield off and on",
+      "isFavorite": false
+    },
+    {
+      "id": "51a753c3-b3a9-4075-af01-14aa0b62a03d",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "504eb00a-bd49-4175-9db7-61586a21f410",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "5e370253-1e3d-4343-92b0-d89e832f8bb5",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "61a2c2de-10d2-4548-a9d6-070c34240f8f",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "f2663437-91b3-4108-8b16-3b86618bcc95",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "b07f14a2-b1ba-4d7e-91d9-eeba56092763",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "37d23ded-f619-406b-bb0c-43ab44569d89",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "855d6950-e4c2-403c-8f0e-55fc1d71916e",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "9db11e9b-22e0-4c1d-939b-24856affdf6b",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "0f5d9e7d-74c5-47b6-8f22-1b5494fa7b4f",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "3ca68304-6010-43fa-90d7-28948e303be7",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "ca40d86e-fcaa-4c93-9494-c6953643db19",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "0c3904cc-b792-479e-8346-f37b5a40dfe1",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "2d8278ed-ef72-4a67-af00-f77d18aa4a82",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "1b738c5d-00ed-4b7d-824f-40d10599d6fc",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "573dfb8b-fd9b-4f69-ba06-a35dd046b9df",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "d96dbc80-9fed-477b-9697-9b29c9eedd02",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "78f0d23a-397f-4be0-b3b5-26977cbbefed",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "4190babb-3a91-4015-b11b-f412d406c571",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "7478b4f8-e3c9-43ca-9834-f6f3bc9462e2",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "3f914ff0-63f0-4ad0-b92b-75de87f12fd1",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "468d7d1a-2e71-4d79-92b6-cdb2277ee717",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "3ac07955-6449-4916-8a40-8dd326135a36",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "965cc678-e9d2-44cb-8231-62ea724f3695",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "3d7fdf79-edde-439b-9844-6aa07a7741c6",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "6810a4dd-7841-4b93-9be5-92b3680ffc5d",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "2ec2d198-ab94-4236-b9fe-939e7ef1c5c0",
+      "hotkeys": [["shift", "backspace"]],
+      "description": "Displays Fill dialog box",
+      "isFavorite": false
+    },
+    {
+      "id": "ed7f619e-55ea-4c1a-b372-c7bc8554cf93",
+      "hotkeys": [["slash"]],
+      "description": "Lock transparent pixels on/off",
+      "isFavorite": false
+    },
+    {
+      "id": "f4eb965a-b48e-4a5a-b9fb-9c4916736922",
+      "hotkeys": [["shift", "alt", "n"]],
+      "description": "Normal",
+      "isFavorite": false
+    },
+    {
+      "id": "05b46d22-104b-41fd-ab67-de16df07ae5a",
+      "hotkeys": [["shift", "alt", "i"]],
+      "description": "Dissolve",
+      "isFavorite": false
+    },
+    {
+      "id": "7e822451-e642-4c03-bedd-caaf6450c891",
+      "hotkeys": [["shift", "alt", "q"]],
+      "description": "Behind (Brush tool only)",
+      "isFavorite": false
+    },
+    {
+      "id": "df30679e-88ac-4fbc-9c21-eecccfe83e33",
+      "hotkeys": [["shift", "alt", "r"]],
+      "description": "Clear (Brush tool only)",
+      "isFavorite": false
+    },
+    {
+      "id": "d31932a2-eaf9-4355-8ecb-ccad5d9a1660",
+      "hotkeys": [["shift", "alt", "k"]],
+      "description": "Darken",
+      "isFavorite": false
+    },
+    {
+      "id": "1d9ff0e1-96b9-45aa-9188-6a8dbf1cb9ac",
+      "hotkeys": [["shift", "alt", "m"]],
+      "description": "Multiply",
+      "isFavorite": false
+    },
+    {
+      "id": "db9a7655-70bf-4fd2-bbc6-e6cd3e96f6cc",
+      "hotkeys": [["shift", "alt", "b"]],
+      "description": "Color Burn",
+      "isFavorite": false
+    },
+    {
+      "id": "c3a97c40-cc71-42fc-b1db-0351f464a8bb",
+      "hotkeys": [["shift", "alt", "a"]],
+      "description": "Linear Burn",
+      "isFavorite": false
+    },
+    {
+      "id": "8f8b1b3d-2aff-409d-9bcf-99f82d1c0a25",
+      "hotkeys": [["shift", "alt", "g"]],
+      "description": "Lighten",
+      "isFavorite": false
+    },
+    {
+      "id": "dacccef2-485c-41a6-b245-bb5cdb7b7651",
+      "hotkeys": [["shift", "alt", "s"]],
+      "description": "Screen",
+      "isFavorite": false
+    },
+    {
+      "id": "6083fd64-929c-4d13-ba7e-e834bdb7bb02",
+      "hotkeys": [["shift", "alt", "d"]],
+      "description": "Color Dodge",
+      "isFavorite": false
+    },
+    {
+      "id": "bf123029-21e0-4c4b-8d77-15a509650794",
+      "hotkeys": [["shift", "alt", "w"]],
+      "description": "Linear Dodge",
+      "isFavorite": false
+    },
+    {
+      "id": "819b6b6c-5d5b-4792-98f4-4df5ed1ffb4c",
+      "hotkeys": [["shift", "alt", "o"]],
+      "description": "Overlay",
+      "isFavorite": false
+    },
+    {
+      "id": "88e40d15-de3f-456e-b09d-44e7db865c00",
+      "hotkeys": [["shift", "alt", "f"]],
+      "description": "Soft Light",
+      "isFavorite": false
+    },
+    {
+      "id": "bf333b1b-1cf9-4858-815b-aa359aeab453",
+      "hotkeys": [["shift", "alt", "h"]],
+      "description": "Hard Light",
+      "isFavorite": false
+    },
+    {
+      "id": "e8c92d7e-99ea-4dd7-abcf-df78182ebf90",
+      "hotkeys": [["shift", "alt", "v"]],
+      "description": "Vivid Light",
+      "isFavorite": false
+    },
+    {
+      "id": "6781f96d-e9b7-47a0-9b2b-d9cd9d828780",
+      "hotkeys": [["shift", "alt", "j"]],
+      "description": "Linear Light",
+      "isFavorite": false
+    },
+    {
+      "id": "887887f9-f589-4f7a-a57b-71fb7f9ea334",
+      "hotkeys": [["shift", "alt", "z"]],
+      "description": "Pin Light",
+      "isFavorite": false
+    },
+    {
+      "id": "eadc10a8-eab5-41d3-aed2-2bc0226b08ee",
+      "hotkeys": [["shift", "alt", "l"]],
+      "description": "Hard Mix",
+      "isFavorite": false
+    },
+    {
+      "id": "63d92375-35de-47b3-9deb-e4a996b3068e",
+      "hotkeys": [["shift", "alt", "e"]],
+      "description": "Difference",
+      "isFavorite": false
+    },
+    {
+      "id": "12a6b6e8-6a0b-4fbf-8edf-b0d660b686b3",
+      "hotkeys": [["shift", "alt", "x"]],
+      "description": "Exclusion",
+      "isFavorite": false
+    },
+    {
+      "id": "9ca71953-df46-44c0-b4de-9430fd239b76",
+      "hotkeys": [["shift", "alt", "u"]],
+      "description": "Hue",
+      "isFavorite": false
+    },
+    {
+      "id": "104c1be2-0ba3-49e1-9cb9-a68fb574b39c",
+      "hotkeys": [["shift", "alt", "t"]],
+      "description": "Saturation",
+      "isFavorite": false
+    },
+    {
+      "id": "b2ab8b6b-e8b2-4fae-aca9-dabe335ff259",
+      "hotkeys": [["shift", "alt", "c"]],
+      "description": "Color",
+      "isFavorite": false
+    },
+    {
+      "id": "cd41bb81-27d3-43ee-9784-898098af88ca",
+      "hotkeys": [["shift", "alt", "y"]],
+      "description": "Luminosity",
+      "isFavorite": false
+    },
+    {
+      "id": "c9991818-cdd7-47f2-a91f-2f16c8bdb9ba",
+      "hotkeys": [["shift", "alt", "n"]],
+      "description": "Set blending mode to Threshold for bitmap images, Normal for all other images",
+      "isFavorite": false
+    },
+    {
+      "id": "6891c985-7de6-48a9-a3d6-9d717d918d88",
+      "hotkeys": [["ctrl", "h"]],
+      "description": "Show/Hide selection on selected type",
+      "isFavorite": false
+    },
+    {
+      "id": "7982b281-e716-40f4-9bde-4d13380c251c",
+      "hotkeys": [["ctrl"]],
+      "description": "Display the bounding box for transforming text when editing text, or activate Move tool if cursor is inside the bounding box",
+      "isFavorite": false
+    },
+    {
+      "id": "aa91d5ea-4b3d-4c58-8762-a508d646cd22",
+      "hotkeys": [["ctrl", "shift", "x"]],
+      "description": "Choose 100% horizontal scale",
+      "isFavorite": false
+    },
+    {
+      "id": "d3631cf4-214b-402c-b4bd-51af38722d2f",
+      "hotkeys": [["ctrl", "shift", "alt", "x"]],
+      "description": "Choose 100% vertical scale",
+      "isFavorite": false
+    },
+    {
+      "id": "35781fc8-a961-4b7a-affb-f1d5dcd4d090",
+      "hotkeys": [["ctrl", "shift", "alt", "a"]],
+      "description": "Choose Auto leading",
+      "isFavorite": false
+    },
+    {
+      "id": "ee61b578-64c2-4815-8f16-5a22a8e4b3dc",
+      "hotkeys": [["ctrl", "shift", "q"]],
+      "description": "Choose 0 for tracking",
+      "isFavorite": false
+    },
+    {
+      "id": "f8e9674e-a7d9-4994-91dc-4f3e101e09ce",
+      "hotkeys": [["ctrl", "shift", "j"]],
+      "description": "Justify paragraph, left aligns last line",
+      "isFavorite": false
+    },
+    {
+      "id": "1ecf6226-c2a8-43d7-aba1-30d96e0dd3a1",
+      "hotkeys": [["ctrl", "shift", "f"]],
+      "description": "Justify paragraph, justifies all",
+      "isFavorite": false
+    },
+    {
+      "id": "d2fa5984-4368-4be5-9050-8334b3e68a2b",
+      "hotkeys": [["ctrl", "shift", "alt", "h"]],
+      "description": "Toggle paragraph hyphenation on/off",
+      "isFavorite": false
+    },
+    {
+      "id": "8156f572-2e05-46d6-b7c8-1b70f8bf3c87",
+      "hotkeys": [["ctrl", "shift", "alt", "t"]],
+      "description": "Toggle single/every-line composer on/off",
+      "isFavorite": false
+    },
+    {
+      "id": "294f40f9-9e64-4cba-b63c-45d4af2d1c0a",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "19769325-a58e-406d-95de-cf2bd59de613",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "7e2c49a3-600f-4852-9030-ac9842b49e5f",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "ae71e4c5-fac1-4b22-9823-d91cf4c32b0c",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "85831fa2-d2e3-40b2-a152-aa4c928a78ca",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "8e63c71c-5c48-4a6b-8d9e-284723787d55",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "3f6855ef-c6b1-47e6-93c6-802a27a63ebd",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "daae7794-6482-4431-9a8e-253063046886",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "d53811e3-1c40-4d84-ba83-32ccca62b365",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "4ae25790-4575-484b-8c72-a33f296d1b38",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "b44d9f20-b5eb-41b1-90ed-1410091d0a65",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "d0336e64-8e55-4d05-9f0c-735870d4fc90",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "99181f78-6909-42a4-8a5d-d5f0fd75d6de",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "8503a587-326e-45ed-8402-7395db3b92d6",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "7d5a517e-a02a-4219-9a9c-502b42235679",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "9791e7c4-575d-49d6-a882-0064e3be5c2c",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "aa5e73e1-f89c-4e8d-b02b-e331efbd0def",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "854bb414-97ce-47b3-96d7-4776a094a133",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "d3435741-b7cd-4301-99e6-b8ed6fb9455e",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "b45a9459-0833-4dac-9d76-499c3b612a43",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "f0c9aff7-ea66-48c4-93a5-bc17c1ac7cb5",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "08aa8f89-1d11-4078-a27c-97868e51ca96",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "63515b44-ca3a-41e0-8d02-e8cdbdf61eb9",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "6b03c532-f94b-48fa-ae23-ccec4e889b3f",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "3b4e81e7-17d9-4b00-bae2-06419896e000",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "1a6c4b1f-2dc0-4c3f-8583-e457088aba6a",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "f4ce5411-6df5-407e-aa13-2023b3c9718b",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "a3edeaed-e296-4eb1-8350-c062d678f413",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "dffd13f8-e955-4c07-b131-97729c979ea9",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "fb169083-59d4-414e-9f3d-3126483aa64d",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "e38f70ea-8247-43aa-8249-107bb7fb6549",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "ad49dc1b-36a0-4f2b-9d9c-585ddba2e9de",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "43cb8e25-1c92-4097-a41b-6e1585994d58",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "f6d0fa4c-2f02-454d-ba2c-2075db264104",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "c0d2f1ed-4da6-4a98-bea7-f66f71035e4c",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "6fc3f277-bc15-42b5-9a10-e278e868b925",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "6240a6ce-4a7e-4156-a921-a06b485cdb16",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "8a9a052a-0830-4165-9275-6d09185969ef",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "3b62f0ab-e4e5-4641-b6b8-f8702c40989e",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "53f89424-9652-4637-a671-c8020f077b91",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "3605cc3c-dd1a-41b6-bc22-679fcbee3f88",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "62f16d7a-02dd-477b-b68b-3db178c2b862",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "ae22bc85-b911-4f81-b31d-1df1031e5448",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "1ad751ea-1654-4aa7-b299-fc9f7957f82e",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "5c0c1f7d-dc0f-4ce7-8bde-d944dda6e619",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "1541093f-26f8-42fa-a806-597403b855ca",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "10345b06-322c-41f4-9642-79ac54e89b22",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "d36b794f-507f-4cfc-bc80-ceaccc71cb99",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "f365ce7c-f578-45c5-a741-929b204b24e4",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "6680cacb-3cea-4ef6-b171-ca858362f80f",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "676b5e97-2026-4363-8624-637106a640cc",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "1419b6f4-50a1-466b-a85f-d8d2274bc4cd",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "bb13f7c7-d783-4a48-8504-7a83c25132d3",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "8374086e-2f36-4e07-9ffc-7950e8dbae58",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "68d5c954-4425-4a0f-a3c3-2007bbdd248c",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "83a6692c-a498-4327-b9a2-611ea6b0aa9d",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "4922c3f8-a3a4-415a-b828-dbf18bc6c672",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "d088c5a0-bfc8-4a33-8765-df346a323915",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "45aa71bd-ad83-4217-8288-cbe88b9b328e",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "8d996c48-37e4-4975-bad5-8da80d68d506",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "a4dd5885-7cc8-471d-9f49-f473e23d182e",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "63e57138-b7f1-469b-8516-2d6142f68c5e",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "ba94dff2-1479-4c17-b988-fd352a521f6c",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "dfa960e9-e639-4413-b5b7-8502ba5dfe74",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "d5380bec-864d-4f8c-85a0-ba0c4cde1a13",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "92c723cb-f213-4be0-ac08-ba8c1998856f",
+      "hotkeys": [["ctrl", "2"]],
+      "description": "Select composite channel",
+      "isFavorite": false
+    },
+    {
+      "id": "e11ae04a-0375-4c70-8487-7bf0509a1a27",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "501367c4-2cd9-4083-9aa8-9bb3fa66e053",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "ec78b32f-0938-416b-afe1-52c13ca54fdf",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "e04af827-bc66-47e8-81f0-af74f7062581",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "ae2defa8-2999-49d2-ac1a-6720bed272cf",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "480b555d-f428-445e-ad3e-ed5fc140b23a",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "9b8cfa9c-e775-4404-a1a0-0056d04f4c55",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "57a440a4-76e5-4c5c-a9fb-e21074bb66f6",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "28d81685-ee73-4ec8-ad46-4b74085c1003",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "c5c32b62-60e6-4ccf-a5d0-67e457a74232",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "9ca8d3e6-3447-4eac-8e33-e59d5ffe4e18",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "54fdb30a-435c-489c-9e97-a7fd4da7001b",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "99b39b9b-17be-4fe0-8dd7-6ff908d6b0f3",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "66e2f71a-5004-4ef1-920f-8d757d4fe84f",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "d729532b-c67c-49ac-a7dd-61435c93eb16",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "72867664-724c-4127-b9d9-284664dd7903",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "13f6e166-81eb-4dcd-9c28-553523eaf91d",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "4d10df9f-ed8a-4ade-8166-f8bd2762e748",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "11ae5bff-726f-40bc-a23d-f13d26e2d7e4",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "94db004d-84b5-424f-a75e-8aadb37959c2",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "ffb7d0f9-3cfc-413a-a656-f73f070169e1",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "ef833309-565b-4ede-8fee-459b3322a6c1",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "2b97aecc-ca7a-4ccf-b2fd-e4cceffe73cb",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "97ef2519-db8d-4319-a671-4364616f2853",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "916a2adc-6826-46fa-843d-af0af0ca3270",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "faec46a2-a3e6-4a66-be99-41416c9e8990",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "a690fd09-2cdb-4838-82b4-086e13a4825f",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "635e12cd-10b7-42f5-b9a5-c8dbc56b9fb2",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "237c1786-742d-433b-9771-eb737c450468",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "4b67563c-1250-43a8-9ba0-e3404d08dec0",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "e097cef5-51f4-47d3-b565-2d121c2d8fd8",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "9a4b0dfb-0caf-414c-816c-9e5b05a09042",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "7182ea77-0c70-4496-b604-bc701c63c8cb",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "10e8e262-6d55-4be3-a7f1-3a85a0217ec7",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "2b7f6e2e-814b-4db2-bad3-9e4b86de639a",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "ab87b5f9-3846-4cf7-9c2c-eb1eb475ca43",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "c735fbd3-53ed-40d8-a686-682bbe6a437e",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "0914548d-13c5-47f3-9896-af5313e0a27a",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "4502be7d-b8bc-4147-ade2-ab4ec253b38f",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "fb895be5-6deb-42c9-9dee-7af93dba284f",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "ece4d251-6cf5-4259-9a33-f67fefb24264",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "638119ee-dc21-4f52-9378-2e8577c13088",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "924cd1c9-4812-4f77-b308-fefa38adcdf4",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "f047e424-1c50-4810-896c-5dc5defed449",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "7c55fa3f-e757-4132-beb6-fb6620b57258",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "79ab19e7-d69f-4d4f-8eca-703922ca27af",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "71b7c6d5-2caf-4dda-a00b-088e9822a357",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "96acec89-42db-4662-be9b-318631e866b5",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "73600685-89e1-4a94-9e63-09f89564867d",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "0ea6e6cf-0cc6-47cc-be91-1525b00a73f5",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "551299d2-84b5-4674-aea6-e492b9e846bb",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "401c7337-6f62-4138-b1de-173e8fec7a7d",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "480a6bcf-0f8c-43ea-89e5-f1e117c914a0",
+      "hotkeys": [["ctrl", "shift", "n"]],
+      "description": "New layer",
+      "isFavorite": false
+    },
+    {
+      "id": "37e30e38-9d6d-4271-9b97-579cd29cb9e9",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "0d5c3cb2-971e-4e5d-b3bd-e2dc45b89bc0",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "af4117a6-9f6e-48c7-b8f5-56cd0478fa00",
+      "hotkeys": [["ctrl", "g"]],
+      "description": "Group layers",
+      "isFavorite": false
+    },
+    {
+      "id": "b5923f45-13ff-4efb-a18b-b28baf7bb682",
+      "hotkeys": [["ctrl", "shift", "g"]],
+      "description": "Ungroup layers",
+      "isFavorite": false
+    },
+    {
+      "id": "a723cf3e-7680-4bc6-9b54-bab4ae680c59",
+      "hotkeys": [["ctrl", "alt", "g"]],
+      "description": "Create/release clipping mask",
+      "isFavorite": false
+    },
+    {
+      "id": "7327596b-d054-4e04-9086-cc2c9a35d38d",
+      "hotkeys": [["ctrl", "alt", "a"]],
+      "description": "Select all layers",
+      "isFavorite": false
+    },
+    {
+      "id": "f5f37d19-13f8-4996-978b-1aa62298316f",
+      "hotkeys": [["ctrl", "shift", "e"]],
+      "description": "Merge visible layers",
+      "isFavorite": false
+    },
+    {
+      "id": "b2227916-9063-43ff-8333-9900ad8b220a",
+      "hotkeys": [["alt", "period"]],
+      "description": "Select top layer",
+      "isFavorite": false
+    },
+    {
+      "id": "b5ab9055-8154-4aaf-a1d3-2d796842c3e8",
+      "hotkeys": [["alt", "comma"]],
+      "description": "Select bottom layer",
+      "isFavorite": false
+    },
+    {
+      "id": "c070d079-77d7-4efb-8651-3684d327f223",
+      "hotkeys": [["ctrl", "shift", "alt", "e"]],
+      "description": "Merge a copy of all visible layers into target layer",
+      "isFavorite": false
+    },
+    {
+      "id": "1827d0cc-09c3-48f3-905e-d7383bbe9f6f",
+      "hotkeys": [["slash"]],
+      "description": "Toggle lock transparency for target layer, or last applied lock",
+      "isFavorite": false
+    },
+    {
+      "id": "31e45c78-5c37-4906-be92-6b1027970c38",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "1fa1f107-b7b5-4c40-861e-65a4050899b9",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "555763d7-ad4a-4fc3-ad1a-c94036d4c810",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "f0e39c20-fc91-439b-bd82-5359305b656f",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "6e877d2b-9a72-43a4-a399-7d9af6378367",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "af34d2bf-b11e-43a3-b7ff-77dc5dfefe48",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "a762c416-3860-47ac-b1a1-4d116900e861",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "c908fda9-2439-449c-9854-6d491d376881",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "4fc0042f-4cf2-4f44-8c1f-5d12c6300a36",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "8c79b373-acd6-4b84-b5b5-a05bb9bcb3a2",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "0c66764e-5f2a-4627-8bec-9c2b3502e61e",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "f12076e1-bfd1-40aa-87de-73e447bf166a",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "79ae7331-cb9d-4b58-a665-737542391aa3",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "f459ea3e-2334-4d0a-87f8-0e262ba564d3",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "2717247c-8afc-44fd-acfb-9e2aa807233f",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "11630ab6-7462-4284-ba8c-1b21bfb391f8",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "b214bc5c-c6f1-4d62-9b94-e409d1bed5d3",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "3c5e80d3-f60c-4360-8f11-2f689e9d18b3",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "af3d54ca-d8d6-4074-ab98-f6ce79812544",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "7a8be3c6-d4f0-4b65-88ae-7c670afd7f49",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "6c7db993-ce2c-40b7-84cb-48337dc70299",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "77d34b9d-0453-40fc-8adc-cd0fa249eb90",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "fa019d1c-11a9-4395-b165-58a979885f70",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "0255b00c-d49d-4692-9416-bedfa6cb354a",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "227dd110-5f5e-462a-89c4-ee082a5f3775",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "e46e97b9-9548-4f88-b36d-7a315647f1fe",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "e71293f1-3e5d-4488-ad45-e7e6337ab57a",
+      "hotkeys": [["ctrl", "t"]],
+      "description": "Free Transform",
+      "isFavorite": false
+    },
+    {
+      "id": "59c6cdba-877d-41e2-9385-2f2d2aa26598",
+      "hotkeys": [["bracketleft"]],
+      "description": "Decrease Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "1b642e00-1605-472b-a7ed-5bd737194055",
+      "hotkeys": [["bracketright"]],
+      "description": "Increase Brush Size",
+      "isFavorite": false
+    },
+    {
+      "id": "6608386c-ec6a-478e-bf7e-7a90b1ec72a3",
+      "hotkeys": [["d"]],
+      "description": "Default Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "ac980097-c618-4bc2-a32e-5d3c752fb53f",
+      "hotkeys": [["x"]],
+      "description": "Switch Foreground/Background colors",
+      "isFavorite": false
+    },
+    {
+      "id": "7189c5fb-cffe-444e-a25f-4428591b36b2",
+      "hotkeys": [["ctrl", "j"]],
+      "description": "New layer via copy",
+      "isFavorite": false
+    },
+    {
+      "id": "22467586-9ba1-4b02-9430-c1f7f8f46f92",
+      "hotkeys": [["shift", "ctrl", "j"]],
+      "description": "New layer via cut",
+      "isFavorite": false
+    },
+    {
+      "id": "daf172b0-c883-4cd2-b8ef-5252c602dd54",
+      "hotkeys": [["ctrl", "alt", "p"]],
+      "description": "Close all open documents other than the current document",
+      "isFavorite": false
+    },
+    {
+      "id": "433d62fb-1482-4e73-b8fa-2348f7cf65b4",
+      "hotkeys": [["escape"]],
+      "description": "Cancel any modal dialog window (including the Start Workspace)",
+      "isFavorite": false
+    },
+    {
+      "id": "7c3c75c2-0b51-4ca5-8a98-1e532817ff3e",
+      "hotkeys": [["enter"]],
+      "description": "Select the first edit field of the toolbar",
+      "isFavorite": false
+    },
+    {
+      "id": "97d709b7-e3c0-402d-9fb2-4344a8a16093",
+      "hotkeys": [["tab"]],
+      "description": "Navigate between fields",
+      "isFavorite": false
+    },
+    {
+      "id": "a167366e-8391-4890-b44c-2a947b9017c4",
+      "hotkeys": [["tab", "shift"]],
+      "description": "Navigate between fields in the opposite direction",
+      "isFavorite": false
+    },
+    {
+      "id": "cd148675-ba0d-488a-bfc5-2d190aa785cc",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "c8fe0762-b0c9-48d8-90bc-8b4553c97fa5",
+      "hotkeys": [["ctrl", "0"]],
+      "description": "Fit in window",
+      "isFavorite": false
+    },
+    {
+      "id": "71c99f1a-a7d7-4e2f-b08f-0967664b8e7f",
+      "hotkeys": [["ctrl", "minus"]],
+      "description": "Zoom out",
+      "isFavorite": false
+    },
+    {
+      "id": "9e640e5d-c2c7-438e-a3f3-d86b5c7cf499",
+      "hotkeys": [["tab"]],
+      "description": "Cycle through controls on right from top",
+      "isFavorite": false
+    },
+    {
+      "id": "57e5d219-168c-470a-b936-89b585e2e431",
+      "hotkeys": [["shift", "tab"]],
+      "description": "Cycle through controls on right from bottom",
+      "isFavorite": false
+    },
+    {
+      "id": "eb1112f3-3169-413b-a8a4-8c4eac219868",
+      "hotkeys": [["space"]],
+      "description": "Temporarily activate Hand tool",
+      "isFavorite": false
+    },
+    {
+      "id": "b0fe7e40-cc73-490a-b795-efa87cbff2a0",
+      "hotkeys": [["alt"]],
+      "description": "Change Cancel to Reset",
+      "isFavorite": false
+    },
+    {
+      "id": "e51028ed-1490-4d65-a372-8b9d6e9919b8",
+      "hotkeys": [["b"]],
+      "description": "Edge Highlighter tool",
+      "isFavorite": false
+    },
+    {
+      "id": "3aff786b-cfd1-4072-ba35-1ce66edd6b5b",
+      "hotkeys": [["g"]],
+      "description": "Fill tool",
+      "isFavorite": false
+    },
+    {
+      "id": "21ae5dec-ee86-4d76-bb49-65974db1882c",
+      "hotkeys": [["i"]],
+      "description": "Eyedropper tool",
+      "isFavorite": false
+    },
+    {
+      "id": "c35e6edd-0015-408d-a581-16f924576808",
+      "hotkeys": [["c"]],
+      "description": "Cleanup tool",
+      "isFavorite": false
+    },
+    {
+      "id": "4eb0db10-8a80-4800-ba80-6af1f7132750",
+      "hotkeys": [["t"]],
+      "description": "Edge Touchup tool",
+      "isFavorite": false
+    },
+    {
+      "id": "9118cdf6-f9c8-4bd2-8d20-d177ce1b962e",
+      "hotkeys": [["alt", "backspace"]],
+      "description": "Remove current highlight",
+      "isFavorite": false
+    },
+    {
+      "id": "285ce130-fddf-4d04-80c5-66ad5b30a46c",
+      "hotkeys": [["ctrl", "backspace"]],
+      "description": "Highlight entire image",
+      "isFavorite": false
+    },
+    {
+      "id": "aa22237b-7891-40ea-b575-a279a789cb41",
+      "hotkeys": [["x"]],
+      "description": "Toggle Show menu options in preview between Original and Extracted",
+      "isFavorite": false
+    },
+    {
+      "id": "e0ad8696-234f-4562-a512-10bf211f445e",
+      "hotkeys": [["shift", "x"]],
+      "description": "Enable Cleanup and Edge Touchup tools before preview",
+      "isFavorite": false
+    },
+    {
+      "id": "fb6bfe8f-a677-4ae0-b7bb-99bb42e42403",
+      "hotkeys": [["f"]],
+      "description": "Cycle through Display menu in preview from top to bottom",
+      "isFavorite": false
+    },
+    {
+      "id": "262a548e-0f53-45b9-aee6-b58a8308f399",
+      "hotkeys": [["shift", "f"]],
+      "description": "Cycle through Display menu in preview from bottom to top",
+      "isFavorite": false
+    },
+    {
+      "id": "c6a42a8c-e89b-43c0-9f7a-ccda41a2ead9",
+      "hotkeys": [["ctrl", "d"]],
+      "description": "Delete current selection",
+      "isFavorite": false
+    },
+    {
+      "id": "1f8105fc-209c-416a-9cc3-9c5d24a0dc50",
+      "hotkeys": [["ctrl", "z"]],
+      "description": "Undo a selection move",
+      "isFavorite": false
+    },
+    {
+      "id": "40330238-69b5-4601-acc9-d0beaa4604fa",
+      "hotkeys": [["ctrl", "g"]],
+      "description": "Generate or generate again",
+      "isFavorite": false
+    },
+    {
+      "id": "ddb473d5-5333-40c7-b709-653829e9dc5c",
+      "hotkeys": [["x"]],
+      "description": "Toggle view: original/generated pattern",
+      "isFavorite": false
+    },
+    {
+      "id": "d441d163-bb73-432a-a639-cd1d5f2ee47d",
+      "hotkeys": [["backspace"]],
+      "description": "Delete current tile from Tile History",
+      "isFavorite": false
+    }
+  ]
+}
