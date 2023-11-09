@@ -155,23 +155,15 @@ export default class MenuBuilder {
       label: 'Help',
       submenu: [
         {
-          label: 'Tutorial',
-          click() {
-            shell.openExternal(
-              'https://github.com/electron/electron/tree/main/docs#readme'
-            );
-          },
-        },
-        {
           label: 'Go to website',
           click() {
-            shell.openExternal('https://localhost:3000');
+            shell.openExternal('https://shortcutwizard.app');
           },
         },
         {
-          label: 'Community Discussions',
+          label: 'Contact us',
           click() {
-            shell.openExternal('https://www.electronjs.org/community');
+            shell.openExternal('https://shortcutwizard.app');
           },
         },
       ],

@@ -36,7 +36,10 @@ class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
     autoUpdater.logger = log;
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdatesAndNotify({
+      body: 'New version available!',
+      title: 'Shortcut Wizard',
+    });
   }
 }
 
