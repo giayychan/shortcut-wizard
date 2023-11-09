@@ -12,6 +12,11 @@
  */
 import path from 'path';
 
+import {
+  installExtension,
+  REACT_DEVELOPER_TOOLS,
+} from 'electron-extension-installer';
+
 import { createIPCHandler } from 'electron-trpc/main';
 import { app, shell } from 'electron';
 import { autoUpdater } from 'electron-updater';
@@ -53,22 +58,17 @@ if (process.defaultApp) {
   app.setAsDefaultProtocolClient('shortcut-wizard');
 }
 
-// const installExtensions = async () => {
-//   const installer = require('electron-devtools-installer');
-//   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;
-//   const extensions = ['REACT_DEVELOPER_TOOLS'];
-
-//   return installer
-//     .default(
-//       extensions.map((name) => installer[name]),
-//       forceDownload
-//     )
-//     .catch(console.log);
-// };
+const installExtensions = async () => {
+  await installExtension(REACT_DEVELOPER_TOOLS, {
+    loadExtensionOptions: {
+      allowFileAccess: true,
+    },
+  });
+};
 
 const createWindow = async () => {
   if (isDebug) {
-    // await installExtensions();
+    await installExtensions();
   }
 
   const window = setMainBrowserWindow();

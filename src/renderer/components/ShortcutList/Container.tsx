@@ -7,7 +7,7 @@ import useSelectedShortcutsStore from '../../stores/useSelectedShortcutsStore';
 import Hotkeys from '../common/ShortcutHotkeys';
 import useFuseSearchStore from '../../stores/useFuseSearch';
 import StyledSvg from '../common/StyledSvg';
-import ShortcutListItem from './Item';
+import ShortcutListInfinityScroll from './InfiniteScroll';
 
 const listStyles = {
   itemWrapper: {
@@ -113,9 +113,7 @@ function ShortcutListContainer() {
 
   return (
     <ScrollableListWrapper>
-      {sortedByFavorite.map((shortcut) => (
-        <ShortcutListItem shortcut={shortcut} key={shortcut.id} />
-      ))}
+      <ShortcutListInfinityScroll fullItems={sortedByFavorite} />
     </ScrollableListWrapper>
   );
 }
