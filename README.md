@@ -72,24 +72,6 @@ Follow these steps to get started with Shortcut Wizard on your local machine:
 
 ---
 
-## Why Shortcut Wizard? 💼
-
-In a fast-paced world where multitasking is the norm, Shortcut Wizard provides a practical solution to streamline workflows by giving users a single place to manage, access, and master application shortcuts. It reduces the friction of searching for tools and helps users achieve higher productivity by embedding muscle memory through repetition.
-
-This project showcases:
-
-1. **Full-Stack Development Skills:**
-   - Desktop application development using Electron for seamless multi-platform compatibility.
-   - Responsive, user-friendly interfaces with React.
-
-2. **Practical Problem Solving:**
-   - Tackling real-world productivity challenges with a functional, innovative solution.
-
-3. **Scalability and Maintainability:**
-   - Robust state management using Context API to handle application data efficiently.
-
----
-
 ## Demo 📸
 
 ![Shortcut Wizard Demo](https://s13.gifyu.com/images/SeZn8.gif)
