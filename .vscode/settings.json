@@ -27,7 +27,6 @@
     "package-lock.json": true,
     "*.{css,sass,scss}.d.ts": true
   },
-<<<<<<< Updated upstream
   "cSpell.words": [
     "ableton",
     "asana",
@@ -47,7 +46,4 @@
     "TRPC",
     "zustand"
   ]
-=======
-  "cSpell.words": ["superjson", "tabler", "TRPC"]
->>>>>>> Stashed changes
 }
