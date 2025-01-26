@@ -78,6 +78,15 @@ Follow these steps to get started with Shortcut Wizard on your local machine:
 
 ---
 
+## Buy Me A Coffee ☕️
+
+If you enjoy Shortcut Wizard and would like to support the development of this project, buy us a coffee!
+Your support will help keep this project alive and improve its features!
+
+- **Buy Me A Coffee**: [Buy Me A Coffee](https://buymeacoffee.com/giawdevtesq)
+
+---
+
 ## Contributing 🤝
 
 Contributions are welcome! If you have ideas for new features or spot issues, feel free to open a pull request or raise an issue in the repository.
@@ -102,3 +111,5 @@ Contributions are welcome! If you have ideas for new features or spot issues, fe
    ```
 
 5. Open a pull request.
+
+---
