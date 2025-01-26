@@ -3,6 +3,7 @@ import { ReactNode, useEffect } from 'react';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { onValue } from 'firebase/database';
 import { auth } from 'main/configs/firebase';
+import { IS_APP_FREE } from 'main/constants';
 import useAuthStore from '../stores/useAuthStore';
 import TrialEndPrompt from '../components/TrialEndPrompt/Container';
 import SignInPrompt from '../components/Auth/SignInPrompt';
@@ -76,7 +77,7 @@ function AuthProvider({ children }: { children: ReactNode }) {
     user?.trial?.endDate &&
     dayjs.unix(user?.trial?.endDate).toDate() < dayjs().toDate();
 
-  if (isTrialEnded) return <TrialEndPrompt />;
+  if (isTrialEnded && !IS_APP_FREE) return <TrialEndPrompt />;
 
   return children;
 }

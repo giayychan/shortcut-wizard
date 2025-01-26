@@ -23,7 +23,7 @@ import EditSoftwareSetting from '../EditSoftware/EditSoftwareSetting';
 import EditShortcutSetting from './EditShortcutSetting';
 import { TabType } from '../../../../@types';
 import AddSoftwareSetting from '../EditSoftware/AddSoftwareSetting';
-import UpgradeButton from './UpgradeButton';
+// import UpgradeButton from './UpgradeButton';
 
 function SettingsModal({
   innerProps: { selectedSettingsTab },
@@ -166,7 +166,7 @@ function SettingsModal({
                 />
               </Flex>
             </ScrollArea>
-            <UpgradeButton />
+            {/* <UpgradeButton /> */}
           </Flex>
         </Grid.Col>
         <Grid.Col span={8} p={0} h="100%" className="overflow-hidden">

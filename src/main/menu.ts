@@ -157,13 +157,13 @@ export default class MenuBuilder {
         {
           label: 'Go to website',
           click() {
-            shell.openExternal('https://shortcutwizard.app');
+            shell.openExternal('https://shortcut-wizard.vercel.app');
           },
         },
         {
           label: 'Contact us',
           click() {
-            shell.openExternal('https://shortcutwizard.app');
+            shell.openExternal('https://shortcut-wizard.vercel.app');
           },
         },
       ],

@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useMemo, memo } from 'react';
+import { useCallback, useMemo } from 'react';
 import Fuse from 'fuse.js';
-import { useDebouncedValue } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import { CloseButton, TextInput } from '@mantine/core';
@@ -41,8 +40,6 @@ function SearchShortcutContainer() {
   const selectedSoftwareShortcut = useSelectedShortcutsStore(
     (state) => state.selectedSoftwareShortcut
   );
-
-  // const [debounced] = useDebouncedValue(searchTerm, 500);
 
   const flattenSearchData = useMemo(() => {
     if (!softwareShortcuts?.length) return [];
@@ -90,10 +87,6 @@ function SearchShortcutContainer() {
     [setShowSearchResults, setResults, fuse]
   );
 
-  // useEffect(() => {
-  //   handleChange(debounced);
-  // }, [debounced, handleChange]);
-
   const handleSubmit = useCallback(async () => {
     handleChange(searchTerm);
   }, [handleChange, searchTerm]);
@@ -119,7 +112,11 @@ function SearchShortcutContainer() {
         }
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.currentTarget.value)}
-        placeholder="Search shortcut description"
+        placeholder={`Search ${
+          selectedSoftwareShortcut?.software.label
+            ? `${selectedSoftwareShortcut.software.label} `
+            : ''
+        }shortcut description`}
       />
     </form>
   );

@@ -11,12 +11,12 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://shortcutwizard.app",
+  "homepage": "https://shortcut-wizard.vercel.app",
   "license": "UNLICENSED",
   "private": true,
   "author": {
     "name": "",
-    "email": "contact@shortcutwizard.app"
+    "email": "giawdevtest@gmail.com"
   },
   "main": "./src/main/main.ts",
   "scripts": {

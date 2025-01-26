@@ -10,8 +10,6 @@ import { notifyClientError } from '../../utils';
 import LOGO from '../../../../assets/borderlesslogo.png';
 
 function SignInButton() {
-  const utils = trpcReact.useContext();
-  const isDev = utils.settings.isDev.getData();
   const { mutate: openWindow } = trpcReact.settings.openWindow.useMutation();
   const user = useAuthStore((state) => state.user);
 
@@ -28,10 +26,7 @@ function SignInButton() {
     try {
       const { authUri, id } = await getAuthUri.mutateAsync(label);
 
-      const oneTimeIdDocRef = ref(
-        db,
-        `${isDev ? 'development' : 'production'}/onetime-ids/${id}`
-      );
+      const oneTimeIdDocRef = ref(db, `onetime-ids/${id}`);
 
       const unsubscribeFirebaseDocListener = onValue(
         oneTimeIdDocRef,

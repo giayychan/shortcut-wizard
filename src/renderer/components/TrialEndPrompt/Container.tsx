@@ -4,12 +4,8 @@ import { auth } from 'main/configs/firebase';
 
 import { SHORTCUT_WIZARD_HREF } from 'main/constants';
 import PromptContainer from '../common/Prompt';
-import trpcReact from '../../utils/trpc';
 
 function TrialEndPromptContainer() {
-  const utils = trpcReact.useContext();
-  const isDev = utils.settings.isDev.getData();
-
   const handleSignOut = async () => {
     await signOut(auth);
   };
@@ -28,7 +24,9 @@ function TrialEndPromptContainer() {
         compact
         component="a"
         href={`${
-          isDev ? 'http://localhost:3000' : SHORTCUT_WIZARD_HREF
+          process.env.NODE_ENV === 'development'
+            ? 'http://localhost:3000'
+            : SHORTCUT_WIZARD_HREF
         }/pricing`}
         target="_href"
       >
@@ -43,7 +41,7 @@ function TrialEndPromptContainer() {
       >
         Feedback
       </Button>
-      {isDev ? (
+      {process.env.NODE_ENV === 'development' ? (
         <Button compact onClick={handleSignOut}>
           Sign Out
         </Button>

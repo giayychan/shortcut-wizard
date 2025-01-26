@@ -7,7 +7,7 @@ import { auth } from 'main/configs/firebase';
 import { Flex, Avatar, Button, Text, Skeleton } from '@mantine/core';
 
 import useAuthStore from '../../stores/useAuthStore';
-import UpgradeButton from './UpgradeButton';
+// import UpgradeButton from './UpgradeButton';
 
 dayjs.extend(relativeTime);
 
@@ -56,7 +56,7 @@ function UserProfile() {
           <p className="font-bold truncate">{user?.displayName || 'User'} </p>
           <p className="truncate">{user?.email || ''}</p>
         </div>
-        <UpgradeButton />
+        {/* <UpgradeButton /> */}
 
         {user === undefined ? null : (
           <Button variant="light" onClick={handleSignOut} mt="xs">

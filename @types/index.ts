@@ -1,14 +1,7 @@
 import { AutocompleteProps, SelectItemProps } from '@mantine/core';
 import { UseFormReturnType } from '@mantine/form';
-import { modals } from '@mantine/modals';
 import { User } from 'firebase/auth';
 import Fuse from 'fuse.js';
-
-declare module '@mantine/modals' {
-  interface MantineModalsOverride {
-    modals: typeof modals;
-  }
-}
 
 type Hotkey = string[];
 type Hotkeys = Hotkey[];
@@ -72,11 +65,6 @@ export type UploadCustomIconProps = {
 export type StyledSvgProps = {
   className?: string;
   src?: string;
-};
-
-export type IsDevState = {
-  isDev: boolean;
-  setIsDev: (isDev: boolean) => void;
 };
 
 export type ConnectedState = {
