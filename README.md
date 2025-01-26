@@ -92,7 +92,7 @@ This project showcases:
 
 ## Demo 📸
 
-![Shortcut Wizard Demo](https://s12.gifyu.com/images/SeZn8.gif)
+![Shortcut Wizard Demo](https://s13.gifyu.com/images/SeZn8.gif)
 
 ---
 
