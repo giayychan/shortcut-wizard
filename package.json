@@ -266,8 +266,8 @@
     ],
     "publish": {
       "provider": "github",
-      "owner": "Giayychan",
-      "repo": "shortcut-wizard-release",
+      "owner": "giayychan",
+      "repo": "shortcut-wizard",
       "private": false
     }
   },
