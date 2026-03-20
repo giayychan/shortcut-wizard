@@ -77,12 +77,6 @@ Follow these steps to get started with Shortcut Wizard on your local machine:
 
 ---
 
-## Demo 📸
-
-![Shortcut Wizard Demo](https://s13.gifyu.com/images/SeZn8.gif)
-
----
-
 ## Buy Me A Coffee ☕️
 
 If you enjoy Shortcut Wizard and would like to support the development of this project, buy us a coffee!
