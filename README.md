@@ -2,6 +2,11 @@
 
 A productivity-boosting desktop application built with **Electron** and **React**, designed to help professionals and students organize, access, and memorize application shortcuts effortlessly. Shortcut Wizard makes it easy to store, retrieve, and favorite your most-used shortcuts, empowering users to achieve better productivity with less effort.
 
+<div style="display: flex; gap: 100px;">
+  <img src="https://shortcut-wizard.vercel.app/_next/image?url=%2Fshortcutwindow2.png&w=1920&q=75" alt="main screen" width="455">
+  <img src="https://shortcut-wizard.vercel.app/_next/image?url=%2Feditshortcutwindow2.png&w=1920&q=75" alt="edit screen" width="470">
+</div>
+
 ---
 
 ## Features 💡
